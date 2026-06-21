@@ -1,6 +1,6 @@
 # agent-skills
 
-Reusable agent skills and slash-command workflows for **Cursor**, **Windsurf/Cascade**, and **Devin** — cross-project ML research (AIRE HPC, PyTorch, surgical MOT).
+Reusable agent skills and slash-command workflows for **Cursor**, **Windsurf/Cascade**, and **Devin** — cross-project ML research (AIRE HPC, PyTorch, surgical MOT, Cosmos3/ESD).
 
 Canonical repo: https://github.com/Ryukijano/agent-skills
 
@@ -8,58 +8,48 @@ Canonical repo: https://github.com/Ryukijano/agent-skills
 
 ```
 .cursor/
-├── skills/              # Cursor agent skills (SKILL.md + YAML frontmatter)
-└── commands/            # Cursor slash commands (type / in chat)
+├── skills/              # 11 Cursor agent skills (SKILL.md)
+└── commands/            # 24 Cursor slash commands (full playbooks)
 
 .windsurf/
-├── skills/              # Windsurf/Cascade skills (same SKILL.md files)
-└── workflows/           # Full workflow playbooks (detailed steps)
+├── skills/              # Same 11 skills (Windsurf/Cascade)
+└── workflows/           # 10 detailed workflow playbooks
 
 workflows/
-├── README.md            # Index of all workflows
+├── README.md
 ├── CURSOR_AGENT_INDEX.md
-└── devin/               # Devin playbook macros (!name)
+├── CURSOR_COMMANDS.md   # Full command catalog
+└── devin/               # Devin macros (MOT + cosmos/)
 ```
+
+## Cursor commands (24)
+
+See **[workflows/CURSOR_COMMANDS.md](workflows/CURSOR_COMMANDS.md)** for the full list.
+
+| Group | Examples |
+|-------|----------|
+| ML / HPC | `/submit-gpu-job`, `/debug-training`, `/pretrain-and-evaluate` |
+| Surgical MOT | `/mot-browser-research`, `/mot-train-eval`, `/mot-hota-eval` |
+| Cosmos / ESD | `/cosmos-verify`, `/esd-t2v`, `/esd-forward-dynamics` |
+| Ship & review | `/ship-pr`, `/review-bugbot`, `/fix-ci`, `/iterative-test-loop` |
+
+Commands in `.cursor/commands/` are **self-contained** (full steps inlined, not pointers to other files).
 
 ## Skills (11)
 
 | Skill | Description |
 |-------|-------------|
-| `aire-slurm-submit` | Submit and monitor Slurm jobs on Leeds AIRE (L40S) |
-| `conda-env-setup` | Conda environments with CUDA on AIRE |
-| `debug-pytorch-gpu` | OOM, DDP, NCCL, NaN diagnostics |
-| `git-branch-workflow` | Branch naming, commits, PR templates |
-| `lora-finetune` | LoRA for DINOv2 / ViT |
-| `surgical-mot-eval` | CholecTrack20 MOT evaluation |
-| `tdv-pretrain` | Temporal Difference in Vision pretraining |
-| `wandb-experiment` | Weights & Biases on HPC |
-| `mot-browser-research` | @Browser SOTA research for GOT-JEPA MOT |
-| `mot-training-workflow` | Four-stage MOT train/resume/eval |
-| `mot-repo-orientation` | Gyanateet_tracking repo map |
-
-MOT skills target [Gyanateet_tracking](https://github.com/Ryukijano/Gyanateet_tracking) but copy into any surgical MOT project.
-
-## Workflows / slash commands
-
-### Cross-project
-
-| Command | Description |
-|---------|-------------|
-| `/submit-gpu-job` | Submit GPU job to AIRE Slurm |
-| `/pretrain-and-evaluate` | TDV pretrain → detection → eval |
-| `/debug-training` | Debug loss=NaN, OOM, DDP hangs |
-| `/code-review` | ML code review checklist |
-| `/address-pr-comments` | Systematic PR comment triage |
-| `/checkpoint-to-deployment` | Strip checkpoint for inference |
-| `/setup-ml-project` | Scaffold new ML project |
-
-### Surgical MOT (Gyanateet_tracking)
-
-| Command | Devin macro | Description |
-|---------|-------------|-------------|
-| `/mot-browser-research` | `!mot-browser-research` | Online research + strategic verdict |
-| `/mot-train-eval` | `!mot-train-eval` | Stages 1–4 training |
-| `/mot-hota-eval` | `!mot-hota-eval` | HOTA + smoke-stratified eval |
+| `aire-slurm-submit` | AIRE Slurm (L40S) |
+| `conda-env-setup` | Conda + CUDA on AIRE |
+| `debug-pytorch-gpu` | GPU OOM, DDP, NCCL |
+| `git-branch-workflow` | Branches, commits, PRs |
+| `lora-finetune` | DINOv2 / ViT LoRA |
+| `surgical-mot-eval` | CholecTrack20 eval |
+| `tdv-pretrain` | TDV pretraining |
+| `wandb-experiment` | W&B on HPC |
+| `mot-browser-research` | @Browser MOT research |
+| `mot-training-workflow` | Four-stage MOT pipeline |
+| `mot-repo-orientation` | Gyanateet_tracking map |
 
 ## Usage
 
@@ -71,33 +61,21 @@ cp -r agent-skills/.cursor/skills/* your-project/.cursor/skills/
 cp -r agent-skills/.cursor/commands/* your-project/.cursor/commands/
 ```
 
-Or symlink: `ln -s ../agent-skills/.cursor/skills ./.cursor/skills-shared`
+Type `/` in chat — e.g. `/mot-hota-eval`, `/ship-pr`, `/esd-t2v`.
 
-Skills auto-discover from `.cursor/skills/`. Invoke workflows with `/command-name` in chat.
-
-### Windsurf / Cascade
+### Windsurf
 
 ```bash
 cp -r agent-skills/.windsurf your-project/
 ```
 
-Skills auto-invoke; workflows via `/workflow-name` (see `.windsurf/workflows/`).
-
 ### Devin
 
-Upload playbooks from `workflows/devin/*.devin.md` or attach as macros (`!mot-browser-research`, etc.).
+Upload `workflows/devin/*.devin.md` and `workflows/devin/cosmos/*.devin.md`.
 
-## Syncing into a project
+## Source of truth
 
-From Gyanateet_tracking (example consumer):
-
-```bash
-cd Gyanateet_tracking
-git pull   # project may vendor a snapshot; prefer pulling from agent-skills for updates
-cp -r ../agent-skills/.cursor/skills/{aire-slurm-submit,conda-env-setup,...} .cursor/skills/
-```
-
-Keep **agent-skills** as the source of truth; copy into project repos — not the reverse.
+Edit **agent-skills** first, then copy into consumer repos ([Gyanateet_tracking](https://github.com/Ryukijano/Gyanateet_tracking), [AIMSgeneral](https://github.com/Ryukijano/AIMSgeneral)).
 
 ## License
 

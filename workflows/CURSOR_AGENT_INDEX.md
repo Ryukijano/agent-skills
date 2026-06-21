@@ -20,11 +20,17 @@ Copy `.cursor/` and `.windsurf/` into consumer projects (e.g. [Gyanateet_trackin
 | `tdv-pretrain` | TDV surgical video SSL |
 | `wandb-experiment` | W&B on HPC |
 
-## Slash commands (`.cursor/commands/`)
+## Slash commands (`.cursor/commands/` — 24 total)
+
+See `workflows/CURSOR_COMMANDS.md` for the full catalog.
 
 **MOT:** `/mot-browser-research`, `/mot-train-eval`, `/mot-hota-eval`
 
-**Cross-project:** `/submit-gpu-job`, `/pretrain-and-evaluate`, `/debug-training`, `/code-review`, `/address-pr-comments`, `/checkpoint-to-deployment`, `/setup-ml-project`
+**ML/HPC:** `/submit-gpu-job`, `/pretrain-and-evaluate`, `/debug-training`, `/setup-ml-project`, `/checkpoint-to-deployment`
+
+**Cosmos/ESD:** `/cosmos-verify`, `/cosmos-spark-kernels`, `/esd-t2v`, `/esd-forward-dynamics`, `/lap-t2v`
+
+**Ship/review:** `/ship-pr`, `/babysit-pr`, `/split-to-prs`, `/fix-ci`, `/code-review`, `/address-pr-comments`, `/iterative-test-loop`, `/impact-aware-testing`, `/review-bugbot`, `/review-security`, `/explore-sota`
 
 ## Devin playbooks (`workflows/devin/`)
 

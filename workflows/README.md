@@ -11,7 +11,18 @@ Canonical index for [Ryukijano/agent-skills](https://github.com/Ryukijano/agent-
 | HOTA + smoke eval | `devin/mot-hota-eval.devin.md` | `/mot-hota-eval` | `surgical-mot-eval` |
 | Repo orientation | — | — | `mot-repo-orientation` |
 
-## Cross-project workflows
+## Cursor commands (24)
+
+Full catalog: `workflows/CURSOR_COMMANDS.md`. All commands are self-contained in `.cursor/commands/`.
+
+| Group | Commands |
+|-------|----------|
+| MOT | `/mot-browser-research`, `/mot-train-eval`, `/mot-hota-eval` |
+| ML/HPC | `/submit-gpu-job`, `/debug-training`, `/pretrain-and-evaluate`, `/setup-ml-project`, `/checkpoint-to-deployment` |
+| Cosmos | `/cosmos-verify`, `/cosmos-spark-kernels`, `/esd-t2v`, `/esd-forward-dynamics`, `/lap-t2v` |
+| Ship/review | `/ship-pr`, `/babysit-pr`, `/fix-ci`, `/review-bugbot`, `/iterative-test-loop`, … |
+
+## Cross-project workflows (Windsurf mirror)
 
 | Workflow | Windsurf | Cursor command | Skill |
 |----------|----------|----------------|-------|

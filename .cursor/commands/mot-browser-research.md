@@ -1,10 +1,31 @@
 # MOT Browser Research
 
-Invoke `@Browser` and apply the `mot-browser-research` skill.
+# MOT browser research (GOT-JEPA surgical tracking)
 
-1. Read `AGENTS.md` for current blockers and training status.
-2. Search online for the user's question (papers, SOTA, infra).
-3. Map findings to this repo's four-stage MOT pipeline.
-4. Give a short strategic verdict with cited sources.
+**Macro:** `!mot-browser-research`
 
-Stay on GOT-JEPA + OccuSolver unless the user explicitly asks to pivot.
+## Procedure
+
+### Setup
+- `BASE=/home/aimsgroupuol/AIMSgeneral/Gyanateet_tracking`
+- Read `AGENTS.md` for training status, blockers, and checkpoint paths.
+- Read `.cursor/skills/mot-browser-research/SKILL.md` and `agent_docs/cursor_repo_understanding.md`.
+
+### Research loop
+1. Frame the question: detection, association, smoke/occlusion, SSL, or infra (Spark vs Leeds Aire)?
+2. Search online (arXiv, GitHub, dataset pages). Cite every claim.
+3. Map findings to stages in `core_app/mot/` and configs in `configs/train_mot/dinov2/`.
+4. Strategic verdict: adopt / optional / reject with next concrete step.
+
+### Direction guardrails
+- **Stay** GOT-JEPA + OccuSolver unless user explicitly pivots.
+- **VLA-JEPA** = robot policies, not MOT — reject as primary path.
+- **Desmoking** (Seeing Through Smoke) = optional ablation only.
+- **V-JEPA / Cholec_Vjepa-2** = complementary SSL, not replacement for per-track ω prediction.
+
+### Delivery
+- Short answer first, comparison table, recommendation, Sources list with markdown links.
+
+## Forbidden actions
+- Do not bulk-download Renji ESD datasets.
+- Do not pivot architecture without explicit user approval.
