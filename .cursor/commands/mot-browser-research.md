@@ -1,31 +1,27 @@
 # MOT Browser Research
 
-# MOT browser research (GOT-JEPA surgical tracking)
+Use browser + web search to answer MOT / surgical video / tracking questions and map back to this repo.
 
-**Macro:** `!mot-browser-research`
+## 1. Context first
+Read `AGENTS.md` (current status, known blockers) and `mot-repo-orientation` skill.
 
-## Procedure
+## 2. Query
+Use web search or `@web` for:
+- Recent SOTA on surgical tool tracking / CholecTrack20
+- GOT-JEPA / OccuSolver variants
+- DINOv2 + temporal adaptation papers 2024–2026
+- Tracker hyperparameters for low-FPS or smoky scenes
 
-### Setup
-- `BASE=/home/aimsgroupuol/AIMSgeneral/Gyanateet_tracking`
-- Read `AGENTS.md` for training status, blockers, and checkpoint paths.
-- Read `.cursor/skills/mot-browser-research/SKILL.md` and `agent_docs/cursor_repo_understanding.md`.
+## 3. Map to pipeline
+Explicitly say which stage (1–4) or component (ReID, motion, depth, tracker gates) would be affected.
 
-### Research loop
-1. Frame the question: detection, association, smoke/occlusion, SSL, or infra (Spark vs Leeds Aire)?
-2. Search online (arXiv, GitHub, dataset pages). Cite every claim.
-3. Map findings to stages in `core_app/mot/` and configs in `configs/train_mot/dinov2/`.
-4. Strategic verdict: adopt / optional / reject with next concrete step.
+## 4. Verdict
+Give a short strategic recommendation with citations (title + year + venue or arXiv). Flag if it would require major refactor.
 
-### Direction guardrails
-- **Stay** GOT-JEPA + OccuSolver unless user explicitly pivots.
-- **VLA-JEPA** = robot policies, not MOT — reject as primary path.
-- **Desmoking** (Seeing Through Smoke) = optional ablation only.
-- **V-JEPA / Cholec_Vjepa-2** = complementary SSL, not replacement for per-track ω prediction.
+## 5. Constraints
+- Prefer keeping GOT-JEPA + OccuSolver core unless user explicitly wants to pivot.
+- Always note data leakage risks for any new pretraining data sources.
 
-### Delivery
-- Short answer first, comparison table, recommendation, Sources list with markdown links.
+Apply skill: `mot-browser-research`, `mot-repo-orientation`.
 
-## Forbidden actions
-- Do not bulk-download Renji ESD datasets.
-- Do not pivot architecture without explicit user approval.
+Cross-reference `explore-sota` and `claim-verification` for deeper literature work.

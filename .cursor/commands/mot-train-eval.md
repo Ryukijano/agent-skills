@@ -1,34 +1,38 @@
 # MOT Train / Eval
 
-# MOT stage training (Stages 1–4)
+End-to-end driver for the four-stage surgical MOT pipeline.
 
-**Macro:** `!mot-train-eval`
+## Env (always)
+```bash
+cd /home/aimsgroupuol/AIMSgeneral/Gyanateet_tracking
+conda activate surgi_track
+export XFORMERS_DISABLED=1
+```
 
-## Procedure
+## Quick start by stage
+- **Stage 1 (teacher)**: `bash scripts/train_stage1_ddp_3gpu.sh` or single-GPU with `--max_steps N`.
+- **Stage 2 (SSL/JEPA)**: `bash scripts/run_mot_stage2.sh` (loads prior teacher).
+- **Stage 3 (joint)**: `bash scripts/run_mot_stage3.sh`.
+- **Stage 4 lean (recommended)**: `bash scripts/run_mot_stage4.sh`.
 
-### Setup
-- `BASE=/home/aimsgroupuol/AIMSgeneral/Gyanateet_tracking`
-- `conda activate surgi_track` (fallback: `surgi_world_track_cuda`)
-- `export XFORMERS_DISABLED=1` on GB10 for DINOv2
-- Read `.cursor/skills/mot-training-workflow/SKILL.md`
+See `mot-training-workflow` skill for stage semantics and config paths.
 
-### Choose stage
-| Stage | Script | Config |
-|-------|--------|--------|
-| 1 | `bash scripts/train_stage1_ddp_3gpu.sh` | `cholec20-mot-stage1-supervised.yaml` |
-| 2 | `bash scripts/run_mot_stage2.sh` | `cholec80-ct20-stage2-jepa-pretrain.yaml` |
-| 3 | `bash scripts/run_mot_stage3.sh` | `cholec20-mot-stage3-joint-finetune-vits.yaml` |
-| 4 lean | `bash scripts/run_mot_stage4.sh` | `cholec20-mot-stage4-lean.yaml` |
+## Eval after training
+Use `/mot-hota-eval` or directly:
+```bash
+python scripts/eval_checkpoint.py --mot-eval --stratify-smoke --checkpoint <path>
+python scripts/eval_mot_hota.py --checkpoint <path>
+```
 
-### Verify
-- `pytest tests/test_mot_smoke.py -q` after code or config changes.
-- Report checkpoint path, epoch, and val mAP if available.
+## Smoke discipline
+Before any long run:
+- 2–5 step forward on the exact config.
+- `pytest tests/test_mot_smoke.py -q`.
 
-## Specifications
-- Stage 1: `detector_only: true` (pseudo-label teacher).
-- Stage 2: `GOTJEPAWrapper` only — no `model.forward()` or OccuSolver training.
-- Stage 4 lean preferred over Stage 4 full unless ablating VGGT geometry.
+## Resuming
+Most stages support `--resume outputs/.../latest.pth.tar`.
 
-## Advice
-- Spark GB10: `batch_size` 24–32 Stage 1; single-GPU baseline.
-- Leeds Aire: 6+ L40S DDP for HP sweeps via `scripts/slurm_*.sh`.
+## When stuck
+Apply `/debug-training` + `debug-pytorch-gpu` skill.
+
+Apply skill: `mot-training-workflow`.

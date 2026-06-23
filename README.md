@@ -1,16 +1,18 @@
 # agent-skills
 
-Reusable Windsurf skills and workflows for cross-project AI-assisted development.
-Designed for research scientists and software engineers working on ML projects.
+Reusable **Windsurf** and **Cursor** skills and workflows for cross-project AI-assisted development.
+Designed for research scientists and software engineers working on ML projects (surgical video MOT, HPC, DGX Spark, 3D recon, agentic loops).
 
 ## Overview
 
-- **30 skills** (auto-invoked by Cascade based on task relevance)
-- **26 workflows** (manually invoked via `/workflow-name` slash commands)
-- Every skill has a corresponding workflow and vice versa
+| Platform | Skills | Workflows / Commands |
+|----------|--------|----------------------|
+| **Windsurf** (`.windsurf/`) | 30 | 26 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 40 | 45 commands (`/name`) |
 
-Skills use **progressive disclosure**: only `name` and `description` are loaded
-until Cascade decides to invoke them, keeping context lean.
+Every major topic has both a **skill** (reference knowledge, auto-suggested) and a **workflow/command** (step-by-step procedure).
+
+Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
 ## Skills (30)
 
@@ -110,8 +112,16 @@ until Cascade decides to invoke them, keeping context lean.
 3. Workflows are invoked via `/workflow-name` slash commands.
 
 ### In Cursor
-The `SKILL.md` files are compatible with Cursor's agent rules system.
-Copy individual skill folders into `.cursor/rules/` or your project's rules directory.
+1. Copy the `.cursor/` directory into your project root (or symlink `skills/` and `commands/`).
+2. **Skills** live in `.cursor/skills/<name>/SKILL.md` — auto-suggested by the agent when relevant.
+3. **Commands** live in `.cursor/commands/<name>.md` — invoked via `/name` in chat or referenced explicitly.
+4. See `.cursor/README.md` for the full inventory and bootstrap guide.
+
+**Cursor-only extras** (beyond the shared Windsurf set):
+- Domain: `dgx-spark-cosmos3`, `nemotron-agent-loop`, `endosight-3d-pipeline`, `3d-reconstruction-best-practices`, `agentic-loop-design`, `spark-hardware-optim`, `surgical-video-data-pipeline`
+- MOT: `mot-training-workflow`, `mot-repo-orientation`, `mot-browser-research`
+- Cosmos/Spark commands: `/cosmos-verify`, `/esd-forward-dynamics`, `/esd-t2v`, `/lap-t2v`, `/cosmos-spark-kernels`
+- Cursor workflow skills: `/review-bugbot`, `/ship-pr`, `/babysit-pr`, `/impact-aware-testing`, `/iterative-test-loop`, `/explore-sota`, `/fix-ci`, `/split-to-prs`
 
 ### Skill vs Workflow: When to use which
 
@@ -126,67 +136,29 @@ Copy individual skill folders into `.cursor/rules/` or your project's rules dire
 ```
 .windsurf/
 ├── skills/                    # 30 SKILL.md files (auto-invoked)
-│   ├── ablation-study/
-│   ├── address-pr-comments/
-│   ├── aire-slurm-submit/
-│   ├── checkpoint-to-deployment/
-│   ├── ci-cd-setup/
-│   ├── code-quality/
-│   ├── code-review/
-│   ├── conda-env-setup/
-│   ├── continual-learning/
-│   ├── data-management/
-│   ├── debug-pytorch-gpu/
-│   ├── debug-training/
-│   ├── dependency-management/
-│   ├── experiment-tracking/
-│   ├── git-branch-workflow/
-│   ├── lora-finetune/
-│   ├── paper-code-release/
-│   ├── paper-submission-prep/
-│   ├── pre-commit-setup/
-│   ├── pretrain-and-evaluate/
-│   ├── refactor-extract-module/
-│   ├── release-checklist/
-│   ├── reproducibility/
-│   ├── reproducibility-checklist/
-│   ├── setup-ml-project/
-│   ├── submit-gpu-job/
-│   ├── surgical-mot-eval/
-│   ├── tdv-pretrain/
-│   ├── testing-strategy/
-│   └── wandb-experiment/
+│   └── ...
 └── workflows/                 # 26 workflow .md files (slash commands)
-    ├── ablation-study.md
-    ├── address-pr-comments.md
-    ├── aire-slurm-submit.md
-    ├── checkpoint-to-deployment.md
-    ├── ci-cd-setup.md
-    ├── code-quality.md
-    ├── code-review.md
-    ├── conda-env-setup.md
-    ├── continual-learning.md
-    ├── data-management.md
-    ├── debug-pytorch-gpu.md
-    ├── debug-training.md
-    ├── dependency-management.md
-    ├── experiment-tracking.md
-    ├── git-branch-workflow.md
-    ├── lora-finetune.md
-    ├── paper-code-release.md
-    ├── paper-submission-prep.md
-    ├── pre-commit-setup.md
-    ├── pretrain-and-evaluate.md
-    ├── refactor-extract-module.md
-    ├── release-checklist.md
-    ├── reproducibility-checklist.md
-    ├── reproducibility.md
-    ├── setup-ml-project.md
-    ├── submit-gpu-job.md
-    ├── surgical-mot-eval.md
-    ├── tdv-pretrain.md
-    ├── testing-strategy.md
-    └── wandb-experiment.md
+    └── ...
+
+.cursor/
+├── skills/                    # 40 SKILL.md files (auto-suggested)
+│   ├── ablation-study/
+│   ├── 3d-reconstruction-best-practices/
+│   ├── agentic-loop-design/
+│   ├── dgx-spark-cosmos3/
+│   ├── endosight-3d-pipeline/
+│   ├── mot-training-workflow/
+│   ├── nemotron-agent-loop/
+│   ├── reproducibility/
+│   ├── tdv-pretrain/
+│   └── ... (see .cursor/README.md)
+├── commands/                  # 45 command .md files (/name)
+│   ├── pretrain-and-evaluate.md
+│   ├── code-review.md
+│   ├── cosmos-verify.md
+│   ├── esd-forward-dynamics.md
+│   └── ...
+└── README.md
 ```
 
 ## License

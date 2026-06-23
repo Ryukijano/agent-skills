@@ -1,35 +1,43 @@
 # MOT HOTA Eval
 
-# MOT HOTA eval (smoke-stratified)
+Run HOTA (and smoke-stratified MOT metrics) for surgical tool tracking on CholecTrack20.
 
-**Macro:** `!mot-hota-eval`
-
-## Procedure
-
-### Setup
-- `BASE=/home/aimsgroupuol/AIMSgeneral/Gyanateet_tracking`
-- `conda activate surgi_track`
-- Read `AGENTS.md` for latest checkpoint paths.
-
-### Default checkpoints (Jun 2026)
-- Stage 3: `outputs/mot/cholec20-stage3-joint-finetune-vits/best.pth.tar`
-- Stage 4 lean: `outputs/mot/cholec20-stage4-lean-vits/best.pth.tar`
-
-### Run eval
+## 1. Env
 ```bash
-cd $BASE
-python scripts/eval_checkpoint.py --mot-eval --stratify-smoke \
-  --checkpoint outputs/mot/cholec20-stage3-joint-finetune-vits/best.pth.tar
-
-python scripts/eval_mot_hota.py --checkpoint <path>
+cd /home/aimsgroupuol/AIMSgeneral/Gyanateet_tracking
+conda activate surgi_track
+export XFORMERS_DISABLED=1
 ```
 
-### Tracker tuning
-If zero predictions on short clips: lower `birth_score`, reduce `min_hits`.
+## 2. Choose checkpoint
+Prefer Stage 3 or Stage 4 lean final `best.pth.tar`.
 
-### Delivery
-- Report HOTA, MOTA, smoke-stratified breakdown if available.
-- Compare Stage 3 vs Stage 4 lean when both checkpoints exist.
+## 3. Run stratified MOT eval (primary)
+```bash
+python scripts/eval_checkpoint.py --mot-eval --stratify-smoke \
+  --checkpoint outputs/mot/<run>/best.pth.tar
+```
+This produces per-smoke-level and overall mAP/MOTA/MOTAP + per-tool AP.
 
-## Verification
-- `pytest tests/test_mot_smoke.py -q` if eval code was changed.
+## 4. Full HOTA (TrackEval style)
+```bash
+python scripts/eval_mot_hota.py --checkpoint outputs/mot/<run>/best.pth.tar
+```
+If zero tracks:
+- Lower `birth_score` (e.g. 0.4 → 0.2)
+- Reduce `min_hits` (2 or 1)
+- Increase `max_age` temporarily
+
+Re-run and record tuned params.
+
+## 5. Leak check
+Confirm eval videos do not intersect pretrain corpus (see `surgical-mot-eval`).
+
+## 6. Record & compare
+- Log to WandB under the run.
+- Table: baseline vs this run (mAP@50, MOTA, IDF1, HOTA).
+- Note any tool with AP < 0.15 — investigate data or capacity.
+
+Apply `surgical-mot-eval`, `mot-training-workflow`.
+
+Verification: `pytest tests/test_mot_smoke.py -q` after changes to eval code.

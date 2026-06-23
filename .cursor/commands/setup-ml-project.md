@@ -1,95 +1,54 @@
 # Setup ML Project
 
-Create a new ML research project with the standard directory structure.
+Scaffold a new ML research project following AIMSgeneral conventions (surgical video, agentic, 3D, or general).
 
-1. Create the project directory and initialize git:
-   ```bash
-   mkdir <project_name>
-   cd <project_name>
-   git init
-   ```
+## 1. Create skeleton
+```bash
+mkdir -p <project>/{core_app,configs,scripts,jobs,tests,data,outputs,inputs,docs}
+cd <project>
+git init
+```
 
-2. Create the standard directory structure:
-   ```bash
-   mkdir -p core_app/models core_app/data core_app/eval
-   mkdir -p configs configs/splits
-   mkdir -p scripts jobs logs outputs
-   mkdir -p tests
-   mkdir -p .windsurf/skills .windsurf/workflows
-   ```
+## 2. Standard files
+- `AGENTS.md` — user preferences + workspace facts (copy from sibling project and adapt)
+- `README.md` — one-command setup + smoke + typical usage
+- `pyproject.toml` or `requirements.txt` (with versions)
+- `.gitignore` (data/, outputs/, wandb/, *.pth, __pycache__, etc.)
+- `.cursor/skills/` and `.cursor/commands/` (copy portable ones; add project-specific)
 
-3. Create `requirements.txt` with standard ML dependencies:
-   ```
-   torch>=2.4
-   torchvision
-   numpy
-   pandas
-   pyyaml
-   wandb
-   opencv-python
-   matplotlib
-   tqdm
-   einops
-   timm
-   ```
+## 3. Cursor assets (copy from Gyanateet_tracking or AIMSgeneral as base)
+At minimum:
+- `reproducibility`, `code-quality`, `testing-strategy`, `git-branch-workflow`, `experiment-tracking`
+- Commands: `code-review`, `debug-training`, `submit-gpu-job`, `setup-ml-project` (self)
 
-4. Create `.gitignore`:
-   ```
-   data/
-   outputs/
-   logs/
-   wandb/
-   __pycache__/
-   *.pyc
-   .env
-   *.pth
-   *.tar
-   ```
+## 4. Core Python layout (adapt to domain)
+```
+core_app/
+  models/
+  data/
+  train.py
+  eval.py
+configs/
+  default.yaml
+scripts/
+  train.sh
+  eval.sh
+jobs/
+  train.slurm
+tests/
+  test_smoke.py
+```
 
-5. Create a template config file `configs/default.yaml`:
-   ```yaml
-   meta:
-     name: <project_name>
-     seed: 42
+## 5. First commit
+```bash
+git add -A
+git commit -m "chore: scaffold project structure + cursor skills/commands"
+```
 
-   data:
-     root: data/
-     batch_size: 8
-     num_workers: 4
-     img_size: 224
+## 6. Next steps for user
+- Fill `AGENTS.md` with domain facts.
+- Add first smoke test that imports the model and runs a 2-step forward.
+- Wire verification gate rule.
+- Add first skill for the core technique.
 
-   model:
-     encoder: dinov2
-     backbone: vitb14
-
-   optimization:
-     lr: 1e-4
-     epochs: 100
-     warmup_epochs: 5
-     weight_decay: 0.01
-
-   wandb:
-     enabled: true
-     project: <project_name>
-   ```
-
-6. Create a template SLURM job script `jobs/train.slurm` using the AIRE template.
-
-7. Create `core_app/__init__.py` and `core_app/models/__init__.py`.
-
-8. Create a basic test file `tests/test_smoke.py`:
-   ```python
-   def test_imports():
-       import core_app
-       assert True
-   ```
-
-9. Create `README.md` with project description, setup instructions, and usage.
-
-10. Make the initial commit:
-    ```bash
-    git add -A
-    git commit -m "chore: scaffold project structure"
-    ```
-
-11. Summarize the created structure and next steps for the user.
+Apply `reproducibility` and `code-quality` skills from the start.

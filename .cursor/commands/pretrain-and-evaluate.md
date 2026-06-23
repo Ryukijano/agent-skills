@@ -1,66 +1,65 @@
 # Pretrain and Evaluate
 
-This workflow runs the complete Stage 0 (pretraining) → Stage 1 (detection) → evaluation pipeline.
+Full TDV (or JEPA-style) pretrain → downstream MOT detection/track → smoke-stratified eval on CholecTrack20.
 
-### Stage 0: Pretraining
+## 0. Setup
+```bash
+cd /home/aimsgroupuol/AIMSgeneral/Gyanateet_tracking
+conda activate surgi_track
+export XFORMERS_DISABLED=1
+```
 
-1. Verify the pretraining config exists and is correct:
-   ```
-   cat configs/train_mot/dinov2/tdv-pretrain.yaml
-   ```
-   Check: `frames_root` path, `batch_size`, `max_steps`, `output_dir`.
+## 1. Stage 0 / TDV pretrain (or GOT-JEPA)
+- Configure `configs/train_mot/dinov2/tdv-pretrain.yaml` (or stage2 JEPA config).
+- Smoke: edit `max_steps: 2`, run locally or 1-GPU srun.
+- Full: use `jobs/tdv-pretrain.slurm` or `sbatch` variant.
+- Monitor with WandB + `seff`.
+- Output: `outputs/tdv_pretrain/tdv_frame_encoder.pth` (and full checkpoints).
 
-2. Run a 2-step smoke test locally:
-   ```bash
-   python scripts/pretrain_tdv.py --config configs/train_mot/dinov2/tdv-pretrain.yaml
-   ```
-   (Modify config temporarily: `max_steps: 2`, `log_interval: 1`)
+Apply skills: `tdv-pretrain`, `wandb-experiment`, `aire-slurm-submit`.
 
-3. If smoke test passes, submit the full pretraining job:
-   ```bash
-   sbatch jobs/tdv-pretrain.slurm
-   ```
+## 2. Stage 1 supervised teacher (detector_only)
+Point detection config at the pretrained encoder:
+```yaml
+encoder_checkpoint: outputs/tdv_pretrain/tdv_frame_encoder.pth
+detector_only: true
+```
+Run Stage 1 (see `mot-training-workflow` or `scripts/train_stage1_ddp_3gpu.sh`).
 
-4. Wait for pretraining to complete. Monitor via:
-   ```bash
-   squeue -u $USER
-   tail -f logs/tdv-pretrain_<JOBID>.out
-   ```
+Target: decent pseudo-label quality (mAP@50 on val > ~0.25–0.30).
 
-5. Verify the encoder checkpoint was saved:
-   ```bash
-   ls -la outputs/tdv_pretrain/tdv_frame_encoder.pth
-   ```
+## 3. Stage 2–4 MOT training
+Follow the 4-stage pipeline in `mot-training-workflow` skill.
+Typical chain:
+- Stage 2 (SSL/JEPA) loads Stage 1 checkpoint.
+- Stage 3 joint loads Stage 2.
+- Stage 4 lean loads Stage 3 (recommended for final).
 
-### Stage 1: Downstream Detection
+## 4. Evaluation (leak-free + stratified)
+```bash
+python scripts/eval_checkpoint.py --mot-eval --stratify-smoke \
+  --checkpoint outputs/mot/<run>/best.pth.tar
 
-6. Update the detection config to point to the pretrained encoder:
-   ```yaml
-   model:
-     encoder_checkpoint: outputs/tdv_pretrain/tdv_frame_encoder.pth
-   ```
+python scripts/eval_mot_hota.py --checkpoint outputs/mot/<run>/best.pth.tar
+```
+Never eval on pretrain-overlap videos.
 
-7. Run a smoke test of the detection training:
-   ```bash
-   python scripts/train_mot.py --config configs/train_mot/dinov2/cholec20-mot-stage1-tdv-detect.yaml
-   ```
-   (Use `--max-steps 2` or equivalent for quick verification)
+Key targets (lean pipeline):
+- mAP@50 improvement ≥ 3–5 points vs vanilla DINOv2 baseline.
+- MOTA ≥ 5 point lift.
+- Per-tool AP stable (no tool collapses).
+- HOTA reasonable after birth/min_hits tuning if needed.
 
-8. Submit the full detection training job to Slurm.
+## 5. Ablation discipline
+- Record exact commit, config hash, data split version.
+- Use WandB groups for matched runs.
+- Document in `experiments/<slug>/README.md`.
 
-### Evaluation
+## 6. Verification gate
+- Smoke train + eval must pass.
+- `pytest tests/test_mot_smoke.py -q`.
+- Targeted metrics table in PR or notes.
 
-9. After detection training completes, run evaluation on the validation split:
-   ```bash
-   python scripts/eval_mot.py \
-       --config configs/train_mot/dinov2/cholec20-mot-stage1-tdv-detect.yaml \
-       --checkpoint outputs/mot/<run_name>/best.pth \
-       --split val
-   ```
+Apply skills: `surgical-mot-eval`, `tdv-pretrain`, `ablation-study`, `reproducibility`, `data-management`.
 
-10. Compare metrics against the baseline (vanilla DINOv2 without TDV pretraining):
-    - mAP@50: target improvement ≥ 3 points
-    - MOTA: target improvement ≥ 5 points
-    - Per-tool AP: check for consistent improvement across all 7 tools
-
-11. Summarize results in a table comparing baseline vs TDV-pretrained.
+See also: `paper-code-release` when preparing artifacts for publication.

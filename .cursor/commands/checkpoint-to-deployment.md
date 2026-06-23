@@ -1,78 +1,62 @@
 # Checkpoint to Deployment
 
-Convert a training checkpoint into a deployment-ready format for inference.
+Convert a training checkpoint into a clean deployment / inference artifact.
 
-1. Identify the checkpoint file:
-   ```bash
-   ls -la outputs/<run_name>/best.pth.tar
-   ```
+## 1. Inspect the checkpoint
+```bash
+python -c '
+import torch
+ckpt = torch.load("outputs/mot/<run>/best.pth.tar", map_location="cpu")
+print("keys:", list(ckpt.keys()))
+print("step:", ckpt.get("step"))
+print("best_metric:", ckpt.get("best_metric"))
+if "model" in ckpt:
+    print("model keys sample:", list(ckpt["model"].keys())[:10])
+'
+```
 
-2. Load the checkpoint and inspect its contents:
-   ```python
-   import torch
-   ckpt = torch.load('outputs/<run_name>/best.pth.tar', map_location='cpu')
-   print(f"Keys: {list(ckpt.keys())}")
-   print(f"Step: {ckpt.get('step', 'N/A')}")
-   print(f"Loss: {ckpt.get('loss', 'N/A')}")
-   ```
+## 2. Decide extraction mode
+- **Full detector for inference**: keep model weights + any inference-only heads.
+- **Encoder only** (for downstream pretrain or other tasks): filter keys starting with the encoder prefix.
+- **Strip training state**: remove `optimizer`, `ema_model`, `scaler`, loss histories.
 
-3. Extract the model state dict and strip training-only keys:
-   ```python
-   # Remove optimizer state, EMA teacher, etc.
-   model_sd = ckpt['model_state_dict']
+For TDV pretrain encoder extraction:
+```python
+# Typical in training script or post-hoc
+state = torch.load("outputs/tdv_pretrain/best.pth.tar")["model"]
+encoder_sd = {k: v for k, v in state.items() if k.startswith("frame_encoder.encoder.")}
+torch.save(encoder_sd, "outputs/tdv_pretrain/tdv_frame_encoder.pth")
+```
 
-   # If the model has EMA teacher, keep only the student/frame encoder
-   clean_sd = {}
-   for k, v in model_sd.items():
-       if 'teacher' in k or 'ema' in k:
-           continue
-       if 'dino_head' in k or 'ibot_head' in k:
-           continue  # Remove self-distillation heads
-       if 'motion_encoder' in k:
-           continue  # Remove motion encoder (not needed for inference)
-       clean_sd[k] = v
+## 3. Load into fresh model (strict=False audit)
+```python
+model = build_model(cfg)  # fresh
+missing, unexpected = model.load_state_dict(encoder_sd, strict=False)
+print("Missing:", missing[:5] if missing else "None")
+print("Unexpected:", unexpected[:5] if unexpected else "None")
+```
 
-   print(f"Original keys: {len(model_sd)}, Cleaned keys: {len(clean_sd)}")
-   ```
+## 4. Smoke inference
+```python
+model.eval()
+with torch.no_grad():
+    dummy = torch.randn(1, 3, 224, 224).cuda()
+    out = model(dummy)
+print("Output shape:", getattr(out, 'shape', type(out)))
+```
 
-4. Save the clean state dict:
-   ```python
-   torch.save(clean_sd, 'outputs/<run_name>/deployment.pth')
-   ```
+## 5. Document the artifact
+Create `outputs/<run>/DEPLOYMENT.md`:
+- Training step / best val metric
+- Architecture (backbone size, LoRA rank if any)
+- Data it saw (splits, leak-free note)
+- Preprocessing (resize 224, normalize ImageNet stats or dataset stats)
+- How to load: code snippet
 
-5. If extracting just the encoder for downstream tasks:
-   ```python
-   encoder_sd = {}
-   for k, v in model_sd.items():
-       if k.startswith('frame_encoder.encoder.'):
-           encoder_sd[k.replace('frame_encoder.encoder.', '')] = v
-   torch.save(encoder_sd, 'outputs/<run_name>/encoder.pth')
-   print(f"Encoder keys: {len(encoder_sd)}")
-   ```
+## 6. For release
+- Hash the file: `sha256sum deployment.pth >> SHA256SUMS`
+- Store alongside config and environment export.
 
-6. Verify the saved checkpoint loads correctly:
-   ```python
-   # Load into a fresh model
-   model = build_model(config)  # Your model builder
-   missing, unexpected = model.load_state_dict(clean_sd, strict=False)
-   print(f"Missing: {len(missing)}, Unexpected: {len(unexpected)}")
-   assert len(missing) == 0 or all('loss' not in k for k in missing)
-   ```
+Apply skills: `tdv-pretrain`, `surgical-mot-eval`, `reproducibility`, `paper-code-release`.
 
-7. Run a quick inference test:
-   ```python
-   model.eval()
-   with torch.no_grad():
-       dummy = torch.randn(1, 3, 224, 224)
-       output = model(dummy)
-   print(f"Output shape: {output.shape}")
-   ```
-
-8. Document the checkpoint:
-   - Training step and epoch
-   - Validation metrics at checkpoint time
-   - Model architecture and config
-   - Data it was trained on
-   - Any preprocessing requirements
-
-9. Summarize the deployment checkpoint path and usage instructions.
+Never ship a checkpoint that hasn't passed smoke eval + verification gate.
