@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Windsurf** (`.windsurf/`) | 34 | 34 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 41 | 44 commands (`/name`) |
+| **Windsurf** (`.windsurf/`) | 68 | 68 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 75 | 78 commands (`/name`) |
 
 - Every major topic has both a **skill** and a **workflow/command**.
 
@@ -16,7 +16,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (34)
+## Skills (68)
 
 ### Research Scientist (13)
 
@@ -67,7 +67,46 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `mot-repo-orientation` | Navigate the GOT-JEPA surgical MOT codebase structure |
 | `mot-browser-research` | Research SOTA MOT methods via web search and paper discovery |
 
-## Workflows (34)
+### Science & Bioinformatics (34)
+
+| Skill | Description |
+|-------|-------------|
+| `alphafold-database-fetch-and-analyze` | Retrieve and analyze AlphaFold predicted structures |
+| `alphagenome-single-variant-analysis` | Analyze genetic variant effects on gene expression |
+| `chembl-database` | Query ChEMBL for bioactive molecules and drug targets |
+| `clinical-trials-database` | Search ClinicalTrials.gov for clinical trials |
+| `clinvar-database` | Clinical significance and pathogenicity classifications |
+| `dbsnp-database` | Look up and map short genetic variants (SNPs) |
+| `embl-ebi-ols` | Query EMBL-EBI Ontology Lookup Service |
+| `encode-ccres-database` | Query ENCODE Registry of cis-Regulatory Elements |
+| `ensembl-database` | Resolve gene, transcript, and protein IDs via Ensembl |
+| `foldseek-structural-search` | 3D structural search of proteins |
+| `gnomad-database` | Query Genome Aggregation Database for allele frequencies |
+| `gtex-database` | Retrieve RNA expression data and variant associations |
+| `human-protein-atlas-database` | Retrieve protein expression and localization data |
+| `interpro-database` | Identify protein domains, families, and sites |
+| `jaspar-database` | Query JASPAR for transcription factor binding profiles |
+| `literature-search-arxiv` | Search arXiv for scientific preprints |
+| `literature-search-biorxiv` | Browse and download bioRxiv preprints |
+| `literature-search-europepmc` | Search Europe PMC for scientific literature |
+| `literature-search-openalex` | Query OpenAlex scholarly database |
+| `ncbi-sequence-fetch` | Retrieve protein and nucleotide sequences from NCBI |
+| `openfda-database` | Query openFDA API for drugs, devices, and food |
+| `opentargets-database` | Query Open Targets for target-disease associations |
+| `pdb-database` | Search and download experimentally-determined 3D structures |
+| `protein-sequence-msa` | Multiple sequence alignment with Clustal Omega |
+| `protein-sequence-similarity-search` | Search for homologous proteins with MMseqs2/BLAST |
+| `pubchem-database` | Query PubChem for compounds, properties, and assays |
+| `pubmed-database` | Search PubMed for scientific literature |
+| `pymol` | Visualize and render protein structures with PyMOL |
+| `quickgo-database` | Query QuickGO for Gene Ontology terms and mappings |
+| `reactome-database` | Query Reactome for pathway analysis and enrichment |
+| `string-database` | Query STRING for protein-protein interactions |
+| `ucsc-conservation-and-tfbs` | Fetch conservation scores and TF binding sites from UCSC |
+| `unibind-database` | Query UniBind for experimentally validated TF binding sites |
+| `uniprot-database` | Access protein metadata, sequences, and annotations |
+
+## Workflows (68)
 
 ### Research Workflows (15)
 
@@ -142,7 +181,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 
 ```
 .windsurf/
-├── skills/                    # 34 SKILL.md files (auto-invoked)
+├── skills/                    # 68 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
 │   ├── address-pr-comments/
 │   ├── aire-slurm-submit/
@@ -174,7 +213,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 │   ├── tdv-pretrain/
 │   ├── testing-strategy/
 │   └── wandb-experiment/
-└── workflows/                 # 34 workflow .md files (slash commands)
+└── workflows/                 # 68 workflow .md files (slash commands)
     ├── ablation-study.md
     ├── address-pr-comments.md
     ├── aire-slurm-submit.md
@@ -208,7 +247,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
     └── wandb-experiment.md
 
 .cursor/
-├── skills/                    # 41 SKILL.md files (auto-suggested)
+├── skills/                    # 75 SKILL.md files (auto-suggested)
 │   ├── 3d-reconstruction-best-practices/
 │   ├── ablation-study/
 │   ├── agentic-loop-design/
@@ -219,7 +258,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 │   ├── reproducibility/
 │   ├── tdv-pretrain/
 │   └── ... (see .cursor/README.md)
-├── commands/                  # 44 command .md files (/name)
+├── commands/                  # 78 command .md files (/name)
 │   ├── pretrain-and-evaluate.md
 │   ├── code-review.md
 │   ├── cosmos-verify.md
