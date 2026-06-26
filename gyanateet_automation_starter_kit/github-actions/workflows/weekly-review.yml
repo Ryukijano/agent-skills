@@ -1,0 +1,33 @@
+name: Weekly Repository Review
+
+on:
+  schedule:
+    - cron: '0 17 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 100
+      - name: Generate weekly repo review
+        run: |
+          echo "# Weekly Repository Review" > weekly_repo_review.md
+          echo "Generated: $(date -u)" >> weekly_repo_review.md
+          echo "
+## Recent commits" >> weekly_repo_review.md
+          git log --since='7 days ago' --oneline >> weekly_repo_review.md || true
+          echo "
+## Changed files" >> weekly_repo_review.md
+          git diff --name-only HEAD~20 HEAD | sort | uniq >> weekly_repo_review.md || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: weekly-repo-review
+          path: weekly_repo_review.md

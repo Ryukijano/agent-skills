@@ -1,0 +1,52 @@
+name: Experiment Report
+
+on:
+  workflow_dispatch:
+    inputs:
+      results_path:
+        description: 'Path to experiment results CSV/JSON directory'
+        required: false
+        default: 'results'
+  push:
+    paths:
+      - 'results/**'
+      - 'experiments/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install report dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas matplotlib numpy
+
+      - name: Generate experiment report
+        run: |
+          python scripts/experiment_report.py --input "${{ github.event.inputs.results_path || 'results' }}" --output experiment_report.md --figdir figures
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiment-report
+          path: |
+            experiment_report.md
+            figures/**
+
+      - name: Commit report if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiment_report.md figures || true
+          git diff --staged --quiet || git commit -m "Update experiment report"
+          git push || true
