@@ -1,0 +1,70 @@
+{
+  "name": "Daily Research Radar - Starter",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * *"
+            }
+          ]
+        }
+      },
+      "name": "Every morning",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://export.arxiv.org/api/query?search_query=all:robotics+OR+all:vision+language+model&start=0&max_results=20",
+        "options": {}
+      },
+      "name": "Fetch arXiv RSS/API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse fetched data, deduplicate, rank, and return top items.\nreturn [{json:{note:'Replace placeholder nodes/credentials before activation. Keep approval steps enabled.', items: $input.all().slice(0,5).map(i => i.json)}}];"
+      },
+      "name": "Rank and format",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "text": "Daily research digest ready. Connect this to Teams/Slack/Email/Notion."
+      },
+      "name": "Send digest placeholder",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        720,
+        0
+      ]
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "pinData": {},
+  "versionId": "starter-template"
+}

@@ -1,0 +1,21 @@
+name: Docs Check
+
+on:
+  pull_request:
+  push:
+    branches: [ main, master ]
+
+permissions:
+  contents: read
+
+jobs:
+  docs-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check key docs exist
+        run: |
+          test -f README.md || (echo "README.md missing" && exit 1)
+          echo "Docs check passed"
+      - name: List changed files
+        run: git diff --name-only HEAD~1 HEAD || true

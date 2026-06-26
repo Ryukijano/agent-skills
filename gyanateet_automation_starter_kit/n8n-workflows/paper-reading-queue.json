@@ -1,0 +1,44 @@
+{
+  "name": "Paper Reading Queue - Starter",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Manual trigger / webhook from Zotero",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{title:$json.title || 'TODO', status:'queued', tags:['paper'], summary:'Add LLM summary step here'}}];"
+      },
+      "name": "Normalize paper metadata",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        0
+      ]
+    },
+    {
+      "parameters": {},
+      "name": "Create note/task placeholder",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        480,
+        0
+      ]
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "pinData": {},
+  "versionId": "starter-template"
+}
