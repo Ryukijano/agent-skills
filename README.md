@@ -7,16 +7,18 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Windsurf** (`.windsurf/`) | 30 | 26 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 40 | 45 commands (`/name`) |
+| **Windsurf** (`.windsurf/`) | 34 | 34 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 41 | 44 commands (`/name`) |
+
+- Every major topic has both a **skill** and a **workflow/command**.
 
 Every major topic has both a **skill** (reference knowledge, auto-suggested) and a **workflow/command** (step-by-step procedure).
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (30)
+## Skills (34)
 
-### Research Scientist (12)
+### Research Scientist (13)
 
 | Skill | Description |
 |-------|-------------|
@@ -32,6 +34,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `lora-finetune` | LoRA fine-tuning for vision transformers (DINOv2, ViT) |
 | `pretrain-and-evaluate` | Full Stage 0 pretrain → Stage 1 detect → eval pipeline |
 | `continual-learning` | Cross-session context persistence with progress files |
+| `deep-research` | Systematic web research and deep reasoning for complex technical questions |
 
 ### Software Engineering (10)
 
@@ -48,7 +51,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `git-branch-workflow` | Branch naming, commit conventions, PR templates |
 | `address-pr-comments` | Systematically address PR review comments via GitHub CLI |
 
-### Infrastructure & Debugging (8)
+### Infrastructure & Debugging (11)
 
 | Skill | Description |
 |-------|-------------|
@@ -60,10 +63,13 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `checkpoint-to-deployment` | Convert training checkpoint to deployment-ready format |
 | `setup-ml-project` | Scaffold new ML research project with standard structure |
 | `wandb-experiment` | Weights & Biases experiment tracking setup and debugging |
+| `mot-training-workflow` | Surgical MOT 4-stage pipeline training workflow |
+| `mot-repo-orientation` | Navigate the GOT-JEPA surgical MOT codebase structure |
+| `mot-browser-research` | Research SOTA MOT methods via web search and paper discovery |
 
-## Workflows (26)
+## Workflows (34)
 
-### Research Workflows (13)
+### Research Workflows (15)
 
 | Workflow | Description |
 |----------|-------------|
@@ -79,6 +85,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `/lora-finetune` | Configure and run LoRA fine-tuning |
 | `/pretrain-and-evaluate` | Full pretrain → detect → eval pipeline |
 | `/continual-learning` | Session start/end handoff protocol |
+| `/deep-research` | Systematic web research and deep reasoning workflow |
 | `/wandb-experiment` | Set up WandB tracking |
 
 ### SWE Workflows (8)
@@ -135,15 +142,75 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 
 ```
 .windsurf/
-├── skills/                    # 30 SKILL.md files (auto-invoked)
-│   └── ...
-└── workflows/                 # 26 workflow .md files (slash commands)
-    └── ...
+├── skills/                    # 34 SKILL.md files (auto-invoked)
+│   ├── ablation-study/
+│   ├── address-pr-comments/
+│   ├── aire-slurm-submit/
+│   ├── checkpoint-to-deployment/
+│   ├── ci-cd-setup/
+│   ├── code-quality/
+│   ├── code-review/
+│   ├── conda-env-setup/
+│   ├── continual-learning/
+│   ├── data-management/
+│   ├── debug-pytorch-gpu/
+│   ├── deep-research/
+│   ├── debug-training/
+│   ├── dependency-management/
+│   ├── experiment-tracking/
+│   ├── git-branch-workflow/
+│   ├── lora-finetune/
+│   ├── paper-code-release/
+│   ├── paper-submission-prep/
+│   ├── pre-commit-setup/
+│   ├── pretrain-and-evaluate/
+│   ├── refactor-extract-module/
+│   ├── release-checklist/
+│   ├── reproducibility/
+│   ├── reproducibility-checklist/
+│   ├── setup-ml-project/
+│   ├── submit-gpu-job/
+│   ├── surgical-mot-eval/
+│   ├── tdv-pretrain/
+│   ├── testing-strategy/
+│   └── wandb-experiment/
+└── workflows/                 # 34 workflow .md files (slash commands)
+    ├── ablation-study.md
+    ├── address-pr-comments.md
+    ├── aire-slurm-submit.md
+    ├── checkpoint-to-deployment.md
+    ├── ci-cd-setup.md
+    ├── code-quality.md
+    ├── code-review.md
+    ├── conda-env-setup.md
+    ├── continual-learning.md
+    ├── data-management.md
+    ├── debug-pytorch-gpu.md
+    ├── debug-training.md
+    ├── deep-research.md
+    ├── dependency-management.md
+    ├── experiment-tracking.md
+    ├── git-branch-workflow.md
+    ├── lora-finetune.md
+    ├── paper-code-release.md
+    ├── paper-submission-prep.md
+    ├── pre-commit-setup.md
+    ├── pretrain-and-evaluate.md
+    ├── refactor-extract-module.md
+    ├── release-checklist.md
+    ├── reproducibility-checklist.md
+    ├── reproducibility.md
+    ├── setup-ml-project.md
+    ├── submit-gpu-job.md
+    ├── surgical-mot-eval.md
+    ├── tdv-pretrain.md
+    ├── testing-strategy.md
+    └── wandb-experiment.md
 
 .cursor/
-├── skills/                    # 40 SKILL.md files (auto-suggested)
-│   ├── ablation-study/
+├── skills/                    # 41 SKILL.md files (auto-suggested)
 │   ├── 3d-reconstruction-best-practices/
+│   ├── ablation-study/
 │   ├── agentic-loop-design/
 │   ├── dgx-spark-cosmos3/
 │   ├── endosight-3d-pipeline/
@@ -152,7 +219,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 │   ├── reproducibility/
 │   ├── tdv-pretrain/
 │   └── ... (see .cursor/README.md)
-├── commands/                  # 45 command .md files (/name)
+├── commands/                  # 44 command .md files (/name)
 │   ├── pretrain-and-evaluate.md
 │   ├── code-review.md
 │   ├── cosmos-verify.md
