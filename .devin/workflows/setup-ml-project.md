@@ -19,7 +19,7 @@ Create a new ML research project with the standard directory structure.
    mkdir -p configs configs/splits
    mkdir -p scripts jobs logs outputs
    mkdir -p tests
-   mkdir -p .windsurf/skills .windsurf/workflows
+   mkdir -p .devin/skills .devin/workflows
    ```
 
 3. Create `requirements.txt` with standard ML dependencies:

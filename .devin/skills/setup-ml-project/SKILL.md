@@ -18,7 +18,7 @@ description: Scaffold a new ML research project with standard directory structur
 ├── logs/
 ├── outputs/
 ├── tests/
-├── .windsurf/
+├── .devin/
 ├── requirements.txt
 ├── .gitignore
 └── README.md

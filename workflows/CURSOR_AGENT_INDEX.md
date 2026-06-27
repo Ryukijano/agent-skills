@@ -2,7 +2,7 @@
 
 Canonical source: this repo ([Ryukijano/agent-skills](https://github.com/Ryukijano/agent-skills)).
 
-Copy `.cursor/` and `.windsurf/` into consumer projects (e.g. [Gyanateet_tracking](https://github.com/Ryukijano/Gyanateet_tracking)).
+Copy `.cursor/` and `.devin/` into consumer projects (e.g. [Gyanateet_tracking](https://github.com/Ryukijano/Gyanateet_tracking)).
 
 ## All skills (`.cursor/skills/`)
 

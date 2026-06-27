@@ -22,11 +22,11 @@ Full catalog: `workflows/CURSOR_COMMANDS.md`. All commands are self-contained in
 | Cosmos | `/cosmos-verify`, `/cosmos-spark-kernels`, `/esd-t2v`, `/esd-forward-dynamics`, `/lap-t2v` |
 | Ship/review | `/ship-pr`, `/babysit-pr`, `/fix-ci`, `/review-bugbot`, `/iterative-test-loop`, … |
 
-## Cross-project workflows (Windsurf mirror)
+## Cross-project workflows (Devin mirror)
 
-| Workflow | Windsurf | Cursor command | Skill |
-|----------|----------|----------------|-------|
-| AIRE GPU job | `.windsurf/workflows/submit-gpu-job.md` | `/submit-gpu-job` | `aire-slurm-submit` |
+| Workflow | Devin | Cursor command | Skill |
+|----------|-------|----------------|-------|
+| AIRE GPU job | `.devin/workflows/submit-gpu-job.md` | `/submit-gpu-job` | `aire-slurm-submit` |
 | TDV pretrain + eval | `pretrain-and-evaluate.md` | `/pretrain-and-evaluate` | `tdv-pretrain` |
 | Debug training | `debug-training.md` | `/debug-training` | `debug-pytorch-gpu` |
 | Code review | `code-review.md` | `/code-review` | — |
@@ -40,7 +40,7 @@ Full catalog: `workflows/CURSOR_COMMANDS.md`. All commands are self-contained in
 git clone https://github.com/Ryukijano/agent-skills.git
 cp -r agent-skills/.cursor/skills/* your-project/.cursor/skills/
 cp -r agent-skills/.cursor/commands/* your-project/.cursor/commands/
-cp -r agent-skills/.windsurf your-project/   # optional Windsurf mirror
+cp -r agent-skills/.devin your-project/   # optional Devin mirror
 ```
 
 See `workflows/CURSOR_AGENT_INDEX.md` for the full skill list.

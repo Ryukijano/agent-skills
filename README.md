@@ -1,13 +1,13 @@
 # agent-skills
 
-Reusable **Windsurf** and **Cursor** skills and workflows for cross-project AI-assisted development.
+Reusable **Devin** and **Cursor** skills and workflows for cross-project AI-assisted development.
 Designed for research scientists and software engineers working on ML projects (surgical video MOT, HPC, DGX Spark, 3D recon, agentic loops).
 
 ## Overview
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Windsurf** (`.windsurf/`) | 68 | 68 workflows (`/name`) |
+| **Devin** (`.devin/`) | 68 | 68 workflows (`/name`) |
 | **Cursor** (`.cursor/`) | 75 | 78 commands (`/name`) |
 
 - Every major topic has both a **skill** and a **workflow/command**.
@@ -152,9 +152,9 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 
 ## Usage
 
-### In Windsurf
-1. Copy the `.windsurf/` directory into your project root (or symlink it).
-2. Skills are automatically discovered and invoked by Cascade based on task relevance.
+### In Devin
+1. Copy the `.devin/` directory into your project root (or symlink it).
+2. Skills are automatically discovered and invoked by the agent based on task relevance.
 3. Workflows are invoked via `/workflow-name` slash commands.
 
 ### In Cursor
@@ -163,7 +163,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 3. **Commands** live in `.cursor/commands/<name>.md` — invoked via `/name` in chat or referenced explicitly.
 4. See `.cursor/README.md` for the full inventory and bootstrap guide.
 
-**Cursor-only extras** (beyond the shared Windsurf set):
+**Cursor-only extras** (beyond the shared Devin set):
 - Domain: `dgx-spark-cosmos3`, `nemotron-agent-loop`, `endosight-3d-pipeline`, `3d-reconstruction-best-practices`, `agentic-loop-design`, `spark-hardware-optim`, `surgical-video-data-pipeline`
 - MOT: `mot-training-workflow`, `mot-repo-orientation`, `mot-browser-research`
 - Cosmos/Spark commands: `/cosmos-verify`, `/esd-forward-dynamics`, `/esd-t2v`, `/lap-t2v`, `/cosmos-spark-kernels`
@@ -171,7 +171,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 
 ### Skill vs Workflow: When to use which
 
-- **Skills** are auto-invoked by Cascade when it detects a relevant task. Use for
+- **Skills** are auto-invoked by the Devin agent when it detects a relevant task. Use for
   knowledge that should be available on-demand (e.g., debugging guides, hyperparameter tables).
 - **Workflows** are manually triggered via `/name` when you want to follow a specific
   step-by-step procedure (e.g., `/pretrain-and-evaluate`, `/code-review`).
@@ -180,7 +180,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 ## Structure
 
 ```
-.windsurf/
+.devin/
 ├── skills/                    # 68 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
 │   ├── address-pr-comments/
