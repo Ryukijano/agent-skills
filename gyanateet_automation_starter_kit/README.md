@@ -49,6 +49,16 @@ Use the instruction files in `copilot-studio/` to create your personal research/
 - Weekly review is read-only.
 - Inbox/task extraction should require approval for ambiguous commitments.
 
+## Research reading lists
+
+Curated paper lists for Gyanateet's research areas:
+
+- **[RL Reading List](docs/rl-reading-list.md)** — 21 papers covering PPO → GRPO → 
+  DAPO → REPO, RL from scratch (AlphaZero, RPT), diversity/mode collapse prevention 
+  (DARLING, GAPO, SetPO), exploration & curiosity (ICM, World Models), and quantum 
+  circuit RL (RLVQC, FlowQ-Net, TensorRL-QAS). Organized into 6 tiers from foundations 
+  to quantum-specific methods, with connections to DINOv2/V-JEPA2/SSL background.
+
 ## Suggested first deployment order
 
 1. GitHub CI and experiment report workflow.
