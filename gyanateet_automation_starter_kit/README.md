@@ -59,6 +59,12 @@ Curated paper lists for Gyanateet's research areas:
   circuit RL (RLVQC, FlowQ-Net, TensorRL-QAS). Organized into 6 tiers from foundations 
   to quantum-specific methods, with connections to DINOv2/V-JEPA2/SSL background.
 
+- **[Physics-Based ML Reading List](docs/physics-ml-reading-list.md)** — 15 papers 
+  covering the progression from U-Net surrogates → Fourier Neural Operators → PINNs → 
+  AI weather/climate models (GraphCast, FourCastNet, GenCast, NeuralGCM) → graph-based 
+  physics simulation (GNS, MPNN). Includes connections to Conditional-GQE, diffusion 
+  models, and the UvA DL / Physics-Based Deep Learning course materials.
+
 ## Suggested first deployment order
 
 1. GitHub CI and experiment report workflow.
