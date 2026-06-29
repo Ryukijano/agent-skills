@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 68 | 68 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 75 | 78 commands (`/name`) |
+| **Devin** (`.devin/`) | 84 | 84 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 91 | 94 commands (`/name`) |
 
 - Every major topic has both a **skill** and a **workflow/command**.
 
@@ -16,7 +16,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (68)
+## Skills (84)
 
 ### Research Scientist (13)
 
@@ -106,7 +106,33 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `unibind-database` | Query UniBind for experimentally validated TF binding sites |
 | `uniprot-database` | Access protein metadata, sequences, and annotations |
 
-## Workflows (68)
+### Documents & Creative (6)
+
+| Skill | Description |
+|-------|-------------|
+| `pdf` | Read, extract, merge, split, create, and OCR PDF files |
+| `docx` | Create, edit, and analyze Word documents with tracked changes |
+| `xlsx` | Create Excel spreadsheets with formulas, financial models, data analysis |
+| `pptx` | Create presentations and slide decks with design QA |
+| `canvas-design` | Design visual art in PNG and PDF formats |
+| `algorithmic-art` | Create generative art using p5.js with seeded randomness |
+
+### Development & Tooling (10)
+
+| Skill | Description |
+|-------|-------------|
+| `webapp-testing` | Test local web apps with Playwright (screenshots, logs, UI automation) |
+| `mcp-builder` | Build MCP servers to expose tools and APIs to AI agents |
+| `frontend-design` | Frontend UI/UX design with modern CSS and accessibility |
+| `git-advanced-workflows` | Interactive rebase, cherry-pick, bisect, reflog, worktrees, conflict resolution |
+| `tdd-workflow` | Red-Green-Refactor TDD cycle with best practices |
+| `pair-programming` | Structured AI pair programming with driver-navigator pattern |
+| `security-audit` | OWASP Top 10 checklist, vulnerability scanning, access control audit |
+| `data-visualization` | Charts and plots with matplotlib, seaborn, plotly |
+| `docker-containerization` | Dockerfiles, multi-stage builds, docker-compose |
+| `api-design` | REST API design with FastAPI, best practices, OpenAPI docs |
+
+## Workflows (84)
 
 ### Research Workflows (15)
 
@@ -181,7 +207,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 
 ```
 .devin/
-├── skills/                    # 68 SKILL.md files (auto-invoked)
+├── skills/                    # 84 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
 │   ├── address-pr-comments/
 │   ├── aire-slurm-submit/
@@ -213,7 +239,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 │   ├── tdv-pretrain/
 │   ├── testing-strategy/
 │   └── wandb-experiment/
-└── workflows/                 # 68 workflow .md files (slash commands)
+└── workflows/                 # 84 workflow .md files (slash commands)
     ├── ablation-study.md
     ├── address-pr-comments.md
     ├── aire-slurm-submit.md
@@ -247,7 +273,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
     └── wandb-experiment.md
 
 .cursor/
-├── skills/                    # 75 SKILL.md files (auto-suggested)
+├── skills/                    # 91 SKILL.md files (auto-suggested)
 │   ├── 3d-reconstruction-best-practices/
 │   ├── ablation-study/
 │   ├── agentic-loop-design/
@@ -258,7 +284,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 │   ├── reproducibility/
 │   ├── tdv-pretrain/
 │   └── ... (see .cursor/README.md)
-├── commands/                  # 78 command .md files (/name)
+├── commands/                  # 94 command .md files (/name)
 │   ├── pretrain-and-evaluate.md
 │   ├── code-review.md
 │   ├── cosmos-verify.md
