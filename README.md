@@ -1,14 +1,14 @@
 # agent-skills
 
 Reusable **Devin** and **Cursor** skills and workflows for cross-project AI-assisted development.
-Designed for research scientists and software engineers working on ML projects (surgical video MOT, HPC, DGX Spark, 3D recon, agentic loops).
+Designed for research scientists and software engineers working on ML projects (surgical video MOT, HPC, DGX Spark, 3D recon, agentic loops) and **PCOS edge agent** development.
 
 ## Overview
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 84 | 84 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 91 | 94 commands (`/name`) |
+| **Devin** (`.devin/`) | 90 | 88 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 97 | 98 commands (`/name`) |
 
 - Every major topic has both a **skill** and a **workflow/command**.
 
@@ -16,7 +16,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (84)
+## Skills (90)
 
 ### Research Scientist (13)
 
@@ -117,6 +117,17 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `canvas-design` | Design visual art in PNG and PDF formats |
 | `algorithmic-art` | Create generative art using p5.js with seeded randomness |
 
+### PCOS Edge Agent (6)
+
+| Skill | Description |
+|-------|-------------|
+| `pcos-routing` | PCOS context routing decision tree, surface selection, Chrome API selection |
+| `pcos-chrome-ai` | Chrome Built-in AI API integration (Prompt, Summarizer, Translator, etc.) |
+| `pcos-android-litert` | Android on-device inference with LiteRT-LM v0.13+ and Gemma models |
+| `pcos-bridge` | Chrome ↔ Android WebSocket bridge via broker relay hub |
+| `pcos-privacy` | PII stripping, cloud escalation gating, privacy-first routing policies |
+| `pcos-deploy` | PCOS deployment, CI/CD, observability, HF Space, MkDocs docs site |
+
 ### Development & Tooling (10)
 
 | Skill | Description |
@@ -132,7 +143,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `docker-containerization` | Dockerfiles, multi-stage builds, docker-compose |
 | `api-design` | REST API design with FastAPI, best practices, OpenAPI docs |
 
-## Workflows (84)
+## Workflows (88)
 
 ### Research Workflows (15)
 
@@ -176,6 +187,15 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `/debug-pytorch-gpu` | Diagnose PyTorch GPU issues |
 | `/debug-training` | Debug training failures by symptom |
 
+### PCOS Workflows (4)
+
+| Workflow | Description |
+|----------|-------------|
+| `/pcos-setup` | Set up PCOS broker for local development |
+| `/pcos-test` | Run PCOS test suite and fix failures |
+| `/pcos-add-chrome-api` | Add a new Chrome Built-in AI API to routing pipeline |
+| `/pcos-debug-routing` | Debug why a task routes to the wrong surface |
+
 ## Usage
 
 ### In Devin
@@ -207,7 +227,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 
 ```
 .devin/
-├── skills/                    # 84 SKILL.md files (auto-invoked)
+├── skills/                    # 90 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
 │   ├── address-pr-comments/
 │   ├── aire-slurm-submit/
@@ -227,6 +247,12 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 │   ├── lora-finetune/
 │   ├── paper-code-release/
 │   ├── paper-submission-prep/
+│   ├── pcos-routing/
+│   ├── pcos-chrome-ai/
+│   ├── pcos-android-litert/
+│   ├── pcos-bridge/
+│   ├── pcos-privacy/
+│   ├── pcos-deploy/
 │   ├── pre-commit-setup/
 │   ├── pretrain-and-evaluate/
 │   ├── refactor-extract-module/
@@ -239,7 +265,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 │   ├── tdv-pretrain/
 │   ├── testing-strategy/
 │   └── wandb-experiment/
-└── workflows/                 # 84 workflow .md files (slash commands)
+└── workflows/                 # 88 workflow .md files (slash commands)
     ├── ablation-study.md
     ├── address-pr-comments.md
     ├── aire-slurm-submit.md
@@ -264,6 +290,10 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
     ├── refactor-extract-module.md
     ├── release-checklist.md
     ├── reproducibility-checklist.md
+    ├── pcos-add-chrome-api.md
+    ├── pcos-debug-routing.md
+    ├── pcos-setup.md
+    ├── pcos-test.md
     ├── reproducibility.md
     ├── setup-ml-project.md
     ├── submit-gpu-job.md
@@ -273,7 +303,7 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
     └── wandb-experiment.md
 
 .cursor/
-├── skills/                    # 91 SKILL.md files (auto-suggested)
+├── skills/                    # 97 SKILL.md files (auto-suggested)
 │   ├── 3d-reconstruction-best-practices/
 │   ├── ablation-study/
 │   ├── agentic-loop-design/
