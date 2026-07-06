@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 90 | 88 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 97 | 98 commands (`/name`) |
+| **Devin** (`.devin/`) | 111 | 109 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 126 | 119 commands (`/name`) |
 
 - Every major topic has both a **skill** and a **workflow/command**.
 
@@ -16,7 +16,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (90)
+## Skills (111)
 
 ### Research Scientist (13)
 
@@ -143,7 +143,38 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `docker-containerization` | Dockerfiles, multi-stage builds, docker-compose |
 | `api-design` | REST API design with FastAPI, best practices, OpenAPI docs |
 
-## Workflows (88)
+### Engineering Practice (8)
+
+| Skill | Description |
+|-------|-------------|
+| `spec-driven-development` | Spec → plan → tasks → implement gated workflow |
+| `context-engineering` | Manage AI agent context: rules, specs, source, errors |
+| `incremental-implementation` | Small verifiable increments, compilable, rollback-friendly |
+| `debugging-and-error-recovery` | Systematic debugging: reproduce, localize, fix root cause |
+| `code-simplification` | Simplify code preserving behavior, clarity over cleverness |
+| `performance-optimization` | Profile → identify bottlenecks → optimize → measure |
+| `observability-and-instrumentation` | Logging, metrics, tracing, health checks |
+| `planning-and-task-breakdown` | Break complex tasks into small verifiable subtasks |
+
+### AI/ML Research & Training (13)
+
+| Skill | Description |
+|-------|-------------|
+| `autoresearch` | Two-loop autonomous research orchestration |
+| `ml-paper-writing` | Publication-ready papers for NeurIPS, ICML, ICLR with LaTeX |
+| `academic-plotting` | Publication-quality figures with venue-specific styling |
+| `research-brainstorming` | Structured ideation for high-impact research directions |
+| `vllm-serving` | High-throughput LLM serving with PagedAttention |
+| `flash-attention` | 2-4x faster attention with O(N) memory |
+| `peft-finetuning` | LoRA, QLoRA, DoRA — adapt LLMs with minimal params |
+| `deepspeed-training` | ZeRO optimization for distributed training of large models |
+| `model-quantization` | 8-bit/4-bit quantization with bitsandbytes, GPTQ, AWQ, GGUF |
+| `knowledge-distillation` | Compress large models into smaller ones via distillation |
+| `speculative-decoding` | 1.5-3.6x faster LLM inference with draft models |
+| `rag-pipelines` | RAG with vector databases, embeddings, and LLMs |
+| `model-merging` | Combine models with TIES, DARE, SLERP using mergekit |
+
+## Workflows (109)
 
 ### Research Workflows (15)
 
