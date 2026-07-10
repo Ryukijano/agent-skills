@@ -91,3 +91,35 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 - [ ] Study DreamerV3 RSSM -> sketch surgical phase transition model
 - [ ] Integrate MonST3R depth as auxiliary channel in world model input
 - [ ] Deploy SurgicalSAM for instrument mask pseudo-labels
+
+
+## X Bookmarks - New AI Papers & Posts (July 2026)
+
+### Embodied World Models & Robotics
+- [ ] RynnWorld-4D (Alibaba) - 4D embodied world model predicting RGB, depth & optical flow from RGB-D + instruction; tri-branch diffusion; bridges world prediction and robot control - Task: Study 4D prediction branch for surgical scene forecasting
+- [ ] AdaJEPA - Adaptive world model that plans, acts, and adapts in closed loop - Task: Compare with V-JEPA 2 on adaptive surgical phase tracking
+- [ ] OMG: Omni-Modal Motion Generation for Generalist Humanoid Control (Tsinghua) - scalable brain generating motions from language, audio or reference - Task: Explore multi-modal control signals for surgical robot guidance
+- [ ] HDFlow - Hierarchical Diffusion-Flow Planning for long-horizon robotic tasks (ICML 2026 Spotlight) - Task: Apply hierarchical planning to multi-step surgical workflows
+- [ ] Qwen-RobotManip (Alibaba) - VLA foundation model for robotic manipulation trained on ~38,100 hours of open-source data - Task: Benchmark VLA alignment techniques for surgical instrument control
+
+### 3D Vision & Reconstruction
+- [ ] Volume Transformer (ECCV 2026) - Revisits vanilla Transformers for 3D scene understanding via volumetric patch tokens - Task: Compare volumetric tokenization with COSMOS tokenizer for endoscopic 3D
+- [ ] GS-SDF - LiDAR-Augmented Gaussian Splatting + Neural SDF for geometrically consistent rendering and reconstruction - Task: Adapt for depth-consistent surgical scene reconstruction
+- [ ] SuperFlex (CVPR 2026) - Compact & explicit 3D object/scene representations via superquadric decomposition - Task: Explore superquadric representations for surgical instrument shape priors
+- [ ] FoundObj (ICML 2026, arXiv 2605.27178) - Self-supervised 2D/3D foundation models as RL rewards to segment 3D scenes without scene-level labels - Task: Apply to endoscopic 3D anatomy segmentation without dense annotations
+- [ ] FreeOrbit4D (UIUC/UPenn/Eyeline Labs) - Training-free monocular video re-rendering to any new camera path - Task: Evaluate novel-view synthesis for surgical camera trajectory planning
+
+### Efficient Models & Training Tricks
+- [ ] Sparse Delta Memory / SDM (Loic cabannes PhD) - GatedDeltaNet + Product Key sparsity; recurrent state 3000x larger at same FLOPs - Task: Investigate sparse memory for long surgical video context modeling
+- [ ] DFlash (Zhijian Liu, ICML 2026) - Speculative decoding with block diffusion; 6.2x lossless speedup on Qwen3-8B - Task: Apply fast LLM decoding for real-time surgical instruction generation
+- [ ] MrFlow - 10x training-free diffusion acceleration via staged sampling + single high-res refinement step; works with FLUX/Qwen-Image - Task: Accelerate COSMOS diffusion for surgical video prediction
+- [ ] Is One Layer Enough? (arXiv 2407.11535) - Single transformer layer training matches full-parameter RL training; most gains concentrated in middle layers - Task: Study layer-selective fine-tuning for V-JEPA 2 surgical adaptation
+
+### VLA & Robot Policies
+- [ ] VLA-Corrector (Alibaba/ZJU) - Lightweight plug-in for action-chunked policies that monitors latent visual dynamics, drops stale actions and replans on the fly - Task: Adapt latent drift detection for surgical phase transition handling
+- [ ] LabVLA (ZJU/Shanghai AI Lab/HIT) - VLA for real-lab experiment robots using RoboGenesis simulation engine - Task: Study simulation-to-real transfer strategy for surgical robot training
+- [ ] Semantic Action RL (Levine et al.) - RL over VLA prompts enables new tasks and faster learning in real world - Task: Investigate RL-based prompt optimization for surgical phase commands
+
+### Benchmarks & Evaluation
+- [ ] Video-MME-Logical - Controlled benchmark for video temporal-logical reasoning across 25 tasks; exposes MLLM reasoning gap - Task: Evaluate surgical video MLLMs on temporal reasoning about procedure steps
+- [ ] LLM-as-a-Verifier (arXiv 2607.05591) - General-purpose verification framework for LLM agents; SOTA on Terminal-Bench V2, SWE-Bench, RobotBench - Task: Use verification framework to evaluate surgical procedure completion quality
