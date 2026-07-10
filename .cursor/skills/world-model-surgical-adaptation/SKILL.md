@@ -123,3 +123,33 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 ### Benchmarks & Evaluation
 - [ ] Video-MME-Logical - Controlled benchmark for video temporal-logical reasoning across 25 tasks; exposes MLLM reasoning gap - Task: Evaluate surgical video MLLMs on temporal reasoning about procedure steps
 - [ ] LLM-as-a-Verifier (arXiv 2607.05591) - General-purpose verification framework for LLM agents; SOTA on Terminal-Bench V2, SWE-Bench, RobotBench - Task: Use verification framework to evaluate surgical procedure completion quality
+
+
+## X Feed - New AI Posts (July 10, 2026 - Not Bookmarked)
+
+### Video & Diffusion Models
+- [ ] Hex-Forcing (NVIDIA AI Research) - Video generation method that lets a single model switch between bidirectional and autoregressive generation modes at inference time - Task: Apply switchable generation mode for flexible surgical video prediction (structured phase vs. streaming frame-by-frame)
+- [ ] LingBot-Video (alphaXiv) - Video model built for robotics that learns action, motion, and physical cause-and-effect rather than appearance - Task: Evaluate action-aware video representation for surgical instrument trajectory prediction
+- [ ] Flex-Forcing (NVIDIA) - Flexible conditioning for video diffusion; single model handles both chunk-level bidirectional and autoregressive inference - Task: Test flex conditioning for controlled endoscopic frame generation
+- [ ] MobileWan (Amir Habibian) - Wan 2.2 video generation ported to mobile devices with accompanying technical report - Task: Explore lightweight video generation for on-device surgical assistance
+
+### Agents, Memory & Long-Context
+- [ ] Remember When It Matters (Meta AI) - Proactive memory agent for long-horizon tasks; addresses behavioral state decay where agents forget previously-made decisions - Task: Apply proactive memory to multi-step surgical workflow agents
+- [ ] KAT-Coder-V2.5 (KwaiKAT via alphaXiv, arXiv 2607.05471) - Coding agent rivaling GLM-5.2; argues better coding agents need better training worlds not just bigger models; uses AutoBuilder for curriculum - Task: Adapt self-improving training world concept for surgical scene simulation curricula
+- [ ] HiLS-Attention (Tencent, 7B) - Sparse attention model with end-to-end learned chunk selection for ultra-long context - Task: Evaluate long-context attention for hours-long surgical video understanding
+- [ ] GEA: Open-ended Agent Self-Improvement via Experience Sharing (UCSB AI, github.com/UCSB-AI/GEA) - Agents that continuously learn from live workloads via experience sharing - Task: Apply experience sharing to surgical workflow agent improvement
+- [ ] Track2Map (Kwang Moo Yi) - Online deformable SLAM with motion-aware pose optimization for robotic surgery (CoTracker3 + Dynamic 3D Gaussians for endoscopy) - Task: Directly relevant — integrate Track2Map into DINO-Endo pipeline for scene SLAM
+
+### Quantization & Efficient Inference
+- [ ] NVFP4 RL Training Recipe (Humans AI, open-source) - Hardware-native 4-bit NVFP4 reinforcement learning training for Blackwell GPUs - Task: Profile NVFP4 quantization for V-JEPA 2 inference on HPC H100/H200 nodes
+- [ ] NVFP4 Kimi-K2.7-Code (NVIDIA/HuggingPapers) - 1T-parameter model quantized to NVFP4 for Blackwell GPUs - Task: Study 1T-scale quantization strategies for large world model deployment
+- [ ] VBR: Variable Bit Rate KV Cache (spiritbuun) - Dynamically quantizes KV cache layer-by-layer during inference - Task: Apply VBR to reduce KV cache memory for long surgical video context windows
+- [ ] Qwen3.6 (UnslothAI) - New quants running 2.5x faster on GPU with improved tool calling, agent use, and looping - Task: Evaluate Qwen3.6 for surgical instruction following and phase command generation
+- [ ] cuVSLAM (NVIDIA, now open-source on GitHub) - CUDA-accelerated visual SLAM with high-performance localization for drones and mobile robots, ROS 2 compatible - Task: Directly relevant — benchmark cuVSLAM for real-time endoscopic camera tracking vs. Track2Map
+
+### Foundation Models & Frontier Releases
+- [ ] GPT-5.6 Sol (OpenAI) - Best vision model from OpenAI; massive gains in object detection, counting, OCR - Task: Benchmark GPT-5.6 vision capabilities on surgical instrument detection and counting
+- [ ] Grok 4.5 (xAI, now on free tier) - Frontier model available via Grok Build for any X or Grok account - Task: Compare Grok 4.5 vs GPT-5.6 on surgical phase reasoning benchmarks
+- [ ] OpenFold3 on NVIDIA Blackwell (NVIDIA Healthcare) - Biomolecular structure prediction with 4x faster inference on Blackwell, MSA GPU search 177x faster - Task: Monitor protein structure prediction advances for potential surgical planning applications
+- [ ] Tinker (Mira Murati / Thinking Machines) - Open weights model training platform for custom multimodal AI; anyone can train their own open-weights models - Task: Evaluate Tinker for fine-tuning surgical video understanding models
+- [ ] Isaac Lab (NVIDIA Robotics, 1M downloads) - Open-source framework for training next-gen robots; milestone of 1M downloads reached - Task: Integrate Isaac Lab simulation environments for surgical robot skill learning
