@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 111 | 109 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 126 | 119 commands (`/name`) |
+| **Devin** (`.devin/`) | 118 | 116 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 133 | 126 commands (`/name`) |
 
 - Every major topic has both a **skill** and a **workflow/command**.
 
@@ -16,7 +16,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (111)
+## Skills (118)
 
 ### Research Scientist (13)
 
@@ -174,7 +174,19 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `rag-pipelines` | RAG with vector databases, embeddings, and LLMs |
 | `model-merging` | Combine models with TIES, DARE, SLERP using mergekit |
 
-## Workflows (109)
+### AlphaEvolve & Evolutionary Optimization (7)
+
+| Skill | Description |
+|-------|-------------|
+| `alphaevolve-orchestrator` | Full 4-phase AlphaEvolve workflow: design → run → monitor → post-experiment |
+| `alphaevolve-experiment-design` | Design experiments: seed program, EVOLVE-BLOCK markers, evaluator, project structure |
+| `alphaevolve-runner` | Launch experiments on GCP: configure, verify evaluator, create & start evolution loop |
+| `alphaevolve-monitor` | Monitor running experiments: progress tracking, metrics, failure analysis, reports |
+| `alphaevolve-post-experiment` | Post-experiment: code review, score progression charts, integrate evolved code |
+| `alphaevolve-consultant` | Expert reference: architecture, suitability, evaluator design, troubleshooting |
+| `evolutionary-code-optimization` | General LLM-based evolutionary code optimization (with or without AlphaEvolve) |
+
+## Workflows (116)
 
 ### Research Workflows (15)
 
