@@ -153,3 +153,48 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 - [ ] OpenFold3 on NVIDIA Blackwell (NVIDIA Healthcare) - Biomolecular structure prediction with 4x faster inference on Blackwell, MSA GPU search 177x faster - Task: Monitor protein structure prediction advances for potential surgical planning applications
 - [ ] Tinker (Mira Murati / Thinking Machines) - Open weights model training platform for custom multimodal AI; anyone can train their own open-weights models - Task: Evaluate Tinker for fine-tuning surgical video understanding models
 - [ ] Isaac Lab (NVIDIA Robotics, 1M downloads) - Open-source framework for training next-gen robots; milestone of 1M downloads reached - Task: Integrate Isaac Lab simulation environments for surgical robot skill learning
+
+
+## X Bookmarks & Feed - New AI Papers & Posts (July 11-14, 2026)
+
+### Vision Foundation Models
+- [ ] GenCeption (Google DeepMind) - Single feed-forward vision model matching specialist depth, surface normals, and 3D pose/segmentation networks - Task: Evaluate GenCeption as unified encoder for DINO-Endo replacing separate depth/seg heads
+- [ ] Vision Pretraining for Dense Spatial Perception (Trending on Papers with Code, Jul 12) - Task: Read and compare dense pretraining strategy vs. V-JEPA 2 masked spatiotemporal prediction for surgical scene understanding
+- [ ] LingBot-Vision (Ant Group, Jul 11) - Self-supervised ViT backbone with masked boundary modeling for dense spatial perception; strong on depth, segmentation, embodied tasks - Task: Benchmark as drop-in encoder replacement for DINO-Endo
+- [ ] SenseNova-Vision (Dahua Lin / SenseTime) - Unifies wide range of vision tasks into a single generative model - Task: Evaluate unified generative vision for multi-task surgical scene understanding
+- [ ] State-Prediction Separation Hypothesis (alphaXiv, arXiv 2607.012.8v1, Cornell/Harvard) - Separates hidden state into two streams (memory vs. prediction); improves downstream task performance significantly at 1-4B params - Task: Apply state-prediction separation to V-JEPA 2 fine-tuning for surgical phase memory vs. frame prediction
+
+### Embodied AI & Robotics
+- [ ] UniVR-34B (ByteDance) - 34B model learning complex reasoning, physical dynamics, and long-term planning directly from visual demonstrations; dataset on HuggingFace - Task: Study visual demonstration learning for surgical skill acquisition
+- [ ] LingBot-VA 2.0 (Yinghao Xu) - Native video-action foundation model for generalizable robot control - Task: Adapt video-action architecture for surgical instrument control from endoscopic video
+- [ ] π*0.6 (Physical Intelligence, Laura Smith, RSS 2026) - New iteration of pi-zero policy presented at RSS 2026 VLA session - Task: Study pi-zero policy architecture for dexterous surgical manipulation
+- [ ] BEHAVIOR Challenge Year 2 (Fei-Fei Li / Stanford) - Complex long-horizon tasks with 1950 hours of human teleoperation data, 200 demos/task, rich language annotations - Task: Use BEHAVIOR-style long-horizon evaluation framework for surgical workflow benchmarking
+- [ ] Instance (Lucy Cai) - Success detector for robot rollouts; describe task + drop in dataset → judges success/fail with detailed subtask captions; outperforms Claude Opus 4.8 at lower latency - Task: Directly relevant — adapt Instance-style success detection for surgical phase completion verification
+- [ ] RoboLab (NVIDIA Robotics) - Framework for evaluating robot policies for real-world deployment; general-purpose evaluation for general-purpose robots - Task: Benchmark surgical robot policies using RoboLab real-world evaluation protocol
+- [ ] PyRoki (Ilir Aliu) - 1.7x faster GPU-accelerated inverse kinematics in pure Python; open-source; supports IK, trajectory optimization, motion retargeting - Task: Integrate PyRoki for real-time surgical instrument kinematic optimization
+- [ ] RoboDojo (Cybernetic Labs) - Unifies sim-and-real evaluation to measure sim-to-real gap for manipulation policies - Task: Apply sim-to-real evaluation methodology for surgical robot policy validation
+- [ ] SuperMap (ShiboZhaoSLAM, RSS 2026) - Spatio-temporal SLAM system for visual-language navigation; living spatial memory that perceives, remembers evolution, and supports reasoning/action - Task: Directly relevant — apply SuperMap's living spatial memory to endoscopic scene understanding across a procedure
+
+### World Models & Streaming Video
+- [ ] UniVR-34B (ByteDance) - Learns physical dynamics and long-term planning from video; VR-X-SFT-RL training dataset - Task: Evaluate ByteDance VR data pipeline for surgical video world model pretraining
+- [ ] Wan-Streamer v0.2 (Alibaba, DailyPapers Jul 11) - Latency-preserving video streamer 192p to 640x368 at 25 FPS with ~200ms model latency; scene-grounded mid-shot agents for clearer video calls - Task: Adapt streaming video generation for real-time surgical video prediction at low latency
+- [ ] Vidu S1 (Tsinghua University, arXiv 2607.07165v1) - Real-time interactive video generation model supporting voice-controlled digital character animation; infinite-length real-time video at up to 42 FPS on consumer GPUs - Task: Study real-time video generation for interactive surgical simulation
+- [ ] TC-WM (Biwei Huang, UC San Diego, arXiv 2605.25620) - Task-Centric World Model learning grounded dynamics in compact latent space keeping scalability of video foundation models - Task: Core reference — TC-WM's task-centric latent space directly relevant to surgical phase-aware world modeling
+
+### Memory & Long-Context Agents
+- [ ] LLMs Need Sleep / Memory Consolidation (Ali Behrouz / Google) - Sleep phase where model consolidates short-term memories into stable long-term memories (dreaming) - Task: Apply sleep-phase memory consolidation to surgical workflow agents for multi-session learning
+- [ ] BRAID (DailyPapers) - Multi-turn text-image-text reasoning as unified Markov decision process; joint RL optimization of textual and visual generation - Task: Apply unified text-image RL for surgical instruction-following with visual feedback
+- [ ] PaperPilot - Multi-turn literature search agent with executable DAG workflows for improved retrieval accuracy - Task: Use for automated surgical CV literature monitoring
+
+### Efficient Inference & Quantization
+- [ ] Molt (NVIDIA NeMo + vLLM) - Agentic-first RL framework using vLLM as rollout engine; fast async serving up to 1T-class MoE scale - Task: Evaluate Molt for scaling surgical scene reasoning with large MoE models
+- [ ] NVIDIA Nemotron Ultra on Ollama - Fastest growing open-source model on Ollama; unlocking complex, longer-running tasks for developers - Task: Test Nemotron Ultra for on-device surgical assistance reasoning
+- [ ] AI Model Co-Design series (NVIDIA AI) - Exploring synergy between model dimensions and GPU architecture; how model size influences compute-memory bound tradeoffs - Task: Apply co-design principles when sizing V-JEPA 2 variants for HPC deployment
+
+### Quantum Computing
+- [ ] Quantum Circuits via Lie Group Diffusion Models (Jyotirmai Singh, arXiv 2606.29636) - Encodes physical structure of quantum gates natively on Lie group SU(2) instead of normal diffusion - Task: Directly relevant to quantum work — study Lie group diffusion for VQE circuit design
+
+### 3D Vision & Geometry
+- [ ] Point Cloud Geometry as Statistical Manifold (Giseop Kim, RSS 2026, arXiv 2605.10456) - Theory and practice for learning 3D point cloud geometry on statistical manifolds - Task: Apply manifold geometry learning to endoscopic 3D point cloud reconstruction
+- [ ] StereoGS (Kwang Moo Yi) - Sparse-view 3D Gaussian Splatting with stereo priors as regularizers during training - Task: Evaluate stereo-prior regularization for surgical stereo endoscope Gaussian splatting
+- [ ] Doppelganger Problem in 3D (Gabriele Berton) - Identical-looking scenes breaking 3D reconstruction pipelines; using doppelgangers as hard negatives for matching training - Task: Address surgical scene repetition (similar bowel loops, tissue folds) in endoscopic 3D reconstruction
