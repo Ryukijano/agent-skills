@@ -197,4 +197,41 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 ### 3D Vision & Geometry
 - [ ] Point Cloud Geometry as Statistical Manifold (Giseop Kim, RSS 2026, arXiv 2605.10456) - Theory and practice for learning 3D point cloud geometry on statistical manifolds - Task: Apply manifold geometry learning to endoscopic 3D point cloud reconstruction
 - [ ] StereoGS (Kwang Moo Yi) - Sparse-view 3D Gaussian Splatting with stereo priors as regularizers during training - Task: Evaluate stereo-prior regularization for surgical stereo endoscope Gaussian splatting
-- [ ] Doppelganger Problem in 3D (Gabriele Berton) - Identical-looking scenes breaking 3D reconstruction pipelines; using doppelgangers as hard negatives for matching training - Task: Address surgical scene repetition (similar bowel loops, tissue folds) in endoscopic 3D reconstruction
+- [ ] Doppelganger Problem in 3D (Gabriele Berton) - Identical-looking scenes breaking 3D reconstruction pipelines; using doppelgangers as hard negatives for matching training - Task: Address surgical scene repetition (similar bowel loops, tissue folds) in endoscopic 3D
+- [ ]
+- [ ] ## X Bookmarks & Feed - New AI Papers & Posts (July 14-18, 2026)
+
+### World Models (New Architectures)
+- [ ] Mechanistic World Models (Ingmar Posner, arXiv 2607.12474) - Scientific discovery requires uncovering the mechanisms generating observations; proposes mechanistic rather than correlational world models - Task: Core theoretical reference — read for mechanistic inductive biases in surgical world model design
+- [ ] Xiaomi-Robotics-U0 (Xiuyu Li) - 38B autoregressive world foundation model for multi-view embodied synthesis; improves out-of-distribution real-robot policy success from 36.9% to 63.2% - Task: Study autoregressive world model architecture for out-of-distribution surgical scene generalization
+- [ ] Mira Mini (hugo) - Minimal world model: 364M params, open weights, reproduced in a week — "how small can you make a world model?" - Task: Benchmark minimal world model footprint for resource-constrained HPC surgical inference
+- [ ] TC-WM / Task-Centric World Model (UC San Diego, arXiv 2605.25620) - Grounds dynamics in compact task-centric latent space while maintaining scalability of video foundation models - Task: Core reference — implement task-centric latent spaces for surgical phase-aware world modeling
+- [ ] CW-VAE / Clockwork VAE (Sasha Malysheva, NeurIPS 2021, arXiv 2102.09532) - Hierarchical VAE with temporal abstraction over 4 levels; foundational paper predating JEPA-style joint-embedding predictors - Task: Study hierarchical latent temporal abstraction for multi-scale surgical phase/step modeling
+
+### Self-Supervised Learning & Representations
+- [ ] VISReg (Haiyu Wu, Jul 14) - New regularization loss for SSL that replaces heuristic training tricks (EMA, teacher-student, layer freezing); best OOD performance, robust to low-quality data, data efficient - Task: Replace EMA-based training in V-JEPA 2 fine-tuning with VISReg for more stable surgical domain adaptation
+- [ ] Predicting Latents > Predicting Tokens (Sasha Malysheva/DanKorchinski) - Paper showing data2vec/JEPA-style latent prediction outperforms token prediction on downstream tasks - Task: Empirically validate on surgical video: latent prediction (JEPA) vs. masked token prediction (MAE) for scene understanding
+- [ ] Relative Representations (Moschella et al., ICLR 2023, arXiv 2209.15430) - Describes data points by similarity to fixed landmarks; enables model stitching without retraining - Task: Apply relative representations to align surgical video encoders from different modalities (endoscopic, laparoscopic, robotic)
+- [ ] Diffusing Blame / Dale's Principle Network (Sakana AI, hardmaru) - Neural network that strictly follows Dale's principle (neurons either excite or inhibit neighbors, never both); uses backprop with routing - Task: Explore biologically-constrained network architectures for surgical signal routing (instrument ON vs. OFF signals)
+
+### Embodied AI & Robotics (New)
+- [ ] RxBrain (Tencent, DailyPapers Jul 15) - Embodied cognition foundation model unifying language reasoning, visual imagination, and world state prediction into single multi-modal framework - Task: Study tri-modal (language + imagination + world-state) fusion for surgical scene understanding and planning
+- [ ] WALA (Robots Digest, Jul 14) - World-to-Action Learning via abundant human-world interaction videos; learns executable latent actions jointly from action-labeled robot demos + human videos - Task: Directly relevant — use WALA to bootstrap surgical instrument actions from laparoscopy training videos without robot labels
+- [ ] B-spline Policy / BSP (Haoyu Xiong) - Parameterizes robot actions as continuous B-spline curves instead of discrete fixed-rate action chunks - Task: Apply B-spline action parameterization for smooth surgical instrument trajectory prediction
+- [ ] LingBot-Depth (DataScienceHarp) - Vision transformer trained with missing depth-sensor pixels as natural masks for depth learning - Task: Adapt depth-mask pretraining for endoscopic depth estimation from partial/occluded surgical scene views
+- [ ] SE(3)-LIO (Ryohei Sasaki, ICRA 2026) - Smooth IMU propagation with jointly distributed poses on SE(3) manifold for accurate LiDAR-Inertial Odometry - Task: Apply SE(3) manifold pose representation to endoscopic camera odometry for robust 3D tracking
+- [ ] ACT-2 Laundry / Sunday Robotics (1000 memory developers milestone) - Long-horizon dexterous manipulation task with memory-augmented policy - Task: Study memory-augmented policies for long-horizon surgical procedures
+
+### Efficient Architectures & Training
+- [ ] Ring-Zero: Scaling Zero RL to a Trillion Parameters (HuggingPapers) - RL training pipeline with verifiable rewards; emergent reasoning including self-verification at scale - Task: Apply verifiable reward RL training for surgical phase classification with automatic correctness checking
+- [ ] DeepLoop (Raj Dabre, arXiv 2607.13491) - Depth scaling for looped transformers; makes loop transformers stable and scalable - Task: Evaluate looped transformer depth scaling for test-time adaptation on new surgical procedure types
+- [ ] xHC: Expanded Hyper-Connections (alphaXiv) - Expanded residual memory with causal conv writeback features for transformer efficiency - Task: Evaluate hyper-connections as efficient cross-frame memory for long surgical video processing
+- [ ] LongStraw (Mind Lab, open-source) - Long-context RL beyond 2M tokens under fixed GPU budget; enables ultra-long context reasoning - Task: Apply long-context RL to multi-hour surgical procedure understanding within HPC memory budgets
+- [ ] Sliding Window Attention overview (Niels Rogge) - SWA used in GPT-OSS, Gemma, Microsoft MAI to reduce KV-cache memory for long-context - Task: Benchmark SWA vs. HiLS-Attention for memory-efficient long surgical video processing
+- [ ] KronQ (HuggingPapers) - Post-training quantization framework for Llama-3-70B achieving 7.93 perplexity at 2-bit - Task: Evaluate KronQ 2-bit quantization for surgical scene reasoning models on edge deployment
+- [ ] Cosmos 3 Nano + LoRA post-training (NVIDIA AI) - LoRA post-training on COSMOS Nano improved zero-shot traffic signal identification 54.41% → 87.14% - Task: Directly relevant — replicate LoRA post-training on COSMOS Nano for zero-shot surgical instrument identification
+
+### 3D Vision (New)
+- [ ] VGG-TTT: Offline Feed-Forward 3D Reconstruction at Scale (Kwang Moo Yi / Elflein et al.) - VGGT with test-time training to compress KV space; TTT reminiscent of scene coordinate regression networks - Task: Evaluate TTT-based 3D reconstruction for on-the-fly endoscopic scene mapping
+- [ ] VGGT as MoE Experts (Kwang Moo Yi) - Feed-forward 3D models showing emergent behaviors; VGGT experts in Mixture of Experts for co-visibility prediction - Task: Study VGGT-MoE for multi-view surgical scene 3D understanding from multiple endoscope positions
+- [ ] Uncertainty Quantification for Flow-Based VLA Models (arXiv 2606.18043) - UQ for vision-language-action flow policies - Task: Apply flow-based UQ to surgical instrument action prediction for safer robotic assistancereconstruction
