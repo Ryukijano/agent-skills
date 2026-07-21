@@ -234,4 +234,50 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 ### 3D Vision (New)
 - [ ] VGG-TTT: Offline Feed-Forward 3D Reconstruction at Scale (Kwang Moo Yi / Elflein et al.) - VGGT with test-time training to compress KV space; TTT reminiscent of scene coordinate regression networks - Task: Evaluate TTT-based 3D reconstruction for on-the-fly endoscopic scene mapping
 - [ ] VGGT as MoE Experts (Kwang Moo Yi) - Feed-forward 3D models showing emergent behaviors; VGGT experts in Mixture of Experts for co-visibility prediction - Task: Study VGGT-MoE for multi-view surgical scene 3D understanding from multiple endoscope positions
-- [ ] Uncertainty Quantification for Flow-Based VLA Models (arXiv 2606.18043) - UQ for vision-language-action flow policies - Task: Apply flow-based UQ to surgical instrument action prediction for safer robotic assistancereconstruction
+- [ ] Uncertainty Quantification for Flow-Based VLA Models (arXiv 2606.18043) - UQ for vision-language-action flow policies - Task: Apply flow-based UQ to surgical instrument action prediction for safer robotic
+- [ ]
+- [ ] ## X Bookmarks, Feed & WhatsApp - New AI Papers & Links (July 18-21, 2026)
+
+### World Models & Video Generators as World Models
+- [ ] UniVR: Thinking in Visual Space for Unified Visual Reasoning (ByteDance/BJTU, arXiv 2607.128) - +25% on VR-X benchmark; fully open-source github.com/bytedance/UniVR - Task: Benchmark UniVR for surgical instrument state reasoning from video
+- [ ] GenCeption (Google DeepMind, The Decoder) - Video generators repurposed for depth estimation and segmentation; implicit world models inside video generators - Task: Use GenCeption for zero-shot surgical depth and segmentation from COSMOS video generator
+- [ ] GigaWorld-Policy-0.5 (HuggingFace papers/2607.13960) - Faster World Action Model (WAM) empowered by AutoResearch - Task: Study GigaWorld policy architecture for fast surgical world model inference
+- [ ] Cosmos3-Edge (NVIDIA, huggingface.co/nvidia/Cosmos3-Edge) - Edge-optimized COSMOS model - Task: Deploy Cosmos3-Edge for on-device surgical video prediction at inference time
+- [ ] AdaJEPA (agenticlearning.ai/adajepa/) - Adaptive JEPA world model for closed-loop planning/acting - Task: Integrate AdaJEPA adaptive loop into surgical phase tracking pipeline
+- [ ] MOTIVE: Motion Attribution for Video Generation (NVIDIA SIL, ICML 2026 Oral, research.nvidia.com/labs/sil/projects/MOTIVE/) - Motion-centric data attribution for video generation - Task: Apply motion attribution to understand what training data drives surgical scene generation quality
+
+### Self-Supervised Learning (X Bookmarks, Jul 18-20)
+- [ ] Slot-Attention / Object-Centric SSL (Sasha Malysheva, Jul 19) - Mechanistic hypothesis: EMA teachers in DINO/JEPA models drive object-level structure in attention maps - Task: Investigate EMA teacher role in V-JEPA 2 object segmentation emergence for surgical instruments
+
+### Robotics & Robot Policies (WhatsApp + X)
+- [ ] RoboTTT: Context Scaling for Robot Policies (NVIDIA, research.nvidia.com/labs/gear/robottt/) - Test-Time Training into robot foundation models; scales visuomotor context to 8K timesteps without growing inference latency - Task: Directly relevant — apply TTT context scaling for long surgical video robot policy adaptation
+- [ ] Triflow (derkleineli.github.io/triflow/) - 3D flow-based model/framework - Task: Evaluate for surgical video 3D optical flow estimation
+- [ ] SHELLS: Topologically Consistent Multi-view 3D Head Reconstruction (syntec-research.github.io/SHELLS/) - Semantic head estimation via layered local sampling - Task: Study multi-view 3D consistency techniques for endoscopic organ reconstruction
+
+### New Foundation Models & Infrastructure (X Feed, Jul 21)
+- [ ] JEPA-DNA (NVIDIA, HuggingPapers) - Genomic foundation model using JEPA pretraining for DNA sequences - Task: Study how JEPA objective extends to DNA sequences — analogous challenge to surgical video domain adaptation
+- [ ] Laguna S 2.1 (Poolside, 118B) - New SOTA on SWE-Bench Pro for coding - Task: Evaluate Laguna S for automated surgical training code and SLURM script generation
+- [ ] Gemini 3.6 Flash + 3.5 Flash-Lite (Google DeepMind, Jul 20) - Three new models: faster, cheaper, smarter at scale - Task: Benchmark Gemini 3.6 Flash for real-time surgical phase reasoning and report generation
+- [ ] OpenEnv (Mervé Noyan) - Agentic training environment making models that see and act; early August launch - Task: Evaluate OpenEnv for training surgical scene understanding agents
+- [ ] World Labs Acquires SceniX - SceniX advancing AI robotics simulations - Task: Monitor World Labs simulation platform for surgical training environment generation
+- [ ] AlphaEvolve (Google Cloud, cloud.google.com/blog/products/ai-machine-learning/alphaevolve-is-available-for-everyone) - Code optimization and discovery agent built on Gemini - Task: Use AlphaEvolve for auto-optimizing V-JEPA 2 training configs
+- [ ] LiteRT.js (Google) - Edge AI runtime for web browsers via WebGPU/WebNN - Task: Deploy lightweight surgical AI inference in browser for clinical demo
+- [ ] Morpheus RL Benchmark (morpheus.skyfall.ai/) - RL benchmark for robot policies - Task: Benchmark surgical robot policies on Morpheus evaluation suite
+
+### Nature Papers (WhatsApp Self-Chat, Jul 19-21)
+- [ ] Radiologists' Gaze VLM (npj AI, nature.com/articles/s44387-026-00136-9) - Foundational VLM trained on radiologists' gaze and reasoning patterns - Task: Adapt radiologist gaze supervision for surgical endoscopist attention modeling in DINO-Endo
+- [ ] Neural Superposition to Sparse Interpretable Codes (Nature Machine Intelligence, s42256-026-01259-z) - Unifying framework for superposition in neural networks - Task: Apply sparse interpretable codes for surgical feature disentanglement in JEPA latents
+- [ ] Free Recall Neural Network (Nature Machine Intelligence, s42256-026-01274-0) - RNNs optimized for free recall discover diverse human-like memory strategies - Task: Investigate RNN memory strategies for surgical procedure sequence modeling
+- [ ] Physics-Informed ML playlist (YouTube, PLcgrvuVJuClg) - Modeling, Planning, Control, Estimation of Physical Systems - Task: Watch for physics-informed world model techniques applicable to surgical kinematics
+
+### Quantum Papers (WhatsApp Self-Chat)
+- [ ] Fully Autonomous Tuning of a Spin Qubit (Nature Electronics, s41928-025-01562-4) - Deep learning + Bayesian optimization + computer vision to tune semiconductor spin qubits - Task: Integrate autonomous tuning approach into SKQD/Syndrome-Net qubit characterization pipeline
+- [ ] Digital Quantum Magnetism on Trapped-Ion Quantum Computer (Nature, s41586-026-10445-3) - Demonstrates digital quantum computers for continuous-time dynamics - Task: Study trapped-ion results for hardware comparison with superconducting qubit VQE work
+- [ ] NVIDIA Ising Decoding Cuts Color Code Logical Error Rates >300x (developer.nvidia.com) - Quantum error correction decoder - Task: Directly relevant — evaluate NVIDIA Ising decoder against Syndrome-Net QEC approach
+- [ ] Error Correction of Logical Qubit in Single Atomic Ion (Nature Physics, s41567-026-03315-2) - Encodes and corrects qubit within multiple internal states of single ion - Task: Study single-ion qubit encoding for multi-logical-qubit VQE circuit design
+- [ ] All-Mechanical Coherence Protection of Spin Qubit (Nature Physics, s41567-026-03369-2) - Acoustic waves protect spin coherence in phononic quantum devices - Task: Explore phononic coherence protection for longer-lived VQE qubit states
+- [ ] Bloqade SDK (bloqade.quera.com/dev/quick_start/circuits/) - Neutral atom SDK for digital quantum computing - Task: Port SKQD algorithms to Bloqade neutral-atom platform for broader hardware benchmarking
+
+### NVIDIA Hackathon / Your Projects (WhatsApp Robotics Vision Group, Jul 21)
+- [ ] NV-Disruptron (github.com/Ryukijano/NV-Disruptron) - Your NVIDIA hackathon project: AV/infra/robotics vision stack with lane detection, scene understanding, control - Task: Port NV-Disruptron robotics vision modules to surgical scene understanding pipeline
+- [ ] NVIDIA Open Models Codefest (events.nvidia.com/open-models-codefest) - Broader NVIDIA hackathon using pretrained models for robotics vision - Task: Submit surgical video world model demo to NVIDIA Open Models Codefestassistancereconstruction
