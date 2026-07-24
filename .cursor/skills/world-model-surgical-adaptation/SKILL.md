@@ -281,3 +281,44 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 ### NVIDIA Hackathon / Your Projects (WhatsApp Robotics Vision Group, Jul 21)
 - [ ] NV-Disruptron (github.com/Ryukijano/NV-Disruptron) - Your NVIDIA hackathon project: AV/infra/robotics vision stack with lane detection, scene understanding, control - Task: Port NV-Disruptron robotics vision modules to surgical scene understanding pipeline
 - [ ] NVIDIA Open Models Codefest (events.nvidia.com/open-models-codefest) - Broader NVIDIA hackathon using pretrained models for robotics vision - Task: Submit surgical video world model demo to NVIDIA Open Models Codefestassistancereconstruction
+
+## X Bookmarks, Feed & WhatsApp - New AI Papers & Links (July 21-24, 2026)
+
+### Model Merging & Representation Theory (X Bookmarks, Jul 21-24)
+- [ ] Task Arithmetic / Task Vectors (Sasha Malysheva, Jul 24 - arXiv 2212.04089, Ilharco et al.) - Fine-tuning deltas behave like actual vectors: add, subtract, combine task vectors on pretrained weights. Task: Apply task arithmetic to surgical domain adaptation — add a 'surgical phase' delta to V-JEPA 2 base without retraining from scratch
+- [ ] Git Re-Basin (Sasha Malysheva, Jul 21 - arXiv 2209.04836, Ainsworth et al.) - ResNet50 has 10^55109 ways to relabel neurons yet compute same function. Enables averaging model weights across permutation symmetries. Task: Apply Git Re-Basin for merging surgical-domain V-JEPA 2 checkpoints from different training runs
+- [ ] Relative Representations (Moschella et al., ICLR 2023 - arXiv 2209.15430) - Describes data points via similarity to fixed anchors, enabling zero-shot model stitching across architectures. Task: Use for cross-modal surgical representation alignment (endoscopy encoder ↔ RGB encoder)
+- [ ] Convergent Evolution Theory (Daniel Yamins, danyamins.substack.com) - Mathematical theory on AI and brain convergence; zippering theorems. Task: Read for theoretical grounding of why JEPA-style representations align with neural representations for surgical perception
+
+### Video & World Models (X Bookmarks, Jul 21-24)
+- [ ] CW-VAE / Clockwork Variational Autoencoder (Saxena et al., NeurIPS 2021 - arXiv 2102.09532) - Hierarchical latent sequence model with temporal abstraction at multiple time scales. Task: Apply for surgical video temporal hierarchy modeling — slow phases vs fast instrument motion
+- [ ] Mechanistic World Models (Posner et al., Jul 24 - arXiv 2607.12474) - Framework for uncovering mechanisms from observations. Task: Apply mechanistic interpretation to surgical world model latents
+- [ ] UniVR / Unified Visual Reasoning (ByteDance & BJTU, arXiv 2607.128) - Framework for unified visual reasoning; +25% on VR-X benchmark. Task: Benchmark UniVR for surgical instrument state reasoning from video
+- [ ] GigaWorld-Policy-0.5 (huggingface.co/papers/2607.13960) - Video world model policy. Task: Study for robot policy learning from surgical video
+- [ ] FLUX-mimic / 1T1X-mimic (mimicrobotics, Jul 23) - Next-gen Video-Action Model (VAM) for general-purpose dexterity, developed with BFL AI. Task: Study FLUX-mimic video-action architecture for surgical instrument manipulation learning from demonstrations
+
+### Robotics & Foundation Models (X Bookmarks, Jul 21-24)
+- [ ] Xiaomi-Robotics-1 (DailyPapers, Jul 20) - Scalable VLA foundation model pretrained on 100,000+ hours of real-world manipulation trajectories. Task: Benchmark Xiaomi-Robotics-1 as pretrained backbone for surgical robot manipulation
+- [ ] NV-JEPA-DNA / JEPA-DNA-DNABERT2 (NVIDIA, Jul 21 - huggingface.co/nvidia/NV-JEPA-DNA-DNABERT2) - Genomic foundation model using JEPA pretraining beyond masked LM to learn functional DNA meaning. Task: Study JEPA pretraining objective applied to sequence data (DNA) as analog for adapting JEPA to surgical procedure sequences
+
+### Mathematical Foundations (X Bookmarks, Jul 21-24)
+- [ ] Optimal Transport / Helmholtz Decomposition (Peyman Milanfar, Jul 22) - Polar matrix factorization and Helmholtz decomposition all implied by Brenier's theorem — cornerstone of Optimal Transport theory. Task: Study OT for latent space regularization in surgical world models and for aligning multi-modal surgical distributions
+- [ ] Planar Homographies Visualization (@CSProfKGD - csprofkgd.github.io/planar-homogra) - Task: Reference for geometric transformation understanding in surgical camera calibration and multi-view reconstruction
+
+### 3D & Vision Tools (X Feed, Jul 24)
+- [ ] Google GMN - Parametric Differentiable 3D Head Model (Jul 24, HuggingFace Spaces: hf.co/spaces/hugging) - Runs on CPU; parametric differentiable 3D model. Task: Study parametric 3D modeling for surgical anatomy reconstruction and organ surface modeling
+
+### X Feed Updates (Jul 24)
+- [ ] Jensen Huang First X Post - Open weights and American AI leadership letter: 'AI will transform every industry, power every company, and be built by every country.' Task: Track NVIDIA open model strategy and open weight releases for surgical AI deployment
+- [ ] Google Gemini 3.6 Flash + 3.5 Flash-Lite (Jul 24) - New faster Gemini models launched. Task: Evaluate for real-time surgical report generation and on-device inference
+- [ ] Unitree AS2-W Wheeled Quadruped (Jul 24) - New wheeled quadruped for rough terrain; demonstrates Unitree hardware-software co-design. Task: Monitor locomotion control algorithms applicable to surgical robot base mobility
+- [ ] Nature Machine Intelligence: Unifying Framework (s42256-026-01259-z) - New unifying framework paper. Task: Read for unifying perspective on world models relevant to surgical AI
+
+### WhatsApp Self-Chat Additional Links (Jul 21-24)
+- [ ] Nature Machine Intelligence: Memory Strategies / Free Recall (s42256-026-01274-0) - RNNs optimized for free recall discover diverse human-like memory strategies. Task: Investigate RNN memory strategies for surgical procedure sequence modeling
+- [ ] Nature Machine Intelligence: Cognitive Maps / Generative Models (s42256-026-01254-4) - Neural sampling from cognitive map enables planning and goal-directed imagination. Task: Apply cognitive map + neural sampling for surgical phase planning and future state imagination
+- [ ] The Decoder: Google DeepMind Video Generators as World Models (the-decoder.com) - Google DeepMind argues video generators already contain the world models computer vision has been missing. Task: Integrate insights into V-JEPA 2 / COSMOS surgical world model architecture decisions
+- [ ] NVIDIA Cosmos3-Edge (huggingface.co/nvidia/Cosmos3-Edge) - Edge-optimized COSMOS model. Task: Deploy Cosmos3-Edge for on-device surgical video prediction at inference time
+- [ ] Nature: AI-Redesigned Protein Evolution (s41586-026-10820-0) - AI workflow redesigning starting points to evolve proteins. Task: Study AI-guided protein evolution methodology for AI-guided surgical procedure optimization
+- [ ] Communications Chemistry: Neuromorphic Chip Screening (s42004-026-02122-3) - 19 billion compounds screened for drug discovery using neuromorphic chip. Task: Study neuromorphic hardware acceleration for surgical scene inference
+- [ ] Physics-Informed ML playlist (YouTube, PLcgrvuVJuClg, from Gyanateet Jio) - Modeling, Planning, Control, Estimation of Physical Systems. Task: Watch for physics-informed world model techniques applicable to surgical kinematic modeling
