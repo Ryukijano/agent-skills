@@ -321,4 +321,41 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 - [ ] NVIDIA Cosmos3-Edge (huggingface.co/nvidia/Cosmos3-Edge) - Edge-optimized COSMOS model. Task: Deploy Cosmos3-Edge for on-device surgical video prediction at inference time
 - [ ] Nature: AI-Redesigned Protein Evolution (s41586-026-10820-0) - AI workflow redesigning starting points to evolve proteins. Task: Study AI-guided protein evolution methodology for AI-guided surgical procedure optimization
 - [ ] Communications Chemistry: Neuromorphic Chip Screening (s42004-026-02122-3) - 19 billion compounds screened for drug discovery using neuromorphic chip. Task: Study neuromorphic hardware acceleration for surgical scene inference
-- [ ] Physics-Informed ML playlist (YouTube, PLcgrvuVJuClg, from Gyanateet Jio) - Modeling, Planning, Control, Estimation of Physical Systems. Task: Watch for physics-informed world model techniques applicable to surgical kinematic modeling
+- [ ] Physics-Informed ML playlist (YouTube, PLcgrvuVJuClg, from Gyanateet Jio) - Modeling, Planning, Control, Estimation of Physical Systems. Task: Watch for physics-informed world model techniques applicable to surgical 
+
+## X Bookmarks, Feed & WhatsApp - New AI Papers & Links (July 29 - August 2, 2026)
+
+### Video & World Models (X Bookmarks, Jul 29 - Aug 2)
+- [ ] Wonder: Video World Model Done Better (alphaXiv/Adobe Research, Jul 31 - arXiv 2607.26603) - Fixes drifting controls, fading memories, and latency in world models via co-designed camera control. Task: Apply Wonder's drift-fix techniques to V-JEPA 2 surgical video world model latent rollouts
+- [ ] Explorative: Third Pretraining Axis (Alexi Gladstone @AlexiGlad, Jul 31) - Exploration as third pretraining axis beyond parameters and data; improves image/video/language generation. Task: Incorporate exploration-based pretraining into surgical video world model training pipeline
+- [ ] Open Dreamer / Frontier-Level World Model (next-state.github.io/open-dreamer, Jul 25) - Full open-source recipe for training a frontier-level world model with live playable demo. Task: Study training methodology and open-source recipe for building surgical world model
+- [ ] Dream Cubed / Dreaming in Voxels (hardmaru/Sakana AI, pub.sakana.ai/dream-cubed, Jul 29) - Generative AI for playable interactive 3D Minecraft worlds trained on billions of cubes. Task: Study 3D generative world model approach for surgical scene volumetric prediction
+- [ ] NVIDIA Cosmos-H-Dreams: Real-Time Generative Simulation for Surgical Robotics (huggingface.co/blog/nvidia/cosmos-h-dreams, Jul 26) - Real-time generative simulation pipeline for surgical robotics using COSMOS. Task: Deploy Cosmos-H-Dreams for surgical trajectory simulation and data augmentation
+- [ ] NVIDIA-NeMo Labs-MOLT (github.com/NVIDIA-NeMo/labs-molt, Jul 26) - NeMo multi-modal language-trajectory model. Task: Study MOLT architecture for surgical report + trajectory joint modeling
+- [ ] arXiv 2602.24281 (Jul 26) - Task: Read and catalog paper for V-JEPA/world model context
+
+### Agentic AI & Reasoning (X Bookmarks, Jul 29 - Aug 2)
+- [ ] Beacon: Knowing When and How to Use Tools (HuggingPapers, Aug 1) - Mode Adaptiveness + Tool Effect framework preventing indiscriminate tool use in agentic visual reasoning. Task: Apply Beacon's selective tool-use framework to surgical AI agent for instrument segmentation decisions
+- [ ] Relay-OPD: On-Policy Distillation for Reasoning (HuggingPapers, Jul 29) - Novel on-policy distillation framework fixing prefix failure in LLM reasoning by letting teachers take over at failure points. Task: Apply Relay-OPD to improve surgical phase reasoning chain robustness
+- [ ] Kimi K3 Preserved Thinking History (Niels Rogge @NielsRogge, Jul 30) - Multi-turn conversations with Kimi K3 require passing back complete assistant message with preserved thinking history. Task: Implement preserved-thinking multi-turn for surgical AI diagnostic reasoning chains
+
+### Language Models & Architectures (X Bookmarks, Jul 29 - Aug 2)
+- [ ] LeRoPE: Learnable RoPE Frequencies (alphaXiv, Jul 29) - Learns rather than hand-picks RoPE frequencies; improves language modeling across scales with only 32 extra parameters. Task: Apply learnable positional encoding to surgical phase sequence modeling
+- [ ] Ensembles in RL Production Systems (Sasha Malysheva @aimalysheva, Aug 1) - Real-world RL systems rely on ensembles for reliability despite trend toward single clean models. Task: Implement ensemble surgical policy for uncertainty estimation in autonomous instrument control
+- [ ] ML Researcher Impact Theory (Horace He @cHHillee, Jul 29) - Impact proportional to infrastructure pain caused. Task: Calibrate research/engineering effort balance for surgical AI deployment
+- [ ] DeepSeek Kill Zone Analysis (Jen Zhu @jenzhuscott, Aug 1) - AI models inferior and significantly more expensive vs. DeepSeek should enter survival mode. Task: Track competitive landscape for surgical AI foundation model strategy
+
+### Quantum & Photonics (WhatsApp, Jul 24-26)
+- [ ] Long-lived Ytterbium States for Quantum Computing (phys.org, Jul 26) - Long-lived Yb states sharpen quantum computing and atomic clock precision. Task: Monitor ytterbium-based qubit advances for quantum error correction implementation
+- [ ] Beyond Quantum Linear Optics: Adaptive Boson Sampling (Nature Photonics, s41566-026-01959-3, Jul 25) - Adaptive boson sampling beyond quantum linear optics. Task: Study adaptive quantum photonics for quantum-ML interface
+- [ ] Breaking the Power Wall in Programmable Photonics (Nature Photonics, s41566-026-01960-w, Jul 26) - Photonic computing power wall breakthrough. Task: Track photonic hardware for ultra-efficient surgical AI inference
+- [ ] Enhanced Inverse Compton Scattering via Coated Plasma Mirror (Nature Photonics, s41566-026-01958-4, Jul 25) - Novel gamma-ray source generation technique. Task: Background reading for photon-based sensing in surgical imaging
+
+### Nanotechnology & Chemistry (WhatsApp, Jul 24-26)
+- [ ] Upconverting Nanoparticles for Angstrom-Precision Super-Resolution (Nature Nanotechnology, s41565-026-02233-x, Jul 26) - Spontaneous and indefinite blinking in upconverting nanoparticles enables multi-colour super-resolution at angstrom precision. Task: Monitor for next-gen surgical tissue imaging at nanoscale
+- [ ] Alkyl-Sulfur Compounds via N2 Extrusion (Nature Chemistry, s41557-026-02212-8, Jul 24) - Chemoselective access to alkyl-sulfur compounds. Task: Background for AI-guided organic synthesis and surgical biomaterial design
+- [ ] Oligonucleotide Functionalization via On-Support Phosphitylation (Nature Chemistry, s41557-026-02214-6, Jul 25) - Versatile strategy for oligonucleotide functionalization. Task: Study for AI-guided nucleotide drug delivery in surgical oncology
+- [ ] Enhancer Bursting Dynamics (Nature Genetics, s41588-026-02693-w, Jul 25) - Genomic position of enhancer modulates bursting dynamics of cognate promoter. Task: Background for AI-guided gene regulation modeling
+
+### Hardware & Kernel Engineering (WhatsApp, Jul 25 / X Bookmarks)
+- [ ] tensormux/kernel-skills (github.com/tensormux/kernel-skills, Jul 25) - Open-source skill library for AI coding agents to write, optimize, and debug high-performance compute kernels across CUDA, Triton, and quantized workloads. Task: Use kernel-skills for optimizing DINO-Endo and V-JEPA 2 CUDA inference kernelskinematic modeling
