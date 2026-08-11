@@ -7,10 +7,12 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 118 | 116 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 133 | 126 commands (`/name`) |
+| **Devin** (`.devin/`) | 125 | 123 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 140 | 133 commands (`/name`) |
+| **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 
 - Every major topic has both a **skill** and a **workflow/command**.
+- **MCP servers** provide live tools that agents call at runtime — GPU monitoring, CUDA profiling, distributed training, cloud GPU SSH, TPU/JAX, endosight pipeline, and research workflows.
 
 Every major topic has both a **skill** (reference knowledge, auto-suggested) and a **workflow/command** (step-by-step procedure).
 
@@ -186,7 +188,37 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `alphaevolve-consultant` | Expert reference: architecture, suitability, evaluator design, troubleshooting |
 | `evolutionary-code-optimization` | General LLM-based evolutionary code optimization (with or without AlphaEvolve) |
 
-## Workflows (116)
+### MCP Servers (7 servers, 72 tools)
+
+Custom MCP (Model Context Protocol) servers with dual CLI + MCP interface. Each server works as a direct terminal tool AND as an MCP tool for AI agents (Cursor, Devin, Claude, Windsurf, Gemini).
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| `dgx-monitor` | 11 | GPU status (GB10 unified memory fallback), processes, Docker, conda, CUDA info, kernel compilation |
+| `cuda-profiling` | 10 | nsys/ncu profiling, compute-sanitizer (memcheck/racecheck/initcheck), SASS/PTX dump, benchmarking |
+| `distributed-training` | 11 | Multi-GPU discovery, NVLink/PCIe topology, NCCL diagnostics, DDP/FSDP setup, training job management |
+| `cloud-gpu-ssh` | 11 | Remote GPU machines (Lambda/RunPod/Vast/SSH), remote commands, SFTP file sync, GPU pricing |
+| `tpu-jax` | 10 | JAX device discovery, TPU topology, gcloud TPU VM management, JAX profiling, XLA HLO compilation |
+| `endosight-pipeline` | 8 | Pipeline status, clip listing, reconstruction stats, verification, clinical clip sweep |
+| `research-workflow` | 8 | ArXiv search, paper download, BibTeX management, experiment tracking, Semantic Scholar |
+
+**Install all servers:**
+```bash
+bash mcp_servers/install_all.sh
+```
+
+**Test in CLI mode:**
+```bash
+python3 mcp_servers/dgx_monitor/server.py --cli gpu_status
+python3 mcp_servers/distributed_training/server.py --cli list_gpus
+python3 mcp_servers/cloud_gpu_ssh/server.py --cli list_machines
+```
+
+**Also installed:** 22 NVIDIA agent skills (NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream) via `npx skills add nvidia/skills`, plus community MCPs (W&B, MLflow, NVIDIA CUDA docs).
+
+See `mcp_servers/README.md` for full documentation.
+
+## Workflows (123)
 
 ### Research Workflows (15)
 
@@ -239,6 +271,18 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `/pcos-add-chrome-api` | Add a new Chrome Built-in AI API to routing pipeline |
 | `/pcos-debug-routing` | Debug why a task routes to the wrong surface |
 
+### MCP Server Workflows (7)
+
+| Workflow | Description |
+|----------|-------------|
+| `/dgx-monitor` | Check DGX Spark GPU, memory, Docker, conda, CUDA status |
+| `/cuda-profiling` | Profile CUDA kernels with nsys, ncu, compute-sanitizer |
+| `/distributed-training` | Multi-GPU discovery, NCCL diagnostics, DDP/FSDP setup |
+| `/cloud-gpu-ssh` | Manage remote GPU machines via SSH, run remote commands |
+| `/tpu-jax` | JAX/TPU device discovery, gcloud TPU management, profiling |
+| `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
+| `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
+
 ## Usage
 
 ### In Devin
@@ -269,6 +313,18 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 ## Structure
 
 ```
+mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
+├── dgx_monitor/server.py      # GPU/memory/Docker/conda/CUDA monitoring
+├── cuda_profiling/server.py   # nsys/ncu/compute-sanitizer/SASS/PTX
+├── distributed_training/server.py  # Multi-GPU/NCCL/DDP/FSDP
+├── cloud_gpu_ssh/server.py    # Remote GPU SSH (Lambda/RunPod/Vast)
+├── tpu_jax/server.py          # JAX/TPU/gcloud TPU management
+├── endosight_pipeline/server.py   # Endosight 3D pipeline monitoring
+├── research_workflow/server.py    # ArXiv/BibTeX/experiments/Semantic Scholar
+├── install_all.sh             # Install all servers into all agents
+├── README.md                  # Full MCP server documentation
+└── MASTERPLAN.md              # Design rationale and architecture
+
 .devin/
 ├── skills/                    # 90 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
