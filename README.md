@@ -7,12 +7,16 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 125 | 123 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 140 | 133 commands (`/name`) |
+| **Devin** (`.devin/`) | 147 | 133 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 162 | 143 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
+| **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
+| **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
 
 - Every major topic has both a **skill** and a **workflow/command**.
 - **MCP servers** provide live tools that agents call at runtime — GPU monitoring, CUDA profiling, distributed training, cloud GPU SSH, TPU/JAX, endosight pipeline, and research workflows.
+- **Hugging Face skills** (installed via `npx skills add huggingface/skills`) give agents access to the HF Hub: model search, dataset exploration, LLM/vision training, evaluation, paper lookup, and Gradio demos.
+- **NVIDIA skills** (installed via `npx skills add nvidia/skills`) provide NeMo distributed training, Megatron-Core, DALI, CUDA-Q, and DeepStream expertise.
 
 Every major topic has both a **skill** (reference knowledge, auto-suggested) and a **workflow/command** (step-by-step procedure).
 
@@ -214,9 +218,58 @@ python3 mcp_servers/distributed_training/server.py --cli list_gpus
 python3 mcp_servers/cloud_gpu_ssh/server.py --cli list_machines
 ```
 
-**Also installed:** 22 NVIDIA agent skills (NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream) via `npx skills add nvidia/skills`, plus community MCPs (W&B, MLflow, NVIDIA CUDA docs).
+**Also installed:** 22 NVIDIA agent skills (NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream) via `npx skills add nvidia/skills`, plus community MCPs (W&B, MLflow, NVIDIA CUDA docs, Hugging Face).
 
 See `mcp_servers/README.md` for full documentation.
+
+### Hugging Face Skills (12)
+
+Installed from `huggingface/skills` via `npx skills add huggingface/skills`. These skills teach agents how to use the Hugging Face Hub ecosystem.
+
+| Skill | Description |
+|-------|-------------|
+| `hf-cli` | Hub CLI: download, upload, manage models/datasets/spaces/buckets/repos/papers/jobs |
+| `huggingface-datasets` | Dataset Viewer API: paginate rows, search text, apply filters, download parquet |
+| `huggingface-llm-trainer` | Train/fine-tune LLMs with TRL (SFT, DPO, GRPO) on HF Jobs |
+| `huggingface-vision-trainer` | Train object detection (D-FINE, RT-DETR, DETR, YOLOS) and image classification |
+| `huggingface-community-evals` | Run evaluations against Hub models on local hardware |
+| `huggingface-trackio` | Track and visualize ML training experiments with Trackio |
+| `huggingface-papers` | Look up and read Hugging Face paper pages in markdown |
+| `huggingface-paper-publisher` | Publish and manage research papers on the Hub |
+| `huggingface-tool-builder` | Build reusable scripts for HF API operations |
+| `huggingface-gradio` | Build Gradio web UIs and demos in Python |
+| `transformers-js` | Run ML models in JavaScript/TypeScript with WebGPU/WASM |
+| `huggingface-best` | Find the best/recommended model for a task by benchmark scores |
+
+**Install:**
+```bash
+npx skills add huggingface/skills --skill hf-cli --agent cursor --yes
+npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor --yes
+# ... or install all 12 (see above)
+```
+
+**Hugging Face MCP Server** (hosted at `https://huggingface.co/mcp`):
+- Search models, datasets, Spaces, and papers
+- Run community tools via Gradio apps on Spaces
+- Schedule and run Jobs on HF infrastructure
+- Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
+
+### Custom Research Skills (10)
+
+Domain-specific skills for Gyanateet's research workflow.
+
+| Skill | Description |
+|-------|-------------|
+| `surgical-video-analysis` | Surgical video MOT, detection, scene understanding on DGX Spark |
+| `cuda-kernel-optimization` | Optimize CUDA kernels for GB10 (SM121, Blackwell, unified memory) |
+| `model-evaluation` | Systematic model evaluation, benchmarking, and reporting |
+| `video-processing-pipeline` | GPU-accelerated video I/O with ffmpeg/cvcuda/NVDEC on GB10 |
+| `thesis-writing` | PhD thesis structure, LaTeX, citation management, viva prep |
+| `academic-poster` | Conference poster design with LaTeX/PowerPoint/Figma |
+| `literature-review` | Systematic literature review methodology and tools |
+| `huggingface-hub` | Upload models/datasets/Spaces, manage HF repositories |
+| `experiment-reproducibility` | Seeds, configs, environments, checkpoints, data versioning |
+| `collaborative-research` | Multi-author papers, supervisor communication, project management |
 
 ## Workflows (123)
 
@@ -282,6 +335,21 @@ See `mcp_servers/README.md` for full documentation.
 | `/tpu-jax` | JAX/TPU device discovery, gcloud TPU management, profiling |
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
+
+### Custom Research Workflows (10)
+
+| Workflow | Description |
+|----------|-------------|
+| `/surgical-video-analysis` | Analyze surgical video for MOT, detection, scene understanding |
+| `/cuda-kernel-optimization` | Optimize CUDA kernels for GB10 DGX Spark (SM121) |
+| `/model-evaluation` | Systematic model evaluation and benchmarking |
+| `/video-processing-pipeline` | Build GPU-accelerated video processing pipelines |
+| `/thesis-writing` | Write and structure PhD thesis chapters with LaTeX |
+| `/academic-poster` | Create academic conference posters |
+| `/literature-review` | Conduct systematic literature reviews |
+| `/huggingface-hub` | Upload models, datasets, and Spaces to Hugging Face Hub |
+| `/experiment-reproducibility` | Ensure experiments are fully reproducible |
+| `/collaborative-research` | Manage collaborative research projects |
 
 ## Usage
 
