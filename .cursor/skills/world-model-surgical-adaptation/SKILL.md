@@ -359,3 +359,61 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 
 ### Hardware & Kernel Engineering (WhatsApp, Jul 25 / X Bookmarks)
 - [ ] tensormux/kernel-skills (github.com/tensormux/kernel-skills, Jul 25) - Open-source skill library for AI coding agents to write, optimize, and debug high-performance compute kernels across CUDA, Triton, and quantized workloads. Task: Use kernel-skills for optimizing DINO-Endo and V-JEPA 2 CUDA inference kernelskinematic modeling
+
+
+## X Bookmarks, Feed & WhatsApp – New AI Papers & Links (August 2–12, 2026)
+
+### Video & World Models (X Bookmarks, Aug 2–12)
+- [ ] Dyna-2: World-Action Model Pre-Trained on 1M Hours of Human Video (DynaRobotics @DynaRobotics, Aug 10) – Scaling human data to millions of hours; scaling laws for world-action models across 4 orders of magnitude. Task: Study Dyna-2 for large-scale world-action pretraining applicable to surgical robotics.
+- [ ] VLA is Dead? Physical Intelligence RI Argues VLA + World Models are Complementary (Eren Chen @ErenChenAI, Aug 9) – Modeling the future can become part of the VLA stack. Task: Integrate world model forecasting into surgical VLA architecture.
+- [ ] u-OPSD: Self-Distillation with No Labels, No Verifier, No Teacher (DailyPapers @HuggingPapers, Aug 11) – Novel self-distillation approach. Task: Apply self-distillation for lightweight surgical phase recognition.
+- [ ] From Atoms to Entropy: Optimal Noise Allocation for Diffusion Training in the Convex Regime (Luca Ambrogioni @LucaAmb, Aug 11) – Principled noise scheduling for diffusion models. Task: Improve diffusion-based surgical frame generation.
+- [ ] Dreaming in Voxels: How AI is Generating Playable Minecraft Worlds (hardmaru @hardmaru, Jul 29) – Blog on 3D generative world models trained on billions of cubes. Task: Apply 3D generative world model approach for surgical volumetric prediction.
+- [ ] Modeling Uncertainty in Robotic World Models Workshop at CoRL 2026 (Ying Wang @yingxww, Aug 7 / Hongyu Li @Hongyu_LJi, Aug 7) – Workshop call; submissions due Sept 23 AoE, Austin TX Nov 12. Task: Prepare paper submission for robotic world model uncertainty workshop.
+
+### Agentic AI & Reasoning (X Bookmarks, Aug 2–12)
+- [ ] Shepherd: Agent-Native Version of Git by Stanford NLP (Akshay @akshay_pachaar, Aug 8) – Runtime substrate for agent work recording inspection, reversability, and supervision with durable workspace outputs. Task: Apply Shepherd for reproducible surgical AI agent sessions.
+- [ ] The Self-Correcting Agent Harness / Your Agent Harness Should Repair Itself (Akshay @akshay_pachaar, Jun 8) – Observability tool; self-correcting agent harness from OPIK. Task: Study self-correcting harness patterns for surgical AI diagnostic agents.
+- [ ] Jane Street ASIC Reverse Engineering Puzzle (gaby lorenzi @gabyllorenzi, Aug 10) – Open-source chip design challenge. Task: Background reading for hardware-level surgical AI inference optimization.
+- [ ] Beacon: Knowing When and How to Use Tools (DailyPapers, Aug 1) – Mode Adaptiveness + Tool Effect framework preventing indiscriminate tool use. Task: Apply selective tool-use framework to surgical AI agent.
+- [ ] Google DeepMind Argues Vector DBs/RAG Are a Dead End (Superman @thesupermanmx, Aug 10) – Paper argues against RAG pipelines. Task: Evaluate alternatives to RAG for surgical knowledge retrieval.
+
+### RL & Optimization (X Bookmarks, Aug 2–12)
+- [ ] Pretraining Q-Functions for RL Finetuning (Chelsea Finn @chelseabfinn, Aug 9) – arxiv.org/abs/2607.27203; pretraining Q-functions on diverse policies is critical. Task: Apply Q-function pretraining for surgical instrument control RL.
+- [ ] SFT Conflicts, RL Coexists: Parallel-RL Approach (alphaXiv / DailyPapers, Aug 10) – Multi-stage SFT degrades reasoning; proposes Parallel-RL. Task: Apply Parallel-RL to avoid catastrophic forgetting in surgical phase recognition fine-tuning.
+- [ ] Simple Scaling Law Formulation (Rosinality @rosinality, Aug 10) – arxiv.org/abs/2608.07222; N/D interaction and efficient experiment sampling. Task: Use scaling law insights for surgical model scaling decisions.
+- [ ] Stealing Reasoning Traces from Proprietary LLM APIs (Alexander Panfilov @kotelkedi_ml, Aug 11) – Vulnerability extracting hidden reasoning from frontier models via token count matching. Task: Understand reasoning extraction risks for proprietary surgical AI models.
+
+### Language Models & Architectures (X Bookmarks, Aug 2–12)
+- [ ] Hyperball Optimization: Weight Decay in Normalized Transformers (alphaXiv, Aug 11) – Weight decay in normalized transformers controls weight update direction. Task: Apply Hyperball optimization techniques for surgical model training efficiency.
+- [ ] LeRoPE: Learnable RoPE Frequencies Improve Language Modeling (alphaXiv, Jul 29) – 32 extra parameters; learned RoPE beats hand-picked across scales. Task: Apply learnable positional encodings to surgical phase sequence modeling.
+- [ ] How to Steal Reasoning Without Reasoning Traces (Jack Morris, Aug 9) – arxiv.org/abs/2608.08316; distillation of open-weights models via hidden reasoning traces. Task: Study reasoning distillation for compact surgical AI models.
+- [ ] Kimi K3 Overview: 2.8T MoE with 1M Context (Kimi.ai @Kimi_Moonshot, Jul 27) – 2.5x intelligence per compute unit. Task: Evaluate MoE architectures for efficient surgical world model inference.
+- [ ] From GPT-2 to Kimi3: Scaling Factor of 22,580x in 7 Years (ali @waterloo_intern, Jul 27) – Scaling analysis. Task: Contextualize surgical AI model scale relative to frontier trends.
+- [ ] Wonder: Video World Model Done Better (alphaXiv, Jul 31) – arXiv 2607.26603; fixes drifting controls, fading memories via co-designed camera control, memory, distillation. Task: Apply Wonder's drift-fix techniques to V-JEPA 2 surgical video world model.
+
+### WhatsApp Self-Chat – New AI Papers & Links (Aug 2–12, 2026)
+
+#### Nature & Scientific Papers (WhatsApp)
+- [ ] Nature Structural & Molecular Biology (s41594-026-01841-4) – Task: Review for protein structure insights applicable to biotech/quantum workflows.
+- [ ] Nature Machine Intelligence (s42256-026-01259-z) – Task: Extract ML methodology for surgical AI model improvements.
+- [ ] Nature Synthesis – AI-Guided Organic Synthesis (s44160-026-01129-x, s44160-026-01117-1, s44160-026-01115-3) – Task: Study AI-guided synthesis for surgical biomarker research.
+- [ ] Nature Physics – Antiferromagnetic Skyrmion Interactions (s41567-026-03315-2, s41567-026-03369-2) – Time-resolved imaging of antiferromagnetic skyrmion interactions. Task: Background reading for quantum spintronics integration.
+- [ ] Nature Reviews Methods Primers (s43586-026-00503-5) – Task: Review for methodology standards in surgical AI evaluation.
+- [ ] Light: Science & Applications – Photonics (s41377-026-02339-w) – Task: Monitor advanced photonics for surgical imaging hardware.
+- [ ] Nature Methods – Single-Cell Calcium Imaging + BOLD fMRI (s41592-026-03154-2) – Simultaneous single-cell calcium imaging of neuronal population activity and brain-wide BOLD. Task: Apply to neuroscience-surgical AI intersection research.
+- [ ] Nature Machine Intelligence (s42256-026-01274-0, s42256-026-01254-4) – Task: Extract for ML/AI model benchmarking in surgical context.
+- [ ] Nature Photonics – Ultra-efficient Photonic Computing (s41566-026-01959-3, s41566-026-01958-4) – Breaking the power wall in programmable photonics. Task: Track photonic hardware for surgical AI inference acceleration.
+- [ ] Nature Genetics – Enhancer Bursting Dynamics (s41588-026-02693-w) – Genomic position of enhancer modulates bursting dynamics. Task: Background for AI-guided gene regulation modeling.
+- [ ] Nature Chemistry – Alkyl-Sulfur Extrusion + Oligonucleotide Functionalization (s41557-026-02214-6, s41557-026-02212-8) – Task: Background for surgical biomaterial design and drug delivery.
+- [ ] Nature – Flagship Article (s41586-026-10820-0) – Task: Review for general AI/science breakthrough applicable to surgical world model research.
+- [ ] Communications Chemistry – Neuromorphic Chip Screening (s42004-026-02122-3) – 19 billion compounds screened. Task: Study neuromorphic hardware acceleration for surgical scene inference.
+
+#### Infrastructure & Tools (WhatsApp)
+- [ ] NVIDIA Nsight AI (developer.nvidia.com/nsight-ai) – Intelligent code suggestions for NVIDIA CUDA development. Task: Integrate NVIDIA Nsight AI into surgical model GPU kernel optimization workflow.
+- [ ] MatrAIx Community (matraix.ai/community) – Open MatrAIx research community. Task: Join MatrAIx for open quantum/AI research collaboration.
+- [ ] GigaWorld-Policy-0.5 (huggingface.co/papers/2607.13960) – Large-scale world policy model. Task: Evaluate GigaWorld-Policy for large-scale surgical world model pretraining.
+- [ ] NVIDIA Cosmos3-Edge (huggingface.co/nvidia/Cosmos3-Edge) – Edge-optimized COSMOS model. Task: Deploy Cosmos3-Edge for on-device surgical video prediction at inference time.
+- [ ] GitHub tensormux/kernel-skills – Open-source CUDA/Triton/quantized kernel skills library. Task: Use kernel skills for optimizing DINO-Endo and V-JEPA 2 CUDA inference kernels/kinematic modeling.
+- [ ] GitHub bunnelab/virtues – Task: Investigate VIRTUES framework for surgical AI virtue alignment or evaluation.
+- [ ] Google DeepMind GenCeption: Video Generators as World Models (the-decoder.com, Jul 20) – GenCeption repurposes video generators for classic vision tasks. Task: Integrate insights into V-JEPA 2 / COSMOS surgical world model architecture decisions.
