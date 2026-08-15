@@ -24,13 +24,13 @@ npx @modelcontextprotocol/inspector python3 servers/dgx_monitor/server.py
 
 | Server | Tools | Purpose |
 |--------|-------|---------|
-| **dgx-monitor** | 11 | GPU status, memory, Docker, conda, CUDA info, kernel compilation |
-| **cuda-profiling** | 10 | nsys/ncu profiling, compute-sanitizer, SASS/PTX dump, benchmarking |
-| **distributed-training** | 11 | Multi-GPU discovery, NCCL diagnostics, DDP/FSDP setup, training job management, checkpoints |
-| **cloud-gpu-ssh** | 11 | Remote GPU machine management (Lambda/RunPod/Vast/SSH), remote commands, file sync |
+| **dgx-monitor** | 15 | GPU status, memory, Docker, conda, CUDA info, kernel compilation, NVDEC/NVENC, bandwidth tests |
+| **cuda-profiling** | 13 | nsys/ncu profiling, compute-sanitizer, SASS/PTX dump, benchmarking, GPU info, kernel compilation |
+| **distributed-training** | 12 | Multi-GPU discovery, NCCL diagnostics, DDP/FSDP setup, training job management, checkpoints |
+| **cloud-gpu-ssh** | 16 | Remote GPU machine management (Lambda/RunPod/Vast/SSH), remote commands, file sync |
 | **tpu-jax** | 10 | JAX device discovery, TPU info, gcloud TPU management, JAX profiling, memory info |
-| **endosight-pipeline** | 8 | Pipeline status, clip listing, reconstruction stats, verification |
-| **research-workflow** | 8 | ArXiv search, paper download, BibTeX, experiment tracking, Semantic Scholar |
+| **endosight-pipeline** | 13 | Pipeline status, clip listing, reconstruction stats, verification, crop/QA/video export, logs |
+| **research-workflow** | 11 | ArXiv search, paper download, BibTeX, experiment tracking, repro bundles, Semantic Scholar, citations |
 
 ### NVIDIA & Community MCP Servers (Installed)
 
@@ -86,6 +86,9 @@ python3 servers/tpu_jax/server.py --cli jax_devices
 | `conda_packages` | List packages in an environment |
 | `cuda_info` | CUDA/nvcc/driver versions |
 | `compile_cuda` | Compile .cu with correct SM121 flags |
+| `nvdec_status` | NVDEC/NVENC encoder session stats |
+| `top_gpu_processes` | Top GPU memory-consuming processes by used memory |
+| `bandwidth_test` | Tiny CUDA memcpy bandwidth benchmark (D2D, H2D, D2H) |
 
 ### CUDA Profiling (`cuda-profiling`)
 
@@ -93,8 +96,11 @@ python3 servers/tpu_jax/server.py --cli jax_devices
 |------|-------------|
 | `profile_nsys` | Nsight Systems timeline profiling |
 | `parse_nsys_stats` | Parse nsys report stats |
+| `parse_nsys_report` | Alias for parse_nsys_stats |
 | `profile_ncu` | Nsight Compute kernel profiling |
 | `parse_ncu_report` | Parse ncu report metrics |
+| `gpu_info` | Query GPU name, compute cap, PCI bus, driver |
+| `compile_kernel` | Compile a .cu file with nvcc |
 | `memcheck` | compute-sanitizer memory error detection |
 | `racecheck` | compute-sanitizer data race detection |
 | `initcheck` | compute-sanitizer uninitialized memory detection |
@@ -113,6 +119,7 @@ python3 servers/tpu_jax/server.py --cli jax_devices
 | `check_nccl_env` | Check NCCL environment variables |
 | `torch_distributed_info` | Check PyTorch distributed setup (DDP/FSDP/NCCL) |
 | `check_ddp_setup` | Verify DDP can be initialized |
+| `check_fsdp_setup` | Check FSDP can wrap a small model |
 | `training_jobs` | List running training processes |
 | `kill_training_job` | Kill a training process |
 | `list_checkpoints` | Find checkpoint files by size |
@@ -132,7 +139,12 @@ python3 servers/tpu_jax/server.py --cli jax_devices
 | `remote_tail_log` | Tail a log file on a remote machine |
 | `upload_file` | Upload a file to a remote machine via SFTP |
 | `download_file` | Download a file from a remote machine via SFTP |
+| `remote_sftp_list` | List remote directory contents via SFTP |
 | `lambda_gpu_pricing` | Get Lambda Labs GPU pricing (needs `LAMBDA_API_KEY`) |
+| `runpod_pricing` | Get RunPod GPU pricing (needs `RUNPOD_API_KEY`) |
+| `runpod_machines` | List RunPod pods (needs `RUNPOD_API_KEY`) |
+| `vast_pricing` | Get public Vast.ai GPU pricing |
+| `vast_machines` | List public Vast.ai machine offers |
 
 ### TPU & JAX (`tpu-jax`)
 
@@ -157,10 +169,15 @@ python3 servers/tpu_jax/server.py --cli jax_devices
 | `list_reconstructions` | List completed reconstructions |
 | `get_reconstruction_stats` | Point count, mesh info, file sizes |
 | `pipeline_status` | Check BFF/Node/Vite/Postgres status |
-| `start_pipeline` | Instructions to start the pipeline |
+| `start_pipeline` | Start the pipeline in the background |
 | `verify_pipeline` | Run verify.sh |
 | `sweep_clinical_clips` | Run clinical clip sweep |
 | `run_reconstruction` | Trigger reconstruction via BFF upload |
+| `run_crop` | Trigger frame/clip cropping for a batch |
+| `run_qa` | Run QA checks for a batch |
+| `run_video_export` | Trigger video export for a batch |
+| `pipeline_logs` | Fetch recent Docker logs for a service |
+| `validate_reconstruction` | Check Demo-shaped artifacts exist for a batch |
 
 ### Research Workflow (`research-workflow`)
 
@@ -168,12 +185,15 @@ python3 servers/tpu_jax/server.py --cli jax_devices
 |------|-------------|
 | `search_arxiv` | Search arXiv by keywords |
 | `get_arxiv_paper` | Get paper metadata, optionally download PDF |
+| `get_paper` | Alias for get_arxiv_paper |
 | `add_to_bibtex` | Add paper to BibTeX file |
 | `search_bibtex` | Search BibTeX database |
 | `list_experiments` | List experiment directories |
 | `create_experiment` | Create new experiment with metadata |
 | `log_experiment` | Append to experiment log |
+| `create_repro_bundle` | Zip source dir with manifest and env snapshot |
 | `search_semantic_scholar` | Search Semantic Scholar API |
+| `get_citations` | Get citations for an arXiv paper |
 
 ## NVIDIA Skills Installation
 

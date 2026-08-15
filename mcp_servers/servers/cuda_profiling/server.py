@@ -11,15 +11,33 @@ CLI mode:  python3 server.py --cli <tool_name> [--arg value ...]
 """
 import sys
 import os
-import json
+import shlex
 import subprocess
-import tempfile
-import re
 from typing import Annotated
 
 from mcp.server import MCPServer
 
 server = MCPServer("cuda-profiling", "1.0.0")
+
+
+import shutil
+
+
+def _find_tool(name: str) -> str | None:
+    """Find a CUDA tool binary, checking common paths."""
+    path = shutil.which(name)
+    if path:
+        return path
+    cuda_home = os.environ.get("CUDA_HOME", "/usr/local/cuda")
+    candidates = [
+        os.path.join(cuda_home, "bin", name),
+        os.path.join(cuda_home, "Nsight-Compute-2025.2", name),
+        f"/usr/local/cuda/bin/{name}",
+    ]
+    for c in candidates:
+        if os.path.isfile(c):
+            return c
+    return None
 
 
 def _run(cmd: list[str], timeout: int = 300) -> dict:
@@ -41,31 +59,24 @@ def _run(cmd: list[str], timeout: int = 300) -> dict:
         return {"returncode": -1, "stdout": "", "stderr": str(e)}
 
 
-def _find_tool(name: str) -> str | None:
-    """Find a CUDA tool binary, checking common paths."""
-    path = shutil.which(name)
-    if path:
-        return path
-    cuda_home = os.environ.get("CUDA_HOME", "/usr/local/cuda")
-    candidates = [
-        os.path.join(cuda_home, "bin", name),
-        os.path.join(cuda_home, "Nsight-Compute-2025.2", name),
-        f"/usr/local/cuda/bin/{name}",
-    ]
-    for c in candidates:
-        if os.path.isfile(c):
-            return c
-    return None
+def _split_command(command: str | list[str]) -> list[str]:
+    """Convert a command string or list into a safe argv list.
 
+    Supports paths with spaces when the command is shell-quoted.
+    """
+    if isinstance(command, list):
+        return [str(c) for c in command]
+    if isinstance(command, str):
+        return shlex.split(command)
+    raise TypeError("command must be a string or list of strings")
 
-import shutil
 
 # --- Nsight Systems Tools ---
 
 @server.tool()
 def profile_nsys(
-    command: Annotated[str, "Command to profile (e.g., 'python train.py' or './my_kernel')"],
-    output: Annotated[str, "Output .qdrep file path (default: /tmp/nsys_profile)"] = "/tmp/nsys_profile",
+    command: Annotated[str | list[str], "Command to profile (e.g., 'python train.py' or './my_kernel')"],
+    output: Annotated[str, "Output report file path prefix (default: /tmp/nsys_profile)"] = "/tmp/nsys_profile",
     capture_cuda: Annotated[bool, "Capture CUDA API calls and kernels"] = True,
     capture_nvtx: Annotated[bool, "Capture NVTX ranges"] = True,
     capture_osrt: Annotated[bool, "Capture OS runtime calls"] = False,
@@ -79,26 +90,47 @@ def profile_nsys(
     nsys = _find_tool("nsys")
     if not nsys:
         return "Error: nsys not found. Install Nsight Systems or set CUDA_HOME."
+
     cmd = [nsys, "profile", "-o", output, "--force-overwrite=true"]
+
+    trace = []
     if capture_cuda:
-        cmd.append("--capture-range=cuda")
+        trace.append("cuda")
     if capture_nvtx:
-        cmd.append("--capture-range=nvtx")
+        trace.append("nvtx")
     if capture_osrt:
-        cmd.append("--osrt=true")
+        trace.append("osrt")
+    if trace:
+        cmd.append(f"--trace={','.join(trace)}")
     else:
-        cmd.append("--osrt=false")
+        cmd.append("--trace=none")
+
+    # Keep the default capture range; --duration handles time-bounded capture.
+    cmd.append("--capture-range=none")
+
     if delay > 0:
         cmd.append(f"--delay={delay}")
     if duration > 0:
         cmd.append(f"--duration={duration}")
-    cmd.extend(["--stats=true" if stats else "--stats=false"])
-    # Append the target command
-    cmd.extend(command.split())
+
+    cmd.append("--stats=true" if stats else "--stats=false")
+    cmd.extend(_split_command(command))
+
     r = _run(cmd, timeout=600)
-    result_lines = [f"nsys profile completed (exit code: {r['returncode']})",
-                    f"Report: {output}.qdrep",
-                    f"SQLite: {output}.qdsqlite"]
+
+    # Nsight Systems 2025.3 writes .nsys-rep + .sqlite; older versions used
+    # .qdrep + .qdsqlite. Prefer whatever actually exists, otherwise default
+    # to the modern extensions.
+    rep_ext = next((e for e in (".nsys-rep", ".qdrep") if os.path.isfile(output + e)), ".nsys-rep")
+    sql_ext = next((e for e in (".sqlite", ".qdsqlite") if os.path.isfile(output + e)), ".sqlite")
+    report_path = output + rep_ext
+    sqlite_path = output + sql_ext
+
+    result_lines = [
+        f"nsys profile completed (exit code: {r['returncode']})",
+        f"Report: {report_path}",
+        f"SQLite: {sqlite_path}",
+    ]
     if r["stdout"]:
         result_lines.append(f"\n--- stdout (last 500 chars) ---\n{r['stdout'][-500:]}")
     if r["stderr"]:
@@ -108,28 +140,39 @@ def profile_nsys(
 
 @server.tool()
 def parse_nsys_stats(
-    report: Annotated[str, "Path to .qdrep or .qdsqlite file"],
+    report: Annotated[str, "Path to .nsys-rep, .sqlite, or legacy .qdrep file"],
     report_type: Annotated[str, "Report type: cuda_api_sum, cuda_gpu_kern_sum, cuda_gpu_mem_size_sum, nvtx_sum"] = "cuda_gpu_kern_sum",
 ) -> str:
     """Parse an nsys report and return summary statistics. Use after profile_nsys."""
     nsys = _find_tool("nsys")
     if not nsys:
         return "Error: nsys not found."
-    r = _run([nsys, "stats", "--report", report_type, "--report-file", report, "--format=csv"])
+
+    cmd = [nsys, "stats"]
+    if report.lower().endswith(".nsys-rep"):
+        # Re-export SQLite to avoid "existing SQLite older than input" failures.
+        cmd.append("--force-export=true")
+    cmd.extend(["--report", report_type, "--format", "csv", report])
+
+    r = _run(cmd, timeout=120)
     if r["returncode"] != 0:
-        return f"Error parsing report: {r['stderr']}"
-    # Trim to first 50 lines for readability
+        return f"Error parsing report: {r['stderr']}\n\n--- stdout ---\n{r['stdout'][-2000:]}"
+
     lines = r["stdout"].split("\n")
     if len(lines) > 50:
         return "\n".join(lines[:50]) + f"\n... ({len(lines) - 50} more lines)"
     return r["stdout"]
 
 
+# Register an alias so both `parse_nsys_stats` and `parse_nsys_report` work.
+server.add_tool(parse_nsys_stats, name="parse_nsys_report")
+
+
 # --- Nsight Compute Tools ---
 
 @server.tool()
 def profile_ncu(
-    command: Annotated[str, "Command to profile (e.g., 'python train.py' or './my_kernel')"],
+    command: Annotated[str | list[str], "Command to profile (e.g., 'python train.py' or './my_kernel')"],
     output: Annotated[str, "Output .ncu-rep file path (default: /tmp/ncu_profile)"] = "/tmp/ncu_profile",
     metric_set: Annotated[str, "Metric set: full, basic, roofline, speedup"] = "full",
     kernel_filter: Annotated[str, "Regex to filter kernel names (empty = all kernels)"] = "",
@@ -143,13 +186,13 @@ def profile_ncu(
     ncu = _find_tool("ncu")
     if not ncu:
         return "Error: ncu not found. Install Nsight Compute or set CUDA_HOME."
-    cmd = [ncu, "--set", metric_set, "-o", output, "--force-overwrite=true"]
+    cmd = [ncu, "--set", metric_set, "-o", output, "--force-overwrite"]
     if kernel_filter:
         cmd.extend(["-k", kernel_filter])
     if launch_count > 0:
         cmd.extend(["-c", str(launch_count)])
     cmd.extend([f"--target-processes={target_processes}"])
-    cmd.extend(command.split())
+    cmd.extend(_split_command(command))
     r = _run(cmd, timeout=600)
     result_lines = [f"ncu profile completed (exit code: {r['returncode']})",
                     f"Report: {output}.ncu-rep"]
@@ -178,7 +221,7 @@ def parse_ncu_report(
         cmd.extend(["--metrics", metric])
     r = _run(cmd, timeout=120)
     if r["returncode"] != 0:
-        return f"Error parsing report: {r['stderr']}"
+        return f"Error parsing report: {r['stderr']}\n\n--- stdout ---\n{r['stdout'][-2000:]}"
     lines = r["stdout"].split("\n")
     if len(lines) > 80:
         return "\n".join(lines[:80]) + f"\n... ({len(lines) - 80} more lines)"
@@ -189,8 +232,7 @@ def parse_ncu_report(
 
 @server.tool()
 def memcheck(
-    command: Annotated[str, "Command to check (e.g., './my_kernel')"],
-    print_summary: Annotated[bool, "Print error summary"] = True,
+    command: Annotated[str | list[str], "Command to check (e.g., './my_kernel')"],
 ) -> str:
     """Run compute-sanitizer memcheck to detect memory errors (out-of-bounds, use-after-free, etc.).
     This is the GPU equivalent of Valgrind memcheck.
@@ -199,9 +241,7 @@ def memcheck(
     if not cs:
         return "Error: compute-sanitizer not found. Set CUDA_HOME."
     cmd = [cs, "--tool", "memcheck"]
-    if print_summary:
-        cmd.append("--print-summary=true")
-    cmd.extend(command.split())
+    cmd.extend(_split_command(command))
     r = _run(cmd, timeout=300)
     result_lines = [f"memcheck completed (exit code: {r['returncode']})"]
     if r["returncode"] == 0 and not r["stderr"]:
@@ -215,7 +255,7 @@ def memcheck(
 
 @server.tool()
 def racecheck(
-    command: Annotated[str, "Command to check"],
+    command: Annotated[str | list[str], "Command to check"],
 ) -> str:
     """Run compute-sanitizer racecheck to detect data races in CUDA kernels.
     Use this when debugging intermittent wrong results from shared memory or atomics.
@@ -224,7 +264,7 @@ def racecheck(
     if not cs:
         return "Error: compute-sanitizer not found."
     cmd = [cs, "--tool", "racecheck"]
-    cmd.extend(command.split())
+    cmd.extend(_split_command(command))
     r = _run(cmd, timeout=300)
     result_lines = [f"racecheck completed (exit code: {r['returncode']})"]
     if r["stdout"]:
@@ -236,14 +276,14 @@ def racecheck(
 
 @server.tool()
 def initcheck(
-    command: Annotated[str, "Command to check"],
+    command: Annotated[str | list[str], "Command to check"],
 ) -> str:
     """Run compute-sanitizer initcheck to detect use of uninitialized memory."""
     cs = _find_tool("compute-sanitizer")
     if not cs:
         return "Error: compute-sanitizer not found."
     cmd = [cs, "--tool", "initcheck"]
-    cmd.extend(command.split())
+    cmd.extend(_split_command(command))
     r = _run(cmd, timeout=300)
     result_lines = [f"initcheck completed (exit code: {r['returncode']})"]
     if r["stdout"]:
@@ -303,11 +343,61 @@ def dump_ptx(
     return r["stdout"]
 
 
+# --- GPU Info & Kernel Compilation ---
+
+@server.tool()
+def gpu_info() -> str:
+    """Query GPU information (name, compute capability, memory, PCI bus, driver version)."""
+    nvidia_smi = _find_tool("nvidia-smi")
+    if not nvidia_smi:
+        return "Error: nvidia-smi not found."
+    r = _run(
+        [nvidia_smi, "--query-gpu=name,compute_cap,memory.total,pci.bus_id,driver_version", "--format=csv"],
+        timeout=60,
+    )
+    if r["returncode"] != 0:
+        return f"Error: {r['stderr']}"
+    return r["stdout"]
+
+
+@server.tool()
+def compile_kernel(
+    source: Annotated[str, "Path to the .cu source file"],
+    output: Annotated[str, "Path for the compiled binary (default: /tmp/cuda_kernel.out)"] = "/tmp/cuda_kernel.out",
+    arch: Annotated[str, "CUDA architecture (e.g. sm_121)"] = "sm_121",
+    use_fast_math: Annotated[bool, "Add --use_fast_math"] = False,
+    extra_flags: Annotated[str, "Extra nvcc flags as a shell-quoted string"] = "",
+) -> str:
+    """Compile a CUDA kernel with nvcc. Returns the binary path and compile output."""
+    nvcc = _find_tool("nvcc")
+    if not nvcc:
+        return "Error: nvcc not found. Install CUDA toolkit or set CUDA_HOME."
+    if not os.path.isfile(source):
+        return f"Error: source file not found: {source}"
+
+    cmd = [nvcc, f"-arch={arch}", "-O2", "-lineinfo", "-o", output, source]
+    if use_fast_math:
+        cmd.append("--use_fast_math")
+    if extra_flags:
+        cmd.extend(shlex.split(extra_flags))
+
+    r = _run(cmd, timeout=300)
+    result_lines = [
+        f"nvcc completed (exit code: {r['returncode']})",
+        f"Binary: {output}",
+    ]
+    if r["stdout"]:
+        result_lines.append(f"\n--- stdout ---\n{r['stdout'][-1000:]}")
+    if r["stderr"]:
+        result_lines.append(f"\n--- stderr ---\n{r['stderr'][-1000:]}")
+    return "\n".join(result_lines)
+
+
 # --- Quick Benchmark Tool ---
 
 @server.tool()
 def benchmark_kernel(
-    command: Annotated[str, "Command to benchmark"],
+    command: Annotated[str | list[str], "Command to benchmark"],
     runs: Annotated[int, "Number of runs"] = 5,
     warmup: Annotated[int, "Number of warmup runs (not timed)"] = 1,
 ) -> str:
@@ -315,10 +405,12 @@ def benchmark_kernel(
     Use this for quick benchmarks. For detailed profiling, use profile_ncu.
     """
     import time
+    argv = _split_command(command)
     times = []
+    r = None
     for i in range(warmup + runs):
         start = time.perf_counter()
-        r = _run(command.split(), timeout=300)
+        r = _run(argv, timeout=300)
         elapsed = time.perf_counter() - start
         if i >= warmup:
             times.append(elapsed)
@@ -343,6 +435,7 @@ def benchmark_kernel(
 TOOLS = {
     "profile_nsys": profile_nsys,
     "parse_nsys_stats": parse_nsys_stats,
+    "parse_nsys_report": parse_nsys_stats,
     "profile_ncu": profile_ncu,
     "parse_ncu_report": parse_ncu_report,
     "memcheck": memcheck,
@@ -351,6 +444,8 @@ TOOLS = {
     "dump_sass": dump_sass,
     "dump_ptx": dump_ptx,
     "benchmark_kernel": benchmark_kernel,
+    "gpu_info": gpu_info,
+    "compile_kernel": compile_kernel,
 }
 
 

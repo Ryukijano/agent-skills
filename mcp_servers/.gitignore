@@ -1,0 +1,8 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Test / temp artifacts
+*.log
+*.tmp

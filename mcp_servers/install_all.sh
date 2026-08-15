@@ -44,10 +44,39 @@ merge_server_into_config() {
 
     # Use python to safely merge JSON
     python3 -c "
-import json, sys
+import json, sys, os, glob, subprocess
 config_path = sys.argv[1]
 server_name = sys.argv[2]
 server_path = sys.argv[3]
+
+def find_torch_python():
+    candidates = []
+    mcp_bin = os.environ.get('MCP_PYTHON_BIN')
+    if mcp_bin:
+        candidates.append(mcp_bin)
+    for p in glob.glob(os.path.expanduser('~/.conda/envs/*/bin/python*')):
+        if os.path.isfile(p) and os.access(p, os.X_OK):
+            candidates.append(p)
+    for p in glob.glob(os.path.expanduser('~/miniconda3/envs/*/bin/python*')):
+        if os.path.isfile(p) and os.access(p, os.X_OK):
+            candidates.append(p)
+    for p in glob.glob(os.path.expanduser('~/anaconda3/envs/*/bin/python*')):
+        if os.path.isfile(p) and os.access(p, os.X_OK):
+            candidates.append(p)
+    for p in glob.glob('/opt/conda/envs/*/bin/python*'):
+        if os.path.isfile(p) and os.access(p, os.X_OK):
+            candidates.append(p)
+    for p in glob.glob(os.path.expanduser('~/.pyenv/versions/*/bin/python*')):
+        if os.path.isfile(p) and os.access(p, os.X_OK):
+            candidates.append(p)
+    for p in candidates:
+        try:
+            r = subprocess.run([p, '-c', 'import torch; print(\"ok\")'], capture_output=True, text=True, timeout=5)
+            if r.returncode == 0 and 'ok' in r.stdout:
+                return p
+        except Exception:
+            continue
+    return None
 
 with open(config_path) as f:
     config = json.load(f)
@@ -55,10 +84,17 @@ with open(config_path) as f:
 if 'mcpServers' not in config:
     config['mcpServers'] = {}
 
-config['mcpServers'][server_name] = {
+server_entry = {
     'command': 'python3',
     'args': [server_path]
 }
+
+if server_name == 'distributed-training':
+    torch_python = find_torch_python()
+    if torch_python:
+        server_entry['env'] = {'MCP_PYTHON_BIN': torch_python}
+
+config['mcpServers'][server_name] = server_entry
 
 with open(config_path, 'w') as f:
     json.dump(config, f, indent=2)

@@ -34,6 +34,20 @@ def _run(cmd: list[str], timeout: int = 60, env: dict | None = None) -> dict:
         return {"returncode": -1, "stdout": "", "stderr": str(e)}
 
 
+def _missing_jax_message() -> str:
+    return "JAX not installed. Install with: pip install jax[tpu] or pip install jax[cuda12]"
+
+
+def _jax_check_guard(r: dict) -> str | None:
+    """Return a friendly missing-JAX message if JAX is not installed, else None."""
+    if r["returncode"] != 0:
+        r2 = _run(["python3", "-c", "import jax; print(jax.__version__)"])
+        if r2["returncode"] != 0:
+            return _missing_jax_message()
+        return f"Error: {r['stderr']}"
+    return None
+
+
 # --- JAX Device Discovery ---
 
 @server.tool()
@@ -41,7 +55,7 @@ def jax_devices() -> str:
     """List all JAX-visible devices (TPU, GPU, CPU). Shows device count, type, and topology.
     Requires JAX to be installed.
     """
-    code = """
+    code = r"""
 import jax
 import jax.numpy as jnp
 
@@ -78,10 +92,9 @@ except:
 """
     r = _run(["python3", "-c", code])
     if r["returncode"] != 0:
-        # Check if JAX is installed
         r2 = _run(["python3", "-c", "import jax; print(jax.__version__)"])
         if r2["returncode"] != 0:
-            return "JAX not installed. Install with: pip install jax[tpu] or pip install jax[cuda12]"
+            return _missing_jax_message()
         return f"Error: {r['stderr']}"
     return r["stdout"]
 
@@ -91,9 +104,10 @@ def jax_tpu_info() -> str:
     """Get detailed TPU information including topology, mesh, and memory.
     Only works on TPU VMs (not on GPU/CPU).
     """
-    code = """
+    code = r"""
 import jax
 import jax.numpy as jnp
+import sys
 
 devices = jax.devices()
 tpu_devices = [d for d in devices if d.platform == 'tpu']
@@ -106,7 +120,7 @@ if not tpu_devices:
     tpu_env = {k: v for k, v in os.environ.items() if 'TPU' in k.upper() or 'JAX' in k.upper()}
     if tpu_env:
         print(f"\nTPU/JAX env vars: {tpu_env}")
-    return
+    sys.exit(0)
 
 print(f"TPU devices: {len(tpu_devices)}")
 for d in tpu_devices:
@@ -134,8 +148,9 @@ except Exception as e:
     print(f"\nMesh creation: {e}")
 """
     r = _run(["python3", "-c", code])
-    if r["returncode"] != 0:
-        return f"Error: {r['stderr']}"
+    err = _jax_check_guard(r)
+    if err is not None:
+        return err
     return r["stdout"]
 
 
@@ -161,9 +176,9 @@ def jax_distributed_setup(
     for k, v in env_vars.items():
         results.append(f"  export {k}={v}")
     # Check if jax.distributed is available
-    code = """
-import jax
+    code = r"""
 try:
+    import jax
     import jax.distributed
     print("jax.distributed: available")
     print("  Initialize with: jax.distributed.initialize()")
@@ -173,6 +188,8 @@ except ImportError:
     r = _run(["python3", "-c", code])
     if r["returncode"] == 0:
         results.append(f"\n{r['stdout']}")
+    else:
+        results.append(f"\nCould not verify jax.distributed: {r['stderr']}")
     return "\n".join(results)
 
 
@@ -196,13 +213,21 @@ def gcloud_tpu_create(
     accelerator_type: Annotated[str, "TPU type: v4-8, v5e-4, v5p-8, v6e-4, etc."] = "v5e-4",
     zone: Annotated[str, "GCP zone"] = "us-central2-b",
     preemptible: Annotated[bool, "Use preemptible (cheaper, can be taken back)"] = False,
+    version: Annotated[str, "TPU VM software image version. Defaults: v4 -> tpu-vm-v4-base, v5e -> v2-alpha, otherwise tpu-vm-v4-base."] = "",
 ) -> str:
     """Create a TPU VM on Google Cloud. Requires gcloud CLI and auth.
     WARNING: This creates a billable resource. Use gcloud_tpu_delete when done.
     """
+    if not version:
+        if accelerator_type.startswith("v4"):
+            version = "tpu-vm-v4-base"
+        elif accelerator_type.startswith("v5e"):
+            version = "v2-alpha"
+        else:
+            version = "tpu-vm-v4-base"
     cmd = ["gcloud", "compute", "tpus", "tpu-vm", "create", name,
            "--accelerator-type", accelerator_type, "--zone", zone,
-           "--version", "tpu-vm-v4-base"]  # Default software version
+           "--version", version]
     if preemptible:
         cmd.append("--preemptible")
     r = _run(cmd, timeout=120)
@@ -246,30 +271,51 @@ def jax_profile(
     script_path: Annotated[str, "Path to Python script to profile"],
     output: Annotated[str, "Output profile directory"] = "/tmp/jax_profile",
     duration_ms: Annotated[int, "Profile duration in ms"] = 5000,
+    port: Annotated[int, "Profiler server port"] = 6006,
 ) -> str:
     """Profile a JAX script using jax.profiler. Generates a TensorBoard-compatible trace.
     View with: tensorboard --logdir /tmp/jax_profile
     """
-    code = f"""
+    if not os.path.isfile(script_path):
+        return f"Error: script not found: {script_path}"
+    if not script_path.endswith(".py"):
+        return f"Error: script must be a .py file: {script_path}"
+
+    template = r"""
 import jax
 import jax.profiler
+import os
 import subprocess
 import sys
+import time
 
-# Start server for live profiling
-jax.profiler.start_server(6006)
-print(f"Profiler server started on port 6006")
+output_dir = __OUTPUT__
+port = __PORT__
+duration_ms = __DURATION_MS__
+script_path = os.environ.get('JAX_PROFILE_SCRIPT', '')
 
-# Run the script with profiling
-env = dict(__import__('os').environ)
-env['JAX_PROFILE'] = '1'
-proc = subprocess.run([sys.executable, '{script_path}'], env=env, capture_output=True, text=True, timeout=120)
-print(proc.stdout[-1000:])
-if proc.stderr:
-    print(f"stderr: {{proc.stderr[-500:]}}")
-print(f"Exit code: {{proc.returncode}}")
+if not os.path.isfile(script_path) or not script_path.endswith('.py'):
+    print(f"Error: invalid script path: {script_path}")
+    sys.exit(1)
+
+jax.profiler.start_server(port)
+print(f"Profiler server started on port {port}")
+
+with jax.profiler.trace(output_dir, create_perfetto_link=False):
+    proc = subprocess.run([sys.executable, script_path], env=os.environ, capture_output=True, text=True, timeout=120)
+    print(proc.stdout[-1000:])
+    if proc.stderr:
+        print(f"stderr: {proc.stderr[-500:]}")
+    print(f"Exit code: {proc.returncode}")
+    # Hold the trace for the requested duration
+    time.sleep(duration_ms / 1000.0)
 """
-    r = _run(["python3", "-c", code], timeout=180)
+    code = (template
+            .replace("__OUTPUT__", json.dumps(output))
+            .replace("__PORT__", str(port))
+            .replace("__DURATION_MS__", str(duration_ms)))
+    r = _run(["python3", "-c", code], timeout=180,
+             env={"JAX_PROFILE_SCRIPT": script_path, "JAX_PROFILE": "1"})
     if r["returncode"] != 0:
         return f"Profiling failed: {r['stderr']}"
     return f"{r['stdout']}\n\nView profile with: tensorboard --logdir {output}"
@@ -280,7 +326,7 @@ print(f"Exit code: {{proc.returncode}}")
 @server.tool()
 def jax_memory_info() -> str:
     """Get JAX memory usage and limits for all devices."""
-    code = """
+    code = r"""
 import jax
 devices = jax.devices()
 print(f"JAX memory info ({len(devices)} devices):")
@@ -298,35 +344,37 @@ for d in devices:
         print(f"  {d.platform}:{d.id}: {e}")
 """
     r = _run(["python3", "-c", code])
-    if r["returncode"] != 0:
-        return f"Error: {r['stderr']}"
+    err = _jax_check_guard(r)
+    if err is not None:
+        return err
     return r["stdout"]
 
 
 @server.tool()
 def jax_compilation_check(
-    function_code: Annotated[str, "JAX function code to compile (as a string)"],
+    function_code: Annotated[str, "JAX function code to compile. Must define a function named 'fn'."],
+    input_code: Annotated[str, "Python expression for input(s) to pass to fn. Default: jnp.ones((1, 3))."] = "jnp.ones((1, 3))",
 ) -> str:
     """Check if a JAX function compiles and see its XLA HLO. Useful for debugging TPU compilation errors."""
-    code = f"""
+    template = r"""
 import jax
 import jax.numpy as jnp
 
-{function_code}
+__FUNCTION_CODE__
 
-# Try to compile and show XLA
-try:
-    # Assume the function is called 'fn'
-    compiled = fn.lower(jnp.ones((1, 3))).compiler_ir()
-    print("Compilation successful!")
-    print(f"XLA HLO (first 500 chars):")
-    print(str(compiled)[:500])
-except Exception as e:
-    print(f"Compilation failed: {{type(e).__name__}}: {{e}}")
+fn = jax.jit(fn)
+inp = eval(__INPUT_CODE__)
+compiled = fn.lower(inp).compiler_ir()
+print("Compilation successful!")
+print(compiled)
 """
+    code = (template
+            .replace("__FUNCTION_CODE__", function_code, 1)
+            .replace("__INPUT_CODE__", json.dumps(input_code), 1))
     r = _run(["python3", "-c", code])
-    if r["returncode"] != 0:
-        return f"Error: {r['stderr']}"
+    err = _jax_check_guard(r)
+    if err is not None:
+        return err
     return r["stdout"]
 
 

@@ -13,6 +13,7 @@ import os
 import json
 import subprocess
 import shutil
+import tempfile
 from typing import Annotated
 
 from mcp.server import MCPServer
@@ -117,15 +118,99 @@ def gpu_processes() -> str:
 @server.tool()
 def kill_gpu_process(
     pid: Annotated[int, "PID of the process to kill"],
-    force: Annotated[bool, "Use SIGKILL instead of SIGTERM"] = True,
+    force: Annotated[bool, "Use SIGKILL instead of SIGTERM"] = False,
 ) -> str:
-    """Kill a process that is using GPU memory. Use gpu_processes first to find the PID."""
+    """Kill a process that is using GPU memory. Use gpu_processes first to find the PID.
+
+    Defaults to force=False (sends SIGTERM first). Use force=True for SIGKILL.
+    """
     sig = "SIGKILL" if force else "SIGTERM"
     flag = "-9" if force else "-15"
     r = _run(["kill", flag, str(pid)])
     if r["returncode"] == 0:
         return f"Sent {sig} to PID {pid}. Verify with gpu_processes."
     return f"Failed to kill PID {pid}: {r['stderr']}"
+
+
+@server.tool()
+def top_gpu_processes(
+    limit: Annotated[int, "Number of top processes to return (default: 10)"] = 10,
+) -> str:
+    """List the top GPU memory-consuming processes sorted by used_memory descending."""
+    r = _run([
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv,noheader",
+    ])
+    if r["returncode"] != 0:
+        return f"Error: {r['stderr']}"
+    if not r["stdout"].strip():
+        return "No processes are currently using GPU memory."
+
+    entries = []
+    for line in r["stdout"].strip().split("\n"):
+        parts = [p.strip() for p in line.split(",")]
+        if len(parts) >= 3:
+            mem_str = parts[2]
+            try:
+                mem_val = int(mem_str.split()[0])
+            except Exception:
+                mem_val = 0
+            entries.append((mem_val, parts[0], parts[1], mem_str))
+
+    if not entries:
+        return "No GPU processes parsed."
+
+    entries.sort(key=lambda x: x[0], reverse=True)
+    top = entries[:limit]
+    result = [
+        f"Top {len(top)} GPU processes by memory",
+        "-" * 60,
+        "PID    | Process Name                    | Memory",
+    ]
+    for _, pid, name, mem in top:
+        result.append(f"{pid:6} | {name:30} | {mem}")
+    return "\n".join(result)
+
+
+@server.tool()
+def nvdec_status() -> str:
+    """Return NVDEC/NVENC encoder session stats (session count, average FPS, average latency)."""
+    # Some drivers report latency as averageLatencyMs, others as averageLatency (us).
+    queries = [
+        "encoder.stats.sessionCount,encoder.stats.averageFps,encoder.stats.averageLatencyMs",
+        "encoder.stats.sessionCount,encoder.stats.averageFps,encoder.stats.averageLatency",
+    ]
+    r = None
+    for q in queries:
+        r = _run(["nvidia-smi", f"--query-gpu={q}", "--format=csv"])
+        if r["returncode"] == 0:
+            break
+        combined = (r["stdout"] + " " + r["stderr"]).lower()
+        if "not a valid field" in combined:
+            continue
+        break
+    if r is None or r["returncode"] != 0:
+        return f"Error: {r['stderr'] or r['stdout'] if r else 'unknown'}"
+
+    lines = [l for l in r["stdout"].strip().split("\n") if l.strip()]
+    if not lines:
+        return "No encoder stats available."
+
+    header = [h.strip() for h in lines[0].split(",")]
+    rows = lines[1:]
+    if not rows:
+        return "No encoder stats returned."
+
+    out = ["NVDEC/NVENC encoder stats:"]
+    for i, line in enumerate(rows):
+        parts = [p.strip() for p in line.split(",")]
+        out.append(f"GPU {i}:")
+        for h, v in zip(header, parts):
+            if v == "[N/A]":
+                v = "N/A"
+            out.append(f"  {h}: {v}")
+    return "\n".join(out)
 
 
 # --- System Memory Tools ---
@@ -148,13 +233,39 @@ def system_memory() -> str:
 
 @server.tool()
 def disk_usage(
-    path: Annotated[str, "Directory path to check (default: /home)"] = "/home",
+    path: Annotated[
+        str,
+        "Comma-separated directory paths to check (e.g. '/home,/tmp'). If empty, checks /home, /, /tmp, and /var/lib/docker.",
+    ] = "",
 ) -> str:
-    """Check disk space on a given path. Useful before large downloads or dataset generation."""
-    r = _run(["df", "-h", path])
-    if r["returncode"] != 0:
-        return f"Error: {r['stderr']}"
-    return r["stdout"]
+    """Check disk space for one or more paths. If no path is provided, checks common DGX locations.
+
+    Useful before large downloads or dataset generation.
+    """
+    if not path.strip():
+        paths = ["/home", "/", "/tmp", "/var/lib/docker"]
+    else:
+        paths = [p.strip() for p in path.split(",") if p.strip()]
+    if not paths:
+        return "No valid paths provided."
+
+    lines = ["Path         | Filesystem    | Size | Used | Avail | Use% | Mounted on", "-" * 72]
+    for p in paths:
+        r = _run(["df", "-h", "--output=source,size,used,avail,pcent,target", p])
+        if r["returncode"] != 0:
+            lines.append(f"{p:12} | error: {r['stderr']}")
+            continue
+        rows = [l for l in r["stdout"].strip().split("\n") if l.strip()]
+        if len(rows) < 2:
+            lines.append(f"{p:12} | no output")
+            continue
+        parts = rows[-1].split()
+        if len(parts) >= 6:
+            fs, size, used, avail, usep, mount = parts[:6]
+            lines.append(f"{p:12} | {fs:13} | {size:>4} | {used:>4} | {avail:>5} | {usep:>4} | {mount}")
+        else:
+            lines.append(f"{p:12} | {rows[-1]}")
+    return "\n".join(lines)
 
 
 # --- Docker Tools ---
@@ -208,7 +319,7 @@ def docker_gpu_stats() -> str:
         if r3["returncode"] == 0 and r3["stdout"].strip():
             pid = r3["stdout"].strip()
             if pid in gpu_procs:
-                results.append(f"  {name}: PID {pid} -> GPU {gpu_procs[pid]['mem']}MiB ({gpu_procs[pid]['name']})")
+                results.append(f"  {name}: PID {pid} -> GPU {gpu_procs[pid]['mem']} ({gpu_procs[pid]['name']})")
             else:
                 results.append(f"  {name}: PID {pid} -> no GPU usage")
     return "Docker GPU usage:\n" + "\n".join(results)
@@ -295,11 +406,121 @@ def compile_cuda(
     return f"Compilation failed:\nCommand: {' '.join(cmd)}\nstderr: {r['stderr']}"
 
 
+BANDWIDTH_CU = r"""
+#include <cuda_runtime.h>
+#include <iostream>
+#include <iomanip>
+#include <cstring>
+#include <vector>
+
+int main(int argc, char** argv) {
+    const char* kind = argc > 1 ? argv[1] : "device_to_device";
+    std::vector<size_t> sizes = {64*1024*1024, 256*1024*1024, 1024*1024*1024};
+    int iterations = 10;
+    cudaMemcpyKind k = cudaMemcpyDeviceToDevice;
+    bool host_src = false, host_dst = false;
+
+    if (strcmp(kind, "host_to_device") == 0) { k = cudaMemcpyHostToDevice; host_src = true; }
+    else if (strcmp(kind, "device_to_host") == 0) { k = cudaMemcpyDeviceToHost; host_dst = true; }
+    else if (strcmp(kind, "device_to_device") != 0) {
+        std::cerr << "Unknown kind: " << kind << std::endl;
+        return 1;
+    }
+
+    std::cout << "Kind: " << kind << std::endl;
+    std::cout << "Size (MiB)\tGB/s\tms/iter" << std::endl;
+
+    for (size_t size : sizes) {
+        unsigned char *d_src = nullptr, *d_dst = nullptr, *h_src = nullptr, *h_dst = nullptr;
+        cudaMalloc(&d_src, size);
+        cudaMalloc(&d_dst, size);
+        if (host_src) { cudaMallocHost(&h_src, size); std::memset(h_src, 0xAB, size); }
+        if (host_dst) { cudaMallocHost(&h_dst, size); }
+
+        if (!host_src) {
+            cudaMemset(d_src, 0xAB, size);
+        }
+
+        // Warm-up
+        for (int i = 0; i < 3; ++i) {
+            if (host_src) cudaMemcpy(d_dst, h_src, size, k);
+            else if (host_dst) cudaMemcpy(h_dst, d_src, size, k);
+            else cudaMemcpy(d_dst, d_src, size, k);
+        }
+        cudaDeviceSynchronize();
+
+        cudaEvent_t start, stop;
+        cudaEventCreate(&start);
+        cudaEventCreate(&stop);
+        cudaEventRecord(start);
+        for (int i = 0; i < iterations; ++i) {
+            if (host_src) cudaMemcpy(d_dst, h_src, size, k);
+            else if (host_dst) cudaMemcpy(h_dst, d_src, size, k);
+            else cudaMemcpy(d_dst, d_src, size, k);
+        }
+        cudaEventRecord(stop);
+        cudaEventSynchronize(stop);
+
+        float ms = 0.0f;
+        cudaEventElapsedTime(&ms, start, stop);
+
+        double total_bytes = double(size) * iterations;
+        double seconds = ms / 1000.0;
+        double gbps = (total_bytes / seconds) / 1e9;
+        double ms_per = ms / iterations;
+
+        std::cout << std::fixed << std::setprecision(1);
+        std::cout << (size / (1024*1024)) << "\t" << gbps << "\t" << ms_per << std::endl;
+
+        if (host_src) cudaFreeHost(h_src);
+        if (host_dst) cudaFreeHost(h_dst);
+        cudaFree(d_src);
+        cudaFree(d_dst);
+        cudaEventDestroy(start);
+        cudaEventDestroy(stop);
+    }
+    return 0;
+}
+"""
+
+
+@server.tool()
+def bandwidth_test(
+    kind: Annotated[
+        str,
+        "Memcpy kind to benchmark: 'device_to_device', 'host_to_device', or 'device_to_host' (default: device_to_device)",
+    ] = "device_to_device",
+) -> str:
+    """Generate, compile, and run a tiny CUDA bandwidth benchmark. Requires nvcc and a GPU."""
+    if not shutil.which("nvcc"):
+        return "Error: nvcc not found in PATH."
+    if kind not in ("device_to_device", "host_to_device", "device_to_host"):
+        return "Error: kind must be one of device_to_device, host_to_device, device_to_host."
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        source = os.path.join(tmpdir, "bandwidth.cu")
+        binary = os.path.join(tmpdir, "bandwidth")
+        with open(source, "w") as f:
+            f.write(BANDWIDTH_CU)
+
+        r = _run(["nvcc", f"-arch=sm_121", "-O2", "-o", binary, source], timeout=120)
+        if r["returncode"] != 0:
+            return f"Compilation failed:\n{r['stderr']}"
+
+        r2 = _run([binary, kind], timeout=120)
+        if r2["returncode"] != 0:
+            return f"Benchmark run failed:\n{r2['stderr']}"
+
+    return f"CUDA bandwidth test ({kind}):\n{r2['stdout']}"
+
+
 # --- CLI Mode ---
 
 TOOLS = {
     "gpu_status": gpu_status,
     "gpu_processes": gpu_processes,
+    "top_gpu_processes": top_gpu_processes,
+    "kill_gpu_process": kill_gpu_process,
     "system_memory": system_memory,
     "disk_usage": disk_usage,
     "docker_ps": docker_ps,
@@ -309,6 +530,8 @@ TOOLS = {
     "conda_packages": conda_packages,
     "cuda_info": cuda_info,
     "compile_cuda": compile_cuda,
+    "nvdec_status": nvdec_status,
+    "bandwidth_test": bandwidth_test,
 }
 
 

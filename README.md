@@ -192,19 +192,19 @@ Skills use **progressive disclosure**: only `name` and `description` are loaded 
 | `alphaevolve-consultant` | Expert reference: architecture, suitability, evaluator design, troubleshooting |
 | `evolutionary-code-optimization` | General LLM-based evolutionary code optimization (with or without AlphaEvolve) |
 
-### MCP Servers (7 servers, 72 tools)
+### MCP Servers (7 servers, 90 tools)
 
 Custom MCP (Model Context Protocol) servers with dual CLI + MCP interface. Each server works as a direct terminal tool AND as an MCP tool for AI agents (Cursor, Devin, Claude, Windsurf, Gemini).
 
 | Server | Tools | Description |
 |--------|-------|-------------|
-| `dgx-monitor` | 11 | GPU status (GB10 unified memory fallback), processes, Docker, conda, CUDA info, kernel compilation |
-| `cuda-profiling` | 10 | nsys/ncu profiling, compute-sanitizer (memcheck/racecheck/initcheck), SASS/PTX dump, benchmarking |
-| `distributed-training` | 11 | Multi-GPU discovery, NVLink/PCIe topology, NCCL diagnostics, DDP/FSDP setup, training job management |
-| `cloud-gpu-ssh` | 11 | Remote GPU machines (Lambda/RunPod/Vast/SSH), remote commands, SFTP file sync, GPU pricing |
+| `dgx-monitor` | 15 | GPU status (GB10 unified memory fallback), processes, Docker, conda, CUDA info, kernel compilation, NVDEC/NVENC, bandwidth tests |
+| `cuda-profiling` | 13 | nsys/ncu profiling, compute-sanitizer (memcheck/racecheck/initcheck), SASS/PTX dump, benchmarking, GPU info, kernel compilation |
+| `distributed-training` | 12 | Multi-GPU discovery, NVLink/PCIe topology, NCCL diagnostics, DDP/FSDP setup, training job management, checkpoints |
+| `cloud-gpu-ssh` | 16 | Remote GPU machines (Lambda/RunPod/Vast/SSH), remote commands, SFTP file sync, GPU pricing |
 | `tpu-jax` | 10 | JAX device discovery, TPU topology, gcloud TPU VM management, JAX profiling, XLA HLO compilation |
-| `endosight-pipeline` | 8 | Pipeline status, clip listing, reconstruction stats, verification, clinical clip sweep |
-| `research-workflow` | 8 | ArXiv search, paper download, BibTeX management, experiment tracking, Semantic Scholar |
+| `endosight-pipeline` | 13 | Pipeline status, clip listing, reconstruction stats, crop/QA/export, logs, validation, clinical clip sweep |
+| `research-workflow` | 11 | ArXiv search, paper download, BibTeX management, repro bundles, experiment tracking, Semantic Scholar, citations |
 
 **Install all servers:**
 ```bash
