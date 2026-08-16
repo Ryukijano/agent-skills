@@ -417,3 +417,26 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 - [ ] GitHub tensormux/kernel-skills – Open-source CUDA/Triton/quantized kernel skills library. Task: Use kernel skills for optimizing DINO-Endo and V-JEPA 2 CUDA inference kernels/kinematic modeling.
 - [ ] GitHub bunnelab/virtues – Task: Investigate VIRTUES framework for surgical AI virtue alignment or evaluation.
 - [ ] Google DeepMind GenCeption: Video Generators as World Models (the-decoder.com, Jul 20) – GenCeption repurposes video generators for classic vision tasks. Task: Integrate insights into V-JEPA 2 / COSMOS surgical world model architecture decisions.
+
+
+## X Bookmarks, Feed & WhatsApp – New AI Papers & Links (August 12–16, 2026)
+
+### Robotics & Embodied AI (X Bookmarks, Aug 12–16)
+- [ ] Simulation Pre-training for Dexterity (SPD) – Adam Rashid (@adamrasb, Aug 14) – Policy learning via sim pre-training then real-world fine-tuning. Task: Apply SPD framework to surgical instrument dexterity policy learning.
+- [ ] The Blind Skateboarder: Robotics Navigation Without Vision (Aditya Bhatt @aditya_bhatt, Aug 15) – Marker-free, vision-free navigation and control. Task: Study sensor-agnostic control policies for surgical robot navigation in occluded scenes.
+- [ ] NVIDIA Newton 1.5 – NVIDIA Robotics (@NVIDIARobotics, Aug 14) – Improved robot training scale, simulation physics, GPU control. Task: Upgrade surgical simulation training using Newton 1.5 physics.
+- [ ] GKDT: General Keypoint Detection Transformer (ECCV 2026) – Niels Rogge (@NielsRogge, Aug 4) – MegaKPT: 1.3M diverse object instances unified keypoint dataset. huggingface.co/papers/2607.00... Task: Apply GKDT to surgical instrument keypoint detection for pose estimation.
+- [ ] Ricursive Intelligence @ NVIDIA DAC 2026 – (@RicursiveAI, Jul 27) – GPU-native chip design workloads, 1000x faster. Task: Track Ricursive AI hardware for surgical AI inference acceleration.
+
+### Multi-Agent RL & Scaling (X Bookmarks, Aug 12–16)
+- [ ] Multi-Agent RL Papers Starter Pack – Sasha Malysheva (@aimalysheva, Aug 15) – RIAL/DIAL, CommNet, MADDPG, QMIX – foundational MARL reading list. Task: Apply MARL techniques to multi-arm surgical robot coordination.
+- [ ] Third AI Scaling Axis: Multi-Agent Coordination – Sasha Malysheva (@aimalysheva, Aug 11) – Two axes (parameters, data) saturating; third axis = multi-agent RL exploration. Task: Explore multi-agent coordination as next scaling frontier for surgical AI world models.
+- [ ] taalas_inc Joins AMD: In-Weights Model, No Memory Wall – Sasha Malysheva (@aimalysheva, Aug 9) – Model weights etched into transistors; no external memory; demo chip bypasses GPU memory wall. Task: Track in-weights/neuromorphic hardware for surgical AI edge inference.
+
+### LLM Architecture & Attention (X Bookmarks, Aug 12–16)
+- [ ] SSOG: Separable Sum of Gaussians Replacing SDPA for ViTs – Raphael Pisoni (@ml4rtemi5, Aug 15) – SDPA doesn't make sense for ViTs; SSOG achieves faster convergence, better performance, near-linear scaling. Task: Evaluate SSOG attention for V-JEPA 2 surgical video ViT backbone.
+- [ ] Google DeepMind: Stop Building LLMs – Paper Proposes Foundation Agents Alternative – Superman (@thesupermanmx, Aug 15) – "Advances and Challenges in Foundation Agents"; brain-inspired modular intelligence. Task: Study Foundation Agents architecture for surgical AI agent design beyond LLMs.
+- [ ] Native Multimodal Pretraining from Scratch – Junlin Han (@junlinhan, Aug 6) – Train with multimodal I/O (vision+language+action) natively from scratch, not language-first then vision added. Task: Apply native multimodal pretraining to surgical world model (video + instrument state + language).
+
+### WhatsApp Self-Chat (Aug 12–16, 2026)
+- [ ] Note: WhatsApp Web session expired during this cycle; new self-chat links from Aug 12–16 pending re-authentication. Task: Re-scan WhatsApp QR code to extract new paper links from self-chat for the Aug 12–16 window.
