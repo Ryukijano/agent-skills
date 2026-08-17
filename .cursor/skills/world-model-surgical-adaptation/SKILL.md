@@ -440,3 +440,33 @@ The adapted world model encoder serves as the backbone for DINO-Endo:
 
 ### WhatsApp Self-Chat (Aug 12–16, 2026)
 - [ ] Note: WhatsApp Web session expired during this cycle; new self-chat links from Aug 12–16 pending re-authentication. Task: Re-scan WhatsApp QR code to extract new paper links from self-chat for the Aug 12–16 window.
+
+
+## X Bookmarks, Feed & WhatsApp – New AI Papers & Links (August 16–17, 2026)
+
+### Agentic AI & RL Research (X Bookmarks, Aug 16–17)
+- [ ] AI Research Preference Models (RPMs) – Tanishq Mathew Abraham (@IScienceLuvr, Aug 17) – arxiv.org; RPMs predict which candidate solutions are worth executing from frozen pretrained LLMs; built at Meta. Task: Apply RPM framework to surgical AI agent candidate solution selection without full execution overhead.
+- [ ] bedrock-rl: VLMs + Distributed RL for Minecraft Agents – Elliot Arledge (@elliotarledge, Aug 17) – Repo powered by netherite; VLMs + super-fast distributed RL to train agents in Minecraft without environment bottlenecks. Task: Adapt bedrock-rl distributed RL framework to surgical simulation training with V-JEPA 2 world model.
+- [ ] SuperMap: SLAM as Persistent 4D Spatial Memory – Robots Digest (@robotsdigest, Aug 16) – Combines geometric mapping with open-vocabulary perception; turns SLAM into persistent spatial memory. Task: Integrate SuperMap 4D spatial memory into surgical scene understanding for long-horizon procedure tracking.
+- [ ] Chain of Thought Monitorability – Sasha Malysheva (@aimalysheva, Aug 14) – arXiv:2507.11473; OpenAI, Google DeepMind, Anthropic, Apollo Research argue models should maintain monitorable reasoning chains. Task: Apply CoT monitorability constraints to surgical AI decision transparency.
+- [ ] NVIDIA SWE Instruction-Tuning Dataset for Coding Agents – DailyPapers (@HuggingPapers, Aug 15) – Dataset for coding agents to navigate repos and plan multi-step edits. Task: Leverage SWE dataset for surgical AI codebase navigation and automated experiment editing.
+- [ ] Accelerated Diffusion & Flow Models: Fewer Denoising Steps – Julian Berner (@julberner, Aug 13) – Talk covering ways to reduce denoising steps in diffusion/flow models. Task: Apply accelerated sampling for surgical video generation and world model rollouts.
+- [ ] Google DeepMind: LLMs and Psychological Manipulation – HowToPrompt (@HowToPrompt__, Aug 13) – Study on persuasion/manipulation capabilities in frontier LLMs. Task: Audit surgical AI agents for unintended persuasion patterns in clinical decision support.
+- [ ] DeepSeek Adaptive Synthesis/Formalization Paper – tokenbender (@tokenbender, Aug 13) – Programming model for adaptive synthesis and formalization. Task: Study for surgical workflow formalization and symbolic reasoning integration.
+- [ ] Interpreting Loss Curves in Robotics – Ville Kuosmanen (@VilleKuosmanen, Aug 14) – Video explanation of loss curve patterns during robot policy training. Task: Apply loss curve interpretation techniques to surgical instrument control policy training.
+- [ ] Elderly Fall Detection via Skeleton Pose + Temporal DL – rsasaki0109 (@rsasaki0109, Aug 15) – System using skeleton pose estimation and temporal deep learning for fall detection. Task: Apply temporal pose estimation techniques to surgical phase recognition with skeleton-based instrument tracking.
+
+### WhatsApp Self-Chat – New Papers & Links (Aug 14–16, 2026)
+
+#### Nature & Scientific Papers (WhatsApp)
+- [ ] Nature Physics – Nanoscale Strain Wave Generation by Piezoelectric Grating from Polar Vortices (s41567-026-03336-x, Thu Aug 14) – Task: Background for piezoelectric actuation in surgical microrobotics.
+- [ ] Nature – Degree-of-Polarization Modulation for High-Dimensional Optical Computing (s41586-026-10891-z, Thu Aug 14) – Task: Track optical computing for surgical AI accelerator hardware.
+- [ ] Nature – Superconducting 2D Cuprate with Single CuO₂ Plane (s41586-026-10857-1, Thu Aug 14) – Task: Monitor superconductor discoveries for quantum hardware integration.
+- [ ] Nature Biotechnology – OptiPrime: Mechanistic ML for Prime Editing Outcome Prediction (s41587-026-03261-7, Thu Aug 14) – ML model incorporating prime editing biochemistry to predict outcomes. Task: Apply mechanistic ML to surgical biomarker outcome prediction.
+- [ ] Nature Biotechnology – Proteome-wide CRBN Interactome / Druggable Targets via Molecular Glue Degraders (s41587-026-03237-7, Fri Aug 15) – Task: Review for surgical oncology drug target identification.
+- [ ] Nature Methods – ProteinDPO: Aligning Protein-Generative Models to Experimental Fitness (s41592-026-03137-3, Sat Aug 16) – DPO applied to protein generation; demonstrates preference optimization on protein fitness landscapes. Task: Apply DPO alignment techniques to surgical AI reward modeling.
+- [ ] Nature Photonics – Integrated Optical Isolators for Broadband Multi-Laser Operation (s41566-026-01978-0, Sat Aug 16) – Magnet-free broadband optical isolator via electro-optic modulation. Task: Monitor photonic hardware for surgical multi-wavelength imaging systems.
+
+#### Tools & Infrastructure (WhatsApp)
+- [ ] GitHub – seyedehsanhadi/sloptrim (Fri Aug 15) – Local detector for AI-writing patterns; scores every prose file; Python standard library only. Task: Use sloptrim to audit surgical AI-generated clinical report quality and detect AI-writing artifacts.
+- [ ] phys.org – First Fully Solution-Processed Solid-State Polariton Laser (Aug 7) – Task: Track polariton laser tech for surgical optical coherence tomography advancement.
