@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 206 | 192 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 219 | 202 commands (`/name`) |
+| **Devin** (`.devin/`) | 224 | 210 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 237 | 220 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (206)
+## Skills (224)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (69)
+### Custom Research Skills (87)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -329,8 +329,26 @@ Domain-specific skills for Gyanateet's research workflow.
 | `nsight-profiling-gpu` | Nsight Compute sections/metrics, Nsight Systems gap analysis, hardware CUDA trace, and Tile profiling for cuTile. |
 | `pytorch-blackwell-deployment` | PyTorch nightly wheels, sm_100/sm_120 support, architecture detection, and common Blackwell-specific errors. |
 | `quantization-backends-gpu` | AWQ, GPTQ, AutoRound, Marlin, FP8, NVFP4, MXFP4, and backend selection for A100/H100/L40S/RTX50/GB10. |
+| `astrophysics-cosmology-ml` | Gravitational lensing, galaxy classification, N-body simulations, dark matter mapping, and cosmological parameter inference. |
+| `bayesian-inference-gpu` | MCMC, NUTS, variational inference, NumPyro, BlackJAX, and GPyTorch on NVIDIA GPUs. |
+| `causal-inference-science` | Do-calculus, causal discovery, structural causal models, transportability, and mediation for observational and experimental data. |
+| `differential-equations-gpu` | ODE/PDE/SDE solvers, spectral and finite element methods, Diffrax, FEniCSx, PETSc, and NekRS on GPU. |
+| `equivariant-neural-networks-science` | E(3)/SE(3)-equivariant networks (E3NN, Equiformer, MACE, NequIP, steerable CNNs) for atomic and molecular systems. |
+| `experiment-tracking-optimization` | W&B, MLflow, Neptune, Aim, Optuna, Ray Tune, and reproducible hyperparameter search on HPC. |
+| `fluid-dynamics-cfd-ml` | Neural operators, PhysicsNeMo (Modulus), JAX-Fluids, PhiFlow, and surrogate CFD on GPU. |
+| `generative-models-science` | Diffusion, flow matching, score-based models, and normalizing flows for molecules, materials, and inverse design. |
+| `gnn-science` | GNNs for molecules, materials, weather, neural operators, and large-scale graph training on GPU. |
+| `neuroscience-ml-gpu` | fMRI, calcium imaging, connectomics, and neural decoding with cuBNM, DeepWonder, scGPT, and RAPIDS. |
+| `optimization-gpu` | First- and second-order optimization, Optax/JAXopt, L-BFGS, trust-region, constrained, and Newton-Krylov methods on GPU. |
+| `quantum-chemistry-gpu` | GPU-accelerated DFT, Hartree-Fock, coupled cluster with PySCF/GPU4PySCF, and hybrid quantum-classical ML. |
+| `reinforcement-learning-science` | RL for tokamak plasma control, drug design, experiment design, and autonomous scientific systems. |
+| `scientific-linear-algebra-gpu` | Dense and sparse linear algebra with cuBLAS, cuSOLVER, cuSPARSE, cuDSS, MAGMA, and device-side cuSolverDx. |
+| `scientific-workflows-hpc` | Workflow engines (Snakemake, Nextflow, CWL), containers, DVC, SLURM job arrays, checkpointing, and cloud HPC. |
+| `signal-image-processing-gpu` | FFT, wavelets, filtering, compressed sensing, and tomography with cuFFT, RAPIDS, and GPU pipelines. |
+| `transformers-for-science` | Transformers for protein, genomics, weather, chemistry, math, and symbolic regression; ESM, AlphaFold, Prithvi, DNABERT, AI-Descartes. |
+| `uncertainty-quantification-science` | Conformal prediction, evidential learning, Bayesian neural nets, ensembles, Fortuna, and UQ for PDE surrogates. |
 
-## Workflows (192)
+## Workflows (210)
 
 ### Research Workflows (15)
 
@@ -395,7 +413,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (69)
+### Custom Research Workflows (87)
 
 | Workflow | Description |
 |----------|-------------|
@@ -468,6 +486,24 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/nsight-profiling-gpu` | Nsight Compute sections/metrics, Nsight Systems gap analysis, hardware CUDA trace, and Tile profiling for cuTile. |
 | `/pytorch-blackwell-deployment` | PyTorch nightly wheels, sm_100/sm_120 support, architecture detection, and common Blackwell-specific errors. |
 | `/quantization-backends-gpu` | AWQ, GPTQ, AutoRound, Marlin, FP8, NVFP4, MXFP4, and backend selection for A100/H100/L40S/RTX50/GB10. |
+| `/astrophysics-cosmology-ml` | Gravitational lensing, galaxy classification, N-body simulations, dark matter mapping, and cosmological parameter inference. |
+| `/bayesian-inference-gpu` | MCMC, NUTS, variational inference, NumPyro, BlackJAX, and GPyTorch on NVIDIA GPUs. |
+| `/causal-inference-science` | Do-calculus, causal discovery, structural causal models, transportability, and mediation for observational and experimental data. |
+| `/differential-equations-gpu` | ODE/PDE/SDE solvers, spectral and finite element methods, Diffrax, FEniCSx, PETSc, and NekRS on GPU. |
+| `/equivariant-neural-networks-science` | E(3)/SE(3)-equivariant networks (E3NN, Equiformer, MACE, NequIP, steerable CNNs) for atomic and molecular systems. |
+| `/experiment-tracking-optimization` | W&B, MLflow, Neptune, Aim, Optuna, Ray Tune, and reproducible hyperparameter search on HPC. |
+| `/fluid-dynamics-cfd-ml` | Neural operators, PhysicsNeMo (Modulus), JAX-Fluids, PhiFlow, and surrogate CFD on GPU. |
+| `/generative-models-science` | Diffusion, flow matching, score-based models, and normalizing flows for molecules, materials, and inverse design. |
+| `/gnn-science` | GNNs for molecules, materials, weather, neural operators, and large-scale graph training on GPU. |
+| `/neuroscience-ml-gpu` | fMRI, calcium imaging, connectomics, and neural decoding with cuBNM, DeepWonder, scGPT, and RAPIDS. |
+| `/optimization-gpu` | First- and second-order optimization, Optax/JAXopt, L-BFGS, trust-region, constrained, and Newton-Krylov methods on GPU. |
+| `/quantum-chemistry-gpu` | GPU-accelerated DFT, Hartree-Fock, coupled cluster with PySCF/GPU4PySCF, and hybrid quantum-classical ML. |
+| `/reinforcement-learning-science` | RL for tokamak plasma control, drug design, experiment design, and autonomous scientific systems. |
+| `/scientific-linear-algebra-gpu` | Dense and sparse linear algebra with cuBLAS, cuSOLVER, cuSPARSE, cuDSS, MAGMA, and device-side cuSolverDx. |
+| `/scientific-workflows-hpc` | Workflow engines (Snakemake, Nextflow, CWL), containers, DVC, SLURM job arrays, checkpointing, and cloud HPC. |
+| `/signal-image-processing-gpu` | FFT, wavelets, filtering, compressed sensing, and tomography with cuFFT, RAPIDS, and GPU pipelines. |
+| `/transformers-for-science` | Transformers for protein, genomics, weather, chemistry, math, and symbolic regression; ESM, AlphaFold, Prithvi, DNABERT, AI-Descartes. |
+| `/uncertainty-quantification-science` | Conformal prediction, evidential learning, Bayesian neural nets, ensembles, Fortuna, and UQ for PDE surrogates. |
 
 ## Usage
 
