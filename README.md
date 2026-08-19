@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 168 | 154 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 181 | 164 commands (`/name`) |
+| **Devin** (`.devin/`) | 192 | 178 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 205 | 188 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (168)
+## Skills (192)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (31)
+### Custom Research Skills (55)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -291,8 +291,32 @@ Domain-specific skills for Gyanateet's research workflow.
 | `nsight-compute-tensor-cores-gb10` | Profile Tensor Core utilization and memory bottlenecks with Nsight Compute on GB10 |
 | `shared-memory-swizzling-gb10` | Bank-conflict-free shared memory layouts with XOR swizzling and padding tradeoffs on GB10 |
 | `tensor-core-fragment-layouts-gb10` | PTX mma.sync fragment layouts and lane-to-element mapping for GB10 Tensor Cores |
+| `ada-l40s-optimization` | L40S-specific tuning: FP8, TensorRT-LLM/Triton, multi-GPU PCIe scaling, and media engines. |
+| `blackwell-dc-fp4-quantization` | Block-scaled 4-bit formats for training and inference on datacenter Blackwell. |
+| `blackwell-dc-moepart-green-contexts` | Resource partitioning (MLOPart, Green Contexts, MPS) and disaggregated prefill/decode serving for datacenter Blackwell. |
+| `blackwell-dc-tcgen05-tmem` | Programming datacenter Blackwell (sm_100/sm_103) with tcgen05.mma, TMEM, TMA multicast, and CTA-pair operations. |
+| `climate-weather-ml` | FourCastNet, GraphCast, Pangu-Weather, ClimaX, and ECMWF ai-models on GPU clusters. |
+| `cuda-q-hybrid-quantum` | CUDA-Q kernels, simulators, VQE/QAOA, PyTorch/JAX integration, and multi-GPU quantum workflows. |
+| `cuquantum-tensornet` | GPU-accelerated quantum simulation: state vector, tensor network, expectation values, and gradients. |
+| `distributed-launch-slurm-mpi` | Launching multi-node PyTorch/JAX training with SLURM, torchrun, MPI, CUDA-aware MPI, and UCX. |
+| `hopper-flashattention-3` | FlashAttention-3 warp specialization, WGMMA/TMA pipelining, and FP8 block quantization on H100/H200. |
+| `hopper-fp8-transformer-engine` | FP8 recipes (E4M3/E5M2, current, delayed, and blockwise scaling) with Transformer Engine for LLM training. |
+| `hopper-megatron-deepspeed` | Large-model training with Megatron-Core, Megatron-FSDP, DeepSpeed ZeRO, and NVLink4 on H100/H200. |
+| `hopper-wgmma-tma` | Low-level Hopper programming with `wgmma.mma_async`, `cp.async.bulk.tensor`, tensor maps, and mbarriers. |
+| `jax-gpu-scientific` | JAX `jit`, `vmap`, `shard_map`, device meshes, and XLA memory tuning on H100/H200/Blackwell/L40S. |
+| `jax-pde-sciml` | JAX-based SciML: Diffrax, Exponax, JAX-MD, neural operators, and differentiable simulations. |
+| `mamba-ssm-kernels` | Mamba-2/3 SSD kernels, fused selective scan, CuTe/Triton/TileLang backends, and chunk scheduling. |
+| `materials-discovery-ml` | MatterGen, GNoME, DiffCSP, CDVAE, and crystal structure generation on GPU. |
+| `moe-grouped-gemm` | Grouped GEMM, MoE routing, cuBLAS/cuDNN/TransformerEngine/FlashInfer/vLLM backends. |
+| `molecular-ml-drug-discovery` | Equivariant GNNs, ML potentials, molecular docking (DiffDock), and generative molecule design on GPU. |
+| `multigpu-nccl-topology` | NCCL, NVLink/NVSwitch, PCIe, InfiniBand/RoCE, GPUDirect, and common topology hang fixes. |
+| `neural-operators-pinns` | Fourier Neural Operator, DeepONet, PINNs, and JAX/Diffrax/Exponax for PDEs on GPU. |
+| `protein-folding-gpu` | AlphaFold 3, ESM3, Boltz, BioNeMo Fold-CP, OpenFold, and high-throughput protein folding pipelines. |
+| `scientific-data-formats` | Zarr, TensorStore, WebDataset, HDF5/NetCDF, KvikIO, and direct-to-GPU I/O pipelines. |
+| `torch-compile-inductor` | PyTorch 2.7+ `torch.compile`, Inductor autotune, custom operators, CuTeDSL/Gluon backends, and debug. |
+| `triton-cross-arch` | Writing and deploying Triton kernels across sm_80, sm_89, sm_90, sm_100, sm_120, and sm_121. |
 
-## Workflows (154)
+## Workflows (178)
 
 ### Research Workflows (15)
 
@@ -357,7 +381,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (31)
+### Custom Research Workflows (55)
 
 | Workflow | Description |
 |----------|-------------|
@@ -392,6 +416,30 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/nsight-compute-tensor-cores-gb10` | Profile Tensor Core utilization and memory bottlenecks with Nsight Compute on GB10 |
 | `/shared-memory-swizzling-gb10` | Bank-conflict-free shared memory layouts with XOR swizzling and padding tradeoffs on GB10 |
 | `/tensor-core-fragment-layouts-gb10` | PTX mma.sync fragment layouts and lane-to-element mapping for GB10 Tensor Cores |
+| `/ada-l40s-optimization` | L40S-specific tuning: FP8, TensorRT-LLM/Triton, multi-GPU PCIe scaling, and media engines. |
+| `/blackwell-dc-fp4-quantization` | Block-scaled 4-bit formats for training and inference on datacenter Blackwell. |
+| `/blackwell-dc-moepart-green-contexts` | Resource partitioning (MLOPart, Green Contexts, MPS) and disaggregated prefill/decode serving for datacenter Blackwell. |
+| `/blackwell-dc-tcgen05-tmem` | Programming datacenter Blackwell (sm_100/sm_103) with tcgen05.mma, TMEM, TMA multicast, and CTA-pair operations. |
+| `/climate-weather-ml` | FourCastNet, GraphCast, Pangu-Weather, ClimaX, and ECMWF ai-models on GPU clusters. |
+| `/cuda-q-hybrid-quantum` | CUDA-Q kernels, simulators, VQE/QAOA, PyTorch/JAX integration, and multi-GPU quantum workflows. |
+| `/cuquantum-tensornet` | GPU-accelerated quantum simulation: state vector, tensor network, expectation values, and gradients. |
+| `/distributed-launch-slurm-mpi` | Launching multi-node PyTorch/JAX training with SLURM, torchrun, MPI, CUDA-aware MPI, and UCX. |
+| `/hopper-flashattention-3` | FlashAttention-3 warp specialization, WGMMA/TMA pipelining, and FP8 block quantization on H100/H200. |
+| `/hopper-fp8-transformer-engine` | FP8 recipes (E4M3/E5M2, current, delayed, and blockwise scaling) with Transformer Engine for LLM training. |
+| `/hopper-megatron-deepspeed` | Large-model training with Megatron-Core, Megatron-FSDP, DeepSpeed ZeRO, and NVLink4 on H100/H200. |
+| `/hopper-wgmma-tma` | Low-level Hopper programming with `wgmma.mma_async`, `cp.async.bulk.tensor`, tensor maps, and mbarriers. |
+| `/jax-gpu-scientific` | JAX `jit`, `vmap`, `shard_map`, device meshes, and XLA memory tuning on H100/H200/Blackwell/L40S. |
+| `/jax-pde-sciml` | JAX-based SciML: Diffrax, Exponax, JAX-MD, neural operators, and differentiable simulations. |
+| `/mamba-ssm-kernels` | Mamba-2/3 SSD kernels, fused selective scan, CuTe/Triton/TileLang backends, and chunk scheduling. |
+| `/materials-discovery-ml` | MatterGen, GNoME, DiffCSP, CDVAE, and crystal structure generation on GPU. |
+| `/moe-grouped-gemm` | Grouped GEMM, MoE routing, cuBLAS/cuDNN/TransformerEngine/FlashInfer/vLLM backends. |
+| `/molecular-ml-drug-discovery` | Equivariant GNNs, ML potentials, molecular docking (DiffDock), and generative molecule design on GPU. |
+| `/multigpu-nccl-topology` | NCCL, NVLink/NVSwitch, PCIe, InfiniBand/RoCE, GPUDirect, and common topology hang fixes. |
+| `/neural-operators-pinns` | Fourier Neural Operator, DeepONet, PINNs, and JAX/Diffrax/Exponax for PDEs on GPU. |
+| `/protein-folding-gpu` | AlphaFold 3, ESM3, Boltz, BioNeMo Fold-CP, OpenFold, and high-throughput protein folding pipelines. |
+| `/scientific-data-formats` | Zarr, TensorStore, WebDataset, HDF5/NetCDF, KvikIO, and direct-to-GPU I/O pipelines. |
+| `/torch-compile-inductor` | PyTorch 2.7+ `torch.compile`, Inductor autotune, custom operators, CuTeDSL/Gluon backends, and debug. |
+| `/triton-cross-arch` | Writing and deploying Triton kernels across sm_80, sm_89, sm_90, sm_100, sm_120, and sm_121. |
 
 ## Usage
 
