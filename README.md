@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 147 | 133 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 162 | 143 commands (`/name`) |
+| **Devin** (`.devin/`) | 168 | 154 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 181 | 164 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (118)
+## Skills (168)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (10)
+### Custom Research Skills (31)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -262,6 +262,20 @@ Domain-specific skills for Gyanateet's research workflow.
 |-------|-------------|
 | `surgical-video-analysis` | Surgical video MOT, detection, scene understanding on DGX Spark |
 | `cuda-kernel-optimization` | Optimize CUDA kernels for GB10 (SM121, Blackwell, unified memory) |
+| `cutile-python-gb10` | Tile-based programming with NVIDIA cuTile Python on GB10 |
+| `cutile-persistent-matmul-gb10` | Persistent cuTile FP16/FP32 GEMM with ~2-wave launch on GB10 |
+| `cutile-fmha-attention-gb10` | Fused multi-head attention with cuTile and online softmax on GB10 |
+| `cooperative-groups-gb10` | Cooperative Groups and `cudaLaunchCooperativeKernel` on GB10 |
+| `cooperative-groups-warp-tile-gb10` | Warp-level `tiled_partition` reduce/scan/shfl on GB10 |
+| `cub-device-algorithms-gb10` | CUB device-wide reduce/scan/sort on GB10 |
+| `cub-reduce-by-key-gb10` | CUB `DeviceReduce::ReduceByKey` on GB10 |
+| `cub-segmented-sort-gb10` | CUB `DeviceSegmentedSort::SortKeys` on GB10 |
+| `cuda-dynamic-parallelism-gb10` | CUDA Dynamic Parallelism (parent/child kernels) on GB10 |
+| `cuda-dynamic-parallelism-quicksort-gb10` | Recursive CDP quicksort with `-rdc=true` on GB10 |
+| `cuda-graphs-inference-gb10` | Capture/replay CUDA graphs for low-latency inference on GB10 |
+| `fused-attention-inference-gb10` | FlashAttention-style fused attention for inference on GB10 |
+| `fp8-fp4-quantization-inference-gb10` | FP8/FP4 post-training quantization for Blackwell inference |
+| `fast-gemm-inference-gb10` | cuBLASLt and cuTile GEMM for low-latency inference on GB10 |
 | `model-evaluation` | Systematic model evaluation, benchmarking, and reporting |
 | `video-processing-pipeline` | GPU-accelerated video I/O with ffmpeg/cvcuda/NVDEC on GB10 |
 | `thesis-writing` | PhD thesis structure, LaTeX, citation management, viva prep |
@@ -270,8 +284,15 @@ Domain-specific skills for Gyanateet's research workflow.
 | `huggingface-hub` | Upload models/datasets/Spaces, manage HF repositories |
 | `experiment-reproducibility` | Seeds, configs, environments, checkpoints, data versioning |
 | `collaborative-research` | Multi-author papers, supervisor communication, project management |
+| `blackwell-fp4-fp8-block-scaling-ptx-gb10` | FP8 and block-scaled FP4 (NVFP4) PTX MMA with scale factors on SM121 |
+| `blackwell-sm121-targeting-gb10` | Correctly compile for GB10 (sm_121/121f/121a), PTX 9.1, and Triton ptxas setup |
+| `cp-async-pipeline-gb10` | Multi-stage cp.async copy pipelines for GB10 GMEM->SMEM staging |
+| `cuda-occupancy-register-pressure-gb10` | Occupancy, register pressure, launch bounds, and SMEM tradeoffs on GB10 |
+| `nsight-compute-tensor-cores-gb10` | Profile Tensor Core utilization and memory bottlenecks with Nsight Compute on GB10 |
+| `shared-memory-swizzling-gb10` | Bank-conflict-free shared memory layouts with XOR swizzling and padding tradeoffs on GB10 |
+| `tensor-core-fragment-layouts-gb10` | PTX mma.sync fragment layouts and lane-to-element mapping for GB10 Tensor Cores |
 
-## Workflows (123)
+## Workflows (154)
 
 ### Research Workflows (15)
 
@@ -336,12 +357,26 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (10)
+### Custom Research Workflows (31)
 
 | Workflow | Description |
 |----------|-------------|
 | `/surgical-video-analysis` | Analyze surgical video for MOT, detection, scene understanding |
 | `/cuda-kernel-optimization` | Optimize CUDA kernels for GB10 DGX Spark (SM121) |
+| `/cutile-python-gb10` | Tile-based programming with NVIDIA cuTile Python on GB10 |
+| `/cutile-persistent-matmul-gb10` | Persistent cuTile FP16/FP32 GEMM with ~2-wave launch on GB10 |
+| `/cutile-fmha-attention-gb10` | Fused multi-head attention with cuTile and online softmax on GB10 |
+| `/cooperative-groups-gb10` | Cooperative Groups and `cudaLaunchCooperativeKernel` on GB10 |
+| `/cooperative-groups-warp-tile-gb10` | Warp-level `tiled_partition` reduce/scan/shfl on GB10 |
+| `/cub-device-algorithms-gb10` | CUB device-wide reduce/scan/sort on GB10 |
+| `/cub-reduce-by-key-gb10` | CUB `DeviceReduce::ReduceByKey` on GB10 |
+| `/cub-segmented-sort-gb10` | CUB `DeviceSegmentedSort::SortKeys` on GB10 |
+| `/cuda-dynamic-parallelism-gb10` | CUDA Dynamic Parallelism (parent/child kernels) on GB10 |
+| `/cuda-dynamic-parallelism-quicksort-gb10` | Recursive CDP quicksort with `-rdc=true` on GB10 |
+| `/cuda-graphs-inference-gb10` | Capture/replay CUDA graphs for low-latency inference on GB10 |
+| `/fused-attention-inference-gb10` | FlashAttention-style fused attention for inference on GB10 |
+| `/fp8-fp4-quantization-inference-gb10` | FP8/FP4 post-training quantization for Blackwell inference |
+| `/fast-gemm-inference-gb10` | cuBLASLt and cuTile GEMM for low-latency inference on GB10 |
 | `/model-evaluation` | Systematic model evaluation and benchmarking |
 | `/video-processing-pipeline` | Build GPU-accelerated video processing pipelines |
 | `/thesis-writing` | Write and structure PhD thesis chapters with LaTeX |
@@ -350,6 +385,13 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/huggingface-hub` | Upload models, datasets, and Spaces to Hugging Face Hub |
 | `/experiment-reproducibility` | Ensure experiments are fully reproducible |
 | `/collaborative-research` | Manage collaborative research projects |
+| `/blackwell-fp4-fp8-block-scaling-ptx-gb10` | FP8 and block-scaled FP4 (NVFP4) PTX MMA with scale factors on SM121 |
+| `/blackwell-sm121-targeting-gb10` | Correctly compile for GB10 (sm_121/121f/121a), PTX 9.1, and Triton ptxas setup |
+| `/cp-async-pipeline-gb10` | Multi-stage cp.async copy pipelines for GB10 GMEM->SMEM staging |
+| `/cuda-occupancy-register-pressure-gb10` | Occupancy, register pressure, launch bounds, and SMEM tradeoffs on GB10 |
+| `/nsight-compute-tensor-cores-gb10` | Profile Tensor Core utilization and memory bottlenecks with Nsight Compute on GB10 |
+| `/shared-memory-swizzling-gb10` | Bank-conflict-free shared memory layouts with XOR swizzling and padding tradeoffs on GB10 |
+| `/tensor-core-fragment-layouts-gb10` | PTX mma.sync fragment layouts and lane-to-element mapping for GB10 Tensor Cores |
 
 ## Usage
 
@@ -394,7 +436,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 └── MASTERPLAN.md              # Design rationale and architecture
 
 .devin/
-├── skills/                    # 90 SKILL.md files (auto-invoked)
+├── skills/                    # 168 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
 │   ├── address-pr-comments/
 │   ├── aire-slurm-submit/
@@ -432,7 +474,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 │   ├── tdv-pretrain/
 │   ├── testing-strategy/
 │   └── wandb-experiment/
-└── workflows/                 # 88 workflow .md files (slash commands)
+└── workflows/                 # 154 workflow .md files (slash commands)
     ├── ablation-study.md
     ├── address-pr-comments.md
     ├── aire-slurm-submit.md
@@ -470,7 +512,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
     └── wandb-experiment.md
 
 .cursor/
-├── skills/                    # 97 SKILL.md files (auto-suggested)
+├── skills/                    # 181 SKILL.md files (auto-suggested)
 │   ├── 3d-reconstruction-best-practices/
 │   ├── ablation-study/
 │   ├── agentic-loop-design/
@@ -481,7 +523,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 │   ├── reproducibility/
 │   ├── tdv-pretrain/
 │   └── ... (see .cursor/README.md)
-├── commands/                  # 94 command .md files (/name)
+├── commands/                  # 164 command .md files (/name)
 │   ├── pretrain-and-evaluate.md
 │   ├── code-review.md
 │   ├── cosmos-verify.md
