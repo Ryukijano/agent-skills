@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 236 | 222 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 249 | 232 commands (`/name`) |
+| **Devin** (`.devin/`) | 248 | 234 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 261 | 244 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (236)
+## Skills (248)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (99)
+### Custom Research Skills (111)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -359,8 +359,20 @@ Domain-specific skills for Gyanateet's research workflow.
 | `monitoring-observability-ml` | Prometheus, Grafana, Weights & Biases, MLflow, Evidently, and drift detection for production ML. |
 | `networking-distributed-training` | InfiniBand, RoCE, NCCL tuning, AWS EFA, and diagnosing multi-node network issues. |
 | `ray-ml-distributed` | Ray Train, Ray Tune, Ray Serve, Ray Data, and Ray clusters for scaling training, tuning, serving, and data processing. |
+| `agritech-phenotyping` | UAV/drone imaging, vision-language models, yield estimation, disease detection, and crop monitoring on GPU. |
+| `battery-materials-ml` | GNNs, Gaussian processes, and high-throughput screening for battery materials, redox flow batteries, and carbon capture solvents. |
+| `biodiversity-edna-ml` | Environmental DNA, species distribution modeling, zero-shot taxonomic assignment, and biodiversity monitoring on GPU. |
+| `epidemiology-disease-surveillance` | SIR/SEIR models, GNNs, Gaussian processes, and transfer learning for outbreak prediction and disease dynamics. |
+| `high-energy-physics-ml` | Jet tagging, event reconstruction, Particle Transformer, Hypergraph, and ROOT/Geant4 integration on GPU. |
+| `industry-4-predictive-maintenance` | RAPIDS, NVIDIA Omniverse, XGBoost, anomaly detection, and digital twins for manufacturing. |
+| `lab-robotics-digital-twins` | MATTERIX, LucidGrasp, 6D pose, sim-to-real, and digital twins for autonomous science labs. |
+| `proteomics-metabolomics-ml` | Mass spectrometry, peptide identification, DelPi, DIA-BERT, GiCOPS, ANN-SoLo, and metabolite annotation on GPU. |
+| `renewable-energy-forecasting` | Spatio-temporal diffusion, FNO, attention, and RL for solar/wind forecasting and energy dispatch. |
+| `social-simulation-ml` | AgentTorch, LLM-based agents, differentiable ABM, and causal discovery for social and economic systems. |
+| `spatial-transcriptomics-gpu` | Cell segmentation, transcript assignment, BIDCell, segger, PanoSpace, and foundation models for spatial omics. |
+| `sports-biomechanics-ml` | Wearable sensors, ST-GNNs, federated learning, and multimodal fusion for athlete performance and injury risk. |
 
-## Workflows (222)
+## Workflows (234)
 
 ### Research Workflows (15)
 
@@ -425,7 +437,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (99)
+### Custom Research Workflows (111)
 
 | Workflow | Description |
 |----------|-------------|
@@ -528,6 +540,18 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/monitoring-observability-ml` | Prometheus, Grafana, Weights & Biases, MLflow, Evidently, and drift detection for production ML. |
 | `/networking-distributed-training` | InfiniBand, RoCE, NCCL tuning, AWS EFA, and diagnosing multi-node network issues. |
 | `/ray-ml-distributed` | Ray Train, Ray Tune, Ray Serve, Ray Data, and Ray clusters for scaling training, tuning, serving, and data processing. |
+| `/agritech-phenotyping` | UAV/drone imaging, vision-language models, yield estimation, disease detection, and crop monitoring on GPU. |
+| `/battery-materials-ml` | GNNs, Gaussian processes, and high-throughput screening for battery materials, redox flow batteries, and carbon capture solvents. |
+| `/biodiversity-edna-ml` | Environmental DNA, species distribution modeling, zero-shot taxonomic assignment, and biodiversity monitoring on GPU. |
+| `/epidemiology-disease-surveillance` | SIR/SEIR models, GNNs, Gaussian processes, and transfer learning for outbreak prediction and disease dynamics. |
+| `/high-energy-physics-ml` | Jet tagging, event reconstruction, Particle Transformer, Hypergraph, and ROOT/Geant4 integration on GPU. |
+| `/industry-4-predictive-maintenance` | RAPIDS, NVIDIA Omniverse, XGBoost, anomaly detection, and digital twins for manufacturing. |
+| `/lab-robotics-digital-twins` | MATTERIX, LucidGrasp, 6D pose, sim-to-real, and digital twins for autonomous science labs. |
+| `/proteomics-metabolomics-ml` | Mass spectrometry, peptide identification, DelPi, DIA-BERT, GiCOPS, ANN-SoLo, and metabolite annotation on GPU. |
+| `/renewable-energy-forecasting` | Spatio-temporal diffusion, FNO, attention, and RL for solar/wind forecasting and energy dispatch. |
+| `/social-simulation-ml` | AgentTorch, LLM-based agents, differentiable ABM, and causal discovery for social and economic systems. |
+| `/spatial-transcriptomics-gpu` | Cell segmentation, transcript assignment, BIDCell, segger, PanoSpace, and foundation models for spatial omics. |
+| `/sports-biomechanics-ml` | Wearable sensors, ST-GNNs, federated learning, and multimodal fusion for athlete performance and injury risk. |
 
 ## Usage
 
