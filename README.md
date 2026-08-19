@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 224 | 210 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 237 | 220 commands (`/name`) |
+| **Devin** (`.devin/`) | 236 | 222 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 249 | 232 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (224)
+## Skills (236)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (87)
+### Custom Research Skills (99)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -347,8 +347,20 @@ Domain-specific skills for Gyanateet's research workflow.
 | `signal-image-processing-gpu` | FFT, wavelets, filtering, compressed sensing, and tomography with cuFFT, RAPIDS, and GPU pipelines. |
 | `transformers-for-science` | Transformers for protein, genomics, weather, chemistry, math, and symbolic regression; ESM, AlphaFold, Prithvi, DNABERT, AI-Descartes. |
 | `uncertainty-quantification-science` | Conformal prediction, evidential learning, Bayesian neural nets, ensembles, Fortuna, and UQ for PDE surrogates. |
+| `cicd-ml-pipelines` | GitHub Actions, GitLab CI, pre-commit, artifact registries, and model promotion gates for ML pipelines. |
+| `containers-reproducibility` | Docker, Apptainer/Singularity, Podman, conda-lock, Nix, and reproducible scientific environments. |
+| `data-engineering-science` | ETL pipelines, feature stores, vector databases, RAG, and embeddings for scientific data. |
+| `distributed-storage-hpc` | Lustre, BeeGFS, GPFS, WekaFS, Ceph, Zarr, and TensorStore for high-throughput scientific data. |
+| `fault-tolerance-checkpointing` | PyTorch DCP, DeepSpeed elastic training, asynchronous checkpointing, and multi-tier checkpoint storage. |
+| `gpu-cluster-management` | SLURM, PBS, LSF, cloud bursting, hybrid clusters, and AWS ParallelCluster for GPU HPC. |
+| `kubernetes-gpu-orchestration` | NVIDIA GPU Operator, MIG, MPS, Kueue, Volcano, gang scheduling, and DRA for ML workloads on Kubernetes. |
+| `ml-security-supply-chain` | Model signing, AIBOM/ML-BOM, container scanning, malicious pickle detection, and provenance for ML artifacts. |
+| `model-serving-gpu` | Triton Inference Server, TensorRT-LLM, vLLM, TorchServe, FastAPI, and BentoML for production inference. |
+| `monitoring-observability-ml` | Prometheus, Grafana, Weights & Biases, MLflow, Evidently, and drift detection for production ML. |
+| `networking-distributed-training` | InfiniBand, RoCE, NCCL tuning, AWS EFA, and diagnosing multi-node network issues. |
+| `ray-ml-distributed` | Ray Train, Ray Tune, Ray Serve, Ray Data, and Ray clusters for scaling training, tuning, serving, and data processing. |
 
-## Workflows (210)
+## Workflows (222)
 
 ### Research Workflows (15)
 
@@ -413,7 +425,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (87)
+### Custom Research Workflows (99)
 
 | Workflow | Description |
 |----------|-------------|
@@ -504,6 +516,18 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/signal-image-processing-gpu` | FFT, wavelets, filtering, compressed sensing, and tomography with cuFFT, RAPIDS, and GPU pipelines. |
 | `/transformers-for-science` | Transformers for protein, genomics, weather, chemistry, math, and symbolic regression; ESM, AlphaFold, Prithvi, DNABERT, AI-Descartes. |
 | `/uncertainty-quantification-science` | Conformal prediction, evidential learning, Bayesian neural nets, ensembles, Fortuna, and UQ for PDE surrogates. |
+| `/cicd-ml-pipelines` | GitHub Actions, GitLab CI, pre-commit, artifact registries, and model promotion gates for ML pipelines. |
+| `/containers-reproducibility` | Docker, Apptainer/Singularity, Podman, conda-lock, Nix, and reproducible scientific environments. |
+| `/data-engineering-science` | ETL pipelines, feature stores, vector databases, RAG, and embeddings for scientific data. |
+| `/distributed-storage-hpc` | Lustre, BeeGFS, GPFS, WekaFS, Ceph, Zarr, and TensorStore for high-throughput scientific data. |
+| `/fault-tolerance-checkpointing` | PyTorch DCP, DeepSpeed elastic training, asynchronous checkpointing, and multi-tier checkpoint storage. |
+| `/gpu-cluster-management` | SLURM, PBS, LSF, cloud bursting, hybrid clusters, and AWS ParallelCluster for GPU HPC. |
+| `/kubernetes-gpu-orchestration` | NVIDIA GPU Operator, MIG, MPS, Kueue, Volcano, gang scheduling, and DRA for ML workloads on Kubernetes. |
+| `/ml-security-supply-chain` | Model signing, AIBOM/ML-BOM, container scanning, malicious pickle detection, and provenance for ML artifacts. |
+| `/model-serving-gpu` | Triton Inference Server, TensorRT-LLM, vLLM, TorchServe, FastAPI, and BentoML for production inference. |
+| `/monitoring-observability-ml` | Prometheus, Grafana, Weights & Biases, MLflow, Evidently, and drift detection for production ML. |
+| `/networking-distributed-training` | InfiniBand, RoCE, NCCL tuning, AWS EFA, and diagnosing multi-node network issues. |
+| `/ray-ml-distributed` | Ray Train, Ray Tune, Ray Serve, Ray Data, and Ray clusters for scaling training, tuning, serving, and data processing. |
 
 ## Usage
 
