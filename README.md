@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 192 | 178 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 205 | 188 commands (`/name`) |
+| **Devin** (`.devin/`) | 206 | 192 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 219 | 202 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (192)
+## Skills (206)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (55)
+### Custom Research Skills (69)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -315,8 +315,22 @@ Domain-specific skills for Gyanateet's research workflow.
 | `scientific-data-formats` | Zarr, TensorStore, WebDataset, HDF5/NetCDF, KvikIO, and direct-to-GPU I/O pipelines. |
 | `torch-compile-inductor` | PyTorch 2.7+ `torch.compile`, Inductor autotune, custom operators, CuTeDSL/Gluon backends, and debug. |
 | `triton-cross-arch` | Writing and deploying Triton kernels across sm_80, sm_89, sm_90, sm_100, sm_120, and sm_121. |
+| `ampere-a100-scientific` | A100 architecture, TF32, structured sparsity, MIG, FP64, and cuBLAS/cuDNN paths for scientific workloads. |
+| `bioinformatics-genomics-ml` | DNABERT, Enformer, single-cell analysis with scVI/scGPT, and RAPIDS cuDF for genomics pipelines. |
+| `cuda-tile-advanced-gb10` | cuTile Python/C++ advanced features: block-scaled `ct.mma_scaled`, Tile IR, persistent kernels, and Nsight Tile profiling. |
+| `cutlass-persistent-kernels` | CUTLASS 3.x persistent kernels, cooperative vs ping-pong schedule, warp specialization, and CollectiveBuilder for FP8/FP4. |
+| `dgx-spark-multinode-roce` | Connect 2-3 DGX Sparks over QSFP RoCE, NCCL configuration, Docker host networking, and no GPUDirect RDMA. |
+| `dgx-spark-uma-tuning` | Tuning DGX Spark's 128 GB unified LPDDR5X memory, page cache competition, thermal throttling, EC firmware, and CPU compilation flags. |
+| `flashattention-4-sm121` | FlashAttention-4 consumer Blackwell support on sm_120/sm_121: paged KV, head_dim limits, FP8, and the CuTe DSL dispatch path. |
+| `geospatial-remote-sensing-ml` | Prithvi, SatMAE, TorchGeo, TerraTorch, segment-anything for Earth observation, and NVIDIA cuOpt. |
+| `llm-inference-gb10` | vLLM and TensorRT-LLM inference on GB10: FP8 KV, Marlin, MTP, MoE backend selection, and driver 580.x. |
+| `mixed-precision-training-gpu` | BF16, FP16, FP8, TF32, FP32 master weights, loss scaling, and when to use each on Ampere/Hopper/Blackwell. |
+| `molecular-dynamics-gpu` | MACE, CHGNet, DeePMD-kit, LAMMPS/GROMACS integration, and multi-GPU spatial decomposition for ML potentials. |
+| `nsight-profiling-gpu` | Nsight Compute sections/metrics, Nsight Systems gap analysis, hardware CUDA trace, and Tile profiling for cuTile. |
+| `pytorch-blackwell-deployment` | PyTorch nightly wheels, sm_100/sm_120 support, architecture detection, and common Blackwell-specific errors. |
+| `quantization-backends-gpu` | AWQ, GPTQ, AutoRound, Marlin, FP8, NVFP4, MXFP4, and backend selection for A100/H100/L40S/RTX50/GB10. |
 
-## Workflows (178)
+## Workflows (192)
 
 ### Research Workflows (15)
 
@@ -381,7 +395,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (55)
+### Custom Research Workflows (69)
 
 | Workflow | Description |
 |----------|-------------|
@@ -440,6 +454,20 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/scientific-data-formats` | Zarr, TensorStore, WebDataset, HDF5/NetCDF, KvikIO, and direct-to-GPU I/O pipelines. |
 | `/torch-compile-inductor` | PyTorch 2.7+ `torch.compile`, Inductor autotune, custom operators, CuTeDSL/Gluon backends, and debug. |
 | `/triton-cross-arch` | Writing and deploying Triton kernels across sm_80, sm_89, sm_90, sm_100, sm_120, and sm_121. |
+| `/ampere-a100-scientific` | A100 architecture, TF32, structured sparsity, MIG, FP64, and cuBLAS/cuDNN paths for scientific workloads. |
+| `/bioinformatics-genomics-ml` | DNABERT, Enformer, single-cell analysis with scVI/scGPT, and RAPIDS cuDF for genomics pipelines. |
+| `/cuda-tile-advanced-gb10` | cuTile Python/C++ advanced features: block-scaled `ct.mma_scaled`, Tile IR, persistent kernels, and Nsight Tile profiling. |
+| `/cutlass-persistent-kernels` | CUTLASS 3.x persistent kernels, cooperative vs ping-pong schedule, warp specialization, and CollectiveBuilder for FP8/FP4. |
+| `/dgx-spark-multinode-roce` | Connect 2-3 DGX Sparks over QSFP RoCE, NCCL configuration, Docker host networking, and no GPUDirect RDMA. |
+| `/dgx-spark-uma-tuning` | Tuning DGX Spark's 128 GB unified LPDDR5X memory, page cache competition, thermal throttling, EC firmware, and CPU compilation flags. |
+| `/flashattention-4-sm121` | FlashAttention-4 consumer Blackwell support on sm_120/sm_121: paged KV, head_dim limits, FP8, and the CuTe DSL dispatch path. |
+| `/geospatial-remote-sensing-ml` | Prithvi, SatMAE, TorchGeo, TerraTorch, segment-anything for Earth observation, and NVIDIA cuOpt. |
+| `/llm-inference-gb10` | vLLM and TensorRT-LLM inference on GB10: FP8 KV, Marlin, MTP, MoE backend selection, and driver 580.x. |
+| `/mixed-precision-training-gpu` | BF16, FP16, FP8, TF32, FP32 master weights, loss scaling, and when to use each on Ampere/Hopper/Blackwell. |
+| `/molecular-dynamics-gpu` | MACE, CHGNet, DeePMD-kit, LAMMPS/GROMACS integration, and multi-GPU spatial decomposition for ML potentials. |
+| `/nsight-profiling-gpu` | Nsight Compute sections/metrics, Nsight Systems gap analysis, hardware CUDA trace, and Tile profiling for cuTile. |
+| `/pytorch-blackwell-deployment` | PyTorch nightly wheels, sm_100/sm_120 support, architecture detection, and common Blackwell-specific errors. |
+| `/quantization-backends-gpu` | AWQ, GPTQ, AutoRound, Marlin, FP8, NVFP4, MXFP4, and backend selection for A100/H100/L40S/RTX50/GB10. |
 
 ## Usage
 

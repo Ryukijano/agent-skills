@@ -8,17 +8,21 @@ Each skill gets the standard 4-file treatment:
   .cursor/commands/<name>.md
 
 Usage:
-    python3 gen_expanded_research_skills.py [path-to-agent-skills-repo]
+    python3 gen_expanded_research_skills.py [path-to-agent-skills-repo] [data-file.py]
 """
 
 import os
 import sys
 from pathlib import Path
 
-# Data file sits next to this script
-_DATA_FILE = Path(__file__).with_suffix(".data.py")
-
 DEFAULT_BASE = "/home/aimsgroupuol/AIMSgeneral/Gyanateet/mpc_vla_diffusion_study/agent-skills"
+
+
+def _get_data_file(argv: list) -> Path:
+    if len(argv) > 2:
+        return Path(argv[2])
+    script = Path(__file__).resolve()
+    return script.with_suffix(".data.py")
 
 
 def _make_workflow_body(skill: dict) -> str:
@@ -74,13 +78,14 @@ def _make_devin_skill(skill: dict) -> str:
 
 
 def main() -> None:
-    if not _DATA_FILE.exists():
-        print(f"Data file not found: {_DATA_FILE}", file=sys.stderr)
+    data_file = _get_data_file(sys.argv)
+    if not data_file.exists():
+        print(f"Data file not found: {data_file}", file=sys.stderr)
         sys.exit(1)
 
-    spec = {"__file__": str(_DATA_FILE)}
-    with open(_DATA_FILE, "r", encoding="utf-8") as f:
-        exec(compile(f.read(), str(_DATA_FILE), "exec"), spec, spec)
+    spec = {"__file__": str(data_file)}
+    with open(data_file, "r", encoding="utf-8") as f:
+        exec(compile(f.read(), str(data_file), "exec"), spec, spec)
 
     SKILLS = spec.get("SKILLS")
     if not isinstance(SKILLS, list) or not SKILLS:
