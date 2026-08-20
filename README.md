@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 596 | 582 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 609 | 592 commands (`/name`) |
+| **Devin** (`.devin/`) | 632 | 618 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 645 | 628 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (596)
+## Skills (632)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (459)
+### Custom Research Skills (495)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -719,8 +719,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-oral-history` | Speech recognition, diarization, natural language processing, and generative AI for transcribing, indexing, and exploring oral history archives. |
 | `ai-for-preservation` | Predictive monitoring, environmental risk assessment, digital twins, and preventive conservation for built heritage and cultural collections. |
 | `ai-for-restoration` | Digital inpainting, virtual restoration, style-aware reconstruction, and diffusion models for repairing artworks, murals, and manuscripts. |
+| `ai-for-algorithms` | Learning-augmented algorithms, learned data structures, and ML-guided design for search, routing, scheduling, and data-intensive pipelines. |
+| `ai-for-approximation-algorithms` | Learning-augmented approximation, learned heuristics for NP-hard maximization and CSPs, and data-driven rounding. |
+| `ai-for-automated-reasoning` | Learning to guide proof search, premise selection, tactic prediction, and combining LLMs with symbolic reasoners. |
+| `ai-for-computational-complexity` | Using machine learning to predict, characterize, and understand the complexity of computational problems, reductions, and hardness proxies. |
+| `ai-for-constraint-programming` | ML for constraint learning, search heuristics, model acquisition, and combining CP solvers with neural predictors. |
+| `ai-for-discrete-optimization` | Learning-augmented branch-and-bound, primal heuristics, GNNs for combinatorial optimization, and data-driven algorithm configuration. |
+| `ai-for-formal-methods` | Neuro-symbolic verification, LLM-assisted autoformalization, and learned heuristics for theorem provers and model checkers. |
+| `ai-for-logic` | Neuro-symbolic reasoning, learning logical rules and constraints, probabilistic logics, and SAT/SMT/ASP guided by ML. |
+| `ai-for-program-synthesis` | Neural and symbolic program synthesis from examples, sketches, and natural language, including neurosymbolic and LLM-based code generation. |
+| `ai-for-satisfiability` | ML-enhanced SAT/SMT/QSAT solvers, end-to-end neural solvers like NeuroSAT, and learned branching and restart heuristics. |
+| `ai-for-software-verification` | ML for test generation, coverage closure, bug localization, static analysis, and verifying code produced by LLMs. |
+| `ai-for-type-theory` | ML-guided tactic prediction, premise selection, and synthesis in dependent type theories and proof assistants. |
+| `ai-for-advanced-packaging` | Co-design of 2.5D/3D chiplets, interconnect routing, signal-integrity-aware placement, and package-thermal optimization. |
+| `ai-for-chip-design` | ML for RTL generation, EDA scripting, floorplanning, placement, routing, timing optimization, and analog/mixed-signal design. |
+| `ai-for-edge-accelerators` | NPU/TPU/FPGA edge accelerator design, benchmarking, mapping, and optimization for low-latency, energy-efficient inference. |
+| `ai-for-embedded-ai` | TinyML, on-device inference, quantization, neural architecture search, and co-optimization for microcontrollers and DSPs. |
+| `ai-for-hardware-security` | ML for side-channel analysis, hardware Trojan and PUF detection, supply-chain assurance, and secure accelerator design. |
+| `ai-for-integrated-photonics` | Inverse design, layout generation, and fabrication-aware optimization of silicon-photonic and photonic-integrated-circuit components. |
+| `ai-for-memristors` | Crossbar array modeling, compute-in-memory mapping, device variability learning, and memristor-based AI accelerator co-design. |
+| `ai-for-neuromorphic-hardware` | Spiking neural network training, SNN-to-chip mapping, event-based processing, and co-design with analog/mixed-signal neuromorphic platforms. |
+| `ai-for-photonic-hardware` | Photonic AI accelerators, optical neural networks, optoelectronic co-design, and programming of photonic tensor cores. |
+| `ai-for-quantum-hardware` | ML-driven qubit control, calibration, error decoding, and quantum processor design for superconducting, trapped-ion, and neutral-atom systems. |
+| `ai-for-spintronics` | ML for magnetic material discovery, skyrmion and MRAM device modeling, spin-orbit torque optimization, and spin-wave logic. |
+| `ai-for-thermal-design` | ML surrogates for electronics cooling, data-center thermal control, heat-sink and package thermal co-design, and CFD emulation. |
+| `ai-for-allergy-immunology` | Machine learning for asthma phenotyping and exacerbation prediction, allergic rhinitis and food/drug allergy risk, anaphylaxis, and primary immunodeficiency screening. |
+| `ai-for-anesthesiology` | Machine learning for preoperative risk stratification, intraoperative hemodynamic monitoring, anesthetic depth, postoperative nausea and pain, and closed-loop anesthesia. |
+| `ai-for-endocrinology` | Machine learning for diabetes prediction and glucose forecasting, thyroid nodule risk stratification, adrenal and pituitary disorders, and bone mineral metabolism. |
+| `ai-for-hematology` | Machine learning for blood cell morphology, leukemia and lymphoma classification, thrombosis and bleeding risk, transfusion optimization, and stem-cell transplant outcomes. |
+| `ai-for-infectious-disease` | Machine learning for pathogen identification, antimicrobial resistance prediction, sepsis early warning, and infectious disease outbreak surveillance. |
+| `ai-for-nephrology` | Machine learning for chronic kidney disease progression, acute kidney injury prediction, dialysis adequacy, kidney transplant outcomes, and renal pathology image analysis. |
+| `ai-for-orthopedics` | Machine learning for fracture detection and classification, osteoarthritis grading, joint replacement outcomes, spine analysis, and sports injury risk. |
+| `ai-for-pain-management` | Machine learning for chronic pain phenotyping, opioid and analgesic response prediction, procedural guidance, and patient self-management and monitoring. |
+| `ai-for-physical-medicine` | Machine learning for electrodiagnostic studies, musculoskeletal ultrasound, gait and motion analysis, prosthetics/orthotics, and functional assessment in physiatry. |
+| `ai-for-plastic-surgery` | Machine learning for aesthetic and reconstructive surgical planning, facial analysis, flap monitoring, wound assessment, and patient-reported outcomes. |
+| `ai-for-rehabilitation` | Machine learning for stroke, spinal cord, and traumatic brain injury rehabilitation, robotic and virtual-reality therapy, telerehabilitation, and wearable sensor monitoring. |
+| `ai-for-rheumatology` | Machine learning for autoimmune disease diagnosis and phenotyping, flare prediction, treatment response in RA and SLE, and imaging-based joint inflammation scoring. |
 
-## Workflows (582)
+## Workflows (618)
 
 ### Research Workflows (15)
 
@@ -785,7 +821,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (459)
+### Custom Research Workflows (495)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1248,6 +1284,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-oral-history` | Speech recognition, diarization, natural language processing, and generative AI for transcribing, indexing, and exploring oral history archives. |
 | `/ai-for-preservation` | Predictive monitoring, environmental risk assessment, digital twins, and preventive conservation for built heritage and cultural collections. |
 | `/ai-for-restoration` | Digital inpainting, virtual restoration, style-aware reconstruction, and diffusion models for repairing artworks, murals, and manuscripts. |
+| `/ai-for-algorithms` | Learning-augmented algorithms, learned data structures, and ML-guided design for search, routing, scheduling, and data-intensive pipelines. |
+| `/ai-for-approximation-algorithms` | Learning-augmented approximation, learned heuristics for NP-hard maximization and CSPs, and data-driven rounding. |
+| `/ai-for-automated-reasoning` | Learning to guide proof search, premise selection, tactic prediction, and combining LLMs with symbolic reasoners. |
+| `/ai-for-computational-complexity` | Using machine learning to predict, characterize, and understand the complexity of computational problems, reductions, and hardness proxies. |
+| `/ai-for-constraint-programming` | ML for constraint learning, search heuristics, model acquisition, and combining CP solvers with neural predictors. |
+| `/ai-for-discrete-optimization` | Learning-augmented branch-and-bound, primal heuristics, GNNs for combinatorial optimization, and data-driven algorithm configuration. |
+| `/ai-for-formal-methods` | Neuro-symbolic verification, LLM-assisted autoformalization, and learned heuristics for theorem provers and model checkers. |
+| `/ai-for-logic` | Neuro-symbolic reasoning, learning logical rules and constraints, probabilistic logics, and SAT/SMT/ASP guided by ML. |
+| `/ai-for-program-synthesis` | Neural and symbolic program synthesis from examples, sketches, and natural language, including neurosymbolic and LLM-based code generation. |
+| `/ai-for-satisfiability` | ML-enhanced SAT/SMT/QSAT solvers, end-to-end neural solvers like NeuroSAT, and learned branching and restart heuristics. |
+| `/ai-for-software-verification` | ML for test generation, coverage closure, bug localization, static analysis, and verifying code produced by LLMs. |
+| `/ai-for-type-theory` | ML-guided tactic prediction, premise selection, and synthesis in dependent type theories and proof assistants. |
+| `/ai-for-advanced-packaging` | Co-design of 2.5D/3D chiplets, interconnect routing, signal-integrity-aware placement, and package-thermal optimization. |
+| `/ai-for-chip-design` | ML for RTL generation, EDA scripting, floorplanning, placement, routing, timing optimization, and analog/mixed-signal design. |
+| `/ai-for-edge-accelerators` | NPU/TPU/FPGA edge accelerator design, benchmarking, mapping, and optimization for low-latency, energy-efficient inference. |
+| `/ai-for-embedded-ai` | TinyML, on-device inference, quantization, neural architecture search, and co-optimization for microcontrollers and DSPs. |
+| `/ai-for-hardware-security` | ML for side-channel analysis, hardware Trojan and PUF detection, supply-chain assurance, and secure accelerator design. |
+| `/ai-for-integrated-photonics` | Inverse design, layout generation, and fabrication-aware optimization of silicon-photonic and photonic-integrated-circuit components. |
+| `/ai-for-memristors` | Crossbar array modeling, compute-in-memory mapping, device variability learning, and memristor-based AI accelerator co-design. |
+| `/ai-for-neuromorphic-hardware` | Spiking neural network training, SNN-to-chip mapping, event-based processing, and co-design with analog/mixed-signal neuromorphic platforms. |
+| `/ai-for-photonic-hardware` | Photonic AI accelerators, optical neural networks, optoelectronic co-design, and programming of photonic tensor cores. |
+| `/ai-for-quantum-hardware` | ML-driven qubit control, calibration, error decoding, and quantum processor design for superconducting, trapped-ion, and neutral-atom systems. |
+| `/ai-for-spintronics` | ML for magnetic material discovery, skyrmion and MRAM device modeling, spin-orbit torque optimization, and spin-wave logic. |
+| `/ai-for-thermal-design` | ML surrogates for electronics cooling, data-center thermal control, heat-sink and package thermal co-design, and CFD emulation. |
+| `/ai-for-allergy-immunology` | Machine learning for asthma phenotyping and exacerbation prediction, allergic rhinitis and food/drug allergy risk, anaphylaxis, and primary immunodeficiency screening. |
+| `/ai-for-anesthesiology` | Machine learning for preoperative risk stratification, intraoperative hemodynamic monitoring, anesthetic depth, postoperative nausea and pain, and closed-loop anesthesia. |
+| `/ai-for-endocrinology` | Machine learning for diabetes prediction and glucose forecasting, thyroid nodule risk stratification, adrenal and pituitary disorders, and bone mineral metabolism. |
+| `/ai-for-hematology` | Machine learning for blood cell morphology, leukemia and lymphoma classification, thrombosis and bleeding risk, transfusion optimization, and stem-cell transplant outcomes. |
+| `/ai-for-infectious-disease` | Machine learning for pathogen identification, antimicrobial resistance prediction, sepsis early warning, and infectious disease outbreak surveillance. |
+| `/ai-for-nephrology` | Machine learning for chronic kidney disease progression, acute kidney injury prediction, dialysis adequacy, kidney transplant outcomes, and renal pathology image analysis. |
+| `/ai-for-orthopedics` | Machine learning for fracture detection and classification, osteoarthritis grading, joint replacement outcomes, spine analysis, and sports injury risk. |
+| `/ai-for-pain-management` | Machine learning for chronic pain phenotyping, opioid and analgesic response prediction, procedural guidance, and patient self-management and monitoring. |
+| `/ai-for-physical-medicine` | Machine learning for electrodiagnostic studies, musculoskeletal ultrasound, gait and motion analysis, prosthetics/orthotics, and functional assessment in physiatry. |
+| `/ai-for-plastic-surgery` | Machine learning for aesthetic and reconstructive surgical planning, facial analysis, flap monitoring, wound assessment, and patient-reported outcomes. |
+| `/ai-for-rehabilitation` | Machine learning for stroke, spinal cord, and traumatic brain injury rehabilitation, robotic and virtual-reality therapy, telerehabilitation, and wearable sensor monitoring. |
+| `/ai-for-rheumatology` | Machine learning for autoimmune disease diagnosis and phenotyping, flare prediction, treatment response in RA and SLE, and imaging-based joint inflammation scoring. |
 
 ## Usage
 
