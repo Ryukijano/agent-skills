@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 704 | 690 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 717 | 700 commands (`/name`) |
+| **Devin** (`.devin/`) | 740 | 726 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 753 | 736 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (704)
+## Skills (740)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (567)
+### Custom Research Skills (603)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -827,8 +827,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-real-world-evidence` | Machine learning for extracting, validating, and synthesizing real-world evidence from EHRs, claims, registries, and wearables for regulatory and clinical decisions. |
 | `ai-for-registry-studies` | Machine learning for patient registries, disease surveillance, regulatory-grade real-world evidence, and longitudinal outcome tracking. |
 | `ai-for-synthetic-controls` | Machine learning for constructing, validating, and extending synthetic and virtual control arms from observational data to augment clinical and policy evaluation. |
+| `ai-for-data-curation` | Automated selection, cleaning, labeling, augmentation, and documentation of datasets to produce high-quality, FAIR, and reusable ML data assets. |
+| `ai-for-data-discovery` | Intelligent dataset search, metadata enrichment, schema inference, and conversational data catalog exploration to find the right data quickly. |
+| `ai-for-data-ethics` | Fairness, accountability, transparency, data dignity, consent, and responsible data use in ML pipelines and AI systems. |
+| `ai-for-data-governance` | Automated policy enforcement, metadata management, data lineage, stewardship, and AI-driven regulatory compliance for enterprise data governance. |
+| `ai-for-data-marketplaces` | AI for data and model discovery, pricing, valuation, matching, trust, and governance in data-sharing marketplaces and AI model markets. |
+| `ai-for-data-monetization` | Data valuation, pricing, data products, marketplaces, and revenue allocation for turning data assets into measurable business value. |
+| `ai-for-data-observability` | ML-driven monitoring of data freshness, schema drift, volume anomalies, lineage breaks, and pipeline health to ensure reliable data operations. |
+| `ai-for-data-privacy` | Differential privacy, federated learning, homomorphic encryption, PETs, and privacy-preserving ML for sensitive data. |
+| `ai-for-data-provenance` | Lineage tracking, W3C PROV, reproducible ML pipelines, experiment tracking, and provenance for explainable and trustworthy AI. |
+| `ai-for-data-quality` | Automated profiling, anomaly detection, data cleaning, imputation, validation, and continuous data quality monitoring for ML and analytics. |
+| `ai-for-data-security` | Adversarial robustness, data poisoning detection, access control, threat detection, and AI-driven security for ML training and inference data. |
+| `ai-for-data-sharing` | Federated learning, data sharing incentives, interoperability, trust, and privacy-preserving collaboration for shared data ecosystems. |
+| `ai-for-5g` | AI/ML for 5G RAN optimization, network slicing, beam management, mobility, and core automation. |
+| `ai-for-6g` | AI-native 6G architectures, semantic communications, integrated sensing and communication, reconfigurable intelligent surfaces, and distributed learning. |
+| `ai-for-edge-computing` | Model compression, inference offloading, task placement, federated learning, and MLOps at the network edge. |
+| `ai-for-fog-computing` | AI for hierarchical fog resource management, task scheduling, load balancing, latency optimization, and IoT-fog-cloud orchestration. |
+| `ai-for-iot` | TinyML, edge AI, anomaly detection, device fingerprinting, and predictive maintenance for IoT systems. |
+| `ai-for-network-management` | AIOps for network monitoring, anomaly detection, root-cause analysis, configuration management, and predictive maintenance. |
+| `ai-for-network-optimization` | Graph neural networks, deep reinforcement learning, traffic engineering, resource allocation, and learning-augmented optimization for routing, load balancing, and network design. |
+| `ai-for-network-security` | Intrusion detection, malware classification, anomaly detection, adversarial defenses, and threat intelligence using ML and LLMs. |
+| `ai-for-optical-networks` | ML for optical performance monitoring, QoT estimation, traffic prediction, nonlinearity compensation, and optical layer provisioning. |
+| `ai-for-satellite-communications` | ML for satellite link prediction, beam hopping, resource allocation, non-terrestrial networks, and onboard edge AI. |
+| `ai-for-software-defined-networks` | ML-driven traffic classification, routing, QoS/QoE prediction, resource management, and security in SDN control and data planes. |
+| `ai-for-wireless-communications` | ML for channel estimation, modulation recognition, MIMO, spectrum sensing, and end-to-end physical-layer design. |
+| `ai-for-agricultural-economics` | Machine learning and econometric ML for farm decision support, risk, policy, market analysis, adoption, and the economics of digital agriculture. |
+| `ai-for-agricultural-robots` | Perception, motion planning, and control for autonomous robots that weed, spray, scout, and harvest in field and greenhouse environments. |
+| `ai-for-aquaculture` | Machine learning for water quality, feeding, disease, and stock management in fish, shrimp, and shellfish farming. |
+| `ai-for-crop-protection` | Machine and deep learning for detecting crop diseases, pests, weeds, and abiotic stresses and for supporting timely, targeted protection decisions. |
+| `ai-for-dairy` | Machine learning for health, fertility, behaviour, and production monitoring in dairy cattle and dairy farm decision support. |
+| `ai-for-irrigation` | Machine learning for predicting crop water demand, scheduling irrigation, and optimising water use through IoT and weather data integration. |
+| `ai-for-livestock` | Machine learning for health, behaviour, welfare, grazing, and reproduction across cattle, pigs, sheep, goats, and other farm animals. |
+| `ai-for-pest-management` | Machine and deep learning for pest detection, identification, population monitoring, and integrated pest management decision support. |
+| `ai-for-plant-breeding` | Genomic selection, phenotype prediction, multi-environment trial analysis, and marker-assisted breeding with machine and deep learning. |
+| `ai-for-poultry` | AI for flock health, welfare, behaviour, environmental control, and productivity in broiler, layer, and turkey production. |
+| `ai-for-soil-health` | Machine learning for predicting soil carbon, nutrients, biology, compaction, erosion risk, and overall soil health from sensors and remote sensing. |
+| `ai-for-viticulture` | AI for vineyard monitoring, grape and canopy sensing, disease detection, yield and quality prediction, and harvest decision support. |
 
-## Workflows (690)
+## Workflows (726)
 
 ### Research Workflows (15)
 
@@ -893,7 +929,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (567)
+### Custom Research Workflows (603)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1464,6 +1500,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-real-world-evidence` | Machine learning for extracting, validating, and synthesizing real-world evidence from EHRs, claims, registries, and wearables for regulatory and clinical decisions. |
 | `/ai-for-registry-studies` | Machine learning for patient registries, disease surveillance, regulatory-grade real-world evidence, and longitudinal outcome tracking. |
 | `/ai-for-synthetic-controls` | Machine learning for constructing, validating, and extending synthetic and virtual control arms from observational data to augment clinical and policy evaluation. |
+| `/ai-for-data-curation` | Automated selection, cleaning, labeling, augmentation, and documentation of datasets to produce high-quality, FAIR, and reusable ML data assets. |
+| `/ai-for-data-discovery` | Intelligent dataset search, metadata enrichment, schema inference, and conversational data catalog exploration to find the right data quickly. |
+| `/ai-for-data-ethics` | Fairness, accountability, transparency, data dignity, consent, and responsible data use in ML pipelines and AI systems. |
+| `/ai-for-data-governance` | Automated policy enforcement, metadata management, data lineage, stewardship, and AI-driven regulatory compliance for enterprise data governance. |
+| `/ai-for-data-marketplaces` | AI for data and model discovery, pricing, valuation, matching, trust, and governance in data-sharing marketplaces and AI model markets. |
+| `/ai-for-data-monetization` | Data valuation, pricing, data products, marketplaces, and revenue allocation for turning data assets into measurable business value. |
+| `/ai-for-data-observability` | ML-driven monitoring of data freshness, schema drift, volume anomalies, lineage breaks, and pipeline health to ensure reliable data operations. |
+| `/ai-for-data-privacy` | Differential privacy, federated learning, homomorphic encryption, PETs, and privacy-preserving ML for sensitive data. |
+| `/ai-for-data-provenance` | Lineage tracking, W3C PROV, reproducible ML pipelines, experiment tracking, and provenance for explainable and trustworthy AI. |
+| `/ai-for-data-quality` | Automated profiling, anomaly detection, data cleaning, imputation, validation, and continuous data quality monitoring for ML and analytics. |
+| `/ai-for-data-security` | Adversarial robustness, data poisoning detection, access control, threat detection, and AI-driven security for ML training and inference data. |
+| `/ai-for-data-sharing` | Federated learning, data sharing incentives, interoperability, trust, and privacy-preserving collaboration for shared data ecosystems. |
+| `/ai-for-5g` | AI/ML for 5G RAN optimization, network slicing, beam management, mobility, and core automation. |
+| `/ai-for-6g` | AI-native 6G architectures, semantic communications, integrated sensing and communication, reconfigurable intelligent surfaces, and distributed learning. |
+| `/ai-for-edge-computing` | Model compression, inference offloading, task placement, federated learning, and MLOps at the network edge. |
+| `/ai-for-fog-computing` | AI for hierarchical fog resource management, task scheduling, load balancing, latency optimization, and IoT-fog-cloud orchestration. |
+| `/ai-for-iot` | TinyML, edge AI, anomaly detection, device fingerprinting, and predictive maintenance for IoT systems. |
+| `/ai-for-network-management` | AIOps for network monitoring, anomaly detection, root-cause analysis, configuration management, and predictive maintenance. |
+| `/ai-for-network-optimization` | Graph neural networks, deep reinforcement learning, traffic engineering, resource allocation, and learning-augmented optimization for routing, load balancing, and network design. |
+| `/ai-for-network-security` | Intrusion detection, malware classification, anomaly detection, adversarial defenses, and threat intelligence using ML and LLMs. |
+| `/ai-for-optical-networks` | ML for optical performance monitoring, QoT estimation, traffic prediction, nonlinearity compensation, and optical layer provisioning. |
+| `/ai-for-satellite-communications` | ML for satellite link prediction, beam hopping, resource allocation, non-terrestrial networks, and onboard edge AI. |
+| `/ai-for-software-defined-networks` | ML-driven traffic classification, routing, QoS/QoE prediction, resource management, and security in SDN control and data planes. |
+| `/ai-for-wireless-communications` | ML for channel estimation, modulation recognition, MIMO, spectrum sensing, and end-to-end physical-layer design. |
+| `/ai-for-agricultural-economics` | Machine learning and econometric ML for farm decision support, risk, policy, market analysis, adoption, and the economics of digital agriculture. |
+| `/ai-for-agricultural-robots` | Perception, motion planning, and control for autonomous robots that weed, spray, scout, and harvest in field and greenhouse environments. |
+| `/ai-for-aquaculture` | Machine learning for water quality, feeding, disease, and stock management in fish, shrimp, and shellfish farming. |
+| `/ai-for-crop-protection` | Machine and deep learning for detecting crop diseases, pests, weeds, and abiotic stresses and for supporting timely, targeted protection decisions. |
+| `/ai-for-dairy` | Machine learning for health, fertility, behaviour, and production monitoring in dairy cattle and dairy farm decision support. |
+| `/ai-for-irrigation` | Machine learning for predicting crop water demand, scheduling irrigation, and optimising water use through IoT and weather data integration. |
+| `/ai-for-livestock` | Machine learning for health, behaviour, welfare, grazing, and reproduction across cattle, pigs, sheep, goats, and other farm animals. |
+| `/ai-for-pest-management` | Machine and deep learning for pest detection, identification, population monitoring, and integrated pest management decision support. |
+| `/ai-for-plant-breeding` | Genomic selection, phenotype prediction, multi-environment trial analysis, and marker-assisted breeding with machine and deep learning. |
+| `/ai-for-poultry` | AI for flock health, welfare, behaviour, environmental control, and productivity in broiler, layer, and turkey production. |
+| `/ai-for-soil-health` | Machine learning for predicting soil carbon, nutrients, biology, compaction, erosion risk, and overall soil health from sensors and remote sensing. |
+| `/ai-for-viticulture` | AI for vineyard monitoring, grape and canopy sensing, disease detection, yield and quality prediction, and harvest decision support. |
 
 ## Usage
 
