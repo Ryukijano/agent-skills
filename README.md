@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 416 | 402 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 429 | 412 commands (`/name`) |
+| **Devin** (`.devin/`) | 452 | 438 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 465 | 448 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (416)
+## Skills (452)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (279)
+### Custom Research Skills (315)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -539,8 +539,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-retail` | Demand forecasting, inventory placement, personalized recommendations, dynamic pricing, and omnichannel fulfillment for retail. |
 | `ai-for-sales` | Predictive lead scoring, sales forecasting, opportunity win probability, next-best action, and pipeline analytics. |
 | `ai-for-supply-chain-optimization` | Multi-echelon inventory, distribution network design, demand-supply synchronization, and resilient supply chain planning. |
+| `ai-for-cardiology` | ECG interpretation, arrhythmia detection, heart failure screening, echocardiography analysis, and cardiovascular risk stratification with deep learning. |
+| `ai-for-clinical-nlp` | Natural language processing for electronic health records, clinical entity extraction, term normalization, de-identification, and question answering. |
+| `ai-for-dermatology` | Skin lesion classification, dermoscopy analysis, melanoma detection, teledermatology, and fairness across skin tones with deep learning. |
+| `ai-for-digital-therapeutics` | Software-as-a-medical-device interventions for mental health, substance use, sleep, ADHD, and chronic disease delivered through apps and wearables. |
+| `ai-for-gastroenterology` | AI-assisted endoscopy, real-time polyp detection and characterization, colonoscopy quality, and colorectal cancer screening. |
+| `ai-for-medical-imaging` | General medical image preprocessing, segmentation, classification, and deployment with DICOM, MONAI, nnU-Net, and clinical AI pipelines. |
+| `ai-for-neurology` | Neuroimaging and EEG analysis for stroke, brain tumors, epilepsy, and neurodegeneration, including lesion segmentation and outcome prediction. |
+| `ai-for-oncology` | AI for cancer detection, subtyping, treatment response, prognosis, radiomics, pathology, and clinical trial matching. |
+| `ai-for-ophthalmology` | Diabetic retinopathy screening, OCT analysis, glaucoma detection, and AI for retinal disease diagnosis from fundus photography. |
+| `ai-for-pathology` | Computational pathology, whole-slide image analysis, cancer subtyping, biomarker discovery, and vision-language models for histopathology. |
+| `ai-for-pulmonology` | Chest X-ray and CT interpretation, COPD and asthma assessment, respiratory sound analysis, and pulmonary disease risk prediction. |
+| `ai-for-radiology` | Deep learning for X-ray, CT, MRI, and mammography interpretation, including lesion detection, segmentation, report generation, and radiology foundation models. |
+| `ai-for-architecture` | AI for generative spatial layouts, floorplan synthesis, style exploration, and text/sketch-driven conceptual design. |
+| `ai-for-building-design` | AI for energy, daylight, HVAC, envelope, and MEP performance optimization in the built environment. |
+| `ai-for-construction` | AI for construction site safety, progress monitoring, schedule and cost risk, robotics, and digital-twin-enabled project delivery. |
+| `ai-for-cosmetics` | AI for personalized skincare, formulation optimization, shade matching, safety/toxicity prediction, and consumer insight. |
+| `ai-for-fashion` | AI for trend forecasting, outfit recommendation, virtual try-on, generative design, and personalized shopping. |
+| `ai-for-food-and-beverage` | AI for food safety, quality control, recipe and product development, shelf-life prediction, and supply chain optimization. |
+| `ai-for-hospitality` | AI for guest personalization, revenue management, dynamic pricing, operations, and conversational service. |
+| `ai-for-media-and-entertainment` | AI for content recommendation, personalization, generative media, audience analytics, and rights/compliance workflows. |
+| `ai-for-mining` | AI for mineral exploration, ore grade estimation, predictive maintenance, autonomous haulage, and mine safety. |
+| `ai-for-oil-and-gas` | AI for seismic interpretation, reservoir characterization, production forecasting, and predictive maintenance in energy operations. |
+| `ai-for-sports` | AI for athlete tracking, match analytics, performance prediction, injury risk, and tactical decision support. |
+| `ai-for-textiles` | AI for fabric defect detection, pattern and color design, sorting, and textile supply chain optimization. |
+| `api-development` | REST, gRPC, and GraphQL API design, implementation, documentation, and versioning for ML services. |
+| `backend-engineering` | Server-side development, async task queues, databases, caching, and resilience patterns for ML products. |
+| `data-engineering-best-practices` | Data lifecycle management, data quality, observability, lineage, testing, version control, and infrastructure-as-code for robust data systems. |
+| `data-lakes` | Object storage, open table formats, lakehouse architecture, and batch/stream unification for ML and analytics. |
+| `data-pipelines-ml` | Orchestrating end-to-end ML workflows with task dependencies, artifact tracking, retries, and reproducibility. |
+| `data-warehousing` | Cloud data warehouses, dimensional modeling, indexing, partitioning, and workload optimization. |
+| `etl-and-elt` | Extract, transform, load patterns and the modern extract, load, transform paradigm with tooling and trade-offs. |
+| `event-driven-architecture` | Events, event brokers, event sourcing, CQRS, and event-driven microservices for scalable, decoupled systems. |
+| `frontend-engineering` | Building user interfaces for ML-powered applications with modern frameworks, state management, and data visualization. |
+| `full-stack-ml` | End-to-end ML applications spanning data, model, API, frontend, deployment, and monitoring. |
+| `microservices` | Small, independently deployable services, inter-service communication, containers, and service discovery. |
+| `streaming-data` | Real-time data ingestion and processing with stream processors, message brokers, and event-time semantics. |
 
-## Workflows (402)
+## Workflows (438)
 
 ### Research Workflows (15)
 
@@ -605,7 +641,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (279)
+### Custom Research Workflows (315)
 
 | Workflow | Description |
 |----------|-------------|
@@ -888,6 +924,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-retail` | Demand forecasting, inventory placement, personalized recommendations, dynamic pricing, and omnichannel fulfillment for retail. |
 | `/ai-for-sales` | Predictive lead scoring, sales forecasting, opportunity win probability, next-best action, and pipeline analytics. |
 | `/ai-for-supply-chain-optimization` | Multi-echelon inventory, distribution network design, demand-supply synchronization, and resilient supply chain planning. |
+| `/ai-for-cardiology` | ECG interpretation, arrhythmia detection, heart failure screening, echocardiography analysis, and cardiovascular risk stratification with deep learning. |
+| `/ai-for-clinical-nlp` | Natural language processing for electronic health records, clinical entity extraction, term normalization, de-identification, and question answering. |
+| `/ai-for-dermatology` | Skin lesion classification, dermoscopy analysis, melanoma detection, teledermatology, and fairness across skin tones with deep learning. |
+| `/ai-for-digital-therapeutics` | Software-as-a-medical-device interventions for mental health, substance use, sleep, ADHD, and chronic disease delivered through apps and wearables. |
+| `/ai-for-gastroenterology` | AI-assisted endoscopy, real-time polyp detection and characterization, colonoscopy quality, and colorectal cancer screening. |
+| `/ai-for-medical-imaging` | General medical image preprocessing, segmentation, classification, and deployment with DICOM, MONAI, nnU-Net, and clinical AI pipelines. |
+| `/ai-for-neurology` | Neuroimaging and EEG analysis for stroke, brain tumors, epilepsy, and neurodegeneration, including lesion segmentation and outcome prediction. |
+| `/ai-for-oncology` | AI for cancer detection, subtyping, treatment response, prognosis, radiomics, pathology, and clinical trial matching. |
+| `/ai-for-ophthalmology` | Diabetic retinopathy screening, OCT analysis, glaucoma detection, and AI for retinal disease diagnosis from fundus photography. |
+| `/ai-for-pathology` | Computational pathology, whole-slide image analysis, cancer subtyping, biomarker discovery, and vision-language models for histopathology. |
+| `/ai-for-pulmonology` | Chest X-ray and CT interpretation, COPD and asthma assessment, respiratory sound analysis, and pulmonary disease risk prediction. |
+| `/ai-for-radiology` | Deep learning for X-ray, CT, MRI, and mammography interpretation, including lesion detection, segmentation, report generation, and radiology foundation models. |
+| `/ai-for-architecture` | AI for generative spatial layouts, floorplan synthesis, style exploration, and text/sketch-driven conceptual design. |
+| `/ai-for-building-design` | AI for energy, daylight, HVAC, envelope, and MEP performance optimization in the built environment. |
+| `/ai-for-construction` | AI for construction site safety, progress monitoring, schedule and cost risk, robotics, and digital-twin-enabled project delivery. |
+| `/ai-for-cosmetics` | AI for personalized skincare, formulation optimization, shade matching, safety/toxicity prediction, and consumer insight. |
+| `/ai-for-fashion` | AI for trend forecasting, outfit recommendation, virtual try-on, generative design, and personalized shopping. |
+| `/ai-for-food-and-beverage` | AI for food safety, quality control, recipe and product development, shelf-life prediction, and supply chain optimization. |
+| `/ai-for-hospitality` | AI for guest personalization, revenue management, dynamic pricing, operations, and conversational service. |
+| `/ai-for-media-and-entertainment` | AI for content recommendation, personalization, generative media, audience analytics, and rights/compliance workflows. |
+| `/ai-for-mining` | AI for mineral exploration, ore grade estimation, predictive maintenance, autonomous haulage, and mine safety. |
+| `/ai-for-oil-and-gas` | AI for seismic interpretation, reservoir characterization, production forecasting, and predictive maintenance in energy operations. |
+| `/ai-for-sports` | AI for athlete tracking, match analytics, performance prediction, injury risk, and tactical decision support. |
+| `/ai-for-textiles` | AI for fabric defect detection, pattern and color design, sorting, and textile supply chain optimization. |
+| `/api-development` | REST, gRPC, and GraphQL API design, implementation, documentation, and versioning for ML services. |
+| `/backend-engineering` | Server-side development, async task queues, databases, caching, and resilience patterns for ML products. |
+| `/data-engineering-best-practices` | Data lifecycle management, data quality, observability, lineage, testing, version control, and infrastructure-as-code for robust data systems. |
+| `/data-lakes` | Object storage, open table formats, lakehouse architecture, and batch/stream unification for ML and analytics. |
+| `/data-pipelines-ml` | Orchestrating end-to-end ML workflows with task dependencies, artifact tracking, retries, and reproducibility. |
+| `/data-warehousing` | Cloud data warehouses, dimensional modeling, indexing, partitioning, and workload optimization. |
+| `/etl-and-elt` | Extract, transform, load patterns and the modern extract, load, transform paradigm with tooling and trade-offs. |
+| `/event-driven-architecture` | Events, event brokers, event sourcing, CQRS, and event-driven microservices for scalable, decoupled systems. |
+| `/frontend-engineering` | Building user interfaces for ML-powered applications with modern frameworks, state management, and data visualization. |
+| `/full-stack-ml` | End-to-end ML applications spanning data, model, API, frontend, deployment, and monitoring. |
+| `/microservices` | Small, independently deployable services, inter-service communication, containers, and service discovery. |
+| `/streaming-data` | Real-time data ingestion and processing with stream processors, message brokers, and event-time semantics. |
 
 ## Usage
 

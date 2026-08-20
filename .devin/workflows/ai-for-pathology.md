@@ -1,0 +1,18 @@
+# /ai-for-pathology
+
+Computational pathology, whole-slide image analysis, cancer subtyping, biomarker discovery, and vision-language models for histopathology.
+
+## Trigger
+
+When the user is working on or asking about `ai for pathology`.
+
+## Steps
+
+1. Load the `ai-for-pathology` skill for the full reference.
+2. Ask the user what architecture / framework / dataset they are using (Ampere, Hopper, Ada, Blackwell, GB10, JAX, CUDA-Q, etc.).
+3. Propose the smallest verification or code snippet they can run next.
+4. Point them at the references and any relevant `cuda-blackwell-labs` or `agent-skills` examples.
+
+## Output
+
+A focused, architecture-aware next action and a short code path to test it.
