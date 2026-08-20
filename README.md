@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 356 | 342 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 369 | 352 commands (`/name`) |
+| **Devin** (`.devin/`) | 380 | 366 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 393 | 376 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (356)
+## Skills (380)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (219)
+### Custom Research Skills (243)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -479,8 +479,32 @@ Domain-specific skills for Gyanateet's research workflow.
 | `photonic-computing` | Silicon photonics, optical processing units, and photonic interconnects for energy-efficient AI and HPC. |
 | `quantum-machine-learning` | Hybrid quantum-classical ML with variational quantum circuits, PennyLane, TensorFlow Quantum, and Qiskit. |
 | `wafer-scale-ai` | Cerebras Wafer Scale Engine, wafer-scale training and inference, and massive on-chip compute fabric. |
+| `contrastive-learning` | Instance discrimination, InfoNCE, SimCLR, MoCo, CLIP, and deep metric learning for vision, language, and retrieval. |
+| `curriculum-rl` | Task sequencing, automatic curriculum generation, and progressive difficulty for sample-efficient RL. |
+| `hierarchical-rl` | Options, feudal networks, and goal-conditioned hierarchies for long-horizon, sparse-reward tasks. |
+| `imitation-learning` | Behavioral cloning, DAgger, GAIL, and learning policies from expert demonstrations with or without a reward function. |
+| `inverse-rl` | Recover reward functions from expert demonstrations using MaxEnt IRL, apprenticeship learning, and adversarial IRL. |
+| `masked-autoencoders` | BERT-style masked prediction for vision, BEVT, data2vec, and generative masked image and language modeling. |
+| `model-based-rl` | Learn environment dynamics for sample-efficient planning and policy optimization with PETS, MBPO, PlaNet, and MuZero. |
+| `multi-task-learning` | Shared representations, hard and soft parameter sharing, MTL architectures (MMoE, PLE, MTAN), and gradient balancing. |
+| `offline-rl` | Learn from static logged datasets with CQL, IQL, TD3+BC, D4RL, and conservative/batch RL methods. |
+| `safe-rl` | Constrained Markov Decision Processes, CPO, P3O, Lagrangian methods, and safety-gym benchmarks for constrained RL. |
+| `self-supervised-learning` | Pretext tasks, contrastive and non-contrastive SSL, masked prediction, and unsupervised representation learning for vision, language, and graphs. |
+| `world-models` | Latent dynamics models, recurrent state-space models, Dreamer, PlaNet, and agents that plan in imagination. |
+| `ai-for-climate-policy` | Natural-language analysis of climate laws, NDCs, and policies; target extraction, alignment scoring, and climate-finance tracking. |
+| `ai-for-disaster-response` | Situational awareness, damage assessment, evacuation planning, supply pre-positioning, and multi-modal disaster imagery analysis. |
+| `ai-for-energy-grid` | Power-flow surrogates, renewable and load forecasting, grid stability, optimal power flow, and AI-assisted grid operations. |
+| `ai-for-governance` | Public-service delivery, regulatory compliance, algorithmic accountability, participatory policy tools, and fair decision-support systems. |
+| `ai-for-logistics` | Vehicle routing, last-mile delivery, warehouse automation, fleet scheduling, and dynamic logistics optimization. |
+| `ai-for-manufacturing` | Predictive maintenance, quality control, process optimization, digital twins, and human-interpretable factory AI. |
+| `ai-for-public-health` | Disease surveillance, outbreak prediction, resource allocation, geospatial health modeling, and health-equity analytics. |
+| `ai-for-smart-cities` | Urban computing, IoT analytics, spatio-temporal forecasting, mobility, public safety, and citizen-centric services. |
+| `ai-for-social-good` | Education, poverty alleviation, agriculture, humanitarian response, accessibility, and community-driven AI for underserved populations. |
+| `ai-for-space-exploration` | Onboard autonomy, science target selection, anomaly detection, mission planning, and analysis of space and Earth-observation data. |
+| `ai-for-supply-chain` | Demand forecasting, inventory optimization, risk and resilience, supplier analytics, and end-to-end supply chain visibility. |
+| `ai-for-transportation` | Traffic prediction, route optimization, public transit planning, autonomous driving, and multi-modal mobility. |
 
-## Workflows (342)
+## Workflows (366)
 
 ### Research Workflows (15)
 
@@ -545,7 +569,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (219)
+### Custom Research Workflows (243)
 
 | Workflow | Description |
 |----------|-------------|
@@ -768,6 +792,30 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/photonic-computing` | Silicon photonics, optical processing units, and photonic interconnects for energy-efficient AI and HPC. |
 | `/quantum-machine-learning` | Hybrid quantum-classical ML with variational quantum circuits, PennyLane, TensorFlow Quantum, and Qiskit. |
 | `/wafer-scale-ai` | Cerebras Wafer Scale Engine, wafer-scale training and inference, and massive on-chip compute fabric. |
+| `/contrastive-learning` | Instance discrimination, InfoNCE, SimCLR, MoCo, CLIP, and deep metric learning for vision, language, and retrieval. |
+| `/curriculum-rl` | Task sequencing, automatic curriculum generation, and progressive difficulty for sample-efficient RL. |
+| `/hierarchical-rl` | Options, feudal networks, and goal-conditioned hierarchies for long-horizon, sparse-reward tasks. |
+| `/imitation-learning` | Behavioral cloning, DAgger, GAIL, and learning policies from expert demonstrations with or without a reward function. |
+| `/inverse-rl` | Recover reward functions from expert demonstrations using MaxEnt IRL, apprenticeship learning, and adversarial IRL. |
+| `/masked-autoencoders` | BERT-style masked prediction for vision, BEVT, data2vec, and generative masked image and language modeling. |
+| `/model-based-rl` | Learn environment dynamics for sample-efficient planning and policy optimization with PETS, MBPO, PlaNet, and MuZero. |
+| `/multi-task-learning` | Shared representations, hard and soft parameter sharing, MTL architectures (MMoE, PLE, MTAN), and gradient balancing. |
+| `/offline-rl` | Learn from static logged datasets with CQL, IQL, TD3+BC, D4RL, and conservative/batch RL methods. |
+| `/safe-rl` | Constrained Markov Decision Processes, CPO, P3O, Lagrangian methods, and safety-gym benchmarks for constrained RL. |
+| `/self-supervised-learning` | Pretext tasks, contrastive and non-contrastive SSL, masked prediction, and unsupervised representation learning for vision, language, and graphs. |
+| `/world-models` | Latent dynamics models, recurrent state-space models, Dreamer, PlaNet, and agents that plan in imagination. |
+| `/ai-for-climate-policy` | Natural-language analysis of climate laws, NDCs, and policies; target extraction, alignment scoring, and climate-finance tracking. |
+| `/ai-for-disaster-response` | Situational awareness, damage assessment, evacuation planning, supply pre-positioning, and multi-modal disaster imagery analysis. |
+| `/ai-for-energy-grid` | Power-flow surrogates, renewable and load forecasting, grid stability, optimal power flow, and AI-assisted grid operations. |
+| `/ai-for-governance` | Public-service delivery, regulatory compliance, algorithmic accountability, participatory policy tools, and fair decision-support systems. |
+| `/ai-for-logistics` | Vehicle routing, last-mile delivery, warehouse automation, fleet scheduling, and dynamic logistics optimization. |
+| `/ai-for-manufacturing` | Predictive maintenance, quality control, process optimization, digital twins, and human-interpretable factory AI. |
+| `/ai-for-public-health` | Disease surveillance, outbreak prediction, resource allocation, geospatial health modeling, and health-equity analytics. |
+| `/ai-for-smart-cities` | Urban computing, IoT analytics, spatio-temporal forecasting, mobility, public safety, and citizen-centric services. |
+| `/ai-for-social-good` | Education, poverty alleviation, agriculture, humanitarian response, accessibility, and community-driven AI for underserved populations. |
+| `/ai-for-space-exploration` | Onboard autonomy, science target selection, anomaly detection, mission planning, and analysis of space and Earth-observation data. |
+| `/ai-for-supply-chain` | Demand forecasting, inventory optimization, risk and resilience, supplier analytics, and end-to-end supply chain visibility. |
+| `/ai-for-transportation` | Traffic prediction, route optimization, public transit planning, autonomous driving, and multi-modal mobility. |
 
 ## Usage
 

@@ -1,0 +1,18 @@
+# /ai-for-social-good
+
+Education, poverty alleviation, agriculture, humanitarian response, accessibility, and community-driven AI for underserved populations.
+
+## Trigger
+
+When the user is working on or asking about `ai for social good`.
+
+## Steps
+
+1. Load the `ai-for-social-good` skill for the full reference.
+2. Ask the user what architecture / framework / dataset they are using (Ampere, Hopper, Ada, Blackwell, GB10, JAX, CUDA-Q, etc.).
+3. Propose the smallest verification or code snippet they can run next.
+4. Point them at the references and any relevant `cuda-blackwell-labs` or `agent-skills` examples.
+
+## Output
+
+A focused, architecture-aware next action and a short code path to test it.
