@@ -45,6 +45,7 @@ This is a reference-only skill summarizing papers stored in the Drive `Research_
 | s42484-024-00224-6 | Materials paper (see Drive for full abstract) |
 | s41557-026-02166-x (Nat. Chemistry) | Redox-neutral ketone-olefin coupling via mild ketyl-type radical conversion |
 | s41557-026-02168-9 (Nat. Chemistry) | Molecular rotation and large polarization in charge-transfer ferroelectric cocrystals |
+| s41524-026-02111-z (npj Comput. Materials) | Companion/duplicate publication on semiconductor defect prediction with equivariant NNs, see s41598-025-88177-z |
 
 ## Usage Pattern
 
