@@ -538,7 +538,8 @@ res = cudaq.observe(ansatz, hamiltonian, 0.5)
             "https://nvidia.github.io/cuda-quantum/latest/using/basics/kernel_intro.html",
             "https://nvidia.github.io/cuda-quantum/latest/using/backends/simulators.html",
             "https://nvidia.github.io/cuda-quantum/latest/applications/python/vqe_advanced.html",
-            "https://nvidia.github.io/cuda-quantum/latest/applications/python/hybrid_quantum_neural_networks.html"
+            "https://nvidia.github.io/cuda-quantum/latest/applications/python/hybrid_quantum_neural_networks.html",
+            "https://nvidia.github.io/cuda-quantum/blogs/blog/2026/08/18/cudaq-algorithms-0.1/?es_id=f5dfc4d00a"
         ],
     },
     {
