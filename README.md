@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 632 | 618 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 645 | 628 commands (`/name`) |
+| **Devin** (`.devin/`) | 668 | 654 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 681 | 664 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (632)
+## Skills (668)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (495)
+### Custom Research Skills (531)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -755,8 +755,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-plastic-surgery` | Machine learning for aesthetic and reconstructive surgical planning, facial analysis, flap monitoring, wound assessment, and patient-reported outcomes. |
 | `ai-for-rehabilitation` | Machine learning for stroke, spinal cord, and traumatic brain injury rehabilitation, robotic and virtual-reality therapy, telerehabilitation, and wearable sensor monitoring. |
 | `ai-for-rheumatology` | Machine learning for autoimmune disease diagnosis and phenotyping, flare prediction, treatment response in RA and SLE, and imaging-based joint inflammation scoring. |
+| `ai-for-ai-ethics` | Fairness, accountability, transparency, privacy, and value alignment in AI systems, including bias auditing, model cards, and stakeholder deliberation. |
+| `ai-for-ai-governance` | Risk management, accountability, lifecycle governance, standards, and multi-stakeholder oversight for trustworthy and responsible AI organizations. |
+| `ai-for-ai-policy` | Regulatory analysis, risk classification, standards mapping, policy evaluation, and evidence synthesis for national and international AI governance. |
+| `ai-for-ai-safety` | Alignment, robustness, interpretability, red teaming, monitoring, and safe deployment of AI systems, especially large language and agentic models. |
+| `ai-for-computational-design` | Differentiable simulation, topology optimization, CAD-aware generative models, and solver-in-the-loop co-design for architecture, products, and structures. |
+| `ai-for-digital-twin-simulation` | High-fidelity virtual replicas, real-time synchronization, physics-informed and data-driven simulation, and AI training environments for cyber-physical systems. |
+| `ai-for-future-of-work` | Automation and augmentation analysis, skill demand forecasting, workforce transitions, algorithmic management, and human-centered labor market policy. |
+| `ai-for-generative-engineering` | Diffusion, VAE, and generative inverse design for engineering concepts, constraint-aware generation, and performance-conditioned shape and material synthesis. |
+| `ai-for-human-centered-ai` | Human-AI interaction, explainability, trust, feedback loops, participatory design, and human-in-the-loop ML to keep people at the center of AI systems. |
+| `ai-for-responsible-innovation` | Anticipatory governance, ethical deliberation, stakeholder engagement, regulatory foresight, and impact assessment for emerging AI technologies. |
+| `ai-for-synthetic-data` | Generative models, differential privacy, tabular/image/text synthesis, and utility-privacy evaluation for creating realistic synthetic datasets. |
+| `ai-for-tech-forecasting` | Patent and publication analysis, trend extrapolation, expert elicitation, and ML models for predicting technological progress and emerging AI capabilities. |
+| `ai-for-aging` | Machine learning for geriatric health monitoring, aging-in-place, fall prevention, cognitive and social support, and age-friendly AI design. |
+| `ai-for-child-health` | Machine learning for pediatric diagnostics, developmental surveillance, pediatric AI readiness, and risk stratification for children. |
+| `ai-for-dementia-care` | Machine learning for cognitive impairment screening, dementia risk stratification, voice and EHR analytics, and caregiver support. |
+| `ai-for-disability-inclusion` | Accessible AI, disability-aware bias evaluation, inclusive design, and assistive technologies that respect the rights and agency of people with disabilities. |
+| `ai-for-humanitarian-aid` | AI across the crisis management cycle: needs assessment, resource allocation, routing, damage assessment, and early warning for disaster response. |
+| `ai-for-hunger-relief` | AI/ML for food-security early warning, acute food-insecurity forecasting, remote-sensing crop monitoring, and targeted food assistance. |
+| `ai-for-maternal-health` | Machine learning for maternal risk stratification, preterm birth prediction, obstetric decision support, and neonatal outcome forecasting. |
+| `ai-for-mental-health-services` | LLM and multimodal mental health screening, CBT chatbots, psychosocial risk assessment, and clinical interview support. |
+| `ai-for-palliative-care` | Machine learning for prognostication, symptom management, hospice suitability, advance care planning, and ethical decision support in end-of-life care. |
+| `ai-for-poverty-alleviation` | Machine learning for poverty mapping, consumption estimation, proxy means testing, and targeted social protection in low-resource settings. |
+| `ai-for-refugees` | Machine learning for forced-displacement forecasting, refugee camp mapping, asylum-flow prediction, and humanitarian response planning. |
+| `ai-for-rural-health` | AI-driven diagnostics, telemedicine, rural health equity, and resource allocation for underserved and remote populations. |
+| `ai-for-data-journalism` | Using AI to find stories in datasets, fact-check claims, generate visualizations, and produce data-driven reporting. |
+| `ai-for-document-design` | Automating layout, typography, templates, and multi-format rendering of reports, certificates, and proposals. |
+| `ai-for-infographics` | Generating data-rich infographics and visual stories from documents, tables, and natural-language prompts. |
+| `ai-for-knowledge-design` | Designing knowledge architectures, taxonomies, ontologies, and agent-facing knowledge layers for organizations. |
+| `ai-for-open-science` | Reproducible research agents, open-source workbenches, provenance tracking, and computational reproducibility with AI. |
+| `ai-for-policy-briefs` | Converting scientific evidence and legislative text into concise, actionable policy briefs and impact analyses. |
+| `ai-for-public-engagement` | Conversational agents, citizen science, public consultations, and participatory science supported by LLMs and interactive AI. |
+| `ai-for-research-communication` | Drafting manuscripts, abstracts, cover letters, response-to-reviewers, and translating findings across disciplines with LLMs. |
+| `ai-for-science-communication` | Plain-language summaries, research storytelling, audience adaptation, and ethical, evidence-based use of generative AI for public-facing science. |
+| `ai-for-technical-blogs` | Planning, drafting, SEO-optimizing, and reviewing technical blog posts and tutorials with LLMs. |
+| `ai-for-visual-communication` | Generating and refining posters, slides, brand assets, and visual narratives with diffusion models and design tools. |
+| `ai-for-white-papers` | Authoring long-form, evidence-based white papers and thought-leadership documents grounded in verified sources. |
 
-## Workflows (618)
+## Workflows (654)
 
 ### Research Workflows (15)
 
@@ -821,7 +857,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (495)
+### Custom Research Workflows (531)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1320,6 +1356,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-plastic-surgery` | Machine learning for aesthetic and reconstructive surgical planning, facial analysis, flap monitoring, wound assessment, and patient-reported outcomes. |
 | `/ai-for-rehabilitation` | Machine learning for stroke, spinal cord, and traumatic brain injury rehabilitation, robotic and virtual-reality therapy, telerehabilitation, and wearable sensor monitoring. |
 | `/ai-for-rheumatology` | Machine learning for autoimmune disease diagnosis and phenotyping, flare prediction, treatment response in RA and SLE, and imaging-based joint inflammation scoring. |
+| `/ai-for-ai-ethics` | Fairness, accountability, transparency, privacy, and value alignment in AI systems, including bias auditing, model cards, and stakeholder deliberation. |
+| `/ai-for-ai-governance` | Risk management, accountability, lifecycle governance, standards, and multi-stakeholder oversight for trustworthy and responsible AI organizations. |
+| `/ai-for-ai-policy` | Regulatory analysis, risk classification, standards mapping, policy evaluation, and evidence synthesis for national and international AI governance. |
+| `/ai-for-ai-safety` | Alignment, robustness, interpretability, red teaming, monitoring, and safe deployment of AI systems, especially large language and agentic models. |
+| `/ai-for-computational-design` | Differentiable simulation, topology optimization, CAD-aware generative models, and solver-in-the-loop co-design for architecture, products, and structures. |
+| `/ai-for-digital-twin-simulation` | High-fidelity virtual replicas, real-time synchronization, physics-informed and data-driven simulation, and AI training environments for cyber-physical systems. |
+| `/ai-for-future-of-work` | Automation and augmentation analysis, skill demand forecasting, workforce transitions, algorithmic management, and human-centered labor market policy. |
+| `/ai-for-generative-engineering` | Diffusion, VAE, and generative inverse design for engineering concepts, constraint-aware generation, and performance-conditioned shape and material synthesis. |
+| `/ai-for-human-centered-ai` | Human-AI interaction, explainability, trust, feedback loops, participatory design, and human-in-the-loop ML to keep people at the center of AI systems. |
+| `/ai-for-responsible-innovation` | Anticipatory governance, ethical deliberation, stakeholder engagement, regulatory foresight, and impact assessment for emerging AI technologies. |
+| `/ai-for-synthetic-data` | Generative models, differential privacy, tabular/image/text synthesis, and utility-privacy evaluation for creating realistic synthetic datasets. |
+| `/ai-for-tech-forecasting` | Patent and publication analysis, trend extrapolation, expert elicitation, and ML models for predicting technological progress and emerging AI capabilities. |
+| `/ai-for-aging` | Machine learning for geriatric health monitoring, aging-in-place, fall prevention, cognitive and social support, and age-friendly AI design. |
+| `/ai-for-child-health` | Machine learning for pediatric diagnostics, developmental surveillance, pediatric AI readiness, and risk stratification for children. |
+| `/ai-for-dementia-care` | Machine learning for cognitive impairment screening, dementia risk stratification, voice and EHR analytics, and caregiver support. |
+| `/ai-for-disability-inclusion` | Accessible AI, disability-aware bias evaluation, inclusive design, and assistive technologies that respect the rights and agency of people with disabilities. |
+| `/ai-for-humanitarian-aid` | AI across the crisis management cycle: needs assessment, resource allocation, routing, damage assessment, and early warning for disaster response. |
+| `/ai-for-hunger-relief` | AI/ML for food-security early warning, acute food-insecurity forecasting, remote-sensing crop monitoring, and targeted food assistance. |
+| `/ai-for-maternal-health` | Machine learning for maternal risk stratification, preterm birth prediction, obstetric decision support, and neonatal outcome forecasting. |
+| `/ai-for-mental-health-services` | LLM and multimodal mental health screening, CBT chatbots, psychosocial risk assessment, and clinical interview support. |
+| `/ai-for-palliative-care` | Machine learning for prognostication, symptom management, hospice suitability, advance care planning, and ethical decision support in end-of-life care. |
+| `/ai-for-poverty-alleviation` | Machine learning for poverty mapping, consumption estimation, proxy means testing, and targeted social protection in low-resource settings. |
+| `/ai-for-refugees` | Machine learning for forced-displacement forecasting, refugee camp mapping, asylum-flow prediction, and humanitarian response planning. |
+| `/ai-for-rural-health` | AI-driven diagnostics, telemedicine, rural health equity, and resource allocation for underserved and remote populations. |
+| `/ai-for-data-journalism` | Using AI to find stories in datasets, fact-check claims, generate visualizations, and produce data-driven reporting. |
+| `/ai-for-document-design` | Automating layout, typography, templates, and multi-format rendering of reports, certificates, and proposals. |
+| `/ai-for-infographics` | Generating data-rich infographics and visual stories from documents, tables, and natural-language prompts. |
+| `/ai-for-knowledge-design` | Designing knowledge architectures, taxonomies, ontologies, and agent-facing knowledge layers for organizations. |
+| `/ai-for-open-science` | Reproducible research agents, open-source workbenches, provenance tracking, and computational reproducibility with AI. |
+| `/ai-for-policy-briefs` | Converting scientific evidence and legislative text into concise, actionable policy briefs and impact analyses. |
+| `/ai-for-public-engagement` | Conversational agents, citizen science, public consultations, and participatory science supported by LLMs and interactive AI. |
+| `/ai-for-research-communication` | Drafting manuscripts, abstracts, cover letters, response-to-reviewers, and translating findings across disciplines with LLMs. |
+| `/ai-for-science-communication` | Plain-language summaries, research storytelling, audience adaptation, and ethical, evidence-based use of generative AI for public-facing science. |
+| `/ai-for-technical-blogs` | Planning, drafting, SEO-optimizing, and reviewing technical blog posts and tutorials with LLMs. |
+| `/ai-for-visual-communication` | Generating and refining posters, slides, brand assets, and visual narratives with diffusion models and design tools. |
+| `/ai-for-white-papers` | Authoring long-form, evidence-based white papers and thought-leadership documents grounded in verified sources. |
 
 ## Usage
 

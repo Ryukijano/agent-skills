@@ -1,0 +1,7 @@
+# ai-for-tech-forecasting
+
+Quick reference for `ai for tech forecasting`.
+
+- Architecture / framework: ask first.
+- Key command / env vars: see the full skill.
+- Verification: run the smallest failing test first.
