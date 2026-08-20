@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 740 | 726 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 753 | 736 commands (`/name`) |
+| **Devin** (`.devin/`) | 800 | 786 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 813 | 796 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (740)
+## Skills (800)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (603)
+### Custom Research Skills (663)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -863,8 +863,68 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-poultry` | AI for flock health, welfare, behaviour, environmental control, and productivity in broiler, layer, and turkey production. |
 | `ai-for-soil-health` | Machine learning for predicting soil carbon, nutrients, biology, compaction, erosion risk, and overall soil health from sensors and remote sensing. |
 | `ai-for-viticulture` | AI for vineyard monitoring, grape and canopy sensing, disease detection, yield and quality prediction, and harvest decision support. |
+| `ai-for-budgeting` | Public expenditure forecasting, budget allocation optimization, fiscal scenario analysis, program-cost modeling, and spending anomaly detection. |
+| `ai-for-civic-tech` | Digital participation, deliberation, civic engagement, public comment analysis, and participatory budgeting tools powered by AI. |
+| `ai-for-e-government` | Chatbots and virtual assistants, proactive public services, document automation, eligibility screening, and responsible AI in digital government. |
+| `ai-for-permitting` | Automated permit intake, plan review, code compliance checks, application completeness screening, and permit workflow optimization. |
+| `ai-for-public-records` | Automated records classification, sensitivity review, metadata enrichment, archival appraisal, and access to digital government archives. |
+| `ai-for-public-transport` | Ridership prediction, service scheduling, bus and rail dispatch optimization, disruption recovery, and multi-modal transit analytics. |
+| `ai-for-public-utilities` | Smart grid load forecasting, water and energy demand prediction, asset maintenance, leak and outage detection, and resource allocation. |
+| `ai-for-social-services` | Eligibility screening, benefits triage, case management support, risk stratification, and resource matching for social care and public assistance. |
+| `ai-for-taxation` | Tax compliance risk scoring, fraud and evasion detection, audit selection, taxpayer assistance, and revenue forecasting. |
+| `ai-for-urban-planning` | Spatial plan generation, land-use optimization, urban digital twins, scenario simulation, and participatory planning analytics. |
+| `ai-for-veterans-services` | Claims processing, benefits eligibility, health risk identification, veteran-centered care coordination, and administrative automation at VA and related agencies. |
+| `ai-for-zoning` | Zoning code interpretation, compliance checking, variance analysis, automated answers to zoning questions, and land-use regulation analytics. |
+| `ai-for-charging-infrastructure` | Machine learning for EV charging demand forecasting, station scheduling, load balancing, and grid-integrated charging control. |
+| `ai-for-demand-response` | Machine learning for load flexibility estimation, demand response program design, virtual power plant dispatch, and dynamic pricing. |
+| `ai-for-distributed-energy` | Machine learning and multi-agent methods for DER forecasting, microgrid optimization, peer-to-peer trading, and prosumer coordination. |
+| `ai-for-electric-vehicles` | Machine learning for battery management, range and energy consumption prediction, predictive maintenance, and EV powertrain optimization. |
+| `ai-for-energy-storage` | Machine learning for battery state estimation, degradation modeling, storage dispatch, and energy storage asset optimization. |
+| `ai-for-energy-trading` | Machine learning for electricity price forecasting, algorithmic trading, arbitrage, and bidding in day-ahead, intraday, and balancing markets. |
+| `ai-for-gas-utilities` | Machine learning for natural gas demand forecasting, pipeline leak detection, compressor optimization, and asset integrity. |
+| `ai-for-grid-resilience` | Machine learning for outage prediction, storm hardening, restoration planning, and cyber-physical resilience of power systems. |
+| `ai-for-renewable-energy` | Machine learning for solar, wind, and other renewable energy forecasting, resource assessment, yield optimization, and predictive O&M. |
+| `ai-for-smart-grid` | AI and machine learning for load and renewable forecasting, grid state estimation, optimal power flow, and smart-grid control. |
+| `ai-for-wastewater` | Machine learning for process monitoring, anomaly detection, influent forecasting, and control in wastewater treatment plants. |
+| `ai-for-water-utilities` | Machine learning for water demand forecasting, leak detection, quality monitoring, pump scheduling, and smart water distribution. |
+| `ai-for-building-operations` | Smart building control, energy optimization, occupant-centric HVAC and lighting, and IoT-BMS integration for operational performance. |
+| `ai-for-city-modeling` | Urban digital twins, 3D city reconstruction, generative city models, and AI-driven urban simulation for planning and operations. |
+| `ai-for-construction-management` | BIM-NLP integration, 4D/5D digital twins, computer-vision progress monitoring, and AI-driven scheduling and cost control for construction. |
+| `ai-for-facilities-management` | Predictive maintenance, fault detection, digital twins, and AI-enabled asset lifecycle management for built facilities. |
+| `ai-for-land-use` | Remote sensing, multi-source data fusion, functional-zone mapping, and neural-symbolic planning for land-use analysis and policy. |
+| `ai-for-lease-management` | NLP-based lease abstraction, clause extraction, compliance tracking, and predictive analytics for commercial and residential lease portfolios. |
+| `ai-for-portfolio-optimization` | Diversification, risk-return balancing, rebalancing strategies, and generative-AI analytics for real estate and mixed-asset portfolios. |
+| `ai-for-property-valuation` | Automated valuation models, hedonic pricing, spatial machine learning, and deep learning for residential and commercial property appraisal. |
+| `ai-for-real-estate-investment` | Predictive analytics, investment screening, REIT return forecasting, and risk-adjusted underwriting for real estate investment decisions. |
+| `ai-for-site-selection` | Geospatial ML, graph neural networks, urban knowledge graphs, and location analytics for retail, logistics, and facility siting. |
+| `ai-for-tenant-experience` | Personalization, occupancy analytics, indoor environmental quality, and tenant engagement for workplace and residential environments. |
+| `ai-for-urban-development` | GeoAI, spatial modeling, generative urban design, and scenario simulation for sustainable, equitable, and data-driven urban development. |
+| `ai-for-defect-detection` | Computer vision, anomaly detection, and segmentation for automated inspection of surface, PCB, casting, and assembly defects in manufacturing quality control. |
+| `ai-for-digital-manufacturing` | AI-driven digital twins, virtual commissioning, real-time simulation, and lifecycle data integration for smart, connected factories. |
+| `ai-for-discrete-manufacturing` | Machine learning for assembly, machining, electronics, and automotive part production: process planning, scheduling, robotic assembly, and work-in-progress tracking. |
+| `ai-for-factory-automation` | ML-integrated PLCs, edge controllers, motion control, robot programming, and real-time AI inference on the shop floor. |
+| `ai-for-industrial-iot` | Industrial Internet of Things, edge-fog-cloud architectures, and AI for real-time monitoring, predictive maintenance, and secure shop-floor connectivity. |
+| `ai-for-lean-manufacturing` | Data-driven waste elimination, value stream mapping, bottleneck detection, and Kaizen prioritization for flow, pull, and just-in-time systems. |
+| `ai-for-manufacturing-analytics` | KPI dashboards, OEE analysis, descriptive-to-prescriptive analytics, and association mining for manufacturing performance management. |
+| `ai-for-predictive-quality` | In-process quality forecasting, virtual metrology, and causal quality models that predict final part quality from machine and sensor data before completion. |
+| `ai-for-process-manufacturing` | Machine learning for continuous and batch chemical, pharmaceutical, food, and materials processes: recipe optimization, soft sensors, advanced process control, and real-time quality prediction. |
+| `ai-for-root-cause-analysis` | Knowledge graphs, causal discovery, graph neural networks, and SHAP-based diagnostics for identifying fault origins and propagations in complex systems. |
+| `ai-for-six-sigma` | ML-augmented DMAIC for defect reduction, statistical process control, capability analysis, and automated root-cause prioritization in quality improvement. |
+| `ai-for-total-productive-maintenance` | AI and IIoT for autonomous maintenance, OEE improvement, zero-breakdown programs, and condition-based monitoring across the eight TPM pillars. |
+| `ai-for-additive-manufacturing` | Machine learning for powder-bed fusion, directed energy deposition, in-situ monitoring, defect detection, build simulation, and process parameter optimization in additive manufacturing. |
+| `ai-for-casting` | Machine learning for sand, investment, die, and continuous casting: defect prediction, mold filling, solidification, microstructure, and process optimization. |
+| `ai-for-coatings` | Machine learning for coating formulation, deposition, thickness, microstructure, adhesion, corrosion protection, and service-life prediction. |
+| `ai-for-composites-manufacturing` | Machine learning for automated fiber placement, tape laying, resin infusion, cure monitoring, defect detection, and process optimization in composite part manufacturing. |
+| `ai-for-corrosion-engineering` | Machine learning for corrosion rate prediction, risk-based inspection, cathodic protection, coating lifetime, EIS interpretation, and materials selection. |
+| `ai-for-metal-forming` | Machine learning for sheet-metal stamping, deep drawing, forging, rolling, extrusion, springback prediction, die design, and forming-limit prediction. |
+| `ai-for-nanomanufacturing` | Machine learning for nanoscale fabrication, roll-to-roll processing, nanoimprint lithography, self-assembly, nanoscale metrology, and process control. |
+| `ai-for-polymer-processing` | Machine learning for extrusion, injection molding, blow molding, compounding, mixing, and polymer recycling process optimization and quality control. |
+| `ai-for-semiconductor-manufacturing` | Machine learning for semiconductor fabrication yield enhancement, wafer defect detection, equipment fault classification, process control, and advanced lithography/etch modeling. |
+| `ai-for-surface-engineering` | Machine learning for surface modification processes: thermal spray, laser cladding/peening, shot peening, plasma electrolytic oxidation, surface texturing, and residual stress optimization. |
+| `ai-for-textile-manufacturing` | Machine learning for yarn, fabric, and garment manufacturing: spinning, weaving, knitting, dyeing, finishing, quality inspection, and production optimization. |
+| `ai-for-welding` | Machine learning for arc, laser, and resistance welding: penetration prediction, defect detection, bead geometry, process monitoring, and parameter optimization. |
 
-## Workflows (726)
+## Workflows (786)
 
 ### Research Workflows (15)
 
@@ -929,7 +989,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (603)
+### Custom Research Workflows (663)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1536,6 +1596,66 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-poultry` | AI for flock health, welfare, behaviour, environmental control, and productivity in broiler, layer, and turkey production. |
 | `/ai-for-soil-health` | Machine learning for predicting soil carbon, nutrients, biology, compaction, erosion risk, and overall soil health from sensors and remote sensing. |
 | `/ai-for-viticulture` | AI for vineyard monitoring, grape and canopy sensing, disease detection, yield and quality prediction, and harvest decision support. |
+| `/ai-for-budgeting` | Public expenditure forecasting, budget allocation optimization, fiscal scenario analysis, program-cost modeling, and spending anomaly detection. |
+| `/ai-for-civic-tech` | Digital participation, deliberation, civic engagement, public comment analysis, and participatory budgeting tools powered by AI. |
+| `/ai-for-e-government` | Chatbots and virtual assistants, proactive public services, document automation, eligibility screening, and responsible AI in digital government. |
+| `/ai-for-permitting` | Automated permit intake, plan review, code compliance checks, application completeness screening, and permit workflow optimization. |
+| `/ai-for-public-records` | Automated records classification, sensitivity review, metadata enrichment, archival appraisal, and access to digital government archives. |
+| `/ai-for-public-transport` | Ridership prediction, service scheduling, bus and rail dispatch optimization, disruption recovery, and multi-modal transit analytics. |
+| `/ai-for-public-utilities` | Smart grid load forecasting, water and energy demand prediction, asset maintenance, leak and outage detection, and resource allocation. |
+| `/ai-for-social-services` | Eligibility screening, benefits triage, case management support, risk stratification, and resource matching for social care and public assistance. |
+| `/ai-for-taxation` | Tax compliance risk scoring, fraud and evasion detection, audit selection, taxpayer assistance, and revenue forecasting. |
+| `/ai-for-urban-planning` | Spatial plan generation, land-use optimization, urban digital twins, scenario simulation, and participatory planning analytics. |
+| `/ai-for-veterans-services` | Claims processing, benefits eligibility, health risk identification, veteran-centered care coordination, and administrative automation at VA and related agencies. |
+| `/ai-for-zoning` | Zoning code interpretation, compliance checking, variance analysis, automated answers to zoning questions, and land-use regulation analytics. |
+| `/ai-for-charging-infrastructure` | Machine learning for EV charging demand forecasting, station scheduling, load balancing, and grid-integrated charging control. |
+| `/ai-for-demand-response` | Machine learning for load flexibility estimation, demand response program design, virtual power plant dispatch, and dynamic pricing. |
+| `/ai-for-distributed-energy` | Machine learning and multi-agent methods for DER forecasting, microgrid optimization, peer-to-peer trading, and prosumer coordination. |
+| `/ai-for-electric-vehicles` | Machine learning for battery management, range and energy consumption prediction, predictive maintenance, and EV powertrain optimization. |
+| `/ai-for-energy-storage` | Machine learning for battery state estimation, degradation modeling, storage dispatch, and energy storage asset optimization. |
+| `/ai-for-energy-trading` | Machine learning for electricity price forecasting, algorithmic trading, arbitrage, and bidding in day-ahead, intraday, and balancing markets. |
+| `/ai-for-gas-utilities` | Machine learning for natural gas demand forecasting, pipeline leak detection, compressor optimization, and asset integrity. |
+| `/ai-for-grid-resilience` | Machine learning for outage prediction, storm hardening, restoration planning, and cyber-physical resilience of power systems. |
+| `/ai-for-renewable-energy` | Machine learning for solar, wind, and other renewable energy forecasting, resource assessment, yield optimization, and predictive O&M. |
+| `/ai-for-smart-grid` | AI and machine learning for load and renewable forecasting, grid state estimation, optimal power flow, and smart-grid control. |
+| `/ai-for-wastewater` | Machine learning for process monitoring, anomaly detection, influent forecasting, and control in wastewater treatment plants. |
+| `/ai-for-water-utilities` | Machine learning for water demand forecasting, leak detection, quality monitoring, pump scheduling, and smart water distribution. |
+| `/ai-for-building-operations` | Smart building control, energy optimization, occupant-centric HVAC and lighting, and IoT-BMS integration for operational performance. |
+| `/ai-for-city-modeling` | Urban digital twins, 3D city reconstruction, generative city models, and AI-driven urban simulation for planning and operations. |
+| `/ai-for-construction-management` | BIM-NLP integration, 4D/5D digital twins, computer-vision progress monitoring, and AI-driven scheduling and cost control for construction. |
+| `/ai-for-facilities-management` | Predictive maintenance, fault detection, digital twins, and AI-enabled asset lifecycle management for built facilities. |
+| `/ai-for-land-use` | Remote sensing, multi-source data fusion, functional-zone mapping, and neural-symbolic planning for land-use analysis and policy. |
+| `/ai-for-lease-management` | NLP-based lease abstraction, clause extraction, compliance tracking, and predictive analytics for commercial and residential lease portfolios. |
+| `/ai-for-portfolio-optimization` | Diversification, risk-return balancing, rebalancing strategies, and generative-AI analytics for real estate and mixed-asset portfolios. |
+| `/ai-for-property-valuation` | Automated valuation models, hedonic pricing, spatial machine learning, and deep learning for residential and commercial property appraisal. |
+| `/ai-for-real-estate-investment` | Predictive analytics, investment screening, REIT return forecasting, and risk-adjusted underwriting for real estate investment decisions. |
+| `/ai-for-site-selection` | Geospatial ML, graph neural networks, urban knowledge graphs, and location analytics for retail, logistics, and facility siting. |
+| `/ai-for-tenant-experience` | Personalization, occupancy analytics, indoor environmental quality, and tenant engagement for workplace and residential environments. |
+| `/ai-for-urban-development` | GeoAI, spatial modeling, generative urban design, and scenario simulation for sustainable, equitable, and data-driven urban development. |
+| `/ai-for-defect-detection` | Computer vision, anomaly detection, and segmentation for automated inspection of surface, PCB, casting, and assembly defects in manufacturing quality control. |
+| `/ai-for-digital-manufacturing` | AI-driven digital twins, virtual commissioning, real-time simulation, and lifecycle data integration for smart, connected factories. |
+| `/ai-for-discrete-manufacturing` | Machine learning for assembly, machining, electronics, and automotive part production: process planning, scheduling, robotic assembly, and work-in-progress tracking. |
+| `/ai-for-factory-automation` | ML-integrated PLCs, edge controllers, motion control, robot programming, and real-time AI inference on the shop floor. |
+| `/ai-for-industrial-iot` | Industrial Internet of Things, edge-fog-cloud architectures, and AI for real-time monitoring, predictive maintenance, and secure shop-floor connectivity. |
+| `/ai-for-lean-manufacturing` | Data-driven waste elimination, value stream mapping, bottleneck detection, and Kaizen prioritization for flow, pull, and just-in-time systems. |
+| `/ai-for-manufacturing-analytics` | KPI dashboards, OEE analysis, descriptive-to-prescriptive analytics, and association mining for manufacturing performance management. |
+| `/ai-for-predictive-quality` | In-process quality forecasting, virtual metrology, and causal quality models that predict final part quality from machine and sensor data before completion. |
+| `/ai-for-process-manufacturing` | Machine learning for continuous and batch chemical, pharmaceutical, food, and materials processes: recipe optimization, soft sensors, advanced process control, and real-time quality prediction. |
+| `/ai-for-root-cause-analysis` | Knowledge graphs, causal discovery, graph neural networks, and SHAP-based diagnostics for identifying fault origins and propagations in complex systems. |
+| `/ai-for-six-sigma` | ML-augmented DMAIC for defect reduction, statistical process control, capability analysis, and automated root-cause prioritization in quality improvement. |
+| `/ai-for-total-productive-maintenance` | AI and IIoT for autonomous maintenance, OEE improvement, zero-breakdown programs, and condition-based monitoring across the eight TPM pillars. |
+| `/ai-for-additive-manufacturing` | Machine learning for powder-bed fusion, directed energy deposition, in-situ monitoring, defect detection, build simulation, and process parameter optimization in additive manufacturing. |
+| `/ai-for-casting` | Machine learning for sand, investment, die, and continuous casting: defect prediction, mold filling, solidification, microstructure, and process optimization. |
+| `/ai-for-coatings` | Machine learning for coating formulation, deposition, thickness, microstructure, adhesion, corrosion protection, and service-life prediction. |
+| `/ai-for-composites-manufacturing` | Machine learning for automated fiber placement, tape laying, resin infusion, cure monitoring, defect detection, and process optimization in composite part manufacturing. |
+| `/ai-for-corrosion-engineering` | Machine learning for corrosion rate prediction, risk-based inspection, cathodic protection, coating lifetime, EIS interpretation, and materials selection. |
+| `/ai-for-metal-forming` | Machine learning for sheet-metal stamping, deep drawing, forging, rolling, extrusion, springback prediction, die design, and forming-limit prediction. |
+| `/ai-for-nanomanufacturing` | Machine learning for nanoscale fabrication, roll-to-roll processing, nanoimprint lithography, self-assembly, nanoscale metrology, and process control. |
+| `/ai-for-polymer-processing` | Machine learning for extrusion, injection molding, blow molding, compounding, mixing, and polymer recycling process optimization and quality control. |
+| `/ai-for-semiconductor-manufacturing` | Machine learning for semiconductor fabrication yield enhancement, wafer defect detection, equipment fault classification, process control, and advanced lithography/etch modeling. |
+| `/ai-for-surface-engineering` | Machine learning for surface modification processes: thermal spray, laser cladding/peening, shot peening, plasma electrolytic oxidation, surface texturing, and residual stress optimization. |
+| `/ai-for-textile-manufacturing` | Machine learning for yarn, fabric, and garment manufacturing: spinning, weaving, knitting, dyeing, finishing, quality inspection, and production optimization. |
+| `/ai-for-welding` | Machine learning for arc, laser, and resistance welding: penetration prediction, defect detection, bead geometry, process monitoring, and parameter optimization. |
 
 ## Usage
 
