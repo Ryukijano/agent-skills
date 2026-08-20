@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 452 | 438 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 465 | 448 commands (`/name`) |
+| **Devin** (`.devin/`) | 488 | 474 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 501 | 484 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (452)
+## Skills (488)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (315)
+### Custom Research Skills (351)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -575,8 +575,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `full-stack-ml` | End-to-end ML applications spanning data, model, API, frontend, deployment, and monitoring. |
 | `microservices` | Small, independently deployable services, inter-service communication, containers, and service discovery. |
 | `streaming-data` | Real-time data ingestion and processing with stream processors, message brokers, and event-time semantics. |
+| `ai-for-anthropology` | Computational ethnography, NLP for field notes and interviews, multimodal cultural analysis, and AI-assisted thick description and reflexivity. |
+| `ai-for-communication` | Computational communication science: content analysis, information diffusion, agenda setting, and audience effects across digital platforms. |
+| `ai-for-criminology` | Predictive policing, recidivism risk assessment, crime forecasting, criminal network analysis, and fairness-aware public safety research. |
+| `ai-for-history` | HTR and OCR for historical documents, event extraction, temporal reasoning, geospatial and network analysis, and distant reading for historical research. |
+| `ai-for-international-relations` | Conflict forecasting, event data analysis, crisis early warning, treaty and negotiation text mining, and geopolitical risk modeling. |
+| `ai-for-journalism` | Algorithmic journalism, automated reporting, fact-checking, news recommendation, and AI-assisted investigative data reporting. |
+| `ai-for-linguistics` | Computational linguistics, corpus analysis, morphosyntactic annotation, syntactic parsing, language modeling, and NLP tools for linguistic research. |
+| `ai-for-media-literacy` | AI for detecting disinformation, prebunking, source credibility, and teaching critical thinking and digital literacy. |
+| `ai-for-philosophy` | Computational philosophy, argument mining, automated reasoning, text analysis of philosophical corpora, and LLM-assisted conceptual analysis. |
+| `ai-for-political-science` | Text-as-data for politics: manifesto scaling, sentiment and stance detection, legislative and voting analysis, and causal inference for political institutions. |
+| `ai-for-public-policy` | Causal and predictive policy evaluation, program impact assessment, regulatory text analysis, and equitable resource allocation for government and public administration. |
+| `ai-for-sociology` | Computational social science for sociology: text and image classification, survey augmentation, social network analysis, and modeling social inequalities. |
+| `ai-for-3d-vision` | 3D reconstruction, point cloud processing, NeRF and Gaussian splatting, depth estimation, 3D detection, and scene understanding. |
+| `ai-for-animation` | Motion synthesis, inbetweening, character retargeting, physics-based animation, and style transfer for animated content. |
+| `ai-for-audio` | Audio enhancement, source separation, music generation, audio event detection, and speech enhancement. |
+| `ai-for-augmented-reality` | SLAM, scene understanding, depth completion, registration, occlusion handling, and semantic AR with deep learning. |
+| `ai-for-computer-graphics` | Neural rendering, differentiable rendering, inverse rendering, geometry and material estimation, and generative image synthesis for photorealistic graphics. |
+| `ai-for-computer-vision` | Image classification, detection, segmentation, vision-language models, generative vision, and efficient deep learning deployment. |
+| `ai-for-games` | Procedural content generation, game-playing agents via reinforcement learning, NPC behavior, and generative AI for game assets and narratives. |
+| `ai-for-human-robot-interaction` | Multimodal interfaces, natural language instructions, shared autonomy, social robotics, and embodied AI for human-robot collaboration. |
+| `ai-for-nlp` | Large language models, text classification, machine translation, question answering, information extraction, and prompt engineering. |
+| `ai-for-speech` | Automatic speech recognition, text-to-speech, speaker verification, speech synthesis, and self-supervised speech models. |
+| `ai-for-video` | Video understanding, action recognition, video generation, temporal modeling, video captioning, and multimodal video models. |
+| `ai-for-virtual-reality` | Natural interaction, intent recognition, multimodal input, foveated rendering, virtual agents, and AI-driven content creation for VR. |
+| `ai-for-acoustics` | Machine learning for source localization, room acoustics, bioacoustics, structural health monitoring, and spatial audio. |
+| `ai-for-astrobiology` | ML for biosignature detection, life-detection mass spectrometry, extremophile habitats, and mission autonomy in alien environments. |
+| `ai-for-astronomy` | Machine learning for survey-scale classification, transient detection, galaxy morphology, light-curve analysis, and telescope scheduling. |
+| `ai-for-biophysics` | Machine learning for molecular dynamics, free-energy landscapes, protein-ligand kinetics, single-molecule analysis, and membrane systems. |
+| `ai-for-condensed-matter` | Machine learning for phase classification, topological order, Hamiltonian learning, density functional surrogates, and quantum many-body systems. |
+| `ai-for-cosmology` | ML for large-scale structure, weak lensing, CMB analysis, 21-cm cosmology, and cosmological parameter inference. |
+| `ai-for-microfluidics` | Machine learning for droplet generation, lab-on-a-chip control, cell sorting, reaction optimization, and high-throughput screening. |
+| `ai-for-nanotechnology` | ML for nanoparticle design, nanomaterial discovery, nano-architectonics, nanoscale imaging, and nanomanufacturing optimization. |
+| `ai-for-optics` | Computational imaging, lens design, wavefront shaping, optical metrology, and inverse scattering with deep learning. |
+| `ai-for-particle-physics` | ML for collider event classification, jet tagging, fast detector simulation, neutrino event reconstruction, and new-physics searches. |
+| `ai-for-photonics` | Deep learning for photonic device inverse design, metasurfaces, optical communications, and nanophotonic simulation surrogates. |
+| `ai-for-planetary-science` | Machine learning for mission data analysis, terrain classification, crater detection, atmospheric retrievals, and exoplanet characterization. |
 
-## Workflows (438)
+## Workflows (474)
 
 ### Research Workflows (15)
 
@@ -641,7 +677,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (315)
+### Custom Research Workflows (351)
 
 | Workflow | Description |
 |----------|-------------|
@@ -960,6 +996,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/full-stack-ml` | End-to-end ML applications spanning data, model, API, frontend, deployment, and monitoring. |
 | `/microservices` | Small, independently deployable services, inter-service communication, containers, and service discovery. |
 | `/streaming-data` | Real-time data ingestion and processing with stream processors, message brokers, and event-time semantics. |
+| `/ai-for-anthropology` | Computational ethnography, NLP for field notes and interviews, multimodal cultural analysis, and AI-assisted thick description and reflexivity. |
+| `/ai-for-communication` | Computational communication science: content analysis, information diffusion, agenda setting, and audience effects across digital platforms. |
+| `/ai-for-criminology` | Predictive policing, recidivism risk assessment, crime forecasting, criminal network analysis, and fairness-aware public safety research. |
+| `/ai-for-history` | HTR and OCR for historical documents, event extraction, temporal reasoning, geospatial and network analysis, and distant reading for historical research. |
+| `/ai-for-international-relations` | Conflict forecasting, event data analysis, crisis early warning, treaty and negotiation text mining, and geopolitical risk modeling. |
+| `/ai-for-journalism` | Algorithmic journalism, automated reporting, fact-checking, news recommendation, and AI-assisted investigative data reporting. |
+| `/ai-for-linguistics` | Computational linguistics, corpus analysis, morphosyntactic annotation, syntactic parsing, language modeling, and NLP tools for linguistic research. |
+| `/ai-for-media-literacy` | AI for detecting disinformation, prebunking, source credibility, and teaching critical thinking and digital literacy. |
+| `/ai-for-philosophy` | Computational philosophy, argument mining, automated reasoning, text analysis of philosophical corpora, and LLM-assisted conceptual analysis. |
+| `/ai-for-political-science` | Text-as-data for politics: manifesto scaling, sentiment and stance detection, legislative and voting analysis, and causal inference for political institutions. |
+| `/ai-for-public-policy` | Causal and predictive policy evaluation, program impact assessment, regulatory text analysis, and equitable resource allocation for government and public administration. |
+| `/ai-for-sociology` | Computational social science for sociology: text and image classification, survey augmentation, social network analysis, and modeling social inequalities. |
+| `/ai-for-3d-vision` | 3D reconstruction, point cloud processing, NeRF and Gaussian splatting, depth estimation, 3D detection, and scene understanding. |
+| `/ai-for-animation` | Motion synthesis, inbetweening, character retargeting, physics-based animation, and style transfer for animated content. |
+| `/ai-for-audio` | Audio enhancement, source separation, music generation, audio event detection, and speech enhancement. |
+| `/ai-for-augmented-reality` | SLAM, scene understanding, depth completion, registration, occlusion handling, and semantic AR with deep learning. |
+| `/ai-for-computer-graphics` | Neural rendering, differentiable rendering, inverse rendering, geometry and material estimation, and generative image synthesis for photorealistic graphics. |
+| `/ai-for-computer-vision` | Image classification, detection, segmentation, vision-language models, generative vision, and efficient deep learning deployment. |
+| `/ai-for-games` | Procedural content generation, game-playing agents via reinforcement learning, NPC behavior, and generative AI for game assets and narratives. |
+| `/ai-for-human-robot-interaction` | Multimodal interfaces, natural language instructions, shared autonomy, social robotics, and embodied AI for human-robot collaboration. |
+| `/ai-for-nlp` | Large language models, text classification, machine translation, question answering, information extraction, and prompt engineering. |
+| `/ai-for-speech` | Automatic speech recognition, text-to-speech, speaker verification, speech synthesis, and self-supervised speech models. |
+| `/ai-for-video` | Video understanding, action recognition, video generation, temporal modeling, video captioning, and multimodal video models. |
+| `/ai-for-virtual-reality` | Natural interaction, intent recognition, multimodal input, foveated rendering, virtual agents, and AI-driven content creation for VR. |
+| `/ai-for-acoustics` | Machine learning for source localization, room acoustics, bioacoustics, structural health monitoring, and spatial audio. |
+| `/ai-for-astrobiology` | ML for biosignature detection, life-detection mass spectrometry, extremophile habitats, and mission autonomy in alien environments. |
+| `/ai-for-astronomy` | Machine learning for survey-scale classification, transient detection, galaxy morphology, light-curve analysis, and telescope scheduling. |
+| `/ai-for-biophysics` | Machine learning for molecular dynamics, free-energy landscapes, protein-ligand kinetics, single-molecule analysis, and membrane systems. |
+| `/ai-for-condensed-matter` | Machine learning for phase classification, topological order, Hamiltonian learning, density functional surrogates, and quantum many-body systems. |
+| `/ai-for-cosmology` | ML for large-scale structure, weak lensing, CMB analysis, 21-cm cosmology, and cosmological parameter inference. |
+| `/ai-for-microfluidics` | Machine learning for droplet generation, lab-on-a-chip control, cell sorting, reaction optimization, and high-throughput screening. |
+| `/ai-for-nanotechnology` | ML for nanoparticle design, nanomaterial discovery, nano-architectonics, nanoscale imaging, and nanomanufacturing optimization. |
+| `/ai-for-optics` | Computational imaging, lens design, wavefront shaping, optical metrology, and inverse scattering with deep learning. |
+| `/ai-for-particle-physics` | ML for collider event classification, jet tagging, fast detector simulation, neutrino event reconstruction, and new-physics searches. |
+| `/ai-for-photonics` | Deep learning for photonic device inverse design, metasurfaces, optical communications, and nanophotonic simulation surrogates. |
+| `/ai-for-planetary-science` | Machine learning for mission data analysis, terrain classification, crater detection, atmospheric retrievals, and exoplanet characterization. |
 
 ## Usage
 
