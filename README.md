@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 248 | 234 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 261 | 244 commands (`/name`) |
+| **Devin** (`.devin/`) | 260 | 246 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 273 | 256 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (248)
+## Skills (260)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (111)
+### Custom Research Skills (123)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -371,8 +371,20 @@ Domain-specific skills for Gyanateet's research workflow.
 | `social-simulation-ml` | AgentTorch, LLM-based agents, differentiable ABM, and causal discovery for social and economic systems. |
 | `spatial-transcriptomics-gpu` | Cell segmentation, transcript assignment, BIDCell, segger, PanoSpace, and foundation models for spatial omics. |
 | `sports-biomechanics-ml` | Wearable sensors, ST-GNNs, federated learning, and multimodal fusion for athlete performance and injury risk. |
+| `category-theory-ml` | Functorial data modeling, categorical deep learning, structured cospans, string diagrams, and topos theory for ML. |
+| `differential-geometry-ml` | Riemannian manifolds, geodesics, natural gradients, hyperbolic ML, and optimization on curved spaces. |
+| `game-theory-multiagent-ml` | Nash equilibria, mean-field games, mechanism design, and deep multi-agent reinforcement learning. |
+| `high-dimensional-statistics` | Sparsity, LASSO, compressed sensing, concentration inequalities, and covariance estimation. |
+| `information-geometry-ml` | Fisher information metric, natural gradient, alpha-connections, and geometry of probability distributions. |
+| `kernel-methods-science` | RKHS, Gaussian processes, MMD, kernel mean embeddings, and kernel methods for PDEs. |
+| `optimal-transport-ml` | Wasserstein distance, Sinkhorn algorithm, sliced Wasserstein, and applications to generative modeling and domain adaptation. |
+| `optimization-under-uncertainty` | Robust optimization, stochastic programming, distributionally robust optimization, and Wasserstein DRO. |
+| `random-matrix-theory-ml` | Marchenko-Pastur, semicircle law, free probability, and spectral analysis of neural networks. |
+| `spectral-graph-ml` | Graph Laplacian, spectral clustering, spectral GNNs, graph partitioning, and spectral sparsification. |
+| `stochastic-processes-ml` | Itô calculus, score-based generative models, neural SDEs, rough paths, and continuous-time generative modeling. |
+| `topological-data-analysis` | Persistent homology, Ripser, GUDHI, Mapper, and topological deep learning for shape-aware scientific ML. |
 
-## Workflows (234)
+## Workflows (246)
 
 ### Research Workflows (15)
 
@@ -437,7 +449,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (111)
+### Custom Research Workflows (123)
 
 | Workflow | Description |
 |----------|-------------|
@@ -552,6 +564,18 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/social-simulation-ml` | AgentTorch, LLM-based agents, differentiable ABM, and causal discovery for social and economic systems. |
 | `/spatial-transcriptomics-gpu` | Cell segmentation, transcript assignment, BIDCell, segger, PanoSpace, and foundation models for spatial omics. |
 | `/sports-biomechanics-ml` | Wearable sensors, ST-GNNs, federated learning, and multimodal fusion for athlete performance and injury risk. |
+| `/category-theory-ml` | Functorial data modeling, categorical deep learning, structured cospans, string diagrams, and topos theory for ML. |
+| `/differential-geometry-ml` | Riemannian manifolds, geodesics, natural gradients, hyperbolic ML, and optimization on curved spaces. |
+| `/game-theory-multiagent-ml` | Nash equilibria, mean-field games, mechanism design, and deep multi-agent reinforcement learning. |
+| `/high-dimensional-statistics` | Sparsity, LASSO, compressed sensing, concentration inequalities, and covariance estimation. |
+| `/information-geometry-ml` | Fisher information metric, natural gradient, alpha-connections, and geometry of probability distributions. |
+| `/kernel-methods-science` | RKHS, Gaussian processes, MMD, kernel mean embeddings, and kernel methods for PDEs. |
+| `/optimal-transport-ml` | Wasserstein distance, Sinkhorn algorithm, sliced Wasserstein, and applications to generative modeling and domain adaptation. |
+| `/optimization-under-uncertainty` | Robust optimization, stochastic programming, distributionally robust optimization, and Wasserstein DRO. |
+| `/random-matrix-theory-ml` | Marchenko-Pastur, semicircle law, free probability, and spectral analysis of neural networks. |
+| `/spectral-graph-ml` | Graph Laplacian, spectral clustering, spectral GNNs, graph partitioning, and spectral sparsification. |
+| `/stochastic-processes-ml` | Itô calculus, score-based generative models, neural SDEs, rough paths, and continuous-time generative modeling. |
+| `/topological-data-analysis` | Persistent homology, Ripser, GUDHI, Mapper, and topological deep learning for shape-aware scientific ML. |
 
 ## Usage
 
