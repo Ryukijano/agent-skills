@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 800 | 786 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 813 | 796 commands (`/name`) |
+| **Devin** (`.devin/`) | 810 | 796 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 823 | 806 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (800)
+## Skills (810)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (663)
+### Custom Research Skills (673)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -923,8 +923,18 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-surface-engineering` | Machine learning for surface modification processes: thermal spray, laser cladding/peening, shot peening, plasma electrolytic oxidation, surface texturing, and residual stress optimization. |
 | `ai-for-textile-manufacturing` | Machine learning for yarn, fabric, and garment manufacturing: spinning, weaving, knitting, dyeing, finishing, quality inspection, and production optimization. |
 | `ai-for-welding` | Machine learning for arc, laser, and resistance welding: penetration prediction, defect detection, bead geometry, process monitoring, and parameter optimization. |
+| `cudaq-algorithms` | Build and compose fault-tolerant quantum programs with the CUDA-Q Algorithms library: Pauli LCU, qubitization, QSVT, Trotter, state preparation, and quantum chemistry. |
+| `pauli-lcu-encoding` | Use the linear-combination-of-unitaries (LCU) block encoding for Pauli Hamiltonians in CUDA-Q Algorithms. |
+| `qubitization-walk` | Build qubitization walk operators from a block encoding and measure Chebyshev moments in CUDA-Q Algorithms. |
+| `quantum-singular-value-transformation` | Apply polynomial transformations to block-encoded matrices with QSVT in CUDA-Q Algorithms. |
+| `trotterization-cudaq` | Simulate Hamiltonian time evolution using Trotter-Suzuki decomposition in CUDA-Q Algorithms. |
+| `quantum-state-preparation-cudaq` | Prepare reference quantum states such as Hartree–Fock and Givens-rotation Slater determinants inside CUDA-Q kernels. |
+| `fermion-to-qubit-cudaq` | Map fermionic operators to qubit operators using Jordan–Wigner, Bravyi–Kitaev, and other schemes for quantum chemistry. |
+| `quantum-chemistry-cudaq` | End-to-end quantum chemistry workflows from PySCF molecular integrals to CUDA-Q ground-state calculations. |
+| `double-factorization-cudaq` | Use double factorization block encodings to reduce the cost of quantum chemistry Hamiltonians in CUDA-Q. |
+| `custom-block-encodings-cudaq` | Implement custom block encodings in CUDA-Q Algorithms and plug them into the common BlockEncoding interface. |
 
-## Workflows (786)
+## Workflows (796)
 
 ### Research Workflows (15)
 
@@ -989,7 +999,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (663)
+### Custom Research Workflows (673)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1656,6 +1666,16 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-surface-engineering` | Machine learning for surface modification processes: thermal spray, laser cladding/peening, shot peening, plasma electrolytic oxidation, surface texturing, and residual stress optimization. |
 | `/ai-for-textile-manufacturing` | Machine learning for yarn, fabric, and garment manufacturing: spinning, weaving, knitting, dyeing, finishing, quality inspection, and production optimization. |
 | `/ai-for-welding` | Machine learning for arc, laser, and resistance welding: penetration prediction, defect detection, bead geometry, process monitoring, and parameter optimization. |
+| `/cudaq-algorithms` | Build and compose fault-tolerant quantum programs with the CUDA-Q Algorithms library. |
+| `/pauli-lcu-encoding` | Use the linear-combination-of-unitaries (LCU) block encoding for Pauli Hamiltonians in CUDA-Q. |
+| `/qubitization-walk` | Build qubitization walk operators and measure Chebyshev moments in CUDA-Q. |
+| `/quantum-singular-value-transformation` | Apply polynomial transformations to block-encoded matrices with QSVT in CUDA-Q. |
+| `/trotterization-cudaq` | Simulate Hamiltonian time evolution using Trotter-Suzuki decomposition in CUDA-Q. |
+| `/quantum-state-preparation-cudaq` | Prepare Hartree–Fock and Givens-rotation Slater determinants inside CUDA-Q kernels. |
+| `/fermion-to-qubit-cudaq` | Map fermionic operators to qubit operators for quantum chemistry in CUDA-Q. |
+| `/quantum-chemistry-cudaq` | End-to-end quantum chemistry workflows from PySCF to CUDA-Q ground-state calculations. |
+| `/double-factorization-cudaq` | Use double factorization block encodings for quantum chemistry Hamiltonians in CUDA-Q. |
+| `/custom-block-encodings-cudaq` | Implement custom block encodings in CUDA-Q Algorithms. |
 
 ## Usage
 
