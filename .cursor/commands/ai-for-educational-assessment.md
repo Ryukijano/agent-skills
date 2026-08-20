@@ -1,0 +1,7 @@
+# ai-for-educational-assessment
+
+Quick reference for `ai for educational assessment`.
+
+- Architecture / framework: ask first.
+- Key command / env vars: see the full skill.
+- Verification: run the smallest failing test first.

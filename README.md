@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 524 | 510 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 537 | 520 commands (`/name`) |
+| **Devin** (`.devin/`) | 560 | 546 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 573 | 556 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (524)
+## Skills (560)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (387)
+### Custom Research Skills (423)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -647,8 +647,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-search-and-rescue` | UAV and robot search planning, victim detection from imagery and sensors, and SAR mission coordination with AI. |
 | `ai-for-surveillance-ethics` | Fairness, privacy, proportionality, and algorithmic accountability for AI surveillance and facial recognition. |
 | `ai-for-threat-intelligence` | Cyber threat intelligence extraction, attribution, knowledge graphs, and automated indicator analysis with ML and LLMs. |
+| `ai-for-advertising` | Ad creative generation, media buying optimization, dynamic creative optimization, and predictive performance modeling. |
+| `ai-for-branding` | Brand strategy, visual identity, brand voice, naming, and AI-assisted brand co-creation with human curation. |
+| `ai-for-content-strategy` | Planning, auditing, and orchestrating content portfolios with AI, including generative-engine optimization and cross-platform adaptation. |
+| `ai-for-copywriting` | Marketing and advertising copy, email and landing-page text, conversion frameworks, and brand-voice calibration with LLMs. |
+| `ai-for-creative-writing` | Co-writing novels, screenplays, and long-form fiction with LLMs, prompt engineering for voice and style, and human-AI revision workflows. |
+| `ai-for-digital-marketing` | SEO, SEM, social media, email automation, marketing analytics, and AI-driven personalization across digital channels. |
+| `ai-for-influencer-marketing` | Creator discovery, campaign matching, content co-creation, performance prediction, and authenticity measurement for influencer marketing. |
+| `ai-for-podcasting` | AI-generated and AI-assisted podcast production, including scriptwriting, voice synthesis, editing, transcription, and show notes. |
+| `ai-for-poetry` | Meter, rhyme, and stylistic constraints for AI-generated poetry, with evaluation and human-AI curation. |
+| `ai-for-product-design` | Concept generation, design space exploration, prototyping, and engineering handoff with generative AI in product development. |
+| `ai-for-storytelling` | Narrative generation, plot planning, character arcs, and worldbuilding with structured LLM workflows. |
+| `ai-for-ux-design` | Interaction design, user research, prototyping, and AI UX patterns for human-centered AI products. |
+| `ai-for-competency-development` | Competency-based education, skill gap analysis, adaptive credentialing, and AI-driven mastery and portfolio assessment. |
+| `ai-for-curriculum-design` | Goal-aligned course sequencing, personalized learning paths, content alignment, adaptive curricula, and standards mapping. |
+| `ai-for-educational-assessment` | Automated essay scoring, conversational assessment, LLM rubric grading, feedback generation, and validity and fairness of AI-driven evaluation. |
+| `ai-for-educational-games` | Game-based learning, adaptive difficulty, intelligent NPCs, scaffolding, and learning analytics embedded in playful environments. |
+| `ai-for-higher-education` | Admissions analytics, retention and completion modeling, student success advising, enrollment planning, and institutional research. |
+| `ai-for-language-learning` | AI chatbots for conversation practice, automated writing and pronunciation feedback, CEFR-level adaptation, and second-language acquisition support. |
+| `ai-for-learning-analytics` | Learning management system analysis, learner trajectory modeling, early warning systems, engagement dashboards, and educational data mining. |
+| `ai-for-lifelong-learning` | Continuous skill development, career-aligned learning pathways, micro-credentials, and AI support for adult and professional learners. |
+| `ai-for-pedagogy` | Teacher-AI collaboration, lesson planning, instructional design, feedback generation, and evidence-based teaching practice augmentation. |
+| `ai-for-special-education` | Assistive technologies, personalized interventions, augmentative and alternative communication, accessibility, and inclusive learning for learners with disabilities. |
+| `ai-for-student-engagement` | Engagement prediction, behavioral analytics, early warning systems, intervention targeting, and motivational feedback. |
+| `ai-for-tutoring` | Intelligent tutoring systems, dialogue-based tutoring, error diagnosis, Socratic scaffolding, and personalized next-step hints. |
+| `ai-for-air-quality` | Pollutant forecasting, spatiotemporal PM modeling, emission source apportionment, and early warning for air quality. |
+| `ai-for-biodiversity` | Automated species detection, acoustic and eDNA monitoring, habitat suitability modeling, and biodiversity trend analysis for conservation. |
+| `ai-for-circular-economy` | Material flow optimization, predictive recycling, product lifecycle extension, and circular supply-chain design with AI. |
+| `ai-for-conservation-planning` | Spatial prioritization, protected-area design, systematic conservation planning, and trade-off analysis using optimization and ML. |
+| `ai-for-coral-reefs` | Coral reef monitoring, bleaching detection, benthic classification, and reef-health assessment from underwater and drone imagery. |
+| `ai-for-desertification` | Land degradation and desertification risk mapping, sensitivity assessment, and early warning from remote sensing and ML. |
+| `ai-for-ecosystem-restoration` | Monitoring rewilding, forest recovery, wetland restoration, and habitat reconstruction using remote sensing and biodiversity indicators. |
+| `ai-for-glaciology` | Glacier mapping, surface mass balance estimation, snow/ice classification, and climate-change impact assessment. |
+| `ai-for-natural-hazards` | Multi-hazard susceptibility mapping and early warning for landslides, floods, wildfires, and land subsidence with ML and remote sensing. |
+| `ai-for-ocean-conservation` | Marine protected area monitoring, illegal fishing detection, species tracking, and ocean health assessment from satellite and vessel data. |
+| `ai-for-waste-management` | Waste classification, automated sorting, route optimization, recycling quality, and lifecycle assessment with ML and robotics. |
+| `ai-for-wetlands` | Wetland mapping, inundation dynamics, cover-type classification, and hydrological trend monitoring from satellite time series. |
 
-## Workflows (510)
+## Workflows (546)
 
 ### Research Workflows (15)
 
@@ -713,7 +749,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (387)
+### Custom Research Workflows (423)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1104,6 +1140,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-search-and-rescue` | UAV and robot search planning, victim detection from imagery and sensors, and SAR mission coordination with AI. |
 | `/ai-for-surveillance-ethics` | Fairness, privacy, proportionality, and algorithmic accountability for AI surveillance and facial recognition. |
 | `/ai-for-threat-intelligence` | Cyber threat intelligence extraction, attribution, knowledge graphs, and automated indicator analysis with ML and LLMs. |
+| `/ai-for-advertising` | Ad creative generation, media buying optimization, dynamic creative optimization, and predictive performance modeling. |
+| `/ai-for-branding` | Brand strategy, visual identity, brand voice, naming, and AI-assisted brand co-creation with human curation. |
+| `/ai-for-content-strategy` | Planning, auditing, and orchestrating content portfolios with AI, including generative-engine optimization and cross-platform adaptation. |
+| `/ai-for-copywriting` | Marketing and advertising copy, email and landing-page text, conversion frameworks, and brand-voice calibration with LLMs. |
+| `/ai-for-creative-writing` | Co-writing novels, screenplays, and long-form fiction with LLMs, prompt engineering for voice and style, and human-AI revision workflows. |
+| `/ai-for-digital-marketing` | SEO, SEM, social media, email automation, marketing analytics, and AI-driven personalization across digital channels. |
+| `/ai-for-influencer-marketing` | Creator discovery, campaign matching, content co-creation, performance prediction, and authenticity measurement for influencer marketing. |
+| `/ai-for-podcasting` | AI-generated and AI-assisted podcast production, including scriptwriting, voice synthesis, editing, transcription, and show notes. |
+| `/ai-for-poetry` | Meter, rhyme, and stylistic constraints for AI-generated poetry, with evaluation and human-AI curation. |
+| `/ai-for-product-design` | Concept generation, design space exploration, prototyping, and engineering handoff with generative AI in product development. |
+| `/ai-for-storytelling` | Narrative generation, plot planning, character arcs, and worldbuilding with structured LLM workflows. |
+| `/ai-for-ux-design` | Interaction design, user research, prototyping, and AI UX patterns for human-centered AI products. |
+| `/ai-for-competency-development` | Competency-based education, skill gap analysis, adaptive credentialing, and AI-driven mastery and portfolio assessment. |
+| `/ai-for-curriculum-design` | Goal-aligned course sequencing, personalized learning paths, content alignment, adaptive curricula, and standards mapping. |
+| `/ai-for-educational-assessment` | Automated essay scoring, conversational assessment, LLM rubric grading, feedback generation, and validity and fairness of AI-driven evaluation. |
+| `/ai-for-educational-games` | Game-based learning, adaptive difficulty, intelligent NPCs, scaffolding, and learning analytics embedded in playful environments. |
+| `/ai-for-higher-education` | Admissions analytics, retention and completion modeling, student success advising, enrollment planning, and institutional research. |
+| `/ai-for-language-learning` | AI chatbots for conversation practice, automated writing and pronunciation feedback, CEFR-level adaptation, and second-language acquisition support. |
+| `/ai-for-learning-analytics` | Learning management system analysis, learner trajectory modeling, early warning systems, engagement dashboards, and educational data mining. |
+| `/ai-for-lifelong-learning` | Continuous skill development, career-aligned learning pathways, micro-credentials, and AI support for adult and professional learners. |
+| `/ai-for-pedagogy` | Teacher-AI collaboration, lesson planning, instructional design, feedback generation, and evidence-based teaching practice augmentation. |
+| `/ai-for-special-education` | Assistive technologies, personalized interventions, augmentative and alternative communication, accessibility, and inclusive learning for learners with disabilities. |
+| `/ai-for-student-engagement` | Engagement prediction, behavioral analytics, early warning systems, intervention targeting, and motivational feedback. |
+| `/ai-for-tutoring` | Intelligent tutoring systems, dialogue-based tutoring, error diagnosis, Socratic scaffolding, and personalized next-step hints. |
+| `/ai-for-air-quality` | Pollutant forecasting, spatiotemporal PM modeling, emission source apportionment, and early warning for air quality. |
+| `/ai-for-biodiversity` | Automated species detection, acoustic and eDNA monitoring, habitat suitability modeling, and biodiversity trend analysis for conservation. |
+| `/ai-for-circular-economy` | Material flow optimization, predictive recycling, product lifecycle extension, and circular supply-chain design with AI. |
+| `/ai-for-conservation-planning` | Spatial prioritization, protected-area design, systematic conservation planning, and trade-off analysis using optimization and ML. |
+| `/ai-for-coral-reefs` | Coral reef monitoring, bleaching detection, benthic classification, and reef-health assessment from underwater and drone imagery. |
+| `/ai-for-desertification` | Land degradation and desertification risk mapping, sensitivity assessment, and early warning from remote sensing and ML. |
+| `/ai-for-ecosystem-restoration` | Monitoring rewilding, forest recovery, wetland restoration, and habitat reconstruction using remote sensing and biodiversity indicators. |
+| `/ai-for-glaciology` | Glacier mapping, surface mass balance estimation, snow/ice classification, and climate-change impact assessment. |
+| `/ai-for-natural-hazards` | Multi-hazard susceptibility mapping and early warning for landslides, floods, wildfires, and land subsidence with ML and remote sensing. |
+| `/ai-for-ocean-conservation` | Marine protected area monitoring, illegal fishing detection, species tracking, and ocean health assessment from satellite and vessel data. |
+| `/ai-for-waste-management` | Waste classification, automated sorting, route optimization, recycling quality, and lifecycle assessment with ML and robotics. |
+| `/ai-for-wetlands` | Wetland mapping, inundation dynamics, cover-type classification, and hydrological trend monitoring from satellite time series. |
 
 ## Usage
 
