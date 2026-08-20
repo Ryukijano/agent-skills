@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 260 | 246 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 273 | 256 commands (`/name`) |
+| **Devin** (`.devin/`) | 284 | 270 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 297 | 280 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (260)
+## Skills (284)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (123)
+### Custom Research Skills (147)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -383,8 +383,32 @@ Domain-specific skills for Gyanateet's research workflow.
 | `spectral-graph-ml` | Graph Laplacian, spectral clustering, spectral GNNs, graph partitioning, and spectral sparsification. |
 | `stochastic-processes-ml` | Itô calculus, score-based generative models, neural SDEs, rough paths, and continuous-time generative modeling. |
 | `topological-data-analysis` | Persistent homology, Ripser, GUDHI, Mapper, and topological deep learning for shape-aware scientific ML. |
+| `agent-evaluation-benchmarks` | Measure agent capability on coding, web, tool use, and open-ended reasoning benchmarks. |
+| `agent-memory` | Short-term and long-term memory for agents: vector stores, summaries, entity tracking, and memory hierarchies. |
+| `llm-judge-evaluation` | Use strong language models to evaluate, score, and compare outputs from other models or pipelines. |
+| `llm-reasoning` | Chain-of-thought, self-consistency, tree-of-thoughts, and reasoning-optimized prompting for large language models. |
+| `llm-redteaming` | Systematically probe LLMs for harmful outputs, jailbreaks, privacy leaks, and misalignment. |
+| `long-context-llm` | Architectures, position interpolation, and evaluation for language models with very long contexts. |
+| `mcp-integration` | Connect agents to external tools, databases, and services using the Model Context Protocol (MCP). |
+| `multi-agent-orchestration` | Coordinate multiple specialist agents to decompose tasks, debate, and synthesize solutions. |
+| `prompt-engineering-advanced` | Structured prompting, few-shot, chain-of-thought, role prompts, and prompt optimization for LLMs. |
+| `rag-retrieval-evaluation` | Evaluate retrieval quality, answer relevance, and end-to-end RAG pipeline performance. |
+| `test-time-compute` | Improve LLM output quality by increasing inference-time computation: search, verification, and reward models. |
+| `tool-use-agents` | Design LLM agents that call functions, APIs, and utilities to gather facts and take actions. |
+| `ai-for-arts-humanities` | Digital humanities, text analysis, image restoration, and creative AI for cultural heritage. |
+| `ai-for-autonomous-vehicles` | Perception, prediction, planning, and simulation for self-driving cars and mobile robots. |
+| `ai-for-biology` | Deep learning for genomics, transcriptomics, proteomics, cell imaging, and biological sequence modeling. |
+| `ai-for-chemistry` | Molecular property prediction, generative chemistry, reaction prediction, and cheminformatics with deep learning. |
+| `ai-for-education` | Personalized learning, knowledge tracing, automated assessment, and intelligent tutoring systems. |
+| `ai-for-finance` | Machine learning for time-series forecasting, risk modeling, algorithmic trading, and financial NLP. |
+| `ai-for-law` | Legal document analysis, case law retrieval, contract review, and legal reasoning benchmarks. |
+| `ai-for-music` | Music generation, transcription, recommendation, and audio processing with deep learning. |
+| `ai-for-physics-simulation` | Neural operators, surrogate models, and learned emulators for partial differential equations and physical systems. |
+| `ai-for-psychiatry-mental-health` | Machine learning for digital phenotyping, diagnostic support, treatment prediction, and crisis detection. |
+| `ai-for-quantum-computing` | Machine learning for quantum state tomography, variational quantum algorithms, quantum control, and error mitigation. |
+| `ai-for-robotics` | Imitation learning, reinforcement learning, sim-to-real, and foundation models for robot manipulation and navigation. |
 
-## Workflows (246)
+## Workflows (270)
 
 ### Research Workflows (15)
 
@@ -449,7 +473,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (123)
+### Custom Research Workflows (147)
 
 | Workflow | Description |
 |----------|-------------|
@@ -576,6 +600,30 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/spectral-graph-ml` | Graph Laplacian, spectral clustering, spectral GNNs, graph partitioning, and spectral sparsification. |
 | `/stochastic-processes-ml` | Itô calculus, score-based generative models, neural SDEs, rough paths, and continuous-time generative modeling. |
 | `/topological-data-analysis` | Persistent homology, Ripser, GUDHI, Mapper, and topological deep learning for shape-aware scientific ML. |
+| `/agent-evaluation-benchmarks` | Measure agent capability on coding, web, tool use, and open-ended reasoning benchmarks. |
+| `/agent-memory` | Short-term and long-term memory for agents: vector stores, summaries, entity tracking, and memory hierarchies. |
+| `/llm-judge-evaluation` | Use strong language models to evaluate, score, and compare outputs from other models or pipelines. |
+| `/llm-reasoning` | Chain-of-thought, self-consistency, tree-of-thoughts, and reasoning-optimized prompting for large language models. |
+| `/llm-redteaming` | Systematically probe LLMs for harmful outputs, jailbreaks, privacy leaks, and misalignment. |
+| `/long-context-llm` | Architectures, position interpolation, and evaluation for language models with very long contexts. |
+| `/mcp-integration` | Connect agents to external tools, databases, and services using the Model Context Protocol (MCP). |
+| `/multi-agent-orchestration` | Coordinate multiple specialist agents to decompose tasks, debate, and synthesize solutions. |
+| `/prompt-engineering-advanced` | Structured prompting, few-shot, chain-of-thought, role prompts, and prompt optimization for LLMs. |
+| `/rag-retrieval-evaluation` | Evaluate retrieval quality, answer relevance, and end-to-end RAG pipeline performance. |
+| `/test-time-compute` | Improve LLM output quality by increasing inference-time computation: search, verification, and reward models. |
+| `/tool-use-agents` | Design LLM agents that call functions, APIs, and utilities to gather facts and take actions. |
+| `/ai-for-arts-humanities` | Digital humanities, text analysis, image restoration, and creative AI for cultural heritage. |
+| `/ai-for-autonomous-vehicles` | Perception, prediction, planning, and simulation for self-driving cars and mobile robots. |
+| `/ai-for-biology` | Deep learning for genomics, transcriptomics, proteomics, cell imaging, and biological sequence modeling. |
+| `/ai-for-chemistry` | Molecular property prediction, generative chemistry, reaction prediction, and cheminformatics with deep learning. |
+| `/ai-for-education` | Personalized learning, knowledge tracing, automated assessment, and intelligent tutoring systems. |
+| `/ai-for-finance` | Machine learning for time-series forecasting, risk modeling, algorithmic trading, and financial NLP. |
+| `/ai-for-law` | Legal document analysis, case law retrieval, contract review, and legal reasoning benchmarks. |
+| `/ai-for-music` | Music generation, transcription, recommendation, and audio processing with deep learning. |
+| `/ai-for-physics-simulation` | Neural operators, surrogate models, and learned emulators for partial differential equations and physical systems. |
+| `/ai-for-psychiatry-mental-health` | Machine learning for digital phenotyping, diagnostic support, treatment prediction, and crisis detection. |
+| `/ai-for-quantum-computing` | Machine learning for quantum state tomography, variational quantum algorithms, quantum control, and error mitigation. |
+| `/ai-for-robotics` | Imitation learning, reinforcement learning, sim-to-real, and foundation models for robot manipulation and navigation. |
 
 ## Usage
 

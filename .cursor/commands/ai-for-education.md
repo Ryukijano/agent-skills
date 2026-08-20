@@ -1,0 +1,7 @@
+# ai-for-education
+
+Quick reference for `ai for education`.
+
+- Architecture / framework: ask first.
+- Key command / env vars: see the full skill.
+- Verification: run the smallest failing test first.
