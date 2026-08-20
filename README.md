@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 560 | 546 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 573 | 556 commands (`/name`) |
+| **Devin** (`.devin/`) | 596 | 582 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 609 | 592 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (560)
+## Skills (596)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (423)
+### Custom Research Skills (459)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -683,8 +683,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-ocean-conservation` | Marine protected area monitoring, illegal fishing detection, species tracking, and ocean health assessment from satellite and vessel data. |
 | `ai-for-waste-management` | Waste classification, automated sorting, route optimization, recycling quality, and lifecycle assessment with ML and robotics. |
 | `ai-for-wetlands` | Wetland mapping, inundation dynamics, cover-type classification, and hydrological trend monitoring from satellite time series. |
+| `ai-for-change-management` | Stakeholder sentiment monitoring, adoption analytics, training personalization, and AI-assisted transformation communications. |
+| `ai-for-compliance` | Regulatory mapping, policy gap analysis, automated control testing, and AI-assisted compliance monitoring. |
+| `ai-for-innovation-management` | Idea generation, R&D portfolio prioritization, trend forecasting, and AI-enabled new product development. |
+| `ai-for-insurance` | Underwriting triage, claims automation, fraud detection, and AI-assisted pricing and reserving. |
+| `ai-for-knowledge-management` | Semantic knowledge search, enterprise RAG, expertise mining, and AI-assisted capture of institutional tacit knowledge. |
+| `ai-for-legal-operations` | Contract review, clause extraction, matter intake, and AI-assisted legal workflow automation. |
+| `ai-for-management-consulting` | Accelerate diagnostic research, market sizing, client synthesis, and GenAI-assisted advisory workflows while managing epistemic risk. |
+| `ai-for-operations-management` | Process mining, service-level optimization, quality control, and AI-driven operational decision support. |
+| `ai-for-project-management` | Schedule and cost forecasting, risk triage, resource optimization, and AI-driven project health monitoring. |
+| `ai-for-real-estate` | Automated valuation, market analysis, lead matching, and AI-assisted property due diligence. |
+| `ai-for-risk-management` | Credit, market, operational, and emerging risk modeling with ML and scenario analysis. |
+| `ai-for-strategy` | Data-driven strategy formulation, competitive scenario modeling, market sensing, and AI-augmented strategic decision-making. |
+| `ai-for-behavioral-science` | Computational modeling of human behavior, n-of-1 and ecological momentary assessment, digital interventions, and experimentally validated behavior change. |
+| `ai-for-cancer-bioinformatics` | Multi-omics integration, tumor subtyping, biomarker discovery, and precision oncology using AI. |
+| `ai-for-clinical-informatics` | AI-enabled clinical decision support, EHR integration, workflow optimization, and evaluation in real-world care settings. |
+| `ai-for-cognitive-science` | Computational models of perception, memory, language, reasoning, and human-like cognition, bridging AI and psychological theory. |
+| `ai-for-digital-health` | Consumer-facing health apps, wearable biosensors, remote monitoring, patient portals, and data-driven digital wellness interventions. |
+| `ai-for-global-health` | AI for disease burden, healthcare systems, and health equity in low- and middle-income countries and resource-limited settings. |
+| `ai-for-health-economics` | Cost-effectiveness, health technology assessment, demand and pricing models, and machine learning for health outcomes research. |
+| `ai-for-health-informatics` | Electronic health records, clinical data standards, interoperability, and AI-enabled analytics for healthcare delivery and research. |
+| `ai-for-health-services-research` | AI for healthcare access, quality, utilization, policy, workforce, and health-system performance. |
+| `ai-for-immunoinformatics` | Machine learning for immune repertoire analysis, epitope prediction, vaccine design, and immunotherapy optimization. |
+| `ai-for-neuroinformatics` | Data science for brain imaging, neural signals, connectomics, and computational neuroscience workflows. |
+| `ai-for-precision-public-health` | Subpopulation-targeted prevention, genomics-guided public health, geospatial risk modeling, and equitable intervention targeting. |
+| `ai-for-art-history` | Computer vision, deep learning, and vision-language models for style classification, iconography, provenance, and quantitative art history. |
+| `ai-for-cultural-heritage` | Machine learning and deep learning for the digitization, documentation, analysis, and sustainable management of tangible and intangible cultural heritage. |
+| `ai-for-digital-humanities` | Machine learning, NLP, and network analysis for historical texts, archives, languages, and multimodal humanities collections. |
+| `ai-for-ethnomusicology` | Computational analysis of field recordings, oral musical traditions, tuning systems, and cross-cultural musical patterns using MIR and machine learning. |
+| `ai-for-folklore` | Computational folkloristics, motif and tale-type detection, and large-scale narrative analysis of folk tales, legends, and oral traditions. |
+| `ai-for-heritage-tourism` | Recommender systems, itinerary planning, visitor behavior modeling, and personalized cultural heritage experiences for sustainable tourism. |
+| `ai-for-literary-studies` | Computational stylistics, authorship attribution, genre and style analysis, and interpretive NLP for literary texts and corpora. |
+| `ai-for-museum-collections` | Computer vision, natural language processing, and metadata enrichment for cataloging, searching, and interpreting museum and archive collections. |
+| `ai-for-mythology` | Computational mythography, knowledge graphs of mythological figures, structural analysis of myths, and cross-cultural narrative comparison. |
+| `ai-for-oral-history` | Speech recognition, diarization, natural language processing, and generative AI for transcribing, indexing, and exploring oral history archives. |
+| `ai-for-preservation` | Predictive monitoring, environmental risk assessment, digital twins, and preventive conservation for built heritage and cultural collections. |
+| `ai-for-restoration` | Digital inpainting, virtual restoration, style-aware reconstruction, and diffusion models for repairing artworks, murals, and manuscripts. |
 
-## Workflows (546)
+## Workflows (582)
 
 ### Research Workflows (15)
 
@@ -749,7 +785,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (423)
+### Custom Research Workflows (459)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1176,6 +1212,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-ocean-conservation` | Marine protected area monitoring, illegal fishing detection, species tracking, and ocean health assessment from satellite and vessel data. |
 | `/ai-for-waste-management` | Waste classification, automated sorting, route optimization, recycling quality, and lifecycle assessment with ML and robotics. |
 | `/ai-for-wetlands` | Wetland mapping, inundation dynamics, cover-type classification, and hydrological trend monitoring from satellite time series. |
+| `/ai-for-change-management` | Stakeholder sentiment monitoring, adoption analytics, training personalization, and AI-assisted transformation communications. |
+| `/ai-for-compliance` | Regulatory mapping, policy gap analysis, automated control testing, and AI-assisted compliance monitoring. |
+| `/ai-for-innovation-management` | Idea generation, R&D portfolio prioritization, trend forecasting, and AI-enabled new product development. |
+| `/ai-for-insurance` | Underwriting triage, claims automation, fraud detection, and AI-assisted pricing and reserving. |
+| `/ai-for-knowledge-management` | Semantic knowledge search, enterprise RAG, expertise mining, and AI-assisted capture of institutional tacit knowledge. |
+| `/ai-for-legal-operations` | Contract review, clause extraction, matter intake, and AI-assisted legal workflow automation. |
+| `/ai-for-management-consulting` | Accelerate diagnostic research, market sizing, client synthesis, and GenAI-assisted advisory workflows while managing epistemic risk. |
+| `/ai-for-operations-management` | Process mining, service-level optimization, quality control, and AI-driven operational decision support. |
+| `/ai-for-project-management` | Schedule and cost forecasting, risk triage, resource optimization, and AI-driven project health monitoring. |
+| `/ai-for-real-estate` | Automated valuation, market analysis, lead matching, and AI-assisted property due diligence. |
+| `/ai-for-risk-management` | Credit, market, operational, and emerging risk modeling with ML and scenario analysis. |
+| `/ai-for-strategy` | Data-driven strategy formulation, competitive scenario modeling, market sensing, and AI-augmented strategic decision-making. |
+| `/ai-for-behavioral-science` | Computational modeling of human behavior, n-of-1 and ecological momentary assessment, digital interventions, and experimentally validated behavior change. |
+| `/ai-for-cancer-bioinformatics` | Multi-omics integration, tumor subtyping, biomarker discovery, and precision oncology using AI. |
+| `/ai-for-clinical-informatics` | AI-enabled clinical decision support, EHR integration, workflow optimization, and evaluation in real-world care settings. |
+| `/ai-for-cognitive-science` | Computational models of perception, memory, language, reasoning, and human-like cognition, bridging AI and psychological theory. |
+| `/ai-for-digital-health` | Consumer-facing health apps, wearable biosensors, remote monitoring, patient portals, and data-driven digital wellness interventions. |
+| `/ai-for-global-health` | AI for disease burden, healthcare systems, and health equity in low- and middle-income countries and resource-limited settings. |
+| `/ai-for-health-economics` | Cost-effectiveness, health technology assessment, demand and pricing models, and machine learning for health outcomes research. |
+| `/ai-for-health-informatics` | Electronic health records, clinical data standards, interoperability, and AI-enabled analytics for healthcare delivery and research. |
+| `/ai-for-health-services-research` | AI for healthcare access, quality, utilization, policy, workforce, and health-system performance. |
+| `/ai-for-immunoinformatics` | Machine learning for immune repertoire analysis, epitope prediction, vaccine design, and immunotherapy optimization. |
+| `/ai-for-neuroinformatics` | Data science for brain imaging, neural signals, connectomics, and computational neuroscience workflows. |
+| `/ai-for-precision-public-health` | Subpopulation-targeted prevention, genomics-guided public health, geospatial risk modeling, and equitable intervention targeting. |
+| `/ai-for-art-history` | Computer vision, deep learning, and vision-language models for style classification, iconography, provenance, and quantitative art history. |
+| `/ai-for-cultural-heritage` | Machine learning and deep learning for the digitization, documentation, analysis, and sustainable management of tangible and intangible cultural heritage. |
+| `/ai-for-digital-humanities` | Machine learning, NLP, and network analysis for historical texts, archives, languages, and multimodal humanities collections. |
+| `/ai-for-ethnomusicology` | Computational analysis of field recordings, oral musical traditions, tuning systems, and cross-cultural musical patterns using MIR and machine learning. |
+| `/ai-for-folklore` | Computational folkloristics, motif and tale-type detection, and large-scale narrative analysis of folk tales, legends, and oral traditions. |
+| `/ai-for-heritage-tourism` | Recommender systems, itinerary planning, visitor behavior modeling, and personalized cultural heritage experiences for sustainable tourism. |
+| `/ai-for-literary-studies` | Computational stylistics, authorship attribution, genre and style analysis, and interpretive NLP for literary texts and corpora. |
+| `/ai-for-museum-collections` | Computer vision, natural language processing, and metadata enrichment for cataloging, searching, and interpreting museum and archive collections. |
+| `/ai-for-mythology` | Computational mythography, knowledge graphs of mythological figures, structural analysis of myths, and cross-cultural narrative comparison. |
+| `/ai-for-oral-history` | Speech recognition, diarization, natural language processing, and generative AI for transcribing, indexing, and exploring oral history archives. |
+| `/ai-for-preservation` | Predictive monitoring, environmental risk assessment, digital twins, and preventive conservation for built heritage and cultural collections. |
+| `/ai-for-restoration` | Digital inpainting, virtual restoration, style-aware reconstruction, and diffusion models for repairing artworks, murals, and manuscripts. |
 
 ## Usage
 

@@ -1,0 +1,7 @@
+# ai-for-clinical-informatics
+
+Quick reference for `ai for clinical informatics`.
+
+- Architecture / framework: ask first.
+- Key command / env vars: see the full skill.
+- Verification: run the smallest failing test first.

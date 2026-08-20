@@ -1,0 +1,7 @@
+# ai-for-insurance
+
+Quick reference for `ai for insurance`.
+
+- Architecture / framework: ask first.
+- Key command / env vars: see the full skill.
+- Verification: run the smallest failing test first.
