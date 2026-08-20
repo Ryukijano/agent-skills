@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 488 | 474 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 501 | 484 commands (`/name`) |
+| **Devin** (`.devin/`) | 524 | 510 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 537 | 520 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (488)
+## Skills (524)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (351)
+### Custom Research Skills (387)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -611,8 +611,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-particle-physics` | ML for collider event classification, jet tagging, fast detector simulation, neutrino event reconstruction, and new-physics searches. |
 | `ai-for-photonics` | Deep learning for photonic device inverse design, metasurfaces, optical communications, and nanophotonic simulation surrogates. |
 | `ai-for-planetary-science` | Machine learning for mission data analysis, terrain classification, crater detection, atmospheric retrievals, and exoplanet characterization. |
+| `ai-for-aerospace` | Machine learning for aircraft and spacecraft design, aerodynamic optimization, structural health monitoring, satellite operations, and certification of safety-critical aerospace systems. |
+| `ai-for-automotive` | AI for automotive design, manufacturing, battery management, ADAS, quality control, and supply-chain optimization across the vehicle lifecycle. |
+| `ai-for-aviation` | AI for airline and airport operations, including predictive maintenance, crew and fleet scheduling, disruption recovery, fuel optimization, and safety analytics. |
+| `ai-for-drones` | AI for UAV perception, navigation, obstacle avoidance, mission planning, multi-drone coordination, and vision-language drone control. |
+| `ai-for-exoskeletons` | AI for wearable exoskeleton and exosuit control, gait and intention recognition, human-robot interaction, rehabilitation, and assistive augmentation. |
+| `ai-for-field-robotics` | AI for robots operating in outdoor, unstructured environments such as agriculture, construction, mining, environmental monitoring, and disaster response. |
+| `ai-for-industrial-robotics` | Machine learning for factory manipulation, assembly, pick-and-place, force control, sim-to-real, and vision-language-action models in industrial settings. |
+| `ai-for-maritime` | AI for maritime autonomous surface ships, route and weather routing optimization, collision avoidance, port logistics, and vessel situational awareness. |
+| `ai-for-quality-control` | Machine learning and computer vision for automated inspection, defect detection, statistical process control, and zero-defect manufacturing. |
+| `ai-for-rail` | AI for railway infrastructure health, predictive maintenance, train scheduling, energy optimization, and real-time disruption management. |
+| `ai-for-smart-manufacturing` | AI for cyber-physical manufacturing, digital twins, real-time process optimization, predictive maintenance, and sustainable Industry 4.0/5.0 systems. |
+| `ai-for-warehouse-robotics` | AI for autonomous mobile robots, goods-to-person systems, picking, multi-agent path finding, task allocation, and warehouse traffic management. |
+| `ai-for-cooking` | Recipe generation, meal planning, ingredient substitution, food image recognition, and personalized nutrition-aware cooking assistance. |
+| `ai-for-event-planning` | Venue and vendor recommendation, guest-list management, scheduling, budget optimization, and group preference aggregation for personal and small events. |
+| `ai-for-fitness` | Personalized workout plans, exercise form analysis, pose estimation, wearables, and adaptive recovery for individual fitness. |
+| `ai-for-home-automation` | Smart home control, energy management, occupancy prediction, device scheduling, and comfort optimization with reinforcement learning and IoT. |
+| `ai-for-legal-assistance` | Legal intake, contract review, plain-language document summarization, form filling, and accessible legal triage for non-experts. |
+| `ai-for-lifestyle` | Habit formation, hobby and style recommendations, personal goal coaching, and holistic life-planning agents for everyday decisions. |
+| `ai-for-mental-health` | CBT-based chatbots, mood tracking, crisis triage, digital therapeutics, and scalable psychological support for consumers. |
+| `ai-for-personal-finance` | Budget optimization, cash-flow forecasting, robo-advisory, credit scoring, and personalized savings and investment guidance for household financial decisions. |
+| `ai-for-personal-productivity` | Time management, task prioritization, calendar scheduling, meeting optimization, and personal workflow automation. |
+| `ai-for-shopping` | Product discovery, personalized recommendations, price comparison, review summarization, and AI buyer guides for consumer purchases. |
+| `ai-for-travel` | Itinerary planning, point-of-interest recommendation, flight and hotel personalization, trip optimization, and conversational travel agents. |
+| `ai-for-wellness` | Holistic wellness, sleep, stress, mindfulness, HRV biofeedback, and personalized lifestyle recommendations for everyday well-being. |
+| `ai-for-border-security` | Biometric identity verification, contraband and anomaly detection, and multi-sensor fusion at ports of entry. |
+| `ai-for-crisis-communication` | Automated situational awareness, rumor detection, multilingual crisis summarization, and public information chatbots. |
+| `ai-for-cyber-physical-security` | Securing industrial control systems, SCADA anomaly detection, physical invariants, and cross-layer intrusion detection. |
+| `ai-for-cybersecurity` | Network intrusion detection, malware and phishing classification, vulnerability discovery, adversarial ML, and SOC automation. |
+| `ai-for-disaster-preparedness` | Hazard risk assessment, early warning systems, scenario simulation, and mitigation planning with AI. |
+| `ai-for-emergency-management` | Incident prediction, resource allocation, damage assessment, and generative AI for emergency operations. |
+| `ai-for-physical-security` | Perimeter intrusion detection, access control analytics, video anomaly detection, and AI-augmented guard operations. |
+| `ai-for-public-safety` | Emergency call dispatch, response-time optimization, situational awareness, and fairness-aware public safety analytics. |
+| `ai-for-resilience` | Critical infrastructure resilience, disaster recovery planning, stress testing, and learning-based restoration optimization. |
+| `ai-for-search-and-rescue` | UAV and robot search planning, victim detection from imagery and sensors, and SAR mission coordination with AI. |
+| `ai-for-surveillance-ethics` | Fairness, privacy, proportionality, and algorithmic accountability for AI surveillance and facial recognition. |
+| `ai-for-threat-intelligence` | Cyber threat intelligence extraction, attribution, knowledge graphs, and automated indicator analysis with ML and LLMs. |
 
-## Workflows (474)
+## Workflows (510)
 
 ### Research Workflows (15)
 
@@ -677,7 +713,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (351)
+### Custom Research Workflows (387)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1032,6 +1068,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-particle-physics` | ML for collider event classification, jet tagging, fast detector simulation, neutrino event reconstruction, and new-physics searches. |
 | `/ai-for-photonics` | Deep learning for photonic device inverse design, metasurfaces, optical communications, and nanophotonic simulation surrogates. |
 | `/ai-for-planetary-science` | Machine learning for mission data analysis, terrain classification, crater detection, atmospheric retrievals, and exoplanet characterization. |
+| `/ai-for-aerospace` | Machine learning for aircraft and spacecraft design, aerodynamic optimization, structural health monitoring, satellite operations, and certification of safety-critical aerospace systems. |
+| `/ai-for-automotive` | AI for automotive design, manufacturing, battery management, ADAS, quality control, and supply-chain optimization across the vehicle lifecycle. |
+| `/ai-for-aviation` | AI for airline and airport operations, including predictive maintenance, crew and fleet scheduling, disruption recovery, fuel optimization, and safety analytics. |
+| `/ai-for-drones` | AI for UAV perception, navigation, obstacle avoidance, mission planning, multi-drone coordination, and vision-language drone control. |
+| `/ai-for-exoskeletons` | AI for wearable exoskeleton and exosuit control, gait and intention recognition, human-robot interaction, rehabilitation, and assistive augmentation. |
+| `/ai-for-field-robotics` | AI for robots operating in outdoor, unstructured environments such as agriculture, construction, mining, environmental monitoring, and disaster response. |
+| `/ai-for-industrial-robotics` | Machine learning for factory manipulation, assembly, pick-and-place, force control, sim-to-real, and vision-language-action models in industrial settings. |
+| `/ai-for-maritime` | AI for maritime autonomous surface ships, route and weather routing optimization, collision avoidance, port logistics, and vessel situational awareness. |
+| `/ai-for-quality-control` | Machine learning and computer vision for automated inspection, defect detection, statistical process control, and zero-defect manufacturing. |
+| `/ai-for-rail` | AI for railway infrastructure health, predictive maintenance, train scheduling, energy optimization, and real-time disruption management. |
+| `/ai-for-smart-manufacturing` | AI for cyber-physical manufacturing, digital twins, real-time process optimization, predictive maintenance, and sustainable Industry 4.0/5.0 systems. |
+| `/ai-for-warehouse-robotics` | AI for autonomous mobile robots, goods-to-person systems, picking, multi-agent path finding, task allocation, and warehouse traffic management. |
+| `/ai-for-cooking` | Recipe generation, meal planning, ingredient substitution, food image recognition, and personalized nutrition-aware cooking assistance. |
+| `/ai-for-event-planning` | Venue and vendor recommendation, guest-list management, scheduling, budget optimization, and group preference aggregation for personal and small events. |
+| `/ai-for-fitness` | Personalized workout plans, exercise form analysis, pose estimation, wearables, and adaptive recovery for individual fitness. |
+| `/ai-for-home-automation` | Smart home control, energy management, occupancy prediction, device scheduling, and comfort optimization with reinforcement learning and IoT. |
+| `/ai-for-legal-assistance` | Legal intake, contract review, plain-language document summarization, form filling, and accessible legal triage for non-experts. |
+| `/ai-for-lifestyle` | Habit formation, hobby and style recommendations, personal goal coaching, and holistic life-planning agents for everyday decisions. |
+| `/ai-for-mental-health` | CBT-based chatbots, mood tracking, crisis triage, digital therapeutics, and scalable psychological support for consumers. |
+| `/ai-for-personal-finance` | Budget optimization, cash-flow forecasting, robo-advisory, credit scoring, and personalized savings and investment guidance for household financial decisions. |
+| `/ai-for-personal-productivity` | Time management, task prioritization, calendar scheduling, meeting optimization, and personal workflow automation. |
+| `/ai-for-shopping` | Product discovery, personalized recommendations, price comparison, review summarization, and AI buyer guides for consumer purchases. |
+| `/ai-for-travel` | Itinerary planning, point-of-interest recommendation, flight and hotel personalization, trip optimization, and conversational travel agents. |
+| `/ai-for-wellness` | Holistic wellness, sleep, stress, mindfulness, HRV biofeedback, and personalized lifestyle recommendations for everyday well-being. |
+| `/ai-for-border-security` | Biometric identity verification, contraband and anomaly detection, and multi-sensor fusion at ports of entry. |
+| `/ai-for-crisis-communication` | Automated situational awareness, rumor detection, multilingual crisis summarization, and public information chatbots. |
+| `/ai-for-cyber-physical-security` | Securing industrial control systems, SCADA anomaly detection, physical invariants, and cross-layer intrusion detection. |
+| `/ai-for-cybersecurity` | Network intrusion detection, malware and phishing classification, vulnerability discovery, adversarial ML, and SOC automation. |
+| `/ai-for-disaster-preparedness` | Hazard risk assessment, early warning systems, scenario simulation, and mitigation planning with AI. |
+| `/ai-for-emergency-management` | Incident prediction, resource allocation, damage assessment, and generative AI for emergency operations. |
+| `/ai-for-physical-security` | Perimeter intrusion detection, access control analytics, video anomaly detection, and AI-augmented guard operations. |
+| `/ai-for-public-safety` | Emergency call dispatch, response-time optimization, situational awareness, and fairness-aware public safety analytics. |
+| `/ai-for-resilience` | Critical infrastructure resilience, disaster recovery planning, stress testing, and learning-based restoration optimization. |
+| `/ai-for-search-and-rescue` | UAV and robot search planning, victim detection from imagery and sensors, and SAR mission coordination with AI. |
+| `/ai-for-surveillance-ethics` | Fairness, privacy, proportionality, and algorithmic accountability for AI surveillance and facial recognition. |
+| `/ai-for-threat-intelligence` | Cyber threat intelligence extraction, attribution, knowledge graphs, and automated indicator analysis with ML and LLMs. |
 
 ## Usage
 

@@ -1,0 +1,7 @@
+# ai-for-wellness
+
+Quick reference for `ai for wellness`.
+
+- Architecture / framework: ask first.
+- Key command / env vars: see the full skill.
+- Verification: run the smallest failing test first.
