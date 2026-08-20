@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 332 | 318 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 345 | 328 commands (`/name`) |
+| **Devin** (`.devin/`) | 356 | 342 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 369 | 352 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (332)
+## Skills (356)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (195)
+### Custom Research Skills (219)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -455,8 +455,32 @@ Domain-specific skills for Gyanateet's research workflow.
 | `research-presentation-design` | Build clear, compelling slides and posters for seminars, conferences, and outreach using narrative structure and visual hierarchy. |
 | `scientific-writing` | Improve clarity, structure, and style for manuscripts, theses, and reports using AI drafting and editing tools. |
 | `user-interviews-synthesis` | Turn interview transcripts into themes, insights, and personas using thematic analysis, affinity mapping, and AI coding. |
+| `ai-for-biofoundries` | AI/ML-driven lab automation, robotic liquid handling, closed-loop DBTL, and self-driving laboratories for synthetic biology. |
+| `ai-for-digital-organism` | Computational models, simulations, and multiscale foundation models of living systems as AI-driven digital organisms. |
+| `ai-for-drug-repurposing` | Graph ML, knowledge graphs, LLMs, and transcriptomics for identifying new indications for existing drugs. |
+| `ai-for-immunology` | Machine learning for adaptive immune receptor repertoires, epitope-MHC binding, immune cell phenotyping, and vaccine/immunotherapy design. |
+| `ai-for-longevity` | Biological aging clocks, biomarkers of aging, longevity intervention mining, and integrative multi-omic models of aging. |
+| `ai-for-neuroscience` | Deep learning for neural recordings, brain decoding, neuroimaging analysis, connectomics, and NeuroAI foundation models. |
+| `ai-for-nutrition` | Machine learning and generative AI for personalized nutrition, dietary assessment, meal planning, food recognition, and nutrition-health modeling. |
+| `ai-for-precision-medicine` | Multimodal machine learning for personalized diagnosis, treatment selection, risk prediction, and integration of genomics, EHRs, imaging, and wearables. |
+| `ai-for-protein-design` | Inverse folding, generative backbone design, and binder engineering with ProteinMPNN, RFdiffusion, structure predictors, and Rosetta validation. |
+| `ai-for-rare-disease` | AI for rare disease diagnosis, target prioritization, drug repurposing, natural history modeling, and diagnostic-odyssey support. |
+| `ai-for-sleep` | Machine learning for sleep staging, sleep disorder detection, wearable PSG analysis, and sleep health monitoring. |
+| `ai-for-synthetic-biology` | Machine learning for genetic circuit design, promoter and RBS optimization, metabolic pathway engineering, and closed-loop Design-Build-Test-Learn biofoundry pipelines. |
+| `analog-computing` | Reconfigurable analog accelerators, in-memory analog computing, and mixed-signal AI hardware. |
+| `dask-ml` | Distributed and out-of-core machine learning with Dask and scikit-learn, XGBoost, and hyperparameter search. |
+| `data-versioning` | DVC, lakeFS, and Delta Lake for versioning datasets, models, and pipelines alongside code. |
+| `feature-stores` | Feast, Tecton, and Hopsworks for centralized feature definition, versioning, and online/offline serving. |
+| `high-performance-python` | Numba, Cython, pybind11, vectorization, and profiling for Python code that rivals C/Fortran speed. |
+| `in-memory-computing` | Compute-in-memory, processing-in-memory, and emerging NVM technologies (PCM, RRAM, MRAM) for AI. |
+| `ml-metadata-lineage` | ML Metadata (MLMD), MLflow, and Kubeflow lineage for tracking artifacts, executions, and provenance. |
+| `modin-pandas` | Drop-in distributed, parallel pandas replacement using Modin with Ray or Dask backends. |
+| `neuromorphic-computing` | Spiking neural networks (SNNs), event-based processing, and brain-inspired low-power accelerators like Intel Loihi and BrainChip. |
+| `photonic-computing` | Silicon photonics, optical processing units, and photonic interconnects for energy-efficient AI and HPC. |
+| `quantum-machine-learning` | Hybrid quantum-classical ML with variational quantum circuits, PennyLane, TensorFlow Quantum, and Qiskit. |
+| `wafer-scale-ai` | Cerebras Wafer Scale Engine, wafer-scale training and inference, and massive on-chip compute fabric. |
 
-## Workflows (318)
+## Workflows (342)
 
 ### Research Workflows (15)
 
@@ -521,7 +545,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (195)
+### Custom Research Workflows (219)
 
 | Workflow | Description |
 |----------|-------------|
@@ -720,6 +744,30 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/research-presentation-design` | Build clear, compelling slides and posters for seminars, conferences, and outreach using narrative structure and visual hierarchy. |
 | `/scientific-writing` | Improve clarity, structure, and style for manuscripts, theses, and reports using AI drafting and editing tools. |
 | `/user-interviews-synthesis` | Turn interview transcripts into themes, insights, and personas using thematic analysis, affinity mapping, and AI coding. |
+| `/ai-for-biofoundries` | AI/ML-driven lab automation, robotic liquid handling, closed-loop DBTL, and self-driving laboratories for synthetic biology. |
+| `/ai-for-digital-organism` | Computational models, simulations, and multiscale foundation models of living systems as AI-driven digital organisms. |
+| `/ai-for-drug-repurposing` | Graph ML, knowledge graphs, LLMs, and transcriptomics for identifying new indications for existing drugs. |
+| `/ai-for-immunology` | Machine learning for adaptive immune receptor repertoires, epitope-MHC binding, immune cell phenotyping, and vaccine/immunotherapy design. |
+| `/ai-for-longevity` | Biological aging clocks, biomarkers of aging, longevity intervention mining, and integrative multi-omic models of aging. |
+| `/ai-for-neuroscience` | Deep learning for neural recordings, brain decoding, neuroimaging analysis, connectomics, and NeuroAI foundation models. |
+| `/ai-for-nutrition` | Machine learning and generative AI for personalized nutrition, dietary assessment, meal planning, food recognition, and nutrition-health modeling. |
+| `/ai-for-precision-medicine` | Multimodal machine learning for personalized diagnosis, treatment selection, risk prediction, and integration of genomics, EHRs, imaging, and wearables. |
+| `/ai-for-protein-design` | Inverse folding, generative backbone design, and binder engineering with ProteinMPNN, RFdiffusion, structure predictors, and Rosetta validation. |
+| `/ai-for-rare-disease` | AI for rare disease diagnosis, target prioritization, drug repurposing, natural history modeling, and diagnostic-odyssey support. |
+| `/ai-for-sleep` | Machine learning for sleep staging, sleep disorder detection, wearable PSG analysis, and sleep health monitoring. |
+| `/ai-for-synthetic-biology` | Machine learning for genetic circuit design, promoter and RBS optimization, metabolic pathway engineering, and closed-loop Design-Build-Test-Learn biofoundry pipelines. |
+| `/analog-computing` | Reconfigurable analog accelerators, in-memory analog computing, and mixed-signal AI hardware. |
+| `/dask-ml` | Distributed and out-of-core machine learning with Dask and scikit-learn, XGBoost, and hyperparameter search. |
+| `/data-versioning` | DVC, lakeFS, and Delta Lake for versioning datasets, models, and pipelines alongside code. |
+| `/feature-stores` | Feast, Tecton, and Hopsworks for centralized feature definition, versioning, and online/offline serving. |
+| `/high-performance-python` | Numba, Cython, pybind11, vectorization, and profiling for Python code that rivals C/Fortran speed. |
+| `/in-memory-computing` | Compute-in-memory, processing-in-memory, and emerging NVM technologies (PCM, RRAM, MRAM) for AI. |
+| `/ml-metadata-lineage` | ML Metadata (MLMD), MLflow, and Kubeflow lineage for tracking artifacts, executions, and provenance. |
+| `/modin-pandas` | Drop-in distributed, parallel pandas replacement using Modin with Ray or Dask backends. |
+| `/neuromorphic-computing` | Spiking neural networks (SNNs), event-based processing, and brain-inspired low-power accelerators like Intel Loihi and BrainChip. |
+| `/photonic-computing` | Silicon photonics, optical processing units, and photonic interconnects for energy-efficient AI and HPC. |
+| `/quantum-machine-learning` | Hybrid quantum-classical ML with variational quantum circuits, PennyLane, TensorFlow Quantum, and Qiskit. |
+| `/wafer-scale-ai` | Cerebras Wafer Scale Engine, wafer-scale training and inference, and massive on-chip compute fabric. |
 
 ## Usage
 
