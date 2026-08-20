@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 380 | 366 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 393 | 376 commands (`/name`) |
+| **Devin** (`.devin/`) | 416 | 402 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 429 | 412 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (380)
+## Skills (416)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (243)
+### Custom Research Skills (279)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -503,8 +503,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-space-exploration` | Onboard autonomy, science target selection, anomaly detection, mission planning, and analysis of space and Earth-observation data. |
 | `ai-for-supply-chain` | Demand forecasting, inventory optimization, risk and resilience, supplier analytics, and end-to-end supply chain visibility. |
 | `ai-for-transportation` | Traffic prediction, route optimization, public transit planning, autonomous driving, and multi-modal mobility. |
+| `ai-for-battery-materials` | Machine learning for cathode, anode, electrolyte, and separator discovery, as well as battery lifetime and charging protocol optimization. |
+| `ai-for-catalysis` | Machine learning for catalyst discovery, reaction mechanism elucidation, activity and selectivity prediction, and catalytic process optimization. |
+| `ai-for-ceramics` | Data-driven design, processing optimization, and microstructure-property prediction for ceramic and refractory materials. |
+| `ai-for-composites` | Machine learning for composite material design, manufacturing process optimization, defect detection, and multiscale property prediction. |
+| `ai-for-corrosion` | Machine learning for corrosion rate prediction, corrosion-resistant alloy design, protective coating optimization, and infrastructure degradation monitoring. |
+| `ai-for-materials-characterization` | Machine learning for automated interpretation of microscopy, spectroscopy, diffraction, and tomography data in materials science. |
+| `ai-for-membranes` | Machine learning for membrane material design, permeability and selectivity prediction, fouling control, and separation process optimization. |
+| `ai-for-metals` | Machine learning for alloy design, phase stability, mechanical properties, process optimization, and microstructure-property mapping. |
+| `ai-for-photovoltaics` | Machine learning for solar-cell materials discovery, perovskite and organic PV optimization, device engineering, and stability prediction. |
+| `ai-for-polymers` | Machine learning for polymer property prediction, generative design, process optimization, and structure representation. |
+| `ai-for-semiconductors` | Machine learning for semiconductor materials discovery, bandgap engineering, defect analysis, and fabrication process optimization. |
+| `ai-for-superconductors` | Machine learning for superconductor discovery, critical temperature prediction, electron-phonon modeling, and materials screening. |
+| `ai-for-ecology` | Species distribution modeling, habitat suitability, biodiversity monitoring, and ecological forecasting using ML and remote sensing. |
+| `ai-for-environmental-science` | Remote sensing, land-cover mapping, ecosystem service assessment, and integrated modeling for environmental monitoring and analysis. |
+| `ai-for-fisheries` | Fish stock assessment, catch forecasting, aquaculture monitoring, eDNA, and IUU fishing detection with ML. |
+| `ai-for-forestry` | Forest inventory, tree segmentation, biomass estimation, and species mapping from remote sensing and LiDAR. |
+| `ai-for-geology` | Geologic mapping, mineral prospectivity, geophysical inversion, drill-core imagery, and remote sensing with ML and deep learning. |
+| `ai-for-hydrology` | Rainfall-runoff modeling, streamflow forecasting, flood prediction, and physics-informed deep learning for water systems. |
+| `ai-for-meteorology` | Numerical weather prediction emulators, precipitation nowcasting, extreme-weather detection, and weather foundation models. |
+| `ai-for-mineralogy` | XRD, SEM-EDS, Raman, and hyperspectral imaging for automated mineral identification, classification, and segmentation. |
+| `ai-for-paleontology` | Automated fossil identification, morphometric analysis, 3D segmentation, and taxonomic classification from images and point clouds. |
+| `ai-for-pollution` | Air, water, and soil pollution monitoring, source apportionment, forecasting, and regulatory compliance with ML. |
+| `ai-for-soil-science` | Digital soil mapping, pedotransfer functions, spectroscopic prediction, and soil health assessment with ML. |
+| `ai-for-wildlife-conservation` | Camera-trap image classification, acoustic monitoring, animal re-identification, and anti-poaching analytics. |
+| `ai-for-customer-service` | Conversational AI, intent classification, sentiment and satisfaction analysis, ticket routing, and agent-assist systems. |
+| `ai-for-demand-forecasting` | Time-series forecasting, hierarchical and intermittent demand, probabilistic forecasts, and promotion/event effects. |
+| `ai-for-economics` | Causal inference, policy evaluation, nowcasting, heterogeneous treatment effects, and demand estimation for economic and policy analysis. |
+| `ai-for-fraud-detection` | Transaction fraud, anti-money laundering, anomaly detection, graph-based fraud networks, and concept-drift monitoring. |
+| `ai-for-hr` | Talent analytics, recruitment matching, attrition prediction, workforce planning, and compensation and equity analysis. |
+| `ai-for-marketing` | Customer segmentation, personalization, propensity modeling, marketing-mix attribution, and generative AI for content and campaigns. |
+| `ai-for-operations-research` | Optimization, MILP/CP, vehicle routing and scheduling, decision-focused learning, and learning-augmented heuristics. |
+| `ai-for-pricing` | Price elasticity, dynamic and personalized pricing, revenue management, promotion optimization, and causal demand forecasting for pricing. |
+| `ai-for-recommendation-systems` | Collaborative filtering, content-based and hybrid recommendation, sequence models, and multi-objective ranking for commerce and content. |
+| `ai-for-retail` | Demand forecasting, inventory placement, personalized recommendations, dynamic pricing, and omnichannel fulfillment for retail. |
+| `ai-for-sales` | Predictive lead scoring, sales forecasting, opportunity win probability, next-best action, and pipeline analytics. |
+| `ai-for-supply-chain-optimization` | Multi-echelon inventory, distribution network design, demand-supply synchronization, and resilient supply chain planning. |
 
-## Workflows (366)
+## Workflows (402)
 
 ### Research Workflows (15)
 
@@ -569,7 +605,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (243)
+### Custom Research Workflows (279)
 
 | Workflow | Description |
 |----------|-------------|
@@ -816,6 +852,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-space-exploration` | Onboard autonomy, science target selection, anomaly detection, mission planning, and analysis of space and Earth-observation data. |
 | `/ai-for-supply-chain` | Demand forecasting, inventory optimization, risk and resilience, supplier analytics, and end-to-end supply chain visibility. |
 | `/ai-for-transportation` | Traffic prediction, route optimization, public transit planning, autonomous driving, and multi-modal mobility. |
+| `/ai-for-battery-materials` | Machine learning for cathode, anode, electrolyte, and separator discovery, as well as battery lifetime and charging protocol optimization. |
+| `/ai-for-catalysis` | Machine learning for catalyst discovery, reaction mechanism elucidation, activity and selectivity prediction, and catalytic process optimization. |
+| `/ai-for-ceramics` | Data-driven design, processing optimization, and microstructure-property prediction for ceramic and refractory materials. |
+| `/ai-for-composites` | Machine learning for composite material design, manufacturing process optimization, defect detection, and multiscale property prediction. |
+| `/ai-for-corrosion` | Machine learning for corrosion rate prediction, corrosion-resistant alloy design, protective coating optimization, and infrastructure degradation monitoring. |
+| `/ai-for-materials-characterization` | Machine learning for automated interpretation of microscopy, spectroscopy, diffraction, and tomography data in materials science. |
+| `/ai-for-membranes` | Machine learning for membrane material design, permeability and selectivity prediction, fouling control, and separation process optimization. |
+| `/ai-for-metals` | Machine learning for alloy design, phase stability, mechanical properties, process optimization, and microstructure-property mapping. |
+| `/ai-for-photovoltaics` | Machine learning for solar-cell materials discovery, perovskite and organic PV optimization, device engineering, and stability prediction. |
+| `/ai-for-polymers` | Machine learning for polymer property prediction, generative design, process optimization, and structure representation. |
+| `/ai-for-semiconductors` | Machine learning for semiconductor materials discovery, bandgap engineering, defect analysis, and fabrication process optimization. |
+| `/ai-for-superconductors` | Machine learning for superconductor discovery, critical temperature prediction, electron-phonon modeling, and materials screening. |
+| `/ai-for-ecology` | Species distribution modeling, habitat suitability, biodiversity monitoring, and ecological forecasting using ML and remote sensing. |
+| `/ai-for-environmental-science` | Remote sensing, land-cover mapping, ecosystem service assessment, and integrated modeling for environmental monitoring and analysis. |
+| `/ai-for-fisheries` | Fish stock assessment, catch forecasting, aquaculture monitoring, eDNA, and IUU fishing detection with ML. |
+| `/ai-for-forestry` | Forest inventory, tree segmentation, biomass estimation, and species mapping from remote sensing and LiDAR. |
+| `/ai-for-geology` | Geologic mapping, mineral prospectivity, geophysical inversion, drill-core imagery, and remote sensing with ML and deep learning. |
+| `/ai-for-hydrology` | Rainfall-runoff modeling, streamflow forecasting, flood prediction, and physics-informed deep learning for water systems. |
+| `/ai-for-meteorology` | Numerical weather prediction emulators, precipitation nowcasting, extreme-weather detection, and weather foundation models. |
+| `/ai-for-mineralogy` | XRD, SEM-EDS, Raman, and hyperspectral imaging for automated mineral identification, classification, and segmentation. |
+| `/ai-for-paleontology` | Automated fossil identification, morphometric analysis, 3D segmentation, and taxonomic classification from images and point clouds. |
+| `/ai-for-pollution` | Air, water, and soil pollution monitoring, source apportionment, forecasting, and regulatory compliance with ML. |
+| `/ai-for-soil-science` | Digital soil mapping, pedotransfer functions, spectroscopic prediction, and soil health assessment with ML. |
+| `/ai-for-wildlife-conservation` | Camera-trap image classification, acoustic monitoring, animal re-identification, and anti-poaching analytics. |
+| `/ai-for-customer-service` | Conversational AI, intent classification, sentiment and satisfaction analysis, ticket routing, and agent-assist systems. |
+| `/ai-for-demand-forecasting` | Time-series forecasting, hierarchical and intermittent demand, probabilistic forecasts, and promotion/event effects. |
+| `/ai-for-economics` | Causal inference, policy evaluation, nowcasting, heterogeneous treatment effects, and demand estimation for economic and policy analysis. |
+| `/ai-for-fraud-detection` | Transaction fraud, anti-money laundering, anomaly detection, graph-based fraud networks, and concept-drift monitoring. |
+| `/ai-for-hr` | Talent analytics, recruitment matching, attrition prediction, workforce planning, and compensation and equity analysis. |
+| `/ai-for-marketing` | Customer segmentation, personalization, propensity modeling, marketing-mix attribution, and generative AI for content and campaigns. |
+| `/ai-for-operations-research` | Optimization, MILP/CP, vehicle routing and scheduling, decision-focused learning, and learning-augmented heuristics. |
+| `/ai-for-pricing` | Price elasticity, dynamic and personalized pricing, revenue management, promotion optimization, and causal demand forecasting for pricing. |
+| `/ai-for-recommendation-systems` | Collaborative filtering, content-based and hybrid recommendation, sequence models, and multi-objective ranking for commerce and content. |
+| `/ai-for-retail` | Demand forecasting, inventory placement, personalized recommendations, dynamic pricing, and omnichannel fulfillment for retail. |
+| `/ai-for-sales` | Predictive lead scoring, sales forecasting, opportunity win probability, next-best action, and pipeline analytics. |
+| `/ai-for-supply-chain-optimization` | Multi-echelon inventory, distribution network design, demand-supply synchronization, and resilient supply chain planning. |
 
 ## Usage
 
