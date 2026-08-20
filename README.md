@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 668 | 654 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 681 | 664 commands (`/name`) |
+| **Devin** (`.devin/`) | 704 | 690 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 717 | 700 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (668)
+## Skills (704)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (531)
+### Custom Research Skills (567)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -791,8 +791,44 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-technical-blogs` | Planning, drafting, SEO-optimizing, and reviewing technical blog posts and tutorials with LLMs. |
 | `ai-for-visual-communication` | Generating and refining posters, slides, brand assets, and visual narratives with diffusion models and design tools. |
 | `ai-for-white-papers` | Authoring long-form, evidence-based white papers and thought-leadership documents grounded in verified sources. |
+| `ai-for-comparative-genomics` | Cross-species and population genome comparison, orthology inference, phylogenomics, selection scans, and pan-genome analysis. |
+| `ai-for-epigenomics` | DNA methylation, histone modifications, chromatin accessibility, enhancer-promoter interactions, and deep learning models of gene regulation. |
+| `ai-for-functional-genomics` | Predicting gene regulatory function from sequence and epigenomic data, mapping cis-regulatory elements, and interpreting non-coding variants. |
+| `ai-for-immunogenomics` | MHC and peptide binding prediction, TCR/BCR repertoire analysis, epitope and neoantigen prediction, and immunoinformatics. |
+| `ai-for-lipidomics` | LC-MS/MS lipid species quantification, structural isomer resolution, lipid class normalization, and predictive modeling of lipid phenotypes. |
+| `ai-for-metabolomics` | Mass spectrometry and NMR metabolite profiling, annotation, pathway analysis, normalization, and machine learning for biomarker discovery. |
+| `ai-for-metagenomics` | 16S rRNA and shotgun microbial community profiling, taxonomic and functional prediction, MAG binning, and microbiome-host association modeling. |
+| `ai-for-proteomics` | Mass spectrometry protein identification and quantification, DDA/DIA workflows, post-translational modifications, and AI-driven peptide property prediction. |
+| `ai-for-single-cell` | Single-cell transcriptomics, epigenomics, proteomics, and multi-omics integration, cell type annotation, trajectory inference, and foundation models. |
+| `ai-for-spatial-omics` | Spatially resolved transcriptomics and proteomics, cell segmentation, neighborhood analysis, and integration with imaging data. |
+| `ai-for-structural-genomics` | 3D genome organization, Hi-C analysis, protein structure prediction with deep learning, and multiscale structural modeling. |
+| `ai-for-transcriptomics` | Bulk and single-cell RNA-seq analysis, normalization, clustering, differential expression, splicing, and foundation models for gene expression. |
+| `ai-for-aerospace-engineering` | AI for aerodynamic design, propulsion, structural analysis, flight dynamics, GNC, and certification of aerospace vehicles. |
+| `ai-for-biomedical-engineering` | AI for medical devices, wearable biosensors, biomechanics, neural engineering, tissue engineering, and clinical diagnostics. |
+| `ai-for-chemical-engineering` | AI for process design, optimization, control, reaction engineering, materials discovery, and digital chemical plants. |
+| `ai-for-civil-engineering` | Machine learning for structural health monitoring, geotechnical prediction, transportation systems, water resources, and resilient infrastructure. |
+| `ai-for-electrical-engineering` | AI for power systems, smart grids, renewable integration, power electronics, fault diagnosis, and energy management. |
+| `ai-for-environmental-engineering` | AI for water and wastewater treatment, air quality, climate modeling, waste management, and environmental monitoring. |
+| `ai-for-industrial-engineering` | AI for production planning, scheduling, quality control, ergonomics, operations research, and process improvement. |
+| `ai-for-mechanical-engineering` | AI for mechanical design, predictive maintenance, digital twins, dynamic systems, and manufacturing process optimization. |
+| `ai-for-petroleum-engineering` | AI for reservoir characterization, production optimization, well placement, drilling, and digital oilfield twins. |
+| `ai-for-software-engineering` | AI for code generation, testing, debugging, program repair, code review, and design assistance. |
+| `ai-for-systems-engineering` | AI for architecting complex systems, model-based systems engineering (MBSE), requirements analysis, trade studies, and verification. |
+| `ai-for-telecommunications` | AI for wireless networks, 5G/6G, network optimization, traffic forecasting, security, and edge intelligence. |
+| `ai-for-biomarkers` | Machine learning for omics-based biomarker discovery, sparse signature selection, multi-modal integration, and clinical validation. |
+| `ai-for-clinical-trials` | Machine learning for clinical-trial design, patient eligibility, cohort selection, outcome prediction, and operational monitoring across the trial lifecycle. |
+| `ai-for-cohort-studies` | Machine learning for risk prediction, confounding control, survival analysis, and biomarker discovery in prospective and retrospective cohort studies. |
+| `ai-for-evidence-synthesis` | AI and LLMs for systematic review automation, risk-of-bias assessment, evidence mapping, and trustworthy synthesis of research findings. |
+| `ai-for-longitudinal-studies` | Machine learning and deep learning for repeated measurements, time-varying covariates, missing data, trajectories, and outcomes in longitudinal cohorts and EHR data. |
+| `ai-for-meta-analysis` | Machine learning and LLMs for automating literature search, screening, data extraction, effect-size estimation, and heterogeneity assessment in meta-analyses. |
+| `ai-for-observational-studies` | Causal machine learning for treatment-effect estimation, propensity scoring, confounding adjustment, and sensitivity analysis in observational data. |
+| `ai-for-patient-reported-outcomes` | Machine learning for predicting, personalizing, and reducing the burden of patient-reported outcome measures and PRO-based treatment decisions. |
+| `ai-for-randomized-trials` | Machine learning for heterogeneous treatment effects, covariate adjustment, adaptive randomization, and efficient inference in randomized controlled trials. |
+| `ai-for-real-world-evidence` | Machine learning for extracting, validating, and synthesizing real-world evidence from EHRs, claims, registries, and wearables for regulatory and clinical decisions. |
+| `ai-for-registry-studies` | Machine learning for patient registries, disease surveillance, regulatory-grade real-world evidence, and longitudinal outcome tracking. |
+| `ai-for-synthetic-controls` | Machine learning for constructing, validating, and extending synthetic and virtual control arms from observational data to augment clinical and policy evaluation. |
 
-## Workflows (654)
+## Workflows (690)
 
 ### Research Workflows (15)
 
@@ -857,7 +893,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (531)
+### Custom Research Workflows (567)
 
 | Workflow | Description |
 |----------|-------------|
@@ -1392,6 +1428,42 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-technical-blogs` | Planning, drafting, SEO-optimizing, and reviewing technical blog posts and tutorials with LLMs. |
 | `/ai-for-visual-communication` | Generating and refining posters, slides, brand assets, and visual narratives with diffusion models and design tools. |
 | `/ai-for-white-papers` | Authoring long-form, evidence-based white papers and thought-leadership documents grounded in verified sources. |
+| `/ai-for-comparative-genomics` | Cross-species and population genome comparison, orthology inference, phylogenomics, selection scans, and pan-genome analysis. |
+| `/ai-for-epigenomics` | DNA methylation, histone modifications, chromatin accessibility, enhancer-promoter interactions, and deep learning models of gene regulation. |
+| `/ai-for-functional-genomics` | Predicting gene regulatory function from sequence and epigenomic data, mapping cis-regulatory elements, and interpreting non-coding variants. |
+| `/ai-for-immunogenomics` | MHC and peptide binding prediction, TCR/BCR repertoire analysis, epitope and neoantigen prediction, and immunoinformatics. |
+| `/ai-for-lipidomics` | LC-MS/MS lipid species quantification, structural isomer resolution, lipid class normalization, and predictive modeling of lipid phenotypes. |
+| `/ai-for-metabolomics` | Mass spectrometry and NMR metabolite profiling, annotation, pathway analysis, normalization, and machine learning for biomarker discovery. |
+| `/ai-for-metagenomics` | 16S rRNA and shotgun microbial community profiling, taxonomic and functional prediction, MAG binning, and microbiome-host association modeling. |
+| `/ai-for-proteomics` | Mass spectrometry protein identification and quantification, DDA/DIA workflows, post-translational modifications, and AI-driven peptide property prediction. |
+| `/ai-for-single-cell` | Single-cell transcriptomics, epigenomics, proteomics, and multi-omics integration, cell type annotation, trajectory inference, and foundation models. |
+| `/ai-for-spatial-omics` | Spatially resolved transcriptomics and proteomics, cell segmentation, neighborhood analysis, and integration with imaging data. |
+| `/ai-for-structural-genomics` | 3D genome organization, Hi-C analysis, protein structure prediction with deep learning, and multiscale structural modeling. |
+| `/ai-for-transcriptomics` | Bulk and single-cell RNA-seq analysis, normalization, clustering, differential expression, splicing, and foundation models for gene expression. |
+| `/ai-for-aerospace-engineering` | AI for aerodynamic design, propulsion, structural analysis, flight dynamics, GNC, and certification of aerospace vehicles. |
+| `/ai-for-biomedical-engineering` | AI for medical devices, wearable biosensors, biomechanics, neural engineering, tissue engineering, and clinical diagnostics. |
+| `/ai-for-chemical-engineering` | AI for process design, optimization, control, reaction engineering, materials discovery, and digital chemical plants. |
+| `/ai-for-civil-engineering` | Machine learning for structural health monitoring, geotechnical prediction, transportation systems, water resources, and resilient infrastructure. |
+| `/ai-for-electrical-engineering` | AI for power systems, smart grids, renewable integration, power electronics, fault diagnosis, and energy management. |
+| `/ai-for-environmental-engineering` | AI for water and wastewater treatment, air quality, climate modeling, waste management, and environmental monitoring. |
+| `/ai-for-industrial-engineering` | AI for production planning, scheduling, quality control, ergonomics, operations research, and process improvement. |
+| `/ai-for-mechanical-engineering` | AI for mechanical design, predictive maintenance, digital twins, dynamic systems, and manufacturing process optimization. |
+| `/ai-for-petroleum-engineering` | AI for reservoir characterization, production optimization, well placement, drilling, and digital oilfield twins. |
+| `/ai-for-software-engineering` | AI for code generation, testing, debugging, program repair, code review, and design assistance. |
+| `/ai-for-systems-engineering` | AI for architecting complex systems, model-based systems engineering (MBSE), requirements analysis, trade studies, and verification. |
+| `/ai-for-telecommunications` | AI for wireless networks, 5G/6G, network optimization, traffic forecasting, security, and edge intelligence. |
+| `/ai-for-biomarkers` | Machine learning for omics-based biomarker discovery, sparse signature selection, multi-modal integration, and clinical validation. |
+| `/ai-for-clinical-trials` | Machine learning for clinical-trial design, patient eligibility, cohort selection, outcome prediction, and operational monitoring across the trial lifecycle. |
+| `/ai-for-cohort-studies` | Machine learning for risk prediction, confounding control, survival analysis, and biomarker discovery in prospective and retrospective cohort studies. |
+| `/ai-for-evidence-synthesis` | AI and LLMs for systematic review automation, risk-of-bias assessment, evidence mapping, and trustworthy synthesis of research findings. |
+| `/ai-for-longitudinal-studies` | Machine learning and deep learning for repeated measurements, time-varying covariates, missing data, trajectories, and outcomes in longitudinal cohorts and EHR data. |
+| `/ai-for-meta-analysis` | Machine learning and LLMs for automating literature search, screening, data extraction, effect-size estimation, and heterogeneity assessment in meta-analyses. |
+| `/ai-for-observational-studies` | Causal machine learning for treatment-effect estimation, propensity scoring, confounding adjustment, and sensitivity analysis in observational data. |
+| `/ai-for-patient-reported-outcomes` | Machine learning for predicting, personalizing, and reducing the burden of patient-reported outcome measures and PRO-based treatment decisions. |
+| `/ai-for-randomized-trials` | Machine learning for heterogeneous treatment effects, covariate adjustment, adaptive randomization, and efficient inference in randomized controlled trials. |
+| `/ai-for-real-world-evidence` | Machine learning for extracting, validating, and synthesizing real-world evidence from EHRs, claims, registries, and wearables for regulatory and clinical decisions. |
+| `/ai-for-registry-studies` | Machine learning for patient registries, disease surveillance, regulatory-grade real-world evidence, and longitudinal outcome tracking. |
+| `/ai-for-synthetic-controls` | Machine learning for constructing, validating, and extending synthetic and virtual control arms from observational data to augment clinical and policy evaluation. |
 
 ## Usage
 
