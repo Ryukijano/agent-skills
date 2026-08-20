@@ -21,7 +21,7 @@ You want to generate or co-write poems under formal constraints such as meter, r
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "gpt2"
+model_name = "openai-community/gpt2"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 

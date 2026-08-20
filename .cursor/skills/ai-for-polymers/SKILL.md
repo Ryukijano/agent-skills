@@ -21,8 +21,8 @@ You are discovering or optimizing polymeric materials for mechanical, thermal, e
 ```python
 from transformers import AutoTokenizer, AutoModel
 
-tokenizer = AutoTokenizer.from_pretrained("kuelumbeg/polyBERT")
-model = AutoModel.from_pretrained("kuelumbeg/polyBERT")
+tokenizer = AutoTokenizer.from_pretrained("kuelumbus/polyBERT")
+model = AutoModel.from_pretrained("kuelumbus/polyBERT")
 inputs = tokenizer("[*]CC(C)C[*]", return_tensors="pt")
 emb = model(**inputs).pooler_output
 ```

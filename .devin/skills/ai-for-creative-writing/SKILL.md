@@ -22,7 +22,7 @@ You are drafting fiction, scripts, or long-form prose and want an AI collaborato
 from transformers import pipeline
 
 # A simple continuation pipeline for a fiction scene
-generator = pipeline("text-generation", model="gpt2")
+generator = pipeline("text-generation", model="openai-community/gpt2")
 
 prompt = """Continue the noir detective scene in first person, raining, 1920s Chicago:
 

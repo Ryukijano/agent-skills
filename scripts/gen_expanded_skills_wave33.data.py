@@ -168,8 +168,8 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 
 # Compare LLM next-token probabilities to human cloze responses
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
-model = AutoModel.from_pretrained("gpt2", output_hidden_states=True)
+tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2")
+model = AutoModel.from_pretrained("openai-community/gpt2", output_hidden_states=True)
 inputs = tokenizer("The cat sat on the ___", return_tensors="pt")
 outputs = model(**inputs)
 ```

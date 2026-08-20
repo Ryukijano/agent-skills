@@ -20,8 +20,8 @@ You are verifying digital evidence, detecting synthetic media, or attributing au
 ```python
 from transformers import AutoModelForImageClassification, AutoImageProcessor
 
-processor = AutoImageProcessor.from_pretrained("dennisjooo/"deepfake-vs-real")
-model = AutoModelForImageClassification.from_pretrained("dennisjooo/"deepfake-vs-real")
+processor = AutoImageProcessor.from_pretrained("prithivMLmods/Deepfake-vs-Real-8000")
+model = AutoModelForImageClassification.from_pretrained("prithivMLmods/Deepfake-vs-Real-8000")
 ```
 
 ## Tuning notes

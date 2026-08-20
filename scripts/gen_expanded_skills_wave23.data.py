@@ -234,7 +234,7 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 embeddings = model.encode(df["note"].tolist())
 labels = KMeans(n_clusters=6, random_state=42, n_init="auto").fit_predict(embeddings)
 df["theme"] = labels
-print(df.groupby("theme")["note"].apply(lambda x: " ".join(x.head(3)))
+print(df.groupby("theme")["note"].apply(lambda x: " ".join(x.head(3))))
 ```
 
 ## Tuning notes
