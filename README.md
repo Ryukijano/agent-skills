@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 284 | 270 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 297 | 280 commands (`/name`) |
+| **Devin** (`.devin/`) | 308 | 294 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 321 | 304 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (284)
+## Skills (308)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (147)
+### Custom Research Skills (171)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -407,8 +407,32 @@ Domain-specific skills for Gyanateet's research workflow.
 | `ai-for-psychiatry-mental-health` | Machine learning for digital phenotyping, diagnostic support, treatment prediction, and crisis detection. |
 | `ai-for-quantum-computing` | Machine learning for quantum state tomography, variational quantum algorithms, quantum control, and error mitigation. |
 | `ai-for-robotics` | Imitation learning, reinforcement learning, sim-to-real, and foundation models for robot manipulation and navigation. |
+| `ai-for-agriculture` | Crop monitoring, yield prediction, pest detection, and precision agriculture with ML and remote sensing. |
+| `ai-for-archaeology` | Remote sensing, LiDAR, and computer vision for site detection, artifact analysis, and heritage preservation. |
+| `ai-for-carbon-capture` | Machine learning for adsorbent and solvent screening, process optimization, and carbon capture materials design. |
+| `ai-for-forensics` | ML for image authentication, deepfake detection, authorship attribution, and anomaly detection in forensic evidence. |
+| `ai-for-gravitational-waves` | Deep learning for compact binary coalescence search, parameter estimation, and glitch classification. |
+| `ai-for-materials-synthesis` | Machine learning for synthesis route prediction, process optimization, and inverse design of materials. |
+| `ai-for-nuclear-engineering` | Machine learning for reactor design, plasma control, material degradation, and fusion ignition prediction. |
+| `ai-for-oceanography` | Data-driven ocean forecasting, current reconstruction, eddy detection, and marine ecosystem modeling. |
+| `ai-for-satellite-imaging` | Earth observation foundation models, land-use classification, change detection, and disaster mapping. |
+| `ai-for-seismology` | Machine learning for earthquake detection, phase picking, denoising, and seismic signal classification. |
+| `ai-for-volcanology` | Machine learning for eruption forecasting, volcanic seismicity classification, and hazard assessment. |
+| `ai-for-water-security` | ML for water quality prediction, leak detection, flood forecasting, and hydrological modeling. |
+| `active-learning` | Iteratively select the most informative unlabeled data points for efficient annotation and model improvement. |
+| `ai-fairness` | Detect, measure, and mitigate bias across demographic groups in classification, ranking, and regression. |
+| `curriculum-learning` | Order training examples from easy to hard to improve convergence and generalization. |
+| `domain-adaptation` | Transfer knowledge from a labeled source domain to an unlabeled or partially labeled target domain. |
+| `explainable-ai` | Feature attribution, concept-based explanations, saliency maps, and interpretability for black-box models. |
+| `federated-learning` | Decentralized model training across clients, handling non-IID data, aggregation, and personalization. |
+| `few-shot-learning` | Learning from a handful of labeled examples through meta-learning, prompt tuning, and data augmentation. |
+| `meta-learning` | Learn-to-learn methods such as MAML, metric learning, and neural processes for fast adaptation. |
+| `model-interpretability` | Intrinsic and post-hoc methods for understanding model behavior, features, and decision boundaries. |
+| `privacy-preserving-ml` | Differential privacy, federated learning, homomorphic encryption, and secure multi-party computation for ML. |
+| `robust-ml` | Adversarial robustness, distribution shift, out-of-distribution detection, and reliable model performance. |
+| `uncertainty-quantification-ml` | Predictive uncertainty, calibration, conformal prediction, and Bayesian methods for reliable ML. |
 
-## Workflows (270)
+## Workflows (294)
 
 ### Research Workflows (15)
 
@@ -473,7 +497,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (147)
+### Custom Research Workflows (171)
 
 | Workflow | Description |
 |----------|-------------|
@@ -624,6 +648,30 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/ai-for-psychiatry-mental-health` | Machine learning for digital phenotyping, diagnostic support, treatment prediction, and crisis detection. |
 | `/ai-for-quantum-computing` | Machine learning for quantum state tomography, variational quantum algorithms, quantum control, and error mitigation. |
 | `/ai-for-robotics` | Imitation learning, reinforcement learning, sim-to-real, and foundation models for robot manipulation and navigation. |
+| `/ai-for-agriculture` | Crop monitoring, yield prediction, pest detection, and precision agriculture with ML and remote sensing. |
+| `/ai-for-archaeology` | Remote sensing, LiDAR, and computer vision for site detection, artifact analysis, and heritage preservation. |
+| `/ai-for-carbon-capture` | Machine learning for adsorbent and solvent screening, process optimization, and carbon capture materials design. |
+| `/ai-for-forensics` | ML for image authentication, deepfake detection, authorship attribution, and anomaly detection in forensic evidence. |
+| `/ai-for-gravitational-waves` | Deep learning for compact binary coalescence search, parameter estimation, and glitch classification. |
+| `/ai-for-materials-synthesis` | Machine learning for synthesis route prediction, process optimization, and inverse design of materials. |
+| `/ai-for-nuclear-engineering` | Machine learning for reactor design, plasma control, material degradation, and fusion ignition prediction. |
+| `/ai-for-oceanography` | Data-driven ocean forecasting, current reconstruction, eddy detection, and marine ecosystem modeling. |
+| `/ai-for-satellite-imaging` | Earth observation foundation models, land-use classification, change detection, and disaster mapping. |
+| `/ai-for-seismology` | Machine learning for earthquake detection, phase picking, denoising, and seismic signal classification. |
+| `/ai-for-volcanology` | Machine learning for eruption forecasting, volcanic seismicity classification, and hazard assessment. |
+| `/ai-for-water-security` | ML for water quality prediction, leak detection, flood forecasting, and hydrological modeling. |
+| `/active-learning` | Iteratively select the most informative unlabeled data points for efficient annotation and model improvement. |
+| `/ai-fairness` | Detect, measure, and mitigate bias across demographic groups in classification, ranking, and regression. |
+| `/curriculum-learning` | Order training examples from easy to hard to improve convergence and generalization. |
+| `/domain-adaptation` | Transfer knowledge from a labeled source domain to an unlabeled or partially labeled target domain. |
+| `/explainable-ai` | Feature attribution, concept-based explanations, saliency maps, and interpretability for black-box models. |
+| `/federated-learning` | Decentralized model training across clients, handling non-IID data, aggregation, and personalization. |
+| `/few-shot-learning` | Learning from a handful of labeled examples through meta-learning, prompt tuning, and data augmentation. |
+| `/meta-learning` | Learn-to-learn methods such as MAML, metric learning, and neural processes for fast adaptation. |
+| `/model-interpretability` | Intrinsic and post-hoc methods for understanding model behavior, features, and decision boundaries. |
+| `/privacy-preserving-ml` | Differential privacy, federated learning, homomorphic encryption, and secure multi-party computation for ML. |
+| `/robust-ml` | Adversarial robustness, distribution shift, out-of-distribution detection, and reliable model performance. |
+| `/uncertainty-quantification-ml` | Predictive uncertainty, calibration, conformal prediction, and Bayesian methods for reliable ML. |
 
 ## Usage
 
