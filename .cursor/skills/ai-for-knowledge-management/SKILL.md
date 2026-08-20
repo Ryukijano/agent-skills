@@ -41,6 +41,6 @@ embeddings = model.encode(documents)
 ## References
 
 - https://doi.org/10.3389/frai.2025.1595930
-- https://arxiv.org/html/2607.02609
+- https://arxiv.org/abs/2607.02609
 - https://link.springer.com/article/10.1007/s44163-026-01780-5
 - https://doi.org/10.2478/czoto-2024-0027

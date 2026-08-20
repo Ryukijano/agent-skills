@@ -186,7 +186,7 @@ model = RandomForestRegressor().fit(list(X), y)
         "references": [
             "https://doi.org/10.3390/alloys5010007",
             "https://www.sciencedirect.com/science/article/abs/pii/S0927796X23000323",
-            "https://bsg.byu.edu/docs/papers/nrm_ml_for_alloys.pdf",
+            "https://bsg.byu.edu/docs/papers/NRM_ML_for_Alloys.pdf",
             "https://doi.org/10.1007/s10853-025-11154-4",
         ],
     },

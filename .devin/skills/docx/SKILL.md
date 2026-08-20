@@ -1,11 +1,3 @@
----
-name: docx
-description: >-
-  Create, edit, and analyze Word documents. Use when the user wants to generate
-  .docx files, edit existing Word documents with tracked changes, convert .doc
-  to .docx, or extract content from Word documents.
----
-
 # DOCX Creation, Editing, and Analysis
 
 ## Overview

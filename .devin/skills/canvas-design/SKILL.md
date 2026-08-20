@@ -1,10 +1,3 @@
----
-name: canvas-design
-description: >-
-  Design visual art in PNG and PDF formats. Use when the user wants to create
-  visual designs, posters, diagrams, or artistic compositions programmatically.
----
-
 # Canvas Design
 
 ## Design Philosophy Creation

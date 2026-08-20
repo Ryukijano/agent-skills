@@ -1,9 +1,4 @@
----
-name: reproducibility-checklist
-description: Audit a project for reproducibility gaps and fix them before paper submission or code release. Use when checking if experiments are reproducible, verifying seeds/configs/environments are logged, or preparing for submission.
----
-
-## Reproducibility Audit
+# Reproducibility Audit
 
 - [ ] LICENSE file present
 - [ ] README with install + usage instructions

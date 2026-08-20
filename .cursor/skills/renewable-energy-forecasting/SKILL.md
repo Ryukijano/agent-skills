@@ -39,6 +39,6 @@ fno = fno.to('cuda')
 
 ## References
 
-- https://arxiv.org/html/2509.06925
+- https://arxiv.org/abs/2509.06925
 - https://www.mdpi.com/2071-1050/18/2/738
 - https://www.nrel.gov/

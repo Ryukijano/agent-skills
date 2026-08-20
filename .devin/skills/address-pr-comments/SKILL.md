@@ -1,9 +1,4 @@
----
-name: address-pr-comments
-description: Address pull request review comments systematically using GitHub CLI. Use when responding to PR feedback, iterating on code based on reviewer suggestions, or managing PR review workflows.
----
-
-## Address PR Comments
+# Address PR Comments
 
 ### Steps
 

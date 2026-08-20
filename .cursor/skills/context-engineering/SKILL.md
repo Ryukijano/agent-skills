@@ -1,11 +1,3 @@
----
-name: context-engineering
-description: >-
-  Manage context for AI coding agents: rules files, specs, source files, error
-  output, conversation management. Use when optimizing what context an agent
-  sees.
----
-
 # Context Engineering
 
 ## Context Hierarchy

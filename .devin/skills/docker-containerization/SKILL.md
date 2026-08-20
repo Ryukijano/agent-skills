@@ -1,11 +1,3 @@
----
-name: docker-containerization
-description: >-
-  Containerize applications with Docker. Use when the user wants to create
-  Dockerfiles, build images, manage containers, or set up docker-compose for
-  multi-service apps.
----
-
 # Docker Containerization
 
 ## Dockerfile Best Practices

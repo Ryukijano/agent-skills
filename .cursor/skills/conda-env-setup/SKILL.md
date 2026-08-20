@@ -1,9 +1,4 @@
----
-name: conda-env-setup
-description: Create and manage conda/Miniforge environments on AIRE HPC with CUDA support. Use when creating new Python environments, installing PyTorch with CUDA, debugging library conflicts, or managing package installations on AIRE.
----
-
-## Conda Environment Setup on AIRE HPC
+# Conda Environment Setup on AIRE HPC
 
 ### Base installation
 

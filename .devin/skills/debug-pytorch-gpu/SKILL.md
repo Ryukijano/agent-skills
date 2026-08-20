@@ -1,9 +1,4 @@
----
-name: debug-pytorch-gpu
-description: Diagnose and fix PyTorch GPU issues including CUDA OOM, DDP hangs, NCCL errors, device mismatches, and gradient instability. Use when training crashes with GPU-related errors or when GPU utilization is low.
----
-
-## Debugging PyTorch GPU Issues
+# Debugging PyTorch GPU Issues
 
 ### Quick diagnostic checklist
 

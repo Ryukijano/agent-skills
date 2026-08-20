@@ -47,6 +47,6 @@ print(compliance_matrix)
 ## References
 
 - https://arxiv.org/pdf/2409.00264
-- https://arxiv.org/html/2503.05787
+- https://arxiv.org/abs/2503.05787
 - https://arxiv.org/abs/2307.12218
 - https://arxiv.org/pdf/2407.21717

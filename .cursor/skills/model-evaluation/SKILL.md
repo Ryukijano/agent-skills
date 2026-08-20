@@ -1,9 +1,3 @@
----
-name: model-evaluation
-description: >-
-  Systematic model evaluation and benchmarking. Use when evaluating ML models, comparing baselines, running benchmarks, creating leaderboards, or writing evaluation sections for papers.
----
-
 # Model Evaluation & Benchmarking
 
 ## Overview

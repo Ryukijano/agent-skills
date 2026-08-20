@@ -43,4 +43,4 @@ lam = np.linalg.eigvalsh(S)
 - https://doi.org/10.48550/arxiv.2109.09304
 - https://proceedings.neurips.cc/paper/2020/file/572201a4497b0b9f02d4f279b09ec30d-Paper.pdf
 - https://projecteuclid.org/journals/annals-of-applied-probability/volume-28/issue-2/A-random-matrix-approach-to-neural-networks/10.1214/17-AAP1328.full
-- https://ar5iv.labs.arxiv.org/html/2001.06188
+- https://arxiv.org/abs/2001.06188

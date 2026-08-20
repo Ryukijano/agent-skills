@@ -92,10 +92,10 @@ summary = summarizer(clause, max_length=60, min_length=10, do_sample=False)
 3. Build a jurisdiction-aware FAQ agent that cites local statutes.
 ''',
         "references": [
-            "https://arxiv.org/html/2410.03762v1",
+            "https://arxiv.org/abs/2410.03762v1",
             "https://doi.org/10.1016/j.fmre.2026.03.026",
-            "https://arxiv.org/html/2512.04105",
-            "https://arxiv.org/html/2509.07170",
+            "https://arxiv.org/abs/2512.04105",
+            "https://arxiv.org/abs/2509.07170",
         ],
     },
     {

@@ -42,7 +42,7 @@ print(list(nx.descendants(G, "Zeus")))
 ## References
 
 - https://doi.org/10.5281/zenodo.20253116
-- https://arxiv.org/html/2601.15078v1
+- https://arxiv.org/abs/2601.15078v1
 - https://doi.org/10.48550/arxiv.2412.18270
 - https://kgeographer.org/glos_creation_schema.html
 - https://doi.org/10.1177/20539517211037862

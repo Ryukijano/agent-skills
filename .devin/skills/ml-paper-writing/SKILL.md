@@ -1,11 +1,3 @@
----
-name: ml-paper-writing
-description: >-
-  Write publication-ready ML papers for NeurIPS, ICML, ICLR, ACL, AAAI with
-  LaTeX templates, citation verification, and writing best practices. Use when
-  writing or revising a research paper.
----
-
 # ML Paper Writing
 
 ## Paper Structure

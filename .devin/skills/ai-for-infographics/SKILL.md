@@ -47,5 +47,5 @@ plt.savefig("chart_component.png")
 - https://aclanthology.org/2025.acl-long.1003.pdf
 - https://aclanthology.org/2026.acl-long.1713.pdf
 - https://aclanthology.org/anthology-files/anthology-files/pdf/acl/2023.acl-demo.11.pdf
-- https://arxiv.org/html/2401.13245
-- https://arxiv.org/html/2505.18668v3
+- https://arxiv.org/abs/2401.13245
+- https://arxiv.org/abs/2505.18668v3

@@ -48,7 +48,7 @@ class MultiTaskNet(nn.Module):
 
 ## References
 
-- https://arxiv.org/html/2404.18961
+- https://arxiv.org/abs/2404.18961
 - https://github.com/median-research-group/LibMTL
 - https://libmtl.readthedocs.io/en/latest/
 - https://arxiv.org/abs/1801.06704

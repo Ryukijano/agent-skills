@@ -1,12 +1,3 @@
----
-name: literature-search-arxiv
-description: >-
-  Search for scientific papers, preprints, and publications on arXiv. Extract
-  metadata, abstracts, and download full-text PDFs or HTML versions of papers.
-  Use when the user asks to find research papers, literature, or specific arXiv
-  IDs.
----
-
 # Literature Search Arxiv
 
 Source: `science_skills/literature_search_arxiv/`

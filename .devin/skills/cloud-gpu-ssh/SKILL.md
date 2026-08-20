@@ -1,9 +1,3 @@
----
-name: cloud-gpu-ssh
-description: >-
-  Manage remote GPU machines (Lambda Labs, RunPod, Vast.ai, SSH). Use when registering remote machines, running remote commands, monitoring remote GPUs, or syncing files to cloud instances.
----
-
 # Cloud GPU & SSH MCP Server
 
 ## Overview

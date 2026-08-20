@@ -41,7 +41,7 @@ clf = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, y)
 
 ## References
 
-- https://arxiv.org/html/2510.19997
-- https://arxiv.org/html/2411.08693
+- https://arxiv.org/abs/2510.19997
+- https://arxiv.org/abs/2411.08693
 - https://aaltodoc.aalto.fi/items/f95a2878-deed-4814-bf3c-e326a4a1dc8d
 - https://www.inderscience.com/info/inarticle.php?artid=132074

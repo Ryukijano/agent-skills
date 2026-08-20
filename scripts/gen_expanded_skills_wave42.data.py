@@ -47,12 +47,6 @@ scores = model.decision_function(X)
 2. Forecast traffic flow for an intersection and compare to a seasonal baseline.
 3. Predict concrete compressive strength and compare to lab results.
 
-## References
-
-- https://doi.org/10.3390/app151910499
-- https://doi.org/10.1016/j.kscej.2025.100203
-- https://link.springer.com/article/10.1007/s41872-025-00364-z
-- https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2022.1007886/full
 ''',
         "references": [
             "https://doi.org/10.3390/app151910499",
@@ -109,12 +103,6 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 2. Build a digital twin of a simple mechanical system and compare to an ODE model.
 3. Run a topology optimization and check stress constraints.
 
-## References
-
-- https://doi.org/10.1016/j.jmsy.2023.10.010
-- https://doi.org/10.1016/j.jmsy.2025.07.006
-- https://www.nature.com/articles/s41598-024-63990-0
-- https://link.springer.com/article/10.1007/s40684-025-00750-z
 ''',
         "references": [
             "https://doi.org/10.1016/j.jmsy.2023.10.010",
@@ -171,12 +159,6 @@ model = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, 
 2. Build a day-ahead solar or load forecast and compare to a baseline.
 3. Detect power-quality anomalies and verify against event logs.
 
-## References
-
-- https://www.mdpi.com/1996-1073/18/18/4983
-- https://www.mdpi.com/2227-9717/13/1/48
-- https://doi.org/10.1016/j.rineng.2024.103884
-- https://www.frontiersin.org/journals/smart-grids/articles/10.3389/frsgr.2024.1371153/full
 ''',
         "references": [
             "https://www.mdpi.com/1996-1073/18/18/4983",
@@ -233,12 +215,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Build a soft sensor for an unmeasured quality variable.
 3. Implement an RL or MPC policy and show stable setpoint tracking.
 
-## References
-
-- https://doi.org/10.1002/cjce.70032
-- https://www.mdpi.com/2227-9717/11/2/330
-- https://doi.org/10.1002/cjce.24246
-- https://doi.org/10.48550/arxiv.2412.18529
 ''',
         "references": [
             "https://doi.org/10.1002/cjce.70032",
@@ -295,12 +271,6 @@ model = GaussianProcessRegressor(normalize_y=True).fit(X, y)
 2. Run an aerodynamic shape optimization and check convergence.
 3. Demonstrate uncertainty quantification for a flight-relevant prediction.
 
-## References
-
-- https://doi.org/10.1016/j.paerosci.2022.100849
-- https://journals.sagepub.com/doi/10.1177/0954410019864485
-- https://doi.org/10.1016/j.oceaneng.2024.119263
-- https://www.ccs.upm.es/research/publications/a-review-of-surrogate-modeling-techniques-for-aerodynamic-analysis-and-optimization-current-limitations-and-future-challenges-in-industry/
 ''',
         "references": [
             "https://doi.org/10.1016/j.paerosci.2022.100849",
@@ -357,12 +327,6 @@ model = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, 
 2. Build a wearables inference pipeline and measure battery/latency tradeoffs.
 3. Compare an AI diagnostic to a clinical reference standard on a holdout set.
 
-## References
-
-- https://doi.org/10.3390/bios15070410
-- https://doi.org/10.3390/jpm14020203
-- https://doi.org/10.1039/D5MH00451A
-- https://doi.org/10.3390/bios14040183
 ''',
         "references": [
             "https://doi.org/10.3390/bios15070410",
@@ -417,12 +381,6 @@ output = generator("def is_palindrome(s: str) -> bool:")
 2. Run a bug-localization model and compare to issue labels.
 3. Review generated patches in a real pull request setting.
 
-## References
-
-- https://link.springer.com/article/10.1007/s11432-025-4670-0
-- https://link.springer.com/article/10.1007/s11432-025-4632-8
-- https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1655469/full
-- https://proceedings.mlr.press/v267/lu25f.html
 ''',
         "references": [
             "https://link.springer.com/article/10.1007/s11432-025-4670-0",
@@ -480,18 +438,12 @@ df["cluster"] = KMeans(n_clusters=5, random_state=42, n_init="auto").fit_predict
 2. Run a trade-study optimizer and compare to a baseline architecture.
 3. Verify an MBSE model consistency against a set of rules.
 
-## References
-
-- https://doi.org/10.1017/pds.2025.10058
-- https://doi.org/10.48550/arxiv.2606.06727
-- https://www.mdpi.com/2079-8954/13/7/584
-- https://doi.org/10.12305/j.issn.1001-506X.2025.12.21
 ''',
         "references": [
             "https://doi.org/10.1017/pds.2025.10058",
             "https://doi.org/10.48550/arxiv.2606.06727",
             "https://www.mdpi.com/2079-8954/13/7/584",
-            "https://doi.org/10.12305/j.issn.1001-506X.2025.12.21",
+            "https://doi.org/10.23919/JSEE.2024.000066",
         ],
     },
     {
@@ -542,12 +494,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Schedule a small job shop and compare makespan to a rule-based schedule.
 3. Detect a bottleneck from process-mining event logs.
 
-## References
-
-- https://doi.org/10.1016/j.cie.2023.109662
-- https://doi.org/10.1016/j.cirp.2024.04.101
-- https://dl.acm.org/doi/10.1145/3800000.3800162
-- https://doi.org/10.46254/gc03.20250318
 ''',
         "references": [
             "https://doi.org/10.1016/j.cie.2023.109662",
@@ -604,12 +550,6 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 2. Detect an air-quality anomaly and correlate with emission sources.
 3. Model a treatment process and compare to a first-principles simulator.
 
-## References
-
-- https://doi.org/10.1016/j.scitotenv.2023.167705
-- https://doi.org/10.18845/tm.v37i7.7304
-- https://doi.org/10.54691/v0t9k322
-- https://doi.org/10.67054/auij/.v1i1.58
 ''',
         "references": [
             "https://doi.org/10.1016/j.scitotenv.2023.167705",
@@ -666,12 +606,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Train a surrogate production model and benchmark against a simulator.
 3. Optimize well controls and compare NPV to a baseline strategy.
 
-## References
-
-- https://www.sciopen.com/article/10.1016/j.petsci.2025.02.014
-- https://www.sciencedirect.com/science/article/abs/pii/S2949891024006432
-- https://www.earthdoc.org/content/papers/10.3997/2214-4609.202437090
-- https://link.springer.com/article/10.1007/s13202-025-01938-4
 ''',
         "references": [
             "https://www.sciopen.com/article/10.1016/j.petsci.2025.02.014",
@@ -728,12 +662,6 @@ df["anomaly_score"] = model.decision_function(X)
 2. Detect anomalous cells or users and validate against trouble tickets.
 3. Optimize resource allocation in a simple network simulator.
 
-## References
-
-- https://doi.org/10.3390/fi18030155
-- https://doi.org/10.3390/technologies13120559
-- https://doi.org/10.3390/app16042071
-- https://doi.org/10.3390/sym17081279
 ''',
         "references": [
             "https://doi.org/10.3390/fi18030155",

@@ -50,12 +50,5 @@ print(net.res_bus.vm_pu.min(), net.res_bus.vm_pu.max())
 
 - https://www.mdpi.com/1996-1073/18/16/4408
 - https://www.mdpi.com/1996-1073/17/6/1381
-- https://arxiv.org/html/2507.14117v1
-- https://www.mdpi.com/2071-1050/15/6/5453
-
-## References
-
-- https://www.mdpi.com/1996-1073/18/16/4408
-- https://www.mdpi.com/1996-1073/17/6/1381
-- https://arxiv.org/html/2507.14117v1
+- https://arxiv.org/abs/2507.14117v1
 - https://www.mdpi.com/2071-1050/15/6/5453

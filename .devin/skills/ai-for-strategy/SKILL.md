@@ -44,5 +44,5 @@ model = GradientBoostingRegressor(n_estimators=300, random_state=42).fit(X, y)
 
 - https://doi.org/10.48550/arxiv.2408.08811
 - https://arxiv.org/pdf/2210.12373
-- https://arxiv.org/html/2404.01230
+- https://arxiv.org/abs/2404.01230
 - https://arxiv.org/abs/2412.13013

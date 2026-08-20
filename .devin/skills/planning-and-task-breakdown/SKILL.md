@@ -1,10 +1,3 @@
----
-name: planning-and-task-breakdown
-description: >-
-  Break complex tasks into small manageable verifiable subtasks. Use when
-  starting any non-trivial feature or project.
----
-
 # Planning and Task Breakdown
 
 ## Process

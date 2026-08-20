@@ -1,9 +1,3 @@
----
-name: tpu-jax
-description: >-
-  JAX device discovery, TPU topology, gcloud TPU VM management, and JAX profiling. Use when working with Google Cloud TPUs, JAX distributed training, or profiling XLA compilation.
----
-
 # TPU & JAX MCP Server
 
 ## Overview

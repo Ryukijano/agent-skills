@@ -1,11 +1,3 @@
----
-name: xlsx
-description: >-
-  Create, edit, and analyze Excel spreadsheets. Use when the user wants to
-  generate .xlsx files with formulas, build financial models, edit existing
-  spreadsheets, or extract data from Excel files.
----
-
 # XLSX Creation, Editing, and Analysis
 
 ## Overview

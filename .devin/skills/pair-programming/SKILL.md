@@ -1,11 +1,3 @@
----
-name: pair-programming
-description: >-
-  Structured pair programming workflow with AI agent. Use when the user wants to
-  collaboratively develop code, review in real-time, or follow driver-navigator
-  pattern.
----
-
 # Pair Programming with AI
 
 ## Driver-Navigator Pattern

@@ -1,11 +1,3 @@
----
-name: alphaevolve-orchestrator
-description: >-
-  Orchestrate the full AlphaEvolve workflow: design → run → monitor → post-
-  experiment. Detects entry point based on user context. Use when user wants to
-  optimize algorithms with AlphaEvolve.
----
-
 # AlphaEvolve Orchestrator
 
 ## Overview

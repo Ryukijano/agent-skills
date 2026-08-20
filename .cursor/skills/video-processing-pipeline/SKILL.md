@@ -1,9 +1,3 @@
----
-name: video-processing-pipeline
-description: >-
-  Build GPU-accelerated video processing pipelines for medical/surgical video. Use when processing video frames, building extraction pipelines, or optimizing video I/O on DGX Spark.
----
-
 # GPU-Accelerated Video Processing Pipeline
 
 ## Overview

@@ -49,5 +49,5 @@ print("Next tactic:", predicted_tactic)
 - https://www.danielgratzer.com/papers/type-theory-book.pdf
 - https://agda.readthedocs.io/en/latest/getting-started/what-is-agda.html
 - https://doi.org/10.1145/3563306
-- https://arxiv.org/html/2304.00994
-- https://arxiv.org/html/2410.19605v1
+- https://arxiv.org/abs/2304.00994
+- https://arxiv.org/abs/2410.19605v1

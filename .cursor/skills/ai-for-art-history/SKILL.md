@@ -44,8 +44,8 @@ caption = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
 ## References
 
-- https://arxiv.org/html/2603.11024
+- https://arxiv.org/abs/2603.11024
 - https://aaai.org/papers/11894-the-shape-of-art-history-in-the-eyes-of-the-machine/
 - https://doi.org/10.1145/3633454
-- https://arxiv.org/html/2409.03521
+- https://arxiv.org/abs/2409.03521
 - https://link.springer.com/article/10.1140/epjds/s13688-023-00397-3

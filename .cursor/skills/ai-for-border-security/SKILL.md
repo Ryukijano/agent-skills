@@ -51,6 +51,6 @@ risk_score = clf.predict_proba(X_test)[:, 1]
 
 - https://www.dhs.gov/ai/use-case-inventory/cbp
 - https://www.cbp.gov/travel/biometrics/overview
-- https://arxiv.org/html/2511.14698
-- https://ar5iv.labs.arxiv.org/html/2004.13076
-- https://arxiv.org/html/2607.13515
+- https://arxiv.org/abs/2511.14698
+- https://arxiv.org/abs/2004.13076
+- https://arxiv.org/abs/2607.13515

@@ -1,9 +1,4 @@
----
-name: refactor-extract-module
-description: Safely extract a module or function from a monolithic file into its own module. Use when refactoring large files, reducing code coupling, or improving project structure.
----
-
-## Refactor: Extract Module
+# Refactor: Extract Module
 
 1. Identify code to extract and its dependencies
 2. Create new module file

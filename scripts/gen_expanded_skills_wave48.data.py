@@ -47,12 +47,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Validate a site-assessment model on an independent measurement campaign.
 3. Measure operational value such as cost savings or curtailment reduction in a backtest.
 
-## References
-
-- https://link.springer.com/article/10.1186/s43067-025-00239-4
-- https://doi.org/10.3390/en13081979
-- https://github.com/NREL/sup3r
-- https://www.nrel.gov/research/software/rev-the-renewable-energy-potential-model-open-source
 ''',
         "references": [
             "https://link.springer.com/article/10.1186/s43067-025-00239-4",
@@ -108,12 +102,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Predict end-of-life capacity fade and validate against a hold-out aging test.
 3. Backtest storage arbitrage policy against a simple rule-based dispatch.
 
-## References
-
-- https://www.mdpi.com/1996-1073/14/2/306
-- https://www.mdpi.com/1996-1073/16/10/4243
-- https://doi.org/10.1109/tte.2025.3525742
-- https://www.nrel.gov/transportation/battery-lifespan.html
 ''',
         "references": [
             "https://www.mdpi.com/1996-1073/14/2/306",
@@ -168,17 +156,11 @@ print(net.res_bus.vm_pu.min(), net.res_bus.vm_pu.max())
 2. Backtest a load-forecast model with rolling cross-validation.
 3. Evaluate an OPF surrogate against a conventional solver on out-of-sample cases.
 
-## References
-
-- https://www.mdpi.com/1996-1073/18/16/4408
-- https://www.mdpi.com/1996-1073/17/6/1381
-- https://arxiv.org/html/2507.14117v1
-- https://www.mdpi.com/2071-1050/15/6/5453
 ''',
         "references": [
             "https://www.mdpi.com/1996-1073/18/16/4408",
             "https://www.mdpi.com/1996-1073/17/6/1381",
-            "https://arxiv.org/html/2507.14117v1",
+            "https://arxiv.org/abs/2507.14117v1",
             "https://www.mdpi.com/2071-1050/15/6/5453",
         ],
     },
@@ -230,18 +212,12 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 2. Test a P2P trading policy for feasibility and fairness in a multi-agent setting.
 3. Validate microgrid scheduling against real operating constraints.
 
-## References
-
-- https://www.nature.com/articles/s41598-026-58710-9
-- https://doi.org/10.1016/j.egyr.2026.109367
-- https://doi.org/10.1016/j.apenergy.2025.125485
-- https://arxiv.org/html/2605.21396
 ''',
         "references": [
             "https://www.nature.com/articles/s41598-026-58710-9",
             "https://doi.org/10.1016/j.egyr.2026.109367",
             "https://doi.org/10.1016/j.apenergy.2025.125485",
-            "https://arxiv.org/html/2605.21396",
+            "https://arxiv.org/abs/2605.21396",
         ],
     },
     {
@@ -292,12 +268,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Run a DR event and measure actual vs. predicted load curtailment.
 3. Backtest a VPP dispatch policy in a distribution system simulator.
 
-## References
-
-- https://www.mdpi.com/1996-1073/19/4/1084
-- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0339606
-- https://www.mdpi.com/1996-1073/18/23/6341
-- https://www.mdpi.com/1996-1073/18/18/4844
 ''',
         "references": [
             "https://www.mdpi.com/1996-1073/19/4/1084",
@@ -354,18 +324,12 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Report directional accuracy, profit/loss, and Sharpe-like metrics.
 3. Compare predicted price distributions to actual clearing prices.
 
-## References
-
-- https://doi.org/10.1016/j.segan.2023.101023
-- https://doi.org/10.48550/arxiv.2506.00044
-- https://doi.org/10.1016/j.egyai.2022.100139
-- https://arxiv.org/html/2602.10071v2
 ''',
         "references": [
             "https://doi.org/10.1016/j.segan.2023.101023",
             "https://doi.org/10.48550/arxiv.2506.00044",
             "https://doi.org/10.1016/j.egyai.2022.100139",
-            "https://arxiv.org/html/2602.10071v2",
+            "https://arxiv.org/abs/2602.10071v2",
         ],
     },
     {
@@ -415,12 +379,6 @@ df["anomaly_score"] = clf.decision_function(X)
 2. Backtest demand forecasts against actual consumption.
 3. Measure pump energy savings from optimized scheduling.
 
-## References
-
-- https://link.springer.com/article/10.1007/s10462-024-11093-7
-- https://doi.org/10.1016/j.asoc.2026.115061
-- https://www.mdpi.com/2073-4441/16/23/3410
-- https://link.springer.com/article/10.1007/s43832-026-00365-8
 ''',
         "references": [
             "https://link.springer.com/article/10.1007/s10462-024-11093-7",
@@ -476,12 +434,6 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 2. Detect anomalies and verify against operator event logs.
 3. Measure energy or chemical savings from optimized aeration or dosing.
 
-## References
-
-- https://doi.org/10.1016/j.jenvman.2025.126886
-- https://doi.org/10.5194/egusphere-egu26-13096
-- https://link.springer.com/article/10.1007/s11431-025-3110-2
-- https://doi.org/10.3390/w17192842
 ''',
         "references": [
             "https://doi.org/10.1016/j.jenvman.2025.126886",
@@ -538,12 +490,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Evaluate leak detection precision and recall on confirmed incidents.
 3. Measure compressor energy savings from optimized scheduling.
 
-## References
-
-- https://doi.org/10.3390/en19041101
-- https://www.mdpi.com/1996-1073/17/21/5517
-- https://www.osti.gov/biblio/1996417
-- https://doi.org/10.3389/fenvs.2025.1569621
 ''',
         "references": [
             "https://doi.org/10.3390/en19041101",
@@ -600,12 +546,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Validate battery SOH predictions with periodic diagnostic cycles.
 3. Measure improvement in route and energy planning versus nominal ratings.
 
-## References
-
-- https://www.sciencedirect.com/science/article/abs/pii/S1361920925002056
-- https://link.springer.com/article/10.1007/s44163-025-00721-y
-- https://doi.org/10.1038/s41598-026-49119-5
-- https://www.sciencedirect.com/science/article/abs/pii/S0360544225032062
 ''',
         "references": [
             "https://www.sciencedirect.com/science/article/abs/pii/S1361920925002056",
@@ -662,12 +602,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Simulate load balancing and measure peak reduction and cost savings.
 3. Detect charger faults and compare to maintenance logs.
 
-## References
-
-- https://doi.org/10.1038/s41598-026-49535-7
-- https://link.springer.com/article/10.1007/s10586-026-06174-x
-- https://www.mdpi.com/2032-6653/16/3/184
-- https://www.nature.com/articles/s41598-025-22482-5
 ''',
         "references": [
             "https://doi.org/10.1038/s41598-026-49535-7",
@@ -724,12 +658,6 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 2. Compare hardening plans under budget constraints with a cost-benefit metric.
 3. Validate restoration time estimates against actual crew dispatch records.
 
-## References
-
-- https://doi.org/10.3390/electronics15102001
-- https://doi.org/10.3390/en19020506
-- https://doi.org/10.1016/j.ress.2024.110169
-- https://doi.org/10.1186/s43065-025-00154-y
 ''',
         "references": [
             "https://doi.org/10.3390/electronics15102001",

@@ -1,11 +1,3 @@
----
-name: cub-device-algorithms-gb10
-description: >-
-  Use the CUB (CUDA Unbound) library on GB10 for device-wide reduce, scan, and sort.
-  Covers temporary-storage sizing, fetching CCCL headers when the system CUDA install
-  does not include them, and verifying against CPU references.
----
-
 # CUB Device-Wide Algorithms on GB10 DGX Spark
 
 ## Overview

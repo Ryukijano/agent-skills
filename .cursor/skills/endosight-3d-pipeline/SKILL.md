@@ -1,9 +1,4 @@
----
-name: endosight-3d-pipeline
-description: Endosight 3D reconstruction pipeline (BFF + frontend) for clinical polyp video clips. Canonical root, mesh quality practices, sizing from fused point cloud, and verification.
----
-
-## Endosight 3D
+# Endosight 3D
 
 ### Canonical location
 `/home/aimsgroupuol/endosight-3d/`

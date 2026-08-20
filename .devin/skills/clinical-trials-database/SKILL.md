@@ -1,13 +1,3 @@
----
-name: clinical-trials-database
-description: >-
-  Query ClinicalTrials.gov via APIv2. Use when you want to search for trials by
-  condition, drug, location, status, or phase; retrieve trial details by NCT ID;
-  check eligibility/inclusion criteria; count trials across conditions or time
-  periods; identify a sponsor's trial portfolio; find recruiting trials for
-  patient matching.
----
-
 # Clinical Trials Database
 
 Source: `science_skills/clinical_trials_database/`

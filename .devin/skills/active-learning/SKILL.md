@@ -43,4 +43,4 @@ query_idx = np.argsort(uncertainty)[-k:]
 - https://aclanthology.org/2025.acl-long.708/
 - https://arxiv.org/abs/2405.00334
 - https://modal-python.readthedocs.io/
-- https://github.com/google-research/google-research/tree/master/active_learning
+- https://github.com/google/active-learning

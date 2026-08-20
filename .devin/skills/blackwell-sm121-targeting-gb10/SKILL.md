@@ -1,9 +1,3 @@
----
-name: blackwell-sm121-targeting-gb10
-description: >-
-  Correctly target the GB10 (SM121) architecture: sm_121 vs sm_121f vs sm_121a, PTX version requirements, Triton ptxas setup, and common compile/runtime errors on DGX Spark.
----
-
 # Targeting Blackwell SM121 / GB10 DGX Spark
 
 ## Overview

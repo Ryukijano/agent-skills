@@ -45,7 +45,7 @@ df["anomaly_score"] = clf.decision_function(X)
 
 ## References
 
-- https://ar5iv.labs.arxiv.org/html/1911.02621
+- https://arxiv.org/abs/1911.02621
 - https://arxiv.org/abs/2405.04760v3
-- https://arxiv.org/html/2504.07839
-- https://arxiv.org/html/2409.18736
+- https://arxiv.org/abs/2504.07839
+- https://arxiv.org/abs/2409.18736

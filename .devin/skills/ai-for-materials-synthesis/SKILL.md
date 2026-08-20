@@ -43,7 +43,7 @@ ax.create_experiment(
 
 ## References
 
-- https://doi.org/10.1038/s41586-023-06197-2
+- https://doi.org/10.1038/s41586-023-06197-z
 - https://citrine.io/
 - https://github.com/aspuru-guzik-group/chemos
 - https://ax.dev/

@@ -44,7 +44,7 @@ print("Estimated SNR:", snr)
 
 ## References
 
-- https://arxiv.org/html/2412.14538v3
+- https://arxiv.org/abs/2412.14538v3
 - https://doi.org/10.1109/ojcoms.2026.3677293
-- https://arxiv.org/html/2207.13382
-- https://arxiv.org/html/2406.13335
+- https://arxiv.org/abs/2207.13382
+- https://arxiv.org/abs/2406.13335

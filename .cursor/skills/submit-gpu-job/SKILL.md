@@ -1,9 +1,4 @@
----
-name: submit-gpu-job
-description: Knowledge for submitting, monitoring, and post-processing GPU training jobs on AIRE (University of Leeds) Slurm cluster with L40S nodes. Companion to the /submit-gpu-job command.
----
-
-## AIRE Slurm Reference
+# AIRE Slurm Reference
 
 ### Resources
 - Partition: gpu

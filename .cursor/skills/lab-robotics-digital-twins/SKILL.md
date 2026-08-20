@@ -42,4 +42,4 @@ pose = estimator.predict(rgb, depth)
 
 - https://www.nature.com/articles/s43588-025-00924-4
 - https://github.com/AccelerationConsortium/Matterix/
-- https://arxiv.org/html/2410.07801
+- https://arxiv.org/abs/2410.07801

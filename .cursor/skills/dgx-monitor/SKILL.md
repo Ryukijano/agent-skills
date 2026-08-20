@@ -1,9 +1,3 @@
----
-name: dgx-monitor
-description: >-
-  Monitor DGX Spark GPU, memory, Docker, conda, and CUDA. Use when checking GPU status, system memory, Docker containers, conda environments, or compiling CUDA kernels on the GB10.
----
-
 # DGX Spark Monitor MCP Server
 
 ## Overview

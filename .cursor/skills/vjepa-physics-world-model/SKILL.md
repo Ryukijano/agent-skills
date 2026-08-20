@@ -1,8 +1,3 @@
----
-name: vjepa-physics-world-model
-description: V-JEPA and adaptive world model skills for intuitive physics understanding from video, including AdaJEPA, LeJEPA, and hierarchical latent world models. Core to DINO-Endo and surgical phase recognition research.
----
-
 # V-JEPA Physics World Model
 
 ## Overview

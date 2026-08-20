@@ -50,4 +50,4 @@ chart.save("spending_chart.html")
 - https://github.com/icij/datashare/
 - https://datashare.icij.org/
 - https://www.mdpi.com/2227-7080/10/3/68
-- https://arxiv.org/html/2409.07286
+- https://arxiv.org/abs/2409.07286

@@ -1,9 +1,3 @@
----
-name: endosight-pipeline
-description: >-
-  Monitor and manage the Endosight 3D reconstruction pipeline. Use when checking pipeline status, listing reconstructions, getting reconstruction stats, or triggering new reconstructions.
----
-
 # Endosight Pipeline MCP Server
 
 ## Overview

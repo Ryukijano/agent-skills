@@ -1,9 +1,3 @@
----
-name: cuda-kernel-optimization
-description: >-
-  Optimize CUDA kernels for GB10 DGX Spark (SM121, Blackwell). Use when writing or optimizing CUDA kernels, analyzing SASS/PTX, improving occupancy, or reducing memory bandwidth bottlenecks.
----
-
 # CUDA Kernel Optimization for GB10 DGX Spark
 
 ## Overview

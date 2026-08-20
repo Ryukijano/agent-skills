@@ -1,9 +1,4 @@
----
-name: submit-gpu-job
-description: Submit a GPU training job to AIRE HPC Slurm cluster with smoke test verification and monitoring. Use when preparing to launch GPU training jobs, verifying SBATCH scripts, or monitoring running jobs.
----
-
-## Submit GPU Job to AIRE
+# Submit GPU Job to AIRE
 
 ### Pre-submission checklist
 

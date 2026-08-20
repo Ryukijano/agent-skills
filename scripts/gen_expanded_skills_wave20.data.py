@@ -105,8 +105,8 @@ tensor = torch.from_numpy(np.array(patch)).permute(2, 0, 1).unsqueeze(0).float()
 ''',
         "references": [
             "https://doi.org/10.1016/j.csbj.2024.12.033",
-            "https://arxiv.org/html/2401.06148",
-            "https://arxiv.org/html/2408.14496v1",
+            "https://arxiv.org/abs/2401.06148",
+            "https://arxiv.org/abs/2408.14496v1",
             "https://www.sciencedirect.com/science/article/pii/S0895611124000144",
             "https://link.springer.com/article/10.1007/s00424-024-03002-2",
         ],
@@ -615,7 +615,7 @@ outputs = model(**inputs)
 ''',
         "references": [
             "https://doi.org/10.48550/arxiv.1904.05342",
-            "https://mimic.mit.edu/docs/III/",
+            "https://mimic.mit.edu/docs/iii/",
             "https://www.nature.com/articles/sdata201635",
             "https://aclanthology.org/W19-1909/",
             "https://par.nsf.gov/servlets/purl/10580364",

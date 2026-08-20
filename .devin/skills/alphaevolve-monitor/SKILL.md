@@ -1,11 +1,3 @@
----
-name: alphaevolve-monitor
-description: >-
-  Monitor running AlphaEvolve experiments: track progress, report metrics,
-  detect issues, generate final reports. Use when an experiment is running and
-  user wants status updates.
----
-
 # AlphaEvolve Experiment Monitor
 
 ## Stage 1: Identify the Experiment

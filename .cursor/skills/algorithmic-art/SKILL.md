@@ -1,11 +1,3 @@
----
-name: algorithmic-art
-description: >-
-  Create generative art using p5.js with seeded randomness. Use when the user
-  wants to create algorithmic art, generative visuals, or explore creative
-  coding.
----
-
 # Algorithmic Art
 
 ## Algorithmic Philosophy Creation

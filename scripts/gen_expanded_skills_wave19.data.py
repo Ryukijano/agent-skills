@@ -50,8 +50,8 @@ print("CATE intervals:", est.ate__interval())
 ''',
         "references": [
             "https://doi.org/10.1146/annurev-economics-080217-053433",
-            "https://arxiv.org/html/2312.05858v2",
-            "https://arxiv.org/html/2208.03489",
+            "https://arxiv.org/abs/2312.05858v2",
+            "https://arxiv.org/abs/2208.03489",
             "https://www.annualreviews.org/content/journals/10.1146/annurev-economics-080217-053214",
         ],
     },
@@ -194,7 +194,7 @@ model = RandomForestClassifier(random_state=42).fit(X_train, y_train)
 3. Run an equity analysis on compensation or promotion outcomes.
 ''',
         "references": [
-            "https://arxiv.org/html/2307.03195",
+            "https://arxiv.org/abs/2307.03195",
             "https://link.springer.com/article/10.1186/s43093-025-00704-6",
             "https://doi.org/10.1016/j.fraope.2026.100673",
             "https://oracle.com/human-capital-management/analytics/",
@@ -246,7 +246,7 @@ print(x.solution_value(), y.solution_value())
 3. Implement decision-focused learning and show improvement over two-stage predict-then-optimize.
 ''',
         "references": [
-            "https://arxiv.org/html/2601.10583",
+            "https://arxiv.org/abs/2601.10583",
             "https://arxiv.org/pdf/2507.00218",
             "https://ojmo.centre-mersenne.org/item/10.5802/ojmo.43.pdf",
             "https://link.springer.com/article/10.1007/s10994-026-07116-9",
@@ -450,10 +450,10 @@ df["anomaly_score"] = clf.decision_function(X)
 3. Deploy a drift monitor and simulate an adversarial shift.
 ''',
         "references": [
-            "https://arxiv.org/html/2307.05633",
+            "https://arxiv.org/abs/2307.05633",
             "https://doi.org/10.3390/app16041931",
             "https://www.mdpi.com/1911-8074/19/1/14",
-            "https://ar5iv.labs.arxiv.org/html/2411.05815",
+            "https://arxiv.org/abs/2411.05815",
         ],
     },
     {
@@ -545,7 +545,7 @@ print(result)
 ''',
         "references": [
             "https://www.mdpi.com/2076-3417/15/17/9439",
-            "https://arxiv.org/html/2403.12388",
+            "https://arxiv.org/abs/2403.12388",
             "https://www.copc.com/ai-customer-experience-research-2025/",
             "https://aclanthology.org/2026.acl-industry.121/",
         ],

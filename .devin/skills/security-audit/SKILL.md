@@ -1,11 +1,3 @@
----
-name: security-audit
-description: >-
-  Security audit checklist for code review. Use when the user wants to check for
-  vulnerabilities, audit access control, review authentication, or ensure OWASP
-  compliance.
----
-
 # Security Audit
 
 ## OWASP Top 10 Checklist

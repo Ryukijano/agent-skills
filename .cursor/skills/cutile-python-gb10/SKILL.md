@@ -1,11 +1,3 @@
----
-name: cutile-python-gb10
-description: >-
-  Use NVIDIA cuTile Python (cuda.tile) for tile-based GPU programming on GB10 / sm_121.
-  Covers installation, tile load/store, vector add, matrix multiplication with ct.mma,
-  and environment setup for the tileiras compiler.
----
-
 # cuTile Python on GB10 DGX Spark
 
 ## Overview

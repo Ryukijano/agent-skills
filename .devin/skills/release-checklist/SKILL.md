@@ -1,9 +1,4 @@
----
-name: release-checklist
-description: Create a release checklist for publishing a library or research code package. Use when preparing a versioned release, updating changelogs, building packages, or publishing to PyPI.
----
-
-## Release Checklist
+# Release Checklist
 
 1. Update version in `pyproject.toml`
 2. Update `CHANGELOG.md` with Added/Fixed/Changed sections

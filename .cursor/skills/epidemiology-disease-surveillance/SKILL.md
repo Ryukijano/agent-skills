@@ -43,5 +43,5 @@ class EpidemicGNN(torch.nn.Module):
 ## References
 
 - https://link.springer.com/article/10.1186/s12911-025-03310-2
-- https://arxiv.org/html/2411.05556
+- https://arxiv.org/abs/2411.05556
 - https://www.nature.com/articles/s41586-024-08564-w

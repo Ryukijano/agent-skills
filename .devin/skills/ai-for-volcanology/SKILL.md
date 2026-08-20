@@ -44,4 +44,4 @@ outliers = clf.predict(event_features)
 - https://arxiv.org/abs/2603.17855
 - https://doi.org/10.1029/2024gl108631
 - https://doi.org/10.1007/978-3-031-15432-4
-- https://github.com/wayneweiqi/volcanoseis
+- https://github.com/darren-tpk/voiss-net

@@ -48,5 +48,5 @@ feature_rank = dict(zip(X_test.columns, importance.importances_mean))
 
 - https://arxiv.org/abs/2601.11812
 - https://dl.acm.org/doi/10.1145/3544548.3580959
-- https://arxiv.org/html/2310.07127
+- https://arxiv.org/abs/2310.07127
 - https://arxiv.org/abs/2105.05424

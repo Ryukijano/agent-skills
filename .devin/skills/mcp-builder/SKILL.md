@@ -1,11 +1,3 @@
----
-name: mcp-builder
-description: >-
-  Create MCP (Model Context Protocol) servers to integrate external APIs and
-  services. Use when the user wants to build an MCP server, create custom tools
-  for AI agents, or expose APIs via MCP.
----
-
 # MCP Server Development Guide
 
 ## Overview

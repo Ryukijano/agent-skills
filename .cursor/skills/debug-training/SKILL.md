@@ -1,9 +1,4 @@
----
-name: debug-training
-description: Symptom-driven debugging guide for NaN losses, OOM, DDP hangs, poor convergence, and low GPU utilization in PyTorch surgical video / MOT / TDV training. Pairs with the /debug-training command.
----
-
-## Training Debug Reference
+# Training Debug Reference
 
 ### Symptom → Root causes → Fixes
 

@@ -1,9 +1,4 @@
----
-name: git-branch-workflow
-description: Standardized git branching, commit message conventions, and pull request creation. Use when creating feature branches, writing commit messages, creating PRs, or managing version control across ML research projects.
----
-
-## Git Branch Workflow for ML Research Projects
+# Git Branch Workflow for ML Research Projects
 
 ### Branch naming convention
 

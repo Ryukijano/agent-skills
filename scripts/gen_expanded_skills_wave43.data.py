@@ -53,12 +53,6 @@ for train_idx, test_idx in GroupKFold(n_splits=5).split(X, y, g):
 2. Show that predictions degrade gracefully when sequences are truncated or sparse.
 3. Validate that temporal ordering is preserved in all train/test splits.
 
-## References
-
-- https://doi.org/10.3390/math14122084
-- https://doi.org/10.1007/s10462-023-10561-w
-- https://doi.org/10.1007/s10462-023-10677-z
-- https://doi.org/10.1093/jamia/ocad168
 ''',
         "references": [
             "https://doi.org/10.3390/math14122084",
@@ -119,12 +113,6 @@ model = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X_t
 2. Test the model on a held-out time period or external cohort.
 3. Audit key features for clinical plausibility and fairness across subgroups.
 
-## References
-
-- https://link.springer.com/article/10.1007/s10654-024-01173-x
-- https://pubmed.ncbi.nlm.nih.gov/40701371/
-- https://link.springer.com/article/10.1186/s12874-023-01837-4
-- https://www.nature.com/articles/s41598-021-02476-9
 ''',
         "references": [
             "https://link.springer.com/article/10.1007/s10654-024-01173-x",
@@ -183,12 +171,6 @@ trial_df["eligible_score"] = clf.predict_proba(X)[:, 1]
 2. Forecast enrollment for a trial and compare to actual accrual.
 3. Run a simulated sensitivity analysis for protocol amendments and drift.
 
-## References
-
-- https://trialsjournal.biomedcentral.com/counter/pdf/10.1186/s13063-021-05489-x.pdf
-- https://www.nature.com/articles/s41571-026-01189-0
-- https://www.nature.com/articles/s41467-026-74501-2
-- https://pmc.ncbi.nlm.nih.gov/articles/PMC11319878/
 ''',
         "references": [
             "https://trialsjournal.biomedcentral.com/counter/pdf/10.1186/s13063-021-05489-x.pdf",
@@ -253,13 +235,6 @@ print("ATE:", est.ate_)
 2. Simulate null and alternative scenarios to confirm valid coverage of confidence intervals.
 3. Compare heterogeneous effect estimates between causal forest and linear interaction models.
 
-## References
-
-- https://www.nber.org/system/files/working_papers/w24678/w24678.pdf
-- https://proceedings.mlr.press/v286/chen25b.html
-- https://www.nature.com/articles/s41598-025-10566-1
-- https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2800273
-- https://link.springer.com/article/10.1186/s13063-020-4076-y
 ''',
         "references": [
             "https://www.nber.org/system/files/working_papers/w24678/w24678.pdf",
@@ -324,15 +299,9 @@ print("CATE:", est.effect(X[:5]))
 2. Compare propensity-weighted, matching, and doubly robust estimates.
 3. Run a sensitivity analysis and show how large an unmeasured confounder must be.
 
-## References
-
-- https://arxiv.org/html/2501.00755v1
-- https://doi.org/10.3386/w30302
-- https://pubmed.ncbi.nlm.nih.gov/34652613/
-- https://proceedings.mlr.press/v161/shi21a/shi21a.pdf
 ''',
         "references": [
-            "https://arxiv.org/html/2501.00755v1",
+            "https://arxiv.org/abs/2501.00755v1",
             "https://doi.org/10.3386/w30302",
             "https://pubmed.ncbi.nlm.nih.gov/34652613/",
             "https://proceedings.mlr.press/v161/shi21a/shi21a.pdf",
@@ -388,12 +357,6 @@ registry_df["risk_score"] = clf.predict_proba(X)[:, 1]
 2. Compare registry-derived estimates to published RCT estimates for the same treatment.
 3. Report data-quality and completeness metrics alongside model performance.
 
-## References
-
-- https://link.springer.com/article/10.1007/s44250-026-00373-4
-- https://doi.org/10.2196/71873
-- https://www.real4reg.eu/
-- https://cordis.europa.eu/project/id/101095479
 ''',
         "references": [
             "https://link.springer.com/article/10.1007/s44250-026-00373-4",
@@ -455,13 +418,6 @@ for train_idx, test_idx in tscv.split(X):
 2. Evaluate model performance on a different RWD source or calendar period.
 3. Produce a fit-for-purpose assessment using FDA or EMA guidance criteria.
 
-## References
-
-- https://www.fda.gov/drugs/development-resources/advancing-real-world-evidence-program-frequently-asked-questions
-- https://uscode.house.gov/view.xhtml?req=%28title%3A21+section%3A355g+edition%3Aprelim%29
-- https://bmcmedinformdecismak.biomedcentral.com/counter/pdf/10.1186/s12911-021-01403-2.pdf
-- https://pmc.ncbi.nlm.nih.gov/articles/PMC9189725/
-- https://www.nature.com/articles/s43588-025-00901-x
 ''',
         "references": [
             "https://www.fda.gov/drugs/development-resources/advancing-real-world-evidence-program-frequently-asked-questions",
@@ -520,12 +476,6 @@ pro_df["predicted_pro"] = model.predict(X)
 2. Implement a short adaptive PRO form and compare measurement precision to the full form.
 3. Evaluate whether PRO-based predictions improve shared decision-making outcomes.
 
-## References
-
-- https://link.springer.com/article/10.1186/s12955-025-02365-z
-- https://link.springer.com/article/10.1186/s12911-025-03083-8
-- https://link.springer.com/article/10.1186/s41687-026-00992-8
-- https://link.springer.com/article/10.1186/s41687-024-00808-7
 ''',
         "references": [
             "https://link.springer.com/article/10.1186/s12955-025-02365-z",
@@ -585,12 +535,6 @@ model = LogisticRegression(max_iter=1000, penalty="l1", solver="liblinear").fit(
 2. Compare sparse ML-selected biomarkers to univariate ranking and stability-selection baselines.
 3. Report sensitivity, specificity, and calibration in the intended-use population.
 
-## References
-
-- https://www.nature.com/articles/s41587-023-02033-x
-- https://doi.org/10.1371/journal.pcbi.1010357
-- https://doi.org/10.1136/bmjopen-2021-053674
-- https://ai.nejm.org/doi/full/10.1056/AIoa2400867
 ''',
         "references": [
             "https://www.nature.com/articles/s41587-023-02033-x",
@@ -654,18 +598,11 @@ res = minimize(sc_loss, x0=np.ones(Y_pre.shape[1]) / Y_pre.shape[1],
 2. Compare classic SCM, penalized SCM, and a learned-representation baseline.
 3. Run placebo inference and show that treatment effects exceed the null distribution.
 
-## References
-
-- https://www.bis.org/publ/work1181.pdf
-- https://doi.org/10.22541/au.176072431.11742213/v1
-- https://arxiv.org/html/2602.04611
-- https://microsoft.github.io/SparseSC/
-- https://www.mit.edu/~jhainm/Paper/ccs.pdf
 ''',
         "references": [
             "https://www.bis.org/publ/work1181.pdf",
             "https://doi.org/10.22541/au.176072431.11742213/v1",
-            "https://arxiv.org/html/2602.04611",
+            "https://arxiv.org/abs/2602.04611",
             "https://microsoft.github.io/SparseSC/",
             "https://www.mit.edu/~jhainm/Paper/ccs.pdf",
         ],
@@ -722,17 +659,10 @@ print("I-squared:", combined.i2)
 2. Compare LLM-extracted data to manually extracted data on a validation set.
 3. Run leave-one-out and subgroup meta-analyses to assess robustness.
 
-## References
-
-- https://doi.org/10.1017/rsm.2025.10065
-- https://arxiv.org/html/2606.28363
-- https://www.ncbi.nlm.nih.gov/pmc/articles/13035263
-- https://www.ncbi.nlm.nih.gov/books/NBK620201/
-- https://link.springer.com/article/10.1007/s41669-024-00476-9
 ''',
         "references": [
             "https://doi.org/10.1017/rsm.2025.10065",
-            "https://arxiv.org/html/2606.28363",
+            "https://arxiv.org/abs/2606.28363",
             "https://www.ncbi.nlm.nih.gov/pmc/articles/13035263",
             "https://www.ncbi.nlm.nih.gov/books/NBK620201/",
             "https://link.springer.com/article/10.1007/s41669-024-00476-9",
@@ -790,13 +720,6 @@ records_df["screening_score"] = clf.predict_proba(X)[:, 1]
 2. Compare LLM-generated risk-of-bias ratings to human ratings on a gold-standard set.
 3. Cross-check every synthesized claim against its source publication.
 
-## References
-
-- https://www.cambridge.org/core/journals/research-synthesis-methods/article/generative-artificial-intelligence-use-in-evidence-synthesis/2DACF6D129AA6E46CB8A8740A03D0675
-- https://www.ncbi.nlm.nih.gov/books/NBK620201/
-- https://www.ncbi.nlm.nih.gov/pmc/articles/13035263
-- https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.ED000178/full
-- https://doi.org/10.1093/jamia/ocaf030
 ''',
         "references": [
             "https://www.cambridge.org/core/journals/research-synthesis-methods/article/generative-artificial-intelligence-use-in-evidence-synthesis/2DACF6D129AA6E46CB8A8740A03D0675",

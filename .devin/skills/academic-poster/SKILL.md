@@ -1,9 +1,3 @@
----
-name: academic-poster
-description: >-
-  Create academic conference posters. Use when designing posters for conference presentations, research showcases, or poster sessions.
----
-
 # Academic Poster Design
 
 ## Overview

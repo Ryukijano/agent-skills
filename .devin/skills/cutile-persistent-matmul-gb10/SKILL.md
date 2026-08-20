@@ -1,9 +1,3 @@
----
-name: cutile-persistent-matmul-gb10
-description: >-
-  Use cuTile Python persistent (static) kernels for high-throughput FP16/FP32 GEMM on GB10. Covers 2-wave block launch, tile swizzling, FP32 accumulation, and Tensor Core throughput tuning.
----
-
 # cuTile Persistent MatMul on GB10 DGX Spark
 
 ## Overview

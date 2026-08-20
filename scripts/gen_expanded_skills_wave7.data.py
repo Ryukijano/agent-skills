@@ -345,7 +345,7 @@ print(result)
         "references": [
             "https://arxiv.org/abs/2404.01037",
             "https://docs.ragas.io/",
-            "https://huggingface.co/papers/2403.18131",
+            "https://arxiv.org/abs/2403.18131",
             "https://python.langchain.com/docs/guides/evaluation/"
         ],
     },
@@ -390,7 +390,7 @@ print(memory.load_memory_variables({}))
 ''',
         "references": [
             "https://arxiv.org/abs/2403.12039",
-            "https://github.com/Stanford-ILIAD/MemGPT",
+            "https://github.com/cpacker/MemGPT",
             "https://arxiv.org/abs/2312.03689",
             "https://python.langchain.com/docs/modules/memory/"
         ],
@@ -481,7 +481,7 @@ for prompt in adversarial_prompts:
 ''',
         "references": [
             "https://arxiv.org/abs/2402.09300",
-            "https://www.anthropic.com/news/red-teaming",
+            "https://www.anthropic.com/news/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned",
             "https://arxiv.org/abs/2312.07401",
             "https://github.com/llm-attacks/llm-attacks"
         ],

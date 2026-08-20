@@ -1,9 +1,4 @@
----
-name: agentic-loop-design
-description: Designing and implementing reliable agentic loops (tools, planning, memory, verification) for research and applied projects (Lifeline benefits navigator, sub-agents, document agents). References LangGraph/NAT patterns and privacy-first principles.
----
-
-## Agentic Loop Design
+# Agentic Loop Design
 
 ### Core loop
 Observe → Plan (tools) → Act → Verify → (reflect / handoff)

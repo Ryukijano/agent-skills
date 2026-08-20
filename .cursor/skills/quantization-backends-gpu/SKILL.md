@@ -51,4 +51,4 @@ vllm serve model --quantization gptq_marlin --moe-backend marlin
 - https://github.com/intel/auto-round
 - https://github.com/IST-DASLab/marlin
 - https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/
-- https://arxiv.org/html/2509.23202v3
+- https://arxiv.org/abs/2509.23202v3

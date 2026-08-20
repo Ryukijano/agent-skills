@@ -91,7 +91,7 @@ model = GradientBoostingRegressor(n_estimators=300, random_state=42).fit(X, y)
         "references": [
             "https://doi.org/10.48550/arxiv.2408.08811",
             "https://arxiv.org/pdf/2210.12373",
-            "https://arxiv.org/html/2404.01230",
+            "https://arxiv.org/abs/2404.01230",
             "https://arxiv.org/abs/2412.13013",
         ],
     },
@@ -182,7 +182,7 @@ embeddings = model.encode(documents)
 ''',
         "references": [
             "https://doi.org/10.3389/frai.2025.1595930",
-            "https://arxiv.org/html/2607.02609",
+            "https://arxiv.org/abs/2607.02609",
             "https://link.springer.com/article/10.1007/s44163-026-01780-5",
             "https://doi.org/10.2478/czoto-2024-0027",
         ],
@@ -231,7 +231,7 @@ model = GradientBoostingRegressor(n_estimators=300, random_state=42).fit(X, y)
             "https://doi.org/10.48550/arxiv.2601.16392",
             "https://arxiv.org/pdf/2604.21958",
             "https://arxiv.org/pdf/2506.02214",
-            "https://arxiv.org/html/2604.13814v1",
+            "https://arxiv.org/abs/2604.13814v1",
         ],
     },
     {
@@ -275,8 +275,8 @@ clf = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, y)
 3. Test personalized communication and measure engagement lift.
 ''',
         "references": [
-            "https://arxiv.org/html/2510.19997",
-            "https://arxiv.org/html/2411.08693",
+            "https://arxiv.org/abs/2510.19997",
+            "https://arxiv.org/abs/2411.08693",
             "https://aaltodoc.aalto.fi/items/f95a2878-deed-4814-bf3c-e326a4a1dc8d",
             "https://www.inderscience.com/info/inarticle.php?artid=132074",
         ],
@@ -324,8 +324,8 @@ result = linprog(c, A_ub=A_ub, b_ub=b_ub, bounds=(0, max_staff))
 3. Deploy an anomaly detector and validate against known quality issues.
 ''',
         "references": [
-            "https://arxiv.org/html/2507.17927",
-            "https://arxiv.org/html/2505.13580",
+            "https://arxiv.org/abs/2507.17927",
+            "https://arxiv.org/abs/2505.13580",
             "https://arxiv.org/abs/2510.03310",
             "https://arxiv.org/pdf/2601.06061",
         ],
@@ -374,7 +374,7 @@ model = GradientBoostingClassifier(n_estimators=300, random_state=42).fit(X, y)
             "https://doi.org/10.48550/arxiv.2502.06656",
             "https://pmc.ncbi.nlm.nih.gov/articles/PMC12032382/",
             "https://www.msci.com/downloads/web/msci-com/research-and-insights/paper/ai-portfolio-insights-and-the-future-of-risk-management/AI-Portfolio-Insights-and-the-Future-of-Risk-Management.pdf",
-            "https://arxiv.org/html/2310.17721",
+            "https://arxiv.org/abs/2310.17721",
         ],
     },
     {
@@ -422,7 +422,7 @@ clf = MultinomialNB().fit(X, requirement_labels)
             "https://doi.org/10.1007/s44163-026-01196-1",
             "https://doi.org/10.48550/arxiv.2601.04474",
             "https://link.springer.com/article/10.1007/s43681-025-00708-6",
-            "https://arxiv.org/html/2406.14758v2",
+            "https://arxiv.org/abs/2406.14758v2",
         ],
     },
     {
@@ -466,8 +466,8 @@ entities = ner(contract_text)
 ''',
         "references": [
             "https://aclanthology.org/2026.findings-eacl.305/",
-            "https://arxiv.org/html/2508.03080",
-            "https://arxiv.org/html/2401.16212",
+            "https://arxiv.org/abs/2508.03080",
+            "https://arxiv.org/abs/2401.16212",
             "https://www.cambridge.org/core/journals/international-journal-of-legal-information/article/evaluating-ai-in-legal-operations-a-comparative-analysis-of-accuracy-completeness-and-hallucinations-in-chatgpt4-copilot-deepseek-lexis-ai-and-llama-3/64E4DA3715DFCAA99DF3A1AC4680CAC8",
         ],
     },
@@ -513,7 +513,7 @@ clf = RandomForestClassifier(class_weight="balanced_subsample", random_state=42)
 ''',
         "references": [
             "https://arxiv.org/abs/2605.18784v2",
-            "https://arxiv.org/html/2606.05449v1",
+            "https://arxiv.org/abs/2606.05449v1",
             "https://doi.org/10.48550/arxiv.2506.18942",
             "https://arxiv.org/abs/2306.01149",
         ],
@@ -562,7 +562,7 @@ model = GradientBoostingRegressor(n_estimators=300, random_state=42).fit(X, y)
             "https://arxiv.org/abs/2603.12986v1",
             "https://doi.org/10.48550/arxiv.2503.12344",
             "https://arxiv.org/pdf/2107.05180",
-            "https://arxiv.org/html/2506.11812",
+            "https://arxiv.org/abs/2506.11812",
         ],
     },
 ]

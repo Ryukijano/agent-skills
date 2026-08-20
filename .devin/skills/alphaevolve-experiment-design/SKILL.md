@@ -1,11 +1,3 @@
----
-name: alphaevolve-experiment-design
-description: >-
-  Design AlphaEvolve experiments: clarify problem, create seed program with
-  EVOLVE-BLOCK markers, write evaluator, set up project structure. Use when
-  starting a new AlphaEvolve optimization.
----
-
 # AlphaEvolve Experiment Design
 
 ## Preconditions

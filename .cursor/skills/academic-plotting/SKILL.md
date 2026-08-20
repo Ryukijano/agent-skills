@@ -1,11 +1,3 @@
----
-name: academic-plotting
-description: >-
-  Generate publication-quality figures for ML papers: architecture diagrams and
-  data-driven charts with venue-specific styling. Use when creating figures for
-  papers.
----
-
 # Academic Plotting
 
 ## Figure Types

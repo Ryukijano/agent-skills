@@ -41,6 +41,6 @@ print(memory.load_memory_variables({}))
 ## References
 
 - https://arxiv.org/abs/2403.12039
-- https://github.com/Stanford-ILIAD/MemGPT
+- https://github.com/cpacker/MemGPT
 - https://arxiv.org/abs/2312.03689
 - https://python.langchain.com/docs/modules/memory/

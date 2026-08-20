@@ -43,4 +43,4 @@ point = manifold.random(2, 3)
 - https://geoopt.readthedocs.io/
 - https://arxiv.org/pdf/2207.07287
 - https://optml.mit.edu/papers/sra_hosseini_chapter.pdf
-- https://arxiv.org/html/2604.02969
+- https://arxiv.org/abs/2604.02969

@@ -44,5 +44,5 @@ loss.backward()
 
 - https://doi.org/10.48550/arxiv.2111.06377
 - https://github.com/facebookresearch/mae
-- https://ar5iv.labs.arxiv.org/html/2202.03670
+- https://arxiv.org/abs/2202.03670
 - https://github.com/huggingface/pytorch-image-models

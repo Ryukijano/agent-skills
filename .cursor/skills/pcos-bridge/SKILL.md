@@ -1,11 +1,3 @@
----
-name: pcos-bridge
-description: >-
-  Chrome ↔ Android WebSocket bridge via PCOS broker. Use when working on the
-  bridge relay, WebSocket keepalive, authentication, or cross-device context
-  synchronization.
----
-
 # PCOS WebSocket Bridge
 
 The PCOS broker acts as a WebSocket relay hub between Chrome extension and Android app.

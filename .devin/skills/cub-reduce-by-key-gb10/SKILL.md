@@ -1,9 +1,3 @@
----
-name: cub-reduce-by-key-gb10
-description: >-
-  Use CUB cub::DeviceReduce::ReduceByKey on GB10 for grouping and reducing contiguous key runs in device memory. Useful for batched embedding aggregation.
----
-
 # CUB ReduceByKey on GB10 DGX Spark
 
 ## Overview

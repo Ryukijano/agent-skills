@@ -1,9 +1,4 @@
----
-name: reproducibility
-description: Ensure ML research reproducibility through seeds, config logging, environment capture, and deterministic training. Use when setting up reproducible experiments, preparing code for paper submission, or auditing a project for reproducibility gaps.
----
-
-## ML Research Reproducibility
+# ML Research Reproducibility
 
 ### Core principles
 

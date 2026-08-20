@@ -48,15 +48,7 @@ o3d.visualization.draw_geometries([pcd])
 
 ## References
 
-- https://arxiv.org/html/2505.07396v1
-- https://www.mdpi.com/2624-6511/8/1/28
-- https://www.nature.com/articles/s43588-024-00606-7
-- https://ojs.aaai.org/index.php/AAAI/article/view/42379
-- https://www.sciopen.com/article/10.1016/j.ese.2025.100526
-
-## References
-
-- https://arxiv.org/html/2505.07396v1
+- https://arxiv.org/abs/2505.07396v1
 - https://www.mdpi.com/2624-6511/8/1/28
 - https://www.nature.com/articles/s43588-024-00606-7
 - https://ojs.aaai.org/index.php/AAAI/article/view/42379

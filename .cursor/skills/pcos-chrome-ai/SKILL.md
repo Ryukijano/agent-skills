@@ -1,11 +1,3 @@
----
-name: pcos-chrome-ai
-description: >-
-  Chrome Built-in AI API integration for PCOS. Use when working on the Chrome
-  extension, adding Built-in AI API calls, debugging Chrome AI availability,
-  or updating the side panel UI.
----
-
 # Chrome Built-in AI for PCOS
 
 The PCOS Chrome extension uses Chrome's Built-in AI APIs for on-browser inference with zero network latency.

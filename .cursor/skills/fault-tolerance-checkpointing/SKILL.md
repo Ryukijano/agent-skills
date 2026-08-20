@@ -45,6 +45,6 @@ deepspeed --num_gpus 8 train.py --deepspeed ds_config.json
 ## References
 
 - https://pytorch.org/docs/stable/distributed.checkpoint.html
-- https://www.deepspeed.ai/tutorials/elastic-training/
+- https://www.deepspeed.ai/
 - https://pytorch.org/docs/stable/elastic/run.html
 - https://docs.mila.quebec/examples/good_practices/checkpointing/

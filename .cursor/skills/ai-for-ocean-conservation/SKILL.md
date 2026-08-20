@@ -40,7 +40,7 @@ clf.fit(X_ais)
 
 ## References
 
-- https://arxiv.org/html/2312.03207
+- https://arxiv.org/abs/2312.03207
 - https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1798458/full
 - https://doi.org/10.1016/j.procs.2026.06.143
 - https://allenai.org/skylight

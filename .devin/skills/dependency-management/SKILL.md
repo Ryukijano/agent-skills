@@ -1,9 +1,4 @@
----
-name: dependency-management
-description: Manage Python dependencies for ML research projects using requirements.txt, environment.yml, pyproject.toml, or uv. Use when creating lock files, resolving version conflicts, migrating to uv, or troubleshooting import errors.
----
-
-## Dependency Management for ML Projects
+# Dependency Management for ML Projects
 
 ### Tool comparison
 

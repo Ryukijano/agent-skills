@@ -44,4 +44,4 @@ class Category:
 - https://proceedings.mlr.press/v235/gavranovic24a.html
 - https://arxiv.org/abs/2603.16123v1
 - https://www.mdpi.com/2075-1680/14/3/204
-- https://www.algebraicjulia.org/catlab/dev/
+- https://algebraicjulia.github.io/Catlab.jl/stable/

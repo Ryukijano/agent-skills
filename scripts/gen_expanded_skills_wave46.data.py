@@ -50,12 +50,6 @@ y_pred = cross_val_predict(
 2. Run leave-one-environment-out cross-validation to assess GxE generalisation.
 3. Estimate expected genetic gain from the predicted selection index.
 
-## References
-
-- https://www.sciencedirect.com/science/article/pii/S1360138524003455
-- https://doi.org/10.1093/genetics/iyae161
-- https://link.springer.com/article/10.1186/s12864-020-07319-x
-- https://www.sciencedirect.com/science/article/pii/S1674205224000807
 ''',
         "references": [
             "https://www.sciencedirect.com/science/article/pii/S1360138524003455",
@@ -116,12 +110,6 @@ img = preprocess(Image.open("leaf.jpg")).unsqueeze(0)
 2. Compare AI diagnoses to expert ratings and laboratory confirmations.
 3. Track fungicide or pesticide reduction and yield protection in a field trial.
 
-## References
-
-- https://link.springer.com/article/10.1007/s10343-025-01247-0
-- https://link.springer.com/article/10.1007/s43621-026-03623-w
-- https://link.springer.com/article/10.1007/s42452-026-08684-0
-- https://link.springer.com/article/10.1007/s10462-024-11100-x
 ''',
         "references": [
             "https://link.springer.com/article/10.1007/s10343-025-01247-0",
@@ -178,12 +166,6 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 2. Simulate a season of ML-driven irrigation and compare water use to a farmer schedule.
 3. Validate yield and crop-stress outcomes in a split-field or randomised trial.
 
-## References
-
-- https://ideas.repec.org/a/eee/agiwat/v294y2024ics0378377424000453.html
-- https://doi.org/10.1080/27525783.2025.2562418
-- https://www.mdpi.com/1424-8220/24/23/7480
-- https://www.mdpi.com/2624-7402/4/1/6
 ''',
         "references": [
             "https://ideas.repec.org/a/eee/agiwat/v294y2024ics0378377424000453.html",
@@ -240,12 +222,6 @@ edges = cv2.Canny(blurred, 50, 150)
 2. Report harvest, pick, or weed-detection success rate in field conditions.
 3. Quantify traversal time, energy use, and crop damage relative to a baseline.
 
-## References
-
-- https://doi.org/10.1002/rob.22230
-- https://onlinelibrary.wiley.com/doi/10.1002/rob.21525
-- https://www.mdpi.com/2073-4395/14/10/2233
-- https://www.mdpi.com/2218-6581/15/4/81
 ''',
         "references": [
             "https://doi.org/10.1002/rob.22230",
@@ -302,12 +278,6 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 2. Compare heat-detection recall to visual oestrus detection.
 3. Validate milk-yield forecasts against actual test-day records.
 
-## References
-
-- https://www.mdpi.com/2077-0472/13/10/1858
-- https://www.sciencedirect.com/science/article/pii/S0167587720309211
-- https://www.mdpi.com/2076-2615/15/14/2033
-- https://pmc.ncbi.nlm.nih.gov/articles/PMC8747441/
 ''',
         "references": [
             "https://www.mdpi.com/2077-0472/13/10/1858",
@@ -363,12 +333,6 @@ model = GradientBoostingClassifier(random_state=42).fit(X, y)
 2. Compare automated welfare scores to manual audit results.
 3. Validate mortality or disease prediction on a held-out flock cycle.
 
-## References
-
-- https://doi.org/10.1016/j.japr.2025.100602
-- https://pmc.ncbi.nlm.nih.gov/articles/PMC11700577/
-- https://pmc.ncbi.nlm.nih.gov/articles/PMC6770384/
-- https://www.mdpi.com/2071-1050/12/4/1413
 ''',
         "references": [
             "https://doi.org/10.1016/j.japr.2025.100602",
@@ -425,12 +389,6 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 2. Track feed conversion ratio and growth under ML-based feeding.
 3. Detect mortality or disease events earlier than manual observation.
 
-## References
-
-- https://doi.org/10.1016/j.fraope.2026.100567
-- https://www.sciencedirect.com/science/article/abs/pii/S0044848625014887
-- https://doi.org/10.1016/j.aiia.2025.01.012
-- https://doi.org/10.5772/intechopen.1014536
 ''',
         "references": [
             "https://doi.org/10.1016/j.fraope.2026.100567",
@@ -486,12 +444,6 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 2. Compare automated behaviour classification to expert-annotated video.
 3. Test model transfer to a different breed or farm without full retraining.
 
-## References
-
-- https://www.sciencedirect.com/science/article/pii/S0168169920317099
-- https://doi.org/10.5713/ab.25.0289
-- https://doi.org/10.1016/j.aiia.2026.04.013
-- https://www.mdpi.com/1424-8220/23/12/5732
 ''',
         "references": [
             "https://www.sciencedirect.com/science/article/pii/S0168169920317099",
@@ -546,12 +498,6 @@ ndvi = (nir - red) / (nir + red + 1e-8)
 2. Estimate yield per vine and compare to harvest weights.
 3. Predict grape sugar and acidity and validate with lab results.
 
-## References
-
-- https://doi.org/10.1111/1541-4337.70523
-- https://doi.org/10.3390/horticulturae12060719
-- https://doi.org/10.1016/j.aiia.2025.08.001
-- https://www.mdpi.com/2076-3417/14/22/10277
 ''',
         "references": [
             "https://doi.org/10.1111/1541-4337.70523",
@@ -605,12 +551,6 @@ model.train(data="pest_images", epochs=50, imgsz=224)
 2. Compare model-based trap counts to manual counts.
 3. Evaluate spray-timing recommendations against a scouting-only baseline.
 
-## References
-
-- https://www.mdpi.com/2073-4395/15/7/1629
-- https://resjournals.onlinelibrary.wiley.com/doi/10.1111/afe.12630
-- https://www.sciencedirect.com/science/article/abs/pii/S1161030126000596
-- https://doi.org/10.22271/27889289.2026.v6.i3a.259
 ''',
         "references": [
             "https://www.mdpi.com/2073-4395/15/7/1629",
@@ -668,12 +608,6 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 2. Validate nutrient predictions against wet-chemistry lab results.
 3. Track changes in predicted soil health over years of management.
 
-## References
-
-- https://doi.org/10.1002/advs.202504152
-- https://doi.org/10.3390/app16115412
-- https://link.springer.com/article/10.1007/s11368-024-03913-8
-- https://www.mdpi.com/2077-0472/15/5/567
 ''',
         "references": [
             "https://doi.org/10.1002/advs.202504152",
@@ -732,12 +666,6 @@ print(model.summary())
 2. Estimate price or input-cost elasticity and interpret economic significance.
 3. Compare a DSS recommendation to historical farmer practice in a pilot region.
 
-## References
-
-- https://www.annualreviews.org/content/journals/10.1146/annurev-resource-101623-092515
-- https://doi.org/10.1007/s44279-026-00510-w
-- https://doi.org/10.62486/latia2025326
-- https://baylislab.ace.illinois.edu/wp-content/uploads/2019/09/Storm-et-al-ML-Review.pdf
 ''',
         "references": [
             "https://www.annualreviews.org/content/journals/10.1146/annurev-resource-101623-092515",

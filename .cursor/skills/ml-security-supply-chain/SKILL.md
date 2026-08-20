@@ -44,6 +44,6 @@ sbom-tool generate -b . -bc . -o sbom.json
 ## References
 
 - https://github.com/ossf/model-signing-spec
-- https://cyclonedx.org/specification/
+- https://cyclonedx.org/specification/overview/
 - https://trivy.dev/
 - https://github.com/ml-guard/ml-guard

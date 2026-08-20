@@ -1,9 +1,4 @@
----
-name: 3d-reconstruction-best-practices
-description: Best practices for clinical 3D reconstruction from endoscopic video (Endosight / polyp pipeline). Focus on point cloud fusion, surface reconstruction choice (Poisson vs BPA), sizing from fused cloud, and viewer considerations.
----
-
-## 3D Reconstruction Best Practices
+# 3D Reconstruction Best Practices
 
 ### Pipeline preference
 - One main-process upload + recon flow (POST /api/v1/reconstruct/upload) for offline clinical work.

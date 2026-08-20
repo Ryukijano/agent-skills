@@ -276,10 +276,10 @@ class ForcePolicy(nn.Module):
 3. Compare a learned policy to a classical force controller on a contact-rich task.
 ''',
         "references": [
-            "https://arxiv.org/html/2607.14021v2",
+            "https://arxiv.org/abs/2607.14021v2",
             "https://www.nature.com/articles/s42256-026-01292-y",
-            "https://arxiv.org/html/2604.20246",
-            "https://arxiv.org/html/2608.17962",
+            "https://arxiv.org/abs/2604.20246",
+            "https://arxiv.org/abs/2608.17962",
         ],
     },
     {
@@ -323,8 +323,8 @@ results = model(frame)
 ''',
         "references": [
             "https://doi.org/10.1016/j.array.2024.100361",
-            "https://arxiv.org/html/2606.12142",
-            "https://arxiv.org/html/2509.18610",
+            "https://arxiv.org/abs/2606.12142",
+            "https://arxiv.org/abs/2509.18610",
             "https://doi.org/10.13111/2066-8201.2026.18.2.9",
         ],
     },

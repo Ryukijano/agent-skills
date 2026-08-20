@@ -1,10 +1,3 @@
----
-name: incremental-implementation
-description: >-
-  Implement features in small verifiable increments. Each change should be
-  compilable, testable, and rollback-friendly. Use when building any feature.
----
-
 # Incremental Implementation
 
 ## The Increment Cycle

@@ -47,5 +47,5 @@ print(summary)
 
 - https://www.microsoft.com/en-us/research/publication/vibevoice-expressive-podcast-generation/
 - https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/
-- https://arxiv.org/html/2510.00485v1
+- https://arxiv.org/abs/2510.00485v1
 - https://www.scientificamerican.com/podcast/episode/how-tools-like-notebooklm-create-ai-generated-podcasts/

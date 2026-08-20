@@ -45,5 +45,5 @@ optimizer = DPKerasSGDOptimizer(
 
 - https://arxiv.org/abs/2508.13730
 - https://www.oecd.org/publications/sharing-trustworthy-ai-models-with-privacy-enhancing-technologies_5df6fd05
-- https://tensorflow.github.io/compliance/privacy/
+- https://www.tensorflow.org/responsible_ai/privacy
 - https://opacus.ai/

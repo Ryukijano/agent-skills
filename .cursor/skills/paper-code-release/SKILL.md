@@ -1,9 +1,4 @@
----
-name: paper-code-release
-description: Preparing a research codebase for public release alongside a paper or tech report. Covers licensing, citation, repro instructions, artifact packaging, and hygiene.
----
-
-## Paper Code Release
+# Paper Code Release
 
 ### Required artifacts
 - Clean README with one-command setup + "reproduce main table" section + expected numbers.

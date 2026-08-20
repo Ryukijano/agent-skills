@@ -48,7 +48,7 @@ pip install terratorch
 ## References
 
 - https://torchgeo.org/
-- https://github.com/ibm-nasa-geospatial/Prithvi-EO-1.0-100M
+- https://huggingface.co/ibm-nasa-geospatial/Prithvi-100M
 - https://samgeo.gishub.org/
 - https://docs.nvidia.com/cuopt/
 - https://arxiv.org/abs/2412.02732v3

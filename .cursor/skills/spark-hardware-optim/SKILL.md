@@ -1,9 +1,4 @@
----
-name: spark-hardware-optim
-description: Performance and memory optimization on DGX Spark (GB10 Grace Blackwell 128 GB unified) and AIRE L40S nodes for large vision / video models (DINOv2, Cosmos3, etc.).
----
-
-## Hardware Optimization Notes
+# Hardware Optimization Notes
 
 ### GB10 Spark
 - 128 GB unified memory is a big advantage for long context / large batches, but still watch fragmentation.

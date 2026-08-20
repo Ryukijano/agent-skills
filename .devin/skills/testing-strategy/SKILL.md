@@ -1,9 +1,4 @@
----
-name: testing-strategy
-description: Design and implement testing strategies for ML research code including unit tests, integration tests, smoke tests, and property-based tests. Use when writing tests for model components, data pipelines, training loops, or setting up pytest.
----
-
-## Testing Strategy for ML Research Code
+# Testing Strategy for ML Research Code
 
 ### Test pyramid for ML projects
 

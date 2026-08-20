@@ -1,9 +1,3 @@
----
-name: cuda-dynamic-parallelism-quicksort-gb10
-description: >-
-  Use CUDA Dynamic Parallelism (CDP) to implement recursive quicksort on GB10. Covers parent/child kernel launch, -rdc=true, and sync depth limits.
----
-
 # CDP Recursive Quicksort on GB10 DGX Spark
 
 ## Overview

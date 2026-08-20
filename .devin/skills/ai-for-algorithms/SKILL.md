@@ -46,7 +46,7 @@ def learned_paging_predict(cache, request):
 
 ## References
 
-- https://ar5iv.labs.arxiv.org/html/2006.09123
+- https://arxiv.org/abs/2006.09123
 - https://cacm.acm.org/opinion/algorithms-with-predictions/
 - https://arpi.unipi.it/bitstream/11568/1038818/1/BookChapter__Learned_data_structures.pdf
 - http://theory.stanford.edu/~sergei/slides/HALG-slides.pdf

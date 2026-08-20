@@ -42,6 +42,6 @@ clf = RandomForestClassifier(class_weight="balanced_subsample", random_state=42)
 ## References
 
 - https://arxiv.org/abs/2605.18784v2
-- https://arxiv.org/html/2606.05449v1
+- https://arxiv.org/abs/2606.05449v1
 - https://doi.org/10.48550/arxiv.2506.18942
 - https://arxiv.org/abs/2306.01149

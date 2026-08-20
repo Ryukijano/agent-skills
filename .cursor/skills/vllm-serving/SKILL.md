@@ -1,10 +1,3 @@
----
-name: vllm-serving
-description: >-
-  High-throughput LLM serving with vLLM and PagedAttention. Use when deploying
-  LLMs for inference, building APIs, or optimizing serving throughput.
----
-
 # vLLM Serving
 
 ## Overview

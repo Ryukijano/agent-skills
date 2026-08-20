@@ -53,11 +53,4 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 - https://www.nature.com/articles/s41598-026-58710-9
 - https://doi.org/10.1016/j.egyr.2026.109367
 - https://doi.org/10.1016/j.apenergy.2025.125485
-- https://arxiv.org/html/2605.21396
-
-## References
-
-- https://www.nature.com/articles/s41598-026-58710-9
-- https://doi.org/10.1016/j.egyr.2026.109367
-- https://doi.org/10.1016/j.apenergy.2025.125485
-- https://arxiv.org/html/2605.21396
+- https://arxiv.org/abs/2605.21396

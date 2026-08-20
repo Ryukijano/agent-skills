@@ -1,11 +1,3 @@
----
-name: knowledge-distillation
-description: >-
-  Compress large models into smaller ones via knowledge distillation. Transfer
-  capabilities from teacher to student model. Use when reducing model size for
-  deployment.
----
-
 # Knowledge Distillation
 
 ## Overview

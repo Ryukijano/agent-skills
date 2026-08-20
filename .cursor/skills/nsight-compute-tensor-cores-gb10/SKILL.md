@@ -1,9 +1,3 @@
----
-name: nsight-compute-tensor-cores-gb10
-description: >-
-  Profile CUDA kernels on GB10 with Nsight Compute to find Tensor Core utilization, memory bottlenecks, and occupancy limiters. Covers the key NCU metrics and how to interpret them for SM121.
----
-
 # Profiling Tensor Cores with Nsight Compute on GB10 DGX Spark
 
 ## Overview

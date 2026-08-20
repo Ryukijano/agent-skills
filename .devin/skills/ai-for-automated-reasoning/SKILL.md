@@ -53,4 +53,4 @@ print("Relevant axioms:", [axioms[i] for i in indices[0]])
 - https://doi.org/10.1561/2200000081
 - https://www.tcs.ifi.lmu.de/staff/jasmin-blanchette/axiom_sel.pdf
 - https://doi.org/10.48550/arxiv.2404.09939
-- https://arxiv.org/html/2606.08728v4
+- https://arxiv.org/abs/2606.08728v4

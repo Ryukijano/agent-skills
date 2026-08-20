@@ -1,12 +1,3 @@
----
-name: mot-training-workflow
-description: >-
-  Runs the four-stage surgical MOT training and eval pipeline for
-  Gyanateet_tracking: conda env, stage configs, checkpoint chaining, HOTA eval,
-  and smoke-stratified metrics. Use when training, resuming, evaluating, or
-  debugging MOT stages.
----
-
 # MOT Training Workflow
 
 ## Environment

@@ -55,15 +55,7 @@ print("I-squared:", combined.i2)
 ## References
 
 - https://doi.org/10.1017/rsm.2025.10065
-- https://arxiv.org/html/2606.28363
-- https://www.ncbi.nlm.nih.gov/pmc/articles/13035263
-- https://www.ncbi.nlm.nih.gov/books/NBK620201/
-- https://link.springer.com/article/10.1007/s41669-024-00476-9
-
-## References
-
-- https://doi.org/10.1017/rsm.2025.10065
-- https://arxiv.org/html/2606.28363
+- https://arxiv.org/abs/2606.28363
 - https://www.ncbi.nlm.nih.gov/pmc/articles/13035263
 - https://www.ncbi.nlm.nih.gov/books/NBK620201/
 - https://link.springer.com/article/10.1007/s41669-024-00476-9

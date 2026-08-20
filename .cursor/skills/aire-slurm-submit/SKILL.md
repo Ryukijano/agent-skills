@@ -1,9 +1,4 @@
----
-name: aire-slurm-submit
-description: Submit and monitor Slurm jobs on the University of Leeds AIRE HPC cluster. Use when submitting GPU training jobs, checking job status, debugging Slurm failures, or managing compute allocations on AIRE L40S nodes.
----
-
-## AIRE HPC Slurm Job Submission
+# AIRE HPC Slurm Job Submission
 
 ### Cluster overview
 - **Partition**: `gpu` (NVIDIA L40S, 48GB VRAM, max 3 GPUs per node)

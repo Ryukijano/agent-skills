@@ -46,7 +46,7 @@ def repair(design, simulator, target, max_iter=20, lr=0.01):
 
 ## References
 
-- https://arxiv.org/html/2412.13281
-- https://arxiv.org/html/2306.15166
+- https://arxiv.org/abs/2412.13281
+- https://arxiv.org/abs/2306.15166
 - https://arxiv.org/abs/2309.02040
-- https://arxiv.org/html/2406.09143
+- https://arxiv.org/abs/2406.09143

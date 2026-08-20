@@ -498,7 +498,7 @@ spk, mem = lif(cur_in, mem_prev)
 3. Measure energy per spike on the target neuromorphic hardware for a keyword-spotting task.
 ''',
         "references": [
-            "https://arxiv.org/html/1901.03690",
+            "https://arxiv.org/abs/1901.03690",
             "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.795876/full",
             "https://impact.ornl.gov/en/publications/a-review-of-spiking-neuromorphic-hardware-communication-systems/",
             "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.667011/full",

@@ -46,7 +46,7 @@ outputs = model(**inputs)
 ## References
 
 - https://doi.org/10.48550/arxiv.1904.05342
-- https://mimic.mit.edu/docs/III/
+- https://mimic.mit.edu/docs/iii/
 - https://www.nature.com/articles/sdata201635
 - https://aclanthology.org/W19-1909/
 - https://par.nsf.gov/servlets/purl/10580364

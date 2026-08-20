@@ -1,11 +1,3 @@
----
-name: evolutionary-code-optimization
-description: >-
-  General-purpose evolutionary code optimization using LLMs: seed program,
-  mutation, evaluation, selection loop. Apply to any optimization problem where
-  you can define a scoring function. Use with or without AlphaEvolve.
----
-
 # Evolutionary Code Optimization
 
 ## Overview

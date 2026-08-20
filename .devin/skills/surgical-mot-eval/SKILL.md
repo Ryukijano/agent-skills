@@ -1,9 +1,4 @@
----
-name: surgical-mot-eval
-description: Evaluate surgical multi-object tracking models on CholecTrack20. Use when running MOT evaluation, computing mAP/MOTA/MOTAP metrics, analyzing tracking results, or comparing detection performance across configurations.
----
-
-## Surgical MOT Evaluation on CholecTrack20
+# Surgical MOT Evaluation on CholecTrack20
 
 ### Dataset structure
 

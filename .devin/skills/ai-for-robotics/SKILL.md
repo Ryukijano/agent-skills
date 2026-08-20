@@ -41,7 +41,7 @@ model.learn(total_timesteps=100_000)
 
 ## References
 
-- https://github.com/openxembodiment/
+- https://github.com/google-deepmind/open_x_embodiment
 - https://arxiv.org/abs/2403.08934
 - https://stable-baselines3.readthedocs.io/
 - https://github.com/bulletphysics/bullet3

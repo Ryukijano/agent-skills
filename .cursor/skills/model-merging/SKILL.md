@@ -1,11 +1,3 @@
----
-name: model-merging
-description: >-
-  Combine multiple models with TIES, DARE, SLERP using mergekit. Create
-  ensemble-like models without extra inference cost. Use when combining fine-
-  tuned variants.
----
-
 # Model Merging
 
 ## Overview

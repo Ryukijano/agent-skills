@@ -1,9 +1,3 @@
----
-name: cuda-profiling
-description: >-
-  Profile CUDA kernels with nsys, ncu, compute-sanitizer, and SASS/PTX dump. Use when profiling GPU code, checking memory errors, detecting data races, or inspecting compiled instructions.
----
-
 # CUDA Profiling MCP Server
 
 ## Overview

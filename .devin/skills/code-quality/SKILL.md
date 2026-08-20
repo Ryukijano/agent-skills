@@ -1,9 +1,4 @@
----
-name: code-quality
-description: Enforce code quality with formatting, linting, type checking, and pre-commit hooks for Python ML projects. Use when setting up ruff/black/mypy, configuring pre-commit, fixing lint errors, or establishing code style conventions.
----
-
-## Code Quality for Python ML Projects
+# Code Quality for Python ML Projects
 
 ### Recommended toolchain (2026)
 

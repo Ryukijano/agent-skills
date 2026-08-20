@@ -1,11 +1,3 @@
----
-name: cooperative-groups-gb10
-description: >-
-  Use Cooperative Groups on GB10 (sm_121): thread_block_tile, grid_group, this_grid(),
-  and cudaLaunchCooperativeKernel for single-pass multi-block reductions and other
-  cross-block cooperative algorithms.
----
-
 # Cooperative Groups on GB10 DGX Spark
 
 ## Overview

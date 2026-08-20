@@ -1,9 +1,4 @@
----
-name: reproducibility-checklist
-description: Concrete audit checklist for making a project or paper release reproducible. Use before submission or when onboarding to an existing codebase.
----
-
-## Reproducibility Checklist (Paper / Release Ready)
+# Reproducibility Checklist (Paper / Release Ready)
 
 - [ ] Git commit for every reported result is recorded and tagged or branch noted.
 - [ ] All configs for main tables/figures committed (with exact command lines).

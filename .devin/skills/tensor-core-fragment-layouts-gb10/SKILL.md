@@ -1,9 +1,3 @@
----
-name: tensor-core-fragment-layouts-gb10
-description: >-
-  Understand PTX mma.sync fragment layouts for NVIDIA Tensor Cores on GB10 (SM121). Covers m16n8k16/32/64 shapes, A/B/C/D register mapping, lane-to-element mapping, and how to stage swizzled shared memory for fragment loads.
----
-
 # Tensor Core Fragment Layouts on GB10 DGX Spark
 
 ## Overview

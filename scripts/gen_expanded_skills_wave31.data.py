@@ -42,7 +42,7 @@ clf.fit(X_env, y_presence)
             "https://www.mdpi.com/1424-8220/24/24/8122",
             "https://doi.org/10.1002/2688-8319.70167",
             "https://github.com/google/cameratrapai/",
-            "https://arxiv.org/html/2603.20509",
+            "https://arxiv.org/abs/2603.20509",
         ],
     },
     {
@@ -408,7 +408,7 @@ clf.fit(X_ais)
 3. Map marine habitat and validate with survey or eDNA data.
 ''',
         "references": [
-            "https://arxiv.org/html/2312.03207",
+            "https://arxiv.org/abs/2312.03207",
             "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1798458/full",
             "https://doi.org/10.1016/j.procs.2026.06.143",
             "https://allenai.org/skylight",

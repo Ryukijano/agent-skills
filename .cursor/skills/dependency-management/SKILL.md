@@ -1,11 +1,4 @@
----
-name: dependency-management
-description: >-
-  Managing Python dependencies for research reproducibility: pyproject vs
-  requirements, lock files, pinning strategy, conflict resolution, env export.
----
-
-## Dependency Management
+# Dependency Management
 
 ### Pinning policy
 - Research day-to-day: major version pins (`torch>=2.4,<3`).

@@ -84,7 +84,7 @@ fno = fno.to('cuda')
 3. Backtest on a held-out year of data.
 ''',
         "references": [
-            "https://arxiv.org/html/2509.06925",
+            "https://arxiv.org/abs/2509.06925",
             "https://www.mdpi.com/2071-1050/18/2/738",
             "https://www.nrel.gov/"
         ],
@@ -174,7 +174,7 @@ pose = estimator.predict(rgb, depth)
         "references": [
             "https://www.nature.com/articles/s43588-025-00924-4",
             "https://github.com/AccelerationConsortium/Matterix/",
-            "https://arxiv.org/html/2410.07801"
+            "https://arxiv.org/abs/2410.07801"
         ],
     },
     {
@@ -356,7 +356,7 @@ class EpidemicGNN(torch.nn.Module):
 ''',
         "references": [
             "https://link.springer.com/article/10.1186/s12911-025-03310-2",
-            "https://arxiv.org/html/2411.05556",
+            "https://arxiv.org/abs/2411.05556",
             "https://www.nature.com/articles/s41586-024-08564-w"
         ],
     },
@@ -533,7 +533,7 @@ model = model.to('cuda')
 3. Measure inference time per event on target hardware.
 ''',
         "references": [
-            "https://arxiv.org/html/2601.17554",
+            "https://arxiv.org/abs/2601.17554",
             "https://github.com/key4hep/k4MLJetTagger",
             "https://link.springer.com/article/10.1140/epjc/s10052-023-11677-7",
             "https://uproot.readthedocs.io/"

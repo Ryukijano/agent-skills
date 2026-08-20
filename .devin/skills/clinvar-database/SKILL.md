@@ -1,11 +1,3 @@
----
-name: clinvar-database
-description: >-
-  Use when needing clinical significance, pathogenicity classifications (e.g.,
-  Pathogenic, Benign, VUS), clinical evidence rationales, or finding "hard
-  positive" benchmark controls for human genomic variants.
----
-
 # Clinvar Database
 
 Source: `science_skills/clinvar_database/`

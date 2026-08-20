@@ -1,9 +1,4 @@
----
-name: debug-training
-description: Debug ML training failures including loss=NaN, CUDA OOM, DDP hangs, poor convergence, and wrong output shapes. Use when training crashes, loss diverges, or results are unexpected.
----
-
-## Debug Training Failures
+# Debug Training Failures
 
 ### By symptom
 

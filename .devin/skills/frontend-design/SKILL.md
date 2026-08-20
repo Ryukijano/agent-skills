@@ -1,11 +1,3 @@
----
-name: frontend-design
-description: >-
-  Frontend design and UI/UX development tools. Use when the user wants to create
-  beautiful web interfaces, design landing pages, or improve frontend
-  aesthetics.
----
-
 # Frontend Design
 
 ## Design Principles

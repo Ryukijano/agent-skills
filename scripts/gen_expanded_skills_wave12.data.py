@@ -58,7 +58,7 @@ def cluster_papers(papers, n=5):
 ''',
         "references": [
             "https://doi.org/10.1016/j.ijresmar.2023.10.002",
-            "https://arxiv.org/html/2503.00946v3",
+            "https://arxiv.org/abs/2503.00946v3",
             "https://arxiv.org/pdf/2409.04109",
             "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013259",
             "https://openreview.net/forum?id=bIAFQ8asqi",

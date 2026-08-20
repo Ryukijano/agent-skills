@@ -1,11 +1,3 @@
----
-name: pubchem-database
-description: >-
-  Query PubChem, search by name/CID/SMILES, retrieve properties,
-  similarity/substructure searches, bioactivity, for cheminformatics. Use when a
-  user asks about a specific chemical, drug, or molecule.
----
-
 # Pubchem Database
 
 Source: `science_skills/pubchem_database/`

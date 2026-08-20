@@ -49,5 +49,5 @@ class DKT(nn.Module):
 
 - https://arxiv.org/abs/2402.12142
 - https://sites.google.com/site/assistmentsdata/
-- https://huggingface.co/papers/2404.03025
+- https://arxiv.org/abs/2404.03025
 - https://pytorch.org/tutorials/

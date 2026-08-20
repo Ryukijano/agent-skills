@@ -149,7 +149,7 @@ loss.backward()
         "references": [
             "https://doi.org/10.48550/arxiv.2111.06377",
             "https://github.com/facebookresearch/mae",
-            "https://ar5iv.labs.arxiv.org/html/2202.03670",
+            "https://arxiv.org/abs/2202.03670",
             "https://github.com/huggingface/pytorch-image-models",
         ],
     },
@@ -626,7 +626,7 @@ class MultiTaskNet(nn.Module):
 3. Ablate sharing depth and task-weighting strategy on a fixed suite of tasks.
 ''',
         "references": [
-            "https://arxiv.org/html/2404.18961",
+            "https://arxiv.org/abs/2404.18961",
             "https://github.com/median-research-group/LibMTL",
             "https://libmtl.readthedocs.io/en/latest/",
             "https://arxiv.org/abs/1801.06704",

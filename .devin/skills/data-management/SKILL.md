@@ -1,9 +1,4 @@
----
-name: data-management
-description: Manage research datasets with versioning, hashing, split documentation, and leak-free partitioning. Use when setting up data pipelines, documenting dataset splits, preventing train/test leakage, or organizing large-scale ML data.
----
-
-## Research Data Management
+# Research Data Management
 
 ### Dataset versioning
 

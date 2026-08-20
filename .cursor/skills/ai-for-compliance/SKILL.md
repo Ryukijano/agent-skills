@@ -45,4 +45,4 @@ clf = MultinomialNB().fit(X, requirement_labels)
 - https://doi.org/10.1007/s44163-026-01196-1
 - https://doi.org/10.48550/arxiv.2601.04474
 - https://link.springer.com/article/10.1007/s43681-025-00708-6
-- https://arxiv.org/html/2406.14758v2
+- https://arxiv.org/abs/2406.14758v2

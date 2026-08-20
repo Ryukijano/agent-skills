@@ -1,9 +1,4 @@
----
-name: code-review
-description: Perform systematic ML-focused code review checking correctness, performance, safety, and style. Use when reviewing PRs, auditing code quality, or preparing code for release.
----
-
-## Code Review Checklist
+# Code Review Checklist
 
 ### Correctness
 - [ ] No off-by-one errors in indexing

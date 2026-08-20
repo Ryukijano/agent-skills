@@ -51,5 +51,5 @@ pair_coeff * * H O
 - https://github.com/ACEsuit/mace
 - https://github.com/CederGroupHub/chgnet
 - https://github.com/deepmodeling/deepmd-kit
-- https://arxiv.org/html/2602.02234
+- https://arxiv.org/abs/2602.02234
 - https://github.com/tummfm/chemtrain-deploy

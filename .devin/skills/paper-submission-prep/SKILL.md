@@ -1,9 +1,4 @@
----
-name: paper-submission-prep
-description: Prepare code, data, and documentation for paper submission deadline. Use when finalizing a repo for conference submission, creating reproducibility instructions, or tagging a release.
----
-
-## Paper Submission Prep
+# Paper Submission Prep
 
 ### Checklist
 

@@ -1,9 +1,4 @@
----
-name: lora-finetune
-description: LoRA (Low-Rank Adaptation) fine-tuning for vision transformers including DINOv2, ViT, and similar architectures. Use when adapting frozen pretrained models to new domains, configuring LoRA rank/alpha, or debugging LoRA training instability.
----
-
-## LoRA Fine-Tuning for Vision Transformers
+# LoRA Fine-Tuning for Vision Transformers
 
 ### Overview
 

@@ -46,7 +46,7 @@ print("R2:", model.score(X_test, y_test))
 
 ## References
 
-- https://arxiv.org/html/2607.23696v1
+- https://arxiv.org/abs/2607.23696v1
 - https://dl.acm.org/doi/10.1145/3442381.3449909
 - https://dl.acm.org/doi/10.1145/3340531.3412720
 - https://www.iab.com/wp-content/uploads/2025/01/IAB_GenerativeAIPlaybook_January_26.pdf

@@ -1,9 +1,4 @@
----
-name: checkpoint-to-deployment
-description: How to extract clean, reproducible deployment weights from training checkpoints (strip optimizer/EMA/SSL heads, document provenance). Companion to /checkpoint-to-deployment.
----
-
-## Checkpoint to Deployment Knowledge
+# Checkpoint to Deployment Knowledge
 
 ### What to keep vs strip
 - Keep: model weights for inference path.

@@ -1,10 +1,3 @@
----
-name: api-design
-description: >-
-  Design and implement REST and GraphQL APIs. Use when the user wants to create
-  API endpoints, design API schemas, or implement API best practices.
----
-
 # API Design
 
 ## REST API Best Practices

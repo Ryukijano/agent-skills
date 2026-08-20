@@ -46,4 +46,4 @@ df["engagement_risk"] = model.predict_proba(X)[:, 1]
 - https://www.sciencedirect.com/science/article/pii/S0160791X24000228
 - https://doi.org/10.1145/3636555.3636906
 - https://www.frontiersin.org/articles/10.3389/feduc.2024.1421479
-- https://learning-analytics.info/index.php/JLA/article/view/7985.html
+- https://learning-analytics.info/index.php/JLA/article/view/7985

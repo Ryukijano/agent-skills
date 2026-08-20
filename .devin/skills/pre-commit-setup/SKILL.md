@@ -1,9 +1,4 @@
----
-name: pre-commit-setup
-description: Set up pre-commit hooks with ruff, formatting, and common checks for Python projects. Use when initializing code quality tooling, configuring automated checks on commit, or standardizing a repo.
----
-
-## Pre-commit Setup
+# Pre-commit Setup
 
 ### Quick start
 

@@ -42,7 +42,7 @@ model = RandomForestClassifier(random_state=42).fit(X_train, y_train)
 
 ## References
 
-- https://arxiv.org/html/2307.03195
+- https://arxiv.org/abs/2307.03195
 - https://link.springer.com/article/10.1186/s43093-025-00704-6
 - https://doi.org/10.1016/j.fraope.2026.100673
 - https://oracle.com/human-capital-management/analytics/

@@ -46,7 +46,7 @@ model.fit(dataset)
             "https://deepchem.io/",
             "https://www.rdkit.org/",
             "https://arxiv.org/abs/2401.14876",
-            "https://doi.org/10.1038/s41586-023-06197-2"
+            "https://doi.org/10.1038/s41586-023-06197-z"
         ],
     },
     {
@@ -91,7 +91,7 @@ outputs = model(**inputs)
         "references": [
             "https://github.com/facebookresearch/esm",
             "https://www.nature.com/articles/s41586-021-03819-2",
-            "https://huggingface.co/papers/2407.04446",
+            "https://arxiv.org/abs/2407.04446",
             "https://huggingface.co/",
             "https://www.biorxiv.org/content/10.1101/2023.01.11.523679"
         ],
@@ -235,7 +235,7 @@ model.learn(total_timesteps=100_000)
 3. Compare sim and real trajectories to quantify the reality gap.
 ''',
         "references": [
-            "https://github.com/openxembodiment/",
+            "https://github.com/google-deepmind/open_x_embodiment",
             "https://arxiv.org/abs/2403.08934",
             "https://stable-baselines3.readthedocs.io/",
             "https://github.com/bulletphysics/bullet3"
@@ -330,9 +330,9 @@ model.fit(X_train, y_train)
 ''',
         "references": [
             "https://arxiv.org/abs/2402.03740",
-            "https://github.com/yixuanqiao/FinRobot",
+            "https://github.com/AI4Finance-Foundation/FinRobot",
             "https://huggingface.co/ProsusAI/finbert",
-            "https://pyfolio-reloaded.readthedocs.io/"
+            "https://pyfolio.ml4trading.io/"
         ],
     },
     {
@@ -384,7 +384,7 @@ class DKT(nn.Module):
         "references": [
             "https://arxiv.org/abs/2402.12142",
             "https://sites.google.com/site/assistmentsdata/",
-            "https://huggingface.co/papers/2404.03025",
+            "https://arxiv.org/abs/2404.03025",
             "https://pytorch.org/tutorials/"
         ],
     },
@@ -428,7 +428,7 @@ result = qa(question="What is the governing law?", context=contract_text)
 ''',
         "references": [
             "https://arxiv.org/abs/2403.03873",
-            "https://huggingface.co/papers/2404.05279",
+            "https://arxiv.org/abs/2404.05279",
             "https://case.law/",
             "https://huggingface.co/pile-of-law/legalbert-large-1.7M-2"
         ],
@@ -475,7 +475,7 @@ print(text)
         "references": [
             "https://arxiv.org/abs/2403.05055",
             "https://github.com/tesseract-ocr/tesseract",
-            "https://huggingface.co/papers/2401.05889",
+            "https://arxiv.org/abs/2401.05889",
             "https://programminghistorian.org/"
         ],
     },
@@ -568,7 +568,7 @@ predictions = model.predict(X_test)
 ''',
         "references": [
             "https://arxiv.org/abs/2401.09392",
-            "https://huggingface.co/papers/2404.15239",
+            "https://arxiv.org/abs/2404.15239",
             "https://www.nature.com/articles/s41746-023-",
             "https://digitalphenotyping.com/"
         ],

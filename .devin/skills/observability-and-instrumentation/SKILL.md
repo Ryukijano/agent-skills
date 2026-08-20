@@ -1,10 +1,3 @@
----
-name: observability-and-instrumentation
-description: >-
-  Add logging, metrics, tracing, and health checks to applications. Use when
-  monitoring, debugging in production, or improving system observability.
----
-
 # Observability and Instrumentation
 
 ## Three Pillars

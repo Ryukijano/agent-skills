@@ -41,5 +41,5 @@ ys = torchsde.sdeint(sde, y0, ts)
 
 - https://github.com/google-research/torchsde
 - https://proceedings.neurips.cc/paper_files/paper/2023/file/2460396f2d0d421885997dd1612ac56b-Paper-Conference.pdf
-- https://arxiv.org/html/2106.10340
+- https://arxiv.org/abs/2106.10340
 - https://proceedings.mlr.press/v139/kidger21b/kidger21b.pdf

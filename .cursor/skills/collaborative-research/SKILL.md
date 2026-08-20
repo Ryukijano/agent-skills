@@ -1,9 +1,3 @@
----
-name: collaborative-research
-description: >-
-  Manage collaborative research projects with multiple contributors. Use when coordinating with supervisors, sharing code, managing issues, or preparing multi-author papers.
----
-
 # Collaborative Research Management
 
 ## Overview

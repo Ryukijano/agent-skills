@@ -43,4 +43,4 @@ clf.fit(X_env, y_presence)
 - https://www.mdpi.com/1424-8220/24/24/8122
 - https://doi.org/10.1002/2688-8319.70167
 - https://github.com/google/cameratrapai/
-- https://arxiv.org/html/2603.20509
+- https://arxiv.org/abs/2603.20509

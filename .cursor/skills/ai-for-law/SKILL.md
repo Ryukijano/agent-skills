@@ -40,6 +40,6 @@ result = qa(question="What is the governing law?", context=contract_text)
 ## References
 
 - https://arxiv.org/abs/2403.03873
-- https://huggingface.co/papers/2404.05279
+- https://arxiv.org/abs/2404.05279
 - https://case.law/
 - https://huggingface.co/pile-of-law/legalbert-large-1.7M-2

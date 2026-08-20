@@ -1,9 +1,3 @@
----
-name: cub-segmented-sort-gb10
-description: >-
-  Use CUB cub::DeviceSegmentedSort on GB10 to sort many independent segments in one call. Useful for top-k and batched attention score sorting.
----
-
 # CUB Segmented Sort on GB10 DGX Spark
 
 ## Overview

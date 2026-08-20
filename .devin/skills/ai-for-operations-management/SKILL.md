@@ -43,7 +43,7 @@ result = linprog(c, A_ub=A_ub, b_ub=b_ub, bounds=(0, max_staff))
 
 ## References
 
-- https://arxiv.org/html/2507.17927
-- https://arxiv.org/html/2505.13580
+- https://arxiv.org/abs/2507.17927
+- https://arxiv.org/abs/2505.13580
 - https://arxiv.org/abs/2510.03310
 - https://arxiv.org/pdf/2601.06061

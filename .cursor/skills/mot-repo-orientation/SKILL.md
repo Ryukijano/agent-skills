@@ -1,11 +1,3 @@
----
-name: mot-repo-orientation
-description: >-
-  Orients agents to Gyanateet_tracking repo layout, MOT pipeline entry points,
-  and key files. Use when the user asks to understand the repo, explore the
-  codebase, or plan work with @Browser.
----
-
 # MOT Repo Orientation
 
 ## Root

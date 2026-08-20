@@ -1,8 +1,3 @@
----
-name: quantum-neural-decoder
-description: Scalable neural decoder architectures for fault-tolerant quantum error correction. Covers ML-based syndrome decoding, neural belief propagation, and GPU-accelerated QEC decoders (arxiv 2604.08358). Key for Syndrome-Net and SKQD workflows.
----
-
 # Quantum Neural Decoder
 
 ## Overview

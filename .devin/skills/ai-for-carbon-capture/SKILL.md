@@ -40,6 +40,6 @@ model.fit(X_train, y_train)
 ## References
 
 - https://arxiv.org/abs/2401.07181
-- https://www.nature.com/articles/s41586-022-
+- https://www.nature.com/articles/s41586-022-05422-5
 - https://doi.org/10.1029/2024gl108631
-- https://github.com/denaney/Carbon-Capture-ML
+- https://github.com/zikribayraktar/Carbon_Capture_ML

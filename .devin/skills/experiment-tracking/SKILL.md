@@ -1,9 +1,4 @@
----
-name: experiment-tracking
-description: Track ML experiments with structured logging, hyperparameter management, and result comparison. Use when designing experiment pipelines, managing ablation studies, comparing runs, or integrating experiment tracking with WandB/TensorBoard/MLflow.
----
-
-## ML Experiment Tracking
+# ML Experiment Tracking
 
 ### What to track per experiment
 

@@ -1,11 +1,3 @@
----
-name: autoresearch
-description: >-
-  Autonomous research orchestration with two-loop architecture: inner
-  optimization for experiments and outer synthesis for literature review and
-  paper writing. Use for end-to-end AI research.
----
-
 # Autonomous Research Orchestration
 
 ## Two-Loop Architecture

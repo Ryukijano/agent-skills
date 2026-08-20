@@ -1,9 +1,3 @@
----
-name: cuda-occupancy-register-pressure-gb10
-description: >-
-  Tune CUDA kernel occupancy and register pressure on GB10. Covers launch bounds, the occupancy API, shared-memory vs register tradeoffs, and when high occupancy helps or hurts performance.
----
-
 # CUDA Occupancy and Register Pressure on GB10 DGX Spark
 
 ## Overview

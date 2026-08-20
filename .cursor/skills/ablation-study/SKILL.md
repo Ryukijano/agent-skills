@@ -1,9 +1,4 @@
----
-name: ablation-study
-description: Design, execution, and reporting of systematic ablations for MOT, TDV pretraining, and surgical video models. Emphasizes matched controls, metrics, and paper-ready tables.
----
-
-## Ablation Studies
+# Ablation Studies
 
 ### Principles
 - Change one thing at a time (or clearly factorized).

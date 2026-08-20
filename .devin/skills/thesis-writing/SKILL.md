@@ -1,9 +1,3 @@
----
-name: thesis-writing
-description: >-
-  Write and structure PhD thesis chapters with LaTeX. Use when writing thesis chapters, managing citations, creating the thesis outline, or preparing for viva defense.
----
-
 # PhD Thesis Writing
 
 ## Overview

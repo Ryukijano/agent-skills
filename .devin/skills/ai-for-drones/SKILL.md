@@ -42,6 +42,6 @@ results = model(frame)
 ## References
 
 - https://doi.org/10.1016/j.array.2024.100361
-- https://arxiv.org/html/2606.12142
-- https://arxiv.org/html/2509.18610
+- https://arxiv.org/abs/2606.12142
+- https://arxiv.org/abs/2509.18610
 - https://doi.org/10.13111/2066-8201.2026.18.2.9

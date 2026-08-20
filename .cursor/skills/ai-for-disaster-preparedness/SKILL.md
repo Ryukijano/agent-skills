@@ -50,8 +50,8 @@ risk = model.predict(X_test)
 
 ## References
 
-- https://arxiv.org/html/2607.24588
+- https://arxiv.org/abs/2607.24588
 - https://arxiv.org/pdf/2601.18308
-- https://arxiv.org/html/2506.06355
-- https://ar5iv.labs.arxiv.org/html/2112.13465
+- https://arxiv.org/abs/2506.06355
+- https://arxiv.org/abs/2112.13465
 - https://www.undrr.org/publication/leveraging-ai-enhance-multi-hazard-early-warning-systems

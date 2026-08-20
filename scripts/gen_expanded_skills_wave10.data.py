@@ -136,7 +136,7 @@ optimizer = DPKerasSGDOptimizer(
         "references": [
             "https://arxiv.org/abs/2508.13730",
             "https://www.oecd.org/publications/sharing-trustworthy-ai-models-with-privacy-enhancing-technologies_5df6fd05",
-            "https://tensorflow.github.io/compliance/privacy/",
+            "https://www.tensorflow.org/responsible_ai/privacy",
             "https://opacus.ai/"
         ],
     },
@@ -231,7 +231,7 @@ query_idx = np.argsort(uncertainty)[-k:]
             "https://aclanthology.org/2025.acl-long.708/",
             "https://arxiv.org/abs/2405.00334",
             "https://modal-python.readthedocs.io/",
-            "https://github.com/google-research/google-research/tree/master/active_learning"
+            "https://github.com/google/active-learning"
         ],
     },
     {
@@ -370,7 +370,7 @@ def curriculum_sampler(epoch, dataset, difficulties):
         "references": [
             "https://arxiv.org/abs/2004.11101",
             "https://huggingface.co/docs/transformers/training",
-            "https://github.com/terryum/curriculum_learning",
+            "https://github.com/GuyHacohen/curriculum_learning",
             "https://arxiv.org/abs/1806.06044"
         ],
     },
@@ -512,7 +512,7 @@ x_adv = x + epsilon * torch.sign(x.grad)
 ''',
         "references": [
             "https://arxiv.org/abs/2408.06132",
-            "https://madry-lab.github.io/",
+            "https://madrylab.mit.edu/",
             "https://github.com/MadryLab/robustness",
             "https://arxiv.org/abs/2106.03098"
         ],

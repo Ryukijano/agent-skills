@@ -39,6 +39,6 @@ model = AutoModelForImageClassification.from_pretrained("dennisjooo/"deepfake-vs
 ## References
 
 - https://arxiv.org/abs/2404.11163
-- https://github.com/anguelos/authentication
-- https://github.com/polimi-ispl/deep-fake-detection
+- https://github.com/grip-unina/TruFor
+- https://github.com/polimi-ispl/icpr2020dfdc
 - https://pages.nist.gov/frvt/

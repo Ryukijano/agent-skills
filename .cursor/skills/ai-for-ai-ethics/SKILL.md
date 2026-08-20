@@ -44,6 +44,6 @@ print("DP:", dp, "EO:", eo)
 ## References
 
 - https://arxiv.org/abs/2402.08323
-- https://arxiv.org/html/2311.17228
-- https://arxiv.org/html/2107.06641
-- https://arxiv.org/html/2411.09973
+- https://arxiv.org/abs/2311.17228
+- https://arxiv.org/abs/2107.06641
+- https://arxiv.org/abs/2411.09973

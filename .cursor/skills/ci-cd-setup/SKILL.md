@@ -1,11 +1,4 @@
----
-name: ci-cd-setup
-description: >-
-  GitHub Actions (or equivalent) CI/CD patterns for ML research repos:
-  lint, smoke tests, no full training in CI, caching, badges, matrix strategies.
----
-
-## CI/CD for ML Research
+# CI/CD for ML Research
 
 ### What belongs in CI (fast & reliable)
 - Lint + format (ruff)

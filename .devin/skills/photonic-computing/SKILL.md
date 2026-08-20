@@ -43,6 +43,6 @@ Y = opu.transform(X)  # random feature map
 ## References
 
 - https://lightmatter.co/products/envise/
-- https://ar5iv.labs.arxiv.org/html/2107.11814
+- https://arxiv.org/abs/2107.11814
 - https://lightmatter.co/products/m1000/
 - https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/

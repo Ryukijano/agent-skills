@@ -1,9 +1,4 @@
----
-name: deep-research
-description: Systematic web research and deep reasoning for complex technical questions. Use when investigating unfamiliar APIs, debugging obscure errors, comparing libraries/frameworks, understanding research papers, or making architectural decisions that benefit from external evidence. Covers search strategy, source evaluation, iterative refinement, and synthesis with citations.
----
-
-## Deep Research and Reasoning
+# Deep Research and Reasoning
 
 ### Core principle
 

@@ -1,11 +1,3 @@
----
-name: spec-driven-development
-description: >-
-  Guides agents through spec-driven development: write a spec, plan from it,
-  generate tasks, implement incrementally. Use when starting a new feature
-  needing clear requirements.
----
-
 # Spec-Driven Development
 
 ## The Gated Workflow

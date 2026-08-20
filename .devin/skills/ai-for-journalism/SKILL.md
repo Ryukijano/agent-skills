@@ -43,7 +43,7 @@ print(template.render(**row))
 
 ## References
 
-- https://arxiv.org/html/2409.03462v1
-- https://arxiv.org/html/2603.13232
+- https://arxiv.org/abs/2409.03462v1
+- https://arxiv.org/abs/2603.13232
 - https://aclanthology.org/2026.findings-acl.1816/
 - https://workflow.ap.org/ai/

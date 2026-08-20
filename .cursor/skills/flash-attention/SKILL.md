@@ -1,10 +1,3 @@
----
-name: flash-attention
-description: >-
-  2-4x faster attention with Flash Attention. Use when optimizing transformer
-  training speed or reducing GPU memory for long sequences.
----
-
 # Flash Attention
 
 ## Overview

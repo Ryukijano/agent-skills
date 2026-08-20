@@ -1,11 +1,3 @@
----
-name: peft-finetuning
-description: >-
-  Parameter-efficient fine-tuning with LoRA, QLoRA, DoRA. 25+ methods for
-  adapting LLMs with minimal trainable parameters. Use when fine-tuning large
-  models with limited GPU memory.
----
-
 # PEFT Fine-Tuning
 
 ## Overview

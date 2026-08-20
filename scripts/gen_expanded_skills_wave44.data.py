@@ -50,12 +50,6 @@ print(json.dumps(policy, indent=2))
 2. Generate a data lineage graph from source to dashboard.
 3. Audit a sample of cataloged assets for metadata completeness.
 
-## References
-
-- https://doi.org/10.1109/access.2024.3476373
-- https://doi.org/10.3390/bdcc10010008
-- https://doi.org/10.38035/rrj.v8i4.2110
-- https://doi.org/10.3390/data10120201
 ''',
         "references": [
             "https://doi.org/10.1109/access.2024.3476373",
@@ -111,12 +105,6 @@ df["anomaly_score"] = clf.decision_function(X)
 2. Detect and report the top anomalous records and their features.
 3. Compare a model trained on cleaned data to one trained on raw data.
 
-## References
-
-- https://doi.org/10.1145/3592616
-- https://doi.org/10.1016/j.infsof.2023.107268
-- https://doi.org/10.1145/3722214
-- https://doi.org/10.1109/aitest62860.2024.00023
 ''',
         "references": [
             "https://doi.org/10.1145/3592616",
@@ -174,12 +162,6 @@ For production, integrate with tools such as Great Expectations, Soda, or Monte 
 2. Detect a row-count drop in a pipeline and localize the failed task.
 3. Compare anomaly detection precision to threshold-only monitoring.
 
-## References
-
-- https://www.vldb.org/pvldb/vol15/p4015-shankar.pdf
-- https://doi.org/10.60087/jaigs.v6i1.412
-- https://doi.org/10.5281/zenodo.20801568
-- https://doi.org/10.5281/zenodo.19487347
 ''',
         "references": [
             "https://www.vldb.org/pvldb/vol15/p4015-shankar.pdf",
@@ -235,12 +217,6 @@ df["outlier"] = lof.fit_predict(df.select_dtypes(include="number").fillna(0))
 2. Generate a data card and verify required metadata fields.
 3. Measure label quality (inter-annotator agreement or consistency).
 
-## References
-
-- https://doi.org/10.1145/3711118
-- https://doi.org/10.1016/j.dsm.2023.06.001
-- https://doi.org/10.1145/3630106.3658955
-- https://doi.org/10.48550/arxiv.2112.06409
 ''',
         "references": [
             "https://doi.org/10.1145/3711118",
@@ -297,12 +273,6 @@ scores = cosine_similarity([query_emb], dataset_embs)[0]
 2. Discover joinable columns across two datasets.
 3. Compare a semantic search to a keyword baseline on real queries.
 
-## References
-
-- https://doi.org/10.1145/3626521
-- https://doi.org/10.1007/s00778-019-00564-x
-- https://doi.org/10.48550/arxiv.2509.00728
-- https://doi.org/10.1002/pra2.1242
 ''',
         "references": [
             "https://doi.org/10.1145/3626521",
@@ -360,12 +330,6 @@ estimates = model.predict(X)
 2. Estimate Shapley-based data valuation and compare to baseline pricing.
 3. Simulate a transaction and verify license enforcement.
 
-## References
-
-- https://www.vldb.org/pvldb/vol16/p3872-pei.pdf
-- https://doi.org/10.3390/jtaer16070180
-- https://doi.org/10.48550/arxiv.2411.07267
-- https://doi.org/10.3390/fi17010035
 ''',
         "references": [
             "https://www.vldb.org/pvldb/vol16/p3872-pei.pdf",
@@ -422,12 +386,6 @@ mlflow.end_run()
 2. Query lineage from a dashboard metric back to source tables.
 3. Show provenance supports an audit or explainability request.
 
-## References
-
-- https://doi.org/10.1162/dint_a_00119
-- https://doi.org/10.3390/bdcc5020020
-- https://doi.org/10.5220/0014732400004015
-- https://doi.org/10.1145/3788853.3801877
 ''',
         "references": [
             "https://doi.org/10.1162/dint_a_00119",
@@ -487,12 +445,6 @@ optimizer = tfp.DPKerasSGDOptimizer(
 2. Run a membership inference attack and compare with and without DP.
 3. Audit a synthetic or anonymized dataset for re-identification risk.
 
-## References
-
-- https://doi.org/10.1145/3440754
-- https://doi.org/10.1145/3624010
-- https://doi.org/10.1016/j.cose.2023.103605
-- https://doi.org/10.3390/app16010277
 ''',
         "references": [
             "https://doi.org/10.1145/3440754",
@@ -548,12 +500,6 @@ poison_labels = clf.fit_predict(X)
 2. Run an adversarial example attack and evaluate defense effectiveness.
 3. Audit access logs for anomalous data exfiltration patterns.
 
-## References
-
-- https://doi.org/10.48550/arxiv.2310.04513
-- https://link.springer.com/article/10.1186/s13635-024-00158-3
-- https://doi.org/10.1007/s11432-025-4388-5
-- https://doi.org/10.1145/3670007
 ''',
         "references": [
             "https://doi.org/10.48550/arxiv.2310.04513",
@@ -611,12 +557,6 @@ print("Demographic parity difference:", dp)
 2. Generate a model card and verify it covers intended use and limitations.
 3. Conduct a stakeholder review of consent and redress workflows.
 
-## References
-
-- https://doi.org/10.3390/informatics13040051
-- https://doi.org/10.1007/s41060-024-00541-w
-- https://doi.org/10.1007/s00778-021-00671-8
-- https://doi.org/10.30574/msarr.2023.7.2.0043
 ''',
         "references": [
             "https://doi.org/10.3390/informatics13040051",
@@ -671,12 +611,6 @@ state = iterative_process.initialize()
 2. Simulate free-riding or low-quality participants and test reputation scoring.
 3. Audit that no raw data leaves participant boundaries.
 
-## References
-
-- https://doi.org/10.1007/s44248-024-00006-2
-- https://doi.org/10.3390/data10110182
-- https://doi.org/10.1007/s10115-022-01664-x
-- https://doi.org/10.48550/arxiv.2307.10655
 ''',
         "references": [
             "https://doi.org/10.1007/s44248-024-00006-2",
@@ -733,12 +667,6 @@ model = Ridge(alpha=1.0).fit(X, y)
 2. Simulate pricing under different demand and supply scenarios.
 3. Allocate revenue to multiple contributors and verify fairness axioms.
 
-## References
-
-- https://doi.org/10.1007/s11301-022-00309-1
-- https://doi.org/10.1109/tbdata.2023.3254152
-- https://doi.org/10.24963/ijcai.2022/782
-- https://doi.org/10.48550/arxiv.2108.07915
 ''',
         "references": [
             "https://doi.org/10.1007/s11301-022-00309-1",

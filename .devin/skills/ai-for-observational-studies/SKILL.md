@@ -57,14 +57,7 @@ print("CATE:", est.effect(X[:5]))
 
 ## References
 
-- https://arxiv.org/html/2501.00755v1
-- https://doi.org/10.3386/w30302
-- https://pubmed.ncbi.nlm.nih.gov/34652613/
-- https://proceedings.mlr.press/v161/shi21a/shi21a.pdf
-
-## References
-
-- https://arxiv.org/html/2501.00755v1
+- https://arxiv.org/abs/2501.00755v1
 - https://doi.org/10.3386/w30302
 - https://pubmed.ncbi.nlm.nih.gov/34652613/
 - https://proceedings.mlr.press/v161/shi21a/shi21a.pdf

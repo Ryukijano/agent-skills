@@ -88,7 +88,7 @@ outliers = clf.predict(event_features)
             "https://arxiv.org/abs/2603.17855",
             "https://doi.org/10.1029/2024gl108631",
             "https://doi.org/10.1007/978-3-031-15432-4",
-            "https://github.com/wayneweiqi/volcanoseis"
+            "https://github.com/darren-tpk/voiss-net"
         ],
     },
     {
@@ -318,9 +318,9 @@ model.fit(X_train, y_train)
 ''',
         "references": [
             "https://arxiv.org/abs/2401.07181",
-            "https://www.nature.com/articles/s41586-022-",
+            "https://www.nature.com/articles/s41586-022-05422-5",
             "https://doi.org/10.1029/2024gl108631",
-            "https://github.com/denaney/Carbon-Capture-ML"
+            "https://github.com/zikribayraktar/Carbon_Capture_ML"
         ],
     },
     {
@@ -365,7 +365,7 @@ model.fit(X_train, y_train)
         "references": [
             "https://arxiv.org/abs/2402.08989",
             "https://www.hydrosdk.org/",
-            "https://github.com/NeuralHydroPedia/neuralhydrology",
+            "https://github.com/neuralhydrology/neuralhydrology",
             "https://waterdata.usgs.gov/"
         ],
     },
@@ -454,8 +454,8 @@ model = AutoModelForImageClassification.from_pretrained("dennisjooo/"deepfake-vs
 ''',
         "references": [
             "https://arxiv.org/abs/2404.11163",
-            "https://github.com/anguelos/authentication",
-            "https://github.com/polimi-ispl/deep-fake-detection",
+            "https://github.com/grip-unina/TruFor",
+            "https://github.com/polimi-ispl/icpr2020dfdc",
             "https://pages.nist.gov/frvt/"
         ],
     },
@@ -548,7 +548,7 @@ ax.create_experiment(
 3. Cross-check a proposed route with a reaction database.
 ''',
         "references": [
-            "https://doi.org/10.1038/s41586-023-06197-2",
+            "https://doi.org/10.1038/s41586-023-06197-z",
             "https://citrine.io/",
             "https://github.com/aspuru-guzik-group/chemos",
             "https://ax.dev/"

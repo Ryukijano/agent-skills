@@ -49,5 +49,5 @@ forecast = model.predict(X_test)
 
 - https://arxiv.org/pdf/2505.08202
 - https://doi.org/10.48550/arxiv.2501.06932
-- https://arxiv.org/html/2306.10068
+- https://arxiv.org/abs/2306.10068
 - https://link.springer.com/article/10.1007/s11069-025-07667-5

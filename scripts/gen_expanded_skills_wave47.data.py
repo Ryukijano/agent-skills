@@ -47,12 +47,6 @@ print(result["answer"])
 2. Run a document extraction pipeline and compare to a manual baseline.
 3. Audit a sample of model responses for accuracy and fairness.
 
-## References
-
-- https://www.mdpi.com/2227-9709/12/3/98
-- https://doi.org/10.1016/j.heliyon.2024.e40591
-- https://thedocs.worldbank.org/en/doc/a2d967023f2d5cba345a3a2b9d72f837-0050062026/original/How-Is-Government-Using-AI-final.pdf
-- https://dl.acm.org/doi/10.1007/978-3-032-01589-1_25
 ''',
         "references": [
             "https://www.mdpi.com/2227-9709/12/3/98",
@@ -112,12 +106,6 @@ print(summary[0]["summary_text"])
 2. Measure participation reach across demographic groups.
 3. Evaluate feedback reports for actionability and transparency.
 
-## References
-
-- https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/artificial-intelligence-and-the-future-of-citizen-participation_0608e00e/a1ee2e0a-en.pdf
-- https://journals.sagepub.com/doi/full/10.1177/23998083241296200
-- https://www.europarl.europa.eu/RegData/etudes/STUD/2026/774753/EPRS_STU(2026)774753_EN.pdf
-- https://www.cambridge.org/core/journals/data-and-policy/article/ai-and-citizen-participation-a-political-economy-lens/2A4CC7AAA4F24F5C10CFC9D606EE5E5B
 ''',
         "references": [
             "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/artificial-intelligence-and-the-future-of-citizen-participation_0608e00e/a1ee2e0a-en.pdf",
@@ -175,12 +163,6 @@ print(fcst.head())
 2. Compare optimized schedules to current headways using a simulator.
 3. Measure on-time performance and rider satisfaction.
 
-## References
-
-- https://www.mdpi.com/2624-6511/8/3/87
-- https://doi.org/10.1109/tits.2025.3603963
-- https://dl.acm.org/doi/10.1109/TITS.2020.3041234
-- https://www.mdpi.com/2079-9292/14/12/2359
 ''',
         "references": [
             "https://www.mdpi.com/2624-6511/8/3/87",
@@ -237,12 +219,6 @@ df["anomaly"] = clf.fit_predict(X)
 2. Detect a synthetic leak or outage event.
 3. Compare predictive maintenance schedules to historical failure records.
 
-## References
-
-- https://www.publicpower.org/periodical/article/illinois-public-power-community-deploys-ai-advanced-grid-management
-- https://aws.amazon.com/blogs/industries/building-autonomous-water-utility-operations-with-agentic-ai-on-aws/
-- https://doi.org/10.1109/csitss67709.2025.11295772
-- https://dewa.gov.ae/en/about-us/media-publications/latest-news/2026/1/dewa-deploys-intelligence-data-modelling-software-for-faster-operational-response
 ''',
         "references": [
             "https://www.publicpower.org/periodical/article/illinois-public-power-community-deploys-ai-advanced-grid-management",
@@ -300,12 +276,6 @@ clf = RandomForestClassifier(random_state=42, class_weight="balanced").fit(X_tra
 2. Audit a sample of low- and high-risk cases for fairness.
 3. Test a taxpayer chatbot on real FAQs.
 
-## References
-
-- https://www.imf.org/en/publications/tnm/issues/2024/11/21/understanding-artificial-intelligence-in-tax-and-customs-administration-555097
-- https://www.imf.org/en/publications/tnm/issues/2025/08/09/generative-artificial-intelligence-for-compliance-risk-analysis-applications-in-tax-and-567429
-- https://oecd.ai/en/gov/issues/tax-administration
-- https://doi.org/10.1080/2573234x.2026.2644363
 ''',
         "references": [
             "https://www.imf.org/en/publications/tnm/issues/2024/11/21/understanding-artificial-intelligence-in-tax-and-customs-administration-555097",
@@ -363,12 +333,6 @@ for train_idx, test_idx in TimeSeriesSplit(n_splits=3).split(X):
 2. Optimize a small allocation problem and check constraint satisfaction.
 3. Stress-test a budget scenario against adverse macro shocks.
 
-## References
-
-- https://doi.org/10.3390/electronics14204047
-- https://oecd.ai/en/gov-issues-public-financial-management
-- https://publicacoes.tesouro.gov.br/index.php/cadernos/article/download/284/362/1145
-- https://www.cambridge.org/core/journals/data-and-policy/article/an-exploratory-hybrid-ai-workflow-for-brazilian-federal-budget-allocation/69F3EA6EAE0CAA37FE36E3E2B810FF72
 ''',
         "references": [
             "https://doi.org/10.3390/electronics14204047",
@@ -425,12 +389,6 @@ df["risk_score"] = model.predict_proba(X)[:, 1]
 2. Build an eligibility screener and test against known cases.
 3. Measure reduction in time-to-service and access gaps.
 
-## References
-
-- https://sage.cnpereading.com/doi/10.1177/10497315251350933
-- https://www.mathematica.org/publications/navigating-genai-in-child-welfare-quick-start-guide-for-agency-leaders
-- https://digitalgovernmenthub.org/publications/ai-powered-rules-as-code-experiments-with-public-benefits-policy/
-- https://doi.org/10.1145/3491102.3517439
 ''',
         "references": [
             "https://sage.cnpereading.com/doi/10.1177/10497315251350933",
@@ -487,12 +445,6 @@ print(summary[0]["summary_text"])
 2. Test a veteran-facing chatbot on common benefit questions.
 3. Track reduction in claims processing time and appeals.
 
-## References
-
-- https://department.va.gov/ai/building-the-future-vas-strategy-for-adopting-high-impact-artificial-intelligence-to-improve-services-for-veterans/
-- https://department.va.gov/ai/ai-use-case-inventory/
-- https://www.gao.gov/assets/890/887587.pdf
-- https://department.va.gov/privacy/wp-content/uploads/sites/5/2026/05/FY26ArtificialIntelligenceClaimsEvaluationSystemAICESPIA.pdf
 ''',
         "references": [
             "https://department.va.gov/ai/building-the-future-vas-strategy-for-adopting-high-impact-artificial-intelligence-to-improve-services-for-veterans/",
@@ -548,12 +500,6 @@ print(redacted)
 2. Process a backlog and measure throughput and accuracy.
 3. Review redaction quality and public access outcomes.
 
-## References
-
-- https://zenodo.org/records/18935870
-- https://www.gov.uk/algorithmic-transparency-records/cabinet-office-automated-digital-document-review
-- https://www.ukri.org/who-we-are/how-we-are-doing/research-outcomes-and-impact/ahrc/ai-for-accountability-unlocking-uk-digital-records/
-- https://link.springer.com/article/10.1007/s00146-025-02221-0
 ''',
         "references": [
             "https://zenodo.org/records/18935870",
@@ -609,12 +555,6 @@ print(gdf[["parcel_id", "allowed_units"]].head())
 2. Simulate a policy scenario and compare predicted outcomes.
 3. Conduct a participatory review of AI-assisted alternatives.
 
-## References
-
-- https://www.nature.com/articles/s43588-025-00846-1
-- https://www.nature.com/articles/s43588-023-00503-5
-- https://www.mdpi.com/2073-445X/12/7/1315
-- https://www.sciencedirect.com/science/article/abs/pii/S0169204625000441
 ''',
         "references": [
             "https://www.nature.com/articles/s43588-025-00846-1",
@@ -670,12 +610,6 @@ vectorstore = FAISS.from_texts(zoning_paragraphs, embeddings)
 2. Compare AI compliance determinations to staff determinations.
 3. Track applicant satisfaction and time saved.
 
-## References
-
-- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5218771
-- https://www.urban.org/urban-wire/how-can-local-governments-use-ai-answer-community-members-questions-about-zoning-and
-- https://iopscience.iop.org/article/10.1088/1755-1315/1648/1/012010
-- https://link.springer.com/chapter/10.1007/978-3-031-86039-3_9
 ''',
         "references": [
             "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5218771",
@@ -732,12 +666,6 @@ print(text[:500])
 2. Measure change in first-pass approval rate and cycle time.
 3. Audit a sample of AI-flagged code issues for accuracy.
 
-## References
-
-- https://innovation-hub.seattle.gov/2026/06/17/ai-construction-permitting-seattle-civcheck-study/
-- https://www.govtech.com/artificial-intelligence/honolulu-launches-ai-assisted-fast-track-permit-review
-- https://www.archistar.ai/aiprecheck/ai-plan-review/
-- https://iopscience.iop.org/article/10.1088/1755-1315/1648/1/012010
 ''',
         "references": [
             "https://innovation-hub.seattle.gov/2026/06/17/ai-construction-permitting-seattle-civcheck-study/",

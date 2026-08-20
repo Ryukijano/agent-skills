@@ -46,7 +46,7 @@ anomaly_scores = clf.decision_function(X_test)
 
 ## References
 
-- https://arxiv.org/html/2409.05383
-- https://arxiv.org/html/2508.14203
+- https://arxiv.org/abs/2409.05383
+- https://arxiv.org/abs/2508.14203
 - https://doi.org/10.1109/access.2023.3321800
-- https://arxiv.org/html/2405.19387v1
+- https://arxiv.org/abs/2405.19387v1

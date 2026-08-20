@@ -50,5 +50,5 @@ best = premises[int(np.argmax(scores))]
 - https://doi.org/10.1007/s10664-025-10729-8
 - https://doi.org/10.48550/arxiv.2404.09939
 - https://aclanthology.org/2026.bigpicture-main.1/
-- https://arxiv.org/html/2606.08728v4
+- https://arxiv.org/abs/2606.08728v4
 - https://doi.org/10.48550/arxiv.2403.04017

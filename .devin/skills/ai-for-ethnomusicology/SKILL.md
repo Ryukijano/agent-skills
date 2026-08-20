@@ -44,6 +44,6 @@ hist, _ = np.histogram(np.mod(1200 * np.log2(f0 / 440.0), 1200), bins=120, range
 
 - https://www.audiolabs-erlangen.de/content/05_fau/professor/00_mueller/03_publications/2023_RosenzweigSM_FuneralSongs_ACM-JOCCH_ePrint.pdf
 - https://archives.ismir.net/ismir2023/paper/000052.pdf
-- https://arxiv.org/html/2503.11956v1
+- https://arxiv.org/abs/2503.11956v1
 - https://kadmos.iliauni.edu.ge/index.php/kadmos/article/view/506
 - https://real.mtak.hu/190618/1/juhasz-2024-revealing.pdf

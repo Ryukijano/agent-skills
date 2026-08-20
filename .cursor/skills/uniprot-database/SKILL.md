@@ -1,13 +1,3 @@
----
-name: uniprot-database
-description: >-
-  Access protein metadata, function, taxonomy, and sequences across UniProtKB,
-  UniParc, and UniRef. Use when searching for proteins, mapping identifiers, or
-  retrieving functional annotations and publications. Don't use for sequence
-  alignment, protein folding, or sequence similarity search (use specialized
-  skills for those tasks).
----
-
 # Uniprot Database
 
 Source: `science_skills/uniprot_database/`

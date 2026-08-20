@@ -1,11 +1,3 @@
----
-name: tdd-workflow
-description: >-
-  Test-driven development workflow: write failing test, implement minimum code
-  to pass, refactor. Use when the user wants to follow TDD practices or needs
-  guidance on structured testing.
----
-
 # TDD Workflow
 
 ## The Red-Green-Refactor Cycle

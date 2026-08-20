@@ -1,12 +1,3 @@
----
-name: mot-browser-research
-description: >-
-  Research workflow for surgical MOT when the user invokes @Browser or asks for
-  online search, SOTA comparison, paper review, or strategic direction on
-  Gyanateet_tracking. Covers GOT-JEPA vs alternatives, smoke/occlusion, HOTA
-  baselines, and Leeds Aire GPU planning.
----
-
 # MOT Browser Research
 
 Use when `@Browser` is attached or the user wants web research for this repo.

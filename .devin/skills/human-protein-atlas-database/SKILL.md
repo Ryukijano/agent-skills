@@ -1,10 +1,3 @@
----
-name: human-protein-atlas-database
-description: >-
-  Use when you want to retrieve semi-quantitative protein expression and spatial
-  localisation data from the Human Protein Atlas (HPA).
----
-
 # Human Protein Atlas Database
 
 Source: `science_skills/human_protein_atlas_database/`

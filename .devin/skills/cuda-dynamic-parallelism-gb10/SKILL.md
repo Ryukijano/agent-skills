@@ -1,10 +1,3 @@
----
-name: cuda-dynamic-parallelism-gb10
-description: >-
-  Use CUDA Dynamic Parallelism (CDP) on GB10: parent kernels that launch child kernels
-  with <<< >>> inside device code, compiling with -rdc=true and linking -lcudadevrt.
----
-
 # CUDA Dynamic Parallelism on GB10 DGX Spark
 
 ## Overview

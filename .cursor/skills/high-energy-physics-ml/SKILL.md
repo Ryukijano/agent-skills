@@ -39,7 +39,7 @@ model = model.to('cuda')
 
 ## References
 
-- https://arxiv.org/html/2601.17554
+- https://arxiv.org/abs/2601.17554
 - https://github.com/key4hep/k4MLJetTagger
 - https://link.springer.com/article/10.1140/epjc/s10052-023-11677-7
 - https://uproot.readthedocs.io/

@@ -46,7 +46,7 @@ print(x.solution_value(), y.solution_value())
 
 ## References
 
-- https://arxiv.org/html/2601.10583
+- https://arxiv.org/abs/2601.10583
 - https://arxiv.org/pdf/2507.00218
 - https://ojmo.centre-mersenne.org/item/10.5802/ojmo.43.pdf
 - https://link.springer.com/article/10.1007/s10994-026-07116-9

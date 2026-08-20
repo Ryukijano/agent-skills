@@ -1,13 +1,3 @@
----
-name: jaspar-database
-description: >-
-  Query the JASPAR database for Transcription Factor (TF) binding profiles. Use
-  when retrieving Position Frequency Matrices (PFMs) or Position Weight Matrices
-  (PWMs) for specific TFs, resolving gene symbols to JASPAR Matrix IDs, or
-  getting TF metadata. Supports multiple output formats (MEME, TRANSFAC, PFM,
-  JASPAR, YAML).
----
-
 # Jaspar Database
 
 Source: `science_skills/jaspar_database/`

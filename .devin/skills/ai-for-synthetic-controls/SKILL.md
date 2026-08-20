@@ -59,14 +59,6 @@ res = minimize(sc_loss, x0=np.ones(Y_pre.shape[1]) / Y_pre.shape[1],
 
 - https://www.bis.org/publ/work1181.pdf
 - https://doi.org/10.22541/au.176072431.11742213/v1
-- https://arxiv.org/html/2602.04611
-- https://microsoft.github.io/SparseSC/
-- https://www.mit.edu/~jhainm/Paper/ccs.pdf
-
-## References
-
-- https://www.bis.org/publ/work1181.pdf
-- https://doi.org/10.22541/au.176072431.11742213/v1
-- https://arxiv.org/html/2602.04611
+- https://arxiv.org/abs/2602.04611
 - https://microsoft.github.io/SparseSC/
 - https://www.mit.edu/~jhainm/Paper/ccs.pdf

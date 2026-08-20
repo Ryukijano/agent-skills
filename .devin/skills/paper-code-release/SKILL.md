@@ -1,9 +1,4 @@
----
-name: paper-code-release
-description: Prepare research code for public release alongside a paper submission. Use when cleaning up a codebase for open-sourcing, writing READMEs for papers, creating reproducibility instructions, or packaging code for conference submission.
----
-
-## Paper Code Release Preparation
+# Paper Code Release Preparation
 
 ### Release checklist
 

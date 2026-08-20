@@ -53,11 +53,4 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 - https://doi.org/10.1016/j.segan.2023.101023
 - https://doi.org/10.48550/arxiv.2506.00044
 - https://doi.org/10.1016/j.egyai.2022.100139
-- https://arxiv.org/html/2602.10071v2
-
-## References
-
-- https://doi.org/10.1016/j.segan.2023.101023
-- https://doi.org/10.48550/arxiv.2506.00044
-- https://doi.org/10.1016/j.egyai.2022.100139
-- https://arxiv.org/html/2602.10071v2
+- https://arxiv.org/abs/2602.10071v2

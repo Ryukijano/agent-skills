@@ -1,11 +1,3 @@
----
-name: rag-pipelines
-description: >-
-  Build RAG (Retrieval-Augmented Generation) pipelines with vector databases,
-  embeddings, and LLMs. Use when building Q&A systems, knowledge bases, or
-  document chat.
----
-
 # RAG Pipelines
 
 ## Architecture

@@ -44,4 +44,4 @@ model = GradientBoostingClassifier(n_estimators=300, random_state=42).fit(X, y)
 - https://doi.org/10.48550/arxiv.2502.06656
 - https://pmc.ncbi.nlm.nih.gov/articles/PMC12032382/
 - https://www.msci.com/downloads/web/msci-com/research-and-insights/paper/ai-portfolio-insights-and-the-future-of-risk-management/AI-Portfolio-Insights-and-the-Future-of-Risk-Management.pdf
-- https://arxiv.org/html/2310.17721
+- https://arxiv.org/abs/2310.17721

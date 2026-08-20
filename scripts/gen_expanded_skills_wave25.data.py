@@ -238,7 +238,7 @@ class ParticleNet(nn.Module):
 ''',
         "references": [
             "https://arxiv.org/abs/1912.08245",
-            "https://ar5iv.labs.arxiv.org/html/2102.02770",
+            "https://arxiv.org/abs/2102.02770",
             "https://arxiv.org/abs/2112.03769",
             "https://doi.org/10.1140/epjs/s11734-024-01364-3",
         ],

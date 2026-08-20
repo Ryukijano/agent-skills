@@ -1,9 +1,4 @@
----
-name: refactor-extract-module
-description: Safe patterns for extracting code into new modules or packages without breaking imports or behavior. Includes tests, circular import checks, and incremental commits.
----
-
-## Refactoring / Extraction
+# Refactoring / Extraction
 
 ### Process
 1. Identify cohesive functionality to extract.

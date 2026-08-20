@@ -1,10 +1,3 @@
----
-name: performance-optimization
-description: >-
-  Systematic performance optimization: profile, identify bottlenecks, optimize,
-  measure. Use when speeding up code or reducing memory usage.
----
-
 # Performance Optimization
 
 ## The Cycle

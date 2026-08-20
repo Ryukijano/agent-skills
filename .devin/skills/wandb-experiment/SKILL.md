@@ -1,9 +1,4 @@
----
-name: wandb-experiment
-description: Set up and use Weights & Biases (WandB) for ML experiment tracking. Use when initializing WandB runs, logging metrics, managing experiment configs, comparing runs, or debugging WandB integration issues.
----
-
-## WandB Experiment Tracking
+# WandB Experiment Tracking
 
 ### Setup
 

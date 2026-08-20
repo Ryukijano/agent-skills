@@ -277,7 +277,7 @@ print(response.choices[0].message.content)
 3. Run a small A/B test on a landing-page headline.
 ''',
         "references": [
-            "https://arxiv.org/html/2402.13667",
+            "https://arxiv.org/abs/2402.13667",
             "https://www.chicagobooth.edu/review/ai-is-coming-marketing-department",
             "https://doi.org/10.1016/j.jbusres.2024.114984",
             "https://www.deloittedigital.com/us/en/insights/research/genai-human-marketing-operations.html",
@@ -329,7 +329,7 @@ print("R2:", model.score(X_test, y_test))
 3. Measure incremental lift with a geo or randomized holdout.
 ''',
         "references": [
-            "https://arxiv.org/html/2607.23696v1",
+            "https://arxiv.org/abs/2607.23696v1",
             "https://dl.acm.org/doi/10.1145/3442381.3449909",
             "https://dl.acm.org/doi/10.1145/3340531.3412720",
             "https://www.iab.com/wp-content/uploads/2025/01/IAB_GenerativeAIPlaybook_January_26.pdf",
@@ -591,7 +591,7 @@ print(summary)
         "references": [
             "https://www.microsoft.com/en-us/research/publication/vibevoice-expressive-podcast-generation/",
             "https://blog.google/innovation-and-ai/products/notebooklm-audio-overviews/",
-            "https://arxiv.org/html/2510.00485v1",
+            "https://arxiv.org/abs/2510.00485v1",
             "https://www.scientificamerican.com/podcast/episode/how-tools-like-notebooklm-create-ai-generated-podcasts/",
         ],
     },

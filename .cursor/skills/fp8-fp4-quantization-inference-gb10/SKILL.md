@@ -1,9 +1,3 @@
----
-name: fp8-fp4-quantization-inference-gb10
-description: >-
-  Quantize models and activations to FP8/FP4 for fast Blackwell inference on GB10. Covers NVIDIA TensorRT Model Optimizer, cuBLASLt narrow-precision GEMM, and NVFP4 KV cache.
----
-
 # FP8 / FP4 Quantization for Inference on GB10 DGX Spark
 
 ## Overview

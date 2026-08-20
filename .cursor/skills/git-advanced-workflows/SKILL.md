@@ -1,11 +1,3 @@
----
-name: git-advanced-workflows
-description: >-
-  Advanced git workflows including interactive rebase, cherry-picking, bisect,
-  reflog recovery, subtree merge, and conflict resolution strategies. Use when
-  the user needs complex git operations beyond basic commit/push.
----
-
 # Git Advanced Workflows
 
 ## Interactive Rebase

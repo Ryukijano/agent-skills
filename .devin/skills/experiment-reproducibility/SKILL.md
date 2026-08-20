@@ -1,9 +1,3 @@
----
-name: experiment-reproducibility
-description: >-
-  Ensure experiments are fully reproducible: seeds, configs, environments, checkpoints. Use when preparing for paper submission, code release, or thesis defense.
----
-
 # Experiment Reproducibility
 
 ## Overview

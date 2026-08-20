@@ -48,7 +48,7 @@ priority = clf.predict(X_test)
 
 ## References
 
-- https://arxiv.org/html/2409.02246
+- https://arxiv.org/abs/2409.02246
 - https://arxiv.org/pdf/2106.08307
-- https://arxiv.org/html/2408.04193
+- https://arxiv.org/abs/2408.04193
 - https://doi.org/10.48550/arxiv.2604.18644

@@ -1,9 +1,3 @@
----
-name: cutile-fmha-attention-gb10
-description: >-
-  Implement fused multi-head attention (FMHA) with cuTile Python on GB10. Covers online softmax, causal masking, grouped-query attention (GQA) tiles, and FlashAttention-style tiling for inference.
----
-
 # cuTile FMHA Attention on GB10 DGX Spark
 
 ## Overview

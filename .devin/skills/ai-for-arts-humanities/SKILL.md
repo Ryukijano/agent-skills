@@ -42,5 +42,5 @@ print(text)
 
 - https://arxiv.org/abs/2403.05055
 - https://github.com/tesseract-ocr/tesseract
-- https://huggingface.co/papers/2401.05889
+- https://arxiv.org/abs/2401.05889
 - https://programminghistorian.org/

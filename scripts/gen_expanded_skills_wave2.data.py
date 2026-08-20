@@ -463,7 +463,7 @@ pair_coeff * * H O
             "https://github.com/ACEsuit/mace",
             "https://github.com/CederGroupHub/chgnet",
             "https://github.com/deepmodeling/deepmd-kit",
-            "https://arxiv.org/html/2602.02234",
+            "https://arxiv.org/abs/2602.02234",
             "https://github.com/tummfm/chemtrain-deploy"
         ],
     },
@@ -515,7 +515,7 @@ pip install terratorch
 ''',
         "references": [
             "https://torchgeo.org/",
-            "https://github.com/ibm-nasa-geospatial/Prithvi-EO-1.0-100M",
+            "https://huggingface.co/ibm-nasa-geospatial/Prithvi-100M",
             "https://samgeo.gishub.org/",
             "https://docs.nvidia.com/cuopt/",
             "https://arxiv.org/abs/2412.02732v3"
@@ -729,7 +729,7 @@ vllm serve model --quantization gptq_marlin --moe-backend marlin
             "https://github.com/intel/auto-round",
             "https://github.com/IST-DASLab/marlin",
             "https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/",
-            "https://arxiv.org/html/2509.23202v3"
+            "https://arxiv.org/abs/2509.23202v3"
         ],
     },
 ]

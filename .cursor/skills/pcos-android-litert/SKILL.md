@@ -1,11 +1,3 @@
----
-name: pcos-android-litert
-description: >-
-  Android on-device inference with LiteRT-LM and Gemma models for PCOS. Use
-  when working on the Android app, LiteRT-LM integration, FunctionGemma tool
-  calling, model downloads, or GPU backend configuration.
----
-
 # Android LiteRT-LM for PCOS
 
 PCOS on Android uses **LiteRT-LM v0.13+** for on-device inference with Gemma 4 and FunctionGemma models.

@@ -1,13 +1,3 @@
----
-name: dbsnp-database
-description: >-
-  Use when you want to look up, map, and search for short genetic variants
-  (SNPs, indels) in NCBI's dbSNP database. Resolves between rsIDs, genomic
-  coordinates in VCF format, and HGVS strings. For an rsID, returns variant
-  type, gene associations, clinical significance, allele frequencies, and
-  genomic coordinates (GRCh38).
----
-
 # Dbsnp Database
 
 Source: `science_skills/dbsnp_database/`

@@ -48,6 +48,6 @@ best_cell = np.unravel_index(likelihood.argmax(), likelihood.shape)
 ## References
 
 - https://arxiv.org/abs/2502.20326
-- https://arxiv.org/html/2503.02465v2
-- https://arxiv.org/html/2601.14973v2
+- https://arxiv.org/abs/2503.02465v2
+- https://arxiv.org/abs/2601.14973v2
 - https://arxiv.org/abs/2306.02911

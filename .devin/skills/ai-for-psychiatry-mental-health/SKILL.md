@@ -42,6 +42,6 @@ predictions = model.predict(X_test)
 ## References
 
 - https://arxiv.org/abs/2401.09392
-- https://huggingface.co/papers/2404.15239
+- https://arxiv.org/abs/2404.15239
 - https://www.nature.com/articles/s41746-023-
 - https://digitalphenotyping.com/

@@ -41,5 +41,5 @@ def curriculum_sampler(epoch, dataset, difficulties):
 
 - https://arxiv.org/abs/2004.11101
 - https://huggingface.co/docs/transformers/training
-- https://github.com/terryum/curriculum_learning
+- https://github.com/GuyHacohen/curriculum_learning
 - https://arxiv.org/abs/1806.06044

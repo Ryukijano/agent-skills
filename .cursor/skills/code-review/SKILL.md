@@ -1,9 +1,4 @@
----
-name: code-review
-description: ML-focused code review checklist covering correctness, performance, safety, and style for surgical video, MOT, pretraining, and related research code. Use for PRs, branches, or before merging.
----
-
-## Code Review for ML Research (Surgical Video / MOT focus)
+# Code Review for ML Research (Surgical Video / MOT focus)
 
 ### Core principles
 - Correctness first (shapes, no leaks, proper EMA, loss semantics).

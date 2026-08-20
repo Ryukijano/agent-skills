@@ -1,11 +1,3 @@
----
-name: literature-search-europepmc
-description: >-
-  Search Europe PMC for scientific literature and download open-access full
-  texts and PDFs. Retrieve full-text XML/plain text by PMCID, get citation lists
-  and bibliography.
----
-
 # Literature Search Europepmc
 
 Source: `science_skills/literature_search_europepmc/`

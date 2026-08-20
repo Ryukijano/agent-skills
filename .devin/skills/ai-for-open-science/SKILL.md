@@ -42,8 +42,8 @@ print("data.csv sha256:", digest)
 
 ## References
 
-- https://arxiv.org/html/2412.17859
+- https://arxiv.org/abs/2412.17859
 - https://github.com/synthetic-sciences/openscience
 - https://github.com/opencodon/opencodon
 - https://reproai.org/
-- https://arxiv.org/html/2409.11363
+- https://arxiv.org/abs/2409.11363

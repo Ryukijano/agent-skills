@@ -101,10 +101,10 @@ anomaly_scores = clf.decision_function(X_test)
 3. Compare edge-only vs cloud-only latency on a live camera feed.
 ''',
         "references": [
-            "https://arxiv.org/html/2409.05383",
-            "https://arxiv.org/html/2508.14203",
+            "https://arxiv.org/abs/2409.05383",
+            "https://arxiv.org/abs/2508.14203",
             "https://doi.org/10.1109/access.2023.3321800",
-            "https://arxiv.org/html/2405.19387v1",
+            "https://arxiv.org/abs/2405.19387v1",
         ],
     },
     {
@@ -156,8 +156,8 @@ best_cell = np.unravel_index(likelihood.argmax(), likelihood.shape)
 ''',
         "references": [
             "https://arxiv.org/abs/2502.20326",
-            "https://arxiv.org/html/2503.02465v2",
-            "https://arxiv.org/html/2601.14973v2",
+            "https://arxiv.org/abs/2503.02465v2",
+            "https://arxiv.org/abs/2601.14973v2",
             "https://arxiv.org/abs/2306.02911",
         ],
     },
@@ -211,7 +211,7 @@ forecast = model.predict(X_test)
         "references": [
             "https://arxiv.org/pdf/2505.08202",
             "https://doi.org/10.48550/arxiv.2501.06932",
-            "https://arxiv.org/html/2306.10068",
+            "https://arxiv.org/abs/2306.10068",
             "https://link.springer.com/article/10.1007/s11069-025-07667-5",
         ],
     },
@@ -267,9 +267,9 @@ risk_score = clf.predict_proba(X_test)[:, 1]
         "references": [
             "https://www.dhs.gov/ai/use-case-inventory/cbp",
             "https://www.cbp.gov/travel/biometrics/overview",
-            "https://arxiv.org/html/2511.14698",
-            "https://ar5iv.labs.arxiv.org/html/2004.13076",
-            "https://arxiv.org/html/2607.13515",
+            "https://arxiv.org/abs/2511.14698",
+            "https://arxiv.org/abs/2004.13076",
+            "https://arxiv.org/abs/2607.13515",
         ],
     },
     {
@@ -319,10 +319,10 @@ print(classification_report(y_true, y_pred, target_names=groups))
 3. Verify that audit logs and deletion policies meet the stated policy.
 ''',
         "references": [
-            "https://arxiv.org/html/2402.05731",
+            "https://arxiv.org/abs/2402.05731",
             "https://dl.acm.org/doi/10.1145/3375627.3375820",
-            "https://arxiv.org/html/2503.04866v1",
-            "https://arxiv.org/html/2606.07628v1",
+            "https://arxiv.org/abs/2503.04866v1",
+            "https://arxiv.org/abs/2606.07628v1",
             "https://www.frontiersin.org/articles/10.3389/fdata.2024.1337465",
         ],
     },
@@ -433,9 +433,9 @@ priority = clf.predict(X_test)
 3. Audit a hotspot-prediction model for demographic fairness.
 ''',
         "references": [
-            "https://arxiv.org/html/2409.02246",
+            "https://arxiv.org/abs/2409.02246",
             "https://arxiv.org/pdf/2106.08307",
-            "https://arxiv.org/html/2408.04193",
+            "https://arxiv.org/abs/2408.04193",
             "https://doi.org/10.48550/arxiv.2604.18644",
         ],
     },
@@ -488,11 +488,11 @@ flags = np.abs(zscore(residuals)) > 3.5
 3. Verify that a control fallback keeps the process within safe limits.
 ''',
         "references": [
-            "https://arxiv.org/html/2411.10918",
-            "https://arxiv.org/html/2607.05989",
+            "https://arxiv.org/abs/2411.10918",
+            "https://arxiv.org/abs/2607.05989",
             "https://arxiv.org/abs/2603.16588v1",
-            "https://arxiv.org/html/2507.14387",
-            "https://arxiv.org/html/2603.10676v2",
+            "https://arxiv.org/abs/2507.14387",
+            "https://arxiv.org/abs/2603.10676v2",
         ],
     },
     {
@@ -550,10 +550,10 @@ labels = classifier(posts)
    domain experts.
 ''',
         "references": [
-            "https://arxiv.org/html/2605.00829",
+            "https://arxiv.org/abs/2605.00829",
             "https://arxiv.org/pdf/2504.00046",
-            "https://arxiv.org/html/2402.10908",
-            "https://arxiv.org/html/2405.11897",
+            "https://arxiv.org/abs/2402.10908",
+            "https://arxiv.org/abs/2405.11897",
             "https://ojs.iscram.org/index.php/Proceedings/article/view/152",
         ],
     },
@@ -665,10 +665,10 @@ risk = model.predict(X_test)
    tests.
 ''',
         "references": [
-            "https://arxiv.org/html/2607.24588",
+            "https://arxiv.org/abs/2607.24588",
             "https://arxiv.org/pdf/2601.18308",
-            "https://arxiv.org/html/2506.06355",
-            "https://ar5iv.labs.arxiv.org/html/2112.13465",
+            "https://arxiv.org/abs/2506.06355",
+            "https://arxiv.org/abs/2112.13465",
             "https://www.undrr.org/publication/leveraging-ai-enhance-multi-hazard-early-warning-systems",
         ],
     },

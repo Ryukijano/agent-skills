@@ -46,9 +46,9 @@ print(path)
 ''',
         "references": [
             "https://doi.org/10.1186/s13174-018-0087-2",
-            "https://arxiv.org/html/2507.01773",
-            "https://arxiv.org/html/2308.05384v2",
-            "https://arxiv.org/html/2402.01665v1",
+            "https://arxiv.org/abs/2507.01773",
+            "https://arxiv.org/abs/2308.05384v2",
+            "https://arxiv.org/abs/2402.01665v1",
         ],
     },
     {
@@ -95,10 +95,10 @@ df["anomaly_score"] = clf.decision_function(X)
 3. Test robustness to adversarial perturbations of network-flow features.
 ''',
         "references": [
-            "https://ar5iv.labs.arxiv.org/html/1911.02621",
+            "https://arxiv.org/abs/1911.02621",
             "https://arxiv.org/abs/2405.04760v3",
-            "https://arxiv.org/html/2504.07839",
-            "https://arxiv.org/html/2409.18736",
+            "https://arxiv.org/abs/2504.07839",
+            "https://arxiv.org/abs/2409.18736",
         ],
     },
     {
@@ -197,10 +197,10 @@ model.fit(X, y)
 3. Demonstrate slice resource orchestration under varying load.
 ''',
         "references": [
-            "https://arxiv.org/html/2306.06178v1",
+            "https://arxiv.org/abs/2306.06178v1",
             "https://arxiv.org/pdf/2305.05092",
             "https://arxiv.org/abs/2009.04943",
-            "https://ar5iv.labs.arxiv.org/html/1911.03585",
+            "https://arxiv.org/abs/1911.03585",
         ],
     },
     {
@@ -246,10 +246,10 @@ print("Estimated SNR:", snr)
 3. Model an ISAC scenario and evaluate sensing accuracy versus communication rate.
 ''',
         "references": [
-            "https://arxiv.org/html/2412.14538v3",
+            "https://arxiv.org/abs/2412.14538v3",
             "https://doi.org/10.1109/ojcoms.2026.3677293",
-            "https://arxiv.org/html/2207.13382",
-            "https://arxiv.org/html/2406.13335",
+            "https://arxiv.org/abs/2207.13382",
+            "https://arxiv.org/abs/2406.13335",
         ],
     },
     {
@@ -295,10 +295,10 @@ df["anomaly"] = clf.fit_predict(X)
 3. Predict equipment failure and compare to a rule-based maintenance schedule.
 ''',
         "references": [
-            "https://arxiv.org/html/2410.19998v1",
+            "https://arxiv.org/abs/2410.19998v1",
             "https://doi.org/10.1145/3690639",
-            "https://ar5iv.labs.arxiv.org/html/2011.08612",
-            "https://arxiv.org/html/2406.03820",
+            "https://arxiv.org/abs/2011.08612",
+            "https://arxiv.org/abs/2406.03820",
         ],
     },
     {
@@ -501,7 +501,7 @@ model.fit(X, y)
 3. Implement an ML-based nonlinearity precompensation and measure BER improvement.
 ''',
         "references": [
-            "https://arxiv.org/html/2003.05290",
+            "https://arxiv.org/abs/2003.05290",
             "https://doi.org/10.1016/j.osn.2017.12.006",
             "https://doi.org/10.1109/access.2023.3312387",
             "https://doi.org/10.1109/access.2025.3569559",
@@ -553,10 +553,10 @@ clf.fit(X, y)
 3. Demonstrate spectrum sensing on a real or emulated RF dataset.
 ''',
         "references": [
-            "https://arxiv.org/html/1809.08707",
-            "https://arxiv.org/html/2407.11595",
-            "https://ar5iv.labs.arxiv.org/html/2001.04561",
-            "https://arxiv.org/html/2007.05952",
+            "https://arxiv.org/abs/1809.08707",
+            "https://arxiv.org/abs/2407.11595",
+            "https://arxiv.org/abs/2001.04561",
+            "https://arxiv.org/abs/2007.05952",
         ],
     },
     {
@@ -603,9 +603,9 @@ df["anomaly_score"] = clf.decision_function(X)
 ''',
         "references": [
             "https://arxiv.org/abs/2507.12472v1",
-            "https://arxiv.org/html/2406.11213",
-            "https://arxiv.org/html/2605.12729v2",
-            "https://arxiv.org/html/2404.01363",
+            "https://arxiv.org/abs/2406.11213",
+            "https://arxiv.org/abs/2605.12729v2",
+            "https://arxiv.org/abs/2404.01363",
         ],
     },
 ]

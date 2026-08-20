@@ -1,9 +1,3 @@
----
-name: blackwell-fp4-fp8-block-scaling-ptx-gb10
-description: >-
-  Implement FP8 and block-scaled FP4 (NVFP4) Tensor Core MMA with inline PTX on GB10. Covers `kind::f8f6f4`, `kind::mxf4nvf4.block_scale`, scale-factor encoding, FP32 accumulation, and the sm_121f / sm_121a / PTX 9.1 requirements.
----
-
 # FP8 / Block-Scaled FP4 PTX MMA on GB10 DGX Spark
 
 ## Overview

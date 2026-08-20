@@ -1,11 +1,3 @@
----
-name: deepspeed-training
-description: >-
-  Distributed training with DeepSpeed ZeRO optimization. Train models up to 1T
-  parameters with limited GPU memory. Use when training large models across
-  multiple GPUs.
----
-
 # DeepSpeed Training
 
 ## Overview

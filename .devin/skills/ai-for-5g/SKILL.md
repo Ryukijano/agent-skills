@@ -46,7 +46,7 @@ model.fit(X, y)
 
 ## References
 
-- https://arxiv.org/html/2306.06178v1
+- https://arxiv.org/abs/2306.06178v1
 - https://arxiv.org/pdf/2305.05092
 - https://arxiv.org/abs/2009.04943
-- https://ar5iv.labs.arxiv.org/html/1911.03585
+- https://arxiv.org/abs/1911.03585

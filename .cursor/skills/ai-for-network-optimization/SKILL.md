@@ -48,6 +48,6 @@ print(path)
 ## References
 
 - https://doi.org/10.1186/s13174-018-0087-2
-- https://arxiv.org/html/2507.01773
-- https://arxiv.org/html/2308.05384v2
-- https://arxiv.org/html/2402.01665v1
+- https://arxiv.org/abs/2507.01773
+- https://arxiv.org/abs/2308.05384v2
+- https://arxiv.org/abs/2402.01665v1

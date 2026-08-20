@@ -1,9 +1,4 @@
----
-name: paper-submission-prep
-description: Final checklist and tasks to get a research repo submission-ready for a conference or journal (code + data + repro + presentation artifacts).
----
-
-## Paper Submission Prep
+# Paper Submission Prep
 
 ### Code & repo
 - All main results reproducible from committed configs + committed splits.

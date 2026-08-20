@@ -52,7 +52,7 @@ print(response.choices[0].message.content)
 
 ## References
 
-- https://arxiv.org/html/2402.13667
+- https://arxiv.org/abs/2402.13667
 - https://www.chicagobooth.edu/review/ai-is-coming-marketing-department
 - https://doi.org/10.1016/j.jbusres.2024.114984
 - https://www.deloittedigital.com/us/en/insights/research/genai-human-marketing-operations.html

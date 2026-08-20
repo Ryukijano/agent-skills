@@ -47,7 +47,7 @@ clf.fit(X, y)
 
 ## References
 
-- https://arxiv.org/html/1809.08707
-- https://arxiv.org/html/2407.11595
-- https://ar5iv.labs.arxiv.org/html/2001.04561
-- https://arxiv.org/html/2007.05952
+- https://arxiv.org/abs/1809.08707
+- https://arxiv.org/abs/2407.11595
+- https://arxiv.org/abs/2001.04561
+- https://arxiv.org/abs/2007.05952

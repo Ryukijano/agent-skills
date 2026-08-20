@@ -1,9 +1,4 @@
----
-name: checkpoint-to-deployment
-description: Convert a training checkpoint to deployment-ready format by stripping training-only state. Use when preparing models for inference, extracting encoder weights, or cleaning checkpoints for release.
----
-
-## Checkpoint to Deployment
+# Checkpoint to Deployment
 
 ### Steps
 

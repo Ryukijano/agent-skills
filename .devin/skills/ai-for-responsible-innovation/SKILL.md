@@ -46,6 +46,6 @@ print(actions.sort_values("priority"))
 ## References
 
 - https://arxiv.org/pdf/2501.05921
-- https://arxiv.org/html/2502.14869
+- https://arxiv.org/abs/2502.14869
 - https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/steering-ai-s-future_70e4a856/5480ff0a-en.pdf
-- https://arxiv.org/html/2406.04554
+- https://arxiv.org/abs/2406.04554

@@ -47,4 +47,4 @@ model.fit(dataset)
 - https://deepchem.io/
 - https://www.rdkit.org/
 - https://arxiv.org/abs/2401.14876
-- https://doi.org/10.1038/s41586-023-06197-2
+- https://doi.org/10.1038/s41586-023-06197-z

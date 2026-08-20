@@ -1,9 +1,3 @@
----
-name: surgical-video-analysis
-description: >-
-  Analyze surgical video for MOT, detection, and scene understanding. Use when processing endoscopy video, running detection models, evaluating tracking, or building surgical AI pipelines.
----
-
 # Surgical Video Analysis
 
 ## Overview

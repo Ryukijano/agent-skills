@@ -1,11 +1,3 @@
----
-name: alphaevolve-post-experiment
-description: >-
-  Post-experiment processing: review evolved code, generate reports with score
-  progression charts, integrate best solution back into codebase. Use after an
-  AlphaEvolve experiment completes.
----
-
 # AlphaEvolve Post-Experiment Processing
 
 ## Stage 1: Quick Results Overview

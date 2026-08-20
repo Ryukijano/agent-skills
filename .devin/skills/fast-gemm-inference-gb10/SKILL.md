@@ -1,9 +1,3 @@
----
-name: fast-gemm-inference-gb10
-description: >-
-  Optimize GEMM for low-latency inference on GB10. Covers cuBLASLt heuristics, batched GEMM, epilogue fusion, and FP8/FP16 precision selection.
----
-
 # Fast GEMM for Inference on GB10 DGX Spark
 
 ## Overview

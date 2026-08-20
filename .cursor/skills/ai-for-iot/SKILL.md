@@ -44,7 +44,7 @@ df["anomaly"] = clf.fit_predict(X)
 
 ## References
 
-- https://arxiv.org/html/2410.19998v1
+- https://arxiv.org/abs/2410.19998v1
 - https://doi.org/10.1145/3690639
-- https://ar5iv.labs.arxiv.org/html/2011.08612
-- https://arxiv.org/html/2406.03820
+- https://arxiv.org/abs/2011.08612
+- https://arxiv.org/abs/2406.03820

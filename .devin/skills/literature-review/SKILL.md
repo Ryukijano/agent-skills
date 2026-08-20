@@ -1,9 +1,3 @@
----
-name: literature-review
-description: >-
-  Conduct systematic literature reviews. Use when surveying a research area, writing related work sections, or building a paper collection for a survey paper.
----
-
 # Systematic Literature Review
 
 ## Overview

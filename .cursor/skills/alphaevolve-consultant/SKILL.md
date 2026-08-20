@@ -1,11 +1,3 @@
----
-name: alphaevolve-consultant
-description: >-
-  Expert consultant on AlphaEvolve concepts: architecture, suitability,
-  evaluator design, EVOLVE-BLOCK placement, model mixture, troubleshooting. Use
-  when user has questions about AlphaEvolve.
----
-
 # AlphaEvolve Expert Consultant
 
 ## What is AlphaEvolve?

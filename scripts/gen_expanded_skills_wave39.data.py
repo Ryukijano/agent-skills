@@ -48,7 +48,7 @@ model = GradientBoostingRegressor(random_state=42).fit(X_train, y_train)
         "references": [
             "https://www.science.org/doi/10.1126/science.aaf7894",
             "https://pubmed.ncbi.nlm.nih.gov/35914150/",
-            "https://www.nature.com/articles/s41586-022-04484-9",
+            "https://www.nature.com/articles/s41586-022-05422-504484-9",
             "https://doi.org/10.1257/aer.20221650",
             "https://arxiv.org/abs/2202.00109",
         ],
@@ -202,7 +202,7 @@ G = nx.Graph()
             "https://doi.org/10.1016/j.technovation.2025.103415",
             "https://doi.org/10.3390/su18021014",
             "https://www.nature.com/articles/s41467-025-68216-z",
-            "https://www.nature.com/articles/s41586-022-04484-9",
+            "https://www.nature.com/articles/s41586-022-05422-504484-9",
         ],
     },
     {

@@ -48,4 +48,4 @@ print("Predicted value:", approx.predict([[0.4, 0.3, 0.7]]))
 - https://doi.org/10.1016/j.ejor.2020.07.063
 - https://doi.org/10.1109/access.2020.3004964
 - https://doi.org/10.48550/arxiv.2601.10583
-- https://ar5iv.labs.arxiv.org/html/2006.09123
+- https://arxiv.org/abs/2006.09123

@@ -54,11 +54,4 @@ df["cluster"] = KMeans(n_clusters=5, random_state=42, n_init="auto").fit_predict
 - https://doi.org/10.1017/pds.2025.10058
 - https://doi.org/10.48550/arxiv.2606.06727
 - https://www.mdpi.com/2079-8954/13/7/584
-- https://doi.org/10.12305/j.issn.1001-506X.2025.12.21
-
-## References
-
-- https://doi.org/10.1017/pds.2025.10058
-- https://doi.org/10.48550/arxiv.2606.06727
-- https://www.mdpi.com/2079-8954/13/7/584
-- https://doi.org/10.12305/j.issn.1001-506X.2025.12.21
+- https://doi.org/10.23919/JSEE.2024.000066

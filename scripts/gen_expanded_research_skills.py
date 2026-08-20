@@ -12,6 +12,7 @@ Usage:
 """
 
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -63,6 +64,8 @@ Quick reference for `{name.replace('-', ' ')}`.
 
 def _make_devin_skill(skill: dict) -> str:
     body = skill["devin_body"].strip()
+    # Avoid double References sections if the raw body already ends with one.
+    body = re.sub(r"\n+## References\n+.*", "", body, flags=re.DOTALL).strip()
     return f"""# {skill['title']}
 
 ## Description

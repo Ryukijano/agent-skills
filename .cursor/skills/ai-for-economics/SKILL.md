@@ -51,6 +51,6 @@ print("CATE intervals:", est.ate__interval())
 ## References
 
 - https://doi.org/10.1146/annurev-economics-080217-053433
-- https://arxiv.org/html/2312.05858v2
-- https://arxiv.org/html/2208.03489
+- https://arxiv.org/abs/2312.05858v2
+- https://arxiv.org/abs/2208.03489
 - https://www.annualreviews.org/content/journals/10.1146/annurev-economics-080217-053214

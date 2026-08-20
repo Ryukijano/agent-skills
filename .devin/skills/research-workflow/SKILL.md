@@ -1,9 +1,3 @@
----
-name: research-workflow
-description: >-
-  ArXiv search, paper digestion, BibTeX management, experiment tracking, and Semantic Scholar. Use when searching for papers, managing citations, creating experiments, or tracking research.
----
-
 # Research Workflow MCP Server
 
 ## Overview

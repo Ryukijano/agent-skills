@@ -1,9 +1,4 @@
----
-name: ci-cd-setup
-description: Set up CI/CD pipelines for ML research projects using GitHub Actions. Use when creating workflows for automated testing, linting, pre-commit checks, or model evaluation on push/PR.
----
-
-## CI/CD for ML Research Projects
+# CI/CD for ML Research Projects
 
 ### Minimal GitHub Actions workflow
 

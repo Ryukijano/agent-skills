@@ -693,7 +693,7 @@ mpirun -np 8 ./Shenqi param.txt
             "https://iopscience.iop.org/article/10.3847/1538-4357/ac6de4",
             "https://github.com/caoxiaoyue/TinyLensGpu",
             "https://github.com/MP-Gadget/shenqi",
-            "https://arxiv.org/html/2606.17145"
+            "https://arxiv.org/abs/2606.17145"
         ],
     },
     {

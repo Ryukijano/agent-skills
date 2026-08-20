@@ -1,11 +1,3 @@
----
-name: pcos-privacy
-description: >-
-  PCOS privacy policies, PII stripping, and cloud escalation gating. Use when
-  working on privacy-sensitive routing, data redaction, or ensuring sensitive
-  tasks never leave the device.
----
-
 # PCOS Privacy & Escalation Policies
 
 ## Core Principle

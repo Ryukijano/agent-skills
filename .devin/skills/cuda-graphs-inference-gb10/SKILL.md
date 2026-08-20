@@ -1,9 +1,3 @@
----
-name: cuda-graphs-inference-gb10
-description: >-
-  Capture and replay CUDA graphs for low-latency inference pipelines on GB10. Covers stream capture, graph instantiation, launch, and kernel node parameter updates.
----
-
 # CUDA Graphs for Inference on GB10 DGX Spark
 
 ## Overview

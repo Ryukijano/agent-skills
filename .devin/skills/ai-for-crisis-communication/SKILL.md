@@ -54,8 +54,8 @@ labels = classifier(posts)
 
 ## References
 
-- https://arxiv.org/html/2605.00829
+- https://arxiv.org/abs/2605.00829
 - https://arxiv.org/pdf/2504.00046
-- https://arxiv.org/html/2402.10908
-- https://arxiv.org/html/2405.11897
+- https://arxiv.org/abs/2402.10908
+- https://arxiv.org/abs/2405.11897
 - https://ojs.iscram.org/index.php/Proceedings/article/view/152

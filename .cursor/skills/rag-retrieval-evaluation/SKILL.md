@@ -44,5 +44,5 @@ print(result)
 
 - https://arxiv.org/abs/2404.01037
 - https://docs.ragas.io/
-- https://huggingface.co/papers/2403.18131
+- https://arxiv.org/abs/2403.18131
 - https://python.langchain.com/docs/guides/evaluation/

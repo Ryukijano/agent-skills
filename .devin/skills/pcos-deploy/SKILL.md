@@ -1,11 +1,3 @@
----
-name: pcos-deploy
-description: >-
-  PCOS deployment, CI/CD, and observability. Use when setting up the broker
-  for production, configuring environment variables, deploying the HF Space,
-  or debugging health/metrics endpoints.
----
-
 # PCOS Deployment & Observability
 
 ## Configuration

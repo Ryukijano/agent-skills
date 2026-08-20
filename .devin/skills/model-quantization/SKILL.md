@@ -1,11 +1,3 @@
----
-name: model-quantization
-description: >-
-  Quantize LLMs to 8-bit or 4-bit with bitsandbytes, GPTQ, AWQ, GGUF. Reduce
-  memory 50-75% with minimal accuracy loss. Use when deploying models with
-  limited GPU memory.
----
-
 # Model Quantization
 
 ## Methods Comparison

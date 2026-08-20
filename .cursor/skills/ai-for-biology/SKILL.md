@@ -42,6 +42,6 @@ outputs = model(**inputs)
 
 - https://github.com/facebookresearch/esm
 - https://www.nature.com/articles/s41586-021-03819-2
-- https://huggingface.co/papers/2407.04446
+- https://arxiv.org/abs/2407.04446
 - https://huggingface.co/
 - https://www.biorxiv.org/content/10.1101/2023.01.11.523679

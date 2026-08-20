@@ -47,9 +47,9 @@ print("Utility gap:", real_on_real - syn_on_real)
 ''',
         "references": [
             "https://arxiv.org/abs/2403.04190",
-            "https://arxiv.org/html/2302.04062",
+            "https://arxiv.org/abs/2302.04062",
             "https://doi.org/10.48550/arxiv.2401.02524",
-            "https://arxiv.org/html/2503.20846",
+            "https://arxiv.org/abs/2503.20846",
         ],
     },
     {
@@ -97,10 +97,10 @@ def repair(design, simulator, target, max_iter=20, lr=0.01):
 3. Plot the Pareto front of generated designs across performance and manufacturability.
 ''',
         "references": [
-            "https://arxiv.org/html/2412.13281",
-            "https://arxiv.org/html/2306.15166",
+            "https://arxiv.org/abs/2412.13281",
+            "https://arxiv.org/abs/2306.15166",
             "https://arxiv.org/abs/2309.02040",
-            "https://arxiv.org/html/2406.09143",
+            "https://arxiv.org/abs/2406.09143",
         ],
     },
     {
@@ -151,9 +151,9 @@ for _ in range(100):
 3. Run a multi-objective design sweep and identify the knee of the Pareto front.
 ''',
         "references": [
-            "https://arxiv.org/html/2409.02606",
-            "https://arxiv.org/html/2511.17111",
-            "https://arxiv.org/html/2405.18075",
+            "https://arxiv.org/abs/2409.02606",
+            "https://arxiv.org/abs/2511.17111",
+            "https://arxiv.org/abs/2405.18075",
             "https://arxiv.org/abs/2502.09819",
         ],
     },
@@ -204,7 +204,7 @@ feature_rank = dict(zip(X_test.columns, importance.importances_mean))
         "references": [
             "https://arxiv.org/abs/2601.11812",
             "https://dl.acm.org/doi/10.1145/3544548.3580959",
-            "https://arxiv.org/html/2310.07127",
+            "https://arxiv.org/abs/2310.07127",
             "https://arxiv.org/abs/2105.05424",
         ],
     },
@@ -251,9 +251,9 @@ print("DP:", dp, "EO:", eo)
 ''',
         "references": [
             "https://arxiv.org/abs/2402.08323",
-            "https://arxiv.org/html/2311.17228",
-            "https://arxiv.org/html/2107.06641",
-            "https://arxiv.org/html/2411.09973",
+            "https://arxiv.org/abs/2311.17228",
+            "https://arxiv.org/abs/2107.06641",
+            "https://arxiv.org/abs/2411.09973",
         ],
     },
     {
@@ -354,10 +354,10 @@ probe = SafetyProbe(hidden_dim=4096)
 3. Inspect model activations for a harmful concept and compare to a benign baseline.
 ''',
         "references": [
-            "https://arxiv.org/html/2310.19852",
-            "https://arxiv.org/html/2604.20945",
-            "https://arxiv.org/html/2404.12038",
-            "https://arxiv.org/html/2603.06727",
+            "https://arxiv.org/abs/2310.19852",
+            "https://arxiv.org/abs/2604.20945",
+            "https://arxiv.org/abs/2404.12038",
+            "https://arxiv.org/abs/2603.06727",
         ],
     },
     {
@@ -406,7 +406,7 @@ print(compliance_matrix)
 ''',
         "references": [
             "https://arxiv.org/pdf/2409.00264",
-            "https://arxiv.org/html/2503.05787",
+            "https://arxiv.org/abs/2503.05787",
             "https://arxiv.org/abs/2307.12218",
             "https://arxiv.org/pdf/2407.21717",
         ],
@@ -456,9 +456,9 @@ print(actions.sort_values("priority"))
 ''',
         "references": [
             "https://arxiv.org/pdf/2501.05921",
-            "https://arxiv.org/html/2502.14869",
+            "https://arxiv.org/abs/2502.14869",
             "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/steering-ai-s-future_70e4a856/5480ff0a-en.pdf",
-            "https://arxiv.org/html/2406.04554",
+            "https://arxiv.org/abs/2406.04554",
         ],
     },
     {
@@ -608,9 +608,9 @@ for t in range(100):
 3. Run what-if scenarios and stress tests to assess resilience to disruptions.
 ''',
         "references": [
-            "https://arxiv.org/html/2506.06580",
-            "https://arxiv.org/html/2601.01321",
-            "https://arxiv.org/html/2511.03742",
+            "https://arxiv.org/abs/2506.06580",
+            "https://arxiv.org/abs/2601.01321",
+            "https://arxiv.org/abs/2511.03742",
             "https://arxiv.org/abs/2301.13350",
         ],
     },

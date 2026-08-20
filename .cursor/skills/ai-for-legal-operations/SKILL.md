@@ -41,6 +41,6 @@ entities = ner(contract_text)
 ## References
 
 - https://aclanthology.org/2026.findings-eacl.305/
-- https://arxiv.org/html/2508.03080
-- https://arxiv.org/html/2401.16212
+- https://arxiv.org/abs/2508.03080
+- https://arxiv.org/abs/2401.16212
 - https://www.cambridge.org/core/journals/international-journal-of-legal-information/article/evaluating-ai-in-legal-operations-a-comparative-analysis-of-accuracy-completeness-and-hallucinations-in-chatgpt4-copilot-deepseek-lexis-ai-and-llama-3/64E4DA3715DFCAA99DF3A1AC4680CAC8

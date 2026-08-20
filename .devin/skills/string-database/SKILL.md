@@ -1,12 +1,3 @@
----
-name: string-database
-description: >-
-  Query the STRING database for protein-protein interactions (PPIs), functional
-  enrichment, and homology. Use when the user asks about interactions between
-  specific proteins, interaction evidence, confidence scores, protein
-  interaction partners, or pathway enrichments.
----
-
 # String Database
 
 Source: `science_skills/string_database/`

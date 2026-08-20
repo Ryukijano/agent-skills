@@ -1,10 +1,3 @@
----
-name: code-simplification
-description: >-
-  Simplify code while preserving behavior exactly. Follow project conventions,
-  prefer clarity over cleverness. Use when refactoring or reviewing code.
----
-
 # Code Simplification
 
 ## Five Principles

@@ -55,15 +55,7 @@ print(f'MAPE: {mape:.2%}')
 ## References
 
 - https://www.sciencedirect.com/science/article/pii/S0264275124003299
-- https://arxiv.org/html/2405.06553
-- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318701
-- https://link.springer.com/article/10.1007/s00168-023-01212-7
-- https://dl.acm.org/doi/10.1145/3567430
-
-## References
-
-- https://www.sciencedirect.com/science/article/pii/S0264275124003299
-- https://arxiv.org/html/2405.06553
+- https://arxiv.org/abs/2405.06553
 - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318701
 - https://link.springer.com/article/10.1007/s00168-023-01212-7
 - https://dl.acm.org/doi/10.1145/3567430

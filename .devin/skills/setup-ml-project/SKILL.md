@@ -1,9 +1,4 @@
----
-name: setup-ml-project
-description: Scaffold a new ML research project with standard directory structure, configs, and tooling. Use when starting a new project, initializing repo structure, or standardizing an existing project layout.
----
-
-## ML Project Setup
+# ML Project Setup
 
 ### Directory structure
 ```

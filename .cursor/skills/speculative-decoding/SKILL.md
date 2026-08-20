@@ -1,10 +1,3 @@
----
-name: speculative-decoding
-description: >-
-  1.5-3.6x faster LLM inference with speculative decoding using draft models.
-  Use when optimizing inference latency for autoregressive generation.
----
-
 # Speculative Decoding
 
 ## Overview

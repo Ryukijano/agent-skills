@@ -866,7 +866,7 @@ out = layer(x)
             "https://pytorch.org/blog/accelerating-mamba2-with-kernel-fusion/",
             "https://github.com/state-spaces/mamba",
             "https://github.com/state-spaces/mamba/issues/904",
-            "https://arxiv.org/html/2604.10597v3"
+            "https://arxiv.org/abs/2604.10597v3"
         ],
     },
     {

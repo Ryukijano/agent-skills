@@ -1,10 +1,3 @@
----
-name: research-brainstorming
-description: >-
-  Structured ideation frameworks for discovering high-impact research
-  directions. Use when exploring new research topics or finding novel angles.
----
-
 # Research Brainstorming
 
 ## Ideation Frameworks

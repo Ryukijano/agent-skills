@@ -49,7 +49,7 @@ probe = SafetyProbe(hidden_dim=4096)
 
 ## References
 
-- https://arxiv.org/html/2310.19852
-- https://arxiv.org/html/2604.20945
-- https://arxiv.org/html/2404.12038
-- https://arxiv.org/html/2603.06727
+- https://arxiv.org/abs/2310.19852
+- https://arxiv.org/abs/2604.20945
+- https://arxiv.org/abs/2404.12038
+- https://arxiv.org/abs/2603.06727

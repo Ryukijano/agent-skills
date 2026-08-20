@@ -1,9 +1,4 @@
----
-name: pre-commit-setup
-description: Setting up pre-commit hooks for automatic lint, format, and basic checks on every commit. Fast feedback for code quality.
----
-
-## Pre-commit
+# Pre-commit
 
 ### Install
 ```bash

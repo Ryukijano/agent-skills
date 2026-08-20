@@ -1,9 +1,4 @@
----
-name: ablation-study
-description: Design and run systematic ablation studies comparing model variants by removing components one at a time. Use when planning ablation experiments, creating config variants, or analyzing component contributions.
----
-
-## Ablation Study Design
+# Ablation Study Design
 
 ### Process
 

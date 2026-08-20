@@ -1,9 +1,4 @@
----
-name: dgx-spark-cosmos3
-description: Running and developing with NVIDIA Cosmos3 (video/world model generation and action forward dynamics) on DGX Spark (GB10 Grace Blackwell) under AIMSgeneral. Covers venvs, launchers, and common workflows.
----
-
-## DGX Spark + Cosmos3
+# DGX Spark + Cosmos3
 
 ### Key paths (from AGENTS.md + DGX_SPARK_SETUP)
 - Base: `/home/aimsgroupuol/AIMSgeneral`

@@ -1,9 +1,3 @@
----
-name: cooperative-groups-warp-tile-gb10
-description: >-
-  Use Cooperative Groups `cg::tiled_partition` and `cg::thread_block_tile` for warp-level reduction, scan, and matrix/vector operations on GB10.
----
-
 # Cooperative Groups Warp-Tile Primitives on GB10
 
 ## Overview

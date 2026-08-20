@@ -46,8 +46,8 @@ print(classification_report(y_true, y_pred, target_names=groups))
 
 ## References
 
-- https://arxiv.org/html/2402.05731
+- https://arxiv.org/abs/2402.05731
 - https://dl.acm.org/doi/10.1145/3375627.3375820
-- https://arxiv.org/html/2503.04866v1
-- https://arxiv.org/html/2606.07628v1
+- https://arxiv.org/abs/2503.04866v1
+- https://arxiv.org/abs/2606.07628v1
 - https://www.frontiersin.org/articles/10.3389/fdata.2024.1337465

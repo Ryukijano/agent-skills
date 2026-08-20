@@ -42,5 +42,5 @@ model.fit(X_train, y_train)
 
 - https://arxiv.org/abs/2402.08989
 - https://www.hydrosdk.org/
-- https://github.com/NeuralHydroPedia/neuralhydrology
+- https://github.com/neuralhydrology/neuralhydrology
 - https://waterdata.usgs.gov/

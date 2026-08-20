@@ -1,9 +1,4 @@
----
-name: pretrain-and-evaluate
-description: Reference for the full pretrain (TDV/JEPA) → MOT stages → leak-free stratified evaluation pipeline on CholecTrack20. Use when planning or auditing end-to-end experiments.
----
-
-## End-to-End Pretrain → MOT Eval
+# End-to-End Pretrain → MOT Eval
 
 ### Pipeline stages
 1. TDV (or GOT-JEPA) pretrain on Cholec80-like video → frame encoder weights.

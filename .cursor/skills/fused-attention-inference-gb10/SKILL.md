@@ -1,9 +1,3 @@
----
-name: fused-attention-inference-gb10
-description: >-
-  Build fused attention kernels for fast LLM inference on GB10. Covers online softmax, FlashAttention tiling, KV-cache slicing, and causal/left-padding masks.
----
-
 # Fused Attention for Inference on GB10 DGX Spark
 
 ## Overview

@@ -49,7 +49,7 @@ for _ in range(100):
 
 ## References
 
-- https://arxiv.org/html/2409.02606
-- https://arxiv.org/html/2511.17111
-- https://arxiv.org/html/2405.18075
+- https://arxiv.org/abs/2409.02606
+- https://arxiv.org/abs/2511.17111
+- https://arxiv.org/abs/2405.18075
 - https://arxiv.org/abs/2502.09819

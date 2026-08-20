@@ -1,9 +1,3 @@
----
-name: distributed-training
-description: >-
-  Multi-GPU monitoring, NCCL diagnostics, DDP/FSDP setup, and training job management. Use when checking GPU topology, testing NCCL bandwidth, verifying distributed training setup, or managing training jobs.
----
-
 # Distributed Training MCP Server
 
 ## Overview

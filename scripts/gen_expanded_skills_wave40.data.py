@@ -333,11 +333,11 @@ print("data.csv sha256:", digest)
 3. Check that every figure can be traced back to the script and dataset that produced it.
 ''',
         "references": [
-            "https://arxiv.org/html/2412.17859",
+            "https://arxiv.org/abs/2412.17859",
             "https://github.com/synthetic-sciences/openscience",
             "https://github.com/opencodon/opencodon",
             "https://reproai.org/",
-            "https://arxiv.org/html/2409.11363",
+            "https://arxiv.org/abs/2409.11363",
         ],
     },
     {
@@ -389,7 +389,7 @@ chart.save("spending_chart.html")
             "https://github.com/icij/datashare/",
             "https://datashare.icij.org/",
             "https://www.mdpi.com/2227-7080/10/3/68",
-            "https://arxiv.org/html/2409.07286",
+            "https://arxiv.org/abs/2409.07286",
         ],
     },
     {
@@ -486,8 +486,8 @@ plt.savefig("chart_component.png")
             "https://aclanthology.org/2025.acl-long.1003.pdf",
             "https://aclanthology.org/2026.acl-long.1713.pdf",
             "https://aclanthology.org/anthology-files/anthology-files/pdf/acl/2023.acl-demo.11.pdf",
-            "https://arxiv.org/html/2401.13245",
-            "https://arxiv.org/html/2505.18668v3",
+            "https://arxiv.org/abs/2401.13245",
+            "https://arxiv.org/abs/2505.18668v3",
         ],
     },
     {

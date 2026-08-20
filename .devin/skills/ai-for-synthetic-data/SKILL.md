@@ -49,6 +49,6 @@ print("Utility gap:", real_on_real - syn_on_real)
 ## References
 
 - https://arxiv.org/abs/2403.04190
-- https://arxiv.org/html/2302.04062
+- https://arxiv.org/abs/2302.04062
 - https://doi.org/10.48550/arxiv.2401.02524
-- https://arxiv.org/html/2503.20846
+- https://arxiv.org/abs/2503.20846

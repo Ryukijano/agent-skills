@@ -1,9 +1,4 @@
----
-name: pretrain-and-evaluate
-description: Run the full Stage 0 pretrain to Stage 1 detection to evaluation pipeline. Use when executing end-to-end ML training pipelines, chaining pretraining with downstream task evaluation.
----
-
-## Pretrain + Evaluate Pipeline
+# Pretrain + Evaluate Pipeline
 
 ### Stage 0: Pretraining
 

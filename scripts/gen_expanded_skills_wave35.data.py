@@ -97,7 +97,7 @@ def learned_paging_predict(cache, request):
 3. Benchmark a learning-augmented algorithm against the prediction-free worst-case baseline.
 ''',
         "references": [
-            "https://ar5iv.labs.arxiv.org/html/2006.09123",
+            "https://arxiv.org/abs/2006.09123",
             "https://cacm.acm.org/opinion/algorithms-with-predictions/",
             "https://arpi.unipi.it/bitstream/11568/1038818/1/BookChapter__Learned_data_structures.pdf",
             "http://theory.stanford.edu/~sergei/slides/HALG-slides.pdf",
@@ -154,7 +154,7 @@ best = premises[int(np.argmax(scores))]
             "https://doi.org/10.1007/s10664-025-10729-8",
             "https://doi.org/10.48550/arxiv.2404.09939",
             "https://aclanthology.org/2026.bigpicture-main.1/",
-            "https://arxiv.org/html/2606.08728v4",
+            "https://arxiv.org/abs/2606.08728v4",
             "https://doi.org/10.48550/arxiv.2403.04017",
         ],
     },
@@ -314,8 +314,8 @@ print("Next tactic:", predicted_tactic)
             "https://www.danielgratzer.com/papers/type-theory-book.pdf",
             "https://agda.readthedocs.io/en/latest/getting-started/what-is-agda.html",
             "https://doi.org/10.1145/3563306",
-            "https://arxiv.org/html/2304.00994",
-            "https://arxiv.org/html/2410.19605v1",
+            "https://arxiv.org/abs/2304.00994",
+            "https://arxiv.org/abs/2410.19605v1",
         ],
     },
     {
@@ -424,7 +424,7 @@ print("Relevant axioms:", [axioms[i] for i in indices[0]])
             "https://doi.org/10.1561/2200000081",
             "https://www.tcs.ifi.lmu.de/staff/jasmin-blanchette/axiom_sel.pdf",
             "https://doi.org/10.48550/arxiv.2404.09939",
-            "https://arxiv.org/html/2606.08728v4",
+            "https://arxiv.org/abs/2606.08728v4",
         ],
     },
     {
@@ -650,7 +650,7 @@ print("Predicted value:", approx.predict([[0.4, 0.3, 0.7]]))
             "https://doi.org/10.1016/j.ejor.2020.07.063",
             "https://doi.org/10.1109/access.2020.3004964",
             "https://doi.org/10.48550/arxiv.2601.10583",
-            "https://ar5iv.labs.arxiv.org/html/2006.09123",
+            "https://arxiv.org/abs/2006.09123",
         ],
     },
 ]

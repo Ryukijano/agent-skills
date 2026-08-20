@@ -48,8 +48,8 @@ flags = np.abs(zscore(residuals)) > 3.5
 
 ## References
 
-- https://arxiv.org/html/2411.10918
-- https://arxiv.org/html/2607.05989
+- https://arxiv.org/abs/2411.10918
+- https://arxiv.org/abs/2607.05989
 - https://arxiv.org/abs/2603.16588v1
-- https://arxiv.org/html/2507.14387
-- https://arxiv.org/html/2603.10676v2
+- https://arxiv.org/abs/2507.14387
+- https://arxiv.org/abs/2603.10676v2

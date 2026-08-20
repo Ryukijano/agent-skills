@@ -1,9 +1,4 @@
----
-name: continual-learning
-description: Maintain cross-session context persistence for AI-assisted coding on long-running multi-project work. Use when starting a new session on a previously-worked-on project, ending a session with unfinished work, creating handoff artifacts, or rebuilding context after a context reset. Covers progress files, decision logs, memory database usage, and repo-native continuity patterns.
----
-
-## Continual Learning for Cross-Session Context
+# Continual Learning for Cross-Session Context
 
 ### Core principle
 

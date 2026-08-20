@@ -1,10 +1,3 @@
----
-name: debugging-and-error-recovery
-description: >-
-  Systematic debugging: reproduce, localize, reduce, fix root cause, guard
-  against recurrence. Use when debugging any error or unexpected behavior.
----
-
 # Debugging and Error Recovery
 
 ## Stop-the-Line Rule

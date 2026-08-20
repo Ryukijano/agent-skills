@@ -1,9 +1,4 @@
----
-name: nemotron-agent-loop
-description: Using Nemotron 3 Nano Omni (multimodal) for agentic loops, document intelligence, and sub-agent orchestration on DGX Spark with vLLM. Core for Lifeline-style projects.
----
-
-## Nemotron Agentic Work
+# Nemotron Agentic Work
 
 ### Env
 Separate venv: `venv/nemotron`.

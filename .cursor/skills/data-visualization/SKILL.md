@@ -1,11 +1,3 @@
----
-name: data-visualization
-description: >-
-  Create effective data visualizations using matplotlib, seaborn, plotly, and
-  other Python libraries. Use when the user wants to create charts, plots,
-  dashboards, or visual data analysis.
----
-
 # Data Visualization
 
 ## Library Selection

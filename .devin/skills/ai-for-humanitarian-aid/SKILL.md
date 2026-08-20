@@ -48,4 +48,4 @@ G = nx.Graph()
 - https://doi.org/10.1016/j.technovation.2025.103415
 - https://doi.org/10.3390/su18021014
 - https://www.nature.com/articles/s41467-025-68216-z
-- https://www.nature.com/articles/s41586-022-04484-9
+- https://www.nature.com/articles/s41586-022-05422-504484-9

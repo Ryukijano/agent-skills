@@ -1,9 +1,4 @@
----
-name: address-pr-comments
-description: Systematic process and conventions for triaging and addressing GitHub PR review comments in ML research projects. Use with the /address-pr-comments command.
----
-
-## Addressing PR Comments
+# Addressing PR Comments
 
 ### Workflow
 1. Checkout PR branch.

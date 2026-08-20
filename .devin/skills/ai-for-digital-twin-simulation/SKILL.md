@@ -46,7 +46,7 @@ for t in range(100):
 
 ## References
 
-- https://arxiv.org/html/2506.06580
-- https://arxiv.org/html/2601.01321
-- https://arxiv.org/html/2511.03742
+- https://arxiv.org/abs/2506.06580
+- https://arxiv.org/abs/2601.01321
+- https://arxiv.org/abs/2511.03742
 - https://arxiv.org/abs/2301.13350

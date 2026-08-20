@@ -40,6 +40,6 @@ for prompt in adversarial_prompts:
 ## References
 
 - https://arxiv.org/abs/2402.09300
-- https://www.anthropic.com/news/red-teaming
+- https://www.anthropic.com/news/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned
 - https://arxiv.org/abs/2312.07401
 - https://github.com/llm-attacks/llm-attacks

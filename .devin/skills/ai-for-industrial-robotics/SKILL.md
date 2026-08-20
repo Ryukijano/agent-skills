@@ -48,7 +48,7 @@ class ForcePolicy(nn.Module):
 
 ## References
 
-- https://arxiv.org/html/2607.14021v2
+- https://arxiv.org/abs/2607.14021v2
 - https://www.nature.com/articles/s42256-026-01292-y
-- https://arxiv.org/html/2604.20246
-- https://arxiv.org/html/2608.17962
+- https://arxiv.org/abs/2604.20246
+- https://arxiv.org/abs/2608.17962

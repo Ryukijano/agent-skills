@@ -41,6 +41,6 @@ x_adv = x + epsilon * torch.sign(x.grad)
 ## References
 
 - https://arxiv.org/abs/2408.06132
-- https://madry-lab.github.io/
+- https://madrylab.mit.edu/
 - https://github.com/MadryLab/robustness
 - https://arxiv.org/abs/2106.03098

@@ -1,9 +1,4 @@
----
-name: tdv-pretrain
-description: Run TDV (Temporal Difference in Vision) pretraining for surgical video domain adaptation. Use when setting up TDV training, configuring the frame encoder and motion encoder, debugging TDV losses, or extracting pretrained encoder weights for downstream detection.
----
-
-## TDV Pretraining for Surgical Video
+# TDV Pretraining for Surgical Video
 
 ### Core idea
 

@@ -1,11 +1,3 @@
----
-name: alphaevolve-runner
-description: >-
-  Launch and run AlphaEvolve experiments: configure GCP connection, verify
-  evaluator, create experiment, start evolutionary loop. Use when experiment
-  files are ready and user wants to start evolution.
----
-
 # AlphaEvolve Experiment Runner
 
 ## Prerequisites

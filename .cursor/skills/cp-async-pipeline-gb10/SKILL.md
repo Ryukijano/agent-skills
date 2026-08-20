@@ -1,9 +1,3 @@
----
-name: cp-async-pipeline-gb10
-description: >-
-  Build multi-stage async copy pipelines with `cp.async` on GB10. Covers commit/wait groups, mbarriers, double/triple buffering, and why SM121 uses `cp.async` instead of TMA for GMEM->SMEM staging.
----
-
 # `cp.async` Pipelines on GB10 DGX Spark
 
 ## Overview

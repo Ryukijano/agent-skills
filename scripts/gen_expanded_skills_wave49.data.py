@@ -51,17 +51,10 @@ print(f'MAPE: {mape:.2%}')
 2. Compare model predictions to appraised values on a holdout set.
 3. Use SHAP to identify the top five value drivers.
 
-## References
-
-- https://www.sciencedirect.com/science/article/pii/S0264275124003299
-- https://arxiv.org/html/2405.06553
-- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318701
-- https://link.springer.com/article/10.1007/s00168-023-01212-7
-- https://dl.acm.org/doi/10.1145/3567430
 ''',
         "references": [
             "https://www.sciencedirect.com/science/article/pii/S0264275124003299",
-            "https://arxiv.org/html/2405.06553",
+            "https://arxiv.org/abs/2405.06553",
             "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318701",
             "https://link.springer.com/article/10.1007/s00168-023-01212-7",
             "https://dl.acm.org/doi/10.1145/3567430",
@@ -117,13 +110,6 @@ print('R2:', r2_score(y_test, pred))
 2. Compare ML forecasts to a simple historical-mean benchmark.
 3. Evaluate risk-adjusted returns after transaction costs.
 
-## References
-
-- https://doi.org/10.1111/1540-6229.12483
-- https://doi.org/10.1186/s40854-023-00486-2
-- https://www.landecon.cam.ac.uk/sites/default/files/2024-08/CRERC_2024-02%20WP.pdf
-- https://www.reri.org/research/files/2023funded_commercial-real-estate-pricing-dynamics.pdf
-- https://link.springer.com/article/10.1007/s11146-023-09944-1
 ''',
         "references": [
             "https://doi.org/10.1111/1540-6229.12483",
@@ -183,13 +169,6 @@ clf.fit(X, y)
 2. Run a scenario simulation and report key indicator changes.
 3. Generate an LLM-assisted public-comment summary for a zoning proposal.
 
-## References
-
-- https://www.mdpi.com/2413-8851/10/3/148
-- https://www.mdpi.com/2413-8851/9/12/508
-- https://www.nature.com/articles/s44284-026-00492-2
-- https://www.nature.com/articles/s43588-025-00846-1
-- https://www.sciopen.com/article/10.1016/j.ese.2025.100526
 ''',
         "references": [
             "https://www.mdpi.com/2413-8851/10/3/148",
@@ -245,16 +224,9 @@ o3d.visualization.draw_geometries([pcd])
 2. Build a digital-twin dashboard for a building or block.
 3. Benchmark a generative model against real street-view imagery.
 
-## References
-
-- https://arxiv.org/html/2505.07396v1
-- https://www.mdpi.com/2624-6511/8/1/28
-- https://www.nature.com/articles/s43588-024-00606-7
-- https://ojs.aaai.org/index.php/AAAI/article/view/42379
-- https://www.sciopen.com/article/10.1016/j.ese.2025.100526
 ''',
         "references": [
-            "https://arxiv.org/html/2505.07396v1",
+            "https://arxiv.org/abs/2505.07396v1",
             "https://www.mdpi.com/2624-6511/8/1/28",
             "https://www.nature.com/articles/s43588-024-00606-7",
             "https://ojs.aaai.org/index.php/AAAI/article/view/42379",
@@ -308,13 +280,6 @@ for r in results:
 2. Track construction progress with vision and compare to planned percent complete.
 3. Run a what-if resource-leveling simulation.
 
-## References
-
-- https://doi.org/10.48550/arxiv.2511.03684
-- https://www.sciencedirect.com/science/article/abs/pii/S0926580525005217
-- https://www.mdpi.com/2673-4591/112/1/3
-- https://www.mdpi.com/2411-9660/10/2/43
-- https://www.ideals.illinois.edu/items/137190
 ''',
         "references": [
             "https://doi.org/10.48550/arxiv.2511.03684",
@@ -371,13 +336,6 @@ df['anomaly'] = clf.fit_predict(X)
 2. Compare predictive maintenance alerts to a calendar-based program.
 3. Show reduction in unplanned downtime or energy cost.
 
-## References
-
-- https://doi.org/10.1108/f-02-2025-0032
-- https://www.mdpi.com/2075-5309/15/4/630
-- https://doi.org/10.3389/fbuil.2025.1734945
-- https://doi.org/10.3390/buildings15224129
-- https://ec-3.org/publication/ec32025_369/
 ''',
         "references": [
             "https://doi.org/10.1108/f-02-2025-0032",
@@ -435,13 +393,6 @@ model.fit(X, y)
 2. Run a simulation of optimized setpoints and report savings.
 3. Monitor indoor comfort metrics during a pilot deployment.
 
-## References
-
-- https://link.springer.com/article/10.1186/s42162-025-00592-8
-- https://doi.org/10.1145/3765611.3815366
-- https://www.mdpi.com/2076-3417/15/14/7682
-- https://doi.org/10.3390/su172210313
-- https://www.nature.com/articles/s41467-024-50088-4
 ''',
         "references": [
             "https://link.springer.com/article/10.1186/s42162-025-00592-8",
@@ -499,12 +450,6 @@ clf.fit(X, y)
 2. A/B test personalized setpoints against default settings.
 3. Correlate experience improvements with retention or NPS.
 
-## References
-
-- https://doi.org/10.1108/sasbe-03-2025-0161
-- https://www.mdpi.com/1424-8220/18/5/1602
-- https://www.mdpi.com/2071-1050/16/10/4258
-- https://doi.org/10.1038/s41598-025-10086-y
 ''',
         "references": [
             "https://doi.org/10.1108/sasbe-03-2025-0161",
@@ -561,13 +506,6 @@ print('date:', date_match.group(0) if date_match else None)
 2. Identify all renewal and termination clauses across a portfolio.
 3. Generate a rent roll and expiration dashboard from abstracts.
 
-## References
-
-- https://www.irma-international.org/chapter/natural-language-processing-based-information-extraction-and-abstraction-for-lease-documents/245091
-- https://ideas.repec.org/a/aza/crej00/y2019v8i4p307-311.html
-- https://ideas.repec.org/a/aza/crej00/y2019v9i2p121-129.html
-- https://www.bauhaus-legal.com/case-studies/jll-cadastral-leverton-ai-lease-abstraction
-- https://www.ijset.in/synthesizing-ai-data-driven-frameworks-real-estate-lease-management/
 ''',
         "references": [
             "https://www.irma-international.org/chapter/natural-language-processing-based-information-extraction-and-abstraction-for-lease-documents/245091",
@@ -628,13 +566,6 @@ print(w.value)
 2. Compute Sharpe, max drawdown, and turnover.
 3. Stress test under a 2008-style or COVID scenario.
 
-## References
-
-- https://doi.org/10.1111/1540-6229.12483
-- https://www.tandfonline.com/doi/abs/10.1080/10835547.2025.2513145
-- https://journals.sagepub.com/doi/10.1177/27533743241313464
-- https://www.mdpi.com/2227-7390/13/21/3413
-- https://ijaidsml.org/index.php/ijaidsml/article/view/494
 ''',
         "references": [
             "https://doi.org/10.1111/1540-6229.12483",
@@ -690,13 +621,6 @@ G = nx.read_graphml('transport.graphml')
 2. Compare GCN scores to a baseline XGBoost location model.
 3. Generate an explainable site report for stakeholders.
 
-## References
-
-- https://dl.acm.org/doi/10.1145/3372406
-- https://doi.org/10.1108/mscra-03-2019-0010
-- https://mdpi-res.com/d_attachment/remotesensing/remotesensing-14-03579/article_deploy/remotesensing-14-03579-v2.pdf?version=1659596819
-- https://fi.ee.tsinghua.edu.cn/~dingjingtao/papers/KnowSite-Sigspatial23.pdf
-- https://onlinelibrary.wiley.com/doi/10.1111/tgis.12553
 ''',
         "references": [
             "https://dl.acm.org/doi/10.1145/3372406",
@@ -752,13 +676,6 @@ print(model)
 2. Identify functional zones in a city and compare to census/POI data.
 3. Detect land-use change over a multi-year period.
 
-## References
-
-- https://www.sciencedirect.com/science/article/abs/pii/S0924271626001760
-- https://www.frontiersin.org/journals/sustainable-cities/articles/10.3389/frsc.2026.1736773/full
-- https://www.mdpi.com/2072-4292/17/6/990
-- https://link.springer.com/article/10.1007/s42452-026-08351-4
-- https://isprs-archives.copernicus.org/articles/XLVIII-G-2025/1647/2025/isprs-archives-XLVIII-G-2025-1647-2025.pdf
 ''',
         "references": [
             "https://www.sciencedirect.com/science/article/abs/pii/S0924271626001760",

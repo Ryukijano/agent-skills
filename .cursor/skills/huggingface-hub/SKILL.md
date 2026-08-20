@@ -1,9 +1,3 @@
----
-name: huggingface-hub
-description: >-
-  Upload models, datasets, and Spaces to Hugging Face Hub. Use when publishing models, creating datasets, deploying Gradio demos, or managing HF repositories.
----
-
 # Hugging Face Hub Operations
 
 ## Overview

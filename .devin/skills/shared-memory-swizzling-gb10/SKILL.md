@@ -1,9 +1,3 @@
----
-name: shared-memory-swizzling-gb10
-description: >-
-  Eliminate shared memory bank conflicts on GB10 with padding and XOR-based swizzling. Covers 32-bank layout, 128-byte swizzle patterns, CuTe `Swizzle<>`, and the SMEM occupancy tradeoff on SM121 (99 KB max per block).
----
-
 # Shared Memory Swizzling on GB10 DGX Spark
 
 ## Overview

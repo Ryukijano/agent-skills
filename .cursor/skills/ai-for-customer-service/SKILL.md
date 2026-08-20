@@ -41,6 +41,6 @@ print(result)
 ## References
 
 - https://www.mdpi.com/2076-3417/15/17/9439
-- https://arxiv.org/html/2403.12388
+- https://arxiv.org/abs/2403.12388
 - https://www.copc.com/ai-customer-experience-research-2025/
 - https://aclanthology.org/2026.acl-industry.121/

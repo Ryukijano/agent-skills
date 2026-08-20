@@ -1,11 +1,4 @@
----
-name: release-checklist
-description: >-
-  Versioned release process for research tools/libraries: changelog, tagging,
-  building, publishing, post-release verification.
----
-
-## Release Checklist
+# Release Checklist
 
 ### Steps
 1. Update CHANGELOG.md with user-facing changes.

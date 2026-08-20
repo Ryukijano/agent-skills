@@ -1,13 +1,3 @@
----
-name: alphafold-database-fetch-and-analyze
-description: >-
-  Retrieve and analyze AlphaFold predicted structures for a protein. Use when
-  the user provides a specific UniProt Accession ID and wants structural
-  confidence metrics (pLDDT), domain boundary analysis, or disorder assessment.
-  Do not use if the user only has a protein name, gene name, or amino acid
-  sequence — ask for a UniProt ID first.
----
-
 # Alphafold Database Fetch And Analyze
 
 Source: `science_skills/alphafold_database_fetch_and_analyze/`

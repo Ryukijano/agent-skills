@@ -43,6 +43,6 @@ model.fit(X_train, y_train)
 ## References
 
 - https://arxiv.org/abs/2402.03740
-- https://github.com/yixuanqiao/FinRobot
+- https://github.com/AI4Finance-Foundation/FinRobot
 - https://huggingface.co/ProsusAI/finbert
-- https://pyfolio-reloaded.readthedocs.io/
+- https://pyfolio.ml4trading.io/

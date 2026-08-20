@@ -88,7 +88,7 @@ point = manifold.random(2, 3)
             "https://geoopt.readthedocs.io/",
             "https://arxiv.org/pdf/2207.07287",
             "https://optml.mit.edu/papers/sra_hosseini_chapter.pdf",
-            "https://arxiv.org/html/2604.02969"
+            "https://arxiv.org/abs/2604.02969"
         ],
     },
     {
@@ -105,7 +105,7 @@ You want to optimize or compare probability distributions in a geometrically mea
 - **Statistical manifold**: family of distributions parameterized by $\theta$.
 - **Fisher information metric**: natural Riemannian metric on statistical manifolds.
 - **Natural gradient**: $\tilde{\nabla} = G^{-1}\nabla$ where $G$ is Fisher information.
-- **Alpha-connections**: Amari's dual connections; $\alpha=\pm 1$ for e/m-flat manifolds.
+- **Alpha-connections**: Amari's dual connections; $\alpha=\\pm 1$ for e/m-flat manifolds.
 
 ## Code pattern
 
@@ -179,7 +179,7 @@ lam = np.linalg.eigvalsh(S)
             "https://doi.org/10.48550/arxiv.2109.09304",
             "https://proceedings.neurips.cc/paper/2020/file/572201a4497b0b9f02d4f279b09ec30d-Paper.pdf",
             "https://projecteuclid.org/journals/annals-of-applied-probability/volume-28/issue-2/A-random-matrix-approach-to-neural-networks/10.1214/17-AAP1328.full",
-            "https://ar5iv.labs.arxiv.org/html/2001.06188"
+            "https://arxiv.org/abs/2001.06188"
         ],
     },
     {
@@ -193,7 +193,7 @@ You have many features relative to samples and need structured estimation.
 
 ## Key concepts
 
-- **LASSO**: $\ell_1$-regularized regression for sparse coefficients.
+- **LASSO**: $\\ell_1$-regularized regression for sparse coefficients.
 - **Compressed sensing**: recover sparse signals from few measurements.
 - **Concentration inequalities**: Hoeffding, Bernstein, matrix concentration.
 - **Sparse covariance/precision**: graphical LASSO, inverse covariance estimation.
@@ -408,7 +408,7 @@ ys = torchsde.sdeint(sde, y0, ts)
         "references": [
             "https://github.com/google-research/torchsde",
             "https://proceedings.neurips.cc/paper_files/paper/2023/file/2460396f2d0d421885997dd1612ac56b-Paper-Conference.pdf",
-            "https://arxiv.org/html/2106.10340",
+            "https://arxiv.org/abs/2106.10340",
             "https://proceedings.mlr.press/v139/kidger21b/kidger21b.pdf"
         ],
     },
@@ -551,7 +551,7 @@ class Category:
             "https://proceedings.mlr.press/v235/gavranovic24a.html",
             "https://arxiv.org/abs/2603.16123v1",
             "https://www.mdpi.com/2075-1680/14/3/204",
-            "https://www.algebraicjulia.org/catlab/dev/"
+            "https://algebraicjulia.github.io/Catlab.jl/stable/"
         ],
     },
 ]

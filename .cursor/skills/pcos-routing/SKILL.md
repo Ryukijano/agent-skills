@@ -1,11 +1,3 @@
----
-name: pcos-routing
-description: >-
-  PCOS context routing decision tree and surface selection. Use when working on
-  the PCOS broker router, adding new Chrome APIs, modifying routing logic, or
-  debugging why a task routes to the wrong surface.
----
-
 # PCOS Routing Decision Tree
 
 The PCOS Context Broker uses a **deterministic** routing decision tree — no LLM reasoning for routing, just policy-based dispatch.

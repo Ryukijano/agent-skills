@@ -1,11 +1,3 @@
----
-name: pptx
-description: >-
-  Create, edit, and analyze PowerPoint presentations. Use when the user wants to
-  generate slide decks, pitch decks, or presentations, or extract text from
-  .pptx files.
----
-
 # PPTX Skill
 
 ## Quick Reference
