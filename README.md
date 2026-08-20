@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 308 | 294 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 321 | 304 commands (`/name`) |
+| **Devin** (`.devin/`) | 332 | 318 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 345 | 328 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (308)
+## Skills (332)
 
 ### Research Scientist (13)
 
@@ -254,7 +254,7 @@ npx skills add huggingface/skills --skill huggingface-llm-trainer --agent cursor
 - Schedule and run Jobs on HF infrastructure
 - Requires `HF_TOKEN` env var (get from huggingface.co/settings/tokens)
 
-### Custom Research Skills (171)
+### Custom Research Skills (195)
 
 Domain-specific skills for Gyanateet's research workflow.
 
@@ -431,8 +431,32 @@ Domain-specific skills for Gyanateet's research workflow.
 | `privacy-preserving-ml` | Differential privacy, federated learning, homomorphic encryption, and secure multi-party computation for ML. |
 | `robust-ml` | Adversarial robustness, distribution shift, out-of-distribution detection, and reliable model performance. |
 | `uncertainty-quantification-ml` | Predictive uncertainty, calibration, conformal prediction, and Bayesian methods for reliable ML. |
+| `agent-monitoring-guardrails` | Runtime monitoring, safety policy enforcement, tool-call validation, probabilistic risk prediction, and guardrail frameworks for LLM agents. |
+| `ai-for-cad` | Deep generative models for parametric CAD sketches, B-rep synthesis, sketch-and-extrude sequences, and vision-language conditional CAD generation. |
+| `cost-optimization-cloud` | FinOps practices, spot/preemptible instances, right-sizing, reserved capacity, autoscaling, and cost-aware scheduling for ML workloads. |
+| `data-stream-processing` | Apache Kafka and Flink pipelines, event-time semantics, exactly-once delivery, online feature engineering, and real-time model updates. |
+| `edge-ai` | Quantization, pruning, knowledge distillation, neural architecture search, and deployment of ML models on mobile, embedded, and edge accelerators. |
+| `generative-design` | Deep generative models (VAEs, GANs, diffusion) for engineering design synthesis, constraint-aware generation, Pareto-front exploration, and design automation. |
+| `graph-databases` | Property graph models, Cypher/Gremlin querying, graph embeddings, GNNs on graph DBs, and knowledge graph completion for connected data. |
+| `industrial-digital-twins` | Real-time virtual replicas of physical systems for monitoring, predictive maintenance, process optimization, and hybrid physics-ML modeling. |
+| `ml-infrastructure-as-code` | Terraform, Pulumi, and GitOps for reproducible ML platforms, modular MLOps stacks, and CI/CD-managed infrastructure. |
+| `real-time-ml` | Streaming inference, online learning, low-latency GPU serving, event-time semantics, and service-level objectives for real-time ML systems. |
+| `topology-optimization` | SIMP, neural reparameterization, generative topology optimization, physics-informed neural networks, and learned resolution-free solvers for structural design. |
+| `vector-databases` | Approximate nearest neighbor search, dense-embedding storage, metadata filtering, hybrid search, and vector indexing for RAG and recommendation. |
+| `ai-peer-review` | Use AI tools and structured checklists to write constructive, ethical peer reviews for manuscripts and proposals. |
+| `citation-management` | Organize references, manage PDFs, format bibliographies, and share libraries with Zotero, Mendeley, or BibTeX. |
+| `collaboration-and-team-science` | Build, lead, and sustain productive interdisciplinary research teams with clear roles, communication, and shared tools. |
+| `competitive-analysis` | Map industry structure, benchmark competitors, and identify strategic positioning using Porter's Five Forces, SWOT, and data. |
+| `grant-proposal-writing` | Structure Specific Aims, research strategy, budget, and broader impact sections for NIH/NSF/ERC-style proposals with AI drafting support. |
+| `market-research-ai` | Design surveys, segment customers, analyze open-ended responses, and forecast market trends with AI-driven tools. |
+| `product-requirements-ai` | Draft, validate, and track product requirements documents (PRDs) with user stories, assumptions, and success metrics. |
+| `research-data-storytelling` | Turn complex scientific results into narrative visualizations and stories that resonate with specialists and the public. |
+| `research-paper-ideation` | Use LLMs, citation networks, and structured brainstorming to generate and refine research questions, hypotheses, and project outlines. |
+| `research-presentation-design` | Build clear, compelling slides and posters for seminars, conferences, and outreach using narrative structure and visual hierarchy. |
+| `scientific-writing` | Improve clarity, structure, and style for manuscripts, theses, and reports using AI drafting and editing tools. |
+| `user-interviews-synthesis` | Turn interview transcripts into themes, insights, and personas using thematic analysis, affinity mapping, and AI coding. |
 
-## Workflows (294)
+## Workflows (318)
 
 ### Research Workflows (15)
 
@@ -497,7 +521,7 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (171)
+### Custom Research Workflows (195)
 
 | Workflow | Description |
 |----------|-------------|
@@ -672,6 +696,30 @@ Domain-specific skills for Gyanateet's research workflow.
 | `/privacy-preserving-ml` | Differential privacy, federated learning, homomorphic encryption, and secure multi-party computation for ML. |
 | `/robust-ml` | Adversarial robustness, distribution shift, out-of-distribution detection, and reliable model performance. |
 | `/uncertainty-quantification-ml` | Predictive uncertainty, calibration, conformal prediction, and Bayesian methods for reliable ML. |
+| `/agent-monitoring-guardrails` | Runtime monitoring, safety policy enforcement, tool-call validation, probabilistic risk prediction, and guardrail frameworks for LLM agents. |
+| `/ai-for-cad` | Deep generative models for parametric CAD sketches, B-rep synthesis, sketch-and-extrude sequences, and vision-language conditional CAD generation. |
+| `/cost-optimization-cloud` | FinOps practices, spot/preemptible instances, right-sizing, reserved capacity, autoscaling, and cost-aware scheduling for ML workloads. |
+| `/data-stream-processing` | Apache Kafka and Flink pipelines, event-time semantics, exactly-once delivery, online feature engineering, and real-time model updates. |
+| `/edge-ai` | Quantization, pruning, knowledge distillation, neural architecture search, and deployment of ML models on mobile, embedded, and edge accelerators. |
+| `/generative-design` | Deep generative models (VAEs, GANs, diffusion) for engineering design synthesis, constraint-aware generation, Pareto-front exploration, and design automation. |
+| `/graph-databases` | Property graph models, Cypher/Gremlin querying, graph embeddings, GNNs on graph DBs, and knowledge graph completion for connected data. |
+| `/industrial-digital-twins` | Real-time virtual replicas of physical systems for monitoring, predictive maintenance, process optimization, and hybrid physics-ML modeling. |
+| `/ml-infrastructure-as-code` | Terraform, Pulumi, and GitOps for reproducible ML platforms, modular MLOps stacks, and CI/CD-managed infrastructure. |
+| `/real-time-ml` | Streaming inference, online learning, low-latency GPU serving, event-time semantics, and service-level objectives for real-time ML systems. |
+| `/topology-optimization` | SIMP, neural reparameterization, generative topology optimization, physics-informed neural networks, and learned resolution-free solvers for structural design. |
+| `/vector-databases` | Approximate nearest neighbor search, dense-embedding storage, metadata filtering, hybrid search, and vector indexing for RAG and recommendation. |
+| `/ai-peer-review` | Use AI tools and structured checklists to write constructive, ethical peer reviews for manuscripts and proposals. |
+| `/citation-management` | Organize references, manage PDFs, format bibliographies, and share libraries with Zotero, Mendeley, or BibTeX. |
+| `/collaboration-and-team-science` | Build, lead, and sustain productive interdisciplinary research teams with clear roles, communication, and shared tools. |
+| `/competitive-analysis` | Map industry structure, benchmark competitors, and identify strategic positioning using Porter's Five Forces, SWOT, and data. |
+| `/grant-proposal-writing` | Structure Specific Aims, research strategy, budget, and broader impact sections for NIH/NSF/ERC-style proposals with AI drafting support. |
+| `/market-research-ai` | Design surveys, segment customers, analyze open-ended responses, and forecast market trends with AI-driven tools. |
+| `/product-requirements-ai` | Draft, validate, and track product requirements documents (PRDs) with user stories, assumptions, and success metrics. |
+| `/research-data-storytelling` | Turn complex scientific results into narrative visualizations and stories that resonate with specialists and the public. |
+| `/research-paper-ideation` | Use LLMs, citation networks, and structured brainstorming to generate and refine research questions, hypotheses, and project outlines. |
+| `/research-presentation-design` | Build clear, compelling slides and posters for seminars, conferences, and outreach using narrative structure and visual hierarchy. |
+| `/scientific-writing` | Improve clarity, structure, and style for manuscripts, theses, and reports using AI drafting and editing tools. |
+| `/user-interviews-synthesis` | Turn interview transcripts into themes, insights, and personas using thematic analysis, affinity mapping, and AI coding. |
 
 ## Usage
 
