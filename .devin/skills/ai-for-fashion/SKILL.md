@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for trend forecasting, outfit recommendation, virtual try-on, generative design, and personalized shopping.
+Use AI for Fashion to forecast trends, recommend outfits, enable virtual try-on and generate designs.
 
 ## When to use
 
 You are building e-commerce recommendation, styling, trend analysis, size/fit prediction, or generative garment design systems.
 
-## Key concepts
+
+## Usage
+
 
 - **Visual-language embeddings**: CLIP-style models for outfit compatibility and text-to-image retrieval.
-- **Outfit recommendation and compatibility**: graph neural networks and metric learning for mix-and-match.
-- **Virtual try-on and cloth simulation**: physics-aware generative models and 3D draping.
+- **Outfit recommendation and compatibility**: Graph neural networks and metric learning for mix-and-match.
+- **Virtual try-on and cloth simulation**: Physics-aware generative models and 3D draping.
 - **Fashion generation**: GANs and diffusion models for garment and pattern design.
-- **Size and fit prediction**: combine body measurements, returns, and garment metadata.
+- **Size and fit prediction**: Combine body measurements, returns, and garment metadata.
+
+## Steps
+
+1. Collect and prepare catalog images, purchase history and body measurements.
+2. Build e-commerce recommendation.
+3. Style.
+4. Trend analysis.
+5. Validate by building an outfit compatibility scorer and measure AUC on a public dataset.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -34,12 +45,14 @@ inputs = processor(
 logits = model(**inputs).logits_per_image
 ```
 
+
 ## Tuning notes
 
 - Fine-tune catalog-specific embeddings; generic CLIP may miss fashion nuance.
 - Address cold-start items with rich content-based features.
 - Outfit compatibility is subjective; collect explicit human feedback for ranking.
 - Watch for bias in body representation, size, and skin-tone inclusivity.
+
 
 ## Verification
 

@@ -1,6 +1,6 @@
 # /ai-for-wireless-communications
 
-ML for channel estimation, modulation recognition, MIMO, spectrum sensing, and end-to-end physical-layer design.
+Estimate channels, classify signals, and optimize MIMO and waveform design.
 
 ## Trigger
 

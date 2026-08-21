@@ -2,18 +2,27 @@
 
 ## Description
 
-Crop monitoring, yield prediction, pest detection, and precision agriculture with ML and remote sensing.
+Use ML and remote sensing to map crops, predict yields, detect pests and diseases, and guide variable-rate precision agriculture.
 
 ## When to use
 
 You are monitoring crops, predicting yields, detecting disease, or managing irrigation and nutrients.
 
-## Key concepts
+## Usage
 
-- **Crop classification and mapping**: from satellite or drone imagery.
-- **Yield prediction**: combine weather, soil, and remote-sensing features.
-- **Pest and disease detection**: computer vision on leaf and field images.
-- **Precision agriculture**: variable-rate input recommendations.
+- Map crop types and growth stages from satellite or drone imagery and time series.
+- Predict yield by fusing weather, soil, and remote-sensing features into regression or hybrid models.
+- Detect crop pests, diseases, and stress with computer vision on leaf and field images.
+- Generate variable-rate recommendations for irrigation, fertilization, and pest control.
+
+## Steps
+
+1. Collect satellite, UAV, weather, soil, and farm-management data for the target fields and growing season.
+2. Preprocess imagery (cloud masking, NDVI, radiometric calibration) and align it with field boundaries.
+3. Train a crop classification or segmentation model and evaluate with ground-truth labels.
+4. Build a yield-prediction model using time-series weather, soil, and vegetation indices, validated by harvest data.
+5. Deploy a disease/pest detector on leaf or canopy images and trigger variable-rate treatment recommendations.
+6. Integrate outputs into a farm decision-support dashboard and update models as new season data arrives.
 
 ## Code pattern
 
@@ -40,7 +49,7 @@ model.fc = torch.nn.Linear(model.fc.in_features, num_classes)
 
 ## References
 
-- https://github.com/Project-Platypus/Rivanna
+- https://github.com/jiaxuanyou/crop_yield_prediction
 - https://arxiv.org/abs/2403.01724
 - https://torchgeo.readthedocs.io/
 - https://cropmonitor.org/

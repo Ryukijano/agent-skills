@@ -1,6 +1,6 @@
 # /ai-for-quality-control
 
-Machine learning and computer vision for automated inspection, defect detection, statistical process control, and zero-defect manufacturing.
+Use machine learning and computer vision to inspect products, detect defects, monitor process stability, and move toward zero-defect manufacturing.
 
 ## Trigger
 

@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for UAV perception, navigation, obstacle avoidance, mission planning, multi-drone coordination, and vision-language drone control.
+Assess earthquake and flood damage from UAV imagery in real time to prioritize rescue routes and distribute aid.
 
 ## When to use
 
 You are building autonomous drones for inspection, delivery, search and rescue, mapping, or natural-language-guided navigation.
 
-## Key concepts
+## Usage
 
-- **Vision-based drone navigation**: VIO, visual SLAM, and object detection on embedded GPUs.
-- **Foundation models for drones**: vision-language navigation, LLM mission planners, and neural policies.
-- **Swarm and multi-UAV coordination**: task allocation, collision avoidance, and communication-constrained control.
-- **Sim-to-real**: AirSim, Gazebo, and photorealistic simulators with domain transfer.
+- Run visual-inertial odometry, SLAM, and object detection on embedded GPUs.
+- Plan missions and allocate tasks across multi-UAV swarms.
+- Use vision-language models and LLM planners for language-guided flight.
+- Bridge photorealistic simulation to real flight with domain transfer.
+
+## Steps
+
+1. Select a lightweight model and TensorRT/ONNX runtime for the onboard computer.
+2. Train perception and navigation networks on simulated and real flight data.
+3. Implement geofencing, fail-safe, and low-latency obstacle avoidance.
+4. Test in simulation for wind, lighting, and GNSS-denied scenarios.
+5. Fly limited real-world missions and log metrics for retraining.
 
 ## Code pattern
 

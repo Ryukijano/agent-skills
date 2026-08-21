@@ -2,18 +2,27 @@
 
 ## Description
 
-Learning-augmented branch-and-bound, primal heuristics, GNNs for combinatorial optimization, and data-driven algorithm configuration.
+Use machine learning to speed up combinatorial optimization through branching, graph neural networks, and data-driven configuration.
 
 ## When to use
 
 You need to solve combinatorial optimization problems such as scheduling, routing, packing, or integer programming and want to use ML to speed up exact or heuristic solvers.
 
-## Key concepts
+## Usage
 
-- **Branch-and-bound learning**: branching, node selection, cutting planes, and primal heuristics.
-- **Graph neural networks for CO**: encode combinatorial structure as graphs and learn policies.
-- **Imitation and reinforcement learning**: learn construction or improvement heuristics.
-- **Algorithm configuration**: use historical data to tune solver parameters.
+- Learn branching, node selection, and cutting-plane policies for branch-and-bound.
+- Encode combinatorial structure as graphs and train graph neural network policies.
+- Learn construction or improvement heuristics by imitation or reinforcement learning.
+- Tune solver parameters from historical data with algorithm configuration.
+
+## Steps
+
+1. Formulate the combinatorial problem (scheduling, routing, packing, etc.) and collect benchmark instances.
+2. Train a GNN or learned policy for branching, selection, or heuristic construction.
+3. Integrate the learned policy into an exact solver such as SCIP, Gurobi, or CP-SAT.
+4. Compare nodes, runtime, and solution quality to the solver's default strategy.
+5. Use algorithm configuration to tune solver parameters on the instance family.
+6. Evaluate on held-out and out-of-distribution instances to assess robustness.
 
 ## Code pattern
 

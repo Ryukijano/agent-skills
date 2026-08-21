@@ -2,18 +2,27 @@
 
 ## Description
 
-ML for side-channel analysis, hardware Trojan and PUF detection, supply-chain assurance, and secure accelerator design.
+Use machine learning to detect Trojans, analyze side-channel leakage, evaluate PUFs, and secure accelerators.
 
 ## When to use
 
 You are assessing the security of ASICs, FPGAs, or AI accelerators; detecting Trojans, side-channel leakage, or PUF vulnerabilities; or designing trusted hardware.
 
-## Key concepts
+## Usage
 
-- **Side-channel analysis**: deep learning classifies power/electromagnetic traces to recover keys or detect leakage.
-- **Hardware Trojan detection**: supervised and unsupervised ML identify anomalous circuit behavior or layout features.
-- **PUFs and anti-counterfeiting**: ML models assess PUF entropy and attack robustness, or assist in PUF design.
-- **Secure AI accelerators**: run-time monitoring and anomaly detection protect neural accelerators against fault/Trojan attacks.
+- Classify power and electromagnetic traces to recover keys or detect side-channel leakage.
+- Detect anomalous circuit behavior and layout features of hardware Trojans.
+- Assess PUF entropy, attack robustness, and anti-counterfeiting properties.
+- Monitor neural accelerators at run time for fault and Trojan attacks.
+
+## Steps
+
+1. Collect side-channel, layout, or run-time traces under varying conditions.
+2. Train a classifier or anomaly detector for the target threat (Trojan, leakage, fault).
+3. Validate the model on unseen attack scenarios and device corners.
+4. Integrate detection into a test, supply-chain, or run-time monitoring flow.
+5. Evaluate security overhead in area, power, and latency against performance.
+6. Update the model as new Trojan designs or attack strategies emerge.
 
 ## Code pattern
 

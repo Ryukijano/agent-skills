@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for surface modification processes: thermal spray, laser cladding/peening, shot peening, plasma electrolytic oxidation, surface texturing, and residual stress optimization.
+Use machine learning to optimize surface treatments such as thermal spray, laser cladding and shot peening while predicting residual stress and coating adhesion as well as wear resistance.
 
 ## When to use
 
 You are modifying a component's surface to improve wear, fatigue, or corrosion resistance, and need to optimize thermal spray, laser surface treatment, peening, or surface texturing parameters and predict surface integrity.
 
-## Key concepts
+## Usage
 
-- **Thermal spraying**: HVOF, HVAF, plasma spray, cold spray, and coating microstructure/property prediction.
-- **Laser surface treatments**: laser cladding, shock peening, texturing, and surface alloying.
-- **Mechanical surface enhancement**: shot peening, laser peening, and deep rolling for residual stress.
-- **Surface integrity metrics**: roughness, hardness, residual stress, coating thickness, and adhesion.
-- **Functional surfaces**: texture, wettability, friction, and fatigue life optimization.
+- **Predict residual stress**: model peening, cladding, and thermal spray stress fields.
+- **Optimize spray parameters**: tune gas flow, standoff, and powder feed for coating quality.
+- **Select processes**: match surface treatments to wear, corrosion, and fatigue requirements.
+- **Detect defects**: identify porosity, delamination, and cracks in coatings.
+- **Build process-property maps**: link parameters to hardness, adhesion, and microstructure.
+
+## Steps
+
+1. Collect process parameters and post-treatment measurements for the surface process.
+2. Train surrogate models to predict residual stress, coating thickness, and properties.
+3. Use the models to optimize parameters and reduce DOE cost.
+4. Validate predicted residual stress and microstructure with XRD, microscopy, or mechanical tests.
+5. Inspect coatings for porosity, adhesion, and defects and feed results back.
+6. Deploy optimized recipes and monitor for process drift.
 
 ## Code pattern
 

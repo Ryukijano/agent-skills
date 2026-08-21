@@ -1,6 +1,6 @@
 # /ai-for-materials-synthesis
 
-Machine learning for synthesis route prediction, process optimization, and inverse design of materials.
+Use machine learning to predict synthesis recipes, plan routes, optimize process conditions, and drive self-driving laboratory workflows.
 
 ## Trigger
 

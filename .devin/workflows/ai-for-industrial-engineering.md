@@ -1,6 +1,6 @@
 # /ai-for-industrial-engineering
 
-AI for production planning, scheduling, quality control, ergonomics, operations research, and process improvement.
+Use AI to optimize production scheduling, quality control, and supply chains.
 
 ## Trigger
 

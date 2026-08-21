@@ -1,6 +1,6 @@
 # /ai-for-astronomy
 
-Machine learning for survey-scale classification, transient detection, galaxy morphology, light-curve analysis, and telescope scheduling.
+Use machine learning to triage survey alerts, classify celestial transients, and map galaxy morphology from petabyte-scale imaging and time-series data.
 
 ## Trigger
 

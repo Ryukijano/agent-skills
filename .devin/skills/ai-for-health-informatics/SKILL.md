@@ -2,19 +2,27 @@
 
 ## Description
 
-Electronic health records, clinical data standards, interoperability, and AI-enabled analytics for healthcare delivery and research.
+Harmonize EHR data through FHIR to predict 30-day readmissions and mortality across institutions without manual feature engineering.
 
 ## When to use
 
 You need to structure, integrate, and analyze healthcare data across systems using standards such as HL7 FHIR, OMOP, and LOINC.
 
-## Key concepts
+## Usage
 
-- **Health data standards and interoperability**: HL7 FHIR, OMOP CDM, DICOM, and terminologies such as SNOMED-CT, ICD, RxNorm, and LOINC.
-- **EHR phenotyping and clinical data warehouses**: extracting computable cohorts and longitudinal patient features.
-- **Natural language processing for clinical text**: named-entity recognition, entity normalization, de-identification, and information extraction.
-- **Clinical decision support and alert systems**: rules-based and ML-driven recommendations embedded in workflows.
-- **Privacy, security, and governance**: HIPAA, GDPR, de-identification, and role-based access control.
+- Normalize FHIR, OMOP, SNOMED, ICD, RxNorm, and LOINC data.
+- Build EHR phenotyping and longitudinal feature pipelines.
+- Extract and de-identify clinical text.
+- Deploy clinical decision support alerts.
+
+## Steps
+
+1. Normalize FHIR, OMOP, SNOMED, ICD, RxNorm, and LOINC data.
+2. Build EHR phenotyping and longitudinal feature pipelines.
+3. Extract and de-identify clinical text.
+4. Deploy clinical decision support alerts.
+5. Validate with temporal and site-split cross-validation.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

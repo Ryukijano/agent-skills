@@ -1,6 +1,6 @@
 # /ai-for-composites
 
-Machine learning for composite material design, manufacturing process optimization, defect detection, and multiscale property prediction.
+Apply ML to design composites, optimize manufacturing, detect defects, and predict multiscale mechanical and thermal properties.
 
 ## Trigger
 

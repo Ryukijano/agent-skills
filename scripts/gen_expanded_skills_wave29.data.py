@@ -2,19 +2,26 @@ SKILLS = [
     {
         "name": "ai-for-creative-writing",
         "title": "AI for Creative Writing",
-        "description": "Co-writing novels, screenplays, and long-form fiction with LLMs, prompt engineering for voice and style, and human-AI revision workflows.",
+        "description": 'Use large language models to co-write fiction and long-form prose, brainstorm outlines, calibrate voice, and run human-AI revision workflows.',
         "devin_body": r'''
 ## When to use
 
 You are drafting fiction, scripts, or long-form prose and want an AI collaborator for ideation, continuation, style calibration, and revision.
 
-## Key concepts
+## Usage
 
-- **Human-AI co-writing**: treat the LLM as a brainstorming partner, outline generator, first-drafter, or revision assistant.
-- **Voice and style control**: use few-shot examples, persona prompts, tone descriptors, and style guides to keep output on-brand.
-- **Long-context planning**: maintain coherence across chapters or scenes with outlines, character sheets, and worldbuilding bibles.
-- **Retrieval and memory**: use vector stores or note systems to ground the model in characters, settings, and prior events.
-- **Bias and safety**: audit for stereotypes, toxicity, and hallucinations; respect copyright and cultural context.
+- Brainstorm premises, outlines, and character sheets for novels and scripts.
+- Generate first drafts and continuations in a controlled voice and style.
+- Use few-shot examples and style guides to keep output on-brand.
+- Audit generated prose for stereotypes, toxicity, and hallucinations.
+
+## Steps
+
+1. Define the genre, audience, and style guide for the project.
+2. Create an outline, character sheet, and world bible to maintain long-context coherence.
+3. Generate scenes with structured prompts and a calibrated temperature.
+4. Review and rewrite with a human-in-the-loop, checking voice consistency.
+5. Run a toxicity, bias, and fact-check audit before finalizing the draft.
 
 ## Code pattern
 
@@ -60,19 +67,26 @@ print(output[0]["generated_text"])
     {
         "name": "ai-for-poetry",
         "title": "AI for Poetry",
-        "description": "Meter, rhyme, and stylistic constraints for AI-generated poetry, with evaluation and human-AI curation.",
+        "description": 'Co-write poems under meter, rhyme, and style constraints with interactive language models that suggest lines and refine form.',
         "devin_body": r'''
 ## When to use
 
 You want to generate or co-write poems under formal constraints such as meter, rhyme, syllable counts, or a specific literary style.
 
-## Key concepts
+## Usage
 
-- **Formal constraints**: meter, rhyme scheme, syllable counts, stanza forms, and refrain patterns.
-- **Poetic style prompting**: persona, era, mood, imagery, alliteration, and lexical register.
-- **Controllable generation**: constrained decoding, iterative refinement, and rule-based post-processing for rhyme and meter.
-- **Evaluation**: automatic metrics, LLM-as-judge, and human evaluation for novelty, emotion, and aesthetic quality.
-- **Ethics and attribution**: respect public-domain or licensed training data and credit human curators.
+- Generate poems under meter, rhyme scheme, syllable count, and stanza constraints.
+- Emulate a specific poet, era, mood, or lexical register.
+- Post-process with rule-based rhyme and meter checking.
+- Curate and evaluate poems for novelty, emotion, and aesthetic quality.
+
+## Steps
+
+1. Choose a form (sonnet, haiku, villanelle) and its formal constraints.
+2. Prompt the model with persona, mood, imagery, and a target rhyme scheme.
+3. Generate multiple drafts and score them for form compliance.
+4. Validate meter and rhyme with tools such as pronouncingpy or pyphen.
+5. Select and edit the best poems in a blinded human-curation pass.
 
 ## Code pattern
 
@@ -122,19 +136,26 @@ print(poem)
     {
         "name": "ai-for-storytelling",
         "title": "AI for Storytelling",
-        "description": "Narrative generation, plot planning, character arcs, and worldbuilding with structured LLM workflows.",
+        "description": 'Use structured LLM workflows to generate plots, build character arcs, manage worldbuilding, and create interactive or branching narratives.',
         "devin_body": r'''
 ## When to use
 
 You are building interactive fiction, game narratives, brand stories, or structured plots with multiple acts and characters.
 
-## Key concepts
+## Usage
 
-- **Narrative planning**: outlines, beat sheets, story graphs, and plot-point scaffolding.
-- **Character and world consistency**: memory, character sheets, and knowledge graphs to preserve continuity.
-- **Interactive storytelling**: branching choices, dynamic dialogue, and player or reader agency.
-- **Long-form coherence**: recursive summarization and hierarchical generation.
-- **Evaluation**: narrative coherence, engagement, originality, and human judgment.
+- Generate three-act outlines, beat sheets, and plot-point scaffolding.
+- Maintain character and world consistency with memory and knowledge graphs.
+- Build branching dialogue and choices for interactive fiction and games.
+- Use recursive summarization to preserve coherence in long-form stories.
+
+## Steps
+
+1. Write a one-page premise and target genre for the story.
+2. Generate a structured outline with acts, beats, and character arcs.
+3. Create a persistent character/world store and use it in every generation.
+4. Draft scenes and branch points, then check continuity against the store.
+5. Test with readers for engagement and coherence, then iterate.
 
 ## Code pattern
 
@@ -177,19 +198,26 @@ print(outline.choices[0].message.content)
     {
         "name": "ai-for-content-strategy",
         "title": "AI for Content Strategy",
-        "description": "Planning, auditing, and orchestrating content portfolios with AI, including generative-engine optimization and cross-platform adaptation.",
+        "description": 'Use AI to audit content libraries, identify topic gaps, optimize for generative-engine citation, and adapt assets across channels.',
         "devin_body": r'''
 ## When to use
 
 You are planning editorial calendars, auditing content libraries, adapting assets across channels, or optimizing for AI search citations.
 
-## Key concepts
+## Usage
 
-- **Content audit and gap analysis**: inventory, performance data, topic clusters, and competitive whitespace.
-- **Generative engine optimization (GEO)**: structuring content so LLMs cite your brand in their answers.
-- **Cross-platform adaptation**: tone, length, and format for web, social, email, and video.
-- **Personalization and audience personas**: AI-driven segmentation and messaging.
-- **Governance and quality**: brand voice, fact-checking, and editorial guidelines.
+- Inventory existing content and cluster it into topic pillars.
+- Identify performance gaps and competitive whitespace.
+- Structure content so LLMs cite the brand in their answers.
+- Repurpose long-form content into social, email, and video scripts.
+
+## Steps
+
+1. Export the content inventory and performance data.
+2. Cluster content into topic pillars using NLP or embeddings.
+3. Map buyer prompts and answer-first passages to target for GEO.
+4. Audit for gaps and generate a prioritized topic backlog.
+5. Reformat a flagship piece into channel-specific variants and track LLM citation share.
 
 ## Code pattern
 
@@ -228,19 +256,26 @@ print(df[["title", "cluster"]].head())
     {
         "name": "ai-for-copywriting",
         "title": "AI for Copywriting",
-        "description": "Marketing and advertising copy, email and landing-page text, conversion frameworks, and brand-voice calibration with LLMs.",
+        "description": 'Draft and A/B-test personalized marketing emails that match brand voice and lift conversion rates by double digits.',
         "devin_body": r'''
 ## When to use
 
 You are creating ads, emails, landing pages, product descriptions, or calls to action that must convert and match a brand voice.
 
-## Key concepts
+## Usage
 
-- **Copy frameworks**: AIDA, PAS, BAB, FAB, 4U, and Hook-Promise-Proof.
-- **Brand voice calibration**: few-shot examples, tone descriptors, and style guides.
-- **A/B testing and uplift**: generate variants, rank them, and test in the field.
-- **CRO integration**: align copy with audience, channel, and funnel stage.
-- **Hallucination and claim control**: verify claims and avoid fabricated specifics.
+- Draft ads, emails, landing pages, and product descriptions in brand voice.
+- Apply copy frameworks such as AIDA, PAS, BAB, and Hook-Promise-Proof.
+- Generate variants for A/B testing and rank them by predicted CTR.
+- Verify claims, avoid fabricated specifics, and run brand-safety QA.
+
+## Steps
+
+1. Load the brand voice guide, audience profile, and copy framework.
+2. Prompt for several variants with constraints on tone and length.
+3. Score variants against brand voice and predicted performance.
+4. Run a human QA pass for claims, safety, and platform limits.
+5. Launch an A/B test and iterate based on CTR or conversion lift.
 
 ## Code pattern
 
@@ -286,19 +321,26 @@ print(response.choices[0].message.content)
     {
         "name": "ai-for-advertising",
         "title": "AI for Advertising",
-        "description": "Ad creative generation, media buying optimization, dynamic creative optimization, and predictive performance modeling.",
+        "description": 'Use machine learning to generate ad creatives, optimize media buying, run dynamic creative optimization, and model campaign performance.',
         "devin_body": r'''
 ## When to use
 
 You are building ad campaigns across search, social, display, and video; generating and selecting creatives; or optimizing budget allocation.
 
-## Key concepts
+## Usage
 
-- **Dynamic creative optimization (DCO)**: assemble and test copy, image, and video variants.
-- **Predictive creative performance**: CTR/CVR models trained on historical A/B tests.
-- **Audience and contextual targeting**: lookalikes, retargeting, and contextual signals.
-- **Attribution and incrementality**: multi-touch, geo-experiments, and causal lift.
-- **Brand safety and compliance**: ad policies, disclosures, and responsible AI.
+- Assemble and test copy, image, and video variants with dynamic creative optimization.
+- Predict CTR and CVR from creative and audience features.
+- Target lookalikes, retargeting segments, and contextual signals.
+- Measure incrementality with multi-touch, geo, and holdout experiments.
+
+## Steps
+
+1. Define campaign goals, audience, channels, and creative variables.
+2. Structure historical creative and audience features for model training.
+3. Train a CTR/CVR predictor and validate rank correlation on held-out creatives.
+4. Run a DCO or Thompson-sampling experiment against a static baseline.
+5. Measure incremental lift with a geo or randomized holdout and optimize spend.
 
 ## Code pattern
 
@@ -338,19 +380,26 @@ print("R2:", model.score(X_test, y_test))
     {
         "name": "ai-for-digital-marketing",
         "title": "AI for Digital Marketing",
-        "description": "SEO, SEM, social media, email automation, marketing analytics, and AI-driven personalization across digital channels.",
+        "description": 'Use AI to optimize search, social, email, and analytics across digital channels while respecting privacy and first-party data.',
         "devin_body": r'''
 ## When to use
 
 You need to drive traffic, engagement, and conversions across digital channels with AI-assisted search, social, email, and analytics.
 
-## Key concepts
+## Usage
 
-- **SEO and GEO**: keyword intent, technical SEO, structured data, and answer-first content.
-- **Paid search and social**: automated bidding, audience signals, and creative rotation.
-- **Email and marketing automation**: segmentation, send-time optimization, and personalization.
-- **Attribution and analytics**: multi-touch, cohorts, incrementality, and marketing mix modeling.
-- **Privacy and first-party data**: consent, clean rooms, and server-side tracking.
+- Optimize SEO and GEO for answer-first, citeable content.
+- Automate bidding, audience signals, and creative rotation in paid channels.
+- Personalize email and marketing automation with segmentation and send-time optimization.
+- Attribute impact with multi-touch, cohort, and marketing-mix models.
+
+## Steps
+
+1. Unify first-party data and ensure consent and privacy compliance.
+2. Audit technical SEO, structured data, and keyword visibility.
+3. Build a keyword-visibility or send-time optimization experiment.
+4. Test an AI-recommended audience segment against a rule-based baseline.
+5. Measure lift with causal methods and holdouts, then refine the mix.
 
 ## Code pattern
 
@@ -391,19 +440,26 @@ print(forecast)
     {
         "name": "ai-for-branding",
         "title": "AI for Branding",
-        "description": "Brand strategy, visual identity, brand voice, naming, and AI-assisted brand co-creation with human curation.",
+        "description": 'Use AI to co-create brand strategy, name and tagline options, visual identity concepts, and brand voice guides with human designers in the loop.',
         "devin_body": r'''
 ## When to use
 
 You are developing or refreshing a brand: naming, logos, taglines, visual identity, brand architecture, or brand voice.
 
-## Key concepts
+## Usage
 
-- **Brand strategy and positioning**: audience, promise, differentiation, and values.
-- **Visual identity and design systems**: logos, color, typography, and imagery.
-- **Brand voice and messaging**: tone, personality, and cross-channel consistency.
-- **AI co-creation**: concept generation, mood boards, and style exploration.
-- **Governance and ethics**: trademark checks, cultural sensitivity, and authenticity.
+- Generate naming and tagline candidates and screen for conflicts.
+- Explore visual identity concepts, color palettes, and mood boards.
+- Draft and score brand voice messages across channels.
+- Run trademark and cultural-sensitivity checks before launch.
+
+## Steps
+
+1. Document audience, promise, values, and differentiation for the brand.
+2. Generate a large set of name, tagline, and visual concepts.
+3. Screen candidates for trademark, domain, and cultural conflicts.
+4. Develop a brand voice guide and score AI-written messages for consistency.
+5. Run a perception survey and refine with human designers before finalizing.
 
 ## Code pattern
 
@@ -444,19 +500,26 @@ print(ranked[:5])
     {
         "name": "ai-for-ux-design",
         "title": "AI for UX Design",
-        "description": "Interaction design, user research, prototyping, and AI UX patterns for human-centered AI products.",
+        "description": 'Use AI to design interaction patterns, prototype AI features, synthesize user research, and build human-centered AI experiences.',
         "devin_body": r'''
 ## When to use
 
 You are designing AI-powered products, chatbots, agent interfaces, recommendation surfaces, or generative tools where user trust and control are critical.
 
-## Key concepts
+## Usage
 
-- **Human-centered AI UX**: user needs, mental models, and trust calibration.
-- **AI UX patterns**: contextual assistance, progressive disclosure, explainability, and graceful failure.
-- **Conversational and agent interfaces**: turn-taking, intent, escalation, and feedback.
-- **UX research with AI**: synthesis of interviews, usability testing, and analytics.
-- **Accessibility and ethics**: inclusive design, privacy, safety, and transparency.
+- Prototype chat, agent, and recommendation interfaces with user control.
+- Synthesize user interviews, usability tests, and analytics.
+- Apply AI UX patterns such as explainability, progressive disclosure, and graceful failure.
+- Test trust, comprehension, and accessibility with diverse users.
+
+## Steps
+
+1. Define the user task, mental model, and trust expectations.
+2. Create low-fidelity wireframes and a clickable prototype.
+3. Design feedback, correction, and escalation paths into the UI.
+4. Run a usability test with 5+ users and measure task success.
+5. Iterate on trust, comprehension, and failure handling based on results.
 
 ## Code pattern
 
@@ -496,19 +559,26 @@ demo.launch()
     {
         "name": "ai-for-product-design",
         "title": "AI for Product Design",
-        "description": "Concept generation, design space exploration, prototyping, and engineering handoff with generative AI in product development.",
+        "description": 'Use AI to explore design spaces, generate concepts, prototype products, and hand off to engineering while tracking constraints and human decisions.',
         "devin_body": r'''
 ## When to use
 
 You are designing physical or digital products, from early ideation and concept exploration to prototyping, testing, and engineering handoff.
 
-## Key concepts
+## Usage
 
-- **Design space exploration**: generative concepts, parametric variants, and trade-off analysis.
-- **Human-AI co-creation**: the designer sets constraints, the AI proposes candidates, and the human selects and refines.
-- **Prototyping and simulation**: CAD, generative design, digital twins, and FEA/CFD integration.
-- **User-centered validation**: rapid user testing, conjoint analysis, and desirability studies.
-- **Sustainability and manufacturing**: material selection, design for manufacturing, and lifecycle considerations.
+- Generate and rank concepts across a parametric design space.
+- Co-create with designers by combining constraints, AI proposals, and human selection.
+- Integrate CAD, generative design, simulation, and FEA/CFD workflows.
+- Validate concepts with user studies and manufacturability checks.
+
+## Steps
+
+1. Capture requirements, constraints, and success metrics in a design brief.
+2. Generate and sample a design space with AI-assisted concept tools.
+3. Rank concepts by preference, engineering, and cost constraints.
+4. Run a small user study and validate top concepts.
+5. Hand off the selected concept to CAD, simulation, or manufacturing.
 
 ## Code pattern
 
@@ -547,19 +617,26 @@ pd.DataFrame(coords, columns=["dim1", "dim2"]).to_csv("design_space.csv")
     {
         "name": "ai-for-podcasting",
         "title": "AI for Podcasting",
-        "description": "AI-generated and AI-assisted podcast production, including scriptwriting, voice synthesis, editing, transcription, and show notes.",
+        "description": 'Automate transcripts, show notes and chapter markers to speed podcast production and improve accessibility.',
         "devin_body": r'''
 ## When to use
 
 You are producing podcasts: planning, scripting, recording, editing, and distributing, where AI can speed up production or enable synthetic hosts.
 
-## Key concepts
+## Usage
 
-- **Script and outline generation**: episode structures, interview questions, hooks, and summaries.
-- **Voice synthesis and cloning**: TTS, multi-speaker conversation, and zero-shot voice.
-- **Audio editing and enhancement**: noise removal, auto-leveling, and filler-word removal.
-- **Transcription and show notes**: ASR, speaker diarization, and chapter markers.
-- **Ethics and disclosure**: synthetic-voice labels, consent, and copyright.
+- Generate episode outlines, interview questions, and hooks.
+- Synthesize or clone voices for hosts and guests with disclosure.
+- Edit audio with noise removal, auto-leveling, and filler-word removal.
+- Transcribe, diarize speakers, and generate show notes and chapter markers.
+
+## Steps
+
+1. Plan the episode theme, structure, and guest questions.
+2. Record or synthesize audio and label any synthetic voices.
+3. Transcribe and diarize the recording with an ASR pipeline.
+4. Edit for noise, levels, and filler words, then generate show notes.
+5. Verify transcription accuracy and listener engagement before publishing.
 
 ## Code pattern
 
@@ -598,19 +675,26 @@ print(summary)
     {
         "name": "ai-for-influencer-marketing",
         "title": "AI for Influencer Marketing",
-        "description": "Creator discovery, campaign matching, content co-creation, performance prediction, and authenticity measurement for influencer marketing.",
+        "description": 'Use machine learning to discover and vet creators, match them to campaigns, predict performance, and measure ROI and authenticity.',
         "devin_body": r'''
 ## When to use
 
 You are finding and vetting creators, matching them to campaigns, predicting performance, measuring ROI, or managing brand-creator collaborations.
 
-## Key concepts
+## Usage
 
-- **Creator discovery and vetting**: audience demographics, engagement, brand safety, and fake-follower detection.
-- **Campaign matching**: brief-to-creator fit, content style, and values alignment.
-- **Content co-creation**: AI-assisted briefs, scripts, thumbnails, and captions.
-- **Performance prediction and attribution**: reach, engagement, conversions, and lift.
-- **Authenticity and disclosure**: sponsorship transparency, FTC guidelines, and trust.
+- Score creators by audience fit, engagement quality, and brand safety.
+- Match briefs to creators based on content style and values alignment.
+- Co-create briefs, scripts, thumbnails, and captions with AI assistance.
+- Predict reach, engagement, and conversion lift for campaigns.
+
+## Steps
+
+1. Define campaign goals, audience, budget, and brand-safety criteria.
+2. Build a creator database with demographics, engagement, and content analysis.
+3. Rank creators with a fit score and compare to human picks.
+4. Predict engagement for past campaigns and report MAE vs. actuals.
+5. Audit delivered content for disclosure, brand safety, and FTC compliance.
 
 ## Code pattern
 

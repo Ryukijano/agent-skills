@@ -4,6 +4,7 @@
 import re
 import sys
 import json
+import warnings
 from pathlib import Path
 from collections import Counter, defaultdict
 
@@ -18,29 +19,42 @@ def parse_markdown_headings(text):
 
 
 def find_code_blocks(text):
-    """Return all fenced code blocks."""
-    return re.findall(r"```(?:\w+)?\n(.*?)```", text, re.DOTALL)
+    """Return fenced code blocks as (language, code) tuples."""
+    return re.findall(r"```(\w+)?\n(.*?)```", text, re.DOTALL)
+
+
+def python_compile_issues(code):
+    """Check a Python code block for syntax errors and invalid escapes."""
+    issues = []
+    with warnings.catch_warnings(record=True) as w:
+        warnings.simplefilter("error", SyntaxWarning)
+        try:
+            compile(code, "<skill>", "exec")
+        except SyntaxError as e:
+            issues.append(f"syntax error: {e}")
+        except SyntaxWarning as e:
+            issues.append(f"syntax warning: {e}")
+        # treat other SyntaxWarnings captured in `w` as issues too
+        for warning in w:
+            if issubclass(warning.category, SyntaxWarning):
+                issues.append(f"syntax warning: {warning.message}")
+    return issues
 
 
 def code_block_has_syntax_error(code, language=""):
     """Heuristic: check for common slop patterns in code snippets."""
     issues = []
-    # Mismatched quotes around strings, e.g. from_pretrained("dennisjooo/"deepfake-vs-real")
-    # Look for a quote immediately followed by non-separator text and another quote (unescaped inner quotes)
-    if re.search(r'(?<![\\])["\'](?:(?![\\])["\']).*?(?<![\\])["\']', code):
-        issues.append("suspicious nested quotes")
     # Unclosed parens/brackets (simple)
     for open_c, close_c in [("(", ")"), ("[", "]"), ("{", "}")]:
         if code.count(open_c) != code.count(close_c):
             issues.append(f"unbalanced {open_c}{close_c}")
             break
-    # Invalid escape sequences in non-raw strings
-    if re.search(r'(?<!\\)\\[a-zA-Z]', code):
-        # this is very broad; just count as potential issue
-        issues.append("possible invalid escape")
     # Placeholder / todo comments
-    if re.search(r'(<INSERT|TODO|FIXME|\[INSERT|\{\{.*\}\})', code, re.IGNORECASE):
+    if re.search(r'(<INSERT|TODO|FIXME|\[INSERT)', code, re.IGNORECASE):
         issues.append("placeholder")
+    # Syntax / invalid escapes for Python blocks
+    if language == "python" or not language:
+        issues.extend(python_compile_issues(code))
     # Missing imports in python? Too strict.
     return issues
 
@@ -98,8 +112,8 @@ def audit_skills():
             dq = description_quality(text)
 
             code_issues = []
-            for code in find_code_blocks(text):
-                issues = code_block_has_syntax_error(code)
+            for language, code in find_code_blocks(text):
+                issues = code_block_has_syntax_error(code, language or "")
                 if issues:
                     code_issues.append(issues)
 

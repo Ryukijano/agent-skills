@@ -1,6 +1,6 @@
 # /ai-for-risk-management
 
-Credit, market, operational, and emerging risk modeling with ML and scenario analysis.
+Use AI to quantify credit, market, operational, or emerging risks; building early-warning systems; or stress-testing portfolios and operations.
 
 ## Trigger
 

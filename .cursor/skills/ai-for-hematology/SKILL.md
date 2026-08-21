@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for blood cell morphology, leukemia and lymphoma classification, thrombosis and bleeding risk, transfusion optimization, and stem-cell transplant outcomes.
+Use machine learning to classify blood cells, predict leukemia and lymphoma outcomes, and optimize transfusion and transplant care.
 
 ## When to use
 
 You are analyzing peripheral blood smears, bone marrow samples, coagulation data, or transplant registries to improve hematologic diagnosis, risk stratification, and treatment planning.
 
-## Key concepts
+## Usage
 
-- **CBC and smear morphology**: automated differential, anemia classification, and blast detection.
-- **MICM classification**: integration of morphology, immunophenotyping, cytogenetics, and molecular data.
-- **Coagulation and thrombosis**: VTE, bleeding, and transfusion-need prediction from labs and EHR.
-- **Hematologic malignancies**: AML/MDS risk, lymphoma subtyping, and MRD monitoring.
-- **Transplant analytics**: engraftment, GVHD, and relapse risk in stem-cell transplants.
+- Automate blood smear differential and classify anemia from CBC and iron studies.
+- Integrate morphology, immunophenotyping, cytogenetics, and molecular data (MICM).
+- Predict thrombosis, bleeding, and transfusion need from labs and EHR.
+- Model risk in AML/MDS, lymphoma subtyping, and measurable residual disease.
+- Predict engraftment, GVHD, and relapse in stem-cell transplants.
+
+## Steps
+
+1. Assemble CBC, smear images, flow cytometry, genetic, and EHR data.
+2. Define prediction or classification targets (anemia type, blast detection, VTE, relapse).
+3. Train models with class imbalance handling and stain normalization.
+4. Validate against manual differential counts, flow cytometry, or expert review.
+5. Integrate results into hematology lab and transplant workflows.
+6. Monitor rare-class recall and multicenter drift.
 
 ## Code pattern
 

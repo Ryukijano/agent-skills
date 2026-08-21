@@ -1,6 +1,6 @@
 # /ai-for-polymer-processing
 
-Machine learning for extrusion, injection molding, blow molding, compounding, mixing, and polymer recycling process optimization and quality control.
+Use machine learning on polymer processing data to predict part quality, detect instabilities, optimize cycle times and reduce scrap.
 
 ## Trigger
 

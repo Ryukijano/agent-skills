@@ -1,6 +1,6 @@
 # /ai-for-ethnomusicology
 
-Computational analysis of field recordings, oral musical traditions, tuning systems, and cross-cultural musical patterns using MIR and machine learning.
+Use AI to analyze archival field recordings, microtonal traditions, regional vocal styles, or cross-cultural musical patterns in ethnomusicological research.
 
 ## Trigger
 

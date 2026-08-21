@@ -1,6 +1,6 @@
 # /ai-for-gastroenterology
 
-AI-assisted endoscopy, real-time polyp detection and characterization, colonoscopy quality, and colorectal cancer screening.
+Use AI for Gastroenterology to detect and characterize polyps in real-time colonoscopy and improve ADR.
 
 ## Trigger
 

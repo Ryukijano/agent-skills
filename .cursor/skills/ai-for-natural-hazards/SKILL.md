@@ -2,18 +2,27 @@
 
 ## Description
 
-Multi-hazard susceptibility mapping and early warning for landslides, floods, wildfires, and land subsidence with ML and remote sensing.
+Predict landslide and wildfire risk from satellite and sensor data to trigger early warnings and protect infrastructure.
 
 ## When to use
 
 You are mapping multi-hazard risk, forecasting imminent events, or designing early warning systems for landslides, floods, wildfires, or subsidence.
 
-## Key concepts
+## Usage
 
-- **Hazard susceptibility**: probabilistic mapping of where hazards may occur.
-- **Multi-hazard assessment**: combined landslide, flood, wildfire, and subsidence modeling.
-- **Early warning systems**: triggers, thresholds, and lead-time optimization.
-- **Remote sensing and InSAR**: Sentinel-1/2, DEM, and ground deformation data.
+- Fuse terrain, hydrology, vegetation, and Sentinel-1/2 data.
+- Model susceptibility for landslides, floods, wildfires, and subsidence.
+- Calibrate warning thresholds with historical events.
+- Build multi-hazard susceptibility maps.
+
+## Steps
+
+1. Fuse terrain, hydrology, vegetation, and Sentinel-1/2 data.
+2. Model susceptibility for landslides, floods, wildfires, and subsidence.
+3. Calibrate warning thresholds with historical events.
+4. Build multi-hazard susceptibility maps.
+5. Validate lead time and accuracy with stakeholders.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

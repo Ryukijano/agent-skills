@@ -2,7 +2,7 @@
 
 ## Description
 
-Smart grid load forecasting, water and energy demand prediction, asset maintenance, leak and outage detection, and resource allocation.
+Detect leaks and anomalies across water and energy smart-meter networks to cut non-revenue water and response times.
 
 ## When to use
 
@@ -10,19 +10,18 @@ You are managing electricity, water, or gas distribution, forecasting demand, de
 
 ## Usage
 
-- **Load and demand forecasting**: predict electricity, water, and gas consumption.
-- **Asset health**: predict transformer, pump, pipe, and meter failures.
-- **Leak and outage detection**: identify anomalies in AMI/SCADA data.
-- **Conservation voltage optimization**: reduce peak demand and losses.
-- **Renewable integration**: forecast solar/water availability and storage dispatch.
+- **Demand forecasting**: predict electricity, water, and gas consumption using AMI, SCADA, GIS, and weather feeds.
+- **Leak and outage detection**: identify anomalies in pressure, flow, voltage, and meter data.
+- **Asset health scoring**: rank transformers, pumps, pipes, and meters for risk-based maintenance.
+- **Conservation and voltage optimization**: reduce peak demand, non-revenue water, and distribution losses.
 
 ## Steps
 
-1. Integrate AMI, SCADA, GIS, weather, and customer data.
-2. Build time-series and anomaly models for demand and faults.
-3. Prioritize maintenance and inspections by risk score.
-4. Deploy real-time dashboards and alerts for operators.
-5. Validate with field crews and operational outcomes.
+1. Integrate AMI, SCADA, GIS, weather, and customer data into a unified time-series platform.
+2. Build forecasting and anomaly models for demand, leaks, and voltage deviations.
+3. Prioritize maintenance and inspections by risk score and consequence.
+4. Deploy real-time dashboards and alerts for control-room operators.
+5. Validate with field crews and operational outcomes, retraining as DERs and demand patterns evolve.
 
 ## Code pattern
 

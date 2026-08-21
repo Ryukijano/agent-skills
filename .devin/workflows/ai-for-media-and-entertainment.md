@@ -1,6 +1,6 @@
 # /ai-for-media-and-entertainment
 
-AI for content recommendation, personalization, generative media, audience analytics, and rights/compliance workflows.
+Use AI for Media and Entertainment to recommend content, create media and understand audiences.
 
 ## Trigger
 

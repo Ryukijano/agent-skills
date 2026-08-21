@@ -2,19 +2,30 @@
 
 ## Description
 
-Neural rendering, differentiable rendering, inverse rendering, geometry and material estimation, and generative image synthesis for photorealistic graphics.
+Use AI for Computer Graphics to synthesize photorealistic images, reconstruct geometry and estimate materials.
 
 ## When to use
 
 You are synthesizing or editing photorealistic images, reconstructing scenes from observations, or integrating learned components into a traditional rendering pipeline.
 
-## Key concepts
 
-- **Neural radiance fields (NeRF)**: implicit 3D scene representations via MLPs and volume rendering.
-- **3D Gaussian splatting**: explicit point-based scene representation with fast rasterization.
-- **Differentiable rendering**: propagate gradients through light transport for inverse rendering.
-- **Material and lighting estimation**: recover reflectance, illumination, and geometry from images.
-- **Generative image synthesis**: diffusion and GAN-based texture/material generation.
+## Usage
+
+
+- **Neural radiance fields (NeRF)**: Implicit 3D scene representations via MLPs and volume rendering.
+- **3D Gaussian splatting**: Explicit point-based scene representation with fast rasterization.
+- **Differentiable rendering**: Propagate gradients through light transport for inverse rendering.
+- **Material and lighting estimation**: Recover reflectance, illumination, and geometry from images.
+- **Generative image synthesis**: Diffusion and GAN-based texture/material generation.
+
+## Steps
+
+1. Collect and prepare multi-view images, scene geometry and lighting data.
+2. Synthesize or editing photorealistic images.
+3. Reconstruct scenes from observations.
+4. Integrate learned components into a traditional rendering pipeline.
+5. Validate by fiting a small NeRF to a synthetic multi-view cube and render novel views.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -40,12 +51,14 @@ class NeRFMLP(nn.Module):
         return self.net(x)
 ```
 
+
 ## Tuning notes
 
 - Combine positional encoding for high-frequency details.
 - Use coarse plus fine sampling for efficient ray marching.
 - Differentiable rendering is expensive; use efficient samplers and cache radiance fields.
 - Validate synthesized views against held-out camera poses.
+
 
 ## Verification
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Computer vision, deep learning, and vision-language models for style classification, iconography, provenance, and quantitative art history.
+Use AI to classify art styles, attributing works, analyze iconography, or study large-scale visual trends in art history.
 
 ## When to use
 
 You are classifying art styles, attributing works, analyzing iconography, or studying large-scale visual trends in art history.
 
-## Key concepts
+## Usage
 
-- **Style and period classification**: CNN and VLM-based classification of artistic style, school, and period.
-- **Visual similarity and embeddings**: learned representations for catalog navigation and provenance research.
-- **Iconography and subject analysis**: object detection, scene graphs, and semantic tagging of artworks.
-- **Quantitative art history**: statistical analysis of visual features over time and across cultures.
+- Digitize, color-correct, and segment artworks.
+- Classify style, artist, provenance, and iconography.
+- Compare visual features across collections.
+- Detect forgeries and condition issues.
+
+## Steps
+
+1. Digitize, color-correct, and segment artworks.
+2. Classify style, artist, provenance, and iconography.
+3. Compare visual features across collections.
+4. Detect forgeries and condition issues.
+5. Ground conclusions in curatorial and conservation records.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

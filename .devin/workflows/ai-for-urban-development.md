@@ -1,6 +1,6 @@
 # /ai-for-urban-development
 
-GeoAI, spatial modeling, generative urban design, and scenario simulation for sustainable, equitable, and data-driven urban development.
+Simulates urban growth and land-use scenarios to balance housing, infrastructure, and sustainability outcomes.
 
 ## Trigger
 

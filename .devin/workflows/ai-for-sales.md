@@ -1,6 +1,6 @@
 # /ai-for-sales
 
-Predictive lead scoring, sales forecasting, opportunity win probability, next-best action, and pipeline analytics.
+Use AI for Sales to score leads, forecast revenue, predict wins and recommend next actions.
 
 ## Trigger
 

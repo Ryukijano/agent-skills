@@ -2,20 +2,29 @@
 
 ## Description
 
-Multimodal machine learning for personalized diagnosis, treatment selection, risk prediction, and integration of genomics, EHRs, imaging, and wearables.
+Match patients to genotype-tailored therapies and clinical trials by integrating EHR, genomic, and biomarker data.
 
 ## When to use
 
 You need to build a personalized risk model, recommend therapy, integrate multi-omic and clinical data, or stratify patients for a trial.
 
-## Key concepts
+## Usage
 
-- **Multi-modal patient data**: genomics, EHRs, medical imaging, wearables, lab tests.
-- **Biomarker discovery**: identifying predictive, prognostic, or pharmacodynamic markers.
-- **Treatment response prediction**: matching patients to therapies.
-- **Risk stratification**: time-to-event models, survival analysis.
-- **Federated learning**: training across institutions without centralizing sensitive data.
-- **Explainability and fairness**: clinical AI must be interpretable and unbiased.
+- **Multi-modal integration**: fuse genomics, EHR, imaging, wearable, and lab data into a unified patient representation.
+- **Treatment matching**: predict response, toxicity, or resistance to guide therapy selection.
+- **Risk stratification**: estimate survival, progression, or adverse-event risk with time-to-event models.
+- **Biomarker discovery**: find predictive, prognostic, or pharmacodynamic markers across cohorts.
+- **Federated learning**: train models across institutions while keeping patient data local.
+- **Clinical explainability**: audit models for bias and align predictions with clinical guidelines.
+
+## Steps
+
+1. Define the clinical decision (diagnosis, risk, or therapy response) and the relevant modalities.
+2. Harmonize multi-omic, imaging, and clinical data; handle missing values, batch effects, and site differences.
+3. Train a multimodal model (deep fusion, graph, or survival) with time-split or external validation.
+4. Evaluate predictive performance and calibration on an external cohort.
+5. Interpret model outputs with SHAP, attention, or feature importance and compare with clinical knowledge.
+6. Deploy as decision support and monitor for distribution drift, bias, and changing practice patterns.
 
 ## Code pattern
 

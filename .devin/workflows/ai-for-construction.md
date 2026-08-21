@@ -1,6 +1,6 @@
 # /ai-for-construction
 
-AI for construction site safety, progress monitoring, schedule and cost risk, robotics, and digital-twin-enabled project delivery.
+Use AI for Construction to monitor site safety, track progress and forecast cost and schedule risk.
 
 ## Trigger
 

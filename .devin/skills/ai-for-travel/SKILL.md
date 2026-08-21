@@ -2,19 +2,26 @@
 
 ## Description
 
-Itinerary planning, point-of-interest recommendation, flight and hotel personalization, trip optimization, and conversational travel agents.
+Use AI to plan itineraries, recommend points of interest, personalize flights and hotels, and handle real-time disruptions within budget.
 
 ## When to use
 
 You want to plan a trip, recommend points of interest, build an itinerary, or personalize travel options within time and budget constraints.
 
-## Key concepts
+## Usage
 
-- **POI recommendation**: predict attractions and restaurants a traveler will enjoy.
-- **Itinerary optimization**: orienteering and routing under time, budget, and preference constraints.
-- **Multi-constraint planning**: combine opening hours, travel times, group preferences, and accessibility.
-- **LLM travel agents**: conversational planning with tool use for live data.
-- **Real-time data integration**: weather, events, prices, and transport disruptions.
+- Recommend attractions and restaurants from user history and constraints.
+- Build optimized day-by-day itineraries under time and budget.
+- Adapt plans to weather, events, cancellations, and group preferences.
+- Use LLM agents with live data for conversational travel planning.
+
+## Steps
+
+1. Collect traveler preferences, budget, dates, and accessibility needs.
+2. Gather real-time POI, weather, pricing, and transit data from APIs.
+3. Solve an orienteering or routing problem for itinerary optimization.
+4. Validate opening hours, realistic travel times, and fallback options.
+5. Generate a shareable itinerary and update it as conditions change.
 
 ## Code pattern
 

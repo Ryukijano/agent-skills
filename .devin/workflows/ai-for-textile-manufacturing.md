@@ -1,6 +1,6 @@
 # /ai-for-textile-manufacturing
 
-Machine learning for yarn, fabric, and garment manufacturing: spinning, weaving, knitting, dyeing, finishing, quality inspection, and production optimization.
+Use computer vision and time-series machine learning with process control to inspect fabrics, optimize dyeing, reduce defects and predict loom and knitting machine performance in textile production.
 
 ## Trigger
 

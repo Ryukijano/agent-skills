@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for production planning, scheduling, quality control, ergonomics, operations research, and process improvement.
+Use AI to optimize production scheduling, quality control, and supply chains.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are optimizing production, scheduling jobs, controlling quality, balancing a
 
 ## Usage
 
-- **Production planning and scheduling**: job-shop, flow-shop, and real-time rescheduling.
-- **Quality control and SPC**: defect detection, predictive quality, and root-cause analysis.
-- **Operations research and optimization**: MILP, constraint programming, and heuristics.
-- **Ergonomics and human factors**: motion analysis, workload, and safety.
-- **Digital lean and process mining**: bottleneck detection and value-stream analysis.
+- Predict job-shop bottlenecks and optimize schedules with OR-Tools.
+- Detect process mining patterns and inefficiencies (ProM, Celonis).
+- Forecast demand and inventory levels across the supply chain.
+- Predict defect risk in manufacturing with SPC and vision.
+- Optimize workstation ergonomics and labor allocation.
 
 ## Steps
 
-1. Collect MES/ERP/IoT data on production, quality, maintenance, and schedules.
-2. Engineer features for throughput, quality, and resource utilization.
-3. Train scheduling, quality, or maintenance optimization models.
-4. Validate against baseline KPIs and constraints in simulation.
-5. Deploy and retrain with live production feedback.
+1. Map the production process and data sources (ERP, MES, IoT).
+2. Extract features for throughput, quality, and resource utilization.
+3. Train scheduling, forecasting, or classification models.
+4. Deploy into APS, MES, or planning dashboards.
+5. Measure KPIs and retrain on new production runs.
 
 ## Code pattern
 

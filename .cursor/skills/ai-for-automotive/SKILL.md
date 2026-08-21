@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for automotive design, manufacturing, battery management, ADAS, quality control, and supply-chain optimization across the vehicle lifecycle.
+Inspect automotive spot welds and brake cylinders with vision models to catch micro-defects on the assembly line at 25 frames per second or faster.
 
 ## When to use
 
 You are optimizing automotive design or manufacturing, forecasting battery state of health, detecting quality defects, or improving supply chain, production, and after-sales operations.
 
-## Key concepts
+## Usage
 
-- **Computer-aided engineering and design**: ML surrogates for crash, NVH, and aerodynamic simulations.
-- **Battery management and state estimation**: SOH/SOC prediction from voltage, current, and temperature.
-- **Factory and supply-chain AI**: predictive maintenance, demand forecasting, quality analytics, and production scheduling.
-- **Connected-vehicle and after-sales analytics**: telematics, warranty prediction, and customer-vehicle health insights.
+- Build ML surrogates for crash, NVH, and aerodynamic simulations.
+- Predict battery state of health and charge from voltage, current, and temperature.
+- Detect weld, paint, and assembly defects with computer vision.
+- Forecast demand, schedule production, and optimize after-sales analytics.
+
+## Steps
+
+1. Collect design-simulation data or battery-cycle logs with variant metadata.
+2. Train a surrogate, regression, or vision model with physics-aware features.
+3. Validate against electrochemical, CFD, or human-inspection baselines.
+4. Run edge-case and V&V tests for safety-related models.
+5. Deploy into design loops, battery management, or shop-floor inspection.
 
 ## Code pattern
 

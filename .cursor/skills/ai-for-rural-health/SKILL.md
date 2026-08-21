@@ -2,18 +2,27 @@
 
 ## Description
 
-AI-driven diagnostics, telemedicine, rural health equity, and resource allocation for underserved and remote populations.
+Deliver mobile AI-assisted diabetic retinopathy and cardiac screening to remote communities with limited specialist access.
 
 ## When to use
 
 You are deploying AI in rural, remote, or low-resource health settings where specialists, connectivity, and infrastructure are limited.
 
-## Key concepts
+## Usage
 
-- **Telemedicine + AI**: real-time decision support during virtual consultations.
-- **Point-of-care diagnostics**: AI on mobile or edge devices for imaging, lab interpretation, and triage.
-- **Rural health equity**: address digital literacy, bandwidth, language, and trust barriers.
-- **Resource allocation**: optimize staffing, transport, and supply distribution across large geographies.
+- Provide real-time AI decision support during virtual consultations.
+- Run point-of-care diagnostics on mobile or edge devices for imaging and triage.
+- Reduce digital literacy, bandwidth, language, and trust barriers.
+- Optimize staffing, transport, and supply distribution across large geographies.
+
+## Steps
+
+1. Assess infrastructure, connectivity, and device constraints in the target rural area.
+2. Curate representative rural data and avoid urban-academic bias.
+3. Train lightweight, offline-capable models for imaging or triage.
+4. Test latency, battery, and usability on the target hardware.
+5. Involve rural clinicians and community health workers in deployment.
+6. Monitor whether the tool narrows or widens rural-urban outcome disparities.
 
 ## Code pattern
 

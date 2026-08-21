@@ -1,6 +1,6 @@
 # /ai-for-nephrology
 
-Machine learning for chronic kidney disease progression, acute kidney injury prediction, dialysis adequacy, kidney transplant outcomes, and renal pathology image analysis.
+Use machine learning to predict chronic kidney disease progression, acute kidney injury, dialysis outcomes, and transplant success.
 
 ## Trigger
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Automated selection, cleaning, labeling, augmentation, and documentation of datasets to produce high-quality, FAIR, and reusable ML data assets.
+Label, augment, and document training data for reliable machine learning.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are building or maintaining reusable datasets and need to select, clean, lab
 
 ## Usage
 
-- **Dataset selection and deduplication**: identify representative, non-redundant samples.
-- **Data cleaning and imputation**: detect and repair errors, missing values, and inconsistencies.
-- **Active and programmatic labeling**: prioritize and scale data annotation.
-- **Data augmentation and balancing**: synthesize or reweight samples for better coverage.
-- **Documentation and metadata**: produce datasheets, data cards, and provenance records.
+- Run weak supervision and programmatic labeling (Snorkel, Alfred).
+- Synthesize training examples with GANs or LLM augmenters.
+- Create data cards and datasheets for datasets.
+- Validate label quality with consensus and error analysis.
+- Version datasets with DVC or Pachyderm.
 
 ## Steps
 
-1. Define the target population and collection criteria.
-2. Profile the raw data and identify quality and coverage gaps.
-3. Clean, deduplicate, and (re)label the dataset.
-4. Augment or resample to improve representation and balance.
-5. Publish with metadata, data cards, and usage licenses.
+1. Define labeling schemas and data-card templates.
+2. Collect raw data and apply rules, model, or LLM heuristics.
+3. Aggregate and denoise labels with weak supervision.
+4. Generate data sheets and quality reports.
+5. Version and distribute curated datasets.
 
 ## Code pattern
 

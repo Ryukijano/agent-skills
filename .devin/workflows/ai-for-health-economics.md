@@ -1,6 +1,6 @@
 # /ai-for-health-economics
 
-Cost-effectiveness, health technology assessment, demand and pricing models, and machine learning for health outcomes research.
+Use AI to evaluate the economic value, cost-effectiveness, or budget impact of health technologies and interventions using ML.
 
 ## Trigger
 

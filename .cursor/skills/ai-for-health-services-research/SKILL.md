@@ -2,19 +2,27 @@
 
 ## Description
 
-AI for healthcare access, quality, utilization, policy, workforce, and health-system performance.
+Analyze real-world care delivery and access patterns to identify disparities and evaluate whether digital tools improve equity.
 
 ## When to use
 
 You are studying healthcare delivery, access, quality, utilization, or policy using observational data and machine learning.
 
-## Key concepts
+## Usage
 
-- **Health services research methods and quasi-experimental designs**: difference-in-differences, regression discontinuity, and interrupted time series.
-- **Healthcare utilization, access, and disparities**: inpatient, outpatient, emergency, and preventive service use.
-- **Quality measurement and patient safety**: readmissions, adverse events, and process-of-care metrics.
-- **Health policy and economic evaluation**: policy impact, HTA, and resource allocation.
-- **Machine learning for evidence synthesis and health system optimization**: systematic review automation and operations research.
+- Apply quasi-experimental designs to policy evaluation.
+- Analyze utilization, access, and disparities.
+- Measure quality and patient safety outcomes.
+- Model resource allocation and system optimization.
+
+## Steps
+
+1. Apply quasi-experimental designs to policy evaluation.
+2. Analyze utilization, access, and disparities.
+3. Measure quality and patient safety outcomes.
+4. Model resource allocation and system optimization.
+5. Translate findings into policy and implementation.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

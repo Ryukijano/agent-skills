@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for chronic kidney disease progression, acute kidney injury prediction, dialysis adequacy, kidney transplant outcomes, and renal pathology image analysis.
+Use machine learning to predict chronic kidney disease progression, acute kidney injury, dialysis outcomes, and transplant success.
 
 ## When to use
 
 You are building models to predict CKD progression, detect acute kidney injury early, optimize dialysis, allocate kidneys, or analyze renal biopsy and histopathology images.
 
-## Key concepts
+## Usage
 
-- **CKD risk stratification**: eGFR trajectory, albuminuria, and comorbidity-driven models for progression to ESKD.
-- **AKI early warning**: EHR-based vitals, labs, and medication triggers for in-hospital AKI.
-- **Dialysis optimization**: treatment adequacy, access failure prediction, and personalized ultrafiltration.
-- **Transplant analytics**: donor-recipient matching, rejection risk, and graft survival prediction.
-- **Renal pathology AI**: segmentation and classification of glomerular lesions in biopsy images.
+- Risk-stratify CKD progression using eGFR trajectories, albuminuria, and comorbidities.
+- Build EHR-based early-warning models for in-hospital acute kidney injury.
+- Optimize dialysis treatment adequacy and predict access failure.
+- Match donors and recipients, predict rejection, and forecast graft survival.
+- Segment and classify glomerular lesions in renal biopsy images.
+
+## Steps
+
+1. Assemble longitudinal EHR, labs, pathology, and imaging data for kidney-related endpoints.
+2. Define prediction targets (AKI, CKD progression, graft survival, lesion type) and time windows.
+3. Train and validate predictive models with time-based splits and competing-risk handling.
+4. Integrate predictions into nephrology workflows as decision support.
+5. Audit for disparities in race, ethnicity, geography, and access to care.
+6. Monitor model performance across health systems and retrain as guidelines evolve.
 
 ## Code pattern
 

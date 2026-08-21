@@ -1,6 +1,6 @@
 # /ai-for-demand-response
 
-Machine learning for load flexibility estimation, demand response program design, virtual power plant dispatch, and dynamic pricing.
+Estimates load flexibility, dispatches virtual power plants, and designs dynamic pricing to unlock distributed demand-side resources.
 
 ## Trigger
 

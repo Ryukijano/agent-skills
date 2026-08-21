@@ -1,6 +1,6 @@
 # /ai-for-mining
 
-AI for mineral exploration, ore grade estimation, predictive maintenance, autonomous haulage, and mine safety.
+Use AI for Mining to target exploration, estimate ore grade, predict equipment failures and dispatch fleets.
 
 ## Trigger
 

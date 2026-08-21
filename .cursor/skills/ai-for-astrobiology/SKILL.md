@@ -2,18 +2,26 @@
 
 ## Description
 
-ML for biosignature detection, life-detection mass spectrometry, extremophile habitats, and mission autonomy in alien environments.
+Use machine learning to screen mass spectrometry and Raman spectra for biosignatures and guide autonomous life-detection decisions.
 
 ## When to use
 
 You are searching for biosignatures, analyzing mass spectra, or interpreting environmental sensor data from mission analogs or spaceflight instruments.
 
-## Key concepts
+## Usage
 
-- **Mass spectrometry and Raman**: pattern recognition in complex molecular spectra.
-- **Biosignatures**: molecular, isotopic, and morphological indicators of life.
-- **Habitability indices**: environmental proxies for water, energy, and nutrients.
-- **Autonomous sampling**: closed-loop decision-making for in-situ exploration.
+- Distinguish biotic from abiotic organic signatures in mass-spectrometry and py-GC-MS data.
+- Detect anomalies in Raman and LIMS measurements from Mars-analog and planetary samples.
+- Score habitability from geochemical, mineralogical, and environmental sensor data.
+- Prioritize sampling targets for rover, lander, and sample-return missions.
+
+## Steps
+
+1. Collect mass-spec, Raman, or sensor data with paired abiotic and biotic controls.
+2. Extract peak-level or spectral features that are robust to instrument noise and contamination.
+3. Train a classifier or anomaly detector to separate biotic chemistry from abiotic backgrounds.
+4. Validate against terrestrial analogs and robust abiotic controls.
+5. Deploy to rank samples or trigger autonomous follow-up measurements in the field.
 
 ## Code pattern
 

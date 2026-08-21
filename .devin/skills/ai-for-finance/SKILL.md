@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for time-series forecasting, risk modeling, algorithmic trading, and financial NLP.
+Use machine learning to forecast markets, model risk, detect fraud, and extract insight from financial documents and transactions.
 
 ## When to use
 
 You are building predictive models for markets, credit, fraud, or financial documents.
 
-## Key concepts
+## Usage
 
-- **Time-series forecasting**: ARIMA, Prophet, deep state-space, transformers.
-- **Risk modeling**: Value-at-Risk, stress testing, default prediction.
-- **Fraud detection**: anomaly detection, imbalanced classification.
-- **Financial NLP**: sentiment, earnings calls, filings, FinBERT.
-- **Backtesting**: avoid lookahead bias and overfitting.
+- Forecast prices, demand, or macro indicators with time-series and transformer models.
+- Model credit, market, and operational risk (Value-at-Risk, default prediction, stress testing).
+- Detect anomalous transactions, document forgeries, and fraud rings with classification, autoencoders, and LLM reasoning.
+- Analyze financial documents, earnings calls, and filings with domain-tuned NLP (FinBERT, trade-assistant agents).
+- Backtest strategies and reconciliation workflows with realistic costs, slippage, and temporal cross-validation.
+
+## Steps
+
+1. Curate financial data (prices, transactions, fundamentals, news, filings) and define the prediction or decision target.
+2. Engineer temporal features and create train/validation/test splits that respect causality (no leakage).
+3. Train a model for forecasting, risk scoring, fraud detection, or document classification.
+4. Backtest or evaluate the model with realistic transaction costs, slippage, and temporal cross-validation.
+5. Build guardrails (human-in-the-loop, explainability, audit logs) for high-stakes financial decisions.
+6. Deploy with monitoring for distribution shift, market regime changes, and regulatory compliance.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-environmental-science
 
-Remote sensing, land-cover mapping, ecosystem service assessment, and integrated modeling for environmental monitoring and analysis.
+Use remote sensing and integrated modeling to map land cover, monitor ecosystems, and assess environmental change and risk.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-energy-grid
 
-Power-flow surrogates, renewable and load forecasting, grid stability, optimal power flow, and AI-assisted grid operations.
+Solve AC optimal power flow with neural surrogates to schedule generation and integrate renewables within milliseconds.
 
 ## Trigger
 

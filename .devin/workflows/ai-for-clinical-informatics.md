@@ -1,6 +1,6 @@
 # /ai-for-clinical-informatics
 
-AI-enabled clinical decision support, EHR integration, workflow optimization, and evaluation in real-world care settings.
+Integrate sepsis prediction alerts into EHR workflows to flag at-risk patients and guide clinicians toward timely interventions.
 
 ## Trigger
 

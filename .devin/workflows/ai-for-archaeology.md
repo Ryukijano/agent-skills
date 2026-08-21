@@ -1,6 +1,6 @@
 # /ai-for-archaeology
 
-Remote sensing, LiDAR, and computer vision for site detection, artifact analysis, and heritage preservation.
+Map hidden archaeological features beneath dense vegetation from airborne LiDAR using deep segmentation to speed discovery of ancient settlements.
 
 ## Trigger
 

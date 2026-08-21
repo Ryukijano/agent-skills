@@ -1,6 +1,6 @@
 # /ai-for-plant-breeding
 
-Genomic selection, phenotype prediction, multi-environment trial analysis, and marker-assisted breeding with machine and deep learning.
+Accelerate crop improvement by predicting trait performance, genomic breeding values, and envirotype effects.
 
 ## Trigger
 

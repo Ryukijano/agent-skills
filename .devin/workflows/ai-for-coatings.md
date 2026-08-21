@@ -1,6 +1,6 @@
 # /ai-for-coatings
 
-Machine learning for coating formulation, deposition, thickness, microstructure, adhesion, corrosion protection, and service-life prediction.
+Use machine learning to design formulations, predict thickness, optimize deposition and estimate corrosion protection and lifetime for functional coatings and films.
 
 ## Trigger
 

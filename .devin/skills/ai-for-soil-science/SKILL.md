@@ -2,19 +2,27 @@
 
 ## Description
 
-Digital soil mapping, pedotransfer functions, spectroscopic prediction, and soil health assessment with ML.
+Use ML to map soil properties, build pedotransfer functions, predict soil carbon from spectra, and assess soil health.
 
 ## When to use
 
 You are mapping soil properties, predicting soil carbon, or analyzing spectroscopic and legacy soil data.
 
-## Key concepts
+## Usage
 
-- **Digital soil mapping (DSM)**: predict soil classes or properties from environmental covariates using the SCORPAN model.
-- **Pedotransfer functions (PTFs)**: infer hydraulic or mechanical properties from easier-to-measure soil data.
-- **Visible-infrared (VIS-NIR) spectroscopy**: predict organic carbon, texture, and nutrients from spectra.
-- **Soil health indicators**: biological, chemical, and physical proxies of soil function.
-- **Legacy data integration**: harmonize old soil maps and lab records with new observations.
+- Predict soil classes and properties from environmental covariates with digital soil mapping.
+- Infer hydraulic and mechanical properties from easier-to-measure data with pedotransfer functions.
+- Predict organic carbon, texture, and nutrients from visible-infrared (VIS-NIR) spectra.
+- Assess soil health by integrating biological, chemical, and physical indicators.
+
+## Steps
+
+1. Compile legacy soil maps, lab records, and new observations; harmonize units and depths.
+2. Collect environmental covariates (terrain, climate, geology, remote sensing) for the target area.
+3. Standardize spectra, remove water/CO2 absorption bands, and train models to predict SOC, texture, or nutrients.
+4. Build DSM or PTF models using spatial cross-validation and pedological knowledge for plausible predictions.
+5. Map uncertainty and flag extrapolation outside the training covariate space.
+6. Validate against independent lab samples and integrate maps into land-management or carbon-accounting systems.
 
 ## Code pattern
 

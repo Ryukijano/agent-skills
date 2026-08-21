@@ -1,6 +1,6 @@
 # /ai-for-planetary-science
 
-Machine learning for mission data analysis, terrain classification, crater detection, atmospheric retrievals, and exoplanet characterization.
+Use machine learning to classify planetary terrain, detect craters, retrieve atmospheres, and characterize exoplanets from spacecraft and telescope data.
 
 ## Trigger
 

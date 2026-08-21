@@ -1,6 +1,6 @@
 # /ai-for-history
 
-HTR and OCR for historical documents, event extraction, temporal reasoning, geospatial and network analysis, and distant reading for historical research.
+Use AI for History to transcribe documents, extract entities and events and analyze historical networks.
 
 ## Trigger
 

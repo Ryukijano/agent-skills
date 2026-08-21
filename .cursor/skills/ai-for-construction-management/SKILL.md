@@ -2,7 +2,7 @@
 
 ## Description
 
-BIM-NLP integration, 4D/5D digital twins, computer-vision progress monitoring, and AI-driven scheduling and cost control for construction.
+Track concrete pouring and component progress from site cameras and BIM to detect delays and improve safety compliance.
 
 ## When to use
 
@@ -12,7 +12,7 @@ You are planning, scheduling, monitoring, or controlling construction projects w
 
 - **4D/5D BIM**: integrate schedule, cost, and model data for predictive control.
 - **NLP for planning**: extract activities, durations, and logic from documents and drawings.
-- **Computer vision**: monitor progress, productivity, and safety from site images and drones.
+- **Computer vision**: monitor progress, productivity, and safety from site images and drones using YOLO or MCP-enabled LLMs.
 - **Reinforcement learning**: resource leveling and schedule optimization.
 
 ## Steps

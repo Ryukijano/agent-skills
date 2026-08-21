@@ -1,6 +1,6 @@
 # /ai-for-political-science
 
-Text-as-data for politics: manifesto scaling, sentiment and stance detection, legislative and voting analysis, and causal inference for political institutions.
+Use AI for Political Science to scale texts, detect stances and model legislative behavior.
 
 ## Trigger
 

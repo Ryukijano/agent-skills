@@ -1,6 +1,6 @@
 # /ai-for-patient-reported-outcomes
 
-Machine learning for predicting, personalizing, and reducing the burden of patient-reported outcome measures and PRO-based treatment decisions.
+Use AI to administer, score, and interpret patient-reported outcome measures.
 
 ## Trigger
 

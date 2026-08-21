@@ -1,6 +1,6 @@
 # /ai-for-astrobiology
 
-ML for biosignature detection, life-detection mass spectrometry, extremophile habitats, and mission autonomy in alien environments.
+Use machine learning to screen mass spectrometry and Raman spectra for biosignatures and guide autonomous life-detection decisions.
 
 ## Trigger
 

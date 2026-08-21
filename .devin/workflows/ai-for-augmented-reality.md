@@ -1,6 +1,6 @@
 # /ai-for-augmented-reality
 
-SLAM, scene understanding, depth completion, registration, occlusion handling, and semantic AR with deep learning.
+Use AI for Augmented Reality to track, understand scenes and place virtual objects realistically.
 
 ## Trigger
 

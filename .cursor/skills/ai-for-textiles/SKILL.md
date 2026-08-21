@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for fabric defect detection, pattern and color design, sorting, and textile supply chain optimization.
+Use AI for Textiles to detect fabric defects, generate patterns and match shades.
 
 ## When to use
 
 You are automating fabric inspection, generating prints and textures, grading yarns, forecasting textile demand, or optimizing dyeing and finishing processes.
 
-## Key concepts
 
-- **Anomaly detection for surface defects**: autoencoders or one-class classifiers for holes, stains, and weaving faults.
+## Usage
+
+
+- **Anomaly detection for surface defects**: Autoencoders or one-class classifiers for holes, stains, and weaving faults.
 - **Pattern and texture generation**: GANs and diffusion models for textile print design.
-- **Color science and shade matching**: use LAB/HSV color spaces and constancy algorithms.
-- **Predictive maintenance for looms and dyeing machines**: vibration, temperature, and energy monitoring.
-- **Traceability and supply chain**: digital product passports and blockchain for fiber provenance.
+- **Color science and shade matching**: LAB/HSV color spaces and constancy algorithms.
+- **Predictive maintenance for looms and dyeing machines**: Vibration, temperature, and energy monitoring.
+- **Traceability and supply chain**: Digital product passports and blockchain for fiber provenance.
+
+## Steps
+
+1. Collect and prepare fabric images, sensor and supply-chain data.
+2. Automate fabric inspection.
+3. Generate prints and textures.
+4. Grade yarns.
+5. Validate by detecting fabric defects on a labeled test set and report precision and recall.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -33,12 +44,14 @@ autoencoder = Model(inputs, outputs)
 autoencoder.compile(optimizer="adam", loss="mse")
 ```
 
+
 ## Tuning notes
 
 - Train anomaly detectors only on normal/ defect-free fabric images; anomalies are rare.
 - Data augmentation must preserve weave and texture statistics.
 - Use LAB or HSV color spaces for dye and shade defects rather than RGB alone.
 - Calibrate false-positive rates against human quality-control standards.
+
 
 ## Verification
 

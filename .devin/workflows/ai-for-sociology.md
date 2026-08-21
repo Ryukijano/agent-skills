@@ -1,6 +1,6 @@
 # /ai-for-sociology
 
-Computational social science for sociology: text and image classification, survey augmentation, social network analysis, and modeling social inequalities.
+Use AI for Sociology to classify texts, analyze networks and model social inequalities.
 
 ## Trigger
 

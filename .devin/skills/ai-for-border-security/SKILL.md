@@ -2,23 +2,27 @@
 
 ## Description
 
-Biometric identity verification, contraband and anomaly detection, and multi-sensor fusion at ports of entry.
+Screen cargo X-ray and CT imagery for anomalies and contraband while fusing biometrics to speed legitimate flows at ports of entry.
 
 ## When to use
 
 You are securing air, land, and sea borders with biometric checks,
 cargo inspection, and surveillance of people, vehicles, and vessels.
 
-## Key concepts
+## Usage
 
-- **Biometric verification**: facial and iris matching for entry/exit
-  and identity confirmation.
-- **Cargo and baggage screening**: X-ray and multi-spectral anomaly
-  detection for contraband.
-- **Perimeter and maritime surveillance**: radar, video, and seismic
-  sensor fusion.
-- **Risk-based targeting**: machine learning for traveler and shipment
-  risk scoring.
+- Verify identity from facial and iris matching at entry/exit.
+- Detect contraband in X-ray and multi-spectral cargo and baggage scans.
+- Fuse radar, video, and seismic data for perimeter and maritime surveillance.
+- Risk-score travelers and shipments for targeted inspection.
+
+## Steps
+
+1. Collect biometric, cargo-image, and sensor data with demographic fairness controls.
+2. Train a matcher or anomaly detector for the target inspection task.
+3. Audit false-match rates and disparate impact across demographic groups.
+4. Validate multi-modal fusion against officer baselines in operational conditions.
+5. Deploy with human adjudication and audit logs for accountability.
 
 ## Code pattern
 

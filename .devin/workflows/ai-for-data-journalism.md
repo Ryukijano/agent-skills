@@ -1,6 +1,6 @@
 # /ai-for-data-journalism
 
-Using AI to find stories in datasets, fact-check claims, generate visualizations, and produce data-driven reporting.
+Find, verify and visualize stories in public datasets, documents and real-time data streams to produce data-driven investigative reporting.
 
 ## Trigger
 

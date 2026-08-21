@@ -2,7 +2,7 @@
 
 ## Description
 
-Ridership prediction, service scheduling, bus and rail dispatch optimization, disruption recovery, and multi-modal transit analytics.
+Optimizes transit operations with ridership forecasts, dynamic scheduling, and real-time disruption recovery.
 
 ## When to use
 
@@ -10,19 +10,18 @@ You are optimizing bus/rail operations, forecasting ridership, planning schedule
 
 ## Usage
 
-- **Ridership forecasting**: predict passenger flows by route, stop, and time.
-- **Schedule optimization**: set headways, fleet size, and crew rosters.
-- **Disruption recovery**: re-route vehicles and inform passengers in real time.
-- **Demand-responsive transit**: match on-demand shuttles with riders.
-- **Multi-modal analytics**: integrate feeds from trains, buses, bikeshare, and ride-hail.
+- **Ridership forecasting**: predict passenger flows by route, stop, and time using GTFS, AFC, and weather data.
+- **Dynamic headways and scheduling**: adjust frequencies, fleet rosters, and vehicle assignments to match demand and reduce crowding.
+- **Disruption recovery**: re-route vehicles and push passenger alerts during incidents and special events.
+- **Demand-responsive transit**: match on-demand shuttles with riders and integrate trains, buses, bikeshare, and ride-hail feeds.
 
 ## Steps
 
-1. Ingest GTFS, AFC, AVL, and passenger count data.
-2. Build forecasting models for short- and medium-term demand.
-3. Simulate service scenarios and cost-service trade-offs.
-4. Deploy real-time decision support for dispatchers.
-5. Evaluate equity across routes and population groups.
+1. Ingest GTFS, AVL, AFC, and passenger count data.
+2. Build short- to medium-term forecasting models with seasonality, weather, and event features.
+3. Simulate headway, fleet, and route scenarios against cost and service targets.
+4. Deploy real-time decision support for dispatchers and operations centers.
+5. Backtest forecasts and measure on-time performance, crowding, and equity.
 
 ## Code pattern
 

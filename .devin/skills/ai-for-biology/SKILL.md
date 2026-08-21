@@ -2,18 +2,28 @@
 
 ## Description
 
-Deep learning for genomics, transcriptomics, proteomics, cell imaging, and biological sequence modeling.
+Use deep learning to analyze biological sequences, single-cell and spatial omics, microscopy images, and molecular structures.
 
 ## When to use
 
 You are analyzing biological sequences, microscopy images, single-cell data, or molecular structures.
 
-## Key concepts
+## Usage
 
-- **Sequence models for DNA/RNA/protein**: CNNs, transformers, and k-mer embeddings.
-- **Foundation models for biology**: ESM, AlphaFold, scBERT, HyenaDNA.
-- **Single-cell analysis**: cell type classification, perturbation prediction, trajectory inference.
-- **Biomedical image analysis**: segmentation, classification, and phenotyping.
+- Embed DNA, RNA, and protein sequences with transformer or CNN models (e.g., ESM, HyenaDNA).
+- Classify cell types and infer trajectories from single-cell RNA-seq or spatial transcriptomics.
+- Quantify proteins and cell phenotypes from multiplexed imaging or mass spectrometry proteomics.
+- Predict protein structures and interactions from sequences (e.g., AlphaFold, ESM embeddings).
+- Build disease or perturbation classifiers from multi-omics and imaging data.
+
+## Steps
+
+1. Load and quality-control sequence, omics, or imaging data for the target organism and tissue.
+2. Featurize biological inputs (k-mers, embeddings, expression matrices, image patches).
+3. Train or fine-tune a sequence, graph, or vision model for the prediction task (e.g., cell type, binding, biomarker).
+4. Integrate multiple modalities (genomics, transcriptomics, proteomics, imaging) to improve robustness.
+5. Control for batch effects and biological confounders with integration and harmonization methods.
+6. Validate predictions with held-out patients, datasets, or expert biological annotations.
 
 ## Code pattern
 

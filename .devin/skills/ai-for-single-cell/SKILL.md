@@ -2,19 +2,28 @@
 
 ## Description
 
-Single-cell transcriptomics, epigenomics, proteomics, and multi-omics integration, cell type annotation, trajectory inference, and foundation models.
+Use single-cell and multi-omics foundation models to annotate cell types, integrate batches, infer trajectories and predict perturbation responses.
 
 ## When to use
 
 You are working with single-cell genomics data (scRNA-seq, scATAC-seq, CITE-seq, or multi-omics) to annotate cell types, infer trajectories, integrate batches, or predict perturbation responses.
 
-## Key concepts
+## Usage
 
-- **scRNA-seq**: gene expression at single-cell resolution with dropout and high dimensionality.
-- **scATAC and multi-omics**: chromatin accessibility and surface proteins in the same cells.
-- **Batch correction and integration**: mapping new datasets to reference atlases.
-- **Trajectory inference**: pseudotime, RNA velocity, and differentiation dynamics.
-- **Foundation models**: scGPT, scBERT, and UCE for transfer learning and prediction.
+- **Preprocess data**: normalize scRNA-seq, scATAC-seq, CITE-seq, or multi-omics profiles.
+- **Remove artifacts**: filter ambient RNA, doublets, and low-quality cells before analysis.
+- **Annotate cells**: identify types and novel subpopulations with marker genes and foundation models.
+- **Integrate batches**: correct batch effects or map query data to reference atlases.
+- **Model dynamics**: infer trajectories, RNA velocity, and perturbation responses with scGPT or scFoundation.
+
+## Steps
+
+1. Load single-cell data, filter low-quality cells and doublets, and normalize counts.
+2. Select features and compute dimensionality reduction, neighbors, and embeddings.
+3. Cluster cells and annotate them with marker genes or reference atlases.
+4. Integrate multiple batches or project query data onto a reference while preserving biology.
+5. Infer trajectories and velocity, or predict perturbation responses with foundation models.
+6. Validate cell types and dynamics with orthogonal experiments or lineage-tracing data.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-biology
 
-Deep learning for genomics, transcriptomics, proteomics, cell imaging, and biological sequence modeling.
+Use deep learning to analyze biological sequences, single-cell and spatial omics, microscopy images, and molecular structures.
 
 ## Trigger
 

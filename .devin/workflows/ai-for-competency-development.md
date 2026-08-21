@@ -1,6 +1,6 @@
 # /ai-for-competency-development
 
-Competency-based education, skill gap analysis, adaptive credentialing, and AI-driven mastery and portfolio assessment.
+Use AI to design competency-based learning where demonstrated mastery, not seat time, drives progression and credentials.
 
 ## Trigger
 

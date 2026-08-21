@@ -1,6 +1,6 @@
 # /ai-for-literary-studies
 
-Computational stylistics, authorship attribution, genre and style analysis, and interpretive NLP for literary texts and corpora.
+Attribute authorship and detect stylistic patterns across literary corpora to study genre, influence, and intertextuality.
 
 ## Trigger
 

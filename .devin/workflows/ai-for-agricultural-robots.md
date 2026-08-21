@@ -1,6 +1,6 @@
 # /ai-for-agricultural-robots
 
-Perception, motion planning, and control for autonomous robots that weed, spray, scout, and harvest in field and greenhouse environments.
+Enable autonomous robots for weeding, harvesting, and navigation in crop fields.
 
 ## Trigger
 

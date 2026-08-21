@@ -2,19 +2,30 @@
 
 ## Description
 
-AI-assisted endoscopy, real-time polyp detection and characterization, colonoscopy quality, and colorectal cancer screening.
+Use AI for Gastroenterology to detect and characterize polyps in real-time colonoscopy and improve ADR.
 
 ## When to use
 
 You are building AI to assist endoscopy, detect polyps, classify diminutive lesions, or improve colorectal cancer screening quality.
 
-## Key concepts
 
-- **Computer-aided detection (CADe)**: real-time polyp detection during colonoscopy.
-- **Computer-aided characterization (CADx)**: optical diagnosis of adenoma vs. hyperplastic polyp.
+## Usage
+
+
+- **Computer-aided detection (CADe)**: Real-time polyp detection during colonoscopy.
+- **Computer-aided characterization (CADx)**: Optical diagnosis of adenoma vs. hyperplastic polyp.
 - **Adenoma detection rate (ADR)**, polyp detection rate, and sessile serrated lesion detection.
-- **Endoscopy video analysis**: object detection, tracking, and temporal smoothing.
+- **Endoscopy video analysis**: Object detection, tracking, and temporal smoothing.
 - **Resect-and-discard and preservation-and-discard strategies** for diminutive polyps.
+
+## Steps
+
+1. Collect and prepare endoscopy video frames and histopathology labels.
+2. Build AI to assist endoscopy.
+3. Detect polyps.
+4. Classify diminutive lesions.
+5. Validate by building a polyp detector and evaluate per-image sensitivity/specificity.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -36,12 +47,14 @@ with torch.no_grad():
     preds = model(tensor)
 ```
 
+
 ## Tuning notes
 
 - Train on diverse endoscopy systems, bowel preparations, and lighting conditions.
 - Optimize for real-time latency (< 100 ms per frame) on endoscopy processors.
 - Combine detection with histology classification for CADx.
 - Validate with ADR and polyp miss rate metrics in clinical studies.
+
 
 ## Verification
 

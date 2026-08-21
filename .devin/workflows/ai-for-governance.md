@@ -1,6 +1,6 @@
 # /ai-for-governance
 
-Public-service delivery, regulatory compliance, algorithmic accountability, participatory policy tools, and fair decision-support systems.
+Audit public-sector algorithms against governance, privacy, and fairness standards to ensure accountable and participatory AI deployment.
 
 ## Trigger
 

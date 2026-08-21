@@ -1,6 +1,6 @@
 # /ai-for-agriculture
 
-Crop monitoring, yield prediction, pest detection, and precision agriculture with ML and remote sensing.
+Use ML and remote sensing to map crops, predict yields, detect pests and diseases, and guide variable-rate precision agriculture.
 
 ## Trigger
 

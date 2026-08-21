@@ -1,6 +1,6 @@
 # /ai-for-corrosion
 
-Machine learning for corrosion rate prediction, corrosion-resistant alloy design, protective coating optimization, and infrastructure degradation monitoring.
+Use corrosion informatics and ML to predict rates, design alloys and coatings, analyze electrochemical data, and monitor infrastructure degradation.
 
 ## Trigger
 

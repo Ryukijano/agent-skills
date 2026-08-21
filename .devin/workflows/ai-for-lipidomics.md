@@ -1,6 +1,6 @@
 # /ai-for-lipidomics
 
-LC-MS/MS lipid species quantification, structural isomer resolution, lipid class normalization, and predictive modeling of lipid phenotypes.
+Use machine learning on LC-MS/MS and shotgun lipidomics data to annotate lipid classes, resolve isomers, normalize variation and link lipid profiles to phenotypes.
 
 ## Trigger
 

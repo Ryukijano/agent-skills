@@ -1,6 +1,6 @@
 # /ai-for-student-engagement
 
-Engagement prediction, behavioral analytics, early warning systems, intervention targeting, and motivational feedback.
+Use AI to identify disengaged or at-risk learners and trigger timely, evidence-based supports before performance declines.
 
 ## Trigger
 

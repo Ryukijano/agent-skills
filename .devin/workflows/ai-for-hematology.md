@@ -1,6 +1,6 @@
 # /ai-for-hematology
 
-Machine learning for blood cell morphology, leukemia and lymphoma classification, thrombosis and bleeding risk, transfusion optimization, and stem-cell transplant outcomes.
+Use machine learning to classify blood cells, predict leukemia and lymphoma outcomes, and optimize transfusion and transplant care.
 
 ## Trigger
 

@@ -2,20 +2,29 @@ SKILLS = [
     {
         "name": "ai-for-synthetic-biology",
         "title": "AI for Synthetic Biology",
-        "description": "Machine learning for genetic circuit design, promoter and RBS optimization, metabolic pathway engineering, and closed-loop Design-Build-Test-Learn biofoundry pipelines.",
+        "description": "AI accelerates closed-loop Design-Build-Test-Learn cycles by predicting and optimizing genetic parts, pathways, and strains before they are built.",
         "devin_body": r'''
 ## When to use
 
 You are engineering genetic circuits, optimizing promoters/RBSs, or automating a DBTL cycle for a synthetic biology project.
 
-## Key concepts
+## Usage
 
-- **Genetic parts**: promoters, ribosome binding sites (RBS), terminators, coding sequences, and their context dependence.
-- **DBTL cycle**: Design, Build, Test, Learn closed-loop iteration.
-- **Predictive part models**: regression and sequence models trained on part activity data.
-- **Metabolic engineering**: pathway design, flux balance analysis, retro-biosynthesis.
-- **Active learning / Bayesian optimization**: pick the next strain or part to test.
-- **Biological constraints**: chassis dependency, toxicity, genetic load, and modularity limits.
+- **Genetic-part prediction**: use regression and sequence models to score promoter, RBS, terminator, and coding-sequence activity in a chosen chassis.
+- **DBTL acceleration**: close the Design-Build-Test-Learn loop by feeding assay data back into design models.
+- **Pathway and strain optimization**: pick the next construct to build with active learning or Bayesian optimization.
+- **Biological-constraint modeling**: account for chassis dependency, toxicity, genetic load, and context effects.
+- **Assay interpretation**: apply ML to plate-reader, flow-cytometry, and proteomics outputs for phenotype calling.
+- **Closed-loop biofoundry execution**: integrate predictions with robotic build and test workflows.
+
+## Steps
+
+1. Define the target function, host chassis, and constraints (titer, toxicity, genetic load).
+2. Curate and encode genetic parts and historical part-activity data for that chassis.
+3. Train predictive models for part activity, pathway flux, or strain phenotype.
+4. Use active learning or Bayesian optimization to propose the next set of constructs.
+5. Build and assay the proposed designs, then feed the measurements back into the model.
+6. Validate top performers and transfer the best design to scaled production.
 
 ## Code pattern
 
@@ -69,20 +78,29 @@ print(model.predict(one_hot(new_seq).reshape(1, -1)))
     {
         "name": "ai-for-protein-design",
         "title": "AI for Protein Design",
-        "description": "Inverse folding, generative backbone design, and binder engineering with ProteinMPNN, RFdiffusion, structure predictors, and Rosetta validation.",
+        "description": "Generate de novo binders and enzymes from target structures or reactions using inverse folding and diffusion models.",
         "devin_body": r'''
 ## When to use
 
 You need a protein sequence for a fixed backbone, a de novo protein binder, or a new scaffold with specified structure or function.
 
-## Key concepts
+## Usage
 
-- **Inverse folding**: predict an amino-acid sequence that folds into a target backbone.
-- **ProteinMPNN**: message-passing neural network for sequence design.
-- **RFdiffusion**: diffusion model for generating protein backbones and binders.
-- **Structure prediction**: AlphaFold2, ESMFold, or OpenFold to validate designs.
-- **Interface metrics**: pLDDT, pAE, interface RMSD, binding energy.
-- **Mutagenesis**: design focused libraries and assess stability.
+- **Inverse folding**: use ProteinMPNN or similar models to predict sequences for a fixed backbone.
+- **Backbone generation**: design de novo scaffolds or binders around a target motif with RFdiffusion.
+- **In silico validation**: refold designed sequences with AlphaFold2, ESMFold, or OpenFold and compute pLDDT/pAE/scRMSD.
+- **Interface filtering**: rank candidates by interface pLDDT, pAE, shape complementarity, and hotspot residues.
+- **Focused mutagenesis**: build stability or affinity libraries around promising designs.
+- **Experimental triage**: move high-confidence binders to expression and biophysical assays (BLI, SPR, yeast display).
+
+## Steps
+
+1. Specify the target structure, epitope, or binding hotspot and the desired binder length/constraints.
+2. Generate candidate backbones with RFdiffusion conditioned on the target motif or interface.
+3. Design amino-acid sequences for each backbone using ProteinMPNN.
+4. Refold designed sequences and compute self-consistency metrics (pLDDT, pAE, scRMSD, scTM).
+5. Rank candidates by interface quality, hotspot coverage, and predicted expressability.
+6. Express and validate top candidates with binding or activity assays (BLI, SPR, crystallography).
 
 ## Code pattern
 
@@ -134,20 +152,29 @@ subprocess.run([
     {
         "name": "ai-for-immunology",
         "title": "AI for Immunology",
-        "description": "Machine learning for adaptive immune receptor repertoires, epitope-MHC binding, immune cell phenotyping, and vaccine/immunotherapy design.",
+        "description": "Predict MHC-bound epitopes and vaccine candidates from receptor and omic data to prioritize immunotherapy and prophylaxis designs.",
         "devin_body": r'''
 ## When to use
 
 You are analyzing B-cell or T-cell receptor repertoires, predicting epitope binding, or prioritizing vaccine/immunotherapy candidates.
 
-## Key concepts
+## Usage
 
-- **AIRR**: adaptive immune receptor repertoire sequencing.
-- **BCR/TCR clonotypes**: V(D)J rearranged receptor sequences.
-- **MHC binding**: peptide presentation by class I and class II MHC molecules.
-- **Epitope prediction**: mapping receptors to antigens.
-- **Immune cell phenotyping**: flow/mass cytometry, single-cell RNA/CITE-seq.
-- **Vaccine design**: immunogen selection, epitope mapping, mRNA optimization.
+- **MHC/peptide prediction**: predict peptide presentation for class I and II alleles using MHCflurry/NetMHCpan.
+- **AIRR analysis**: parse BCR/TCR clonotypes and link repertoire features to disease or response.
+- **Receptor-antigen specificity**: model TCR/BCR recognition of epitopes and peptide-MHC complexes.
+- **Vaccine and immunotherapy design**: select immunogens, map epitopes, and optimize mRNA or receptor constructs.
+- **Immune-cell phenotyping**: classify cell types and states from flow, mass cytometry, or single-cell data.
+- **Safety checking**: assess cross-reactivity, autoimmunity risk, and off-target binding of designed receptors.
+
+## Steps
+
+1. Gather peptide, MHC allele, receptor, or repertoire data and link them to the clinical question (vaccine, therapy, biomarker).
+2. Predict peptide presentation and binding for candidate epitopes with allele-specific models.
+3. Model TCR/BCR specificity using sequence, structure, or generative models (e.g., TCR-TRANSLATE, AlphaFold 3, HERMES).
+4. Integrate immune repertoire and clinical labels to identify disease-associated clonotypes or cell states.
+5. Prioritize vaccine epitopes or therapeutic receptors and check cross-reactivity and safety.
+6. Validate with MHC multimer, ELISPOT, tetramer, or binding assays and refine the design.
 
 ## Code pattern
 
@@ -189,20 +216,29 @@ print(result[['peptide', 'allele', 'prediction']])
     {
         "name": "ai-for-neuroscience",
         "title": "AI for Neuroscience",
-        "description": "Deep learning for neural recordings, brain decoding, neuroimaging analysis, connectomics, and NeuroAI foundation models.",
+        "description": "Decode speech and motor intent from electrocorticography to restore communication and movement via brain-computer interfaces.",
         "devin_body": r'''
 ## When to use
 
 You are analyzing EEG, MEG, fMRI, calcium imaging, or spike data and want to decode neural states, detect biomarkers, or build NeuroAI models.
 
-## Key concepts
+## Usage
 
-- **Neural encoding / decoding**: mapping stimuli to neural activity or vice versa.
-- **Spike sorting**: separating single-unit activity from extracellular recordings.
-- **Time-series models**: CNNs, RNNs, transformers for neural signals.
-- **Neuroimaging pipelines**: fMRI/EEG preprocessing with MNE/FSL/AFNI.
-- **Connectomics**: mapping structural and functional brain connectivity.
-- **NeuroAI benchmarks**: NeuralBench, brain foundation models.
+- **Neural decoding**: predict cognitive states, movements, or stimuli from EEG, MEG, fMRI, or spike data.
+- **Foundation models**: apply self-supervised models (DIVER-1, NeuroSTORM, AdaBrain) for cross-subject/cross-device representations.
+- **Signal preprocessing**: use MNE, FSL, or AFNI to standardize, filter, and artifact-reject recordings.
+- **Biomarker discovery**: identify neural signatures that correlate with disease, behavior, or treatment response.
+- **Brain-computer interfaces**: build real-time decoders and map them to output devices or feedback.
+- **Connectomics**: model structural and functional brain connectivity from imaging or electrophysiology.
+
+## Steps
+
+1. Choose the neural modality and task (e.g., sleep staging, motor BCI, naturalistic decoding) and curate datasets.
+2. Preprocess signals: re-reference, filter, artifact-reject, and segment into epochs or trials.
+3. Extract features (band power, spectrograms, connectivity) or load pretrained foundation-model embeddings.
+4. Train a task-specific decoder with cross-subject or leave-one-subject validation.
+5. Evaluate on held-out data and compare to expert or clinical annotations (accuracy, kappa, AUROC).
+6. Deploy on the target hardware or device and validate in a real-time, closed-loop setting.
 
 ## Code pattern
 
@@ -262,20 +298,29 @@ print(model)
     {
         "name": "ai-for-precision-medicine",
         "title": "AI for Precision Medicine",
-        "description": "Multimodal machine learning for personalized diagnosis, treatment selection, risk prediction, and integration of genomics, EHRs, imaging, and wearables.",
+        "description": "Match patients to genotype-tailored therapies and clinical trials by integrating EHR, genomic, and biomarker data.",
         "devin_body": r'''
 ## When to use
 
 You need to build a personalized risk model, recommend therapy, integrate multi-omic and clinical data, or stratify patients for a trial.
 
-## Key concepts
+## Usage
 
-- **Multi-modal patient data**: genomics, EHRs, medical imaging, wearables, lab tests.
-- **Biomarker discovery**: identifying predictive, prognostic, or pharmacodynamic markers.
-- **Treatment response prediction**: matching patients to therapies.
-- **Risk stratification**: time-to-event models, survival analysis.
-- **Federated learning**: training across institutions without centralizing sensitive data.
-- **Explainability and fairness**: clinical AI must be interpretable and unbiased.
+- **Multi-modal integration**: fuse genomics, EHR, imaging, wearable, and lab data into a unified patient representation.
+- **Treatment matching**: predict response, toxicity, or resistance to guide therapy selection.
+- **Risk stratification**: estimate survival, progression, or adverse-event risk with time-to-event models.
+- **Biomarker discovery**: find predictive, prognostic, or pharmacodynamic markers across cohorts.
+- **Federated learning**: train models across institutions while keeping patient data local.
+- **Clinical explainability**: audit models for bias and align predictions with clinical guidelines.
+
+## Steps
+
+1. Define the clinical decision (diagnosis, risk, or therapy response) and the relevant modalities.
+2. Harmonize multi-omic, imaging, and clinical data; handle missing values, batch effects, and site differences.
+3. Train a multimodal model (deep fusion, graph, or survival) with time-split or external validation.
+4. Evaluate predictive performance and calibration on an external cohort.
+5. Interpret model outputs with SHAP, attention, or feature importance and compare with clinical knowledge.
+6. Deploy as decision support and monitor for distribution drift, bias, and changing practice patterns.
 
 ## Code pattern
 
@@ -324,20 +369,29 @@ print('AUC-ROC:', roc_auc_score(y_test, y_proba))
     {
         "name": "ai-for-biofoundries",
         "title": "AI for Biofoundries",
-        "description": "AI/ML-driven lab automation, robotic liquid handling, closed-loop DBTL, and self-driving laboratories for synthetic biology.",
+        "description": "Combine robotic automation, LIMS, and active learning to run closed-loop Design-Build-Test-Learn campaigns at scale.",
         "devin_body": r'''
 ## When to use
 
 You are running high-throughput synthetic biology experiments in a biofoundry, automating liquid handling, or closing the DBTL loop with predictive models.
 
-## Key concepts
+## Usage
 
-- **Biofoundry infrastructure**: robotic liquid handlers, plate readers, bioreactors, LIMS.
-- **DBTL automation**: design, build, test, learn cycles executed with minimal human intervention.
-- **Self-driving labs**: active learning + automation to select and run the next experiments.
-- **Workflow abstraction**: unit operations, workflows, projects.
-- **Digital twins**: models that simulate expected experimental outcomes.
-- **Data standards**: metadata capture, FAIR principles, programmable APIs.
+- **Robotic execution**: use liquid-handling robots, plate readers, and bioreactors to build and assay designs at scale.
+- **DBTL automation**: run Design-Build-Test-Learn cycles with minimal human intervention.
+- **Self-driving labs**: let active-learning agents propose and schedule the next experiments.
+- **Workflow abstraction**: encode protocols as unit operations and reusable workflows in a LIMS/scheduler.
+- **Surrogate/digital-twin modeling**: predict titers, yields, or activity from process parameters.
+- **FAIR data capture**: link samples, designs, and results through metadata, barcodes, and programmable APIs.
+
+## Steps
+
+1. Define the workflow (e.g., strain construction, enzyme screening, medium optimization) and map unit operations.
+2. Encode protocols for robotic liquid handling, incubation, and analytical instruments in a LIMS/scheduler.
+3. Run an initial design-of-experiments or active-learning batch to generate a training set.
+4. Train surrogate models from instrument outputs (titers, fluorescence, growth) and process features.
+5. Use Bayesian optimization to propose the next physical constructs to build and test.
+6. Analyze results, update the model, and scale the best-performing designs.
 
 ## Code pattern
 
@@ -393,20 +447,29 @@ print('Next best design:', result.x)
     {
         "name": "ai-for-rare-disease",
         "title": "AI for Rare Disease",
-        "description": "AI for rare disease diagnosis, target prioritization, drug repurposing, natural history modeling, and diagnostic-odyssey support.",
+        "description": "Integrate phenotypes, genotypes, and medical literature to shorten the diagnostic odyssey and prioritize rare-disease candidates.",
         "devin_body": r'''
 ## When to use
 
 You are diagnosing an undiagnosed patient, prioritizing drug targets, or building models for rare and ultra-rare diseases with limited data.
 
-## Key concepts
+## Usage
 
-- **Diagnostic odyssey**: long, multi-specialty path to a rare disease diagnosis.
-- **Phenotype ontologies**: Human Phenotype Ontology (HPO) terms.
-- **Small-sample ML**: transfer learning, federated learning, synthetic data.
-- **Genotype-phenotype integration**: exome/variant + HPO matching.
-- **Target prioritization**: genetic, functional, and literature evidence.
-- **Drug repurposing for rare diseases**: identifying existing drugs for new rare indications.
+- **Phenotype-driven diagnosis**: match HPO terms, clinical notes, and images to rare-disease knowledge bases.
+- **Genotype-phenotype integration**: combine exome/variant data with phenotype matching for gene/disease ranking.
+- **Small-sample learning**: apply transfer learning, federated learning, or synthetic data to limited rare-disease cohorts.
+- **Literature synthesis**: use ML or LLM tools to surface disease-gene evidence from PubMed and case reports.
+- **Target and therapy prioritization**: rank candidate genes, pathways, or repurposed drugs for rare diseases.
+- **Explainable differential diagnosis**: produce transparent, clinician-reviewable reasoning for each candidate.
+
+## Steps
+
+1. Assemble patient phenotypes (HPO terms, free text, imaging) and genomic variants (VCF/Exomiser).
+2. Embed and match phenotypes to disease and gene knowledge bases plus primary literature.
+3. Rank candidate diagnoses or genes using ML or LLM-based reasoning.
+4. Integrate genotype evidence (pathogenicity, inheritance, allele frequency) with phenotype concordance.
+5. Generate an explainable differential diagnosis with literature links for expert adjudication.
+6. Validate against external case series, reanalysis, or functional studies.
 
 ## Code pattern
 
@@ -456,20 +519,29 @@ print([clf.classes_[i] for i in top3])
     {
         "name": "ai-for-longevity",
         "title": "AI for Longevity",
-        "description": "Biological aging clocks, biomarkers of aging, longevity intervention mining, and integrative multi-omic models of aging.",
+        "description": "Estimate biological age and discover longevity interventions by applying epigenetic clocks and multi-omic aging models to molecular data.",
         "devin_body": r'''
 ## When to use
 
 You are estimating biological age, mining longevity interventions, or integrating multi-omic data to understand aging trajectories.
 
-## Key concepts
+## Usage
 
-- **Aging clocks**: predictors trained on DNA methylation, transcriptomics, proteomics, etc.
-- **Biomarkers of aging**: clocks that correlate with mortality and morbidity.
-- **Longevity interventions**: drugs, diet, and genetic manipulations that extend lifespan.
-- **Multi-omic integration**: DNA methylation + RNA + metabolites + clinical labs.
-- **Survival analysis**: Cox models, accelerated failure time.
-- **Comparative biology**: cross-species aging mechanisms.
+- **Biological-age estimation**: apply DNA methylation, transcriptomic, or proteomic clocks to estimate biological age.
+- **Aging-biomarker discovery**: identify clocks and EpiScores that correlate with mortality, frailty, or disease risk.
+- **Intervention mining**: screen public molecular compendia for drugs, diets, or genetic manipulations that modify biological age.
+- **Multi-omic integration**: combine DNA methylation, RNA, metabolites, and clinical lab data.
+- **Longitudinal tracking**: use repeated measures to assess within-individual aging trajectories.
+- **Outcome validation**: test clock predictions against survival, health outcomes, or experimental models.
+
+## Steps
+
+1. Select the tissue/cell type and aging clock(s) appropriate for the biological question (e.g., Horvath, GrimAge, PhenoAge, DunedinPACE).
+2. Preprocess and impute missing CpGs or features against a reference panel.
+3. Compute biological age and residualized age-acceleration scores for each sample.
+4. Correlate predicted age with interventions, exposures, or health outcomes in longitudinal or cross-sectional data.
+5. Use systematic reanalysis or knowledge-graph tools to mine candidate geroprotective interventions.
+6. Validate top candidates in independent cohorts or experimental models and update the clock as needed.
 
 ## Code pattern
 
@@ -514,20 +586,29 @@ print(adata.obs[['horvath2013', 'hannum']].head())
     {
         "name": "ai-for-nutrition",
         "title": "AI for Nutrition",
-        "description": "Machine learning and generative AI for personalized nutrition, dietary assessment, meal planning, food recognition, and nutrition-health modeling.",
+        "description": "Predict personal metabolic responses and automate dietary assessment to deliver personalized nutrition and meal planning.",
         "devin_body": r'''
 ## When to use
 
 You are building a personalized diet recommendation system, analyzing food intake, or predicting metabolic response from multi-modal data.
 
-## Key concepts
+## Usage
 
-- **Precision nutrition**: tailoring dietary advice to genetics, microbiome, metabolome, and lifestyle.
-- **Dietary assessment**: food diaries, image-based food logging, automated nutrient estimation.
-- **Food effect prediction**: postprandial glucose, insulin, and metabolite response.
-- **Meal planning**: constraint optimization over nutrients, preferences, and costs.
-- **Compositional data**: macronutrient ratios sum to 100%; use log-ratios or Dirichlet models.
-- **Bias and equity**: cultural, socioeconomic, and access factors affect recommendations.
+- **Postprandial response prediction**: predict personal glucose, insulin, or metabolite responses from meals and participant features.
+- **Image-based dietary assessment**: recognize foods and estimate portions/nutrients from photos using computer vision or multimodal LLMs.
+- **Personalized meal planning**: optimize menus against nutrient targets, preferences, costs, and health constraints.
+- **Diet-health modeling**: link dietary intake, microbiome, metabolome, and clinical outcomes.
+- **Compositional-data handling**: respect macronutrient sum-to-one with log-ratios or Dirichlet models.
+- **Equity-aware recommendations**: account for cultural, socioeconomic, and access factors in advice.
+
+## Steps
+
+1. Collect multimodal input (food logs/images, CGM, anthropometrics, microbiome, blood markers).
+2. Standardize and clean dietary data: meal timing, portion estimation, and macronutrient content.
+3. Train a personalized PPGR or nutrient model with per-user features and cross-validation.
+4. Generate personalized meal or diet recommendations by ranking predicted metabolic responses.
+5. Validate predictions against continuous glucose monitoring, doubly labeled water, or clinical biomarkers.
+6. Run a dietary intervention trial and compare glycemic/metabolic outcomes to standard advice.
 
 ## Code pattern
 
@@ -578,20 +659,29 @@ print(importance.sort_values(ascending=False))
     {
         "name": "ai-for-sleep",
         "title": "AI for Sleep",
-        "description": "Machine learning for sleep staging, sleep disorder detection, wearable PSG analysis, and sleep health monitoring.",
+        "description": "Automate sleep staging and sleep-disordered-breathing detection from PSG, wearables, and home sleep tests with deep learning.",
         "devin_body": r'''
 ## When to use
 
 You are analyzing polysomnography (PSG), wearable sleep recordings, or building a tool to detect sleep disorders and stages.
 
-## Key concepts
+## Usage
 
-- **Sleep stages**: W, N1, N2, N3, REM; scored from EEG/EOG/EMG.
-- **PSG**: gold-standard overnight multi-channel recording.
-- **Wearable sleep monitoring**: actigraphy, PPG, single-channel EEG headbands.
-- **Sleep disorders**: obstructive sleep apnea, insomnia, narcolepsy, restless legs.
-- **Sleep foundation models**: large-scale pre-training on PSG/EEG data.
-- **Event detection**: apneas, hypopneas, arousals, limb movements.
+- **Sleep staging**: score 30-second epochs into W, N1, N2, N3, and REM from PSG, wearables, or EEG headbands.
+- **Sleep-disordered-breathing detection**: detect and classify apneas, hypopneas, and arousals.
+- **AHI estimation**: estimate apnea-hypopnea index and severity from oximetry, PPG, or other sensors.
+- **Foundation models**: pre-train on large PSG/EEG corpora for cross-cohort and cross-device transfer.
+- **Event-level analysis**: identify arousals, limb movements, and respiratory events with precise timing.
+- **Clinical validation**: compare wearable or automated scoring to AASM expert-annotated PSG.
+
+## Steps
+
+1. Collect and annotate PSG or wearable recordings following AASM scoring rules.
+2. Preprocess signals (filter, resample, align modalities) and create 30-second epochs with context windows.
+3. Train a temporal/sequence model (CNN, ResNet+TCN+LSTM, Mamba, or transformer) for staging or event detection.
+4. Evaluate against expert annotators using epoch/stage agreement (Cohen's kappa, AUROC, AUPRC).
+5. Validate on external cohorts and compare wearable-only models to gold-standard PSG.
+6. Deploy for home sleep testing or clinical decision support with nightly risk reports.
 
 ## Code pattern
 
@@ -646,20 +736,29 @@ clf = RandomForestClassifier(n_estimators=100)
     {
         "name": "ai-for-digital-organism",
         "title": "AI for Digital Organism",
-        "description": "Computational models, simulations, and multiscale foundation models of living systems as AI-driven digital organisms.",
+        "description": "Build multiscale AI models that simulate living systems from molecules to organisms to guide biology and medicine in silico.",
         "devin_body": r'''
 ## When to use
 
 You want to simulate evolution, cellular behavior, or multiscale biological systems in silico as an alternative to risky or expensive wet-lab experiments.
 
-## Key concepts
+## Usage
 
-- **Digital organisms**: self-replicating programs or agents that evolve in a virtual environment.
-- **Artificial life (ALife)**: simulation of living systems and open-ended evolution.
-- **Multiscale foundation models**: AIDO-style integration from molecules to organisms.
-- **Agent-based models**: individuals interact, compete, and reproduce.
-- **Genotype-phenotype maps**: how genotypic changes translate to phenotypes.
-- **Evolutionary dynamics**: selection, mutation, drift, robustness, evolvability.
+- **Multiscale simulation**: integrate DNA, RNA, protein, cell, and phenotype models across biological scales.
+- **In silico perturbation**: predict the effects of mutations, drugs, or environmental changes at multiple levels.
+- **Evolutionary simulation**: study selection, mutation, drift, robustness, and evolvability in digital organisms.
+- **Agent-based modeling**: simulate individuals that interact, compete, and reproduce.
+- **AIDO-style workflows**: use YAML-driven frameworks to assemble and benchmark component foundation models.
+- **Wet-lab guidance**: compare in silico predictions to first-principles biology and targeted experiments.
+
+## Steps
+
+1. Define the biological scale and question (molecular, cellular, tissue, organism, or population).
+2. Assemble multimodal training data (sequences, structures, omics, images, phenotypes, spatial-temporal data).
+3. Select or pretrain component foundation models for each modality and scale.
+4. Integrate models via hierarchical representation propagation, nested fine-tuning, or cross-scale links.
+5. Run in silico perturbation or simulation experiments and compare outcomes to known biology.
+6. Validate key predictions with targeted wet-lab experiments and iterate the multiscale model.
 
 ## Code pattern
 
@@ -711,20 +810,29 @@ for step in range(100):
     {
         "name": "ai-for-drug-repurposing",
         "title": "AI for Drug Repurposing",
-        "description": "Graph ML, knowledge graphs, LLMs, and transcriptomics for identifying new indications for existing drugs.",
+        "description": "Predict new indications for existing drugs by reasoning over biomedical knowledge graphs and transcriptomic signatures.",
         "devin_body": r'''
 ## When to use
 
 You want to find a new therapeutic use for an existing drug, rank candidates for a disease, or explain mechanistic rationale for off-label use.
 
-## Key concepts
+## Usage
 
-- **Drug repurposing (repositioning)**: finding new indications for approved drugs.
-- **Knowledge graphs**: nodes for drugs, diseases, genes, pathways; edges for known relations.
-- **Graph neural networks**: TxGNN and similar models for zero-shot indication prediction.
-- **Signature matching**: match disease and drug transcriptomic signatures (e.g., LINCS, CMap).
-- **Mechanistic grounding**: pathways, targets, and literature support.
-- **Contraindications**: predicting when a repurposed drug is unsafe.
+- **Knowledge-graph reasoning**: use GNNs (e.g., TxGNN) to rank drug-disease indications and contraindications.
+- **Transcriptomic signature matching**: match drug-perturbation and disease expression profiles (LINCS, CMap).
+- **Real-world evidence integration**: combine in silico predictions with EHR, claims, or trial data.
+- **Mechanistic explanation**: generate multi-hop graph paths or literature rationales for a prediction.
+- **Safety filtering**: flag contraindications, adverse events, and pharmacokinetic concerns.
+- **Candidate triage**: prioritize approved drugs with known human safety for faster experimental validation.
+
+## Steps
+
+1. Build or load a biomedical knowledge graph (diseases, drugs, genes, pathways) and/or a transcriptomic compendium.
+2. Train or apply a graph/Siamese model to embed drugs and diseases (e.g., TxGNN, RPath, CellAwareGNN).
+3. For a query disease, retrieve top drug candidates and compute indication and contraindication scores.
+4. Cross-check candidates against opposing transcriptomic signatures and supporting literature.
+5. Generate multi-hop mechanistic explanations and prioritize by safety and contraindication profiles.
+6. Validate in cell or animal models, retrospective EHR, or clinical-trial registries.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-orthopedics
 
-Machine learning for fracture detection and classification, osteoarthritis grading, joint replacement outcomes, spine analysis, and sports injury risk.
+Use machine learning to detect fractures, grade osteoarthritis, predict joint replacement outcomes, and plan orthopedic surgery.
 
 ## Trigger
 

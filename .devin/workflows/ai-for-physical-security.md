@@ -1,6 +1,6 @@
 # /ai-for-physical-security
 
-Perimeter intrusion detection, access control analytics, video anomaly detection, and AI-augmented guard operations.
+Use machine learning to detect perimeter intrusions, analyze access-control anomalies, spot video anomalies, and augment guard operations while respecting privacy.
 
 ## Trigger
 

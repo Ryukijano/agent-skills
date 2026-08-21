@@ -2,18 +2,27 @@
 
 ## Description
 
-Neural and symbolic program synthesis from examples, sketches, and natural language, including neurosymbolic and LLM-based code generation.
+Generate executable programs from natural-language descriptions or input-output examples for non-expert users and new APIs.
 
 ## When to use
 
 You want to generate programs from examples, partial sketches, or natural language, or combine symbolic search with neural models for reliable code generation.
 
-## Key concepts
+## Usage
 
-- **Programming by example (PBE)**: synthesize programs consistent with input-output examples.
-- **Neural program synthesis**: seq2seq or transformer models that generate code from specifications.
-- **Neurosymbolic synthesis**: combine symbolic search, constraint solving, and neural priors.
-- **Sketching and partial programs**: fill holes in a user-provided program template.
+- Synthesize programs consistent with input-output examples using programming by example (PBE).
+- Generate code from natural-language specifications or partial sketches with transformer models.
+- Combine symbolic search, constraint solving, and neural priors for reliable synthesis.
+- Fill holes in user-provided program templates while satisfying types and constraints.
+
+## Steps
+
+1. Collect input-output examples, sketches, or natural-language specifications for the target program.
+2. Choose a synthesis approach: enumerative search, constraint solving, LLM generation, or neurosymbolic search.
+3. Train or prompt the model with few-shot examples and constrain output with a grammar or type system.
+4. Filter candidates by executing tests and, where possible, verifying them with a symbolic checker.
+5. Measure pass@k and compare the synthesizer to a human-written or symbolic baseline.
+6. Integrate the synthesis loop into an IDE, API, or code-generation assistant.
 
 ## Code pattern
 

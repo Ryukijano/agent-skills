@@ -2,19 +2,28 @@
 
 ## Description
 
-3D genome organization, Hi-C analysis, protein structure prediction with deep learning, and multiscale structural modeling.
+Use deep learning and polymer modeling to predict 3D genome organization, protein structures and chromatin conformations from sequence and contact data.
 
 ## When to use
 
 You are studying the three-dimensional organization of genomes, protein structures, or chromatin conformations and need to predict, analyze, or model spatial molecular structures.
 
-## Key concepts
+## Usage
 
-- **3D genome organization**: chromatin loops, topologically associating domains (TADs), and A/B compartments.
-- **Hi-C and related assays**: chromosome conformation capture at scale.
-- **Protein structure prediction**: AlphaFold and related deep learning models.
-- **Multiscale modeling**: integrating sequence, imaging, and polymer physics.
-- **Structural variation**: linking genome folding to gene regulation and disease.
+- **Predict genome folding**: model chromatin compartments, TADs, loops, and enhancer-promoter contacts.
+- **Analyze contact data**: process Hi-C, Micro-C, and capture-C at multiple resolutions.
+- **Predict protein structures**: run AlphaFold or related models for relevant genes.
+- **Model structural variation**: assess the impact of variants on 3D organization and regulation.
+- **Integrate scales**: combine sequence, imaging, and polymer physics for multiscale modeling.
+
+## Steps
+
+1. Align and normalize Hi-C or Micro-C data and choose resolution for the target feature size.
+2. Call TADs, compartments, and loops with multiple tools and compare overlaps.
+3. Train or apply a sequence-based 3D genome model such as Akita, Orca, or C.Origami.
+4. Predict protein structures for relevant genes using AlphaFold or related models.
+5. Score structural variants and design in silico perturbations of regulatory elements.
+6. Validate 3D predictions with FISH, microscopy, or gene-expression changes.
 
 ## Code pattern
 

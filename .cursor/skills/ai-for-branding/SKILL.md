@@ -2,19 +2,26 @@
 
 ## Description
 
-Brand strategy, visual identity, brand voice, naming, and AI-assisted brand co-creation with human curation.
+Use AI to co-create brand strategy, name and tagline options, visual identity concepts, and brand voice guides with human designers in the loop.
 
 ## When to use
 
 You are developing or refreshing a brand: naming, logos, taglines, visual identity, brand architecture, or brand voice.
 
-## Key concepts
+## Usage
 
-- **Brand strategy and positioning**: audience, promise, differentiation, and values.
-- **Visual identity and design systems**: logos, color, typography, and imagery.
-- **Brand voice and messaging**: tone, personality, and cross-channel consistency.
-- **AI co-creation**: concept generation, mood boards, and style exploration.
-- **Governance and ethics**: trademark checks, cultural sensitivity, and authenticity.
+- Generate naming and tagline candidates and screen for conflicts.
+- Explore visual identity concepts, color palettes, and mood boards.
+- Draft and score brand voice messages across channels.
+- Run trademark and cultural-sensitivity checks before launch.
+
+## Steps
+
+1. Document audience, promise, values, and differentiation for the brand.
+2. Generate a large set of name, tagline, and visual concepts.
+3. Screen candidates for trademark, domain, and cultural conflicts.
+4. Develop a brand voice guide and score AI-written messages for consistency.
+5. Run a perception survey and refine with human designers before finalizing.
 
 ## Code pattern
 

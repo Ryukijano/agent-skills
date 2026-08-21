@@ -2,19 +2,27 @@
 
 ## Description
 
-AI/ML for 5G RAN optimization, network slicing, beam management, mobility, and core automation.
+Optimize 5G RAN, network slicing, and beam management with AI and NWDAF.
 
 ## When to use
 
 You are optimizing 5G RAN, core, or transport functions such as network slicing, beam management, mobility, or resource allocation.
 
-## Key concepts
+## Usage
 
-- **AI/ML in 3GPP 5G-Advanced**: NWDAF, RAN intelligence, and network-data analytics.
-- **Network slicing**: slice admission, isolation, and resource orchestration.
-- **Massive MIMO and beam management**: ML for beam selection, tracking, and failure prediction.
-- **Mobility and handover optimization**: predict handover timing and target cells.
-- **RAN resource allocation**: power, spectrum, and compute for eMBB, URLLC, and mMTC.
+- Predict RAN congestion and optimize beam prediction (3GPP Rel-18/19).
+- Manage network slices with NWDAF and O-RAN RIC.
+- Improve handover, coverage, and capacity optimization.
+- Detect anomalies in 5G core and RAN KPIs.
+- Optimize energy and resource allocation.
+
+## Steps
+
+1. Collect 5G RAN and core performance data.
+2. Engineer beam, cell, slice, and mobility features.
+3. Train prediction, classification, or RL models.
+4. Deploy xApps/rApps in O-RAN or NWDAF frameworks.
+5. Validate with 3GPP KPIs and drive tests.
 
 ## Code pattern
 

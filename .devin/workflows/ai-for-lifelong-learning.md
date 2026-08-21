@@ -1,6 +1,6 @@
 # /ai-for-lifelong-learning
 
-Continuous skill development, career-aligned learning pathways, micro-credentials, and AI support for adult and professional learners.
+Use AI to helping adult learners, working professionals, or career-switchers acquire new skills and credentials throughout their lives.
 
 ## Trigger
 

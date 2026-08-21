@@ -1,6 +1,6 @@
 # /ai-for-personal-finance
 
-Budget optimization, cash-flow forecasting, robo-advisory, credit scoring, and personalized savings and investment guidance for household financial decisions.
+Use machine learning to categorize transactions, forecast cash flow, build robo-advisory portfolios, and guide debt and savings decisions for households.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-digital-health
 
-Consumer-facing health apps, wearable biosensors, remote monitoring, patient portals, and data-driven digital wellness interventions.
+Use AI to build or evaluate consumer-facing digital health tools, integrate wearable or sensor data, or conducting remote monitoring and digital-biomarker studies.
 
 ## Trigger
 

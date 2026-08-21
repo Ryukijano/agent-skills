@@ -1,6 +1,6 @@
 # /ai-for-data-sharing
 
-Federated learning, data sharing incentives, interoperability, trust, and privacy-preserving collaboration for shared data ecosystems.
+Enable privacy-preserving collaboration and data exchange across organizations.
 
 ## Trigger
 

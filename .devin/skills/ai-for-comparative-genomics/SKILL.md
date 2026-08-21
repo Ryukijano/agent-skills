@@ -2,19 +2,28 @@
 
 ## Description
 
-Cross-species and population genome comparison, orthology inference, phylogenomics, selection scans, and pan-genome analysis.
+Use machine learning and phylogenomics to compare genomes across species and populations, infer orthology, detect selection and analyze pan-genomes.
 
 ## When to use
 
 You are comparing genomes across species, strains, or populations to infer evolution, identify conserved regions, build phylogenies, or study pan-genomes.
 
-## Key concepts
+## Usage
 
-- **Homology and orthology**: orthologous genes, paralogs, and orthogroups.
-- **Genome alignment and synteny**: whole-genome and multiple alignments.
-- **Phylogenetics and phylogenomics**: tree inference, gene trees, and species trees.
-- **Population genomics**: selection, demographic history, and introgression.
-- **Pan-genomes**: core, shell, and accessory gene content.
+- **Infer orthology**: identify orthologs and paralogs across species with graph or tree methods.
+- **Build alignments**: create whole-genome, synteny, and protein alignments.
+- **Reconstruct phylogeny**: infer species and gene trees and reconcile them.
+- **Detect selection**: scan for positive selection, introgression, and demographic history.
+- **Analyze pan-genomes**: build graphs of core, shell, and accessory gene content.
+
+## Steps
+
+1. Select high-quality assemblies and annotate genes with consistent pipelines.
+2. Build whole-genome or protein alignments and infer orthogroups with graph or tree methods.
+3. Reconstruct phylogenies and reconcile gene and species trees.
+4. Scan for selection, introgression, and structural variants across lineages.
+5. Build a pan-genome graph or variation graph and quantify core/shell/accessory content.
+6. Validate orthology and selection signals with synteny, reciprocal best hits, and experiments.
 
 ## Code pattern
 

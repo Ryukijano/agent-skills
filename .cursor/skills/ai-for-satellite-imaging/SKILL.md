@@ -2,18 +2,27 @@
 
 ## Description
 
-Earth observation foundation models, land-use classification, change detection, and disaster mapping.
+Apply remote-sensing foundation models and deep learning to classify land cover, detect changes, and map disasters from satellite and aerial imagery.
 
 ## When to use
 
 You are analyzing satellite or aerial imagery for land cover, change detection, or environmental monitoring.
 
-## Key concepts
+## Usage
 
-- **Remote sensing foundation models**: pretrained backbones for EO imagery.
-- **Multi-modal fusion**: optical, SAR, LiDAR, and hyperspectral sensors.
-- **Change detection**: identify changes between multi-temporal images.
-- **Segmentation and object detection**: buildings, crops, forests, water bodies.
+- Fine-tune remote-sensing foundation models for land-use/land-cover classification and few-shot EO tasks.
+- Fuse optical, SAR, LiDAR, and hyperspectral data for robust multi-modal Earth observation.
+- Detect land-cover and infrastructure changes between multi-temporal images.
+- Segment and locate objects such as buildings, crops, forests, and water bodies at scale.
+
+## Steps
+
+1. Curate multi-temporal and multi-sensor imagery for the target region and task (classification, change, segmentation).
+2. Choose a remote-sensing foundation model (e.g., SkySense++, Prithvi, SatMamba) and fine-tune it on labeled data.
+3. Build a change-detection pipeline that aligns multi-temporal images and highlights altered pixels or polygons.
+4. Run segmentation or object detection to map buildings, crops, forests, or water bodies and evaluate IoU/mAP.
+5. Validate against ground-truth labels and cross-test generalization across geographies and seasons.
+6. Deploy the pipeline for operational monitoring such as disaster response, urban growth, or agricultural surveys.
 
 ## Code pattern
 

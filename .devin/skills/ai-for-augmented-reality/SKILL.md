@@ -2,19 +2,30 @@
 
 ## Description
 
-SLAM, scene understanding, depth completion, registration, occlusion handling, and semantic AR with deep learning.
+Use AI for Augmented Reality to track, understand scenes and place virtual objects realistically.
 
 ## When to use
 
 You are building AR applications that need accurate tracking, environment understanding, or realistic placement of virtual objects.
 
-## Key concepts
 
-- **Visual SLAM**: simultaneous localization and mapping for AR tracking.
-- **Depth estimation and completion**: infer dense depth for occlusion and placement.
-- **Plane and object detection**: identify surfaces for virtual object anchoring.
-- **Semantic SLAM**: fuse object labels and geometry for context-aware AR.
+## Usage
+
+
+- **Visual SLAM**: Simultaneous localization and mapping for AR tracking.
+- **Depth estimation and completion**: Infer dense depth for occlusion and placement.
+- **Plane and object detection**: Identify surfaces for virtual object anchoring.
+- **Semantic SLAM**: Fuse object labels and geometry for context-aware AR.
 - **Neural scene representations**: NeRF and 3D Gaussian splatting for AR.
+
+## Steps
+
+1. Collect and prepare camera frames, depth, IMU and scene maps.
+2. Build AR applications that need accurate tracking.
+3. Environment understanding.
+4. Realistic placement of virtual objects.
+5. Validate by tracking a planar marker or natural feature map and report reprojection error.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -31,12 +42,14 @@ matches = bf.knnMatch(des1, des2, k=2)
 good = [m for m, n in matches if m.distance < 0.75 * n.distance]
 ```
 
+
 ## Tuning notes
 
 - Use robust feature matching or learned descriptors for low-texture scenes.
 - Ensure real-time performance on mobile or AR glasses.
 - Fuse IMU and visual measurements to handle fast motion.
 - Validate tracking drift and re-localization on representative scenes.
+
 
 ## Verification
 

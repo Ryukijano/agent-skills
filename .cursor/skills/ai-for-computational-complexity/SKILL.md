@@ -2,18 +2,26 @@
 
 ## Description
 
-Using machine learning to predict, characterize, and understand the complexity of computational problems, reductions, and hardness proxies.
+Use machine learning to predict solver runtime, characterize complexity classes, and learn hardness proxies for computational problems.
 
 ## When to use
 
 You want to estimate the difficulty of an algorithmic or combinatorial problem, predict solver runtime, or learn hardness proxies for reductions and complexity classes.
 
-## Key concepts
+## Usage
 
-- **Complexity classes and reductions**: P, NP, NP-completeness, fine-grained reductions, and parameterized complexity.
-- **Hardness proxies**: statistical-query lower bounds, low-degree likelihood ratios, and the Franz–Parisi criterion for planted problems.
-- **ML for runtime prediction**: train regressors on instance features to predict SAT/MIP solver behavior.
-- **Learned complexity boundaries**: data-driven conjectures on phase transitions and average-case hardness.
+- Predict solver runtime and average-case hardness for SAT/MIP/SMT instances from structural features.
+- Characterize complexity classes and reductions, including P, NP, fine-grained, and parameterized frameworks.
+- Model hardness proxies such as statistical-query lower bounds, low-degree likelihood ratios, and the Franz–Parisi criterion.
+- Generate data-driven conjectures about phase transitions and average-case hardness boundaries.
+
+## Steps
+
+1. Collect or generate problem instances and extract features such as clause/variable ratio, graph metrics, and symmetry.
+2. Train regressors or classifiers to predict solver runtime, satisfiability, or a hardness proxy.
+3. Use the model to rank instances or select solver configurations for a target distribution.
+4. Compare learned predictions with theoretical hardness proxies and worst-case bounds.
+5. Deploy the best predictor inside a solver toolchain and monitor for distribution shift.
 
 ## Code pattern
 

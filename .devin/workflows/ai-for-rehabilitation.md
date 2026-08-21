@@ -1,6 +1,6 @@
 # /ai-for-rehabilitation
 
-Machine learning for stroke, spinal cord, and traumatic brain injury rehabilitation, robotic and virtual-reality therapy, telerehabilitation, and wearable sensor monitoring.
+Use machine learning to predict recovery, personalize therapy, monitor home rehabilitation, and control assistive devices.
 
 ## Trigger
 

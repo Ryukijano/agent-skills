@@ -1,6 +1,6 @@
 # /ai-for-real-estate-investment
 
-Predictive analytics, investment screening, REIT return forecasting, and risk-adjusted underwriting for real estate investment decisions.
+Forecasts REIT returns, screens acquisitions, and underwrites cash-flow risk for real estate investment decisions.
 
 ## Trigger
 

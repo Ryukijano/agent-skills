@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for stroke, spinal cord, and traumatic brain injury rehabilitation, robotic and virtual-reality therapy, telerehabilitation, and wearable sensor monitoring.
+Use machine learning to predict recovery, personalize therapy, monitor home rehabilitation, and control assistive devices.
 
 ## When to use
 
 You are predicting functional recovery, personalizing therapy dose, monitoring home-based rehabilitation, or controlling robotic, VR, or brain-computer interface systems for rehabilitation.
 
-## Key concepts
+## Usage
 
-- **Functional recovery prediction**: FIM, Barthel, WMFT, and gait-speed trajectories after stroke or SCI.
-- **Wearable and sensor-based monitoring**: IMUs, sEMG, pressure insoles, and smartphone activity.
-- **Robotic and VR therapy**: adaptive difficulty, performance-based dosing, and motor-learning feedback.
-- **Telerehabilitation**: remote exercise monitoring, adherence prediction, and digital coaching.
-- **Brain-computer interfaces**: movement intent decoding and neurofeedback.
+- Predict functional recovery trajectories after stroke, spinal cord, or brain injury.
+- Monitor rehabilitation with IMUs, sEMG, pressure insoles, and smartphones.
+- Adapt robotic and VR therapy difficulty based on performance.
+- Support telerehabilitation with remote exercise monitoring and digital coaching.
+- Decode movement intent for brain-computer interfaces and neurofeedback.
+
+## Steps
+
+1. Collect baseline assessments, wearable data, and therapy logs for the target population.
+2. Define recovery or adherence outcomes and appropriate time windows.
+3. Train missing-data-aware models and handle engagement as a confounder.
+4. Validate against standardized scales and functional tests.
+5. Integrate into adaptive robotic or VR therapy or telerehabilitation platforms.
+6. Monitor adherence, dropout, and generalizability across care settings.
 
 ## Code pattern
 

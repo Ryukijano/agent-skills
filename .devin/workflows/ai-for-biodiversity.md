@@ -1,6 +1,6 @@
 # /ai-for-biodiversity
 
-Automated species detection, acoustic and eDNA monitoring, habitat suitability modeling, and biodiversity trend analysis for conservation.
+Identify species and assess abundance from camera-trap and acoustic recordings to track biodiversity change and flag at-risk populations.
 
 ## Trigger
 

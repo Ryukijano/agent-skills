@@ -2,7 +2,7 @@
 
 ## Description
 
-Federated learning, data sharing incentives, interoperability, trust, and privacy-preserving collaboration for shared data ecosystems.
+Enable privacy-preserving collaboration and data exchange across organizations.
 
 ## When to use
 
@@ -10,19 +10,19 @@ Organizations need to share data across silos, partners, or jurisdictions while 
 
 ## Usage
 
-- **Federated and collaborative learning**: train models on distributed data without centralizing it.
-- **Incentive and reward design**: fairly compensate data contributors.
-- **Interoperability and standards**: use common schemas, ontologies, and APIs.
-- **Trust and reputation**: score participants and data quality.
-- **Privacy-preserving sharing**: apply DP, SMPC, or synthetic data releases.
+- Train federated models with Flower or NVIDIA FLARE.
+- Share synthetic data generated from real datasets.
+- Establish data trusts and consortium contracts.
+- Exchange data via APIs with differential privacy.
+- Track usage and compliance with smart contracts.
 
 ## Steps
 
-1. Define sharing objectives, participants, and data sensitivity.
-2. Choose a collaboration architecture (federated, pool, or synthetic release).
-3. Implement access, consent, and privacy controls.
-4. Build trust, reputation, and contribution-scoring mechanisms.
-5. Monitor usage, enforce agreements, and audit compliance.
+1. Identify data partners, use case, and governance.
+2. Set up a federated or synthetic-data platform.
+3. Align schemas, privacy budgets, and access rules.
+4. Train or generate shared data products.
+5. Audit contributions and outputs.
 
 ## Code pattern
 

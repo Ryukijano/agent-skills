@@ -1,6 +1,6 @@
 # /ai-for-metagenomics
 
-16S rRNA and shotgun microbial community profiling, taxonomic and functional prediction, MAG binning, and microbiome-host association modeling.
+Use machine learning on 16S rRNA and shotgun metagenomic data to profile microbial communities, infer functions, assemble metagenome-assembled genomes and link the microbiome to host phenotypes.
 
 ## Trigger
 

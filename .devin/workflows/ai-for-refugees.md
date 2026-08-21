@@ -1,6 +1,6 @@
 # /ai-for-refugees
 
-Machine learning for forced-displacement forecasting, refugee camp mapping, asylum-flow prediction, and humanitarian response planning.
+Use machine learning to forecast displacement, map refugee camps, and allocate humanitarian resources.
 
 ## Trigger
 

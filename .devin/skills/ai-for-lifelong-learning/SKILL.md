@@ -2,18 +2,27 @@
 
 ## Description
 
-Continuous skill development, career-aligned learning pathways, micro-credentials, and AI support for adult and professional learners.
+Use AI to helping adult learners, working professionals, or career-switchers acquire new skills and credentials throughout their lives.
 
 ## When to use
 
 You are helping adult learners, working professionals, or career-switchers acquire new skills and credentials throughout their lives.
 
-## Key concepts
+## Usage
 
-- **Lifelong and self-directed learning**: support learners in setting and pursuing their own goals.
-- **Competency and career alignment**: map skills to job postings, career ladders, and credentials.
-- **Micro-credentials and portfolios**: recognize mastery in small, demonstrable units.
-- **Continuous adaptation**: update recommendations as labor markets and learner goals evolve.
+- Capture learner goals, skills, and career targets.
+- Match skills to credentials and labor-market signals.
+- Recommend personalized learning pathways.
+- Track progress and update plans.
+
+## Steps
+
+1. Capture learner goals, skills, and career targets.
+2. Match skills to credentials and labor-market signals.
+3. Recommend personalized learning pathways.
+4. Track progress and update plans.
+5. Evaluate career relevance and completion satisfaction.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

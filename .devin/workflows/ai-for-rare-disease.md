@@ -1,6 +1,6 @@
 # /ai-for-rare-disease
 
-AI for rare disease diagnosis, target prioritization, drug repurposing, natural history modeling, and diagnostic-odyssey support.
+Integrate phenotypes, genotypes, and medical literature to shorten the diagnostic odyssey and prioritize rare-disease candidates.
 
 ## Trigger
 

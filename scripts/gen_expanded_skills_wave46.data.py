@@ -2,25 +2,26 @@ SKILLS = [
     {
         "name": "ai-for-plant-breeding",
         "title": "AI for Plant Breeding",
-        "description": "Genomic selection, phenotype prediction, multi-environment trial analysis, and marker-assisted breeding with machine and deep learning.",
+        "description": "Accelerate crop improvement by predicting trait performance, genomic breeding values, and envirotype effects.",
         "devin_body": r'''## When to use
 
 You are selecting parents, predicting progeny performance, analysing genotype-by-environment interactions, or optimising crossing schemes in a crop or forage breeding programme.
 
 ## Usage
 
-- **Genomic prediction**: predict quantitative traits from dense marker data using ML or statistical learning methods.
-- **Multi-environment trial analysis**: model genotype x environment (GxE) interactions and stability across locations and years.
-- **High-throughput phenotyping integration**: fuse remote sensing, spectral, and drone-derived traits with genotypes.
-- **Parent selection and genetic diversity**: use prediction and diversity metrics to design optimal crosses.
+- Run genomic prediction with rrBLUP, BOLT-LMM, or AutoGP.
+- Optimize training populations and cross designs.
+- Integrate enviromic covariates and multi-environment trials.
+- Predict genotype-by-environment interaction.
+- Select parents and lines with multi-trait indices.
 
 ## Steps
 
-1. Collect high-quality genotype (e.g., SNP array, resequencing) and phenotype data across multiple environments.
-2. Quality-control markers and phenotypes; account for population structure and kinship.
-3. Train and validate prediction models for target traits (yield, quality, stress tolerance).
-4. Evaluate prediction accuracy in independent environments and examine GxE patterns.
-5. Integrate predictions into crossing plans and selection decisions, updating as new data arrive.
+1. Collect genotypic, phenotypic, and environmental data.
+2. Impute and filter markers; build kinship or genomic relationship matrices.
+3. Train genomic prediction or GWAS models.
+4. Predict breeding values across environments.
+5. Validate with cross-validation and independent trials.
 
 ## Code pattern
 
@@ -51,35 +52,31 @@ y_pred = cross_val_predict(
 3. Estimate expected genetic gain from the predicted selection index.
 
 ''',
-        "references": [
-            "https://www.sciencedirect.com/science/article/pii/S1360138524003455",
-            "https://doi.org/10.1093/genetics/iyae161",
-            "https://link.springer.com/article/10.1186/s12864-020-07319-x",
-            "https://www.sciencedirect.com/science/article/pii/S1674205224000807",
-        ],
+        "references": ["https://www.sciencedirect.com/science/article/pii/S1360138524003455", "https://doi.org/10.1093/genetics/iyae161", "https://link.springer.com/article/10.1186/s12864-020-07319-x", "https://www.sciencedirect.com/science/article/pii/S1674205224000807"],
     },
     {
         "name": "ai-for-crop-protection",
         "title": "AI for Crop Protection",
-        "description": "Machine and deep learning for detecting crop diseases, pests, weeds, and abiotic stresses and for supporting timely, targeted protection decisions.",
+        "description": "Detect crop diseases and pests from imagery, sensors, and field scouting.",
         "devin_body": r'''## When to use
 
 You need to diagnose crop health problems, detect disease or stress symptoms, or support fungicide, pesticide, and cultural control decisions from imagery and sensor data.
 
 ## Usage
 
-- **Image-based disease diagnosis**: classify leaf, canopy, and fruit symptoms from smartphone, drone, or satellite images.
-- **Drone and remote-sensing crop scouting**: map stress, disease, and weed patches across fields.
-- **Pathogen and symptom identification**: integrate molecular or environmental signals with vision models.
-- **Protection timing support**: build decision support for spray windows and intervention thresholds.
+- Diagnose diseases with PlantVillage Nuru or custom CNNs.
+- Detect weeds and pests from drone and smartphone imagery.
+- Predict disease pressure from weather and spore traps.
+- Guide variable-rate spraying and IPM decisions.
+- Build field-level risk maps.
 
 ## Steps
 
-1. Collect representative images or sensor data from healthy and diseased plants under field conditions.
-2. Curate and augment a labelled dataset covering symptom variability and growth stages.
-3. Train a classification, segmentation, or object-detection model suited to the symptom scale.
-4. Validate in independent fields, seasons, and cultivars to measure robustness.
-5. Deploy an edge, mobile, or cloud inference pipeline linked to agronomic advisories.
+1. Collect crop images, weather, and scouting records.
+2. Label symptoms and train classification/segmentation models.
+3. Validate on held-out locations and seasons.
+4. Deploy via mobile app, drone, or tractor-mounted sensors.
+5. Update with new pest/disease images.
 
 ## Code pattern
 
@@ -111,35 +108,31 @@ img = preprocess(Image.open("leaf.jpg")).unsqueeze(0)
 3. Track fungicide or pesticide reduction and yield protection in a field trial.
 
 ''',
-        "references": [
-            "https://link.springer.com/article/10.1007/s10343-025-01247-0",
-            "https://link.springer.com/article/10.1007/s43621-026-03623-w",
-            "https://link.springer.com/article/10.1007/s42452-026-08684-0",
-            "https://link.springer.com/article/10.1007/s10462-024-11100-x",
-        ],
+        "references": ["https://link.springer.com/article/10.1007/s10343-025-01247-0", "https://link.springer.com/article/10.1007/s43621-026-03623-w", "https://link.springer.com/article/10.1007/s42452-026-08684-0", "https://link.springer.com/article/10.1007/s10462-024-11100-x"],
     },
     {
         "name": "ai-for-irrigation",
         "title": "AI for Irrigation",
-        "description": "Machine learning for predicting crop water demand, scheduling irrigation, and optimising water use through IoT and weather data integration.",
+        "description": "Optimize water use and irrigation schedules from weather, soil, and crop data.",
         "devin_body": r'''## When to use
 
 You want to improve irrigation scheduling, estimate crop evapotranspiration, or automate water application based on soil, weather, crop, and sensor data.
 
 ## Usage
 
-- **Soil moisture and water demand prediction**: forecast short-term crop water requirements.
-- **Irrigation scheduling**: recommend timing, depth, and frequency of irrigation events.
-- **Deficit and precision irrigation**: optimise water use under scarcity constraints.
-- **Smart valve and pump control**: integrate ML forecasts with automated actuators.
+- Predict evapotranspiration with NeuralFAO56 or pyfao56.
+- Schedule irrigation from soil moisture and weather forecasts.
+- Detect water stress with satellite and drone imagery.
+- Optimize deficit irrigation for yield and water savings.
+- Integrate with drip, pivot, and automated valve systems.
 
 ## Steps
 
-1. Assemble soil, weather, crop-stage, and (optionally) remote-sensing time series.
-2. Define the target: soil moisture, evapotranspiration, or applied water volume.
-3. Train a regression or time-series model with season-aware train/test splits.
-4. Generate irrigation schedules and quantify expected water savings and yield effects.
-5. Deploy the model with sensor feeds and feedback loops for continuous improvement.
+1. Collect weather, soil moisture, and crop growth data.
+2. Compute reference ET and crop coefficients.
+3. Train models for ET, soil moisture, or yield response.
+4. Generate irrigation prescriptions and triggers.
+5. Validate against soil moisture and yield outcomes.
 
 ## Code pattern
 
@@ -167,35 +160,31 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 3. Validate yield and crop-stress outcomes in a split-field or randomised trial.
 
 ''',
-        "references": [
-            "https://ideas.repec.org/a/eee/agiwat/v294y2024ics0378377424000453.html",
-            "https://doi.org/10.1080/27525783.2025.2562418",
-            "https://www.mdpi.com/1424-8220/24/23/7480",
-            "https://www.mdpi.com/2624-7402/4/1/6",
-        ],
+        "references": ["https://ideas.repec.org/a/eee/agiwat/v294y2024ics0378377424000453.html", "https://doi.org/10.1080/27525783.2025.2562418", "https://www.mdpi.com/1424-8220/24/23/7480", "https://www.mdpi.com/2624-7402/4/1/6"],
     },
     {
         "name": "ai-for-agricultural-robots",
         "title": "AI for Agricultural Robots",
-        "description": "Perception, motion planning, and control for autonomous robots that weed, spray, scout, and harvest in field and greenhouse environments.",
+        "description": "Enable autonomous robots for weeding, harvesting, and navigation in crop fields.",
         "devin_body": r'''## When to use
 
 You are building or deploying an autonomous ground or aerial robot to perform precision tasks such as selective harvesting, weeding, spraying, or crop scouting.
 
 ## Usage
 
-- **Vision-based detection and localisation**: locate crops, fruit, weeds, and obstacles.
-- **Autonomous navigation**: follow crop rows and avoid hazards without continuous GPS.
-- **Selective actuation**: trigger sprayers, cutters, or grippers based on real-time perception.
-- **Field coverage and task planning**: optimise routes and schedules across fields.
+- Build perception with ROS 2, YOLO-World, and SAM.
+- Plan navigation and manipulation in unstructured fields.
+- Detect and localize fruits, weeds, and crop rows.
+- Integrate with farm machinery and RTK-GPS.
+- Evaluate with field benchmarks and safety standards.
 
 ## Steps
 
-1. Specify the target crop, task, platform, and field operating conditions.
-2. Design the sensor stack (cameras, LiDAR, IMU, GPS) and data pipeline.
-3. Train perception models for the target objects and field conditions.
-4. Integrate localisation, motion planning, and end-effector control.
-5. Validate progressively in simulation, controlled environments, and production fields.
+1. Select robot platform and task (weeding, picking, scouting).
+2. Collect field images and sensor data.
+3. Train perception and control models.
+4. Simulate in Gazebo or field test.
+5. Validate precision, speed, and crop damage.
 
 ## Code pattern
 
@@ -223,35 +212,31 @@ edges = cv2.Canny(blurred, 50, 150)
 3. Quantify traversal time, energy use, and crop damage relative to a baseline.
 
 ''',
-        "references": [
-            "https://doi.org/10.1002/rob.22230",
-            "https://onlinelibrary.wiley.com/doi/10.1002/rob.21525",
-            "https://www.mdpi.com/2073-4395/14/10/2233",
-            "https://www.mdpi.com/2218-6581/15/4/81",
-        ],
+        "references": ["https://doi.org/10.1002/rob.22230", "https://onlinelibrary.wiley.com/doi/10.1002/rob.21525", "https://www.mdpi.com/2073-4395/14/10/2233", "https://www.mdpi.com/2218-6581/15/4/81"],
     },
     {
         "name": "ai-for-dairy",
         "title": "AI for Dairy",
-        "description": "Machine learning for health, fertility, behaviour, and production monitoring in dairy cattle and dairy farm decision support.",
+        "description": "Monitor dairy cattle health, reproduction, and behavior with computer vision and wearables.",
         "devin_body": r'''## When to use
 
 You are monitoring individual dairy cows to detect mastitis, lameness, oestrus, or metabolic disorders, or to forecast milk yield and body condition.
 
 ## Usage
 
-- **Mastitis and disease detection**: classify early health events from milk, sensor, or image data.
-- **Reproductive management**: predict heat, calving, and optimal insemination timing.
-- **Milk yield and body-condition scoring**: forecast production and body reserves.
-- **Feeding and behaviour monitoring**: detect changes in rumination, activity, and feed intake.
+- Detect mastitis, lameness, and heat with AiHerd or smaXtec.
+- Track feeding, rumination, and activity with bolus/IMU sensors.
+- Monitor body condition and mobility from cameras.
+- Predict calving and metabolic disorders.
+- Generate to-do lists and treatment alerts.
 
 ## Steps
 
-1. Collect animal-level data from milking systems, wearables, cameras, and farm records.
-2. Engineer time-series and per-cow features (lactation stage, parity, days in milk).
-3. Train classification or regression models for each target health or production outcome.
-4. Validate with chronological splits and across multiple farms or breeds.
-5. Deploy real-time alerts and integrate with herd management software.
+1. Install cameras, wearables, or bolus sensors in the barn.
+2. Collect and label health, behavior, and production records.
+3. Train detection and prediction models.
+4. Deploy dashboards and alert systems.
+5. Validate against veterinarian diagnoses and production metrics.
 
 ## Code pattern
 
@@ -279,35 +264,31 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 3. Validate milk-yield forecasts against actual test-day records.
 
 ''',
-        "references": [
-            "https://www.mdpi.com/2077-0472/13/10/1858",
-            "https://www.sciencedirect.com/science/article/pii/S0167587720309211",
-            "https://www.mdpi.com/2076-2615/15/14/2033",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747441/",
-        ],
+        "references": ["https://www.mdpi.com/2077-0472/13/10/1858", "https://www.sciencedirect.com/science/article/pii/S0167587720309211", "https://www.mdpi.com/2076-2615/15/14/2033", "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747441/"],
     },
     {
         "name": "ai-for-poultry",
         "title": "AI for Poultry",
-        "description": "AI for flock health, welfare, behaviour, environmental control, and productivity in broiler, layer, and turkey production.",
+        "description": "Monitor poultry welfare, behavior, and health with computer vision and edge sensors.",
         "devin_body": r'''## When to use
 
 You are monitoring poultry flocks to detect disease, assess welfare, track behaviour, or manage feeding, ventilation, and stocking density.
 
 ## Usage
 
-- **Disease and mortality prediction**: detect sick birds or predict flock mortality from behaviour and environment.
-- **Welfare and behaviour assessment**: monitor feather condition, gait, dust bathing, and stress indicators.
-- **Vocalisation and sound analysis**: identify distress or respiratory issues from audio.
-- **Feed, water, and environment control**: optimise intake and climate using sensor data.
+- Track feeding, drinking, and activity with computer vision.
+- Detect coccidiosis and salmonellosis with Edge Impulse.
+- Monitor environmental conditions (temperature, ammonia, light).
+- Count and locate birds with UWB/IMU wearables.
+- Assess gait, feather condition, and stress.
 
 ## Steps
 
-1. Install or collect video, audio, sensor, and environmental data from poultry houses.
-2. Annotate behaviour, health, or welfare events at individual or flock level.
-3. Train detection, classification, or regression models suited to poultry house conditions.
-4. Validate on separate flocks, houses, and production cycles.
-5. Provide clear, actionable alerts and integrate with farm management routines.
+1. Place cameras, wearables, or environmental sensors in the house.
+2. Collect and label behavior and health outcomes.
+3. Train edge-deployed classification and detection models.
+4. Integrate with farm management software.
+5. Validate against veterinary checks and welfare audits.
 
 ## Code pattern
 
@@ -334,35 +315,31 @@ model = GradientBoostingClassifier(random_state=42).fit(X, y)
 3. Validate mortality or disease prediction on a held-out flock cycle.
 
 ''',
-        "references": [
-            "https://doi.org/10.1016/j.japr.2025.100602",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC11700577/",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6770384/",
-            "https://www.mdpi.com/2071-1050/12/4/1413",
-        ],
+        "references": ["https://doi.org/10.1016/j.japr.2025.100602", "https://pmc.ncbi.nlm.nih.gov/articles/PMC11700577/", "https://pmc.ncbi.nlm.nih.gov/articles/PMC6770384/", "https://www.mdpi.com/2071-1050/12/4/1413"],
     },
     {
         "name": "ai-for-aquaculture",
         "title": "AI for Aquaculture",
-        "description": "Machine learning for water quality, feeding, disease, and stock management in fish, shrimp, and shellfish farming.",
+        "description": "Optimize feeding, water quality, and disease management in fish and shrimp farms.",
         "devin_body": r'''## When to use
 
 You are operating or designing a fish, shrimp, or shellfish farm and want to predict water quality, optimise feeding, detect disease, or estimate biomass.
 
 ## Usage
 
-- **Water quality forecasting**: predict dissolved oxygen, pH, ammonia, and temperature dynamics.
-- **Precision feeding and feed optimisation**: adjust rations based on appetite, biomass, and water conditions.
-- **Disease early warning and health monitoring**: detect abnormal behaviour, gill conditions, or mortality trends.
-- **Biomass and growth estimation**: estimate size distribution and stock weight from cameras and sensors.
+- Monitor water quality with DryDock and AquaGrid sensors.
+- Detect pathogens on-site with Sentry or Celvera.
+- Optimize feed rations with iQuatic/Cargill.
+- Predict growth and harvest timing.
+- Automate aeration and feeding based on sensor thresholds.
 
 ## Steps
 
-1. Deploy water-quality sensors, cameras, and/or acoustic devices in tanks, ponds, or cages.
-2. Integrate time-series, image, and feeding records into a farm data platform.
-3. Train models for each target: water forecast, feed response, health, or biomass.
-4. Validate under different stocking densities, seasons, and species conditions.
-5. Connect predictions to automated feeders, aerators, or management dashboards.
+1. Deploy water-quality and feeding sensors in ponds/tanks.
+2. Collect growth, feed, and disease records.
+3. Train models for water quality, growth, and disease risk.
+4. Integrate with automated feeders and aerators.
+5. Validate with survival, growth, and feed conversion.
 
 ## Code pattern
 
@@ -390,35 +367,31 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 3. Detect mortality or disease events earlier than manual observation.
 
 ''',
-        "references": [
-            "https://doi.org/10.1016/j.fraope.2026.100567",
-            "https://www.sciencedirect.com/science/article/abs/pii/S0044848625014887",
-            "https://doi.org/10.1016/j.aiia.2025.01.012",
-            "https://doi.org/10.5772/intechopen.1014536",
-        ],
+        "references": ["https://doi.org/10.1016/j.fraope.2026.100567", "https://www.sciencedirect.com/science/article/abs/pii/S0044848625014887", "https://doi.org/10.1016/j.aiia.2025.01.012", "https://doi.org/10.5772/intechopen.1014536"],
     },
     {
         "name": "ai-for-livestock",
         "title": "AI for Livestock",
-        "description": "Machine learning for health, behaviour, welfare, grazing, and reproduction across cattle, pigs, sheep, goats, and other farm animals.",
+        "description": "Track and predict health, behavior, and productivity across livestock.",
         "devin_body": r'''## When to use
 
 You are monitoring livestock health, behaviour, or productivity across species and want data-driven insights for individual or herd management.
 
 ## Usage
 
-- **Animal health and disease detection**: identify lameness, respiratory issues, and metabolic disorders.
-- **Behaviour and welfare monitoring**: classify feeding, resting, rumination, social, and heat behaviours.
-- **Grazing and pasture management**: estimate intake, forage availability, and animal distribution.
-- **Reproduction and growth tracking**: predict calving, farrowing, weight gain, and market readiness.
+- Monitor behavior and posture with AnimalFormer and WERS.
+- Detect lameness, heat, and calving with video and wearables.
+- Track individual animals with RFID, UWB, and computer vision.
+- Predict weight gain and feed conversion.
+- Build farm-level decision support dashboards.
 
 ## Steps
 
-1. Choose sensors appropriate to the species and environment (wearables, cameras, microphones, scales).
-2. Identify and track individual animals with RFID, computer vision, or biometrics.
-3. Engineer features and train models per target health, behaviour, or production outcome.
-4. Validate across farms, breeds, seasons, and production systems.
-5. Deploy alerts and integrate with farm management software and veterinary workflows.
+1. Select species and target traits (health, behavior, production).
+2. Install cameras, wearables, or RFID readers.
+3. Collect and annotate phenotypes and events.
+4. Train species-specific models.
+5. Validate against farm records and expert scoring.
 
 ## Code pattern
 
@@ -445,35 +418,31 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 3. Test model transfer to a different breed or farm without full retraining.
 
 ''',
-        "references": [
-            "https://www.sciencedirect.com/science/article/pii/S0168169920317099",
-            "https://doi.org/10.5713/ab.25.0289",
-            "https://doi.org/10.1016/j.aiia.2026.04.013",
-            "https://www.mdpi.com/1424-8220/23/12/5732",
-        ],
+        "references": ["https://www.sciencedirect.com/science/article/pii/S0168169920317099", "https://doi.org/10.5713/ab.25.0289", "https://doi.org/10.1016/j.aiia.2026.04.013", "https://www.mdpi.com/1424-8220/23/12/5732"],
     },
     {
         "name": "ai-for-viticulture",
         "title": "AI for Viticulture",
-        "description": "AI for vineyard monitoring, grape and canopy sensing, disease detection, yield and quality prediction, and harvest decision support.",
+        "description": "Improve grape quality, yield, and disease management with vineyard AI.",
         "devin_body": r'''## When to use
 
 You are managing a vineyard and want to monitor vine health, detect diseases, estimate yield and grape quality, or optimise irrigation, fertilisation, and harvest timing.
 
 ## Usage
 
-- **Canopy and berry detection**: locate and count grape bunches from images and point clouds.
-- **Disease and pest monitoring**: detect powdery mildew, downy mildew, and grapevine pests.
-- **Yield and quality prediction**: forecast grape quantity and maturity (sugar, acidity).
-- **Irrigation, fertilisation, and harvest scheduling**: support precision management and winery logistics.
+- Map vines, count buds, and detect diseases with Cropsy or AgScout.
+- Predict yield and harvest windows from canopy and cluster data.
+- Monitor virus and fungal disease risk.
+- Optimize irrigation and spraying by zone.
+- Track pruning and canopy development.
 
 ## Steps
 
-1. Collect drone, satellite, or proximal sensing data across vineyard blocks.
-2. Gather weather, soil, and phenology records and link them to management zones.
-3. Train detection and regression models for the specific grape variety and terroir.
-4. Validate predictions at harvest and across multiple vintages.
-5. Integrate outputs into vineyard management plans and winery receiving schedules.
+1. Capture drone, tractor, or smartphone imagery by block.
+2. Label vines, clusters, symptoms, and yield data.
+3. Train detection, segmentation, and yield models.
+4. Generate prescription maps for spray and irrigation.
+5. Validate with harvest weights and lab analysis.
 
 ## Code pattern
 
@@ -499,35 +468,31 @@ ndvi = (nir - red) / (nir + red + 1e-8)
 3. Predict grape sugar and acidity and validate with lab results.
 
 ''',
-        "references": [
-            "https://doi.org/10.1111/1541-4337.70523",
-            "https://doi.org/10.3390/horticulturae12060719",
-            "https://doi.org/10.1016/j.aiia.2025.08.001",
-            "https://www.mdpi.com/2076-3417/14/22/10277",
-        ],
+        "references": ["https://doi.org/10.1111/1541-4337.70523", "https://doi.org/10.3390/horticulturae12060719", "https://doi.org/10.1016/j.aiia.2025.08.001", "https://www.mdpi.com/2076-3417/14/22/10277"],
     },
     {
         "name": "ai-for-pest-management",
         "title": "AI for Pest Management",
-        "description": "Machine and deep learning for pest detection, identification, population monitoring, and integrated pest management decision support.",
+        "description": "Detect and count insect pests with smart traps, pheromones, and computer vision.",
         "devin_body": r'''## When to use
 
 You need to detect, identify, count, or forecast insect pests to inform scouting, traps, biological control, or pesticide application decisions.
 
 ## Usage
 
-- **Insect pest image classification**: identify pest species from trap, camera, or smartphone images.
-- **Automated pest monitoring**: process pheromone-trap, suction-trap, and smart-trap data.
-- **Pest risk and population forecasting**: predict outbreaks using weather, crop, and trap data.
-- **IPM decision support**: recommend thresholds, biocontrol, and targeted chemical interventions.
+- Deploy smart traps with YOLO-Evo, Yolo-pest, or YOLOv9-TrapPest.
+- Monitor pest dynamics and degree-day models.
+- Predict outbreak risk from weather and trap counts.
+- Target spraying with IPM thresholds.
+- Build georeferenced pest maps.
 
 ## Steps
 
-1. Deploy traps, cameras, or sensors in representative field locations.
-2. Build a labelled image or count dataset covering target species and look-alikes.
-3. Train species classification or object-counting models.
-4. Integrate weather, crop-stage, and historical trap data for risk forecasting.
-5. Generate field-level risk maps and intervention recommendations for scouts.
+1. Deploy pheromone traps with cameras and IoT.
+2. Collect images and count labels across locations.
+3. Train detection and counting models.
+4. Integrate with weather and degree-day predictions.
+5. Validate against manual scouting and treatment outcomes.
 
 ## Code pattern
 
@@ -552,36 +517,31 @@ model.train(data="pest_images", epochs=50, imgsz=224)
 3. Evaluate spray-timing recommendations against a scouting-only baseline.
 
 ''',
-        "references": [
-            "https://www.mdpi.com/2073-4395/15/7/1629",
-            "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/afe.12630",
-            "https://www.sciencedirect.com/science/article/abs/pii/S1161030126000596",
-            "https://doi.org/10.22271/27889289.2026.v6.i3a.259",
-        ],
+        "references": ["https://www.mdpi.com/2073-4395/15/7/1629", "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/afe.12630", "https://www.sciencedirect.com/science/article/abs/pii/S1161030126000596", "https://doi.org/10.22271/27889289.2026.v6.i3a.259"],
     },
     {
         "name": "ai-for-soil-health",
         "title": "AI for Soil Health",
-        "description": "Machine learning for predicting soil carbon, nutrients, biology, compaction, erosion risk, and overall soil health from sensors and remote sensing.",
+        "description": "Estimate soil carbon, nutrients, and texture from spectra and remote sensing.",
         "devin_body": r'''## When to use
 
 You are assessing soil health indicators, mapping soil properties, monitoring carbon sequestration, or guiding regenerative and precision management.
 
 ## Usage
 
-- **Soil organic carbon and organic matter prediction**: map SOC/SOM from spectra and covariates.
-- **Nutrient and fertility status**: predict N, P, K, pH, and micronutrients.
-- **Soil biology and microbiome**: infer biological activity and diversity from proxy data.
-- **Compaction, erosion, and hydrology risk**: model soil structural degradation.
-- **Management impact assessment**: evaluate cover crops, reduced tillage, and amendments.
+- Predict SOC and NPK with vis-NIR spectroscopy and remote sensing.
+- Map soil health with PRISMA/EnMAP hyperspectral data.
+- Integrate field samples with Gaofen or Sentinel imagery.
+- Assess spatial uncertainty with conformal calibration.
+- Support carbon credit and fertilizer decisions.
 
 ## Steps
 
-1. Collect soil samples with laboratory reference measurements and location data.
-2. Add covariates: remote-sensing imagery, topography, climate, geology, and management history.
-3. Preprocess spectroscopic or sensor data and engineer spatial features.
-4. Train spatial prediction models and quantify uncertainty.
-5. Generate soil health maps and management recommendations.
+1. Collect soil samples, spectra, and remote sensing data.
+2. Align field and image data to field boundaries.
+3. Train regression models for soil properties.
+4. Map properties and uncertainty across fields.
+5. Validate with independent lab analysis.
 
 ## Code pattern
 
@@ -609,36 +569,31 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 3. Track changes in predicted soil health over years of management.
 
 ''',
-        "references": [
-            "https://doi.org/10.1002/advs.202504152",
-            "https://doi.org/10.3390/app16115412",
-            "https://link.springer.com/article/10.1007/s11368-024-03913-8",
-            "https://www.mdpi.com/2077-0472/15/5/567",
-        ],
+        "references": ["https://doi.org/10.1002/advs.202504152", "https://doi.org/10.3390/app16115412", "https://link.springer.com/article/10.1007/s11368-024-03913-8", "https://www.mdpi.com/2077-0472/15/5/567"],
     },
     {
         "name": "ai-for-agricultural-economics",
         "title": "AI for Agricultural Economics",
-        "description": "Machine learning and econometric ML for farm decision support, risk, policy, market analysis, adoption, and the economics of digital agriculture.",
+        "description": "Support farm decisions, commodity pricing, and risk management with AI.",
         "devin_body": r'''## When to use
 
 You are evaluating the economic outcomes of farm technologies, forecasting prices or yields, modelling adoption and risk, or building decision support for farmers and policymakers.
 
 ## Usage
 
-- **Yield and price forecasting**: predict crop yields, commodity prices, and revenue at regional or farm scale.
-- **Risk and insurance analytics**: estimate weather, yield, and price risk for crop insurance or hedging.
-- **Adoption and impact evaluation**: model technology adoption, treatment effects, and farm-level impact.
-- **Decision support systems**: build cost-benefit and farm-planning tools that integrate agronomic and economic models.
-- **Policy and market analysis**: assess subsidies, trade, and supply-chain effects.
+- Forecast grain prices and basis with Croploo or Quantum Hedging.
+- Optimize grain marketing and hedging strategies.
+- Predict input costs and farm profitability.
+- Assess climate and policy risk scenarios.
+- Build farm budgeting and decision support dashboards.
 
 ## Steps
 
-1. Collect farm accounts, market, policy, weather, and agronomic data.
-2. Define the economic outcome (profit, cost, revenue, adoption, risk).
-3. Build predictive, causal, or optimisation models suited to the question.
-4. Validate on held-out farms, regions, or time periods.
-5. Translate results into actionable recommendations and policy briefs.
+1. Collect market, weather, and farm financial data.
+2. Engineer features for price, basis, and yield.
+3. Train forecasting and optimization models.
+4. Deploy decision support tools and alerts.
+5. Validate with realized prices and farm outcomes.
 
 ## Code pattern
 
@@ -667,11 +622,6 @@ print(model.summary())
 3. Compare a DSS recommendation to historical farmer practice in a pilot region.
 
 ''',
-        "references": [
-            "https://www.annualreviews.org/content/journals/10.1146/annurev-resource-101623-092515",
-            "https://doi.org/10.1007/s44279-026-00510-w",
-            "https://doi.org/10.62486/latia2025326",
-            "https://baylislab.ace.illinois.edu/wp-content/uploads/2019/09/Storm-et-al-ML-Review.pdf",
-        ],
+        "references": ["https://www.annualreviews.org/content/journals/10.1146/annurev-resource-101623-092515", "https://doi.org/10.1007/s44279-026-00510-w", "https://doi.org/10.62486/latia2025326", "https://baylislab.ace.illinois.edu/wp-content/uploads/2019/09/Storm-et-al-ML-Review.pdf"],
     },
 ]

@@ -2,18 +2,27 @@
 
 ## Description
 
-Natural-language analysis of climate laws, NDCs, and policies; target extraction, alignment scoring, and climate-finance tracking.
+Extract and classify quantified climate targets from national laws and NDCs to track policy alignment and accountability.
 
 ## When to use
 
 You need to analyze, compare, or monitor national climate laws, Nationally Determined Contributions (NDCs), or corporate climate disclosures at scale.
 
-## Key concepts
+## Usage
 
-- **NDC and VNR alignment**: compare Nationally Determined Contributions with Voluntary National Reviews using NLP and classifiers.
-- **Target extraction**: identify quantified climate targets (net-zero, reduction, renewable) in long documents.
-- **Climate policy NLP**: domain-adapted language models (ClimateBERT) for climate-finance and policy text.
-- **Policy impact monitoring**: track implementation progress, theme shifts, and equity implications over time.
+- Extract quantified climate targets (net-zero, reduction, renewable) from NDCs, laws, and corporate disclosures.
+- Compare NDCs with Voluntary National Reviews (VNRs) and SDGs to score alignment.
+- Apply domain-adapted language models such as ClimateBERT to climate-finance and policy text.
+- Track policy implementation, theme shifts, and equity implications over time.
+
+## Steps
+
+1. Collect NDCs, national climate laws, VNRs, and corporate climate reports from official registries.
+2. Chunk and normalize the documents; use a domain-adapted LM (e.g., ClimateBERT) to classify paragraphs and extract quantified targets.
+3. Build an alignment-scoring pipeline that maps commitments to SDGs and NDC objectives.
+4. Track climate-finance flows and implementation progress against stated targets across countries and years.
+5. Validate extraction and alignment results against expert annotations and produce transparent, auditable tables.
+6. Deploy the pipeline as a monitoring dashboard for policy analysts and climate-finance stakeholders.
 
 ## Code pattern
 

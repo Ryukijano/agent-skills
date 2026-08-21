@@ -1,6 +1,6 @@
 # /ai-for-total-productive-maintenance
 
-AI and IIoT for autonomous maintenance, OEE improvement, zero-breakdown programs, and condition-based monitoring across the eight TPM pillars.
+Predicts equipment failures, supports autonomous maintenance, and improves OEE across the eight TPM pillars.
 
 ## Trigger
 

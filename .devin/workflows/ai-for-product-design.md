@@ -1,6 +1,6 @@
 # /ai-for-product-design
 
-Concept generation, design space exploration, prototyping, and engineering handoff with generative AI in product development.
+Use AI to explore design spaces, generate concepts, prototype products, and hand off to engineering while tracking constraints and human decisions.
 
 ## Trigger
 

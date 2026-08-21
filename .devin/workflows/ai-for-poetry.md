@@ -1,6 +1,6 @@
 # /ai-for-poetry
 
-Meter, rhyme, and stylistic constraints for AI-generated poetry, with evaluation and human-AI curation.
+Co-write poems under meter, rhyme, and style constraints with interactive language models that suggest lines and refine form.
 
 ## Trigger
 

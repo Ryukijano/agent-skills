@@ -2,7 +2,7 @@
 
 ## Description
 
-Adversarial robustness, data poisoning detection, access control, threat detection, and AI-driven security for ML training and inference data.
+Defend AI systems against adversarial attacks, data poisoning, and model extraction.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You need to protect data and models from adversarial manipulation, unauthorized 
 
 ## Usage
 
-- **Adversarial and poisoning defenses**: detect or mitigate malicious data and perturbations.
-- **Access control and zero trust**: enforce least-privilege access to data and model artifacts.
-- **Anomaly and intrusion detection**: identify exfiltration, unauthorized queries, or breaches.
-- **Data sanitization and provenance**: verify data sources and remove poisoned samples.
-- **Secure pipelines**: encrypt data at rest and in transit, harden CI/CD.
+- Evaluate adversarial robustness with ART (Adversarial Robustness Toolbox).
+- Detect and remove poisoned samples (PoisonSpot, training provenance).
+- Protect model APIs from extraction and inversion attacks.
+- Scan for vulnerabilities in model artifacts and supply chain.
+- Monitor production drift and anomalous queries.
 
 ## Steps
 
-1. Inventory data and model assets and threat surfaces.
-2. Apply encryption, access control, and network segmentation.
-3. Monitor for anomalies in data access, ingestion, and model usage.
-4. Test robustness with adversarial and poisoning simulations.
-5. Respond to incidents and update defenses and data provenance.
+1. Threat-model the AI system and data pipeline.
+2. Run adversarial and poisoning attacks in a sandbox.
+3. Train or harden models with robust defenses.
+4. Deploy monitoring and anomaly detection in production.
+5. Red-team and update defenses regularly.
 
 ## Code pattern
 

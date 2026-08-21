@@ -1,6 +1,6 @@
 # /ai-for-public-engagement
 
-Conversational agents, citizen science, public consultations, and participatory science supported by LLMs and interactive AI.
+Use conversational AI and citizen-science chatbots to make public consultations, science festivals and participatory research more inclusive and scalable.
 
 ## Trigger
 

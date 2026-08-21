@@ -1,6 +1,6 @@
 # /ai-for-personal-productivity
 
-Time management, task prioritization, calendar scheduling, meeting optimization, and personal workflow automation.
+Use AI to prioritize tasks, resolve calendar conflicts, block focus time, and automate repetitive personal workflows.
 
 ## Trigger
 

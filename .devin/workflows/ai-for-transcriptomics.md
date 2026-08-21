@@ -1,6 +1,6 @@
 # /ai-for-transcriptomics
 
-Bulk and single-cell RNA-seq analysis, normalization, clustering, differential expression, splicing, and foundation models for gene expression.
+Use machine learning and foundation models to quantify, normalize and interpret bulk and single-cell RNA-seq data for cell typing, differential expression and gene regulation.
 
 ## Trigger
 

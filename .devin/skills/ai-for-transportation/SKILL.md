@@ -2,19 +2,27 @@
 
 ## Description
 
-Traffic prediction, route optimization, public transit planning, autonomous driving, and multi-modal mobility.
+Retime city traffic signals from sparse vehicle trajectories and prioritize public transit to reduce congestion and emissions.
 
 ## When to use
 
 You need to predict, optimize, or simulate traffic, routes, transit, or autonomous-vehicle behavior in urban or highway networks.
 
-## Key concepts
+## Usage
 
-- **Spatio-temporal traffic forecasting**: predict flow, speed, or congestion on road graphs using GNNs and transformers.
-- **Autonomous driving prediction**: multi-agent motion forecasting and planning under uncertainty.
-- **Route and network optimization**: shortest paths, traffic-equilibrium, and multi-modal itinerary planning.
-- **Public transit analytics**: ridership prediction, schedule optimization, and disruption recovery.
-- **Sim-to-real and safety**: robustness to rare events, adversarial weather, and sensor failures.
+- Forecast traffic flow, speed, and congestion on road graphs with GNNs and spatio-temporal models.
+- Predict multi-agent motion and plan safe trajectories for autonomous vehicles.
+- Optimize shortest paths, traffic equilibrium, and multi-modal itineraries.
+- Predict transit ridership, optimize schedules, and recover from disruptions.
+
+## Steps
+
+1. Ingest road graph, real-time traffic, weather, transit, and incident data for the target network.
+2. Train a spatio-temporal traffic-forecasting model and validate on rolling cross-validation against baselines.
+3. Implement route or network-optimization algorithms (A*, traffic-equilibrium, multi-modal) and benchmark travel time.
+4. Build a multi-agent motion-prediction or trajectory-planning model for autonomous driving and test on a public benchmark.
+5. Add public-transit ridership and schedule-optimization modules and simulate disruption recovery.
+6. Deploy the integrated forecasting, routing, and planning pipeline with safety and sim-to-real checks.
 
 ## Code pattern
 

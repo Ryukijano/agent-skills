@@ -1,6 +1,6 @@
 # /ai-for-knowledge-management
 
-Semantic knowledge search, enterprise RAG, expertise mining, and AI-assisted capture of institutional tacit knowledge.
+Use AI to make organizational knowledge searchable, capture tacit expertise, build enterprise RAG, or recommend relevant experts and documents.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Marine protected area monitoring, illegal fishing detection, species tracking, and ocean health assessment from satellite and vessel data.
+Use AI to monitor marine protected areas, detect illegal fishing, tracking vessels, or assess marine ecosystem health.
 
 ## When to use
 
 You are monitoring marine protected areas, detecting illegal fishing, tracking vessels, or assessing marine ecosystem health.
 
-## Key concepts
+## Usage
 
-- **Vessel monitoring**: AIS, VMS, and SAR-based dark-vessel detection.
-- **Illegal fishing detection**: behavioral classification and anomaly detection.
-- **Marine species and habitat mapping**: cetacean/sea-turtle detection, habitat suitability.
-- **MPA performance**: compliance, spillover, and biodiversity indicators.
+- Fuse AIS, SAR, and optical vessel data.
+- Classify fishing vs. non-fishing behavior.
+- Detect anomalous vessel activity in MPAs.
+- Map marine habitats and species.
+
+## Steps
+
+1. Fuse AIS, SAR, and optical vessel data.
+2. Classify fishing vs. non-fishing behavior.
+3. Detect anomalous vessel activity in MPAs.
+4. Map marine habitats and species.
+5. Validate with patrol records and eDNA surveys.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

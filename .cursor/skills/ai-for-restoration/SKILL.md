@@ -2,18 +2,27 @@
 
 ## Description
 
-Digital inpainting, virtual restoration, style-aware reconstruction, and diffusion models for repairing artworks, murals, and manuscripts.
+Use AI to virtually repair damaged paintings, murals, manuscripts, or photographs while preserving artistic style and historical authenticity.
 
 ## When to use
 
 You want to virtually repair damaged paintings, murals, manuscripts, or photographs while preserving artistic style and historical authenticity.
 
-## Key concepts
+## Usage
 
-- **Digital inpainting**: GAN, diffusion, and transformer-based reconstruction of missing or damaged regions.
-- **Style-aware restoration**: preserving brushwork, texture, and color palette of the original artwork.
-- **Edge and structure guidance**: using sketch or edge priors to maintain structural coherence in murals and paintings.
-- **Non-invasive virtual restoration**: generating hypotheses without altering the physical artifact.
+- Document current and historical state with imaging.
+- Segment damage and missing regions.
+- Inpaint or propose fills consistent with style.
+- Simulate treatment effects.
+
+## Steps
+
+1. Document current and historical state with imaging.
+2. Segment damage and missing regions.
+3. Inpaint or propose fills consistent with style.
+4. Simulate treatment effects.
+5. Get expert approval before physical intervention.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

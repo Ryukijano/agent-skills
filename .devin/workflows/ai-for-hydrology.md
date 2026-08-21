@@ -1,6 +1,6 @@
 # /ai-for-hydrology
 
-Rainfall-runoff modeling, streamflow forecasting, flood prediction, and physics-informed deep learning for water systems.
+Use ML and physics-informed models to predict rainfall-runoff, forecast streamflow, predict floods, and build digital twins for water systems.
 
 ## Trigger
 

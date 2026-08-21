@@ -2,19 +2,28 @@
 
 ## Description
 
-Fairness, accountability, transparency, privacy, and value alignment in AI systems, including bias auditing, model cards, and stakeholder deliberation.
+Audit automated hiring and public-sector AI systems for disparate impact, transparency gaps, and compliance with bias-auditing laws like NYC Local Law 144.
 
 ## When to use
 
 You need to identify, measure, and mitigate ethical risks such as bias, discrimination, privacy violations, lack of transparency, or harm in an AI system or dataset.
 
-## Key concepts
+## Usage
 
-- **Fairness and non-discrimination**: demographic parity, equalized odds, calibration, and fairness constraints.
-- **Explainability and transparency**: model cards, datasheets, SHAP, LIME, and counterfactual explanations.
-- **Accountability and auditability**: algorithmic audits, logging, and governance records.
-- **Privacy and data ethics**: consent, differential privacy, and data minimization.
-- **Value pluralism and stakeholder engagement**: participatory ethics and value-sensitive design.
+- Audit models for demographic parity, equalized odds, and calibration across groups.
+- Generate SHAP, LIME, and counterfactual explanations for high-stakes decisions.
+- Maintain model cards, datasheets, and algorithmic audit logs.
+- Apply differential privacy, consent, and data minimization practices.
+- Engage stakeholders and use value-sensitive design.
+
+## Steps
+
+1. Define the protected groups and ethical risks for the use case.
+2. Run a quantitative fairness audit and report subgroup performance.
+3. Generate explanations and conduct stakeholder impact assessments.
+4. Choose and apply an intervention (reweighting, threshold tuning, etc.).
+5. Re-audit the system and document trade-offs in a model card.
+6. Establish ongoing monitoring and governance for ethical risks.
 
 ## Code pattern
 

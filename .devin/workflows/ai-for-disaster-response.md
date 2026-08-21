@@ -1,6 +1,6 @@
 # /ai-for-disaster-response
 
-Situational awareness, damage assessment, evacuation planning, supply pre-positioning, and multi-modal disaster imagery analysis.
+Use multi-modal imagery and ML to assess damage, map situational awareness, plan evacuations, and pre-position supplies during disasters.
 
 ## Trigger
 

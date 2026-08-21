@@ -1,6 +1,6 @@
 # /ai-for-3d-vision
 
-3D reconstruction, point cloud processing, NeRF and Gaussian splatting, depth estimation, 3D detection, and scene understanding.
+Use AI for 3D Vision to reconstruct scenes, process point clouds and estimate depth.
 
 ## Trigger
 

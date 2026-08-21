@@ -1,6 +1,6 @@
 # /ai-for-technical-blogs
 
-Planning, drafting, SEO-optimizing, and reviewing technical blog posts and tutorials with LLMs.
+Plan, draft, SEO-optimize and review technical blog posts and tutorials that combine code, narrative and practical guidance for developer audiences.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-telecommunications
 
-AI for wireless networks, 5G/6G, network optimization, traffic forecasting, security, and edge intelligence.
+Use AI to optimize 5G and 6G RAN, network slicing, and self-organizing networks.
 
 ## Trigger
 

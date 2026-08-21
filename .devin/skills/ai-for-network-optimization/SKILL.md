@@ -2,19 +2,27 @@
 
 ## Description
 
-Graph neural networks, deep reinforcement learning, traffic engineering, resource allocation, and learning-augmented optimization for routing, load balancing, and network design.
+Optimize routing, traffic engineering, and resource allocation in communication networks.
 
 ## When to use
 
 You need to optimize routing, traffic engineering, resource allocation, load balancing, or network design in large-scale communication networks.
 
-## Key concepts
+## Usage
 
-- **Graph neural networks (GNNs)**: model network topology and node/link states for scalable predictions.
-- **Deep reinforcement learning (DRL)**: learn dynamic control policies for routing, caching, and scheduling.
-- **Traffic prediction and prescriptive optimization**: forecast demand and feed it into a combinatorial solver.
-- **Learning-augmented heuristics**: combine model-based optimization with ML-predicted parameters.
-- **Network slicing and QoS-aware allocation**: reserve resources for service-level guarantees.
+- Solve traffic engineering with GRL-TE, RedTE, or TELGEN.
+- Predict congestion and adjust routing with GNNs.
+- Allocate bandwidth and paths across WAN and data-center fabrics.
+- Optimize CDN and load-balancer decisions.
+- Improve network utilization with deep reinforcement learning.
+
+## Steps
+
+1. Collect topology, traffic matrices, and performance metrics.
+2. Build graph or path features for the network.
+3. Train GNN, RL, or optimization surrogates.
+4. Deploy recommendations to SDN or traffic-engineering controllers.
+5. Validate against throughput, latency, and utilization KPIs.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-type-theory
 
-ML-guided tactic prediction, premise selection, and synthesis in dependent type theories and proof assistants.
+Use machine learning to predict tactics, select premises, and synthesize terms in dependently typed proof assistants.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-disaster-preparedness
 
-Hazard risk assessment, early warning systems, scenario simulation, and mitigation planning with AI.
+Use machine learning to model hazards, build early warnings, simulate impacts, and plan mitigations and resource pre-positioning before disasters strike.
 
 ## Trigger
 

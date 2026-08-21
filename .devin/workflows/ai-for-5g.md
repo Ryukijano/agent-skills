@@ -1,6 +1,6 @@
 # /ai-for-5g
 
-AI/ML for 5G RAN optimization, network slicing, beam management, mobility, and core automation.
+Optimize 5G RAN, network slicing, and beam management with AI and NWDAF.
 
 ## Trigger
 

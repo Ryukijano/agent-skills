@@ -2,19 +2,30 @@
 
 ## Description
 
-Computational linguistics, corpus analysis, morphosyntactic annotation, syntactic parsing, language modeling, and NLP tools for linguistic research.
+Use AI for Linguistics to annotate, parse, model and compare language structure at scale.
 
 ## When to use
 
 You are studying language structure, change, or use and need to annotate, parse, model, or compare linguistic data at scale.
 
-## Key concepts
 
-- **Corpus linguistics**: analyze frequency, collocation, and distribution in large text collections.
+## Usage
+
+
+- **Corpus linguistics**: Analyze frequency, collocation, and distribution in large text collections.
 - **Morphosyntactic annotation**: POS tagging, lemmatization, dependency parsing, and universal dependencies.
-- **Language modeling**: n-gram, neural, and transformer-based models of syntax and semantics.
-- **Historical and comparative linguistics**: phylogenetic language trees, cognate detection, and diachronic corpus analysis.
+- **Language modeling**: N-gram, neural, and transformer-based models of syntax and semantics.
+- **Historical and comparative linguistics**: Phylogenetic language trees, cognate detection, and diachronic corpus analysis.
 - **Speech and phonetics**: ASR, forced alignment, and phoneme recognition for spoken language.
+
+## Steps
+
+1. Collect and prepare text corpora, treebanks and speech recordings.
+2. Studye language structure.
+3. Change.
+4. Use and need to annotate.
+5. Validate by parsing a small annotated treebank and compute UAS/LAS against gold dependencies.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -29,12 +40,14 @@ for token in doc:
     print(token.text, token.lemma_, token.pos_, token.dep_)
 ```
 
+
 ## Tuning notes
 
 - Use treebank-specific or Universal Dependencies guidelines consistently.
 - For low-resource or historical languages, consider adapters and cross-lingual transfer.
 - Evaluate against gold annotations rather than generic accuracy alone.
 - Watch for tokenization mismatches between modern and historical orthography.
+
 
 ## Verification
 

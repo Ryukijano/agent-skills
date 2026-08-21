@@ -1,6 +1,6 @@
 # /ai-for-mental-health-services
 
-LLM and multimodal mental health screening, CBT chatbots, psychosocial risk assessment, and clinical interview support.
+Use LLMs and multimodal AI to screen, triage, monitor, and support mental-health care at scale.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Speech recognition, diarization, natural language processing, and generative AI for transcribing, indexing, and exploring oral history archives.
+Use AI to transcribe, index, search, or analyze recorded oral history interviews and testimonies.
 
 ## When to use
 
 You are transcribing, indexing, searching, or analyzing recorded oral history interviews and testimonies.
 
-## Key concepts
+## Usage
 
-- **Automatic speech recognition for oral history**: Whisper, wav2vec, and domain-adapted ASR for noisy, dialectal, and aging recordings.
-- **Speaker diarization and punctuation**: segmenting speakers and restoring sentence boundaries for readability.
-- **Question generation and semantic search**: generating navigable questions and retrieving testimony passages by topic.
-- **Narrative and sentiment analysis**: topic modeling, keyword extraction, and emotion detection in survivor and witness narratives.
+- Transcribe, diarize, and timestamp interviews.
+- Index themes, events, and named entities.
+- Link testimonies to archival and geospatial context.
+- Respect consent and community access protocols.
+
+## Steps
+
+1. Transcribe, diarize, and timestamp interviews.
+2. Index themes, events, and named entities.
+3. Link testimonies to archival and geospatial context.
+4. Respect consent and community access protocols.
+5. Return transcripts to narrators for correction.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

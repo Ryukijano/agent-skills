@@ -2,19 +2,27 @@
 
 ## Description
 
-Public-service delivery, regulatory compliance, algorithmic accountability, participatory policy tools, and fair decision-support systems.
+Audit public-sector algorithms against governance, privacy, and fairness standards to ensure accountable and participatory AI deployment.
 
 ## When to use
 
 You are building or auditing AI systems used by governments, public agencies, or regulated industries where accountability, fairness, and transparency are essential.
 
-## Key concepts
+## Usage
 
-- **Algorithmic accountability and transparency**: model cards, documentation, explainability, and audit trails.
-- **Fairness and bias auditing**: group fairness, equalized odds, demographic parity, and calibration by subgroup.
-- **Public-service automation**: eligibility, benefits, permitting, and case routing with human oversight.
-- **Regulatory compliance**: EU AI Act, U.S. AI accountability frameworks, OECD AI Principles.
-- **Participatory and deliberative AI**: citizen input, redress mechanisms, and public comment analysis.
+- Document and audit AI systems with model cards, explainability, and algorithmic accountability frameworks.
+- Audit for group fairness, equalized odds, demographic parity, and calibration across subgroups.
+- Automate public-service decisions (eligibility, benefits, permitting) with human oversight and due process.
+- Map systems to regulatory frameworks (EU AI Act, NIST AI RMF, OECD AI Principles).
+
+## Steps
+
+1. Inventory the AI system, its training data, intended use, stakeholders, and risk profile.
+2. Document assumptions, limitations, and model cards, and establish audit trails for decisions.
+3. Measure fairness and bias across subgroups using appropriate metrics and mitigations (e.g., Fairlearn, Aequitas).
+4. Generate explainable outputs (SHAP, LIME, counterfactuals) and review representative decisions with stakeholders.
+5. Map risks and mitigations to applicable governance and regulatory frameworks.
+6. Set up continuous monitoring, redress mechanisms, and periodic re-audits.
 
 ## Code pattern
 

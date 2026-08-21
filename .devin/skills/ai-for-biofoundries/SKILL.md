@@ -2,20 +2,29 @@
 
 ## Description
 
-AI/ML-driven lab automation, robotic liquid handling, closed-loop DBTL, and self-driving laboratories for synthetic biology.
+Combine robotic automation, LIMS, and active learning to run closed-loop Design-Build-Test-Learn campaigns at scale.
 
 ## When to use
 
 You are running high-throughput synthetic biology experiments in a biofoundry, automating liquid handling, or closing the DBTL loop with predictive models.
 
-## Key concepts
+## Usage
 
-- **Biofoundry infrastructure**: robotic liquid handlers, plate readers, bioreactors, LIMS.
-- **DBTL automation**: design, build, test, learn cycles executed with minimal human intervention.
-- **Self-driving labs**: active learning + automation to select and run the next experiments.
-- **Workflow abstraction**: unit operations, workflows, projects.
-- **Digital twins**: models that simulate expected experimental outcomes.
-- **Data standards**: metadata capture, FAIR principles, programmable APIs.
+- **Robotic execution**: use liquid-handling robots, plate readers, and bioreactors to build and assay designs at scale.
+- **DBTL automation**: run Design-Build-Test-Learn cycles with minimal human intervention.
+- **Self-driving labs**: let active-learning agents propose and schedule the next experiments.
+- **Workflow abstraction**: encode protocols as unit operations and reusable workflows in a LIMS/scheduler.
+- **Surrogate/digital-twin modeling**: predict titers, yields, or activity from process parameters.
+- **FAIR data capture**: link samples, designs, and results through metadata, barcodes, and programmable APIs.
+
+## Steps
+
+1. Define the workflow (e.g., strain construction, enzyme screening, medium optimization) and map unit operations.
+2. Encode protocols for robotic liquid handling, incubation, and analytical instruments in a LIMS/scheduler.
+3. Run an initial design-of-experiments or active-learning batch to generate a training set.
+4. Train surrogate models from instrument outputs (titers, fluorescence, growth) and process features.
+5. Use Bayesian optimization to propose the next physical constructs to build and test.
+6. Analyze results, update the model, and scale the best-performing designs.
 
 ## Code pattern
 

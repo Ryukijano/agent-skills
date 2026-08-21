@@ -1,6 +1,6 @@
 # /ai-for-nuclear-engineering
 
-Machine learning for reactor design, plasma control, material degradation, and fusion ignition prediction.
+Apply machine learning to build fast surrogates, predict plasma disruptions, model material degradation, and optimize control in nuclear and fusion systems.
 
 ## Trigger
 

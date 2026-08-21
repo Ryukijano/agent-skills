@@ -1,6 +1,6 @@
 # /ai-for-folklore
 
-Computational folkloristics, motif and tale-type detection, and large-scale narrative analysis of folk tales, legends, and oral traditions.
+Classify folk-tale motifs and tale types across multilingual corpora to compare narrative traditions and cultural diffusion.
 
 ## Trigger
 

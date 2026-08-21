@@ -1,6 +1,6 @@
 # /ai-for-mineralogy
 
-XRD, SEM-EDS, Raman, and hyperspectral imaging for automated mineral identification, classification, and segmentation.
+Identify and quantify mineral phases from powder XRD patterns in near real time to automate geological and recycling workflows.
 
 ## Trigger
 

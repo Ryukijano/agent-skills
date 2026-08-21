@@ -2,7 +2,7 @@
 
 ## Description
 
-Smart building control, energy optimization, occupant-centric HVAC and lighting, and IoT-BMS integration for operational performance.
+Controls HVAC, lighting, and energy use in real time while maintaining comfort and lowering operational carbon.
 
 ## When to use
 
@@ -17,7 +17,7 @@ You are optimizing energy, comfort, and resilience in the day-to-day operation o
 
 ## Steps
 
-1. Connect BMS, IoT, weather, and utility data streams.
+1. Connect BMS, IoT, weather, and utility data streams through platforms such as OpenBlue or R-Zero.
 2. Define control objectives (energy, comfort, cost, carbon).
 3. Train forecasting and control models (MPC, RL, supervised).
 4. Simulate and safely deploy in shadow or pilot mode.

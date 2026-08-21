@@ -1,6 +1,6 @@
 # /ai-for-memristors
 
-Crossbar array modeling, compute-in-memory mapping, device variability learning, and memristor-based AI accelerator co-design.
+Use machine learning to model memristor devices, simulate crossbar arrays, and co-design compute-in-memory accelerators.
 
 ## Trigger
 

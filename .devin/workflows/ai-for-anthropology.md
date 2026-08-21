@@ -1,6 +1,6 @@
 # /ai-for-anthropology
 
-Computational ethnography, NLP for field notes and interviews, multimodal cultural analysis, and AI-assisted thick description and reflexivity.
+Use AI for Anthropology to transcribe interviews, code field notes and analyze multimodal cultural data.
 
 ## Trigger
 

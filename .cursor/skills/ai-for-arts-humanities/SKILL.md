@@ -2,19 +2,28 @@
 
 ## Description
 
-Digital humanities, text analysis, image restoration, and creative AI for cultural heritage.
+Use machine learning to transcribe, restore, analyze, and enrich cultural heritage and humanities collections.
 
 ## When to use
 
 You are applying ML to literature, history, art, archives, or cultural heritage collections.
 
-## Key concepts
+## Usage
 
-- **Textual analysis**: stylometry, topic modeling, named entity recognition.
-- **OCR and handwriting**: transcribe historical documents.
-- **Image restoration and colorization**: repair and enhance artworks.
-- **Multimodal collections**: align text, images, audio, and metadata.
-- **Ethics and provenance**: respect copyright, indigenous data sovereignty.
+- Transcribe printed and handwritten historical documents with OCR/HTR and LLM post-correction.
+- Restore, colorize, and enhance degraded images, artworks, and photographs.
+- Analyze text corpora with stylometry, topic modeling, named-entity recognition, and sentiment analysis.
+- Link and align multimodal collections (text, images, audio, metadata) for searchable digital archives.
+- Address ethics, provenance, copyright, and indigenous data sovereignty in digital humanities projects.
+
+## Steps
+
+1. Digitize and preprocess source material (scans, photos, audio, metadata) for quality and consistency.
+2. Train or apply OCR/HTR and image restoration models adapted to historical fonts, layouts, and degradation.
+3. Extract named entities, topics, and stylistic patterns from transcribed texts.
+4. Build multimodal indexes that link images, transcriptions, audio, and contextual metadata.
+5. Enrich records with crowdsourced or expert annotations and reconcile errors through human-in-the-loop review.
+6. Publish or archive the corpus with clear provenance, rights metadata, and access controls.
 
 ## Code pattern
 

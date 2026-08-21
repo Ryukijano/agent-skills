@@ -1,6 +1,6 @@
 # /ai-for-embedded-ai
 
-TinyML, on-device inference, quantization, neural architecture search, and co-optimization for microcontrollers and DSPs.
+Use machine learning and co-optimization to deploy tiny models on microcontrollers, DSPs, and low-power SoCs.
 
 ## Trigger
 

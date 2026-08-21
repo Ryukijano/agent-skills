@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for predicting, personalizing, and reducing the burden of patient-reported outcome measures and PRO-based treatment decisions.
+Use AI to administer, score, and interpret patient-reported outcome measures.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are collecting, analyzing, or predicting patient-reported outcomes, quality 
 
 ## Usage
 
-- **PRO prediction**: forecast post-treatment PRO scores from baseline and clinical data.
-- **Computer adaptive testing**: select the most informative PRO items per patient.
-- **Personalized interventions**: target patients whose PROs indicate high risk or unmet need.
-- **Burden reduction**: minimize questionnaire length while preserving measurement precision.
+- Deploy computer adaptive testing with PROMIS-CAT and REDCap.
+- Generate and validate LLM-PROMs from patient language.
+- Detect response patterns and missing-not-at-random signals.
+- Correlate PROs with wearables and clinical events.
+- Adapt item banks to minimize patient burden.
 
 ## Steps
 
-1. Map the PRO instrument, response scale, and recall period to the analysis goal.
-2. Engineer baseline and longitudinal features (scores, trends, change from baseline).
-3. Train models for prediction, classification, or item response theory.
-4. Validate predictive accuracy and measurement properties in a held-out sample.
-5. Assess clinical utility and patient acceptability before deployment.
+1. Select the PRO concept and validated instrument.
+2. Integrate CAT or LLM-generated items into data capture.
+3. Clean responses and detect careless or inconsistent patterns.
+4. Train models linking PROs to outcomes or adverse events.
+5. Validate psychometric properties and iterate.
 
 ## Code pattern
 

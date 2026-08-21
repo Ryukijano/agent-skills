@@ -1,6 +1,6 @@
 # /ai-for-textiles
 
-AI for fabric defect detection, pattern and color design, sorting, and textile supply chain optimization.
+Use AI for Textiles to detect fabric defects, generate patterns and match shades.
 
 ## Trigger
 

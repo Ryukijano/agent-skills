@@ -2,7 +2,7 @@
 
 ## Description
 
-Causal machine learning for treatment-effect estimation, propensity scoring, confounding adjustment, and sensitivity analysis in observational data.
+Estimate causal effects from real-world data using propensity scores and double machine learning.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are estimating causal effects, treatment responses, or policy impacts from o
 
 ## Usage
 
-- **Propensity and inverse probability weighting**: balance treatment groups.
-- **Doubly robust estimation**: combine outcome and treatment models for robust inference.
-- **Representation learning**: learn low-dimensional adjustment sets from high-dimensional covariates.
-- **Sensitivity analysis**: quantify robustness to unmeasured confounding.
+- Build propensity scores and inverse probability weights with CausalForge.
+- Apply double/debiased machine learning (EconML, DoubleML).
+- Emulate target trials from EHR and claims databases.
+- Adjust for high-dimensional confounding with proxy variables.
+- Assess balance and sensitivity to unmeasured confounding.
 
 ## Steps
 
-1. Define the causal estimand, treatment, outcome, and covariates.
-2. Assess overlap and trim units outside the common support.
-3. Fit flexible outcome and propensity models with cross-fitting.
-4. Estimate the effect using AIPW, targeted maximum likelihood, or matching.
-5. Conduct sensitivity analyses and report bounds under confounding scenarios.
+1. Define the causal question, exposure, and outcome.
+2. Extract longitudinal observational data and confounders.
+3. Estimate propensity scores or train nuisance models.
+4. Compute ATE/CATE with DML or weighting.
+5. Run sensitivity analyses and report robustness.
 
 ## Code pattern
 

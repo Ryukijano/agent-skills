@@ -1,6 +1,6 @@
 # /ai-for-education
 
-Personalized learning, knowledge tracing, automated assessment, and intelligent tutoring systems.
+Use machine learning to personalize learning paths, trace student knowledge, automate assessment, and power intelligent tutoring systems.
 
 ## Trigger
 

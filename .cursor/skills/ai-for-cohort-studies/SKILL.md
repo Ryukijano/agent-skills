@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for risk prediction, confounding control, survival analysis, and biomarker discovery in prospective and retrospective cohort studies.
+Analyze defined patient groups to estimate risk, survival, and treatment effects over time.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are building risk or prognostic models, identifying risk factors, or estimat
 
 ## Usage
 
-- **Cohort risk prediction**: forecast disease onset, progression, or mortality.
-- **Feature discovery**: find non-linear risk factors and interactions in large biobanks.
-- **Survival modeling**: handle censored outcomes and time-to-event data.
-- **Confounder adjustment**: control for selection bias and measured confounders.
+- Predict incident disease with AutoPrognosis or MILTON on UK Biobank.
+- Run survival analysis with Cox, random survival forests, or deep survival.
+- Build propensity-matched cohorts from EHR and claims.
+- Identify biomarker trajectories linked to outcomes.
+- Stratify cohorts by genotype, exposure, or frailty.
 
 ## Steps
 
-1. Define the cohort, eligibility window, and follow-up period.
-2. Create a tabular feature set at baseline or as time-varying covariates.
-3. Split by calendar time or admission date to mimic prospective use.
-4. Train risk models with appropriate survival or classification objectives.
-5. Validate calibration, discrimination, and generalizability to new cohorts.
+1. Define cohort inclusion/exclusion and baseline characteristics.
+2. Curate linked data (EHR, claims, omics, registries).
+3. Engineer survival or longitudinal features.
+4. Train risk or survival models with cross-validation.
+5. Report hazard ratios, C-indices, and subgroup effects.
 
 ## Code pattern
 

@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for electrodiagnostic studies, musculoskeletal ultrasound, gait and motion analysis, prosthetics/orthotics, and functional assessment in physiatry.
+Use machine learning to interpret electrodiagnostic studies, musculoskeletal ultrasound, gait, and prosthetics data in physiatry.
 
 ## When to use
 
 You are interpreting EMG and nerve conduction studies, musculoskeletal ultrasound, gait and balance data, or planning rehabilitation and assistive devices in physical medicine and rehabilitation.
 
-## Key concepts
+## Usage
 
-- **Electrodiagnostics**: EMG signal classification, motor-unit action potentials, and nerve conduction parameter prediction.
-- **Musculoskeletal ultrasound**: automated tendon, ligament, nerve, and muscle segmentation and pathology detection.
-- **Gait and motion analysis**: inertial measurement units, pressure sensors, and 3D motion capture.
-- **Prosthetics and orthotics**: myoelectric control intent and exoskeleton adaptation.
-- **Functional assessment**: FIM, Barthel, and disability-specific outcome prediction.
+- Classify EMG and nerve conduction signals for neuropathic and myopathic patterns.
+- Segment and detect pathology in tendon, ligament, nerve, and muscle ultrasound.
+- Analyze gait, balance, and motion from IMUs, pressure sensors, and 3D capture.
+- Decode myoelectric control intent and adapt prosthetics and orthotics.
+- Predict functional assessment scores and rehabilitation outcomes.
+
+## Steps
+
+1. Collect EMG, nerve conduction, ultrasound, wearable, and functional assessment data.
+2. Standardize recording parameters and filter motion artifacts.
+3. Train signal, image, or time-series models for diagnosis or control.
+4. Validate against electrophysiologist readings, instrumented walkways, or clinician scores.
+5. Integrate into prosthetic control, gait analysis, or diagnostic workflows.
+6. Ensure low latency for real-time control and adapt to individual patients.
 
 ## Code pattern
 

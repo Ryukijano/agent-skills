@@ -2,19 +2,28 @@
 
 ## Description
 
-Generating and refining posters, slides, brand assets, and visual narratives with diffusion models and design tools.
+Create and refine posters, slides, pitch decks and social-media assets using diffusion models, layout tools and human-in-the-loop design.
 
 ## When to use
 
 You need to create presentations, pitch decks, posters, social media assets, or brand visuals that communicate complex ideas clearly and consistently.
 
-## Key concepts
+## Usage
 
-- **Prompt engineering for visuals**: guide diffusion and layout models with precise, style-aware prompts.
-- **Layout and composition**: balance text, images, whitespace, and hierarchy for the target medium.
-- **Brand and style consistency**: enforce colors, fonts, and templates across generated variants.
-- **ControlNet and structured generation**: constrain generation to layouts, sketches, or existing assets.
-- **Human-in-the-loop**: AI drafts; designers refine for accuracy, accessibility, and taste.
+- **Guide diffusion and layout models with precise, style-aware prompts.**
+- **Balance text, images, whitespace, and hierarchy for the target medium.**
+- **Enforce colors, fonts, and templates across generated variants.**
+- **Constrain generation to layouts, sketches, or existing assets.**
+- **Have designers refine AI drafts for accuracy, accessibility, and taste.**
+
+## Steps
+
+1. Define the message, audience, medium, and brand constraints before generating.
+2. Generate several visual drafts using style-aware prompts, sketches, or ControlNet constraints.
+3. Select the strongest draft and check brand alignment, color contrast, and visual hierarchy.
+4. Refine text, labels, and data representations to avoid misrepresentation or bias.
+5. Export to editable formats (SVG, PPTX) so designers can finalize and review.
+6. Test comprehension and recall with the target audience and review for artifacts and rights issues.
 
 ## Code pattern
 

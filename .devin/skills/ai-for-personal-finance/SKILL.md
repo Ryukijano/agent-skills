@@ -2,19 +2,26 @@
 
 ## Description
 
-Budget optimization, cash-flow forecasting, robo-advisory, credit scoring, and personalized savings and investment guidance for household financial decisions.
+Use machine learning to categorize transactions, forecast cash flow, build robo-advisory portfolios, and guide debt and savings decisions for households.
 
 ## When to use
 
 You want to manage household budgets, forecast cash flow, choose an investment allocation, or get personalized savings and debt-payoff guidance.
 
-## Key concepts
+## Usage
 
-- **Transaction categorization**: classify bank and credit-card transactions into budgets using NLP or heuristics.
-- **Cash-flow forecasting**: time-series models for income, bills, and discretionary spending.
-- **Robo-advisory**: automated, risk-profiled portfolio construction and rebalancing.
-- **Credit and risk scoring**: predict default risk, affordability, and creditworthiness.
-- **Goal-based planning**: optimize savings rates toward targets (emergency fund, retirement, major purchase).
+- Categorize bank and credit-card transactions into budgets automatically.
+- Forecast income, bills, and discretionary cash flow over weeks to months.
+- Construct and rebalance risk-profiled investment portfolios.
+- Score credit risk and optimize savings toward personal goals.
+
+## Steps
+
+1. Connect and label transaction data with strict encryption and on-device processing where possible.
+2. Train a categorization or forecasting model with chronological train/test splits.
+3. Backtest cash-flow and portfolio recommendations against historical behavior.
+4. Calibrate risk and explain fees, taxes, and liquidity trade-offs.
+5. Deliver personalized nudges and rebalancing alerts with opt-out controls.
 
 ## Code pattern
 

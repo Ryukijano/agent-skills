@@ -1,6 +1,6 @@
 # /ai-for-science-communication
 
-Plain-language summaries, research storytelling, audience adaptation, and ethical, evidence-based use of generative AI for public-facing science.
+Use generative AI to turn scientific findings into clear, audience-tailored public communications—such as plain-language summaries and multimedia explainers—while preserving accuracy.
 
 ## Trigger
 

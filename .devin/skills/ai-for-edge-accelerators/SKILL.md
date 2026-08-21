@@ -2,18 +2,27 @@
 
 ## Description
 
-NPU/TPU/FPGA edge accelerator design, benchmarking, mapping, and optimization for low-latency, energy-efficient inference.
+Compile and deploy tiny language models and vision detectors onto RISC-V microcontrollers and NPUs for milliwatt inference.
 
 ## When to use
 
 You are selecting, programming, or designing an edge AI accelerator (NPU, TPU, GPU, FPGA) and need to optimize inference throughput and energy.
 
-## Key concepts
+## Usage
 
-- **Edge NPU/TPU architectures**: dataflow, systolic arrays, and in-memory computing for low-power inference.
-- **Model mapping and tiling**: schedule operators to maximize MAC utilization and minimize off-chip traffic.
-- **Benchmarking**: MLPerf Tiny and MLPerf Edge provide fair accuracy/latency/energy metrics.
-- **Hybrid precision and sparsity**: exploit int4/int8, block sparsity, and structured pruning on accelerator hardware.
+- Architect dataflow, systolic, and in-memory arrays for low-power inference.
+- Map and tile operators to maximize MAC utilization and minimize off-chip traffic.
+- Benchmark accuracy, latency, and energy on MLPerf Tiny and Edge suites.
+- Exploit int4/int8, block sparsity, and structured pruning on the target NPU.
+
+## Steps
+
+1. Profile the target accelerator's op set, tensor formats, and memory bandwidth.
+2. Quantize and optimize the model for the supported bit width and sparsity.
+3. Map operators to the accelerator and tile tensors to reduce memory traffic.
+4. Run end-to-end inference on the target board and measure accuracy and latency.
+5. Compare the quantized model to a floating-point baseline on energy-delay product.
+6. Fall back unsupported operators to the CPU and profile the overhead.
 
 ## Code pattern
 

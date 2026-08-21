@@ -1,6 +1,6 @@
 # /ai-for-cultural-heritage
 
-Machine learning and deep learning for the digitization, documentation, analysis, and sustainable management of tangible and intangible cultural heritage.
+Transcribe and restore damaged manuscripts and inscriptions with OCR and lacuna filling to make fragile heritage accessible.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-cyber-physical-security
 
-Securing industrial control systems, SCADA anomaly detection, physical invariants, and cross-layer intrusion detection.
+Use machine learning to secure industrial control systems, detect SCADA anomalies, learn physical invariants, and trace cross-layer cyber-physical attacks.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-thermal-design
 
-ML surrogates for electronics cooling, data-center thermal control, heat-sink and package thermal co-design, and CFD emulation.
+Use machine learning to predict electronics cooling, control data-center thermal systems, and co-design heat sinks and packages.
 
 ## Trigger
 

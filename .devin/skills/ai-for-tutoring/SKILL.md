@@ -2,18 +2,27 @@
 
 ## Description
 
-Intelligent tutoring systems, dialogue-based tutoring, error diagnosis, Socratic scaffolding, and personalized next-step hints.
+Use AI to build or augment a one-on-one digital tutor that diagnoses misconceptions and gives step-by-step guidance without giving away the answer.
 
 ## When to use
 
 You want to build or augment a one-on-one digital tutor that diagnoses misconceptions and gives step-by-step guidance without giving away the answer.
 
-## Key concepts
+## Usage
 
-- **Intelligent Tutoring System (ITS) architecture**: student model, expert model, tutoring model, and interface.
-- **Dialogue tutoring**: natural-language interaction that scaffolds problem solving.
-- **Error diagnosis and remediation**: identify the specific misconception behind a wrong step.
-- **Pedagogical guardrails**: keep hints productive, avoid answer leakage, and maintain learning outcomes.
+- Load student model, expert model, and curriculum knowledge sources.
+- Diagnose misconceptions from student responses.
+- Generate Socratic hints that avoid answer leakage.
+- Adapt difficulty and pedagogy in real time.
+
+## Steps
+
+1. Load student model, expert model, and curriculum knowledge sources.
+2. Diagnose misconceptions from student responses.
+3. Generate Socratic hints that avoid answer leakage.
+4. Adapt difficulty and pedagogy in real time.
+5. Validate learning gains against a worksheet or human-tutor baseline.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

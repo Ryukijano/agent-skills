@@ -2,18 +2,26 @@
 
 ## Description
 
-Deep learning for photonic device inverse design, metasurfaces, optical communications, and nanophotonic simulation surrogates.
+Use deep learning to inverse-design photonic devices, metasurfaces, and optical communication links while replacing expensive Maxwell solvers.
 
 ## When to use
 
 You are designing photonic devices, metasurfaces, waveguides, or optimizing optical communication links.
 
-## Key concepts
+## Usage
 
-- **Inverse design**: neural networks and topology optimization for nanophotonic structures.
-- **Metasurfaces and metamaterials**: subwavelength wavefront engineering.
-- **Maxwell solvers and surrogates**: fast replacements for finite-difference time-domain.
-- **Optical communications**: equalization, modulation, and link optimization.
+- Inverse-design metasurfaces, metalenses, and waveguides for target phase or spectral responses.
+- Train neural surrogates to replace FDTD or finite-element simulations.
+- Optimize optical-communication modulators, demultiplexers, and equalizers.
+- Enforce fabrication constraints and minimum feature sizes during design.
+
+## Steps
+
+1. Define the target optical response and a parameterization of the geometry.
+2. Build a forward surrogate by training on FDTD/FEM simulations or experimental data.
+3. Validate the surrogate against full-wave solvers on held-out designs.
+4. Run inverse design or topology optimization with fabrication constraints.
+5. Fabricate and characterize the device, then feed results back to refine the surrogate.
 
 ## Code pattern
 

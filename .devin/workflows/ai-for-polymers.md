@@ -1,6 +1,6 @@
 # /ai-for-polymers
 
-Machine learning for polymer property prediction, generative design, process optimization, and structure representation.
+Use ML to predict polymer properties, generate novel structures, and optimize process-structure-property relationships for sustainable materials.
 
 ## Trigger
 

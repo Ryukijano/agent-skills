@@ -1,6 +1,6 @@
 # /ai-for-root-cause-analysis
 
-Knowledge graphs, causal discovery, graph neural networks, and SHAP-based diagnostics for identifying fault origins and propagations in complex systems.
+Traces faults to originating causes using causal discovery, knowledge graphs, and SHAP-based diagnostics.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-higher-education
 
-Admissions analytics, retention and completion modeling, student success advising, enrollment planning, and institutional research.
+Use AI to improve access, success, retention, or operational decisions in colleges and universities.
 
 ## Trigger
 

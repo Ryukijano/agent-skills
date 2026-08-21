@@ -1,6 +1,6 @@
 # /ai-for-architecture
 
-AI for generative spatial layouts, floorplan synthesis, style exploration, and text/sketch-driven conceptual design.
+Use AI for Architecture to generate massing, floorplans and style variations from text or sketches.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-demand-forecasting
 
-Time-series forecasting, hierarchical and intermittent demand, probabilistic forecasts, and promotion/event effects.
+Use AI for Demand Forecasting to model time series, reconcile hierarchies and quantify uncertainty for products and events.
 
 ## Trigger
 

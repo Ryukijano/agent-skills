@@ -1,6 +1,6 @@
 # /ai-for-knowledge-design
 
-Designing knowledge architectures, taxonomies, ontologies, and agent-facing knowledge layers for organizations.
+Build knowledge architectures, taxonomies, ontologies and agent-facing knowledge layers that help humans and AI navigate organizational information.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-construction-management
 
-BIM-NLP integration, 4D/5D digital twins, computer-vision progress monitoring, and AI-driven scheduling and cost control for construction.
+Track concrete pouring and component progress from site cameras and BIM to detect delays and improve safety compliance.
 
 ## Trigger
 

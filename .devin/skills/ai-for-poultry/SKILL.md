@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for flock health, welfare, behaviour, environmental control, and productivity in broiler, layer, and turkey production.
+Monitor poultry welfare, behavior, and health with computer vision and edge sensors.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are monitoring poultry flocks to detect disease, assess welfare, track behav
 
 ## Usage
 
-- **Disease and mortality prediction**: detect sick birds or predict flock mortality from behaviour and environment.
-- **Welfare and behaviour assessment**: monitor feather condition, gait, dust bathing, and stress indicators.
-- **Vocalisation and sound analysis**: identify distress or respiratory issues from audio.
-- **Feed, water, and environment control**: optimise intake and climate using sensor data.
+- Track feeding, drinking, and activity with computer vision.
+- Detect coccidiosis and salmonellosis with Edge Impulse.
+- Monitor environmental conditions (temperature, ammonia, light).
+- Count and locate birds with UWB/IMU wearables.
+- Assess gait, feather condition, and stress.
 
 ## Steps
 
-1. Install or collect video, audio, sensor, and environmental data from poultry houses.
-2. Annotate behaviour, health, or welfare events at individual or flock level.
-3. Train detection, classification, or regression models suited to poultry house conditions.
-4. Validate on separate flocks, houses, and production cycles.
-5. Provide clear, actionable alerts and integrate with farm management routines.
+1. Place cameras, wearables, or environmental sensors in the house.
+2. Collect and label behavior and health outcomes.
+3. Train edge-deployed classification and detection models.
+4. Integrate with farm management software.
+5. Validate against veterinary checks and welfare audits.
 
 ## Code pattern
 

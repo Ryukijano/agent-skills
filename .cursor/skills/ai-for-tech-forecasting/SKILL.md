@@ -2,19 +2,28 @@
 
 ## Description
 
-Patent and publication analysis, trend extrapolation, expert elicitation, and ML models for predicting technological progress and emerging AI capabilities.
+Use patents, publications, funding, and expert judgment to forecast technological progress and emerging capabilities.
 
 ## When to use
 
 You want to predict the pace, direction, or feasibility of technological progress to guide R&D investment, policy, or safety planning.
 
-## Key concepts
+## Usage
 
-- **Data sources for tech forecasting**: patents, publications, funding, product releases, and expert surveys.
-- **Trend and time-series models**: S-curves, ARIMA, autoencoders, and transformer-based predictors.
-- **Technological convergence and opportunity discovery**: link prediction and topic modeling on patent/paper graphs.
-- **Expert judgement and Delphi methods**: structured elicitation, aggregation, and calibration.
-- **Forecast evaluation**: calibration, Brier score, and accuracy over multiple time horizons.
+- Collect patents, papers, funding, product releases, and expert surveys.
+- Model S-curves, ARIMA, autoencoders, and transformer-based technology trends.
+- Discover technological convergence and opportunities with topic and link models.
+- Aggregate expert judgment with Delphi and structured elicitation.
+- Evaluate forecasts with Brier scores and calibration over horizons.
+
+## Steps
+
+1. Define the technology, metric, and forecasting horizon.
+2. Gather historical data (patents, papers, funding, product releases) and expert judgments.
+3. Train or fit trend, topic, or link-prediction models.
+4. Backtest on held-out time periods and avoid look-ahead bias.
+5. Combine model and expert forecasts and report uncertainty scenarios.
+6. Update regularly as new signals and events emerge.
 
 ## Code pattern
 

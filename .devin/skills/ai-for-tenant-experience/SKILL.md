@@ -2,7 +2,7 @@
 
 ## Description
 
-Personalization, occupancy analytics, indoor environmental quality, and tenant engagement for workplace and residential environments.
+Personalizes indoor environments, predicts satisfaction, and optimizes space utilization for workplace and residential tenants.
 
 ## When to use
 
@@ -12,7 +12,7 @@ You want to improve tenant satisfaction, engagement, retention, and workplace pr
 
 - **Indoor environmental quality**: predict thermal, visual, acoustic, and air-quality satisfaction.
 - **Personalization**: adjust lighting, temperature, and space recommendations.
-- **Occupancy analytics**: understand space utilization and preferences.
+- **Occupancy analytics**: understand space utilization and preferences from sensors such as XY Sense.
 - **Tenant apps and services**: AI chatbots, maintenance ticketing, and amenity booking.
 
 ## Steps

@@ -1,6 +1,6 @@
 # /ai-for-automated-reasoning
 
-Learning to guide proof search, premise selection, tactic prediction, and combining LLMs with symbolic reasoners.
+Use machine learning to guide proof search, premise selection, and tactic prediction in theorem provers and proof assistants.
 
 ## Trigger
 

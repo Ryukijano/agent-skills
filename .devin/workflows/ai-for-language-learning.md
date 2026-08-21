@@ -1,6 +1,6 @@
 # /ai-for-language-learning
 
-AI chatbots for conversation practice, automated writing and pronunciation feedback, CEFR-level adaptation, and second-language acquisition support.
+Use AI to support second or foreign language learners with interactive practice, corrective feedback, and level-appropriate content.
 
 ## Trigger
 

@@ -2,18 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-epigenomics",
         "title": "AI for Epigenomics",
-        "description": "DNA methylation, histone modifications, chromatin accessibility, enhancer-promoter interactions, and deep learning models of gene regulation.",
+        "description": "Use deep learning to predict gene-regulatory states and interpret non-coding variants from DNA methylation, histone marks, chromatin accessibility and 3D contact data.",
         "devin_body": r'''## When to use
 
 You are working with DNA methylation, histone modifications, chromatin accessibility, or other epigenomic assays and want to predict regulatory states, annotate genomic elements, or integrate epigenomic data with expression or phenotype data.
 
-## Key concepts
+## Usage
 
-- **DNA methylation**: CpG and non-CpG methylation patterns, often measured by WGBS or array-based assays.
-- **Histone modifications**: ChIP-seq marks such as H3K4me3, H3K27ac, and H3K27me3 that define promoters and enhancers.
-- **Chromatin accessibility**: ATAC-seq and DNase-seq that identify open regulatory regions.
-- **Enhancer-promoter interactions**: 3D contact data linking distal regulatory elements to target genes.
-- **Deep epigenomics models**: DeepSEA, Basenji, and Enformer-style sequence-to-activity predictors.
+- **Predict DNA methylation**: identify regulatory and imprinting changes from WGBS or array data.
+- **Classify enhancers and promoters**: use ChIP-seq marks such as H3K4me3, H3K27ac, and H3K27me3.
+- **Model chromatin accessibility**: interpret ATAC-seq and DNase-seq to find open regulatory regions.
+- **Link distal elements**: connect enhancers to target genes with 3D contact and HiChIP data.
+- **Score variants**: predict the impact of non-coding variants and interpret with motif and attribution analysis.
+
+## Steps
+
+1. Collect and align WGBS, ChIP-seq, ATAC-seq, or array data to the same reference and blacklist.
+2. Call peaks or quantify signals, normalize for depth and input control, and annotate genomic regions.
+3. Train or load a sequence-to-activity model such as Enformer, Basenji, or Corgi on genomic windows.
+4. Annotate enhancers, promoters, and 3D contacts and link distal elements to target genes.
+5. Score variants and interpret predictions with motif analysis and attribution maps.
+6. Validate predicted regulatory effects against reporter assays, RNA-seq, or matched epigenomic profiles.
 
 ## Code pattern
 
@@ -52,18 +61,27 @@ peaks, _ = find_peaks(values, height=5.0, distance=1000)
     {
         "name": "ai-for-transcriptomics",
         "title": "AI for Transcriptomics",
-        "description": "Bulk and single-cell RNA-seq analysis, normalization, clustering, differential expression, splicing, and foundation models for gene expression.",
+        "description": "Use machine learning and foundation models to quantify, normalize and interpret bulk and single-cell RNA-seq data for cell typing, differential expression and gene regulation.",
         "devin_body": r'''## When to use
 
 You need to quantify, normalize, cluster, or model gene expression from bulk RNA-seq or single-cell RNA-seq data for cell typing, differential expression, or gene regulation studies.
 
-## Key concepts
+## Usage
 
-- **Bulk vs single-cell RNA-seq**: population average versus cell-resolution expression.
-- **Count normalization**: library size correction, log1p, and variance stabilization.
-- **Dimensionality reduction**: PCA, UMAP, and latent embeddings for visualization and analysis.
-- **Differential expression**: edgeR, DESeq2, or model-based tests across conditions or cell types.
-- **Foundation models**: scBERT, scGPT, and scFoundation for cell representation and transfer learning.
+- **Preprocess counts**: filter, normalize, and stabilize variance for bulk and single-cell RNA-seq.
+- **Reduce dimensions**: run PCA, UMAP, or latent embeddings for visualization and analysis.
+- **Detect differential expression**: identify genes across conditions or cell types with appropriate tests.
+- **Apply foundation models**: use scBERT, scGPT, and scFoundation for representation and transfer learning.
+- **Reconstruct trajectories**: infer pseudotime, RNA velocity, and lineage dynamics.
+
+## Steps
+
+1. Load raw counts and metadata, filter low-quality cells/genes, and normalize for library size.
+2. Select highly variable genes and compute dimensionality reduction and embeddings.
+3. Cluster cells or samples and annotate them with known marker genes or reference atlases.
+4. Test for differential expression between conditions and validate with a second method.
+5. Build or apply a foundation model for transfer learning, imputation, or perturbation prediction.
+6. Compare results to reference atlases and orthogonal assays to assess biological consistency.
 
 ## Code pattern
 
@@ -103,18 +121,27 @@ sc.tl.pca(adata)
     {
         "name": "ai-for-metabolomics",
         "title": "AI for Metabolomics",
-        "description": "Mass spectrometry and NMR metabolite profiling, annotation, pathway analysis, normalization, and machine learning for biomarker discovery.",
+        "description": "Use machine learning on LC-MS, GC-MS and NMR metabolite profiles to annotate features, discover biomarkers and predict disease risk or metabolic phenotypes.",
         "devin_body": r'''## When to use
 
 You are analyzing mass spectrometry or NMR metabolomics data to identify metabolites, find biomarkers, classify samples, or integrate metabolism with other omics layers.
 
-## Key concepts
+## Usage
 
-- **LC-MS and NMR**: major analytical platforms for untargeted and targeted metabolomics.
-- **Metabolite annotation**: matching m/z, retention time, and fragmentation to libraries.
-- **Pathway analysis**: mapping features to KEGG, HMDB, and Reactome pathways.
-- **Normalization**: batch, drift, and sample-wise scaling to remove technical variation.
-- **Predictive models**: random forests, SVMs, and deep learning for biomarker discovery.
+- **Process spectra**: convert LC-MS, GC-MS, and NMR data into aligned peak tables and features.
+- **Annotate metabolites**: match m/z, retention time, and fragmentation to reference libraries.
+- **Normalize data**: correct batch effects, drift, and sample size before modeling.
+- **Map pathways**: connect significant features to KEGG, HMDB, and Reactome pathways.
+- **Predict phenotypes**: train classifiers and risk scores for disease and patient stratification.
+
+## Steps
+
+1. Import raw spectral or peak-table data and apply quality control and missing-value imputation.
+2. Annotate metabolites with m/z, RT, MS/MS libraries, or NMR chemical-shift databases.
+3. Normalize and correct for batch effects using QC samples or statistical alignment.
+4. Perform univariate, multivariate, or ML-based biomarker discovery with cross-validation.
+5. Map significant features to metabolic pathways and interpret biological relevance.
+6. Validate biomarkers with targeted assays and independent cohorts.
 
 ## Code pattern
 
@@ -153,18 +180,27 @@ scores = cross_val_score(model, X, y, cv=5)
     {
         "name": "ai-for-lipidomics",
         "title": "AI for Lipidomics",
-        "description": "LC-MS/MS lipid species quantification, structural isomer resolution, lipid class normalization, and predictive modeling of lipid phenotypes.",
+        "description": "Use machine learning on LC-MS/MS and shotgun lipidomics data to annotate lipid classes, resolve isomers, normalize variation and link lipid profiles to phenotypes.",
         "devin_body": r'''## When to use
 
 You are quantifying or classifying lipid species from LC-MS/MS or shotgun lipidomics data and need to annotate lipid classes, correct for technical variation, or link lipid profiles to phenotypes.
 
-## Key concepts
+## Usage
 
-- **Lipid classes**: fatty acyls, glycerolipids, glycerophospholipids, sphingolipids, and sterols.
-- **LC-MS/MS lipidomics**: separation and fragmentation for species and isomer resolution.
-- **Epilipidomics**: post-translationally modified lipids and oxidation products.
-- **LipidMaps**: curated lipid nomenclature and classification database.
-- **Statistical modeling**: univariate tests, multivariate PCA, and supervised classifiers.
+- **Classify lipids**: assign species to fatty acyls, glycerolipids, glycerophospholipids, sphingolipids, and sterols.
+- **Resolve isomers**: use fragmentation and retention patterns to separate structural isomers and epilipidomics modifications.
+- **Normalize signals**: scale by total lipid class sum or internal standards and correct batch drift.
+- **Map nomenclature**: align annotations with LipidMaps and pathway databases.
+- **Build phenotype models**: link lipid signatures to disease, diet, or intervention outcomes.
+
+## Steps
+
+1. Acquire LC-MS/MS or shotgun lipidomics data and apply peak picking and alignment.
+2. Annotate lipid classes and molecular species with LipidMaps and MS/MS fragment rules.
+3. Normalize intensities by class sums or internal standards and correct batch effects.
+4. Perform PCA, univariate tests, or supervised classification on lipid features.
+5. Validate isomer resolution and annotation confidence with reference standards.
+6. Integrate lipid signatures with clinical or phenotypic data and replicate in independent cohorts.
 
 ## Code pattern
 
@@ -202,18 +238,27 @@ pcs = PCA(n_components=2).fit_transform(X_scaled)
     {
         "name": "ai-for-proteomics",
         "title": "AI for Proteomics",
-        "description": "Mass spectrometry protein identification and quantification, DDA/DIA workflows, post-translational modifications, and AI-driven peptide property prediction.",
+        "description": "Use machine learning on mass-spectrometry proteomics data to improve peptide identification, quantify proteins, predict post-translational modifications and build spectral libraries for DDA and DIA workflows.",
         "devin_body": r'''## When to use
 
 You are analyzing mass spectrometry proteomics data to quantify proteins, identify post-translational modifications, build spectral libraries, or predict peptide properties.
 
-## Key concepts
+## Usage
 
-- **LC-MS/MS workflows**: DDA, DIA, SRM/PRM, and data-independent acquisition.
-- **Peptide-spectrum matching**: search engines, spectral libraries, and rescoring.
-- **Protein inference and FDR**: PSM, peptide, and protein-level false discovery rates.
-- **PTMs**: phosphorylation, ubiquitination, glycosylation, and other modifications.
-- **AI for proteomics**: retention time, fragmentation, and MHC-peptide binding prediction.
+- **Identify peptides**: process DDA and DIA LC-MS/MS data with search engines and spectral libraries.
+- **Control FDR**: enforce 1% false discovery rates at PSM, peptide, and protein levels.
+- **Predict peptide properties**: use deep learning for retention time, fragmentation, and ionization.
+- **Detect PTMs**: identify and localize phosphorylation, glycosylation, ubiquitination, and other modifications.
+- **Quantify proteins**: measure abundance changes across conditions and integrate with other omics.
+
+## Steps
+
+1. Convert raw MS files and build or choose a search database or spectral library.
+2. Identify peptides with a search engine, control FDR, and infer proteins.
+3. Train or apply deep learning models for retention time, fragmentation, or PTM prediction.
+4. Quantify proteins across replicates and conditions with normalization and imputation.
+5. Detect differentially abundant proteins and validate with orthogonal assays.
+6. Share data and workflows in containers or repositories to support reproducibility.
 
 ## Code pattern
 
@@ -252,18 +297,27 @@ with mzml.read("run.mzML") as reader:
     {
         "name": "ai-for-metagenomics",
         "title": "AI for Metagenomics",
-        "description": "16S rRNA and shotgun microbial community profiling, taxonomic and functional prediction, MAG binning, and microbiome-host association modeling.",
+        "description": "Use machine learning on 16S rRNA and shotgun metagenomic data to profile microbial communities, infer functions, assemble metagenome-assembled genomes and link the microbiome to host phenotypes.",
         "devin_body": r'''## When to use
 
 You are profiling microbial communities from 16S rRNA or shotgun metagenomic data to classify taxa, infer function, assemble MAGs, or link the microbiome to host phenotypes.
 
-## Key concepts
+## Usage
 
-- **Amplicon vs shotgun**: 16S rRNA profiling versus whole-genome metagenomics.
-- **Taxonomic and functional profiling**: read classification, gene catalogues, and pathway inference.
-- **Metagenome-assembled genomes (MAGs)**: binning contigs into draft microbial genomes.
-- **Compositional data**: relative abundance, sparsity, and library size effects.
-- **Host-microbiome models**: classification, time-series, and causal inference.
+- **Profile taxonomy**: classify 16S amplicon or shotgun reads into taxonomic and functional profiles.
+- **Assemble MAGs**: bin contigs into metagenome-assembled genomes and assess quality.
+- **Handle composition**: apply CLR, ILR, or other transformations to relative-abundance data.
+- **Model host associations**: link taxonomic and functional features to phenotype or intervention.
+- **Validate generalization**: test microbiome associations in independent cohorts.
+
+## Steps
+
+1. Quality-filter and trim reads, remove contaminants, and account for negative controls.
+2. Profile taxonomy from 16S or shotgun data, or assemble and bin MAGs from metagenomes.
+3. Infer functional content with gene catalogs and pathway databases.
+4. Apply compositional transformations and batch correction before statistical testing.
+5. Train classification or regression models linking microbiome features to host phenotypes.
+6. Validate associations in independent cohorts and confirm with targeted experiments.
 
 ## Code pattern
 
@@ -302,18 +356,27 @@ cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     {
         "name": "ai-for-single-cell",
         "title": "AI for Single-Cell Omics",
-        "description": "Single-cell transcriptomics, epigenomics, proteomics, and multi-omics integration, cell type annotation, trajectory inference, and foundation models.",
+        "description": "Use single-cell and multi-omics foundation models to annotate cell types, integrate batches, infer trajectories and predict perturbation responses.",
         "devin_body": r'''## When to use
 
 You are working with single-cell genomics data (scRNA-seq, scATAC-seq, CITE-seq, or multi-omics) to annotate cell types, infer trajectories, integrate batches, or predict perturbation responses.
 
-## Key concepts
+## Usage
 
-- **scRNA-seq**: gene expression at single-cell resolution with dropout and high dimensionality.
-- **scATAC and multi-omics**: chromatin accessibility and surface proteins in the same cells.
-- **Batch correction and integration**: mapping new datasets to reference atlases.
-- **Trajectory inference**: pseudotime, RNA velocity, and differentiation dynamics.
-- **Foundation models**: scGPT, scBERT, and UCE for transfer learning and prediction.
+- **Preprocess data**: normalize scRNA-seq, scATAC-seq, CITE-seq, or multi-omics profiles.
+- **Remove artifacts**: filter ambient RNA, doublets, and low-quality cells before analysis.
+- **Annotate cells**: identify types and novel subpopulations with marker genes and foundation models.
+- **Integrate batches**: correct batch effects or map query data to reference atlases.
+- **Model dynamics**: infer trajectories, RNA velocity, and perturbation responses with scGPT or scFoundation.
+
+## Steps
+
+1. Load single-cell data, filter low-quality cells and doublets, and normalize counts.
+2. Select features and compute dimensionality reduction, neighbors, and embeddings.
+3. Cluster cells and annotate them with marker genes or reference atlases.
+4. Integrate multiple batches or project query data onto a reference while preserving biology.
+5. Infer trajectories and velocity, or predict perturbation responses with foundation models.
+6. Validate cell types and dynamics with orthogonal experiments or lineage-tracing data.
 
 ## Code pattern
 
@@ -352,18 +415,27 @@ sc.tl.umap(adata)
     {
         "name": "ai-for-spatial-omics",
         "title": "AI for Spatial Omics",
-        "description": "Spatially resolved transcriptomics and proteomics, cell segmentation, neighborhood analysis, and integration with imaging data.",
+        "description": "Use machine learning on spatially resolved transcriptomics and proteomics to segment cells, analyze neighborhoods, integrate imaging and map tissue microenvironments.",
         "devin_body": r'''## When to use
 
 You are analyzing spatially resolved transcriptomics, proteomics, or multi-omics data and need to account for tissue context, neighborhood structure, and image features.
 
-## Key concepts
+## Usage
 
-- **Spatial transcriptomics**: Visium, Slide-seq, Xenium, MERFISH, Stereo-seq, and seqFISH.
-- **Spatial proteomics**: imaging mass cytometry, CODEX, and MIBI-TOF.
-- **Cell segmentation and deconvolution**: mapping spots or pixels to cell types.
-- **Neighborhood and interaction**: spatial domains, cell-cell communication, and niches.
-- **Spatially variable genes (SVGs)**: genes with expression patterns tied to location.
+- **Process platforms**: analyze Visium, Slide-seq, Xenium, MERFISH, Stereo-seq, and seqFISH data.
+- **Segment or deconvolve**: map spots or pixels to cell types using single-cell references.
+- **Find spatial patterns**: identify spatially variable genes and tissue domains.
+- **Model neighborhoods**: compute cell-cell communication, niches, and enrichment.
+- **Integrate modalities**: combine with H&E images and matched single-cell data.
+
+## Steps
+
+1. Load spatial data and align coordinates with tissue images or H&E sections.
+2. Preprocess expression, select spatially variable genes, and perform normalization.
+3. Segment cells or deconvolve spots into cell-type proportions using single-cell references.
+4. Build spatial neighbor graphs and compute spatial autocorrelation and domain detection.
+5. Infer cell-cell communication, niches, and interactions in spatial neighborhoods.
+6. Validate deconvolution and spatial patterns with IHC, smFISH, or matched scRNA-seq.
 
 ## Code pattern
 
@@ -400,18 +472,27 @@ sq.gr.nhood_enrichment(adata, cluster_key="cell_type")
     {
         "name": "ai-for-functional-genomics",
         "title": "AI for Functional Genomics",
-        "description": "Predicting gene regulatory function from sequence and epigenomic data, mapping cis-regulatory elements, and interpreting non-coding variants.",
+        "description": "Use sequence-to-function models to predict gene-regulatory activity, map cis-regulatory elements and interpret non-coding variants from genomic sequence and epigenomic data.",
         "devin_body": r'''## When to use
 
 You want to predict gene regulatory function from DNA sequence, map cis-regulatory elements, interpret genetic variants, or link epigenomic and transcriptomic states.
 
-## Key concepts
+## Usage
 
-- **Regulatory grammar**: how TF motifs, chromatin, and sequence context encode activity.
-- **Functional assays**: ChIP-seq, ATAC-seq, MPRA, STARR-seq, and CAGE.
-- **Sequence-to-function models**: DeepSEA, Basset, Enformer, and Basenji.
-- **Variant effect prediction**: scoring non-coding variants for regulatory impact.
-- **TF binding and expression**: linking enhancer states to target genes.
+- **Map regulatory grammar**: infer TF motifs, chromatin, and sequence context.
+- **Integrate assays**: combine ChIP-seq, ATAC-seq, MPRA, STARR-seq, and CAGE data.
+- **Train sequence models**: build or apply DeepSEA, Basset, Enformer, Borzoi, or AlphaGenome.
+- **Predict variant effects**: score non-coding and fine-mapped GWAS variants.
+- **Interpret mechanisms**: link enhancers to genes and explain with motif and attribution analysis.
+
+## Steps
+
+1. Assemble reference genomes, blacklist regions, and collect functional assay data.
+2. Preprocess and binarize or quantify regulatory activity across cell types and conditions.
+3. Train or load a sequence-to-function model and evaluate on held-out chromosomes.
+4. Score non-coding variants and fine-mapped GWAS loci for regulatory impact.
+5. Interpret model predictions with motif discovery, attribution, and in silico mutagenesis.
+6. Validate predicted regulatory effects with MPRA, reporter assays, or eQTL data.
 
 ## Code pattern
 
@@ -455,18 +536,27 @@ model = GradientBoostingRegressor(n_estimators=500).fit(X, y)
     {
         "name": "ai-for-structural-genomics",
         "title": "AI for Structural Genomics",
-        "description": "3D genome organization, Hi-C analysis, protein structure prediction with deep learning, and multiscale structural modeling.",
+        "description": "Use deep learning and polymer modeling to predict 3D genome organization, protein structures and chromatin conformations from sequence and contact data.",
         "devin_body": r'''## When to use
 
 You are studying the three-dimensional organization of genomes, protein structures, or chromatin conformations and need to predict, analyze, or model spatial molecular structures.
 
-## Key concepts
+## Usage
 
-- **3D genome organization**: chromatin loops, topologically associating domains (TADs), and A/B compartments.
-- **Hi-C and related assays**: chromosome conformation capture at scale.
-- **Protein structure prediction**: AlphaFold and related deep learning models.
-- **Multiscale modeling**: integrating sequence, imaging, and polymer physics.
-- **Structural variation**: linking genome folding to gene regulation and disease.
+- **Predict genome folding**: model chromatin compartments, TADs, loops, and enhancer-promoter contacts.
+- **Analyze contact data**: process Hi-C, Micro-C, and capture-C at multiple resolutions.
+- **Predict protein structures**: run AlphaFold or related models for relevant genes.
+- **Model structural variation**: assess the impact of variants on 3D organization and regulation.
+- **Integrate scales**: combine sequence, imaging, and polymer physics for multiscale modeling.
+
+## Steps
+
+1. Align and normalize Hi-C or Micro-C data and choose resolution for the target feature size.
+2. Call TADs, compartments, and loops with multiple tools and compare overlaps.
+3. Train or apply a sequence-based 3D genome model such as Akita, Orca, or C.Origami.
+4. Predict protein structures for relevant genes using AlphaFold or related models.
+5. Score structural variants and design in silico perturbations of regulatory elements.
+6. Validate 3D predictions with FISH, microscopy, or gene-expression changes.
 
 ## Code pattern
 
@@ -503,18 +593,27 @@ insulation = cooltools.insulation(c, 100000)
     {
         "name": "ai-for-comparative-genomics",
         "title": "AI for Comparative Genomics",
-        "description": "Cross-species and population genome comparison, orthology inference, phylogenomics, selection scans, and pan-genome analysis.",
+        "description": "Use machine learning and phylogenomics to compare genomes across species and populations, infer orthology, detect selection and analyze pan-genomes.",
         "devin_body": r'''## When to use
 
 You are comparing genomes across species, strains, or populations to infer evolution, identify conserved regions, build phylogenies, or study pan-genomes.
 
-## Key concepts
+## Usage
 
-- **Homology and orthology**: orthologous genes, paralogs, and orthogroups.
-- **Genome alignment and synteny**: whole-genome and multiple alignments.
-- **Phylogenetics and phylogenomics**: tree inference, gene trees, and species trees.
-- **Population genomics**: selection, demographic history, and introgression.
-- **Pan-genomes**: core, shell, and accessory gene content.
+- **Infer orthology**: identify orthologs and paralogs across species with graph or tree methods.
+- **Build alignments**: create whole-genome, synteny, and protein alignments.
+- **Reconstruct phylogeny**: infer species and gene trees and reconcile them.
+- **Detect selection**: scan for positive selection, introgression, and demographic history.
+- **Analyze pan-genomes**: build graphs of core, shell, and accessory gene content.
+
+## Steps
+
+1. Select high-quality assemblies and annotate genes with consistent pipelines.
+2. Build whole-genome or protein alignments and infer orthogroups with graph or tree methods.
+3. Reconstruct phylogenies and reconcile gene and species trees.
+4. Scan for selection, introgression, and structural variants across lineages.
+5. Build a pan-genome graph or variation graph and quantify core/shell/accessory content.
+6. Validate orthology and selection signals with synteny, reciprocal best hits, and experiments.
 
 ## Code pattern
 
@@ -554,18 +653,27 @@ print("Variable sites:", len(variable))
     {
         "name": "ai-for-immunogenomics",
         "title": "AI for Immunogenomics",
-        "description": "MHC and peptide binding prediction, TCR/BCR repertoire analysis, epitope and neoantigen prediction, and immunoinformatics.",
+        "description": "Use machine learning to predict MHC-peptide binding, analyze TCR and BCR repertoires, identify epitopes and neoantigens and support vaccine and immunotherapy design.",
         "devin_body": r'''## When to use
 
 You are studying immune receptor repertoires, MHC-peptide binding, T/B cell responses, neoantigens, or vaccine design and want to predict or analyze immunogenic sequences.
 
-## Key concepts
+## Usage
 
-- **MHC/HLA**: human leukocyte antigen molecules and peptide binding grooves.
-- **TCR and BCR repertoires**: V(D)J recombination and clonotype analysis.
-- **Epitope prediction**: MHC class I/II binding, antigen processing, and presentation.
-- **Neoantigens**: tumor-specific mutations that can elicit T-cell responses.
-- **Immunopeptidomics**: mass spectrometry of MHC-presented peptides.
+- **Predict MHC binding**: score MHC class I/II binding and antigen processing.
+- **Analyze repertoires**: study V(D)J recombination and clonotype diversity in TCR and BCR data.
+- **Find neoantigens**: identify tumor-specific peptides from somatic mutations and expression.
+- **Integrate immunopeptidomics**: use mass spectrometry of HLA-bound peptides for antigen discovery.
+- **Model TCR-pMHC pairing**: predict TCR recognition and HLA coverage for personalized vaccines.
+
+## Steps
+
+1. Collect HLA allele information and peptide or repertoire sequencing data.
+2. Predict MHC binding, processing, and immunogenicity with NetMHCpan, MHCflurry, or similar.
+3. Assemble TCR/BCR clonotypes and analyze repertoire diversity and expansion.
+4. Call somatic mutations and expression to predict and prioritize neoantigens.
+5. Validate predicted epitopes with binding, elution, or functional assays.
+6. Compute population HLA coverage and design vaccine or cell-therapy candidates.
 
 ## Code pattern
 

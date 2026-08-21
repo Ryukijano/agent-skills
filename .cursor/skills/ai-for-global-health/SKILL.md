@@ -2,19 +2,27 @@
 
 ## Description
 
-AI for disease burden, healthcare systems, and health equity in low- and middle-income countries and resource-limited settings.
+Use AI to design or evaluate AI for health challenges in global or resource-limited settings, with a focus on equity, access, and implementation.
 
 ## When to use
 
 You are designing or evaluating AI for health challenges in global or resource-limited settings, with a focus on equity, access, and implementation.
 
-## Key concepts
+## Usage
 
-- **Global health equity and context-specific validation**: performance, acceptability, and fairness in diverse settings.
-- **Low-resource deployment, mobile health, and task shifting**: point-of-care and community health tools.
-- **Open data, data sovereignty, and local capacity building**: community-owned data and workforce development.
-- **AI for tropical and neglected diseases, maternal/child health, and outbreak response**: priority conditions in LMICs.
-- **Implementation and cost-effectiveness in LMICs**: real-world evidence and scalability.
+- Co-design tools with local clinicians and communities.
+- Train portable triage and diagnostic models.
+- Validate on local devices and infrastructure.
+- Evaluate cost-effectiveness and scalability.
+
+## Steps
+
+1. Co-design tools with local clinicians and communities.
+2. Train portable triage and diagnostic models.
+3. Validate on local devices and infrastructure.
+4. Evaluate cost-effectiveness and scalability.
+5. Ensure data sovereignty and equitable access.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -47,4 +55,4 @@ model = RandomForestClassifier(class_weight='balanced').fit(X, y)
 - https://annalsofglobalhealth.org/articles/10.5334/aogh.5268
 - https://doi.org/10.1016/s0140-6736(20)30226-9
 - https://doi.org/10.1038/s41746-022-00700-y
-- https://doi.org/10.1016/S2214-109X(25)00473-5
+- https://www.research.ed.ac.uk/en/publications/research-priorities-for-data-science-and-artificial-intelligence-/

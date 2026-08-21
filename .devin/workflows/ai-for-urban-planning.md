@@ -1,6 +1,6 @@
 # /ai-for-urban-planning
 
-Spatial plan generation, land-use optimization, urban digital twins, scenario simulation, and participatory planning analytics.
+Generates land-use scenarios and simulates urban growth to balance density, accessibility, and sustainability.
 
 ## Trigger
 

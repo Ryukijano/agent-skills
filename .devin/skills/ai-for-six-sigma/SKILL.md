@@ -2,7 +2,7 @@
 
 ## Description
 
-ML-augmented DMAIC for defect reduction, statistical process control, capability analysis, and automated root-cause prioritization in quality improvement.
+Augments DMAIC projects with defect prediction, statistical process control, and designed-experiment optimization.
 
 ## When to use
 
@@ -20,7 +20,7 @@ You are running a Six Sigma or Lean Six Sigma project and want to speed up DMAIC
 
 1. Define the problem, CTQ, and project scope with stakeholders.
 2. Measure process performance and collect historical defect and parameter data.
-3. Analyze data with SPC, capability analysis, and ML defect-prediction models.
+3. Analyze data with SPC, capability analysis, and ML defect-prediction models such as Random Forest or CART.
 4. Improve by optimizing process settings and piloting changes.
 5. Control with monitoring dashboards and retrain models as conditions change.
 

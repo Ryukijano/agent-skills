@@ -1,6 +1,6 @@
 # /ai-for-robotics
 
-Imitation learning, reinforcement learning, sim-to-real, and foundation models for robot manipulation and navigation.
+Use imitation learning, reinforcement learning, and foundation models to train robot manipulation and navigation policies that transfer from simulation to reality.
 
 ## Trigger
 

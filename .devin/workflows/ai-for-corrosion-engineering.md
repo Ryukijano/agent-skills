@@ -1,6 +1,6 @@
 # /ai-for-corrosion-engineering
 
-Machine learning for corrosion rate prediction, risk-based inspection, cathodic protection, coating lifetime, EIS interpretation, and materials selection.
+Use AI to predict corrosion rates, monitor cathodic protection, optimize materials and coatings and extend asset life for pipelines and industrial infrastructure.
 
 ## Trigger
 

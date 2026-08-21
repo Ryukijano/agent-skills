@@ -1,6 +1,6 @@
 # /ai-for-threat-intelligence
 
-Cyber threat intelligence extraction, attribution, knowledge graphs, and automated indicator analysis with ML and LLMs.
+Use machine learning and NLP to extract indicators, attribute threat actors, build knowledge graphs, and prioritize cyber-threat intelligence.
 
 ## Trigger
 

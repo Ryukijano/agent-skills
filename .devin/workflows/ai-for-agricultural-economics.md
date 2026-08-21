@@ -1,6 +1,6 @@
 # /ai-for-agricultural-economics
 
-Machine learning and econometric ML for farm decision support, risk, policy, market analysis, adoption, and the economics of digital agriculture.
+Support farm decisions, commodity pricing, and risk management with AI.
 
 ## Trigger
 

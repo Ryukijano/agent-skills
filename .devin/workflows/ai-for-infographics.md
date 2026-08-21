@@ -1,6 +1,6 @@
 # /ai-for-infographics
 
-Generating data-rich infographics and visual stories from documents, tables, and natural-language prompts.
+Turn reports, data tables and articles into data-rich infographics and visual stories using natural-language prompts and chart-composition tools.
 
 ## Trigger
 

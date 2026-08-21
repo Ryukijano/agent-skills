@@ -2,25 +2,26 @@ SKILLS = [
     {
         "name": "ai-for-longitudinal-studies",
         "title": "AI for Longitudinal Studies",
-        "description": "Machine learning and deep learning for repeated measurements, time-varying covariates, missing data, trajectories, and outcomes in longitudinal cohorts and EHR data.",
+        "description": "Model repeated measurements over time to track disease progression, treatment response, and biomarker trajectories.",
         "devin_body": r'''## When to use
 
 You are analyzing repeated observations over time, predicting future trajectories, or handling attrition and irregular sampling in longitudinal health, social, or behavioral data.
 
 ## Usage
 
-- **Trajectory modeling**: predict individual or population-level progression over time.
-- **Missing-data handling**: impute or model informative dropout and irregular visits.
-- **Feature engineering**: encode time-varying covariates, slopes, and exposure histories.
-- **Causal longitudinal analysis**: estimate dynamic treatment effects with sequential ignorability.
+- Impute sparse EHR and wearable time series with MUSE-Net or SADI.
+- Build mixed-effects and trajectory models in R lme4 or Python statsmodels.
+- Detect change points in patient trajectories.
+- Forecast future clinical events from longitudinal panels.
+- Integrate EHR with accelerometer, glucose, or blood pressure wearables.
 
 ## Steps
 
-1. Structure the data into long format with subject, time, and outcome columns.
-2. Encode temporal patterns (lags, rolling summaries, time-since-event).
-3. Choose a model suited to repeated measures (mixed-effects, RNN, transformer, or survival model).
-4. Evaluate with time-aware cross-validation and check temporal leakage.
-5. Report uncertainty and sensitivity to missing-data assumptions.
+1. Extract longitudinal patient records and define the outcome trajectory.
+2. Handle irregular sampling, missing values, and informative dropout.
+3. Engineer time-varying features (slopes, area-under-curve, lag windows).
+4. Train mixed-effects, joint, or deep sequence models.
+5. Evaluate with individual-specific predictions and calibration.
 
 ## Code pattern
 
@@ -54,35 +55,31 @@ for train_idx, test_idx in GroupKFold(n_splits=5).split(X, y, g):
 3. Validate that temporal ordering is preserved in all train/test splits.
 
 ''',
-        "references": [
-            "https://doi.org/10.3390/math14122084",
-            "https://doi.org/10.1007/s10462-023-10561-w",
-            "https://doi.org/10.1007/s10462-023-10677-z",
-            "https://doi.org/10.1093/jamia/ocad168",
-        ],
+        "references": ["https://doi.org/10.3390/math14122084", "https://doi.org/10.1007/s10462-023-10561-w", "https://doi.org/10.1007/s10462-023-10677-z", "https://doi.org/10.1093/jamia/ocad168"],
     },
     {
         "name": "ai-for-cohort-studies",
         "title": "AI for Cohort Studies",
-        "description": "Machine learning for risk prediction, confounding control, survival analysis, and biomarker discovery in prospective and retrospective cohort studies.",
+        "description": "Analyze defined patient groups to estimate risk, survival, and treatment effects over time.",
         "devin_body": r'''## When to use
 
 You are building risk or prognostic models, identifying risk factors, or estimating exposure-outcome associations in a defined cohort followed over time.
 
 ## Usage
 
-- **Cohort risk prediction**: forecast disease onset, progression, or mortality.
-- **Feature discovery**: find non-linear risk factors and interactions in large biobanks.
-- **Survival modeling**: handle censored outcomes and time-to-event data.
-- **Confounder adjustment**: control for selection bias and measured confounders.
+- Predict incident disease with AutoPrognosis or MILTON on UK Biobank.
+- Run survival analysis with Cox, random survival forests, or deep survival.
+- Build propensity-matched cohorts from EHR and claims.
+- Identify biomarker trajectories linked to outcomes.
+- Stratify cohorts by genotype, exposure, or frailty.
 
 ## Steps
 
-1. Define the cohort, eligibility window, and follow-up period.
-2. Create a tabular feature set at baseline or as time-varying covariates.
-3. Split by calendar time or admission date to mimic prospective use.
-4. Train risk models with appropriate survival or classification objectives.
-5. Validate calibration, discrimination, and generalizability to new cohorts.
+1. Define cohort inclusion/exclusion and baseline characteristics.
+2. Curate linked data (EHR, claims, omics, registries).
+3. Engineer survival or longitudinal features.
+4. Train risk or survival models with cross-validation.
+5. Report hazard ratios, C-indices, and subgroup effects.
 
 ## Code pattern
 
@@ -114,35 +111,31 @@ model = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X_t
 3. Audit key features for clinical plausibility and fairness across subgroups.
 
 ''',
-        "references": [
-            "https://link.springer.com/article/10.1007/s10654-024-01173-x",
-            "https://pubmed.ncbi.nlm.nih.gov/40701371/",
-            "https://link.springer.com/article/10.1186/s12874-023-01837-4",
-            "https://www.nature.com/articles/s41598-021-02476-9",
-        ],
+        "references": ["https://link.springer.com/article/10.1007/s10654-024-01173-x", "https://pubmed.ncbi.nlm.nih.gov/40701371/", "https://link.springer.com/article/10.1186/s12874-023-01837-4", "https://www.nature.com/articles/s41598-021-02476-9"],
     },
     {
         "name": "ai-for-clinical-trials",
         "title": "AI for Clinical Trials",
-        "description": "Machine learning for clinical-trial design, patient eligibility, cohort selection, outcome prediction, and operational monitoring across the trial lifecycle.",
+        "description": "Optimize trial design, site selection, and enrollment for clinical studies.",
         "devin_body": r'''## When to use
 
 You are designing a clinical trial, forecasting enrollment, selecting eligible participants, or monitoring safety and operational metrics during trial conduct.
 
 ## Usage
 
-- **Trial feasibility**: predict enrollment, dropout, and site performance.
-- **Eligibility screening**: parse unstructured criteria and match patients to protocols.
-- **Outcome prediction**: forecast treatment response and safety events.
-- **Site and data monitoring**: detect anomalies, drift, and data-quality issues.
+- Forecast patient enrollment and site performance (TrialEnroll, IBM).
+- Match and predict eligibility from EHR and unstructured criteria.
+- Optimize site selection with geographic and historical data.
+- Predict missing outcomes and patient dropout.
+- Automate clinical data queries and SDV prioritization.
 
 ## Steps
 
-1. Translate the protocol into structured eligibility and endpoint definitions.
-2. Link EHR or registry data to candidate participants using structured and NLP features.
-3. Build and validate prediction models for enrollment, response, or adverse events.
-4. Deploy models under prospective monitoring with human oversight.
-5. Retrain and validate when protocols, sites, or populations change.
+1. Define protocol, endpoints, and target population.
+2. Ingest EHR, claims, and historical trial data.
+3. Train enrollment, eligibility, and dropout models.
+4. Simulate enrollment timelines and site scenarios.
+5. Validate against actual trial performance and adapt.
 
 ## Code pattern
 
@@ -172,35 +165,31 @@ trial_df["eligible_score"] = clf.predict_proba(X)[:, 1]
 3. Run a simulated sensitivity analysis for protocol amendments and drift.
 
 ''',
-        "references": [
-            "https://trialsjournal.biomedcentral.com/counter/pdf/10.1186/s13063-021-05489-x.pdf",
-            "https://www.nature.com/articles/s41571-026-01189-0",
-            "https://www.nature.com/articles/s41467-026-74501-2",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC11319878/",
-        ],
+        "references": ["https://trialsjournal.biomedcentral.com/counter/pdf/10.1186/s13063-021-05489-x.pdf", "https://www.nature.com/articles/s41571-026-01189-0", "https://www.nature.com/articles/s41467-026-74501-2", "https://pmc.ncbi.nlm.nih.gov/articles/PMC11319878/"],
     },
     {
         "name": "ai-for-randomized-trials",
         "title": "AI for Randomized Trials",
-        "description": "Machine learning for heterogeneous treatment effects, covariate adjustment, adaptive randomization, and efficient inference in randomized controlled trials.",
+        "description": "Estimate heterogeneous treatment effects and subgroup benefits in randomized experiments.",
         "devin_body": r'''## When to use
 
 You are analyzing an RCT and want to estimate average or heterogeneous treatment effects, adjust for covariates to improve power, or design adaptive randomization and interim analyses.
 
 ## Usage
 
-- **Heterogeneous treatment effects**: identify subgroups that benefit most or least.
-- **Covariate adjustment**: improve precision using baseline prognostic variables.
-- **Adaptive designs**: inform response-adaptive randomization and enrichment.
-- **Efficient inference**: combine machine learning with valid randomization inference.
+- Estimate conditional average treatment effects with causal forests (grf).
+- Identify responder subgroups using uplift and ITE models.
+- Adjust for covariates to improve precision of ATE.
+- Detect treatment effect heterogeneity across sites and demographics.
+- Power adaptive enrichment and basket trials.
 
 ## Steps
 
-1. Lock the analysis plan, including adjustment variables and subgroups, before unblinding.
-2. Fit flexible outcome and propensity nuisance models with cross-fitting.
-3. Estimate average and conditional treatment effects with appropriate inference.
-4. Test for treatment-effect heterogeneity using pre-specified subgroups or learned partitions.
-5. Report confidence intervals and control the family-wise error rate for subgroup analyses.
+1. Lock the randomization schedule and outcome variables.
+2. Pre-specify covariates and subgroup hypotheses.
+3. Train causal forest or meta-learner models for CATE/ITE.
+4. Rank subgroups by estimated benefit and uncertainty.
+5. Validate with cross-fitting and false discovery control.
 
 ## Code pattern
 
@@ -236,36 +225,31 @@ print("ATE:", est.ate_)
 3. Compare heterogeneous effect estimates between causal forest and linear interaction models.
 
 ''',
-        "references": [
-            "https://www.nber.org/system/files/working_papers/w24678/w24678.pdf",
-            "https://proceedings.mlr.press/v286/chen25b.html",
-            "https://www.nature.com/articles/s41598-025-10566-1",
-            "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2800273",
-            "https://link.springer.com/article/10.1186/s13063-020-4076-y",
-        ],
+        "references": ["https://www.nber.org/system/files/working_papers/w24678/w24678.pdf", "https://proceedings.mlr.press/v286/chen25b.html", "https://www.nature.com/articles/s41598-025-10566-1", "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2800273", "https://link.springer.com/article/10.1186/s13063-020-4076-y"],
     },
     {
         "name": "ai-for-observational-studies",
         "title": "AI for Observational Studies",
-        "description": "Causal machine learning for treatment-effect estimation, propensity scoring, confounding adjustment, and sensitivity analysis in observational data.",
+        "description": "Estimate causal effects from real-world data using propensity scores and double machine learning.",
         "devin_body": r'''## When to use
 
 You are estimating causal effects, treatment responses, or policy impacts from observational data where treatment assignment was not randomized.
 
 ## Usage
 
-- **Propensity and inverse probability weighting**: balance treatment groups.
-- **Doubly robust estimation**: combine outcome and treatment models for robust inference.
-- **Representation learning**: learn low-dimensional adjustment sets from high-dimensional covariates.
-- **Sensitivity analysis**: quantify robustness to unmeasured confounding.
+- Build propensity scores and inverse probability weights with CausalForge.
+- Apply double/debiased machine learning (EconML, DoubleML).
+- Emulate target trials from EHR and claims databases.
+- Adjust for high-dimensional confounding with proxy variables.
+- Assess balance and sensitivity to unmeasured confounding.
 
 ## Steps
 
-1. Define the causal estimand, treatment, outcome, and covariates.
-2. Assess overlap and trim units outside the common support.
-3. Fit flexible outcome and propensity models with cross-fitting.
-4. Estimate the effect using AIPW, targeted maximum likelihood, or matching.
-5. Conduct sensitivity analyses and report bounds under confounding scenarios.
+1. Define the causal question, exposure, and outcome.
+2. Extract longitudinal observational data and confounders.
+3. Estimate propensity scores or train nuisance models.
+4. Compute ATE/CATE with DML or weighting.
+5. Run sensitivity analyses and report robustness.
 
 ## Code pattern
 
@@ -300,35 +284,31 @@ print("CATE:", est.effect(X[:5]))
 3. Run a sensitivity analysis and show how large an unmeasured confounder must be.
 
 ''',
-        "references": [
-            "https://arxiv.org/abs/2501.00755v1",
-            "https://doi.org/10.3386/w30302",
-            "https://pubmed.ncbi.nlm.nih.gov/34652613/",
-            "https://proceedings.mlr.press/v161/shi21a/shi21a.pdf",
-        ],
+        "references": ["https://arxiv.org/abs/2501.00755v1", "https://doi.org/10.3386/w30302", "https://pubmed.ncbi.nlm.nih.gov/34652613/", "https://proceedings.mlr.press/v161/shi21a/shi21a.pdf"],
     },
     {
         "name": "ai-for-registry-studies",
         "title": "AI for Registry Studies",
-        "description": "Machine learning for patient registries, disease surveillance, regulatory-grade real-world evidence, and longitudinal outcome tracking.",
+        "description": "Analyze disease and product registries to monitor safety, effectiveness, and utilization.",
         "devin_body": r'''## When to use
 
 You are using a disease, product, or population registry to generate real-world evidence, monitor outcomes, or support regulatory and health-technology decisions.
 
 ## Usage
 
-- **Registry-based outcome prediction**: forecast events and treatment responses.
-- **Quality and completeness assessment**: identify missing data and reporting gaps.
-- **Comparative effectiveness**: emulate target trials within registry populations.
-- **Surveillance and safety monitoring**: detect signals of adverse events or product issues.
+- Identify fit-for-purpose registries with AI-powered RWD catalogues.
+- Define phenotypes using CQL, SNOMED, and FHIR (PhEMA).
+- Track drug utilization and adverse events across registries.
+- Benchmark outcomes against external controls.
+- Generate real-world evidence for regulatory and HTA submissions.
 
 ## Steps
 
-1. Understand registry design, inclusion criteria, and variable definitions.
-2. Clean and link registry records, handling duplicates and missingness.
-3. Define the target population and time-at-risk for the analysis.
-4. Train and validate models appropriate to the registry structure and outcomes.
-5. Produce transparent reports with clear limitations about generalizability.
+1. Identify relevant registries and assess data quality.
+2. Define the study population and phenotype algorithms.
+3. Extract exposure, outcome, and covariate records.
+4. Apply epidemiological and ML methods for safety/effectiveness.
+5. Prepare regulatory-grade reports and evidence packages.
 
 ## Code pattern
 
@@ -358,35 +338,31 @@ registry_df["risk_score"] = clf.predict_proba(X)[:, 1]
 3. Report data-quality and completeness metrics alongside model performance.
 
 ''',
-        "references": [
-            "https://link.springer.com/article/10.1007/s44250-026-00373-4",
-            "https://doi.org/10.2196/71873",
-            "https://www.real4reg.eu/",
-            "https://cordis.europa.eu/project/id/101095479",
-        ],
+        "references": ["https://link.springer.com/article/10.1007/s44250-026-00373-4", "https://doi.org/10.2196/71873", "https://www.real4reg.eu/", "https://cordis.europa.eu/project/id/101095479"],
     },
     {
         "name": "ai-for-real-world-evidence",
         "title": "AI for Real-World Evidence",
-        "description": "Machine learning for extracting, validating, and synthesizing real-world evidence from EHRs, claims, registries, and wearables for regulatory and clinical decisions.",
+        "description": "Generate regulatory and HTA evidence from EHR, claims, and registry data.",
         "devin_body": r'''## When to use
 
 You need to generate or evaluate clinical evidence from routinely collected data to support regulatory, reimbursement, or treatment decisions.
 
 ## Usage
 
-- **RWE generation**: design and analyze non-interventional studies from RWD.
-- **Data fit-for-purpose assessment**: evaluate reliability and relevance of RWD sources.
-- **Target trial emulation**: mimic an RCT design using observational data.
-- **Decision support**: translate RWE into individualized treatment recommendations.
+- Link RWD sources across EHR, claims, and disease registries.
+- Apply fit-for-purpose assessments per FDA/EMA guidance.
+- Run target trial emulation and causal inference.
+- Build external control arms for single-arm studies.
+- Create interactive evidence dashboards for HTA bodies.
 
 ## Steps
 
-1. Define the research question and regulatory or decision context.
-2. Map RWD sources (EHR, claims, registries, wearables) to study variables.
-3. Apply causal inference and ML methods with appropriate validation.
-4. Assess data quality, representativeness, and bias.
-5. Document fit-for-purpose and produce reproducible evidence packages.
+1. Define the research question and regulatory use case.
+2. Assess RWD source fitness and data quality.
+3. Curate exposure, outcome, and confounder variables.
+4. Apply causal or predictive methods and sensitivity checks.
+5. Document evidence in a regulatory/HTA submission package.
 
 ## Code pattern
 
@@ -419,36 +395,31 @@ for train_idx, test_idx in tscv.split(X):
 3. Produce a fit-for-purpose assessment using FDA or EMA guidance criteria.
 
 ''',
-        "references": [
-            "https://www.fda.gov/drugs/development-resources/advancing-real-world-evidence-program-frequently-asked-questions",
-            "https://uscode.house.gov/view.xhtml?req=%28title%3A21+section%3A355g+edition%3Aprelim%29",
-            "https://bmcmedinformdecismak.biomedcentral.com/counter/pdf/10.1186/s12911-021-01403-2.pdf",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9189725/",
-            "https://www.nature.com/articles/s43588-025-00901-x",
-        ],
+        "references": ["https://www.fda.gov/drugs/development-resources/advancing-real-world-evidence-program-frequently-asked-questions", "https://www.law.cornell.edu/uscode/text/21/355g", "https://bmcmedinformdecismak.biomedcentral.com/counter/pdf/10.1186/s12911-021-01403-2.pdf", "https://pmc.ncbi.nlm.nih.gov/articles/PMC9189725/", "https://www.nature.com/articles/s43588-025-00901-x"],
     },
     {
         "name": "ai-for-patient-reported-outcomes",
         "title": "AI for Patient-Reported Outcomes",
-        "description": "Machine learning for predicting, personalizing, and reducing the burden of patient-reported outcome measures and PRO-based treatment decisions.",
+        "description": "Use AI to administer, score, and interpret patient-reported outcome measures.",
         "devin_body": r'''## When to use
 
 You are collecting, analyzing, or predicting patient-reported outcomes, quality of life, symptom trajectories, or treatment satisfaction data.
 
 ## Usage
 
-- **PRO prediction**: forecast post-treatment PRO scores from baseline and clinical data.
-- **Computer adaptive testing**: select the most informative PRO items per patient.
-- **Personalized interventions**: target patients whose PROs indicate high risk or unmet need.
-- **Burden reduction**: minimize questionnaire length while preserving measurement precision.
+- Deploy computer adaptive testing with PROMIS-CAT and REDCap.
+- Generate and validate LLM-PROMs from patient language.
+- Detect response patterns and missing-not-at-random signals.
+- Correlate PROs with wearables and clinical events.
+- Adapt item banks to minimize patient burden.
 
 ## Steps
 
-1. Map the PRO instrument, response scale, and recall period to the analysis goal.
-2. Engineer baseline and longitudinal features (scores, trends, change from baseline).
-3. Train models for prediction, classification, or item response theory.
-4. Validate predictive accuracy and measurement properties in a held-out sample.
-5. Assess clinical utility and patient acceptability before deployment.
+1. Select the PRO concept and validated instrument.
+2. Integrate CAT or LLM-generated items into data capture.
+3. Clean responses and detect careless or inconsistent patterns.
+4. Train models linking PROs to outcomes or adverse events.
+5. Validate psychometric properties and iterate.
 
 ## Code pattern
 
@@ -477,35 +448,31 @@ pro_df["predicted_pro"] = model.predict(X)
 3. Evaluate whether PRO-based predictions improve shared decision-making outcomes.
 
 ''',
-        "references": [
-            "https://link.springer.com/article/10.1186/s12955-025-02365-z",
-            "https://link.springer.com/article/10.1186/s12911-025-03083-8",
-            "https://link.springer.com/article/10.1186/s41687-026-00992-8",
-            "https://link.springer.com/article/10.1186/s41687-024-00808-7",
-        ],
+        "references": ["https://link.springer.com/article/10.1186/s12955-025-02365-z", "https://link.springer.com/article/10.1186/s12911-025-03083-8", "https://link.springer.com/article/10.1186/s41687-026-00992-8", "https://link.springer.com/article/10.1186/s41687-024-00808-7"],
     },
     {
         "name": "ai-for-biomarkers",
         "title": "AI for Biomarkers",
-        "description": "Machine learning for omics-based biomarker discovery, sparse signature selection, multi-modal integration, and clinical validation.",
+        "description": "Discover and validate biomarkers by integrating genomics, proteomics, and imaging data.",
         "devin_body": r'''## When to use
 
 You are discovering, validating, or translating biomarkers from high-dimensional omics, imaging, or multi-modal clinical data.
 
 ## Usage
 
-- **Signature discovery**: identify sparse, reproducible biomarker panels.
-- **Multi-omic integration**: combine genomics, proteomics, metabolomics, and imaging.
-- **Predictive vs prognostic markers**: distinguish treatment-modifying from disease-risk biomarkers.
-- **Clinical validation**: lock models and test on independent cohorts and intended-use populations.
+- Integrate multi-omics with Flexynesis, IntegrAO, or Omics BioAnalytics.
+- Discover diagnostic and prognostic signatures with MILTON.
+- Build predictive panels from blood, imaging, and digital biomarkers.
+- Validate biomarkers in independent cohorts and trials.
+- Interpret biological pathways with feature importance.
 
 ## Steps
 
-1. Assemble discovery and validation cohorts with clear inclusion/exclusion criteria.
-2. Preprocess and harmonize multi-modal data and batch-correct where needed.
-3. Apply sparse or regularized ML to select candidate biomarkers.
-4. Lock the model and evaluate on an independent validation cohort.
-5. Assess biological plausibility, regulatory path, and clinical actionability.
+1. Collect omics, imaging, and clinical phenotype data.
+2. Normalize, impute, and align multi-modal features.
+3. Train multi-omics integration and feature-selection models.
+4. Validate in held-out and external cohorts.
+5. Characterize biological mechanism and clinical utility.
 
 ## Code pattern
 
@@ -536,35 +503,31 @@ model = LogisticRegression(max_iter=1000, penalty="l1", solver="liblinear").fit(
 3. Report sensitivity, specificity, and calibration in the intended-use population.
 
 ''',
-        "references": [
-            "https://www.nature.com/articles/s41587-023-02033-x",
-            "https://doi.org/10.1371/journal.pcbi.1010357",
-            "https://doi.org/10.1136/bmjopen-2021-053674",
-            "https://ai.nejm.org/doi/full/10.1056/AIoa2400867",
-        ],
+        "references": ["https://www.nature.com/articles/s41587-023-02033-x", "https://doi.org/10.1371/journal.pcbi.1010357", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8650485/", "https://ai.nejm.org/doi/full/10.1056/AIoa2400867"],
     },
     {
         "name": "ai-for-synthetic-controls",
         "title": "AI for Synthetic Controls",
-        "description": "Machine learning for constructing, validating, and extending synthetic and virtual control arms from observational data to augment clinical and policy evaluation.",
+        "description": "Construct synthetic control arms from historical or real-world data to augment clinical evidence.",
         "devin_body": r'''## When to use
 
 You have one or a few treated units and many untreated donor units, and need a credible counterfactual trajectory from a weighted combination of donors.
 
 ## Usage
 
-- **Classic synthetic controls**: build a weighted donor pool to match pre-treatment outcomes.
-- **Penalized and sparse synthetic controls**: regularize unit and feature weights.
-- **Deep representation learning**: learn low-dimensional embeddings for better donor matching.
-- **External and virtual control arms**: augment single-arm trials with historical or real-world controls.
+- Build donor pools from aggregate and patient-level data.
+- Estimate synthetic controls with penalized regression (pensynth).
+- Quantify uncertainty with scpi prediction intervals.
+- Validate pre-treatment fit and placebo tests.
+- Support regulatory submissions with external comparators.
 
 ## Steps
 
-1. Define the treated unit, pre-treatment period, donor pool, and outcome of interest.
-2. Select predictor variables and fit a weighted combination of donors to pre-treatment outcomes.
-3. Evaluate pre-treatment fit and generate the counterfactual trajectory.
-4. Compute treatment effects and placebo-based inferential procedures.
-5. Assess robustness to donor pool composition and weight sparsity.
+1. Define the treated unit(s) and pre-treatment period.
+2. Assemble a donor pool of similar historical controls.
+3. Estimate donor weights and counterfactual trajectories.
+4. Evaluate fit, placebo robustness, and sensitivity.
+5. Report treatment effects with confidence intervals.
 
 ## Code pattern
 
@@ -599,36 +562,31 @@ res = minimize(sc_loss, x0=np.ones(Y_pre.shape[1]) / Y_pre.shape[1],
 3. Run placebo inference and show that treatment effects exceed the null distribution.
 
 ''',
-        "references": [
-            "https://www.bis.org/publ/work1181.pdf",
-            "https://doi.org/10.22541/au.176072431.11742213/v1",
-            "https://arxiv.org/abs/2602.04611",
-            "https://microsoft.github.io/SparseSC/",
-            "https://www.mit.edu/~jhainm/Paper/ccs.pdf",
-        ],
+        "references": ["https://www.bis.org/publ/work1181.pdf", "https://doi.org/10.22541/au.176072431.11742213/v1", "https://arxiv.org/abs/2602.04611", "https://microsoft.github.io/SparseSC/", "https://www.mit.edu/~jhainm/Paper/ccs.pdf"],
     },
     {
         "name": "ai-for-meta-analysis",
         "title": "AI for Meta-Analysis",
-        "description": "Machine learning and LLMs for automating literature search, screening, data extraction, effect-size estimation, and heterogeneity assessment in meta-analyses.",
+        "description": "Automate systematic reviews and synthesize effect sizes across clinical and epidemiological studies.",
         "devin_body": r'''## When to use
 
 You are conducting a meta-analysis or systematic review and want to automate or augment screening, extraction, effect estimation, or heterogeneity analysis.
 
 ## Usage
 
-- **Automated literature search and screening**: classify and rank citations for inclusion.
-- **Data extraction**: parse study characteristics, outcomes, and effect sizes from PDFs.
-- **Statistical modeling**: estimate pooled effects, heterogeneity, and subgroup differences.
-- **Network meta-analysis**: synthesize direct and indirect treatment comparisons.
+- Screen citations with LLMs and Rayyan/AiReview.
+- Extract study characteristics and outcomes with GPT-4 pipelines.
+- Fit random-effects and Bayesian meta-analysis models.
+- Assess heterogeneity, publication bias, and study quality.
+- Update living systematic reviews continuously.
 
 ## Steps
 
-1. Register the protocol and define PICO/PECO and analysis plan.
-2. Run a reproducible search and import citations into an AI-assisted screening tool.
-3. Use ML or LLMs to extract study data with human verification.
-4. Compute effect sizes and pooled estimates using appropriate models (fixed, random, Bayesian).
-5. Assess risk of bias, heterogeneity, and sensitivity to study inclusion.
+1. Define the PICO question and search strategy.
+2. Run automated screening and data extraction.
+3. Appraise risk of bias and study quality.
+4. Pool effect sizes with appropriate meta-analytic models.
+5. Report forest plots, heterogeneity, and sensitivity.
 
 ## Code pattern
 
@@ -660,36 +618,31 @@ print("I-squared:", combined.i2)
 3. Run leave-one-out and subgroup meta-analyses to assess robustness.
 
 ''',
-        "references": [
-            "https://doi.org/10.1017/rsm.2025.10065",
-            "https://arxiv.org/abs/2606.28363",
-            "https://www.ncbi.nlm.nih.gov/pmc/articles/13035263",
-            "https://www.ncbi.nlm.nih.gov/books/NBK620201/",
-            "https://link.springer.com/article/10.1007/s41669-024-00476-9",
-        ],
+        "references": ["https://doi.org/10.1017/rsm.2025.10065", "https://arxiv.org/abs/2606.28363", "https://www.ncbi.nlm.nih.gov/pmc/articles/13035263", "https://www.ncbi.nlm.nih.gov/books/NBK620201/", "https://link.springer.com/article/10.1007/s41669-024-00476-9"],
     },
     {
         "name": "ai-for-evidence-synthesis",
         "title": "AI for Evidence Synthesis",
-        "description": "AI and LLMs for systematic review automation, risk-of-bias assessment, evidence mapping, and trustworthy synthesis of research findings.",
+        "description": "Synthesize heterogeneous evidence, assess risk of bias, and generate decision-ready summaries.",
         "devin_body": r'''## When to use
 
 You need to synthesize a body of literature, produce a systematic review, evidence map, or summary of research findings, and want to use AI responsibly.
 
 ## Usage
 
-- **Automated screening and extraction**: speed up systematic review production.
-- **Risk-of-bias and quality assessment**: flag concerns and support appraisal.
-- **Evidence maps and gap analysis**: categorize studies and identify research gaps.
-- **Synthesis and manuscript support**: draft plain-language and technical summaries.
+- Automate risk-of-bias assessment with LLMs (ROBINS-I, ROB2).
+- Combine direct and indirect comparisons in network meta-analysis.
+- Generate evidence maps and interactive summaries.
+- Grade certainty with GRADE and robot reviewers.
+- Produce plain-language summaries for guidelines.
 
 ## Steps
 
-1. Define the review question, scope, and search strategy in a registered protocol.
-2. Run the search, deduplicate, and prepare title/abstract and full-text records.
-3. Deploy AI-assisted screening and extraction with independent human checks.
-4. Appraise risk of bias and synthesize findings narratively or quantitatively.
-5. Verify claims against original sources and report AI contributions transparently.
+1. Frame the synthesis question and inclusion criteria.
+2. Extract data, effects, and risk-of-bias judgments.
+3. Choose a synthesis model (pairwise, network, dose-response).
+4. Assess heterogeneity, inconsistency, and certainty.
+5. Summarize findings for clinical and policy audiences.
 
 ## Code pattern
 
@@ -721,12 +674,6 @@ records_df["screening_score"] = clf.predict_proba(X)[:, 1]
 3. Cross-check every synthesized claim against its source publication.
 
 ''',
-        "references": [
-            "https://www.cambridge.org/core/journals/research-synthesis-methods/article/generative-artificial-intelligence-use-in-evidence-synthesis/2DACF6D129AA6E46CB8A8740A03D0675",
-            "https://www.ncbi.nlm.nih.gov/books/NBK620201/",
-            "https://www.ncbi.nlm.nih.gov/pmc/articles/13035263",
-            "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.ED000178/full",
-            "https://doi.org/10.1093/jamia/ocaf030",
-        ],
+        "references": ["https://www.cambridge.org/core/journals/research-synthesis-methods/article/generative-artificial-intelligence-use-in-evidence-synthesis/2DACF6D129AA6E46CB8A8740A03D0675", "https://www.ncbi.nlm.nih.gov/books/NBK620201/", "https://www.ncbi.nlm.nih.gov/pmc/articles/13035263", "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.ED000178/full", "https://doi.org/10.1093/jamia/ocaf030"],
     },
 ]

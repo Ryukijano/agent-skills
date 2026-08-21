@@ -1,6 +1,6 @@
 # /ai-for-grid-resilience
 
-Machine learning for outage prediction, storm hardening, restoration planning, and cyber-physical resilience of power systems.
+Predicts storm-driven outages, prioritizes hardening investments, and optimizes restoration for resilient power systems.
 
 ## Trigger
 

@@ -2,20 +2,29 @@
 
 ## Description
 
-Machine learning for genetic circuit design, promoter and RBS optimization, metabolic pathway engineering, and closed-loop Design-Build-Test-Learn biofoundry pipelines.
+AI accelerates closed-loop Design-Build-Test-Learn cycles by predicting and optimizing genetic parts, pathways, and strains before they are built.
 
 ## When to use
 
 You are engineering genetic circuits, optimizing promoters/RBSs, or automating a DBTL cycle for a synthetic biology project.
 
-## Key concepts
+## Usage
 
-- **Genetic parts**: promoters, ribosome binding sites (RBS), terminators, coding sequences, and their context dependence.
-- **DBTL cycle**: Design, Build, Test, Learn closed-loop iteration.
-- **Predictive part models**: regression and sequence models trained on part activity data.
-- **Metabolic engineering**: pathway design, flux balance analysis, retro-biosynthesis.
-- **Active learning / Bayesian optimization**: pick the next strain or part to test.
-- **Biological constraints**: chassis dependency, toxicity, genetic load, and modularity limits.
+- **Genetic-part prediction**: use regression and sequence models to score promoter, RBS, terminator, and coding-sequence activity in a chosen chassis.
+- **DBTL acceleration**: close the Design-Build-Test-Learn loop by feeding assay data back into design models.
+- **Pathway and strain optimization**: pick the next construct to build with active learning or Bayesian optimization.
+- **Biological-constraint modeling**: account for chassis dependency, toxicity, genetic load, and context effects.
+- **Assay interpretation**: apply ML to plate-reader, flow-cytometry, and proteomics outputs for phenotype calling.
+- **Closed-loop biofoundry execution**: integrate predictions with robotic build and test workflows.
+
+## Steps
+
+1. Define the target function, host chassis, and constraints (titer, toxicity, genetic load).
+2. Curate and encode genetic parts and historical part-activity data for that chassis.
+3. Train predictive models for part activity, pathway flux, or strain phenotype.
+4. Use active learning or Bayesian optimization to propose the next set of constructs.
+5. Build and assay the proposed designs, then feed the measurements back into the model.
+6. Validate top performers and transfer the best design to scaled production.
 
 ## Code pattern
 

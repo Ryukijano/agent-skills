@@ -2,19 +2,26 @@
 
 ## Description
 
-Venue and vendor recommendation, guest-list management, scheduling, budget optimization, and group preference aggregation for personal and small events.
+Use AI to match venues and vendors, aggregate guest preferences, schedule activities, and stay within budget for events.
 
 ## When to use
 
 You want to plan a party, wedding, meeting, or community event by finding vendors, scheduling activities, managing guests, and staying within budget.
 
-## Key concepts
+## Usage
 
-- **Group preference aggregation**: combine attendee tastes, dietary needs, and location constraints.
-- **Venue and vendor matching**: score vendors by event requirements, reviews, and price.
-- **Scheduling under constraints**: room, time, and sequence constraints for sessions or ceremonies.
-- **Budget multi-objective optimization**: trade cost, quality, and capacity.
-- **Attendance forecasting**: predict RSVPs and no-shows from historical data.
+- Aggregate attendee dietary, accessibility, and location preferences.
+- Score and match vendors to event briefs and budgets.
+- Schedule sessions or ceremonies under room and time constraints.
+- Forecast RSVPs and no-shows from past event data.
+
+## Steps
+
+1. Collect event goals, budget, guest list, and constraints.
+2. Gather vendor or venue options and review ratings and availability.
+3. Match candidates to the brief using text similarity and budget filters.
+4. Build a schedule and menu that respects dietary and accessibility needs.
+5. Track RSVPs and generate a day-of run sheet with human approval for contracts.
 
 ## Code pattern
 

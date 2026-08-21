@@ -1,6 +1,6 @@
 # /ai-for-crop-protection
 
-Machine and deep learning for detecting crop diseases, pests, weeds, and abiotic stresses and for supporting timely, targeted protection decisions.
+Detect crop diseases and pests from imagery, sensors, and field scouting.
 
 ## Trigger
 

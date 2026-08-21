@@ -2,19 +2,27 @@
 
 ## Description
 
-Model compression, inference offloading, task placement, federated learning, and MLOps at the network edge.
+Optimize model inference, task offloading, and resource management at the network edge.
 
 ## When to use
 
 You need to deploy, orchestrate, or optimize ML inference and training at the edge for low latency, privacy, and bandwidth savings.
 
-## Key concepts
+## Usage
 
-- **Edge inference and model serving**: TensorFlow Lite, ONNX Runtime, NVIDIA Triton.
-- **Offloading decisions**: when to run on device, edge, or cloud.
-- **Model compression**: quantization, pruning, knowledge distillation.
-- **Federated and split learning**: train and infer across distributed edge nodes.
-- **Edge MLOps**: continuous deployment, drift detection, and A/B testing at the edge.
+- Deploy TensorFlow Lite or ONNX Runtime on edge devices.
+- Optimize models with Triton Model Navigator or LiteRT.
+- Schedule inference and offloading between edge and cloud.
+- Manage edge clusters with Kubernetes/K3s.
+- Profile latency and energy across edge nodes.
+
+## Steps
+
+1. Characterize edge hardware, network, and workloads.
+2. Quantize, prune, and convert models for edge runtimes.
+3. Build offloading and scheduling policies.
+4. Deploy via edge serving frameworks.
+5. Monitor latency, accuracy, and energy.
 
 ## Code pattern
 

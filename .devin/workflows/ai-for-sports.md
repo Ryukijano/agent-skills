@@ -1,6 +1,6 @@
 # /ai-for-sports
 
-AI for athlete tracking, match analytics, performance prediction, injury risk, and tactical decision support.
+Use AI for Sports to track athletes, predict outcomes, assess tactics and manage injury risk.
 
 ## Trigger
 

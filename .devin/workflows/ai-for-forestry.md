@@ -1,6 +1,6 @@
 # /ai-for-forestry
 
-Forest inventory, tree segmentation, biomass estimation, and species mapping from remote sensing and LiDAR.
+Use remote sensing and LiDAR to inventory forests, segment trees, estimate biomass, and map species and disturbances.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Automated species detection, acoustic and eDNA monitoring, habitat suitability modeling, and biodiversity trend analysis for conservation.
+Identify species and assess abundance from camera-trap and acoustic recordings to track biodiversity change and flag at-risk populations.
 
 ## When to use
 
 You are assessing species distributions, monitoring biodiversity change, or automating taxonomic identification from images, audio, or genetic samples.
 
-## Key concepts
+## Usage
 
-- **Camera-trap and image-based species ID**: deep learning classifiers and detectors for wildlife surveys.
-- **Acoustic and eDNA monitoring**: automated call classification and metabarcoding pipelines.
-- **Species distribution models (SDMs)**: relate occurrence records to environmental covariates.
-- **Biodiversity indicators**: alpha/beta diversity, occupancy, and abundance trends.
+- Assemble camera-trap, acoustic, eDNA, and occurrence datasets.
+- Train deep-learning classifiers and detectors for species ID.
+- Relate occurrence records to environmental covariates with SDMs.
+- Compute biodiversity indicators (alpha/beta, occupancy, abundance).
+
+## Steps
+
+1. Assemble camera-trap, acoustic, eDNA, and occurrence datasets.
+2. Train deep-learning classifiers and detectors for species ID.
+3. Relate occurrence records to environmental covariates with SDMs.
+4. Compute biodiversity indicators (alpha/beta, occupancy, abundance).
+5. Validate against field surveys and reference datasets.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

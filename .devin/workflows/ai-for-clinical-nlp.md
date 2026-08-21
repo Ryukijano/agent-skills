@@ -1,6 +1,6 @@
 # /ai-for-clinical-nlp
 
-Natural language processing for electronic health records, clinical entity extraction, term normalization, de-identification, and question answering.
+Use AI for Clinical NLP to extract entities, normalize terms, de-identify notes and answer questions.
 
 ## Trigger
 

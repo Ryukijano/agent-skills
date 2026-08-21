@@ -1,6 +1,6 @@
 # /ai-for-environmental-engineering
 
-AI for water and wastewater treatment, air quality, climate modeling, waste management, and environmental monitoring.
+Use AI to monitor air and water quality, model ecosystems, and manage environmental risk.
 
 ## Trigger
 

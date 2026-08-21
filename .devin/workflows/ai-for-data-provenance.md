@@ -1,6 +1,6 @@
 # /ai-for-data-provenance
 
-Lineage tracking, W3C PROV, reproducible ML pipelines, experiment tracking, and provenance for explainable and trustworthy AI.
+Track the origin, transformation, and flow of data and AI artifacts.
 
 ## Trigger
 

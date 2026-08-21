@@ -1,6 +1,6 @@
 # /ai-for-defect-detection
 
-Computer vision, anomaly detection, and segmentation for automated inspection of surface, PCB, casting, and assembly defects in manufacturing quality control.
+Detects surface, assembly, and component defects with computer vision and anomaly segmentation.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-hr
 
-Talent analytics, recruitment matching, attrition prediction, workforce planning, and compensation and equity analysis.
+Use AI for Human Resources to match candidates, predict attrition, plan workforce and audit pay and promotion equity.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-tutoring
 
-Intelligent tutoring systems, dialogue-based tutoring, error diagnosis, Socratic scaffolding, and personalized next-step hints.
+Use AI to build or augment a one-on-one digital tutor that diagnoses misconceptions and gives step-by-step guidance without giving away the answer.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Computational stylistics, authorship attribution, genre and style analysis, and interpretive NLP for literary texts and corpora.
+Attribute authorship and detect stylistic patterns across literary corpora to study genre, influence, and intertextuality.
 
 ## When to use
 
 You are analyzing style, genre, authorship, intertextuality, or thematic structures in literary texts and corpora.
 
-## Key concepts
+## Usage
 
-- **Stylometry and computational stylistics**: frequency-based, vector-space, and neural methods for style and authorship.
-- **Genre and period classification**: supervised and unsupervised models for literary categorization.
-- **Authorship attribution and verification**: Burrows' Delta, embedding-based classifiers, and attribution benchmarks.
-- **Interpretive NLP and LLMs**: probing language models for literary style, metaphor, and intertextual allusion.
+- OCR/segment texts, paratext, and marginalia.
+- Identify style, authorship, intertextuality, and themes.
+- Create annotated editions and linked data.
+- Model narrative structures and character networks.
+
+## Steps
+
+1. OCR/segment texts, paratext, and marginalia.
+2. Identify style, authorship, intertextuality, and themes.
+3. Create annotated editions and linked data.
+4. Model narrative structures and character networks.
+5. Validate with literary scholars and primary sources.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

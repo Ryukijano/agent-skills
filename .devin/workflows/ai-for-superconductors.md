@@ -1,6 +1,6 @@
 # /ai-for-superconductors
 
-Machine learning for superconductor discovery, critical temperature prediction, electron-phonon modeling, and materials screening.
+Apply ML to discover superconductors, predict critical temperature and electron-phonon coupling, and screen candidates through DFT-integrated pipelines.
 
 ## Trigger
 

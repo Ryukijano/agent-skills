@@ -1,6 +1,6 @@
 # /ai-for-meteorology
 
-Numerical weather prediction emulators, precipitation nowcasting, extreme-weather detection, and weather foundation models.
+Nowcast extreme precipitation from radar with physics-embedded deep generative models to improve flood and hydropower decisions.
 
 ## Trigger
 

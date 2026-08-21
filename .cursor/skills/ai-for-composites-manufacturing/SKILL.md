@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for automated fiber placement, tape laying, resin infusion, cure monitoring, defect detection, and process optimization in composite part manufacturing.
+Use computer vision and machine learning to inspect automated fiber placement and tape-laying processes, detect defects and optimize thermal and compaction parameters in composite curing.
 
 ## When to use
 
 You are manufacturing fiber-reinforced composite parts and need to detect layup defects, predict cure state, optimize AFP/ATL process parameters, or build digital twins for autoclave and resin-infusion processes.
 
-## Key concepts
+## Usage
 
-- **AFP/ATL defects**: tow gaps, overlaps, wrinkles, foreign objects, and fiber deviation from programmed paths.
-- **Cure and consolidation**: temperature cycle, degree of cure, resin viscosity, exotherm, and void evolution.
-- **Resin flow and permeability**: variability in preform architecture and flow-front monitoring for RTM/infusion.
-- **Non-destructive evaluation**: ultrasonic, thermography, and laser profilometry for defect triangulation.
-- **Multimodal process control**: fusing thermal, vision, and point-cloud data for real-time control.
+- **Inspect AFP**: detect gaps, overlaps, twists, and foreign objects with in-process cameras and laser profilometry.
+- **Monitor cure**: use thermal sensors and dielectric analysis to track resin flow and degree of cure.
+- **Predict quality**: relate tow placement, compaction, and temperature to voids and mechanical properties.
+- **Optimize autoclave**: reduce cure cycle time and energy while meeting quality specs.
+- **Build digital twins**: fuse process, inspection, and simulation data for closed-loop control.
+
+## Steps
+
+1. Collect in-process images, laser scans, and cure sensor data from AFP or ATL lines.
+2. Annotate defect classes and register data to a 3D digital layup model.
+3. Train CNN or segmentation models to detect and classify defects in real time.
+4. Model cure kinetics and thermal history to predict degree of cure and residual stress.
+5. Optimize placement and cure parameters with a surrogate or physics-informed model.
+6. Validate part quality with ultrasound, CT, or mechanical testing and close the feedback loop.
 
 ## Code pattern
 

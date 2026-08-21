@@ -2,7 +2,7 @@
 
 ## Description
 
-Data valuation, pricing, data products, marketplaces, and revenue allocation for turning data assets into measurable business value.
+Value, price, and package data assets for market exchange and revenue.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You want to turn raw data, derived features, models, or insights into revenue or
 
 ## Usage
 
-- **Data valuation**: estimate worth with Shapley, information, or influence-based methods.
-- **Pricing models**: arbitrage-free pricing, auctions, and subscription tiers.
-- **Data products**: package datasets, features, embeddings, or APIs for sale.
-- **Revenue allocation**: reward contributors based on marginal value.
-- **Marketplace dynamics**: match buyers and sellers and optimize liquidity.
+- Estimate data Shapley value for contribution-based pricing.
+- Build price-prediction models (DataPrice, SHAP explanations).
+- Bundle data products for target buyers and use cases.
+- Set dynamic pricing based on freshness and exclusivity.
+- Track revenue, usage, and customer value.
 
 ## Steps
 
-1. Identify data products and potential buyers.
-2. Profile and value data assets using ML-driven valuation.
-3. Set pricing, bundling, and licensing terms.
-4. Operate a marketplace or direct sales channel.
-5. Track revenue, usage, and contribution-based payouts.
+1. Catalog data assets and assess quality, uniqueness, and demand.
+2. Train data valuation and price-prediction models.
+3. Design pricing and packaging strategies.
+4. Launch marketplace listings with access controls.
+5. Measure revenue and iterate.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-public-records
 
-Automated records classification, sensitivity review, metadata enrichment, archival appraisal, and access to digital government archives.
+Classifies, appraises, and redacts born-digital government records to accelerate archival review and public access.
 
 ## Trigger
 

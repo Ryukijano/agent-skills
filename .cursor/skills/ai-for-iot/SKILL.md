@@ -2,19 +2,27 @@
 
 ## Description
 
-TinyML, edge AI, anomaly detection, device fingerprinting, and predictive maintenance for IoT systems.
+Deploy TinyML and edge AI for monitoring, prediction, and control in IoT systems.
 
 ## When to use
 
 You are deploying intelligence on IoT sensors, gateways, or edge devices for monitoring, predictive maintenance, anomaly detection, or control.
 
-## Key concepts
+## Usage
 
-- **TinyML and edge AI**: run compressed models on microcontrollers and gateways.
-- **IoT device fingerprinting**: identify devices from traffic or sensor signatures.
-- **Time-series anomaly detection**: LSTM, TCN, and transformers for sensor streams.
-- **Predictive maintenance**: forecast failures from vibration, temperature, or current.
-- **Security and privacy**: lightweight encryption, federated learning, and anomaly detection.
+- Build anomaly detection on STM32 with NanoEdge AI Studio.
+- Deploy time-series classifiers with tinyml-tensorlab.
+- Predict equipment failure in industrial IoT (EsoCore).
+- Optimize battery and bandwidth with on-device learning.
+- Classify audio/vibration/IMU signals at the edge.
+
+## Steps
+
+1. Select MCU and sensors and collect edge data.
+2. Train, prune, and quantize TinyML models.
+3. Compile and deploy with CMSIS-NN or vendor tools.
+4. Verify latency, memory, and power budgets.
+5. Retrain on-device or via federated updates.
 
 ## Code pattern
 

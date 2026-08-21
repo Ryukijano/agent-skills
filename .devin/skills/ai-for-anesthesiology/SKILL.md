@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for preoperative risk stratification, intraoperative hemodynamic monitoring, anesthetic depth, postoperative nausea and pain, and closed-loop anesthesia.
+Use machine learning to stratify preoperative risk, monitor hemodynamics, predict nausea and pain, and support closed-loop anesthesia.
 
 ## When to use
 
 You are predicting perioperative risk, monitoring hemodynamics or anesthetic depth, optimizing pain and PONV prophylaxis, or building closed-loop control for anesthetic delivery.
 
-## Key concepts
+## Usage
 
-- **Preoperative risk assessment**: ASA status, frailty, comorbidity indices, and procedure-specific complication models.
-- **Intraoperative monitoring**: hypotension prediction index, arterial waveform analysis, and BIS/EEG depth monitoring.
-- **Pharmacokinetic and pharmacodynamic modeling**: target-controlled infusion and individual dose-response.
-- **PONV and pain prediction**: risk scores and multimodal analgesia planning.
-- **Closed-loop control**: real-time anesthetic, vasopressor, and fluid administration.
+- Assess preoperative risk with ASA status, frailty, and comorbidity indices.
+- Predict intraoperative hypotension and interpret arterial waveforms and EEG/BIS depth.
+- Model pharmacokinetics and pharmacodynamics for target-controlled infusion.
+- Predict postoperative nausea/vomiting and pain to guide multimodal analgesia.
+- Support real-time closed-loop anesthetic, vasopressor, and fluid control.
+
+## Steps
+
+1. Integrate EHR, high-frequency waveforms, and anesthesia machine data.
+2. Define prediction windows and clinical thresholds (e.g., hypotension within 15 minutes).
+3. Train models with time-series features and calibrate probabilities for rare events.
+4. Validate alarm lead time and false-positive burden with anesthesiologists.
+5. Integrate into decision support or closed-loop control with safety limits.
+6. Monitor latency and adapt to patient populations and surgical types.
 
 ## Code pattern
 

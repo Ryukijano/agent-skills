@@ -2,19 +2,30 @@
 
 ## Description
 
-Procedural content generation, game-playing agents via reinforcement learning, NPC behavior, and generative AI for game assets and narratives.
+Use AI for Games to generate content, train game-playing agents and model players.
 
 ## When to use
 
 You are generating levels, items, or quests, training agents to play, designing NPC behavior, or augmenting game design with AI.
 
-## Key concepts
 
-- **Procedural content generation (PCG)**: search-based, learning-based, and LLM-driven level and asset generation.
-- **Reinforcement learning for games**: train policies for playing or content generation.
-- **Behavior trees and planning**: combine learned modules with symbolic AI.
-- **LLM-driven design**: use large language models to generate quests, dialogues, and rules.
-- **Player modeling and difficulty adaptation**: predict player skill and adjust content.
+## Usage
+
+
+- **Procedural content generation (PCG)**: Search-based, learning-based, and LLM-driven level and asset generation.
+- **Reinforcement learning for games**: Train policies for playing or content generation.
+- **Behavior trees and planning**: Combine learned modules with symbolic AI.
+- **LLM-driven design**: Large language models to generate quests, dialogues, and rules.
+- **Player modeling and difficulty adaptation**: Predict player skill and adjust content.
+
+## Steps
+
+1. Collect and prepare game states, levels and player interaction data.
+2. Generate levels.
+3. Items.
+4. Quests.
+5. Validate by training an RL agent to reach a target in a procedural level.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -27,12 +38,14 @@ model = PPO("MlpPolicy", env, verbose=1)
 model.learn(total_timesteps=100_000)
 ```
 
+
 ## Tuning notes
 
 - Balance exploration and exploitation for sparse game rewards.
 - Use procedural environments to improve generalization.
 - Combine RL with human demonstrations or imitation learning.
 - Validate generated content with playability checks and player tests.
+
 
 ## Verification
 

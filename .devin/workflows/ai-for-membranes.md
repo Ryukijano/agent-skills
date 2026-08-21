@@ -1,6 +1,6 @@
 # /ai-for-membranes
 
-Machine learning for membrane material design, permeability and selectivity prediction, fouling control, and separation process optimization.
+Design polymer membranes for gas and carbon-capture separations using graph ML to surpass selectivity-permeability upper bounds.
 
 ## Trigger
 

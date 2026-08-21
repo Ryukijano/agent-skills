@@ -1,6 +1,6 @@
 # /ai-for-volcanology
 
-Machine learning for eruption forecasting, volcanic seismicity classification, and hazard assessment.
+Forecast eruption probability by fusing seismic, gas, and satellite data to issue early warnings at volcanoes like Whakaari.
 
 ## Trigger
 

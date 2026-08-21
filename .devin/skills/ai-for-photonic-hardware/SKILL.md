@@ -2,18 +2,27 @@
 
 ## Description
 
-Photonic AI accelerators, optical neural networks, optoelectronic co-design, and programming of photonic tensor cores.
+Use machine learning to design, calibrate, and program photonic AI accelerators and optical neural networks.
 
 ## When to use
 
 You are building or programming photonic AI accelerators, optical neural networks, or photonic tensor cores for matrix/vector and tensor operations.
 
-## Key concepts
+## Usage
 
-- **Photonic matrix-vector multiplication (MVM)**: Mach-Zehnder meshes, microring resonators, and coherent crossbars for analog linear transforms.
-- **Optical nonlinearities and hybrid compute**: combining photonic linear layers with electronic nonlinearities and memory.
-- **Photonic accelerator co-design**: algorithm, photonic device, and control/electronics co-optimization.
-- **Calibration and error mitigation**: phase drift, crosstalk, and loss-aware training.
+- Implement matrix-vector multiplication with Mach-Zehnder meshes, microring resonators, and coherent crossbars.
+- Combine photonic linear layers with electronic nonlinearities and memory in hybrid compute.
+- Co-design the algorithm, photonic device, and control electronics.
+- Calibrate and mitigate phase drift, crosstalk, and optical loss.
+
+## Steps
+
+1. Define the photonic accelerator architecture and the target AI workload.
+2. Construct a simulation of MVM, phase shifters, photodetectors, and ADC/DAC.
+3. Train an optical neural network or calibration model in the photonic simulator.
+4. Calibrate phase shifters and photodiode gains with on-chip feedback loops.
+5. Implement error mitigation for phase drift, crosstalk, and optical loss.
+6. Verify a small network on the photonic chip or test bench and compare to a digital baseline.
 
 ## Code pattern
 

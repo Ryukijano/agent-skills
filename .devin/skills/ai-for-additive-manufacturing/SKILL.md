@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for powder-bed fusion, directed energy deposition, in-situ monitoring, defect detection, build simulation, and process parameter optimization in additive manufacturing.
+Use machine learning on in-situ sensor and process data together with post-build inspection to detect defects, optimize build settings and certify metal or polymer additive parts.
 
 ## When to use
 
 You are optimizing metal or polymer additive manufacturing processes, predicting part quality from build parameters, detecting defects from in-situ sensor data, or training surrogate models for residual stress and distortion.
 
-## Key concepts
+## Usage
 
-- **Process parameter mapping**: laser power, scan speed, hatch spacing, layer thickness, and energy density windows.
-- **In-situ sensing**: melt-pool images, photodiodes, thermal cameras, acoustic emission, and spatter monitoring.
-- **Defect classification**: porosity, lack of fusion, balling, keyholing, and crack detection from image or time-series data.
-- **Build planning**: support design, orientation, scan strategy, and thermal history effects on microstructure.
-- **Digital twins and surrogate models**: fast prediction of distortion, residual stress, and mechanical properties.
+- **Monitor in-situ**: analyze melt-pool images, photodiode signals, thermal data, and acoustic emissions.
+- **Detect defects**: classify porosity, balling, lack of fusion, and cracks during the build.
+- **Optimize parameters**: relate laser power, scan speed, and hatch spacing to density and microstructure.
+- **Predict microstructure**: link thermal history to grain structure, phase, and mechanical properties.
+- **Reduce inspection**: replace or prioritize destructive and CT testing with in-situ quality metrics.
+
+## Steps
+
+1. Collect in-situ sensor data and process logs synchronized to layer and build coordinates.
+2. Label or segment anomalies using XCT, microscopy, or post-build NDT as ground truth.
+3. Extract spatiotemporal features and train a defect classifier on layer-wise signals.
+4. Relate process parameters and thermal history to porosity, microstructure, and properties.
+5. Optimize process parameters with surrogate models or Bayesian optimization.
+6. Validate in-situ predictions against physical tests and qualify the workflow.
 
 ## Code pattern
 

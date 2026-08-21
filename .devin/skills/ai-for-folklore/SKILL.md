@@ -2,18 +2,27 @@
 
 ## Description
 
-Computational folkloristics, motif and tale-type detection, and large-scale narrative analysis of folk tales, legends, and oral traditions.
+Classify folk-tale motifs and tale types across multilingual corpora to compare narrative traditions and cultural diffusion.
 
 ## When to use
 
 You are studying folk tales, legends, proverbs, or other vernacular traditions and want to detect motifs, tale types, or narrative structures at scale.
 
-## Key concepts
+## Usage
 
-- **Tale-type and motif indexing**: ATU tale types, Thompson Motif Index, and automated motif extraction.
-- **Computational folkloristics**: network analysis, clustering, and distant reading of folklore corpora.
-- **LLM-assisted narrative analysis**: prompting, fine-tuning, and evaluating language models on folktale variants.
-- **Digital folklore and algorithms**: folk theories of algorithms and the study of folklore on social media platforms.
+- Collect and transcribe oral narratives and texts.
+- Classify tale types and motifs (ATU/Thompson).
+- Map geographic and temporal diffusion.
+- Generate variants and synthetic examples.
+
+## Steps
+
+1. Collect and transcribe oral narratives and texts.
+2. Classify tale types and motifs (ATU/Thompson).
+3. Map geographic and temporal diffusion.
+4. Generate variants and synthetic examples.
+5. Validate against archival sources and storytellers.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

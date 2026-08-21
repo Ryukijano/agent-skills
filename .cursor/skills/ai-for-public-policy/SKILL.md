@@ -2,19 +2,30 @@
 
 ## Description
 
-Causal and predictive policy evaluation, program impact assessment, regulatory text analysis, and equitable resource allocation for government and public administration.
+Use AI for Public Policy to evaluate programs, predict service demand and audit equitable allocation.
 
 ## When to use
 
 You are designing, implementing, or evaluating public programs and need evidence on what works, for whom, and under what conditions.
 
-## Key concepts
 
-- **Causal machine learning for policy**: heterogeneous treatment effects, causal forests, and double/debiased ML.
-- **Counterfactual policy evaluation**: synthetic controls, difference-in-differences, and interrupted time series.
-- **Predictive analytics for public services**: risk modeling, demand forecasting, and resource allocation.
-- **Regulatory and legislative text analysis**: parse rulemaking comments, statutes, and contracts.
-- **Equity and accountability**: audit for disparate impact and ensure explainability.
+## Usage
+
+
+- **Causal machine learning for policy**: Heterogeneous treatment effects, causal forests, and double/debiased ML.
+- **Counterfactual policy evaluation**: Synthetic controls, difference-in-differences, and interrupted time series.
+- **Predictive analytics for public services**: Risk modeling, demand forecasting, and resource allocation.
+- **Regulatory and legislative text analysis**: Parse rulemaking comments, statutes, and contracts.
+- **Equity and accountability**: Audit for disparate impact and ensure explainability.
+
+## Steps
+
+1. Collect and prepare program, administrative and survey data.
+2. Design.
+3. Implemente.
+4. Evaluate public programs and need evidence on what works.
+5. Validate by replicating a published policy evaluation with a causal ML estimator.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -32,12 +43,14 @@ print("ATE:", est.ate_)
 print("CATE:", est.cate(X=covariates[:5]))
 ```
 
+
 ## Tuning notes
 
 - Use cross-fitting and out-of-fold nuisance predictions to avoid overfitting.
 - Validate causal claims with placebo tests, pre-trend checks, and sensitivity analysis.
 - Consider external validity and transportability across jurisdictions.
 - Balance predictive accuracy with fairness and transparency for high-stakes decisions.
+
 
 ## Verification
 

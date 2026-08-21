@@ -1,6 +1,6 @@
 # /ai-for-surveillance-ethics
 
-Fairness, privacy, proportionality, and algorithmic accountability for AI surveillance and facial recognition.
+Audit police facial-recognition deployments against legal and fairness standards to enforce proportionality and transparency.
 
 ## Trigger
 

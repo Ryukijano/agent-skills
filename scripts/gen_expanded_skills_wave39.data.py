@@ -1,21 +1,29 @@
 # Wave 39: AI in Social Impact and Development
-
 SKILLS = [
     {
         "name": "ai-for-poverty-alleviation",
         "title": "AI for Poverty Alleviation",
-        "description": "Machine learning for poverty mapping, consumption estimation, proxy means testing, and targeted social protection in low-resource settings.",
+        "description": "Use machine learning to map poverty, estimate consumption, target social transfers, and improve social protection in low-resource settings.",
         "devin_body": r'''
 ## When to use
 
 You need to estimate economic well-being, target cash transfers, or map poverty at high spatial resolution where traditional survey data are sparse or outdated.
 
-## Key concepts
+## Usage
 
-- **Poverty mapping from space**: combine daytime satellite imagery, nighttime lights, and built-environment features with household survey data.
-- **Proxy means testing (PMT)**: learn a low-cost scoring function from observable characteristics to identify eligible beneficiaries.
-- **Mobile data for targeting**: use call-detail records and airtime purchases as proxies for consumption and income shocks.
-- **Equity and fairness**: monitor exclusion and inclusion errors across gender, ethnicity, and geography.
+- Combine satellite imagery, nighttime lights, and built-environment features with household surveys.
+- Build proxy means testing scoring to identify eligible beneficiaries.
+- Use mobile data such as call-detail records and airtime as proxies for income shocks.
+- Monitor exclusion and inclusion errors across gender, ethnicity, and geography.
+
+## Steps
+
+1. Assemble household surveys, geospatial layers, and mobile or administrative data.
+2. Train consumption or wealth prediction models with spatial or temporal cross-validation.
+3. Use predictions to produce high-resolution poverty maps and rank households for targeting.
+4. Measure targeting quality by exclusion/inclusion errors and coverage of the poorest quintile.
+5. Audit for disparities and protect sensitive mobile/geospatial data.
+6. Integrate with government or NGO targeting systems and update as conditions change.
 
 ## Code pattern
 
@@ -44,7 +52,7 @@ model = GradientBoostingRegressor(random_state=42).fit(X_train, y_train)
 1. Replicate a small-area poverty map and compare it to a recent census or survey estimate.
 2. Train a PMT and measure how well it captures the poorest quintile in a holdout region.
 3. Audit the model for disparities across protected groups before deployment.
-''',
+        ''',
         "references": [
             "https://www.science.org/doi/10.1126/science.aaf7894",
             "https://pubmed.ncbi.nlm.nih.gov/35914150/",
@@ -56,18 +64,27 @@ model = GradientBoostingRegressor(random_state=42).fit(X_train, y_train)
     {
         "name": "ai-for-hunger-relief",
         "title": "AI for Hunger Relief",
-        "description": "AI/ML for food-security early warning, acute food-insecurity forecasting, remote-sensing crop monitoring, and targeted food assistance.",
+        "description": "Use AI/ML to forecast food insecurity, monitor crops, and target emergency food assistance.",
         "devin_body": r'''
 ## When to use
 
 You are building or improving early warning systems for famine, food-insecurity phase classification, or allocation of emergency food assistance.
 
-## Key concepts
+## Usage
 
-- **IPC phase forecasting**: predict Crisis, Emergency, and Famine conditions using Integrated Food Security Phase Classification data.
-- **Remote-sensing indicators**: NDVI/EVI anomalies, rainfall (CHIRPS), and temperature as leading signals of crop failure.
-- **Market and conflict signals**: cereal prices, market access, and conflict event counts improve short-term forecasts.
-- **Mobile VAM surveys**: high-frequency food-consumption and coping-strategy data from call or SMS surveys.
+- Forecast Integrated Food Security Phase Classification (IPC) phases.
+- Use NDVI/EVI, rainfall (CHIRPS), and temperature as crop-failure signals.
+- Incorporate cereal prices, market access, and conflict events into short-term forecasts.
+- Collect high-frequency food consumption and coping-strategy data via mobile surveys.
+
+## Steps
+
+1. Gather IPC, remote-sensing, market, conflict, and survey data for the target region.
+2. Build a time-series or classification model for food-insecurity phase transitions.
+3. Use time-based splits and avoid leakage from future market prices.
+4. Calibrate probabilities to match donor and response budgets.
+5. Combine model outputs with expert judgment and maintain human escalation paths.
+6. Backtest against official IPC assessments and refine as shocks evolve.
 
 ## Code pattern
 
@@ -95,7 +112,7 @@ clf.fit(X, y)
 1. Build a 90-day-ahead IPC forecast and backtest against official IPC assessments.
 2. Compare the model to a rainfall-only baseline in a drought-affected region.
 3. Evaluate how early the system flags an emerging food crisis compared to standard triggers.
-''',
+        ''',
         "references": [
             "https://www.nature.com/articles/s43016-026-01400-6",
             "https://sfcs.fao.org/docs/devhlpelibraries/default-document-library/hlpe-fsn-ai-note.pdf",
@@ -106,18 +123,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-refugees",
         "title": "AI for Refugees",
-        "description": "Machine learning for forced-displacement forecasting, refugee camp mapping, asylum-flow prediction, and humanitarian response planning.",
+        "description": "Use machine learning to forecast displacement, map refugee camps, and allocate humanitarian resources.",
         "devin_body": r'''
 ## When to use
 
 You need to anticipate refugee or asylum-seeker arrivals, map camp infrastructure, or allocate resources before displacement peaks.
 
-## Key concepts
+## Usage
 
-- **Displacement forecasting**: use violence, governance, economic, and environmental indicators to predict cross-border flows.
-- **Camp mapping from satellite/VHR imagery**: detect shelters, service points, and population density in refugee camps.
-- **Asylum-seeker analytics**: estimate destination-country distribution with gravity and network models.
-- **Scenario analysis**: run counterfactuals for shocks like conflict escalation or drought.
+- Forecast cross-border flows from violence, governance, economic, and environmental indicators.
+- Detect shelters, service points, and population density in satellite/VHR imagery.
+- Estimate destination-country distribution with gravity and network models.
+- Run counterfactual scenario analysis for conflict or drought shocks.
+
+## Steps
+
+1. Collect origin-country stressors, displacement statistics, and camp imagery.
+2. Train panel models with origin, destination, and time fixed effects.
+3. Build a camp-mapping or shelter-detection pipeline from VHR imagery.
+4. Validate out-of-sample across crisis periods and geographic regions.
+5. Run scenario forecasts and share uncertainty with policymakers.
+6. Integrate with UNHCR or humanitarian planning workflows.
 
 ## Code pattern
 
@@ -145,30 +171,39 @@ model.fit(X, y)
 1. Build a 12-month displacement forecast for a set of fragile countries and compare to UNHCR planning figures.
 2. Detect tents or built structures in a VHR refugee-camp image and compare to manual counts.
 3. Evaluate destination-choice model with rank-based metrics on a heldout year.
-''',
+        ''',
         "references": [
             "https://www.cambridge.org/core/journals/data-and-policy/article/developing-ai-predictive-migration-tools-to-enhance-humanitarian-support-the-case-of-eumigratool/54E3FF814CD44FF426272335AFDD76AE",
             "https://ojs.aaai.org/index.php/AAAI/article/view/26846",
             "https://drc.ngo/en/pages/foresight-displacement-forecasts/",
             "https://www.microsoft.com/en-us/research/publication/mapping-refugee-camps-with-ai-a-benchmark-dataset-and-baseline-models-for-humanitarian-applications/",
-            "https://par.nsf.gov/biblio/10448593",
+            "https://doi.org/10.1287/opre.2021.0534",
         ],
     },
     {
         "name": "ai-for-humanitarian-aid",
         "title": "AI for Humanitarian Aid",
-        "description": "AI across the crisis management cycle: needs assessment, resource allocation, routing, damage assessment, and early warning for disaster response.",
+        "description": "Use AI across the crisis management cycle for needs assessment, resource allocation, damage mapping, and early warning.",
         "devin_body": r'''
 ## When to use
 
 You are coordinating relief in natural or man-made crises and need faster needs assessment, logistics, or damage mapping.
 
-## Key concepts
+## Usage
 
-- **Crisis cycle AI**: early warning, preparedness, response, and recovery.
-- **Multi-agent relief coordination**: LLM agents for task planning, routing, and information triage.
-- **Post-disaster damage assessment**: use satellite, drone, or social-media imagery to classify building damage.
-- **Beneficiary targeting**: integrate mobile, survey, and geospatial data to prioritize assistance.
+- Support early warning, preparedness, response, and recovery with AI.
+- Coordinate multi-agent relief planning, routing, and information triage.
+- Classify post-disaster building damage from satellite, drone, or social-media imagery.
+- Integrate mobile, survey, and geospatial data for beneficiary targeting.
+
+## Steps
+
+1. Identify the crisis phase and assemble relevant data (imagery, needs reports, logistics).
+2. Train or configure models for damage classification, routing, or needs triage.
+3. Use heuristics or solvers for rapid-onset logistics where exact methods are too slow.
+4. Keep human responders in the loop for life-safety and ethical decisions.
+5. Map data biases from social media or satellite sources to avoid undercounting.
+6. Run simulated responses and iterate with frontline feedback.
 
 ## Code pattern
 
@@ -197,7 +232,7 @@ G = nx.Graph()
 1. Run a simulated flood/earthquake response and compare AI-optimized routing to a baseline dispatch rule.
 2. Classify post-disaster building damage on xBD or similar benchmark and report F1.
 3. Test an LLM-based triage agent for correctness, safety, and escalation behavior.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1016/j.technovation.2025.103415",
             "https://doi.org/10.3390/su18021014",
@@ -208,18 +243,27 @@ G = nx.Graph()
     {
         "name": "ai-for-disability-inclusion",
         "title": "AI for Disability Inclusion",
-        "description": "Accessible AI, disability-aware bias evaluation, inclusive design, and assistive technologies that respect the rights and agency of people with disabilities.",
+        "description": "Use accessible, disability-aware AI to improve assistive technologies and reduce algorithmic harm for people with disabilities.",
         "devin_body": r'''
 ## When to use
 
 You are building AI systems used by, or about, people with disabilities and want to avoid ableism and improve accessibility.
 
-## Key concepts
+## Usage
 
-- **Disability-aware evaluation**: benchmark models for stereotypes, factual errors, and sentiment drift on disability-related queries.
-- **Assistive AI**: speech-to-text, image captioning, sign-language recognition, and real-time captioning.
-- **Inclusive co-design**: involve people with disabilities in data collection, model design, and deployment.
-- **Algorithmic harm taxonomy**: representational, allocative, quality-of-service, and interpersonal harms.
+- Benchmark models for stereotypes, factual errors, and sentiment on disability-related queries.
+- Build assistive AI such as speech-to-text, image captioning, and sign-language recognition.
+- Involve people with disabilities in co-design, data collection, and deployment.
+- Detect representational, allocative, quality-of-service, and interpersonal harms.
+
+## Steps
+
+1. Identify the disability community and use case and establish CRPD-aligned governance.
+2. Collect representative, consent-based data that captures diverse disability experiences.
+3. Train or adapt speech, vision, or language models for the assistive task.
+4. Audit for bias against mobility, sensory, cognitive, and psychosocial disability groups.
+5. Build human override and explainability into high-stakes decisions.
+6. Pilot with disabled users and iterate on model and UI decisions.
 
 ## Code pattern
 
@@ -243,7 +287,7 @@ caption = captioner("https://example.org/accessible-sign.jpg")
 1. Evaluate an LLM on a disability-bias benchmark and compare neutral vs. disability-aware prompts.
 2. Build a sign-language or speech-recognition demo and measure word/sign error rates with disabled users.
 3. Conduct a co-design session and document how feedback changed model or UI decisions.
-''',
+        ''',
         "references": [
             "https://ojs.aaai.org/index.php/AIES/article/download/36745/38883/40820",
             "https://aclanthology.org/2025.emnlp-main.1653/",
@@ -254,18 +298,27 @@ caption = captioner("https://example.org/accessible-sign.jpg")
     {
         "name": "ai-for-aging",
         "title": "AI for Aging",
-        "description": "Machine learning for geriatric health monitoring, aging-in-place, fall prevention, cognitive and social support, and age-friendly AI design.",
+        "description": "Use machine learning to support older adults with health monitoring, fall prevention, cognitive and social support, and age-friendly design.",
         "devin_body": r'''
 ## When to use
 
 You are supporting older adults to age safely at home, manage chronic conditions, or maintain cognitive and social well-being.
 
-## Key concepts
+## Usage
 
-- **Aging-in-place sensing**: passive environmental and wearable sensors for activity, gait, sleep, and falls.
-- **Cognitive and mental-health support**: conversational agents and personalized content for memory, mood, and loneliness.
-- **Multimorbidity risk models**: predict hospitalization, frailty, and functional decline from EHR and sensor streams.
-- **Age-friendly design**: legible interfaces, voice interaction, and digital literacy support.
+- Sense activity, gait, sleep, and falls with passive environmental and wearable sensors.
+- Support memory, mood, and loneliness with conversational agents and personalized content.
+- Predict hospitalization, frailty, and functional decline from EHR and sensor streams.
+- Design legible, voice-enabled interfaces and digital literacy support.
+
+## Steps
+
+1. Define the aging outcome (fall, hospitalization, isolation) and data sources (sensors, EHR).
+2. Collect longitudinal data and use time-aware validation.
+3. Train predictive or conversational models and handle class imbalance.
+4. Prioritize on-device or edge processing for privacy.
+5. Involve older adults and caregivers in interface and alert design.
+6. Pilot in aging-in-place or care settings and measure adherence and outcomes.
 
 ## Code pattern
 
@@ -293,7 +346,7 @@ clf.fit(X, y)
 1. Train a fall-risk model and compare its recall to a clinical frailty index.
 2. Build a medication or activity reminder chatbot and measure adherence in a pilot.
 3. Run an age-inclusive usability test and iterate on accessibility findings.
-''',
+        ''',
         "references": [
             "https://link.springer.com/article/10.1186/s12877-026-07798-9",
             "https://ai.jmir.org/2026/1/e84695",
@@ -304,18 +357,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-dementia-care",
         "title": "AI for Dementia Care",
-        "description": "Machine learning for cognitive impairment screening, dementia risk stratification, voice and EHR analytics, and caregiver support.",
+        "description": "Use machine learning to screen for cognitive decline, stratify dementia risk, and support caregivers.",
         "devin_body": r'''
 ## When to use
 
 You need to detect cognitive decline early, triage memory-clinic referrals, or support people with dementia and their caregivers.
 
-## Key concepts
+## Usage
 
-- **Cognitive screening from voice and language**: acoustic and linguistic markers from short speech samples or questionnaire responses.
-- **EHR-based dementia risk**: low-burden models using comorbidity, medication, and encounter data.
-- **Multimodal diagnosis**: combine neuropsychology, imaging, and biomarkers for etiology differentiation.
-- **Resource-stratified models**: tier inputs from basic demographics to full neuropsych batteries.
+- Screen for cognitive impairment from voice, language, and questionnaire responses.
+- Build EHR-based dementia risk models with low-burden inputs.
+- Combine neuropsychology, imaging, and biomarkers for differential diagnosis.
+- Tier models from basic demographics to full neuropsych batteries.
+
+## Steps
+
+1. Collect voice, EHR, imaging, and neuropsych data with careful timestamping.
+2. Define the screening or risk target and avoid leakage from future visits.
+3. Train minimal-input screeners and more comprehensive diagnostic models.
+4. Validate across health systems, countries, and cognitive assessment norms.
+5. Balance sensitivity and specificity and provide explanations to clinicians.
+6. Integrate into memory clinic triage and monitor referral outcomes.
 
 ## Code pattern
 
@@ -343,7 +405,7 @@ clf.fit(X, y)
 1. Build a minimal-input dementia screener and compare AUC to a full neuropsych battery.
 2. Analyze a voice-recording dataset for cognitive-impairment detection and report AUC.
 3. Validate the model on an independent EHR cohort and check subgroup calibration.
-''',
+        ''',
         "references": [
             "https://link.springer.com/article/10.1186/s13195-026-02006-7",
             "https://www.nature.com/articles/s41467-026-76071-9",
@@ -354,18 +416,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-palliative-care",
         "title": "AI for Palliative Care",
-        "description": "Machine learning for prognostication, symptom management, hospice suitability, advance care planning, and ethical decision support in end-of-life care.",
+        "description": "Use machine learning for prognostication, symptom management, hospice suitability, and advance care planning in end-of-life care.",
         "devin_body": r'''
 ## When to use
 
 You need to identify patients who may benefit from palliative or hospice care, forecast prognosis, or personalize symptom management.
 
-## Key concepts
+## Usage
 
-- **Mortality and prognosis models**: EHR-based models that estimate 6- or 12-month mortality for referral triggers.
-- **Hospice suitability**: classify optimal care model (home, inpatient, shared) from health-assessment data.
-- **Symptom assessment**: NLP of clinical notes for pain, dyspnea, fatigue, and psychosocial distress.
-- **Advance care planning**: automated alerts for goals-of-care conversations and do-not-resuscitate documentation.
+- Estimate 6- or 12-month mortality from EHR for referral triggers.
+- Classify optimal care models (home, inpatient, shared) from health assessments.
+- Extract pain, dyspnea, fatigue, and psychosocial distress from clinical notes.
+- Alert clinicians to goals-of-care conversations and documentation needs.
+
+## Steps
+
+1. Define the palliative outcome (mortality, symptom, care setting) and assemble EHR.
+2. Use time-stamped EHR splits and avoid labels that depend on the referral decision itself.
+3. Train prognostic or NLP symptom models and calibrate probabilities.
+4. Validate against palliative screening rules and chart review.
+5. Integrate as decision support, keeping clinicians and patients at the center.
+6. Monitor for bias in access to hospice and palliative services across groups.
 
 ## Code pattern
 
@@ -393,7 +464,7 @@ clf.fit(X, y)
 1. Train a 6-month mortality model and compare to a palliative-screening rule.
 2. Build an NLP symptom extractor and evaluate against manual chart review.
 3. Pilot a referral decision-support tool and measure time-to-palliative consult.
-''',
+        ''',
         "references": [
             "https://pubmed.ncbi.nlm.nih.gov/40849027/",
             "https://link.springer.com/article/10.1186/s12911-025-03289-w",
@@ -405,18 +476,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-maternal-health",
         "title": "AI for Maternal Health",
-        "description": "Machine learning for maternal risk stratification, preterm birth prediction, obstetric decision support, and neonatal outcome forecasting.",
+        "description": "Use machine learning to stratify maternal risk, predict preterm birth, support obstetric decisions, and forecast neonatal outcomes.",
         "devin_body": r'''
 ## When to use
 
 You are building tools to predict adverse pregnancy outcomes, triage antenatal care, or support low-resource maternal-health platforms.
 
-## Key concepts
+## Usage
 
-- **Adverse outcome prediction**: integrate clinical history, vitals, labs, and social determinants of health (SDoH).
-- **Preterm birth risk**: use longitudinal EHR, cervical measurements, and biomarkers.
-- **Obstetric imaging**: ultrasound-based fetal growth, anomaly detection, and placental assessment.
-- **WhatsApp/telehealth triage**: symptom checkers and decision support integrated into government health platforms.
+- Integrate clinical history, vitals, labs, and social determinants of health (SDoH).
+- Predict preterm birth from longitudinal EHR, cervical measurements, and biomarkers.
+- Detect fetal growth, anomalies, and placental issues from ultrasound.
+- Provide triage and decision support via WhatsApp/telehealth platforms.
+
+## Steps
+
+1. Assemble antenatal EHR, SDoH, imaging, and telehealth data.
+2. Define adverse outcomes and use chronological splits avoiding post-delivery leakage.
+3. Train risk models that include SDoH and access variables for equity.
+4. Validate on Medicaid or LMIC cohorts, not just privileged populations.
+5. Build a decision-support interface for midwives, nurses, and patients.
+6. Monitor outcomes and disparities across racial, ethnic, and geographic groups.
 
 ## Code pattern
 
@@ -444,7 +524,7 @@ clf.fit(X, y)
 1. Train an adverse-pregnancy model and measure the lead time before clinical symptoms appear.
 2. Compare clinical-only vs. clinical-plus-SDoH model performance across racial/ethnic subgroups.
 3. Test a symptom-checker integration on a government WhatsApp maternal-health platform.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1038/s44482-025-00003-5",
             "https://link.springer.com/article/10.1186/s12884-026-09784-w",
@@ -455,18 +535,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-child-health",
         "title": "AI for Child Health",
-        "description": "Machine learning for pediatric diagnostics, developmental surveillance, pediatric AI readiness, and risk stratification for children.",
+        "description": "Use machine learning to support pediatric diagnostics, developmental surveillance, and risk stratification.",
         "devin_body": r'''
 ## When to use
 
 You are building AI tools for pediatric screening, diagnosis, monitoring, or treatment planning across neonatal, childhood, and adolescent populations.
 
-## Key concepts
+## Usage
 
-- **Pediatric growth and development**: age-adjusted norms, developmental milestones, and anomaly detection.
-- **Diagnostic support for common conditions**: pneumonia, sepsis, congenital heart disease, and retinopathy of prematurity.
-- **Multimodal pediatric data**: EHR notes, imaging, labs, and parent-reported outcomes.
-- **Pediatric AI readiness (PAIR)**: governance, validation, low-resource adaptation, and child-centric design.
+- Track age-adjusted growth, developmental milestones, and anomaly detection.
+- Support diagnosis of pneumonia, sepsis, congenital heart disease, and retinopathy of prematurity.
+- Integrate EHR notes, imaging, labs, and parent-reported outcomes into pediatric models.
+- Apply pediatric AI readiness (PAIR) governance, validation, and child-centric design.
+
+## Steps
+
+1. Collect pediatric data and normalize by age, sex, and developmental stage.
+2. Define diagnosis or screening targets with child-appropriate reference ranges.
+3. Train models with class imbalance and data-scarcity handling (transfer, federated learning).
+4. Validate across pediatric subgroups and institutions.
+5. Complete a pediatric AI readiness checklist and address low-resource adaptation.
+6. Integrate into pediatric workflows with guardian consent and age-appropriate interfaces.
 
 ## Code pattern
 
@@ -494,7 +583,7 @@ clf.fit(X, y)
 1. Build a pediatric sepsis early-warning model and evaluate time-to-detection vs. clinician alerts.
 2. Train an image classifier on pediatric pneumonia X-rays and report sensitivity and specificity.
 3. Complete the PAIR readiness checklist for a pediatric AI deployment.
-''',
+        ''',
         "references": [
             "https://www.mdpi.com/2077-0383/14/3/807",
             "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1800047/full",
@@ -506,18 +595,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-rural-health",
         "title": "AI for Rural Health",
-        "description": "AI-driven diagnostics, telemedicine, rural health equity, and resource allocation for underserved and remote populations.",
+        "description": "Deliver mobile AI-assisted diabetic retinopathy and cardiac screening to remote communities with limited specialist access.",
         "devin_body": r'''
 ## When to use
 
 You are deploying AI in rural, remote, or low-resource health settings where specialists, connectivity, and infrastructure are limited.
 
-## Key concepts
+## Usage
 
-- **Telemedicine + AI**: real-time decision support during virtual consultations.
-- **Point-of-care diagnostics**: AI on mobile or edge devices for imaging, lab interpretation, and triage.
-- **Rural health equity**: address digital literacy, bandwidth, language, and trust barriers.
-- **Resource allocation**: optimize staffing, transport, and supply distribution across large geographies.
+- Provide real-time AI decision support during virtual consultations.
+- Run point-of-care diagnostics on mobile or edge devices for imaging and triage.
+- Reduce digital literacy, bandwidth, language, and trust barriers.
+- Optimize staffing, transport, and supply distribution across large geographies.
+
+## Steps
+
+1. Assess infrastructure, connectivity, and device constraints in the target rural area.
+2. Curate representative rural data and avoid urban-academic bias.
+3. Train lightweight, offline-capable models for imaging or triage.
+4. Test latency, battery, and usability on the target hardware.
+5. Involve rural clinicians and community health workers in deployment.
+6. Monitor whether the tool narrows or widens rural-urban outcome disparities.
 
 ## Code pattern
 
@@ -545,7 +643,7 @@ clf.fit(X, y)
 1. Deploy a diagnostic aid in a rural clinic and compare concordance with specialist referrals.
 2. Measure model latency and battery use on the target hardware.
 3. Evaluate whether the tool narrows or widens rural-urban outcome disparities.
-''',
+        ''',
         "references": [
             "https://pmc.ncbi.nlm.nih.gov/articles/PMC12892150/",
             "https://pmc.ncbi.nlm.nih.gov/articles/PMC12262758/",
@@ -556,18 +654,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-mental-health-services",
         "title": "AI for Mental Health Services",
-        "description": "LLM and multimodal mental health screening, CBT chatbots, psychosocial risk assessment, and clinical interview support.",
+        "description": "Use LLMs and multimodal AI to screen, triage, monitor, and support mental-health care at scale.",
         "devin_body": r'''
 ## When to use
 
 You are building tools to screen, triage, monitor, or support mental-health care at scale, especially when clinicians are scarce.
 
-## Key concepts
+## Usage
 
-- **Multimodal mental-health monitoring**: combine text, speech, wearables, and neuroimaging for early detection.
-- **CBT-based conversational agents**: structured, evidence-based chatbots for depression, anxiety, and stress.
-- **Psychosocial risk assessment**: suicidality, intimate partner violence, and substance misuse triage.
-- **Clinical interview support**: multi-agent LLM frameworks for structured psychiatric screening.
+- Combine text, speech, wearables, and neuroimaging for early detection and monitoring.
+- Deploy CBT-based conversational agents for depression, anxiety, and stress.
+- Triage psychosocial risks such as suicidality, intimate partner violence, and substance misuse.
+- Support clinical interviews with multi-agent LLM frameworks.
+
+## Steps
+
+1. Collect representative, demographically diverse, clinically validated mental-health data.
+2. Fine-tune or prompt a triage, screening, or CBT model with safety guardrails.
+3. Build human escalation and crisis pathways; never use AI as the sole diagnostic tool.
+4. Validate against clinician-rated vignettes and standard symptom scales.
+5. Monitor for hallucinations, biased responses, and false reassurance.
+6. Protect privacy and obtain informed consent before deployment.
 
 ## Code pattern
 
@@ -592,7 +699,7 @@ result = classifier(text)
 1. Fine-tune a mental-health triage classifier on a clinical dataset and compare to a general sentiment model.
 2. Run a CBT chatbot pilot and measure symptom change and user safety.
 3. Evaluate a psychosocial-risk LLM assessment against clinician-rated vignettes.
-''',
+        ''',
         "references": [
             "https://link.springer.com/article/10.1007/s10462-026-11649-9",
             "https://www.nature.com/articles/s41746-026-02886-x",

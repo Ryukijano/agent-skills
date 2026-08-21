@@ -2,7 +2,7 @@
 
 ## Description
 
-Automated profiling, anomaly detection, data cleaning, imputation, validation, and continuous data quality monitoring for ML and analytics.
+Detect and repair data quality issues across pipelines, warehouses, and AI inputs.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You need to detect, measure, and improve the accuracy, completeness, consistency
 
 ## Usage
 
-- **Profiling and scoring**: compute quality dimensions across schema, values, and distributions.
-- **Anomaly detection**: use statistical or ML models to flag outliers and drift.
-- **Data cleaning**: auto-correct, impute, or standardize values.
-- **Validation rules**: encode constraints and monitor rule violations.
-- **Drift monitoring**: track data distribution and schema changes over time.
+- Profile tables and auto-generate data quality rules (Great Expectations, Soda).
+- Detect null spikes, distribution drift, and schema changes.
+- Build expectation suites and data contracts in CI.
+- Prioritize remediation with impact/lineage scoring.
+- Track data health SLAs and coverage.
 
 ## Steps
 
-1. Profile the dataset and define quality dimensions and thresholds.
-2. Build or integrate an anomaly detector and validation rule engine.
-3. Clean and impute data while preserving lineage.
-4. Monitor quality metrics in dashboards and alerts.
-5. Retrain models when quality issues or drift are detected.
+1. Profile source and warehouse tables.
+2. Define business rules and data contracts.
+3. Train or configure anomaly detection on historical patterns.
+4. Alert, quarantine, and repair bad records.
+5. Report data health and retrain baselines.
 
 ## Code pattern
 

@@ -2,19 +2,26 @@
 
 ## Description
 
-Habit formation, hobby and style recommendations, personal goal coaching, and holistic life-planning agents for everyday decisions.
+Use AI to build habits, recommend hobbies, coach personal goals, and deliver holistic lifestyle nudges that fit a user's values.
 
 ## When to use
 
 You want to build habits, discover hobbies, coach personal goals, or deliver holistic lifestyle nudges that fit a user's context and values.
 
-## Key concepts
+## Usage
 
-- **Behavior-change models**: habit loops, self-determination theory, and the transtheoretical model.
-- **Habit tracking and streaks**: monitor adherence and predict dropout.
-- **Causal user modeling**: reason how actions affect goals and well-being.
-- **Multi-armed bandits for exploration**: test and personalize nudges.
-- **Explainable lifestyle recommendations**: make suggestions transparent and contestable.
+- Model habit loops and predict dropout from adherence data.
+- Recommend hobbies and activities from a short user profile.
+- Test and personalize nudges with multi-armed bandits.
+- Explain recommendations in terms of user values and goals.
+
+## Steps
+
+1. Elicit user values, goals, and constraints through a short onboarding.
+2. Track habit completion and objective adherence, not just engagement.
+3. Train a personalization or bandit model to select nudges.
+4. Validate with self-report and adherence metrics.
+5. Let users contest, adjust, or stop nudges at any time.
 
 ## Code pattern
 

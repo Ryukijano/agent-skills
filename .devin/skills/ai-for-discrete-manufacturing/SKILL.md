@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for assembly, machining, electronics, and automotive part production: process planning, scheduling, robotic assembly, and work-in-progress tracking.
+Schedules jobs, routes work through machines, and coordinates robotic cells for assembly and machining operations.
 
 ## When to use
 
@@ -20,7 +20,7 @@ You are making distinct parts or assembling them, and need to schedule jobs, all
 
 1. Collect job, machine, route, and WIP data from the MES or ERP.
 2. Engineer features for operations, setups, due dates, and resource availability.
-3. Build an optimization or learning-based scheduler for routing and sequencing.
+3. Build an optimization or learning-based scheduler with OR-Tools CP-SAT or Petri-net DQN.
 4. Validate schedules with a discrete-event simulator against baseline rules.
 5. Deploy to the shop floor and measure makespan, tardiness, and throughput.
 

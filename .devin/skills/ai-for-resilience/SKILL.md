@@ -2,25 +2,27 @@
 
 ## Description
 
-Critical infrastructure resilience, disaster recovery planning, stress testing, and learning-based restoration optimization.
+Use machine learning and network modeling to assess critical infrastructure resilience, optimize recovery, and stress-test systems against cascading failures.
 
 ## When to use
 
 You need to prepare critical systems and communities to absorb shocks,
 recover quickly, and adapt after disruptions.
 
-## Key concepts
+## Usage
 
-- **Resilience metrics**: robustness, redundancy, resourcefulness, and
-  rapidity.
-- **Critical infrastructure interdependencies**: power, water, telecom,
-  and transport network modeling.
-- **Recovery optimization**: resource allocation and restoration
-  sequencing under uncertainty.
-- **Scenario and stress testing**: simulation, digital twins, and
-  counterfactual analysis.
-- **Learning for adaptation**: online learning and reinforcement
-  learning for recovery policies.
+- Model interdependencies and cascading failures across power, water, telecom, and transport.
+- Optimize restoration sequencing and resource allocation under uncertainty.
+- Stress-test systems with simulations, digital twins, and counterfactuals.
+- Incorporate equity metrics so recovery does not leave vulnerable groups behind.
+
+## Steps
+
+1. Build a network model of critical infrastructure and interdependencies.
+2. Simulate component failures and measure robustness, redundancy, and rapidity.
+3. Train an optimizer or reinforcement-learning policy for restoration sequencing.
+4. Validate against historical disruption events and equity constraints.
+5. Stress-test the recovery plan across a range of scenarios.
 
 ## Code pattern
 

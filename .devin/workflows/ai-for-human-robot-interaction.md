@@ -1,6 +1,6 @@
 # /ai-for-human-robot-interaction
 
-Multimodal interfaces, natural language instructions, shared autonomy, social robotics, and embodied AI for human-robot collaboration.
+Use AI for Human-Robot Interaction to understand multimodal commands, plan tasks and share autonomy.
 
 ## Trigger
 

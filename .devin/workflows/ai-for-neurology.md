@@ -1,6 +1,6 @@
 # /ai-for-neurology
 
-Neuroimaging and EEG analysis for stroke, brain tumors, epilepsy, and neurodegeneration, including lesion segmentation and outcome prediction.
+Use AI for Neurology to segment stroke lesions, analyze EEG and predict outcomes.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-border-security
 
-Biometric identity verification, contraband and anomaly detection, and multi-sensor fusion at ports of entry.
+Screen cargo X-ray and CT imagery for anomalies and contraband while fusing biometrics to speed legitimate flows at ports of entry.
 
 ## Trigger
 

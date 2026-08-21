@@ -1,6 +1,6 @@
 # /ai-for-wetlands
 
-Wetland mapping, inundation dynamics, cover-type classification, and hydrological trend monitoring from satellite time series.
+Use AI to map wetland extent, tracking seasonal inundation, classify cover types, or detect hydrological change.
 
 ## Trigger
 

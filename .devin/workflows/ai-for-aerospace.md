@@ -1,6 +1,6 @@
 # /ai-for-aerospace
 
-Machine learning for aircraft and spacecraft design, aerodynamic optimization, structural health monitoring, satellite operations, and certification of safety-critical aerospace systems.
+Use machine learning to design aircraft and spacecraft, optimize aerodynamics, monitor structural health, and certify safety-critical aerospace systems.
 
 ## Trigger
 

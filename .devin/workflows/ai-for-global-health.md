@@ -1,6 +1,6 @@
 # /ai-for-global-health
 
-AI for disease burden, healthcare systems, and health equity in low- and middle-income countries and resource-limited settings.
+Use AI to design or evaluate AI for health challenges in global or resource-limited settings, with a focus on equity, access, and implementation.
 
 ## Trigger
 

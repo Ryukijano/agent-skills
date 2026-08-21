@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for diabetes prediction and glucose forecasting, thyroid nodule risk stratification, adrenal and pituitary disorders, and bone mineral metabolism.
+Use machine learning to forecast glucose, stratify thyroid nodules, characterize adrenal and pituitary disorders, and assess bone metabolism.
 
 ## When to use
 
 You are modeling endocrine disorders such as diabetes, thyroid disease, adrenal/pituitary lesions, osteoporosis, or polycystic ovary syndrome from EHR, imaging, wearable, or lab data.
 
-## Key concepts
+## Usage
 
-- **Diabetes and CGM**: continuous glucose monitor time series, HbA1c, and insulin-dose forecasting.
-- **Thyroid nodule risk**: ultrasound TI-RADS features, cytology, and molecular testing for malignancy.
-- **Adrenal and pituitary**: incidentaloma characterization and hormone excess/deficiency patterns.
-- **Bone and mineral**: fracture risk, bone density trends, and calcium-phosphate metabolism.
-- **Phenotyping**: subtyping endocrine patients with clustering and multimodal fusion.
+- Forecast continuous glucose monitor time series and insulin-dose response.
+- Risk-stratify thyroid nodules from ultrasound TI-RADS features and cytology.
+- Characterize adrenal and pituitary incidentalomas and hormone excess or deficiency.
+- Predict fracture risk and bone density trends from clinical and imaging data.
+
+## Steps
+
+1. Collect CGM, EHR, lab, imaging, and wearable data for the target endocrine condition.
+2. Define clinically relevant prediction windows and thresholds (e.g., hypoglycemia).
+3. Train time-series or image models and validate temporally across devices and age groups.
+4. Integrate predictions into insulin dosing, referral, or screening workflows.
+5. Calibrate around decision thresholds and evaluate subgroup performance.
+6. Prospectively validate in endocrine clinics and update as standards change.
 
 ## Code pattern
 

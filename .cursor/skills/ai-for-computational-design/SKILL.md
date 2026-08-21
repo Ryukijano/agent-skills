@@ -2,18 +2,27 @@
 
 ## Description
 
-Differentiable simulation, topology optimization, CAD-aware generative models, and solver-in-the-loop co-design for architecture, products, and structures.
+Use differentiable simulation, topology optimization, and CAD-aware generative models to co-design products and structures.
 
 ## When to use
 
 You are designing buildings, products, mechanical parts, or architectural structures and need to integrate physical simulation, constraints, and AI-driven exploration into the design loop.
 
-## Key concepts
+## Usage
 
-- **Differentiable design**: combine neural networks with differentiable physics and geometry kernels.
-- **Topology and shape optimization**: SIMP, level-set, evolutionary, and gradient-based methods.
-- **Solver-aided generative models**: use geometric/physics solvers to ensure procedural CAD and structural feasibility.
-- **Design-space exploration**: multi-fidelity surrogates and optimal-transport interpolation of shapes.
+- Combine neural networks with differentiable physics and geometry kernels.
+- Run topology and shape optimization with SIMP, level-set, evolutionary, or gradient methods.
+- Ensure procedural CAD and structural feasibility with solver-aided generative models.
+- Explore multi-fidelity design spaces and interpolate shapes.
+
+## Steps
+
+1. Translate the design brief into geometry parameters, physics constraints, and objectives.
+2. Build or wrap a differentiable surrogate or high-fidelity solver for the design.
+3. Optimize topology or shape parameters with gradient or evolutionary search.
+4. Add fabrication and assembly constraints early in the loop.
+5. Validate optimized designs with high-fidelity FE/CFD and physical prototypes.
+6. Generate production-ready CAD and run DRC or kernel checks.
 
 ## Code pattern
 

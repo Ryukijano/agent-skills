@@ -1,6 +1,6 @@
 # /ai-for-paleontology
 
-Automated fossil identification, morphometric analysis, 3D segmentation, and taxonomic classification from images and point clouds.
+Segment fossil CT volumes with minimal annotated data to extract fragile 3D anatomy and accelerate taxonomic study.
 
 ## Trigger
 

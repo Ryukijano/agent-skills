@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for eruption forecasting, volcanic seismicity classification, and hazard assessment.
+Forecast eruption probability by fusing seismic, gas, and satellite data to issue early warnings at volcanoes like Whakaari.
 
 ## When to use
 
 You are analyzing volcano seismic and infrasound data to detect unrest or forecast eruptions.
 
-## Key concepts
+## Usage
 
-- **Volcano-seismic event classes**: VT, LP, VLP, tremor, explosion quakes.
-- **Unsupervised anomaly detection**: identify precursory signals in continuous data.
-- **Eruption forecasting**: time-to-eruption models from multi-sensor time series.
-- **Multi-sensor fusion**: seismic, deformation, gas, thermal, and satellite data.
+- Classify volcano-seismic event types (VT, LP, VLP, tremor, explosion quakes) from continuous waveforms.
+- Detect precursory anomalies and patterns in multi-sensor monitoring data before eruptions.
+- Build time-to-eruption or eruption-probability models from seismic, deformation, gas, and thermal time series.
+- Fuse seismic, infrasound, gas, thermal, and satellite observations into a unified hazard dashboard.
+
+## Steps
+
+1. Collect continuous seismic, infrasound, gas, deformation, and thermal observations for the target volcano.
+2. Label or cluster volcanic events (VT, LP, VLP, tremor, explosion quakes) and train a classifier on waveform features.
+3. Run unsupervised anomaly detection on long-duration monitoring streams to flag deviations from background behavior.
+4. Train a time-to-eruption or probabilistic forecasting model using multi-sensor precursors and past eruption records.
+5. Generate eruption-probability alerts and validate lead time against historical eruptions.
+6. Combine forecasts with scenario-based hazard maps and observatory workflows for decision support.
 
 ## Code pattern
 

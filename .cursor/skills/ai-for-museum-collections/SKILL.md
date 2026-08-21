@@ -2,18 +2,27 @@
 
 ## Description
 
-Computer vision, natural language processing, and metadata enrichment for cataloging, searching, and interpreting museum and archive collections.
+Enrich collection records by auto-tagging objects, linking entities to knowledge graphs, and generating searchable descriptions.
 
 ## When to use
 
 You need to catalog, tag, search, or interpret large museum, archive, or special-collections datasets combining images, text, and structured metadata.
 
-## Key concepts
+## Usage
 
-- **Automated cataloging**: object detection, image classification, and VLM-generated descriptions for collection records.
-- **Semantic enrichment**: entity linking, subject tagging, and knowledge-graph construction from collection metadata.
-- **Visual search and retrieval**: similarity search, CLIP-style embeddings, and faceted browsing.
-- **Provenance and rights**: copyright, licensing, donor restrictions, and ethical use of AI-generated metadata.
+- Transcribe, classify, and link catalog cards and accession records.
+- Detect forgeries, damage, and conservation needs.
+- Recommend storage, handling, and display conditions.
+- Enrich provenance and rights metadata.
+
+## Steps
+
+1. Transcribe, classify, and link catalog cards and accession records.
+2. Detect forgeries, damage, and conservation needs.
+3. Recommend storage, handling, and display conditions.
+4. Enrich provenance and rights metadata.
+5. Validate against museum standards and curators.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 
@@ -47,5 +56,5 @@ probs = outputs.logits_per_image.softmax(dim=1)
 - https://ai.harvardartmuseums.org/
 - https://dl.acm.org/doi/10.1145/3446621
 - https://www.nature.com/articles/s41599-026-08367-6
-- https://research.edgehill.ac.uk/en/projects/spot-semantic-processing-for-object-tagging-ai-enriched-metadata/
+- https://research.edgehill.ac.uk/en/publications/ai-in-the-curators-loop-designing-transparent-and-trustworthy-met/
 - https://enc.hal.science/hal-05217762

@@ -2,18 +2,29 @@
 
 ## Description
 
-Price elasticity, dynamic and personalized pricing, revenue management, promotion optimization, and causal demand forecasting for pricing.
+Use AI for Pricing to estimate elasticity, set dynamic prices, manage revenue and optimize promotions.
 
 ## When to use
 
 You need to set or adjust prices to maximize revenue, margin, or market share while accounting for demand response and competitive effects.
 
-## Key concepts
 
-- **Price elasticity**: estimate how quantity demanded changes with price, often via log-log regression or causal ML.
-- **Dynamic pricing**: adjust prices in real time based on demand, inventory, and competitor signals.
-- **Revenue management**: capacity control, overbooking, and fare-class optimization.
-- **Causal pricing**: off-policy learning and DML to forecast demand under new price regimes.
+## Usage
+
+
+- **Price elasticity**: Estimate how quantity demanded changes with price, often via log-log regression or causal ML.
+- **Dynamic pricing**: Adjust prices in real time based on demand, inventory, and competitor signals.
+- **Revenue management**: Capacity control, overbooking, and fare-class optimization.
+- **Causal pricing**: Off-policy learning and DML to forecast demand under new price regimes.
+
+## Steps
+
+1. Collect and prepare transaction, price, competitor and inventory data.
+2. Set or adjust prices to maximize revenue.
+3. Margin.
+4. Market share while accounting for demand response and competitive effects.
+5. Validate by estimating a price elasticity and validate on an experimental price change.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -31,11 +42,13 @@ model = sm.OLS(df["log_q"], X).fit()
 print("Elasticity:", model.params["log_p"])
 ```
 
+
 ## Tuning notes
 
 - Address price endogeneity with instrumental variables, randomized experiments, or DML.
 - Consider business rules: price fences, fairness, and customer perception.
 - Test new pricing policies with controlled experiments or counterfactual evaluation before rollout.
+
 
 ## Verification
 

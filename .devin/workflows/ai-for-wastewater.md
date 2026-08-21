@@ -1,6 +1,6 @@
 # /ai-for-wastewater
 
-Machine learning for process monitoring, anomaly detection, influent forecasting, and control in wastewater treatment plants.
+Forecasts influent loads, detects process upsets, and optimizes aeration and chemical dosing in wastewater treatment plants.
 
 ## Trigger
 

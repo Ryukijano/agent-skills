@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for poverty mapping, consumption estimation, proxy means testing, and targeted social protection in low-resource settings.
+Use machine learning to map poverty, estimate consumption, target social transfers, and improve social protection in low-resource settings.
 
 ## When to use
 
 You need to estimate economic well-being, target cash transfers, or map poverty at high spatial resolution where traditional survey data are sparse or outdated.
 
-## Key concepts
+## Usage
 
-- **Poverty mapping from space**: combine daytime satellite imagery, nighttime lights, and built-environment features with household survey data.
-- **Proxy means testing (PMT)**: learn a low-cost scoring function from observable characteristics to identify eligible beneficiaries.
-- **Mobile data for targeting**: use call-detail records and airtime purchases as proxies for consumption and income shocks.
-- **Equity and fairness**: monitor exclusion and inclusion errors across gender, ethnicity, and geography.
+- Combine satellite imagery, nighttime lights, and built-environment features with household surveys.
+- Build proxy means testing scoring to identify eligible beneficiaries.
+- Use mobile data such as call-detail records and airtime as proxies for income shocks.
+- Monitor exclusion and inclusion errors across gender, ethnicity, and geography.
+
+## Steps
+
+1. Assemble household surveys, geospatial layers, and mobile or administrative data.
+2. Train consumption or wealth prediction models with spatial or temporal cross-validation.
+3. Use predictions to produce high-resolution poverty maps and rank households for targeting.
+4. Measure targeting quality by exclusion/inclusion errors and coverage of the poorest quintile.
+5. Audit for disparities and protect sensitive mobile/geospatial data.
+6. Integrate with government or NGO targeting systems and update as conditions change.
 
 ## Code pattern
 

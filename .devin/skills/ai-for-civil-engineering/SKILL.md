@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for structural health monitoring, geotechnical prediction, transportation systems, water resources, and resilient infrastructure.
+Build predictive models for civil infrastructure, natural hazards, and water resources.
 
 ## When to use
 
@@ -10,18 +10,18 @@ You are designing, monitoring, or maintaining civil infrastructure such as bridg
 
 ## Usage
 
-- **Structural health monitoring (SHM)**: vibration, strain, and vision-based damage detection.
-- **Geotechnical prediction**: soil liquefaction, slope stability, and settlement models.
-- **Transportation and traffic**: flow forecasting, incident detection, and route optimization.
-- **Water resources**: flood, water quality, and demand forecasting.
-- **BIM and digital twins**: as-built vs. design comparison and lifecycle simulation.
+- Monitor bridges and dams with vibration, strain, and drone-vision sensors.
+- Predict soil liquefaction and slope stability from geotechnical logs.
+- Forecast traffic flow and incidents using loop-detector and GPS data.
+- Model flood risk and water quality with SWAT and HEC-RAS.
+- Create digital twins of assets in Autodesk Revit/Navisworks.
 
 ## Steps
 
-1. Collect structural, geotechnical, traffic, or water-resource data and define the prediction target.
-2. Engineer domain features (vibration spectra, image patches, sensor time-series, weather inputs).
-3. Train and validate a model with time-aware or site-aware splits.
-4. Integrate the model with BIM, GIS, or digital-twin dashboards.
+1. Collect structural, geotechnical, traffic, or water data and define the prediction target.
+2. Engineer features from vibration spectra, image patches, or sensor time series.
+3. Train and validate models with time-aware or site-aware splits.
+4. Integrate predictions with BIM, GIS, or digital-twin dashboards.
 5. Monitor and retrain as conditions or codes change.
 
 ## Code pattern

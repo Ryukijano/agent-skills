@@ -1,6 +1,6 @@
 # /ai-for-oncology
 
-AI for cancer detection, subtyping, treatment response, prognosis, radiomics, pathology, and clinical trial matching.
+Use AI for Oncology to detect tumors, predict biomarkers and response and match patients to trials.
 
 ## Trigger
 

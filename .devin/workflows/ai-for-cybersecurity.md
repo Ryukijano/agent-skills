@@ -1,6 +1,6 @@
 # /ai-for-cybersecurity
 
-Network intrusion detection, malware and phishing classification, vulnerability discovery, adversarial ML, and SOC automation.
+Use machine learning to detect intrusions, classify malware and phishing, discover vulnerabilities, and automate SOC workflows while hardening against adversarial attacks.
 
 ## Trigger
 

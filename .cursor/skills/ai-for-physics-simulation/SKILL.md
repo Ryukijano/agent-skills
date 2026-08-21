@@ -2,18 +2,28 @@
 
 ## Description
 
-Neural operators, surrogate models, and learned emulators for partial differential equations and physical systems.
+Use neural operators and physics-informed surrogates to learn fast emulators of partial differential equations and physical systems.
 
 ## When to use
 
 You want to speed up expensive physics simulations or learn emulators from data.
 
-## Key concepts
+## Usage
 
-- **Neural operators**: map between infinite-dimensional function spaces (FNO, DeepONet).
-- **Surrogate models**: ML approximations of costly solvers.
-- **Physics-informed neural networks (PINNs)**: embed PDE constraints in loss.
-- **Digital twins**: online-learned models coupled to sensors.
+- Train Fourier Neural Operators (FNO), DeepONet, or GNN surrogates to approximate PDE solutions.
+- Embed physics constraints (PDEs, boundary conditions, conservation laws) into neural network losses (PINNs).
+- Build real-time digital twins for CFD, structural mechanics, heat transfer, or additive manufacturing.
+- Calibrate and update surrogates with sensor data for online monitoring and control.
+- Accelerate engineering design loops with interactive, AI-powered simulation and visualization.
+
+## Steps
+
+1. Define the physics problem, governing PDEs, input distributions, and output quantities of interest.
+2. Generate training data with a high-fidelity solver or experimental measurements across parameter ranges.
+3. Build a surrogate model (FNO, DeepONet, GNN, or PINN) and train it on the generated data.
+4. Validate the surrogate against the high-fidelity solver on out-of-distribution parameters and geometries.
+5. Deploy the model inside a digital twin or design loop with real-time sensor feedback and uncertainty quantification.
+6. Iterate: refine the surrogate with online data and retrain as the physical system or design space evolves.
 
 ## Code pattern
 

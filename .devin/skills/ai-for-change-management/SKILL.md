@@ -2,18 +2,27 @@
 
 ## Description
 
-Stakeholder sentiment monitoring, adoption analytics, training personalization, and AI-assisted transformation communications.
+Use AI to leading organizational change, tracking adoption, personalize enablement, or tailoring communications to stakeholder segments.
 
 ## When to use
 
 You are leading organizational change, tracking adoption, personalizing enablement, or tailoring communications to stakeholder segments.
 
-## Key concepts
+## Usage
 
-- **Stakeholder sensing**: classify sentiment, concerns, and readiness from surveys and messages.
-- **ADKAR and behavioral stages**: map AI interventions to awareness, desire, knowledge, ability, reinforcement.
-- **Personalized learning paths**: recommend training and nudges by role and gap.
-- **Change communication optimization**: generate targeted messaging and FAQs.
+- Sense stakeholder sentiment and readiness.
+- Map interventions to ADKAR or Kotter stages.
+- Personalize training and nudges by role.
+- Generate targeted communications and FAQs.
+
+## Steps
+
+1. Sense stakeholder sentiment and readiness.
+2. Map interventions to ADKAR or Kotter stages.
+3. Personalize training and nudges by role.
+4. Generate targeted communications and FAQs.
+5. Measure adoption and engagement lift.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -43,5 +52,5 @@ clf = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, y)
 
 - https://arxiv.org/abs/2510.19997
 - https://arxiv.org/abs/2411.08693
-- https://aaltodoc.aalto.fi/items/f95a2878-deed-4814-bf3c-e326a4a1dc8d
+- https://doi.org/10.1177/00218863231168974
 - https://www.inderscience.com/info/inarticle.php?artid=132074

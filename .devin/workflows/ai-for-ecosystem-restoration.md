@@ -1,6 +1,6 @@
 # /ai-for-ecosystem-restoration
 
-Monitoring rewilding, forest recovery, wetland restoration, and habitat reconstruction using remote sensing and biodiversity indicators.
+Use AI to measure restoration success, track rewilding progress, or prioritize interventions for degraded ecosystems.
 
 ## Trigger
 

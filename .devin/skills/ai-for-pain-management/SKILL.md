@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for chronic pain phenotyping, opioid and analgesic response prediction, procedural guidance, and patient self-management and monitoring.
+Use machine learning to phenotype chronic pain, predict treatment and opioid response, guide procedures, and support self-management.
 
 ## When to use
 
 You are phenotyping chronic pain, predicting treatment response, assessing opioid misuse risk, guiding interventional procedures, or building self-management and digital-therapeutic tools.
 
-## Key concepts
+## Usage
 
-- **Pain phenotyping**: clustering by nociceptive, neuropathic, inflammatory, and centralized mechanisms.
-- **Treatment response prediction**: response to physical therapy, CBT, medications, and neuromodulation.
-- **Opioid risk assessment**: misuse, overdose, and dependence prediction from EHR and psychosocial data.
-- **Procedural guidance**: ultrasound or fluoroscopy image segmentation for nerve blocks and spinal procedures.
-- **Self-management**: digital diaries, cognitive behavioral interventions, and biofeedback.
+- Phenotype chronic pain by nociceptive, neuropathic, inflammatory, and centralized mechanisms.
+- Predict response to physical therapy, CBT, medications, and neuromodulation.
+- Assess opioid misuse, overdose, and dependence risk from EHR and psychosocial data.
+- Guide nerve blocks and spinal procedures with ultrasound or fluoroscopy segmentation.
+- Support digital diaries, CBT, and biofeedback for self-management.
+
+## Steps
+
+1. Collect validated pain scores, EHR, medication, psychosocial, and imaging data.
+2. Define outcomes (phenotype, treatment response, opioid risk) and windows.
+3. Train clustering, prediction, or segmentation models with class imbalance and missing data.
+4. Validate against PROMIS/BPI and clinician assessments.
+5. Integrate into multidisciplinary pain program and procedural planning.
+6. Audit for fairness and avoid stigmatizing patients by pain condition or opioids.
 
 ## Code pattern
 

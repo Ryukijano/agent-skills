@@ -2,19 +2,30 @@
 
 ## Description
 
-Computational social science for sociology: text and image classification, survey augmentation, social network analysis, and modeling social inequalities.
+Use AI for Sociology to classify texts, analyze networks and model social inequalities.
 
 ## When to use
 
 You are studying social behavior, institutions, or inequalities and want to use large-scale digital data, text, images, and networks to test sociological theories.
 
-## Key concepts
 
-- **Text-as-data**: classify, scale, and topic-model documents to measure social constructs.
-- **Social network analysis**: identify communities, influencers, and diffusion patterns.
-- **Survey augmentation and imputation**: use ML to handle item nonresponse and improve estimation.
-- **Heterogeneity and segmentation**: discover subpopulations with causal forests or clustering.
-- **Computational approaches to inequality**: audit algorithms, analyze mobility, and detect disparities.
+## Usage
+
+
+- **Text-as-data**: Classify, scale, and topic-model documents to measure social constructs.
+- **Social network analysis**: Identify communities, influencers, and diffusion patterns.
+- **Survey augmentation and imputation**: Handle item nonresponse and improve estimation.
+- **Heterogeneity and segmentation**: Discover subpopulations with causal forests or clustering.
+- **Computational approaches to inequality**: Audit algorithms, analyze mobility, and detect disparities.
+
+## Steps
+
+1. Collect and prepare survey, text, image and network data.
+2. Studye social behavior.
+3. Institutions.
+4. Inequalities and want to use large-scale digital data.
+5. Validate by replicating a published text-as-data finding on a new sample.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -32,12 +43,14 @@ clf.fit(vec.fit_transform(X_train), y_train)
 print(clf.score(vec.transform(X_test), y_test))
 ```
 
+
 ## Tuning notes
 
 - Validate text-based measures against representative surveys when possible.
 - Address sampling bias from digital platforms and administrative records.
 - Ensure constructs like class, race, and gender are measured with care and theory.
 - Use causal inference rather than purely predictive models to support sociological claims.
+
 
 ## Verification
 

@@ -1,6 +1,6 @@
 # /ai-for-meta-analysis
 
-Machine learning and LLMs for automating literature search, screening, data extraction, effect-size estimation, and heterogeneity assessment in meta-analyses.
+Automate systematic reviews and synthesize effect sizes across clinical and epidemiological studies.
 
 ## Trigger
 

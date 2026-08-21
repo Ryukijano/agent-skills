@@ -1,6 +1,6 @@
 # /ai-for-automotive
 
-AI for automotive design, manufacturing, battery management, ADAS, quality control, and supply-chain optimization across the vehicle lifecycle.
+Inspect automotive spot welds and brake cylinders with vision models to catch micro-defects on the assembly line at 25 frames per second or faster.
 
 ## Trigger
 

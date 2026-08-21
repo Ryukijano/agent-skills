@@ -1,6 +1,6 @@
 # /ai-for-waste-management
 
-Waste classification, automated sorting, route optimization, recycling quality, and lifecycle assessment with ML and robotics.
+Use AI to design waste-sorting systems, optimize collection routes, or improve recycling quality and material recovery.
 
 ## Trigger
 

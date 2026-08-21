@@ -2,18 +2,27 @@
 
 ## Description
 
-ML-driven qubit control, calibration, error decoding, and quantum processor design for superconducting, trapped-ion, and neutral-atom systems.
+Use machine learning to calibrate qubits, decode errors, optimize control pulses, and design quantum processor components.
 
 ## When to use
 
 You are designing, calibrating, or controlling qubits and quantum processors and need to automate gate design, real-time feedback, or error decoding.
 
-## Key concepts
+## Usage
 
-- **Qubit calibration and control**: ML optimizes pulse shapes, gate sets, and real-time feedback using measurement data.
-- **Quantum error decoding**: neural decoders (e.g., transformer-based AlphaQubit) map syndromes to corrections.
-- **Reinforcement learning for control**: model-free DRL designs error-robust gates and stabilizes qubits without a detailed Hamiltonian.
-- **Surrogate modeling**: fast ML surrogates replace expensive quantum device simulations for design-space exploration.
+- Calibrate qubits and optimize pulse shapes, gate sets, and real-time feedback from measurement data.
+- Decode quantum errors with neural decoders such as transformer-based syndrome-to-correction models.
+- Apply reinforcement learning to design error-robust gates without a detailed Hamiltonian.
+- Build fast surrogate models to replace expensive quantum device simulations.
+
+## Steps
+
+1. Collect qubit characterization, gate, and noise data from the target quantum platform.
+2. Train an ML model for calibration, control, or error decoding.
+3. Use the model to optimize pulses, gate parameters, or decoder thresholds.
+4. Validate the optimized gates or decoder on realistic noise models and real device data.
+5. Integrate the model into the control stack for real-time feedback.
+6. Retrain as device drift and noise characteristics change.
 
 ## Code pattern
 

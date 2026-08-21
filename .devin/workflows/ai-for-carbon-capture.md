@@ -1,6 +1,6 @@
 # /ai-for-carbon-capture
 
-Machine learning for adsorbent and solvent screening, process optimization, and carbon capture materials design.
+Use machine learning to screen CO2 adsorbents and solvents, build molecular-simulation surrogates, and optimize carbon-capture processes and materials.
 
 ## Trigger
 

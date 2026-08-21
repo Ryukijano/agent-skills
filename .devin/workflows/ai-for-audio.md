@@ -1,6 +1,6 @@
 # /ai-for-audio
 
-Audio enhancement, source separation, music generation, audio event detection, and speech enhancement.
+Use AI for Audio to enhance, separate, detect events and generate music.
 
 ## Trigger
 

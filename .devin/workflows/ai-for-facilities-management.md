@@ -1,6 +1,6 @@
 # /ai-for-facilities-management
 
-Predictive maintenance, fault detection, digital twins, and AI-enabled asset lifecycle management for built facilities.
+Predicts equipment failures, manages asset lifecycles, and optimizes energy and maintenance in built facilities.
 
 ## Trigger
 

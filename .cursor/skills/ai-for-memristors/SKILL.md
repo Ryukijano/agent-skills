@@ -2,18 +2,27 @@
 
 ## Description
 
-Crossbar array modeling, compute-in-memory mapping, device variability learning, and memristor-based AI accelerator co-design.
+Use machine learning to model memristor devices, simulate crossbar arrays, and co-design compute-in-memory accelerators.
 
 ## When to use
 
 You are building or simulating memristor crossbars, compute-in-memory tiles, or analog AI accelerators based on resistive switching.
 
-## Key concepts
+## Usage
 
-- **Memristor device models**: learning compact models (e.g., ODE-based, physics-informed) from I-V and pulse data.
-- **Crossbar MVM**: mapping weights to conductance states and simulating analog matrix-vector multiplication with nonidealities.
-- **Variability and yield**: ML predicts device-to-device and cycle-to-cycle variation effects on inference accuracy.
-- **Hardware-software co-design**: mixed-precision memristor + SRAM CIM partitioning for accuracy and energy.
+- Learn compact device models from I-V and pulse data.
+- Simulate analog matrix-vector multiplication on crossbars with device nonidealities.
+- Predict device-to-device and cycle-to-cycle variation effects on inference accuracy.
+- Co-design mixed-precision memristor and SRAM compute-in-memory tiles.
+
+## Steps
+
+1. Collect memristor I-V, pulse, and endurance data from the target device technology.
+2. Fit a neural or physics-informed surrogate to the device behavior.
+3. Build a crossbar simulator that models conductance, line resistance, and noise.
+4. Run an MLP or kernel layer on the crossbar and measure accuracy under variation.
+5. Co-design with digital tiles and quantization to meet accuracy and energy targets.
+6. Verify the design against SPICE or measured data and compare energy-delay to a digital baseline.
 
 ## Code pattern
 

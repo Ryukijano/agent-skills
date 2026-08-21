@@ -1,6 +1,6 @@
 # /ai-for-ai-governance
 
-Risk management, accountability, lifecycle governance, standards, and multi-stakeholder oversight for trustworthy and responsible AI organizations.
+Use frameworks, risk registers, and lifecycle oversight to manage AI systems responsibly.
 
 ## Trigger
 

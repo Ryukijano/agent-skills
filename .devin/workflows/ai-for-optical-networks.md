@@ -1,6 +1,6 @@
 # /ai-for-optical-networks
 
-ML for optical performance monitoring, QoT estimation, traffic prediction, nonlinearity compensation, and optical layer provisioning.
+Estimate QoT, assign spectrum, and route traffic in elastic optical networks.
 
 ## Trigger
 

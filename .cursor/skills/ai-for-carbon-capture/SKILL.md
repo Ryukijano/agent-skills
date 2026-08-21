@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for adsorbent and solvent screening, process optimization, and carbon capture materials design.
+Use machine learning to screen CO2 adsorbents and solvents, build molecular-simulation surrogates, and optimize carbon-capture processes and materials.
 
 ## When to use
 
 You are screening materials or optimizing processes for CO2 capture and storage.
 
-## Key concepts
+## Usage
 
-- **Material screening**: predict CO2 affinity, selectivity, and capacity.
-- **Molecular simulation surrogates**: replace DFT / GCMC with ML models.
-- **Process optimization**: optimize operating conditions with reinforcement learning or Bayesian optimization.
-- **Lifecycle assessment**: account for energy, emissions, and cost.
+- Screen solid adsorbents and solvents for CO2 affinity, selectivity, working capacity, and stability.
+- Replace expensive DFT or GCMC calculations with ML surrogates for adsorption and diffusion properties.
+- Optimize capture-process operating conditions (temperature, pressure, cycling) with Bayesian or active-learning methods.
+- Couple materials screening with process simulation and lifecycle assessment for techno-economic evaluation.
+
+## Steps
+
+1. Define capture process requirements (flue gas composition, purity, energy penalty) and collect adsorption/solvent data.
+2. Compute or retrieve material descriptors and train ML models to predict CO2 affinity, selectivity, and working capacity.
+3. Build ML surrogates for DFT/GCMC energies or adsorption isotherms to accelerate high-throughput screening.
+4. Run Bayesian optimization or active-learning loops to select top candidates and refine process conditions.
+5. Evaluate top candidates with process simulation and lifecycle/techno-economic analysis.
+6. Validate predictions against experimental isotherms and pilot-plant data, then feed results back to retrain the models.
 
 ## Code pattern
 

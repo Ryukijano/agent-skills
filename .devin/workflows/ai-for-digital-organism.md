@@ -1,6 +1,6 @@
 # /ai-for-digital-organism
 
-Computational models, simulations, and multiscale foundation models of living systems as AI-driven digital organisms.
+Build multiscale AI models that simulate living systems from molecules to organisms to guide biology and medicine in silico.
 
 ## Trigger
 

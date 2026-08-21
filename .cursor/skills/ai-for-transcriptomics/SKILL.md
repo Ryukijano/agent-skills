@@ -2,19 +2,28 @@
 
 ## Description
 
-Bulk and single-cell RNA-seq analysis, normalization, clustering, differential expression, splicing, and foundation models for gene expression.
+Use machine learning and foundation models to quantify, normalize and interpret bulk and single-cell RNA-seq data for cell typing, differential expression and gene regulation.
 
 ## When to use
 
 You need to quantify, normalize, cluster, or model gene expression from bulk RNA-seq or single-cell RNA-seq data for cell typing, differential expression, or gene regulation studies.
 
-## Key concepts
+## Usage
 
-- **Bulk vs single-cell RNA-seq**: population average versus cell-resolution expression.
-- **Count normalization**: library size correction, log1p, and variance stabilization.
-- **Dimensionality reduction**: PCA, UMAP, and latent embeddings for visualization and analysis.
-- **Differential expression**: edgeR, DESeq2, or model-based tests across conditions or cell types.
-- **Foundation models**: scBERT, scGPT, and scFoundation for cell representation and transfer learning.
+- **Preprocess counts**: filter, normalize, and stabilize variance for bulk and single-cell RNA-seq.
+- **Reduce dimensions**: run PCA, UMAP, or latent embeddings for visualization and analysis.
+- **Detect differential expression**: identify genes across conditions or cell types with appropriate tests.
+- **Apply foundation models**: use scBERT, scGPT, and scFoundation for representation and transfer learning.
+- **Reconstruct trajectories**: infer pseudotime, RNA velocity, and lineage dynamics.
+
+## Steps
+
+1. Load raw counts and metadata, filter low-quality cells/genes, and normalize for library size.
+2. Select highly variable genes and compute dimensionality reduction and embeddings.
+3. Cluster cells or samples and annotate them with known marker genes or reference atlases.
+4. Test for differential expression between conditions and validate with a second method.
+5. Build or apply a foundation model for transfer learning, imputation, or perturbation prediction.
+6. Compare results to reference atlases and orthogonal assays to assess biological consistency.
 
 ## Code pattern
 

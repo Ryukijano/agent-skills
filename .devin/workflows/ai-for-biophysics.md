@@ -1,6 +1,6 @@
 # /ai-for-biophysics
 
-Machine learning for molecular dynamics, free-energy landscapes, protein-ligand kinetics, single-molecule analysis, and membrane systems.
+Use machine learning to learn molecular dynamics, map free-energy landscapes, and extract kinetics from single-molecule measurements.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-public-policy
 
-Causal and predictive policy evaluation, program impact assessment, regulatory text analysis, and equitable resource allocation for government and public administration.
+Use AI for Public Policy to evaluate programs, predict service demand and audit equitable allocation.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-ML surrogates for electronics cooling, data-center thermal control, heat-sink and package thermal co-design, and CFD emulation.
+Use machine learning to predict electronics cooling, control data-center thermal systems, and co-design heat sinks and packages.
 
 ## When to use
 
 You are designing heat sinks, cold plates, 3D/2.5D packages, or data-center cooling and need fast thermal predictions for optimization.
 
-## Key concepts
+## Usage
 
-- **Surrogate thermal modeling**: neural networks and Fourier neural operators replace expensive CFD simulations.
-- **Data-center cooling control**: reinforcement learning and MPC optimize fan speed, set points, and workload placement.
-- **Package and heat-sink design**: ML predicts junction temperature, hot spots, and thermal resistance from geometry.
-- **Physics-informed neural networks (PINNs)**: embed heat-equation constraints for reliable extrapolation.
+- Replace CFD simulations with neural networks and Fourier neural operator surrogates.
+- Control data-center cooling with reinforcement learning and MPC.
+- Predict junction temperature and hot spots from package and heat-sink geometry.
+- Embed heat-equation constraints with physics-informed neural networks.
+
+## Steps
+
+1. Define the thermal scenario (package, heat sink, or data center) and collect CFD/FEM data.
+2. Train a surrogate thermal model with high-fidelity training and validation splits.
+3. Use the surrogate in an optimization loop for geometry or set points.
+4. Enforce boundary conditions and conservation laws with PINNs or hybrid loss terms.
+5. Validate predictions against CFD/FEM under unseen operating conditions.
+6. Co-optimize with mechanical stress and reliability constraints.
 
 ## Code pattern
 

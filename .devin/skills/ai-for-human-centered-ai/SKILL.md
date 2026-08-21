@@ -2,19 +2,28 @@
 
 ## Description
 
-Human-AI interaction, explainability, trust, feedback loops, participatory design, and human-in-the-loop ML to keep people at the center of AI systems.
+Use human-AI interaction, explainability, and participatory design to keep people at the center of AI systems.
 
 ## When to use
 
 You are building an AI system that people must understand, trust, and effectively collaborate with, and you want to center end-user needs, capabilities, and values in the design.
 
-## Key concepts
+## Usage
 
-- **Human-AI interaction (HAII)**: designing prompts, interfaces, and interaction modes for collaboration.
-- **Explainability and transparency**: feature attribution, counterfactuals, and model cards.
-- **Human-in-the-loop ML**: active learning, feedback, and interactive model refinement.
-- **Trust and overreliance**: calibrated trust, appropriate reliance, and cognitive load.
-- **Participatory and value-sensitive design**: co-design with stakeholders and impacted communities.
+- Design prompts and interfaces for effective human-AI collaboration.
+- Provide feature attribution, counterfactuals, and model cards for explainability.
+- Collect human feedback with active learning and interactive model refinement.
+- Calibrate trust and avoid overreliance through appropriate reliance interfaces.
+- Co-design with stakeholders and impacted communities.
+
+## Steps
+
+1. Identify user needs, mental models, and values for the target task or decision.
+2. Design the interaction (prompts, displays, explanations) and collect user feedback.
+3. Implement explainability methods matched to the user's level of expertise.
+4. Run human-AI experiments and measure task success, trust, and overreliance.
+5. Iterate on the interface and model based on user feedback.
+6. Deploy with monitoring for fairness, accessibility, and sustained human control.
 
 ## Code pattern
 

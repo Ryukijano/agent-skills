@@ -1,6 +1,6 @@
 # /ai-for-quantum-computing
 
-Machine learning for quantum state tomography, variational quantum algorithms, quantum control, and error mitigation.
+Use machine learning to design, optimize, and error-mitigate variational quantum algorithms and quantum control pulses.
 
 ## Trigger
 

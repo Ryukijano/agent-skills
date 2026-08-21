@@ -2,19 +2,28 @@
 
 ## Description
 
-Personalized learning, knowledge tracing, automated assessment, and intelligent tutoring systems.
+Use machine learning to personalize learning paths, trace student knowledge, automate assessment, and power intelligent tutoring systems.
 
 ## When to use
 
 You are building adaptive learning, student modeling, or automated grading systems.
 
-## Key concepts
+## Usage
 
-- **Knowledge tracing**: predict what skills a student has mastered (BKT, DKT).
-- **Personalized recommendation**: next-item or next-exercise suggestion.
-- **Automated essay / code scoring**: LLM or learned rubric scoring.
-- **Learning analytics**: engagement, dropout prediction, performance dashboards.
-- **Fairness**: ensure models do not disadvantage subgroups.
+- Trace student mastery of skills and predict next-exercise difficulty with BKT, DKT, and LLM-guided RL.
+- Recommend personalized learning content, schedules, and interventions based on performance and engagement.
+- Automate grading of essays, code, and quizzes with learned or LLM-based rubrics.
+- Analyze learning analytics (engagement, dropout risk, completion) to support instructors.
+- Evaluate fairness and pedagogical impact across student subgroups and educational settings.
+
+## Steps
+
+1. Collect and structure learning data (assessments, interactions, submissions, metadata) while protecting privacy.
+2. Train a knowledge-tracing or student-embedding model to estimate current mastery and predict future performance.
+3. Build an adaptive recommendation engine that selects the next problem, resource, or study plan.
+4. Implement automated assessment (essay, code, or quiz scoring) aligned with human rubrics.
+5. Surface dashboards and alerts for instructors on engagement, at-risk students, and learning gaps.
+6. Run controlled evaluations (e.g., RCT or A/B tests) to measure learning gains, fairness, and safety.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-coral-reefs
 
-Coral reef monitoring, bleaching detection, benthic classification, and reef-health assessment from underwater and drone imagery.
+Classify coral health and bleaching from underwater and drone imagery to quantify reef loss and guide conservation actions.
 
 ## Trigger
 

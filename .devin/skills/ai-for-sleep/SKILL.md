@@ -2,20 +2,29 @@
 
 ## Description
 
-Machine learning for sleep staging, sleep disorder detection, wearable PSG analysis, and sleep health monitoring.
+Automate sleep staging and sleep-disordered-breathing detection from PSG, wearables, and home sleep tests with deep learning.
 
 ## When to use
 
 You are analyzing polysomnography (PSG), wearable sleep recordings, or building a tool to detect sleep disorders and stages.
 
-## Key concepts
+## Usage
 
-- **Sleep stages**: W, N1, N2, N3, REM; scored from EEG/EOG/EMG.
-- **PSG**: gold-standard overnight multi-channel recording.
-- **Wearable sleep monitoring**: actigraphy, PPG, single-channel EEG headbands.
-- **Sleep disorders**: obstructive sleep apnea, insomnia, narcolepsy, restless legs.
-- **Sleep foundation models**: large-scale pre-training on PSG/EEG data.
-- **Event detection**: apneas, hypopneas, arousals, limb movements.
+- **Sleep staging**: score 30-second epochs into W, N1, N2, N3, and REM from PSG, wearables, or EEG headbands.
+- **Sleep-disordered-breathing detection**: detect and classify apneas, hypopneas, and arousals.
+- **AHI estimation**: estimate apnea-hypopnea index and severity from oximetry, PPG, or other sensors.
+- **Foundation models**: pre-train on large PSG/EEG corpora for cross-cohort and cross-device transfer.
+- **Event-level analysis**: identify arousals, limb movements, and respiratory events with precise timing.
+- **Clinical validation**: compare wearable or automated scoring to AASM expert-annotated PSG.
+
+## Steps
+
+1. Collect and annotate PSG or wearable recordings following AASM scoring rules.
+2. Preprocess signals (filter, resample, align modalities) and create 30-second epochs with context windows.
+3. Train a temporal/sequence model (CNN, ResNet+TCN+LSTM, Mamba, or transformer) for staging or event detection.
+4. Evaluate against expert annotators using epoch/stage agreement (Cohen's kappa, AUROC, AUPRC).
+5. Validate on external cohorts and compare wearable-only models to gold-standard PSG.
+6. Deploy for home sleep testing or clinical decision support with nightly risk reports.
 
 ## Code pattern
 

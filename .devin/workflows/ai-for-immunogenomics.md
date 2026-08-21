@@ -1,6 +1,6 @@
 # /ai-for-immunogenomics
 
-MHC and peptide binding prediction, TCR/BCR repertoire analysis, epitope and neoantigen prediction, and immunoinformatics.
+Use machine learning to predict MHC-peptide binding, analyze TCR and BCR repertoires, identify epitopes and neoantigens and support vaccine and immunotherapy design.
 
 ## Trigger
 

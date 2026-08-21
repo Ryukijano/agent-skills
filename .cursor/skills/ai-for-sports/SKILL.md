@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for athlete tracking, match analytics, performance prediction, injury risk, and tactical decision support.
+Use AI for Sports to track athletes, predict outcomes, assess tactics and manage injury risk.
 
 ## When to use
 
 You are analyzing team or individual sports and want to track players, predict outcomes, assess tactics, forecast injuries, or support coaching decisions.
 
-## Key concepts
 
-- **Player and ball tracking**: computer vision and event data for pose and movement.
-- **Expected goals and advanced metrics**: xG, xA, possession value, and efficiency ratings.
-- **Wearable and biomechanical time series**: load, acceleration, heart rate, and sleep.
-- **Match outcome and tactical prediction**: classify results and formations from match context.
-- **Injury risk and load management**: combine training load, recovery, and history.
+## Usage
+
+
+- **Player and ball tracking**: Computer vision and event data for pose and movement.
+- **Expected goals and advanced metrics**: XG, xA, possession value, and efficiency ratings.
+- **Wearable and biomechanical time series**: Load, acceleration, heart rate, and sleep.
+- **Match outcome and tactical prediction**: Classify results and formations from match context.
+- **Injury risk and load management**: Combine training load, recovery, and history.
+
+## Steps
+
+1. Collect and prepare tracking, wearable and match-event data.
+2. Analyze team or individual sports and want to track players.
+3. Predict outcomes.
+4. Assess tactics.
+5. Validate by predicting match outcomes on a heldout season and report log-loss.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -34,12 +45,14 @@ model = XGBClassifier(
 ).fit(X_train, y_train)
 ```
 
+
 ## Tuning notes
 
 - Preserve chronological match ordering to avoid data leakage from future results.
 - Feature engineering is critical: recent form, fatigue, travel, and head-to-head records.
 - Tracking data requires camera calibration and consistent player identity.
 - Interpretability helps coaches trust and act on tactical recommendations.
+
 
 ## Verification
 

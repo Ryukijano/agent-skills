@@ -2,18 +2,27 @@
 
 ## Description
 
-Learning-augmented algorithms, learned data structures, and ML-guided design for search, routing, scheduling, and data-intensive pipelines.
+Use machine learning to augment classic algorithms with learned predictions, indexes, and data structures.
 
 ## When to use
 
 You want to improve classic algorithms with machine-learned predictions, design learned indexes or data structures, or tune algorithmic decisions on a distribution of instances.
 
-## Key concepts
+## Usage
 
-- **Learning-augmented algorithms**: algorithms that take ML predictions as advice and retain worst-case guarantees when predictions are poor.
-- **Learned indexes and data structures**: replace or augment B-trees, Bloom filters, and sketches with neural models.
-- **Algorithm configuration and selection**: choose or configure solvers based on instance features.
-- **Competitive and approximation ratios**: prove bounds that degrade gracefully with prediction error.
+- Build learning-augmented algorithms that take ML predictions as advice while retaining worst-case guarantees.
+- Replace or augment B-trees, Bloom filters, and sketches with learned indexes and data structures.
+- Select and configure solvers, sorters, or search algorithms based on instance features.
+- Prove competitive or approximation ratios that degrade gracefully with prediction error.
+
+## Steps
+
+1. Identify the algorithmic decision (caching, indexing, search, or routing) to enhance and collect instance features.
+2. Train a lightweight predictor on historical instances to provide advice for that decision.
+3. Design the algorithm to incorporate predictions while bounding worst-case cost when predictions are poor.
+4. Benchmark the learning-augmented method against the classical worst-case baseline on held-out distributions.
+5. Validate on adversarial or pathological inputs and tune the reliance on predictions.
+6. Deploy as a drop-in replacement or wrapper and monitor performance on production traffic.
 
 ## Code pattern
 

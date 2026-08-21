@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for cathode, anode, electrolyte, and separator discovery, as well as battery lifetime and charging protocol optimization.
+Use battery informatics, ML potentials, and closed-loop optimization to discover electrode/electrolyte materials and optimize lifetime and fast-charging protocols.
 
 ## When to use
 
 You are developing or optimizing materials and operating conditions for Li-ion, solid-state, or beyond-Li-ion batteries.
 
-## Key concepts
+## Usage
 
-- **Battery informatics**: data-driven discovery of electrode and electrolyte materials using structural, compositional, and electrochemical descriptors.
-- **Machine learning potentials**: fast atomistic simulation of ion diffusion, interfacial reactions, and degradation.
-- **Lifetime and degradation prediction**: forecasting capacity fade and resistance rise from cycling data.
-- **Fast-charging optimization**: closed-loop, ML-guided protocols that balance cycle life and charge time.
-- **High-throughput screening**: virtual screening of thousands of candidate materials for ionic conductivity, voltage, and stability.
+- Discover cathode, anode, electrolyte, and separator materials with high-throughput screening.
+- Simulate ion diffusion and interfacial reactions with machine-learning potentials.
+- Forecast capacity fade and resistance rise from cycling data.
+- Optimize fast-charging protocols that balance charge time and cycle life.
+
+## Steps
+
+1. Curate structural, compositional, and electrochemical data for battery materials and cycling protocols.
+2. Screen candidates for ionic conductivity, voltage, stability, and capacity using ML models.
+3. Train ML potentials to run fast atomistic simulations of diffusion, interfacial reactions, and degradation.
+4. Build a lifetime-degradation model from cycle data and validate on independent cells.
+5. Use closed-loop or Bayesian optimization to design fast-charging protocols that minimize degradation.
+6. Test top materials and protocols in real cells and update the models with new cycling data.
 
 ## Code pattern
 

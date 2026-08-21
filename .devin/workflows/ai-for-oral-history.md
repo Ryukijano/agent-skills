@@ -1,6 +1,6 @@
 # /ai-for-oral-history
 
-Speech recognition, diarization, natural language processing, and generative AI for transcribing, indexing, and exploring oral history archives.
+Use AI to transcribe, index, search, or analyze recorded oral history interviews and testimonies.
 
 ## Trigger
 

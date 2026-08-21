@@ -1,6 +1,6 @@
 # /ai-for-evidence-synthesis
 
-AI and LLMs for systematic review automation, risk-of-bias assessment, evidence mapping, and trustworthy synthesis of research findings.
+Synthesize heterogeneous evidence, assess risk of bias, and generate decision-ready summaries.
 
 ## Trigger
 

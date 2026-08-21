@@ -2,18 +2,29 @@
 
 ## Description
 
-Transaction fraud, anti-money laundering, anomaly detection, graph-based fraud networks, and concept-drift monitoring.
+Use AI for Fraud Detection to detect transaction fraud, money laundering and graph-based fraud rings.
 
 ## When to use
 
 You need to detect fraudulent payments, accounts, claims, or transactions in real time while minimizing false positives.
 
-## Key concepts
 
-- **Supervised fraud classification**: tree ensembles and neural nets on labeled fraud cases.
-- **Anomaly detection**: isolation forests, autoencoders, and one-class methods for unknown fraud patterns.
+## Usage
+
+
+- **Supervised fraud classification**: Tree ensembles and neural nets on labeled fraud cases.
+- **Anomaly detection**: Isolation forests, autoencoders, and one-class methods for unknown fraud patterns.
 - **Graph-based detection**: GNNs to exploit account, device, and merchant networks.
-- **Concept drift and adversaries**: fraud patterns evolve; monitor model performance and adversarial behavior.
+- **Concept drift and adversaries**: Fraud patterns evolve; monitor model performance and adversarial behavior.
+
+## Steps
+
+1. Collect and prepare transaction, account, device and merchant data.
+2. Detect fraudulent payments.
+3. Accounts.
+4. Claims.
+5. Validate by training a fraud classifier and report precision-recall at the top-decile.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -27,11 +38,13 @@ clf.fit(X)
 df["anomaly_score"] = clf.decision_function(X)
 ```
 
+
 ## Tuning notes
 
 - Fraud data is extremely imbalanced; use stratified sampling, class weights, or cost-sensitive loss.
 - Use time-based splits and chronological validation to avoid leakage.
 - Combine graph structure with behavioral features for network-based fraud.
+
 
 ## Verification
 

@@ -2,19 +2,26 @@
 
 ## Description
 
-Time management, task prioritization, calendar scheduling, meeting optimization, and personal workflow automation.
+Use AI to prioritize tasks, resolve calendar conflicts, block focus time, and automate repetitive personal workflows.
 
 ## When to use
 
 You want to prioritize tasks, resolve calendar conflicts, block focus time, or automate repetitive personal workflows.
 
-## Key concepts
+## Usage
 
-- **Task prioritization**: Eisenhower matrix, urgency/importance scoring, or learned user preferences.
-- **Calendar conflict resolution**: decide which meetings to attend, reschedule, or decline based on preferences.
-- **Time blocking**: allocate fixed windows for deep work, admin, and rest.
-- **Intelligent scheduling**: propose times that respect energy patterns and travel buffers.
-- **Agentic workflows**: combine LLMs with calendar, email, and task tools via tool use.
+- Prioritize tasks with urgency/importance scoring or learned preferences.
+- Resolve calendar conflicts and propose reschedules or declines.
+- Block deep-work windows and protect focus time.
+- Automate email triage, travel booking, and recurring task workflows.
+
+## Steps
+
+1. Sync calendar, task, and email data with minimal, scoped permissions.
+2. Build a preference model from user edits and past decisions.
+3. Generate a daily or weekly plan and compare it to the user's manual plan.
+4. Propose conflict resolutions and schedule focus blocks.
+5. Test on synthetic data first, then let the user approve every change.
 
 ## Code pattern
 

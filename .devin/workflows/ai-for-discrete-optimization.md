@@ -1,6 +1,6 @@
 # /ai-for-discrete-optimization
 
-Learning-augmented branch-and-bound, primal heuristics, GNNs for combinatorial optimization, and data-driven algorithm configuration.
+Use machine learning to speed up combinatorial optimization through branching, graph neural networks, and data-driven configuration.
 
 ## Trigger
 

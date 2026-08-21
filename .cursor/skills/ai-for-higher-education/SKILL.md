@@ -2,18 +2,27 @@
 
 ## Description
 
-Admissions analytics, retention and completion modeling, student success advising, enrollment planning, and institutional research.
+Use AI to improve access, success, retention, or operational decisions in colleges and universities.
 
 ## When to use
 
 You are improving access, success, retention, or operational decisions in colleges and universities.
 
-## Key concepts
+## Usage
 
-- **Predictive retention and completion models**: identify students likely to drop out or stop out.
-- **Admissions analytics**: forecast yield, optimize enrollment, and support holistic review.
-- **Student success advising**: match students with courses, supports, and career pathways.
-- **Equity and transparency**: ensure AI advice does not reinforce historical disadvantage.
+- Integrate admissions, retention, and advising data.
+- Build retention and completion risk models.
+- Equitably triage outreach and advising.
+- Monitor intervention impact.
+
+## Steps
+
+1. Integrate admissions, retention, and advising data.
+2. Build retention and completion risk models.
+3. Equitably triage outreach and advising.
+4. Monitor intervention impact.
+5. Audit for fairness across demographic subgroups and programs.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

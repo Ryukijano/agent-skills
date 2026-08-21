@@ -1,6 +1,6 @@
 # /ai-for-fitness
 
-Personalized workout plans, exercise form analysis, pose estimation, wearables, and adaptive recovery for individual fitness.
+Use machine learning to build adaptive workout plans, count reps, check exercise form, and prevent injury from wearable and video feedback.
 
 ## Trigger
 

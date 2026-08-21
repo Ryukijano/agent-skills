@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning for factory manipulation, assembly, pick-and-place, force control, sim-to-real, and vision-language-action models in industrial settings.
+Use machine learning to automate precision assembly, bin picking, cable routing, and force-guided manipulation in manufacturing cells.
 
 ## When to use
 
 You are automating precision assembly, cable routing, bin picking, or contact-rich tasks in a manufacturing cell.
 
-## Key concepts
+## Usage
 
-- **Industrial dexterity and manipulation**: end-to-end imitation and diffusion policies, force/torque and tactile feedback.
-- **Sim-to-real transfer**: domain randomization, teacher-student distillation, and synthetic datasets.
-- **Vision-language-action (VLA) models**: grounding natural-language instructions in robot policies.
-- **Multimodal datasets and benchmarks**: PRISM, Industrial Dexterity Benchmark, and factory-relevant skills.
+- Learn end-to-end manipulation and diffusion policies with force/torque feedback.
+- Transfer skills from simulation to real with domain randomization.
+- Ground natural-language assembly instructions in vision-language-action models.
+- Curate multimodal teleoperation datasets for factory-relevant skills.
+
+## Steps
+
+1. Set up a robot cell with cameras, force sensors, and teleoperation recording.
+2. Collect small, high-quality demonstrations for the target assembly skill.
+3. Train an imitation, diffusion, or VLA policy with appropriate augmentations.
+4. Validate success rate on real hardware, not just simulation.
+5. Iterate with force feedback and failure analysis for contact-rich tasks.
 
 ## Code pattern
 

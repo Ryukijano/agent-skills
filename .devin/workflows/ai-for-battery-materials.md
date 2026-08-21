@@ -1,6 +1,6 @@
 # /ai-for-battery-materials
 
-Machine learning for cathode, anode, electrolyte, and separator discovery, as well as battery lifetime and charging protocol optimization.
+Use battery informatics, ML potentials, and closed-loop optimization to discover electrode/electrolyte materials and optimize lifetime and fast-charging protocols.
 
 ## Trigger
 

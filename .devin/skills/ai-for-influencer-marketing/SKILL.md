@@ -2,19 +2,26 @@
 
 ## Description
 
-Creator discovery, campaign matching, content co-creation, performance prediction, and authenticity measurement for influencer marketing.
+Use machine learning to discover and vet creators, match them to campaigns, predict performance, and measure ROI and authenticity.
 
 ## When to use
 
 You are finding and vetting creators, matching them to campaigns, predicting performance, measuring ROI, or managing brand-creator collaborations.
 
-## Key concepts
+## Usage
 
-- **Creator discovery and vetting**: audience demographics, engagement, brand safety, and fake-follower detection.
-- **Campaign matching**: brief-to-creator fit, content style, and values alignment.
-- **Content co-creation**: AI-assisted briefs, scripts, thumbnails, and captions.
-- **Performance prediction and attribution**: reach, engagement, conversions, and lift.
-- **Authenticity and disclosure**: sponsorship transparency, FTC guidelines, and trust.
+- Score creators by audience fit, engagement quality, and brand safety.
+- Match briefs to creators based on content style and values alignment.
+- Co-create briefs, scripts, thumbnails, and captions with AI assistance.
+- Predict reach, engagement, and conversion lift for campaigns.
+
+## Steps
+
+1. Define campaign goals, audience, budget, and brand-safety criteria.
+2. Build a creator database with demographics, engagement, and content analysis.
+3. Rank creators with a fit score and compare to human picks.
+4. Predict engagement for past campaigns and report MAE vs. actuals.
+5. Audit delivered content for disclosure, brand safety, and FTC compliance.
 
 ## Code pattern
 

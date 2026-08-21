@@ -2,20 +2,29 @@
 
 ## Description
 
-AI for rare disease diagnosis, target prioritization, drug repurposing, natural history modeling, and diagnostic-odyssey support.
+Integrate phenotypes, genotypes, and medical literature to shorten the diagnostic odyssey and prioritize rare-disease candidates.
 
 ## When to use
 
 You are diagnosing an undiagnosed patient, prioritizing drug targets, or building models for rare and ultra-rare diseases with limited data.
 
-## Key concepts
+## Usage
 
-- **Diagnostic odyssey**: long, multi-specialty path to a rare disease diagnosis.
-- **Phenotype ontologies**: Human Phenotype Ontology (HPO) terms.
-- **Small-sample ML**: transfer learning, federated learning, synthetic data.
-- **Genotype-phenotype integration**: exome/variant + HPO matching.
-- **Target prioritization**: genetic, functional, and literature evidence.
-- **Drug repurposing for rare diseases**: identifying existing drugs for new rare indications.
+- **Phenotype-driven diagnosis**: match HPO terms, clinical notes, and images to rare-disease knowledge bases.
+- **Genotype-phenotype integration**: combine exome/variant data with phenotype matching for gene/disease ranking.
+- **Small-sample learning**: apply transfer learning, federated learning, or synthetic data to limited rare-disease cohorts.
+- **Literature synthesis**: use ML or LLM tools to surface disease-gene evidence from PubMed and case reports.
+- **Target and therapy prioritization**: rank candidate genes, pathways, or repurposed drugs for rare diseases.
+- **Explainable differential diagnosis**: produce transparent, clinician-reviewable reasoning for each candidate.
+
+## Steps
+
+1. Assemble patient phenotypes (HPO terms, free text, imaging) and genomic variants (VCF/Exomiser).
+2. Embed and match phenotypes to disease and gene knowledge bases plus primary literature.
+3. Rank candidate diagnoses or genes using ML or LLM-based reasoning.
+4. Integrate genotype evidence (pathogenicity, inheritance, allele frequency) with phenotype concordance.
+5. Generate an explainable differential diagnosis with literature links for expert adjudication.
+6. Validate against external case series, reanalysis, or functional studies.
 
 ## Code pattern
 

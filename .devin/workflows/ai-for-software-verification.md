@@ -1,6 +1,6 @@
 # /ai-for-software-verification
 
-ML for test generation, coverage closure, bug localization, static analysis, and verifying code produced by LLMs.
+Use machine learning to generate tests, localize bugs, and verify code produced by humans or LLMs.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-innovation-management
 
-Idea generation, R&D portfolio prioritization, trend forecasting, and AI-enabled new product development.
+Use AI to manage an innovation pipeline, prioritize R&D projects, forecast technology trends, or accelerating concept-to-launch cycles.
 
 ## Trigger
 

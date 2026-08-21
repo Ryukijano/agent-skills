@@ -1,6 +1,6 @@
 # /ai-for-digital-humanities
 
-Machine learning, NLP, and network analysis for historical texts, archives, languages, and multimodal humanities collections.
+Use AI to work with digitized historical texts, multilingual archives, ancient languages, or multimodal humanities corpora that require scalable computational analysis.
 
 ## Trigger
 

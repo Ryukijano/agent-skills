@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for fracture detection and classification, osteoarthritis grading, joint replacement outcomes, spine analysis, and sports injury risk.
+Use machine learning to detect fractures, grade osteoarthritis, predict joint replacement outcomes, and plan orthopedic surgery.
 
 ## When to use
 
 You are interpreting musculoskeletal imaging, predicting fracture risk or arthroplasty outcomes, grading osteoarthritis, or planning orthopedic surgery and rehabilitation.
 
-## Key concepts
+## Usage
 
-- **Fracture detection and classification**: deep learning on radiographs for trauma, osteoporosis, and pediatric fractures.
-- **Osteoarthritis grading**: Kellgren-Lawrence, joint-space narrowing, and cartilage segmentation from MRI.
-- **Arthroplasty outcomes**: implant survival, revision risk, readmission, and patient-reported outcomes.
-- **Sports and spine**: ACL, meniscus, rotator cuff, scoliosis, and disc degeneration.
-- **Patient-specific planning**: bone age, templating, and 3D-printed instrumentation.
+- Detect and classify fractures on radiographs and CT.
+- Grade osteoarthritis with Kellgren-Lawrence, joint-space narrowing, and cartilage segmentation.
+- Predict implant survival, revision risk, readmission, and patient-reported outcomes.
+- Analyze sports and spine injuries (ACL, meniscus, rotator cuff, scoliosis).
+- Support patient-specific templating, bone age, and 3D-printed instrumentation.
+
+## Steps
+
+1. Gather musculoskeletal imaging, EHR, and patient-reported outcome data.
+2. Standardize image acquisition and annotate fracture, joint, or cartilage findings.
+3. Train detection, segmentation, or regression models with augmentation and class imbalance.
+4. Validate across hospitals, age groups, trauma centers, and implant vendors.
+5. Integrate predictions into emergency triage, surgical planning, or follow-up.
+6. Monitor for metal artifacts and positioning variability.
 
 ## Code pattern
 

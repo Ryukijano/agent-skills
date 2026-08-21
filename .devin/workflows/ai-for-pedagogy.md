@@ -1,6 +1,6 @@
 # /ai-for-pedagogy
 
-Teacher-AI collaboration, lesson planning, instructional design, feedback generation, and evidence-based teaching practice augmentation.
+Use AI to support teachers in planning, deliver, and improve instruction while keeping educators at the center of the learning process.
 
 ## Trigger
 

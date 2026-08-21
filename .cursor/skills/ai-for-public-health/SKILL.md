@@ -2,19 +2,27 @@
 
 ## Description
 
-Disease surveillance, outbreak prediction, resource allocation, geospatial health modeling, and health-equity analytics.
+Use ML and geospatial models for disease surveillance, outbreak forecasting, resource allocation, and health-equity analytics.
 
 ## When to use
 
 You are working to predict disease burden, allocate resources, or understand health inequities at the population or health-system level.
 
-## Key concepts
+## Usage
 
-- **Syndromic and digital surveillance**: combine traditional epidemiology with search, social, mobile, and environmental signals.
-- **Outbreak forecasting**: nowcasting and short-term forecasting of infectious diseases.
-- **Geospatial and Earth-AI modeling**: link environmental, climate, and mobility data to health outcomes.
-- **Resource allocation**: optimize clinic, vaccine, or workforce distribution under constraints.
-- **Health equity and bias**: audit models for demographic and geographic disparities.
+- Combine traditional epidemiology with search, social, mobile, and environmental signals for syndromic surveillance.
+- Nowcast and short-term forecast infectious disease burden and outbreaks.
+- Link environmental, climate, and mobility data to health outcomes through geospatial ML.
+- Optimize clinic, vaccine, and workforce distribution and audit for demographic and geographic equity.
+
+## Steps
+
+1. Aggregate case data, syndromic signals, search/social trends, mobility, weather, and environmental covariates.
+2. Build a nowcasting or short-term forecasting model and validate probabilistic calibration on held-out seasons.
+3. Train geospatial models that link climate, land use, and mobility to disease risk and health outcomes.
+4. Optimize resource allocation (clinics, vaccines, workforce) under capacity and equity constraints.
+5. Audit predictions for bias across age, gender, race, and geography and report equity metrics.
+6. Deploy a decision-support dashboard for public-health agencies and update as new data streams arrive.
 
 ## Code pattern
 

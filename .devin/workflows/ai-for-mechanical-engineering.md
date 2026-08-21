@@ -1,6 +1,6 @@
 # /ai-for-mechanical-engineering
 
-AI for mechanical design, predictive maintenance, digital twins, dynamic systems, and manufacturing process optimization.
+Apply AI to design, maintenance, and manufacturing optimization.
 
 ## Trigger
 

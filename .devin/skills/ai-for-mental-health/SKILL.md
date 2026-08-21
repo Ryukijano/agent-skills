@@ -2,19 +2,26 @@
 
 ## Description
 
-CBT-based chatbots, mood tracking, crisis triage, digital therapeutics, and scalable psychological support for consumers.
+Use AI to deliver low-intensity CBT support, track mood, triage crisis risk, and keep human clinicians in the loop for escalation.
 
 ## When to use
 
 You are building or using a consumer mental-health tool that offers CBT techniques, mood tracking, crisis triage, or low-intensity support.
 
-## Key concepts
+## Usage
 
-- **CBT and DBT chatbots**: deliver structured therapeutic techniques in conversation.
-- **Mood and EMA tracking**: collect self-reported symptoms (PHQ-9, GAD-7) and contextual data.
-- **Crisis detection and safety planning**: flag high-risk language and route to human help.
-- **Therapeutic alliance**: build rapport, personalization, and engagement over time.
-- **Human-in-the-loop escalation**: ensure clinicians are available when severity rises.
+- Deliver CBT and DBT techniques through structured conversational prompts.
+- Track mood and EMA scores with validated instruments such as PHQ-9 and GAD-7.
+- Detect crisis language and route to human help and emergency resources.
+- Build rapport and personalize engagement over time.
+
+## Steps
+
+1. Onboard the user with clear disclaimers and 24/7 crisis hotlines.
+2. Collect mood, sleep, and activity data with privacy controls.
+3. Deploy CBT worksheets or chatbot interactions tied to evidence-based techniques.
+4. Monitor for deterioration or crisis indicators and trigger human escalation.
+5. Validate outcomes with clinical measures and continuously audit safety.
 
 ## Code pattern
 

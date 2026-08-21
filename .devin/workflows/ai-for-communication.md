@@ -1,6 +1,6 @@
 # /ai-for-communication
 
-Computational communication science: content analysis, information diffusion, agenda setting, and audience effects across digital platforms.
+Use AI for Communication to analyze content, model diffusion and study audience effects.
 
 ## Trigger
 

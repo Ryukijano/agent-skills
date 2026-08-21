@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for medical devices, wearable biosensors, biomechanics, neural engineering, tissue engineering, and clinical diagnostics.
+Apply AI to medical imaging, biosignal monitoring, and medical-device design.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are developing wearable or implantable devices, analyzing biosignals, design
 
 ## Usage
 
-- **Biosignal analysis**: ECG, EEG, EMG, PPG, and motion-signal processing.
-- **Wearable and point-of-care devices**: continuous monitoring and edge AI.
-- **Medical imaging and diagnostics**: classification, segmentation, and anomaly detection.
-- **Biomechanics and neural engineering**: movement analysis, neural interfaces, and prosthetics.
-- **Tissue and biomaterials**: generative design and property prediction.
+- Segment lesions or organs in MRI/CT with MONAI or nnU-Net.
+- Classify ECG/EEG arrhythmias and sleep stages.
+- Predict glucose or sepsis risk from wearable streams.
+- Optimize prosthetics and implants via generative design.
+- Monitor ICU devices and detect alarm fatigue patterns.
 
 ## Steps
 
-1. Collect biosignal, imaging, wearable, or biomechanical data with ethical approvals.
-2. Preprocess signals to remove artifacts and standardize patient cohorts.
-3. Train a diagnostic, monitoring, or device-control model.
-4. Validate with clinical reference standards and across demographic groups.
-5. Deploy under regulatory pathways with continuous safety monitoring.
+1. Collect imaging, waveform, or wearable data with ethics approval.
+2. Preprocess and annotate using clinical tools (3D Slicer, XNAT).
+3. Train CNN or time-series classifiers with cross-site validation.
+4. Deploy in PACS, edge devices, or clinical decision support.
+5. Validate against clinician labels and track performance.
 
 ## Code pattern
 

@@ -2,17 +2,17 @@ SKILLS = [
     {
         "name": "ai-for-renewable-energy",
         "title": "AI for Renewable Energy",
-        "description": "Machine learning for solar, wind, and other renewable energy forecasting, resource assessment, yield optimization, and predictive O&M.",
+        "description": "Forecasts solar and wind output, optimizes site selection, and improves O&M across renewable portfolios with satellite and SCADA data.",
         "devin_body": r'''## When to use
 
 You are developing, operating, or investing in solar, wind, or other renewable assets and need data-driven forecasts, site assessment, or performance optimization.
 
 ## Usage
 
-- **Resource assessment and site screening**: estimate long-term energy yield and geospatial suitability for new projects.
-- **Generation forecasting**: predict solar and wind output from weather and satellite data for grid and market operations.
-- **Yield optimization**: detect underperformance, curtailment, and inverter or turbine degradation.
-- **Predictive O&M**: schedule maintenance and identify faults before they lead to major losses.
+- **Solar and wind forecasting**: predict hourly to day-ahead generation using weather, satellite, and SCADA data.
+- **Resource assessment and site screening**: estimate long-term yield and geospatial suitability with tools such as NREL's reV and SAM.
+- **Yield optimization**: detect underperformance, curtailment, and turbine or inverter degradation.
+- **Predictive O&M**: schedule maintenance and identify faults before they cause major losses.
 
 ## Steps
 
@@ -52,23 +52,23 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
             "https://link.springer.com/article/10.1186/s43067-025-00239-4",
             "https://doi.org/10.3390/en13081979",
             "https://github.com/NREL/sup3r",
-            "https://www.nrel.gov/research/software/rev-the-renewable-energy-potential-model-open-source",
+            "https://github.com/NREL/reV",
         ],
     },
     {
         "name": "ai-for-energy-storage",
         "title": "AI for Energy Storage",
-        "description": "Machine learning for battery state estimation, degradation modeling, storage dispatch, and energy storage asset optimization.",
+        "description": "Estimates battery state-of-health, predicts remaining useful life, and optimizes charge schedules for stationary and mobile storage.",
         "devin_body": r'''## When to use
 
 You need to estimate battery state, predict degradation, optimize storage dispatch, or improve safety in stationary or mobile energy storage systems.
 
 ## Usage
 
-- **State estimation**: predict state-of-charge (SOC) and state-of-health (SOH) from voltage, current, and temperature.
-- **Degradation and RUL forecasting**: estimate capacity fade and remaining useful life under different operating conditions.
-- **Storage dispatch**: optimize charge/discharge for arbitrage, peak shaving, or grid services.
-- **Thermal and safety monitoring**: detect abnormal temperature or impedance trends.
+- **State-of-charge and health estimation**: predict SOC and SOH from voltage, current, and temperature.
+- **Remaining useful life forecasting**: estimate capacity fade and end-of-life under operating conditions.
+- **Storage dispatch optimization**: optimize charge/discharge for arbitrage, peak shaving, and grid services.
+- **Thermal and safety monitoring**: detect abnormal temperature and impedance trends.
 
 ## Steps
 
@@ -107,20 +107,20 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
             "https://www.mdpi.com/1996-1073/14/2/306",
             "https://www.mdpi.com/1996-1073/16/10/4243",
             "https://doi.org/10.1109/tte.2025.3525742",
-            "https://www.nrel.gov/transportation/battery-lifespan.html",
+            "https://doi.org/10.2172/1867877",
         ],
     },
     {
         "name": "ai-for-smart-grid",
         "title": "AI for Smart Grid",
-        "description": "AI and machine learning for load and renewable forecasting, grid state estimation, optimal power flow, and smart-grid control.",
+        "description": "Forecasts load and renewable generation, estimates grid state, and accelerates optimal power flow for reliable power system operations.",
         "devin_body": r'''## When to use
 
 You are operating or designing a smart power grid and need accurate forecasts, fast state estimation, or scalable grid optimization.
 
 ## Usage
 
-- **Load and renewable forecasting**: short- to medium-term predictions for operations and markets.
+- **Load and renewable forecasting**: produce short- to medium-term predictions for operations and markets.
 - **State estimation and bad-data detection**: infer grid states from SCADA and AMI measurements.
 - **Optimal power flow surrogates**: accelerate AC OPF with learned approximations.
 - **Anomaly and event detection**: identify disturbances, faults, and cyber-physical anomalies.
@@ -167,7 +167,7 @@ print(net.res_bus.vm_pu.min(), net.res_bus.vm_pu.max())
     {
         "name": "ai-for-distributed-energy",
         "title": "AI for Distributed Energy",
-        "description": "Machine learning and multi-agent methods for DER forecasting, microgrid optimization, peer-to-peer trading, and prosumer coordination.",
+        "description": "Coordinates distributed solar, batteries, and electric vehicles behind the meter through forecasting and microgrid scheduling.",
         "devin_body": r'''## When to use
 
 You are coordinating distributed energy resources such as rooftop solar, batteries, EVs, and flexible loads behind the meter.
@@ -223,7 +223,7 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-demand-response",
         "title": "AI for Demand Response",
-        "description": "Machine learning for load flexibility estimation, demand response program design, virtual power plant dispatch, and dynamic pricing.",
+        "description": "Estimates load flexibility, dispatches virtual power plants, and designs dynamic pricing to unlock distributed demand-side resources.",
         "devin_body": r'''## When to use
 
 You need to unlock flexible load, operate a virtual power plant, design demand-response programs, or optimize time-varying tariffs.
@@ -279,14 +279,14 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-energy-trading",
         "title": "AI for Energy Trading",
-        "description": "Machine learning for electricity price forecasting, algorithmic trading, arbitrage, and bidding in day-ahead, intraday, and balancing markets.",
+        "description": "Forecasts electricity prices and optimizes bidding strategies across day-ahead, intraday, and balancing markets.",
         "devin_body": r'''## When to use
 
 You need to forecast electricity prices, bid into wholesale or balancing markets, or trade energy across time and markets.
 
 ## Usage
 
-- **Price forecasting**: day-ahead, intraday, and balancing market price prediction.
+- **Price forecasting**: predict day-ahead, intraday, and balancing market prices.
 - **Statistical arbitrage and position management**: exploit price differences across markets.
 - **Asset bidding strategies**: optimize bids for batteries, renewables, and VPPs.
 - **Risk and imbalance management**: manage exposure and penalty costs.
@@ -335,7 +335,7 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-water-utilities",
         "title": "AI for Water Utilities",
-        "description": "Machine learning for water demand forecasting, leak detection, quality monitoring, pump scheduling, and smart water distribution.",
+        "description": "Forecasts demand, detects leaks, and optimizes pump schedules across water distribution networks using AMI and SCADA data.",
         "devin_body": r'''## When to use
 
 You manage a water distribution network and want to reduce losses, improve demand forecasting, monitor quality, or optimize pumping energy.
@@ -390,7 +390,7 @@ df["anomaly_score"] = clf.decision_function(X)
     {
         "name": "ai-for-wastewater",
         "title": "AI for Wastewater",
-        "description": "Machine learning for process monitoring, anomaly detection, influent forecasting, and control in wastewater treatment plants.",
+        "description": "Forecasts influent loads, detects process upsets, and optimizes aeration and chemical dosing in wastewater treatment plants.",
         "devin_body": r'''## When to use
 
 You operate or design a wastewater treatment plant and need to forecast influent loads, detect process anomalies, or optimize energy and chemical use.
@@ -445,7 +445,7 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
     {
         "name": "ai-for-gas-utilities",
         "title": "AI for Gas Utilities",
-        "description": "Machine learning for natural gas demand forecasting, pipeline leak detection, compressor optimization, and asset integrity.",
+        "description": "Forecasts gas demand, detects pipeline leaks, and optimizes pressure and compression across distribution networks.",
         "devin_body": r'''## When to use
 
 You operate a natural gas distribution or transmission network and need to forecast demand, detect leaks, optimize compression, or manage asset integrity.
@@ -494,14 +494,14 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
         "references": [
             "https://doi.org/10.3390/en19041101",
             "https://www.mdpi.com/1996-1073/17/21/5517",
-            "https://www.osti.gov/biblio/1996417",
+            "https://doi.org/10.2172/1996417",
             "https://doi.org/10.3389/fenvs.2025.1569621",
         ],
     },
     {
         "name": "ai-for-electric-vehicles",
         "title": "AI for Electric Vehicles",
-        "description": "Machine learning for battery management, range and energy consumption prediction, predictive maintenance, and EV powertrain optimization.",
+        "description": "Predicts remaining range and energy consumption while estimating battery state-of-health from onboard CAN and telemetry data.",
         "devin_body": r'''## When to use
 
 You are developing or operating electric vehicles and need to predict range, estimate battery state, diagnose faults, or optimize energy use.
@@ -557,7 +557,7 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-charging-infrastructure",
         "title": "AI for Charging Infrastructure",
-        "description": "Machine learning for EV charging demand forecasting, station scheduling, load balancing, and grid-integrated charging control.",
+        "description": "Forecasts station demand, balances charging loads, and schedules EVs to reduce grid impact and energy costs.",
         "devin_body": r'''## When to use
 
 You are planning, operating, or controlling EV charging infrastructure and need to forecast demand, balance load, or integrate with the grid.
@@ -613,7 +613,7 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-grid-resilience",
         "title": "AI for Grid Resilience",
-        "description": "Machine learning for outage prediction, storm hardening, restoration planning, and cyber-physical resilience of power systems.",
+        "description": "Predicts storm-driven outages, prioritizes hardening investments, and optimizes restoration for resilient power systems.",
         "devin_body": r'''## When to use
 
 You need to prepare for, respond to, or recover from extreme events, cyber threats, and asset failures affecting power systems.

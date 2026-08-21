@@ -2,19 +2,28 @@
 
 ## Description
 
-MHC and peptide binding prediction, TCR/BCR repertoire analysis, epitope and neoantigen prediction, and immunoinformatics.
+Use machine learning to predict MHC-peptide binding, analyze TCR and BCR repertoires, identify epitopes and neoantigens and support vaccine and immunotherapy design.
 
 ## When to use
 
 You are studying immune receptor repertoires, MHC-peptide binding, T/B cell responses, neoantigens, or vaccine design and want to predict or analyze immunogenic sequences.
 
-## Key concepts
+## Usage
 
-- **MHC/HLA**: human leukocyte antigen molecules and peptide binding grooves.
-- **TCR and BCR repertoires**: V(D)J recombination and clonotype analysis.
-- **Epitope prediction**: MHC class I/II binding, antigen processing, and presentation.
-- **Neoantigens**: tumor-specific mutations that can elicit T-cell responses.
-- **Immunopeptidomics**: mass spectrometry of MHC-presented peptides.
+- **Predict MHC binding**: score MHC class I/II binding and antigen processing.
+- **Analyze repertoires**: study V(D)J recombination and clonotype diversity in TCR and BCR data.
+- **Find neoantigens**: identify tumor-specific peptides from somatic mutations and expression.
+- **Integrate immunopeptidomics**: use mass spectrometry of HLA-bound peptides for antigen discovery.
+- **Model TCR-pMHC pairing**: predict TCR recognition and HLA coverage for personalized vaccines.
+
+## Steps
+
+1. Collect HLA allele information and peptide or repertoire sequencing data.
+2. Predict MHC binding, processing, and immunogenicity with NetMHCpan, MHCflurry, or similar.
+3. Assemble TCR/BCR clonotypes and analyze repertoire diversity and expansion.
+4. Call somatic mutations and expression to predict and prioritize neoantigens.
+5. Validate predicted epitopes with binding, elution, or functional assays.
+6. Compute population HLA coverage and design vaccine or cell-therapy candidates.
 
 ## Code pattern
 

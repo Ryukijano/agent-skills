@@ -1,6 +1,6 @@
 # /ai-for-health-informatics
 
-Electronic health records, clinical data standards, interoperability, and AI-enabled analytics for healthcare delivery and research.
+Harmonize EHR data through FHIR to predict 30-day readmissions and mortality across institutions without manual feature engineering.
 
 ## Trigger
 

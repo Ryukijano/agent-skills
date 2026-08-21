@@ -2,19 +2,28 @@
 
 ## Description
 
-Perception, prediction, planning, and simulation for self-driving cars and mobile robots.
+Use perception, motion forecasting, planning, and closed-loop simulation to develop safe autonomous driving and mobile robot systems.
 
 ## When to use
 
 You are working on perception, motion forecasting, path planning, or end-to-end driving for autonomous vehicles.
 
-## Key concepts
+## Usage
 
-- **Perception**: 3D object detection, tracking, lane detection, segmentation.
-- **Prediction**: trajectory forecasting for agents in a scene.
-- **Planning**: rule-based, sampling-based, or learned planners.
-- **Simulation**: CARLA, nuPlan, Waymo Open, nuScenes.
-- **Safety and redundancy**: functional safety, ODD, scenario coverage.
+- Detect and track 3D objects, lanes, and road surfaces from camera, LiDAR, and radar data.
+- Forecast the future trajectories of vehicles, pedestrians, and cyclists in a scene.
+- Generate safe, comfortable ego-vehicle plans with rule-based, sampling-based, or learned planners.
+- Test and benchmark perception, prediction, and planning in closed-loop simulation (CARLA, nuPlan, nuScenes, Waymo Open).
+- Validate safety under diverse weather, lighting, geographic, and edge-case scenarios.
+
+## Steps
+
+1. Ingest and synchronize multi-sensor data (cameras, LiDAR, radar, GNSS/IMU, HD maps) for a driving scene.
+2. Build or fine-tune perception models for 3D object detection, tracking, and lane/road segmentation.
+3. Train motion-prediction models to forecast agent trajectories and interactions.
+4. Implement a planner that combines predictions, map constraints, and comfort/safety objectives.
+5. Evaluate the full stack in closed-loop simulation across diverse scenarios and weather/lighting conditions.
+6. Track regression metrics, edge cases, and ODD coverage; iterate on data collection and model updates.
 
 ## Code pattern
 

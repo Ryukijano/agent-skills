@@ -2,7 +2,7 @@
 
 ## Description
 
-Computer vision, anomaly detection, and segmentation for automated inspection of surface, PCB, casting, and assembly defects in manufacturing quality control.
+Detects surface, assembly, and component defects with computer vision and anomaly segmentation.
 
 ## When to use
 
@@ -13,7 +13,7 @@ You need to replace or augment manual inspection by automatically detecting scra
 - **Supervised defect classification**: CNNs and vision transformers trained on labeled defect images.
 - **Anomaly detection**: train on good samples and flag deviations with autoencoders, feature distance, or PatchCore.
 - **Segmentation**: pixel-level defect localization for repair or scrap decisions.
-- **Semi-supervised and few-shot learning**: reduce labeling cost with synthetic or weak labels.
+- **Semi-supervised and few-shot learning**: reduce labeling cost with synthetic or weak labels, or with foundation models such as CLIP and Amazon Nova Pro.
 - **Edge deployment**: run inspection models on factory cameras or PLC vision systems.
 
 ## Steps

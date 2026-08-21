@@ -1,6 +1,6 @@
 # /ai-for-logic
 
-Neuro-symbolic reasoning, learning logical rules and constraints, probabilistic logics, and SAT/SMT/ASP guided by ML.
+Use machine learning to combine logical reasoning with neural models, learning rules, constraints, and solver guidance.
 
 ## Trigger
 

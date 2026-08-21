@@ -1,6 +1,6 @@
 # /ai-for-social-good
 
-Education, poverty alleviation, agriculture, humanitarian response, accessibility, and community-driven AI for underserved populations.
+Optimize vaccination outreach and agricultural advice for low-resource communities to improve health and livelihood outcomes.
 
 ## Trigger
 

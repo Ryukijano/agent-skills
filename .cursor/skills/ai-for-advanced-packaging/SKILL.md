@@ -2,18 +2,27 @@
 
 ## Description
 
-Co-design of 2.5D/3D chiplets, interconnect routing, signal-integrity-aware placement, and package-thermal optimization.
+Use machine learning to co-design 2.5D/3D chiplet packages, route interconnects, and optimize thermal and signal integrity.
 
 ## When to use
 
 You are architecting heterogeneous chiplet systems, interposers, 2.5D/3D packages, or package-level power/thermal/signal-integrity co-design.
 
-## Key concepts
+## Usage
 
-- **Chiplet partitioning and placement**: ML/RL optimizes die disaggregation and package-level floorplanning.
-- **Interconnect and routing**: UCIe-based die-to-die links, signal-integrity constraints, and place-to-route algorithms.
-- **Thermal-mechanical co-design**: stress, warpage, and CTE-mismatch aware placement for reliability.
-- **PPAC optimization**: power, performance, area, and cost trade-offs across architecture and packaging.
+- Optimize chiplet partitioning, die disaggregation, and package-level floorplanning.
+- Route UCIe die-to-die links while respecting signal-integrity constraints.
+- Co-design for thermal, mechanical stress, and CTE-mismatch reliability.
+- Trade off power, performance, area, and cost across architecture and packaging.
+
+## Steps
+
+1. Build a package-level netlist with die sizes, bump maps, and thermal/power constraints.
+2. Use ML or optimization to place chiplets and assign UCIe links.
+3. Route signals and verify eye masks, crosstalk, and timing budgets.
+4. Run FEM thermal and stress simulations and feed results back into placement.
+5. Co-optimize with architecture for memory bandwidth and compute throughput.
+6. Verify the final floorplan with signoff DRC, signal integrity, and thermal tests.
 
 ## Code pattern
 

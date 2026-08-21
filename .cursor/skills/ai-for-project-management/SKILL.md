@@ -2,18 +2,27 @@
 
 ## Description
 
-Schedule and cost forecasting, risk triage, resource optimization, and AI-driven project health monitoring.
+Use AI to plan or execute projects and need to forecast duration, cost, risk, or resource bottlenecks across the project lifecycle.
 
 ## When to use
 
 You are planning or executing projects and need to forecast duration, cost, risk, or resource bottlenecks across the project lifecycle.
 
-## Key concepts
+## Usage
 
-- **Predictive project analytics**: forecast cost, schedule, and risk from historical data.
-- **Resource and schedule optimization**: allocate people and tasks under constraints.
-- **Project health scoring**: aggregate scope, schedule, cost, and stakeholder signals.
-- **Natural-language project data**: extract risks and issues from status reports and emails.
+- Extract status, risks, and issues from project data.
+- Forecast cost, schedule, and resource bottlenecks.
+- Optimize allocation under constraints.
+- Build project health dashboards.
+
+## Steps
+
+1. Extract status, risks, and issues from project data.
+2. Forecast cost, schedule, and resource bottlenecks.
+3. Optimize allocation under constraints.
+4. Build project health dashboards.
+5. Backtest predictions on completed projects.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

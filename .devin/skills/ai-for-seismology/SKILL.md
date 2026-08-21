@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for earthquake detection, phase picking, denoising, and seismic signal classification.
+Use deep-learning models to detect, pick, classify, and denoise seismic events from continuous waveform data for earthquake monitoring and catalog building.
 
 ## When to use
 
 You are processing seismic waveforms for earthquake monitoring, exploration geophysics, or event classification.
 
-## Key concepts
+## Usage
 
-- **Phase picking**: detect P- and S-wave arrivals automatically.
-- **Event detection/classification**: distinguish earthquakes, explosions, quarry blasts, and noise.
-- **Denoising and denoising autoencoders**: suppress cultural and environmental noise.
-- **CataLog building**: ML-enhanced seismic catalogs from continuous data.
+- Detect and pick P- and S-wave arrivals automatically in continuous seismic streams.
+- Classify earthquakes, explosions, quarry blasts, and cultural noise in near real time.
+- Suppress non-stationary environmental and cultural noise to recover low-amplitude signals.
+- Build ML-enhanced seismic catalogs by associating picks and locating events across networks.
+
+## Steps
+
+1. Ingest and preprocess continuous waveform data (response removal, filtering, resampling) from a seismic network.
+2. Run a pretrained deep-learning picker (e.g., PhaseNet, EQTransformer) to detect P/S arrivals and event windows.
+3. Associate picks across stations using a travel-time or ML-based associator (e.g., GaMMA) and locate events.
+4. Classify events by source type and denoise signals with autoencoders or adaptive filtering if needed.
+5. Build a catalog, compare picks and locations to a reference catalog, and compute residuals and precision/recall.
+6. Deploy the pipeline for near-real-time monitoring or mine archived data to find previously missed events.
 
 ## Code pattern
 
@@ -40,6 +49,6 @@ annotations = picker.annotate(stream)
 ## References
 
 - https://arxiv.org/abs/2603.17855
-- https://seisbench.gempa.de/
+- https://seisbench.readthedocs.io/en/latest/
 - https://doi.org/10.1146/annurev-earth-071822-100323
 - https://github.com/seisbench/seisbench

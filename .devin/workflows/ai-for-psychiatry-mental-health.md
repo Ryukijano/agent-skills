@@ -1,6 +1,6 @@
 # /ai-for-psychiatry-mental-health
 
-Machine learning for digital phenotyping, diagnostic support, treatment prediction, and crisis detection.
+Use machine learning and sensing to support mental-health monitoring, diagnostic decision support, treatment prediction, and crisis detection.
 
 ## Trigger
 

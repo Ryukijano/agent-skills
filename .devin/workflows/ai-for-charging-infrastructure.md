@@ -1,6 +1,6 @@
 # /ai-for-charging-infrastructure
 
-Machine learning for EV charging demand forecasting, station scheduling, load balancing, and grid-integrated charging control.
+Forecasts station demand, balances charging loads, and schedules EVs to reduce grid impact and energy costs.
 
 ## Trigger
 

@@ -2,14 +2,14 @@ SKILLS = [
     {
         "name": "ai-for-process-manufacturing",
         "title": "AI for Process Manufacturing",
-        "description": "Machine learning for continuous and batch chemical, pharmaceutical, food, and materials processes: recipe optimization, soft sensors, advanced process control, and real-time quality prediction.",
+        "description": "Builds soft sensors, optimizes recipes, and controls continuous or batch chemical and pharmaceutical processes in real time.",
         "devin_body": r'''## When to use
 
 You are optimizing continuous or batch processes where quality is inferred from sensor trajectories, recipes must adapt to disturbances, and energy/yield trade-offs matter.
 
 ## Usage
 
-- **Soft sensing**: predict hard-to-measure quality variables from easy-to-measure process data.
+- **Soft sensing**: predict hard-to-measure quality variables from process data using Gaussian process or neural surrogates.
 - **Recipe optimization**: set initial conditions and temperature/feed profiles for batch reactors.
 - **Advanced process control (APC)**: model-predictive control, real-time optimization, and constrained control.
 - **Process digital twins**: build physics-informed or data-driven surrogate models of reactors and separations.
@@ -50,7 +50,7 @@ y_hat, sigma = model.predict(X_new, return_std=True)
 ''',
         "references": [
             "https://doi.org/10.1088/2632-2153/ae2382",
-            "https://par.nsf.gov/biblio/10635953",
+            "https://doi.org/10.1515/revce-2024-0060",
             "https://doi.org/10.1088/1361-6501/ad8be6",
             "https://doi.org/10.1021/acsomega.5c01274",
             "https://doi.org/10.1021/acs.iecr.0c03806",
@@ -59,7 +59,7 @@ y_hat, sigma = model.predict(X_new, return_std=True)
     {
         "name": "ai-for-discrete-manufacturing",
         "title": "AI for Discrete Manufacturing",
-        "description": "Machine learning for assembly, machining, electronics, and automotive part production: process planning, scheduling, robotic assembly, and work-in-progress tracking.",
+        "description": "Schedules jobs, routes work through machines, and coordinates robotic cells for assembly and machining operations.",
         "devin_body": r'''## When to use
 
 You are making distinct parts or assembling them, and need to schedule jobs, allocate resources, plan process routes, or coordinate robotic work cells.
@@ -76,7 +76,7 @@ You are making distinct parts or assembling them, and need to schedule jobs, all
 
 1. Collect job, machine, route, and WIP data from the MES or ERP.
 2. Engineer features for operations, setups, due dates, and resource availability.
-3. Build an optimization or learning-based scheduler for routing and sequencing.
+3. Build an optimization or learning-based scheduler with OR-Tools CP-SAT or Petri-net DQN.
 4. Validate schedules with a discrete-event simulator against baseline rules.
 5. Deploy to the shop floor and measure makespan, tardiness, and throughput.
 
@@ -116,7 +116,7 @@ solver.Solve(model)
     {
         "name": "ai-for-lean-manufacturing",
         "title": "AI for Lean Manufacturing",
-        "description": "Data-driven waste elimination, value stream mapping, bottleneck detection, and Kaizen prioritization for flow, pull, and just-in-time systems.",
+        "description": "Quantifies waste, maps value streams, and prioritizes kaizen actions using real-time production event data.",
         "devin_body": r'''## When to use
 
 You are running a lean transformation and need to identify muda, quantify value-added time, prioritize improvement actions, and sustain pull-based flow.
@@ -173,7 +173,7 @@ print("Value-added ratio:", va_time / total_time)
     {
         "name": "ai-for-six-sigma",
         "title": "AI for Six Sigma",
-        "description": "ML-augmented DMAIC for defect reduction, statistical process control, capability analysis, and automated root-cause prioritization in quality improvement.",
+        "description": "Augments DMAIC projects with defect prediction, statistical process control, and designed-experiment optimization.",
         "devin_body": r'''## When to use
 
 You are running a Six Sigma or Lean Six Sigma project and want to speed up DMAIC with machine learning for pattern detection, prediction, and prescriptive action.
@@ -190,7 +190,7 @@ You are running a Six Sigma or Lean Six Sigma project and want to speed up DMAIC
 
 1. Define the problem, CTQ, and project scope with stakeholders.
 2. Measure process performance and collect historical defect and parameter data.
-3. Analyze data with SPC, capability analysis, and ML defect-prediction models.
+3. Analyze data with SPC, capability analysis, and ML defect-prediction models such as Random Forest or CART.
 4. Improve by optimizing process settings and piloting changes.
 5. Control with monitoring dashboards and retrain models as conditions change.
 
@@ -229,7 +229,7 @@ model = GradientBoostingClassifier(random_state=42).fit(X, y)
     {
         "name": "ai-for-total-productive-maintenance",
         "title": "AI for Total Productive Maintenance",
-        "description": "AI and IIoT for autonomous maintenance, OEE improvement, zero-breakdown programs, and condition-based monitoring across the eight TPM pillars.",
+        "description": "Predicts equipment failures, supports autonomous maintenance, and improves OEE across the eight TPM pillars.",
         "devin_body": r'''## When to use
 
 You are implementing Total Productive Maintenance and want to use AI to improve OEE, eliminate breakdowns, and empower operators to maintain equipment autonomously.
@@ -285,7 +285,7 @@ model = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, 
     {
         "name": "ai-for-root-cause-analysis",
         "title": "AI for Root Cause Analysis",
-        "description": "Knowledge graphs, causal discovery, graph neural networks, and SHAP-based diagnostics for identifying fault origins and propagations in complex systems.",
+        "description": "Traces faults to originating causes using causal discovery, knowledge graphs, and SHAP-based diagnostics.",
         "devin_body": r'''## When to use
 
 A quality, safety, or equipment failure has occurred and you need to trace it to the originating cause, not just its symptoms, across interacting processes and machines.
@@ -293,7 +293,7 @@ A quality, safety, or equipment failure has occurred and you need to trace it to
 ## Usage
 
 - **5-Why and fishbone**: structured qualitative root-cause exploration.
-- **Causal discovery**: learn causal graphs from time-series or tabular data (PC, GES, NOTEARS).
+- **Causal discovery**: learn causal graphs from time-series or tabular data with PC, GES, or NOTEARS.
 - **Knowledge graphs**: model equipment, materials, recipes, and fault propagation.
 - **Graph neural networks**: propagate fault evidence and rank root-cause variables.
 - **SHAP and counterfactuals**: attribute defect or failure to specific sensors and settings.
@@ -302,7 +302,7 @@ A quality, safety, or equipment failure has occurred and you need to trace it to
 
 1. Gather event logs, sensor data, and failure records for the incident window.
 2. Build a knowledge graph of equipment, materials, and process dependencies.
-3. Run causal discovery or train an attribution model to score suspect variables.
+3. Run causal discovery with DoWhy or DirectLiNGAM, or train an attribution model to score suspect variables.
 4. Cross-check the top candidates with domain experts and known incidents.
 5. Document the validated root cause and prescribe corrective actions.
 
@@ -343,7 +343,7 @@ shap_values = explainer.shap_values(X.iloc[:100])
     {
         "name": "ai-for-defect-detection",
         "title": "AI for Defect Detection",
-        "description": "Computer vision, anomaly detection, and segmentation for automated inspection of surface, PCB, casting, and assembly defects in manufacturing quality control.",
+        "description": "Detects surface, assembly, and component defects with computer vision and anomaly segmentation.",
         "devin_body": r'''## When to use
 
 You need to replace or augment manual inspection by automatically detecting scratches, dents, contamination, missing components, or dimensional deviations in production.
@@ -353,7 +353,7 @@ You need to replace or augment manual inspection by automatically detecting scra
 - **Supervised defect classification**: CNNs and vision transformers trained on labeled defect images.
 - **Anomaly detection**: train on good samples and flag deviations with autoencoders, feature distance, or PatchCore.
 - **Segmentation**: pixel-level defect localization for repair or scrap decisions.
-- **Semi-supervised and few-shot learning**: reduce labeling cost with synthetic or weak labels.
+- **Semi-supervised and few-shot learning**: reduce labeling cost with synthetic or weak labels, or with foundation models such as CLIP and Amazon Nova Pro.
 - **Edge deployment**: run inspection models on factory cameras or PLC vision systems.
 
 ## Steps
@@ -398,7 +398,7 @@ datamodule = MVTec(category="bottle")
     {
         "name": "ai-for-predictive-quality",
         "title": "AI for Predictive Quality",
-        "description": "In-process quality forecasting, virtual metrology, and causal quality models that predict final part quality from machine and sensor data before completion.",
+        "description": "Forecasts final part quality from in-process sensor data to enable early rework, scrap, or recipe adjustment.",
         "devin_body": r'''## When to use
 
 You want to predict whether a part or batch will meet quality specifications while it is still in process, enabling early rework, scrap, or process adjustment.
@@ -453,7 +453,7 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-digital-manufacturing",
         "title": "AI for Digital Manufacturing",
-        "description": "AI-driven digital twins, virtual commissioning, real-time simulation, and lifecycle data integration for smart, connected factories.",
+        "description": "Builds digital twins, validates control logic through virtual commissioning, and synchronizes real-time factory data.",
         "devin_body": r'''## When to use
 
 You are building a digital replica of a product, process, or factory to simulate behavior, commission systems virtually, and make real-time decisions from integrated data.
@@ -515,7 +515,7 @@ env.run(until=20)
     {
         "name": "ai-for-factory-automation",
         "title": "AI for Factory Automation",
-        "description": "ML-integrated PLCs, edge controllers, motion control, robot programming, and real-time AI inference on the shop floor.",
+        "description": "Runs ML inference on PLCs, edge devices, and robot controllers for low-latency motion and quality control.",
         "devin_body": r'''## When to use
 
 You are deploying AI directly into automation systems: PLCs, edge devices, robot controllers, and SCADA to make control decisions with low latency and high reliability.
@@ -570,7 +570,7 @@ outputs = session.run(None, {input_name: image_batch})
     {
         "name": "ai-for-industrial-iot",
         "title": "AI for Industrial IoT",
-        "description": "Industrial Internet of Things, edge-fog-cloud architectures, and AI for real-time monitoring, predictive maintenance, and secure shop-floor connectivity.",
+        "description": "Connects machines, sensors, and actuators over edge-fog-cloud architectures for real-time monitoring and predictive maintenance.",
         "devin_body": r'''## When to use
 
 You are connecting machines, sensors, and actuators across a plant or supply chain and need scalable, low-latency data pipelines for AI-driven operations.
@@ -633,7 +633,7 @@ client.loop_forever()
     {
         "name": "ai-for-manufacturing-analytics",
         "title": "AI for Manufacturing Analytics",
-        "description": "KPI dashboards, OEE analysis, descriptive-to-prescriptive analytics, and association mining for manufacturing performance management.",
+        "description": "Turns MES and ERP data into OEE dashboards and predictive KPIs for prescriptive manufacturing decisions.",
         "devin_body": r'''## When to use
 
 You need to turn MES, ERP, quality, and maintenance data into actionable performance insights, from historical dashboards to predictive and prescriptive recommendations.

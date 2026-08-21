@@ -1,6 +1,6 @@
 # /ai-for-change-management
 
-Stakeholder sentiment monitoring, adoption analytics, training personalization, and AI-assisted transformation communications.
+Use AI to leading organizational change, tracking adoption, personalize enablement, or tailoring communications to stakeholder segments.
 
 ## Trigger
 

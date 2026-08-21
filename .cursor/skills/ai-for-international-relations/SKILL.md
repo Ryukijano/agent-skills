@@ -2,19 +2,30 @@
 
 ## Description
 
-Conflict forecasting, event data analysis, crisis early warning, treaty and negotiation text mining, and geopolitical risk modeling.
+Use AI for International Relations to forecast conflict, mine event data and model geopolitical networks.
 
 ## When to use
 
 You are studying conflict, diplomacy, trade, sanctions, or global governance and want to forecast events, extract information from open-source reports, or model geopolitical networks.
 
-## Key concepts
 
-- **Event data and CAMEO/Phoenix**: code actor-action-target triples from news and reports.
-- **Conflict forecasting**: predict civil unrest, armed conflict, and fatalities at country or grid level.
-- **Crisis early warning**: combine event counts, economic indicators, and social media for alerts.
-- **Treaty and negotiation text mining**: analyze agreements, UN speeches, and diplomatic cables.
-- **Geopolitical network and spatial models**: capture alliances, trade dependencies, and neighborhood effects.
+## Usage
+
+
+- **Event data and CAMEO/Phoenix**: Code actor-action-target triples from news and reports.
+- **Conflict forecasting**: Predict civil unrest, armed conflict, and fatalities at country or grid level.
+- **Crisis early warning**: Combine event counts, economic indicators, and social media for alerts.
+- **Treaty and negotiation text mining**: Analyze agreements, UN speeches, and diplomatic cables.
+- **Geopolitical network and spatial models**: Capture alliances, trade dependencies, and neighborhood effects.
+
+## Steps
+
+1. Collect and prepare event databases, news and structural country data.
+2. Studye conflict.
+3. Diplomacy.
+4. Trade.
+5. Validate by backtesting a conflict-forecasting model on out-of-sample country-months.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -34,12 +45,14 @@ for train_idx, test_idx in cv.split(X):
     print(model.score(X.iloc[test_idx], y.iloc[test_idx]))
 ```
 
+
 ## Tuning notes
 
 - Conflict is rare; use class weights, cost-sensitive learning, and proper rare-event metrics.
 - Respect temporal ordering with time-series cross-validation.
 - Spatial autocorrelation and diffusion must be modeled explicitly, not ignored.
 - Geopolitical models raise ethical and policy stakes; prioritize interpretability and caution.
+
 
 ## Verification
 
@@ -52,4 +65,4 @@ for train_idx, test_idx in cv.split(X):
 - https://doi.org/10.1093/jeea/jvac025
 - https://www.cambridge.org/core/journals/data-and-policy/article/promise-of-machine-learning-in-violent-conflict-forecasting/40D559ADA18FF7308915B08956B4E8F3
 - https://doi.org/10.3389/frai.2022.893875
-- https://par.nsf.gov/servlets/purl/10376284
+- https://doi.org/10.1080/03050629.2022.2036987

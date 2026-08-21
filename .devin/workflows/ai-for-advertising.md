@@ -1,6 +1,6 @@
 # /ai-for-advertising
 
-Ad creative generation, media buying optimization, dynamic creative optimization, and predictive performance modeling.
+Use machine learning to generate ad creatives, optimize media buying, run dynamic creative optimization, and model campaign performance.
 
 ## Trigger
 

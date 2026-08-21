@@ -2,18 +2,27 @@
 
 ## Description
 
-Automated essay scoring, conversational assessment, LLM rubric grading, feedback generation, and validity and fairness of AI-driven evaluation.
+Score open-ended student work and generate targeted feedback at scale while monitoring fairness and validity.
 
 ## When to use
 
 You need to score open-ended work, generate formative feedback, or design assessments at scale while preserving validity, reliability, and fairness.
 
-## Key concepts
+## Usage
 
-- **Automated Essay Scoring (AES)**: models that predict holistic or trait-level writing scores.
-- **Conversational assessment**: LLM-driven dialogs that probe understanding aligned with learning outcomes.
-- **Rubric generation and calibration**: derive scoring criteria and align AI scores with human raters.
-- **Fairness and validity**: check for subgroup score differences and construct validity across populations.
+- Build or select rubrics aligned with learning outcomes.
+- Fine-tune or prompt an LLM/AES model to score open-ended work.
+- Compare AI scores to human raters using QWK and ICC.
+- Audit subgroup score parity and construct validity.
+
+## Steps
+
+1. Build or select rubrics aligned with learning outcomes.
+2. Fine-tune or prompt an LLM/AES model to score open-ended work.
+3. Compare AI scores to human raters using QWK and ICC.
+4. Audit subgroup score parity and construct validity.
+5. Iterate with teachers to align generated assessments to the curriculum.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

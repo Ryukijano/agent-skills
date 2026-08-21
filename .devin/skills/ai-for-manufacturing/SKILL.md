@@ -2,19 +2,27 @@
 
 ## Description
 
-Predictive maintenance, quality control, process optimization, digital twins, and human-interpretable factory AI.
+Apply predictive maintenance, vision-based quality control, process modeling, and edge AI to improve uptime and efficiency in factories.
 
 ## When to use
 
 You are improving uptime, product quality, or process efficiency in a factory or industrial setting using sensor, image, or log data.
 
-## Key concepts
+## Usage
 
-- **Predictive maintenance (PdM)**: forecast equipment failures from vibration, temperature, acoustic, or current signatures.
-- **Quality and defect detection**: vision and sensor-based inspection of products and processes.
-- **Digital twins and process modeling**: simulation and optimization of production lines.
-- **Explainable AI for operations**: SHAP, Grad-CAM, and attention for operator trust and regulatory compliance.
-- **Edge deployment**: real-time inference on factory-floor devices and PLCs.
+- Forecast equipment failures from vibration, temperature, acoustic, or current signatures.
+- Detect product and process defects with vision and sensor-based inspection.
+- Build digital twins and process models to simulate and optimize production lines.
+- Deploy explainable AI on edge devices and PLCs for operator trust and regulatory compliance.
+
+## Steps
+
+1. Collect sensor, image, log, and maintenance records from production machines and lines.
+2. Train anomaly-detection or survival models for predictive maintenance and measure warning lead time.
+3. Build computer-vision classifiers or segmentation models for defect inspection and compare to human inspection.
+4. Create a digital twin or process model and use it to simulate line bottlenecks and what-if optimizations.
+5. Add explainability (SHAP, Grad-CAM, attention) and validate with operators and domain experts.
+6. Deploy approved models on edge devices or PLCs and continuously monitor drift and false-alarm rates.
 
 ## Code pattern
 

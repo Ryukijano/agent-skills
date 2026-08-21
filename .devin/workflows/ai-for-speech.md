@@ -1,6 +1,6 @@
 # /ai-for-speech
 
-Automatic speech recognition, text-to-speech, speaker verification, speech synthesis, and self-supervised speech models.
+Use AI for Speech to transcribe, synthesize, verify speakers and build speech models.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-electrical-engineering
 
-AI for power systems, smart grids, renewable integration, power electronics, fault diagnosis, and energy management.
+Use AI for power-system forecasting, fault detection, and smart-grid control.
 
 ## Trigger
 

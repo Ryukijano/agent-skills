@@ -1,6 +1,6 @@
 # /ai-for-computational-complexity
 
-Using machine learning to predict, characterize, and understand the complexity of computational problems, reductions, and hardness proxies.
+Use machine learning to predict solver runtime, characterize complexity classes, and learn hardness proxies for computational problems.
 
 ## Trigger
 

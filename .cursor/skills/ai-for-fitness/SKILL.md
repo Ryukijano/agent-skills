@@ -2,19 +2,26 @@
 
 ## Description
 
-Personalized workout plans, exercise form analysis, pose estimation, wearables, and adaptive recovery for individual fitness.
+Use machine learning to build adaptive workout plans, count reps, check exercise form, and prevent injury from wearable and video feedback.
 
 ## When to use
 
 You want to build personalized workouts, count reps, check exercise form, or adapt a training plan from wearable and video feedback.
 
-## Key concepts
+## Usage
 
-- **Pose estimation**: MediaPipe, YOLOv8-pose, or sparse IMU methods for form analysis.
-- **Human activity recognition (HAR)**: classify exercises from accelerometer, gyroscope, or video.
-- **Repetition counting**: detect peaks and phases in time-series motion signals.
-- **Adaptive exercise prescription**: adjust volume, intensity, and recovery based on progress and fatigue.
-- **Injury-risk flags**: detect excessive range of motion, asymmetry, or rapid load increases.
+- Estimate exercise pose and count reps from camera or IMU data.
+- Classify human activities and exercises from wearables.
+- Adapt training volume and recovery based on progress and fatigue.
+- Flag excessive range of motion, asymmetry, or load spikes.
+
+## Steps
+
+1. Collect video, IMU, or wearable data during a set of exercises.
+2. Calibrate pose estimation or activity recognition for the user's body and camera.
+3. Train a rep-counting or form-deviation model on diverse participants.
+4. Validate against manual counts and expert form assessments.
+5. Adjust the workout plan based on completion, fatigue, and injury signals.
 
 ## Code pattern
 

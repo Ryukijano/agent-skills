@@ -2,18 +2,27 @@
 
 ## Description
 
-Material flow optimization, predictive recycling, product lifecycle extension, and circular supply-chain design with AI.
+Use AI to optimize material flows, design reverse logistics, extend product life, or reducing waste across supply chains.
 
 ## When to use
 
 You are optimizing material flows, designing reverse logistics, extending product life, or reducing waste across supply chains.
 
-## Key concepts
+## Usage
 
-- **Material flow analysis (MFA)**: track resource inflows, stocks, and outflows.
-- **Predictive maintenance and reuse**: forecast product condition and remanufacturing potential.
-- **Reverse supply chains**: collection, sorting, recycling, and remanufacturing optimization.
-- **Reinforcement learning and MDPs**: dynamic decisions under uncertainty.
+- Map material inflows, stocks, and outflows.
+- Predict product condition and remanufacturing potential.
+- Optimize reverse logistics and recycling flows.
+- Embed LCA and carbon accounting into decisions.
+
+## Steps
+
+1. Map material inflows, stocks, and outflows.
+2. Predict product condition and remanufacturing potential.
+3. Optimize reverse logistics and recycling flows.
+4. Embed LCA and carbon accounting into decisions.
+5. Validate with waste-arisings and refurbishment records.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

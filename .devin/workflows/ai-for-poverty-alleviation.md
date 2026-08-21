@@ -1,6 +1,6 @@
 # /ai-for-poverty-alleviation
 
-Machine learning for poverty mapping, consumption estimation, proxy means testing, and targeted social protection in low-resource settings.
+Use machine learning to map poverty, estimate consumption, target social transfers, and improve social protection in low-resource settings.
 
 ## Trigger
 

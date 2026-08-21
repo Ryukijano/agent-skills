@@ -2,19 +2,26 @@
 
 ## Description
 
-Marketing and advertising copy, email and landing-page text, conversion frameworks, and brand-voice calibration with LLMs.
+Draft and A/B-test personalized marketing emails that match brand voice and lift conversion rates by double digits.
 
 ## When to use
 
 You are creating ads, emails, landing pages, product descriptions, or calls to action that must convert and match a brand voice.
 
-## Key concepts
+## Usage
 
-- **Copy frameworks**: AIDA, PAS, BAB, FAB, 4U, and Hook-Promise-Proof.
-- **Brand voice calibration**: few-shot examples, tone descriptors, and style guides.
-- **A/B testing and uplift**: generate variants, rank them, and test in the field.
-- **CRO integration**: align copy with audience, channel, and funnel stage.
-- **Hallucination and claim control**: verify claims and avoid fabricated specifics.
+- Draft ads, emails, landing pages, and product descriptions in brand voice.
+- Apply copy frameworks such as AIDA, PAS, BAB, and Hook-Promise-Proof.
+- Generate variants for A/B testing and rank them by predicted CTR.
+- Verify claims, avoid fabricated specifics, and run brand-safety QA.
+
+## Steps
+
+1. Load the brand voice guide, audience profile, and copy framework.
+2. Prompt for several variants with constraints on tone and length.
+3. Score variants against brand voice and predicted performance.
+4. Run a human QA pass for claims, safety, and platform limits.
+5. Launch an A/B test and iterate based on CTR or conversion lift.
 
 ## Code pattern
 

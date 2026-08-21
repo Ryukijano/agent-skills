@@ -2,18 +2,27 @@
 
 ## Description
 
-Glacier mapping, surface mass balance estimation, snow/ice classification, and climate-change impact assessment.
+Use AI to delineate glacier boundaries, estimating surface mass balance, classify ice facies, or project glacier change.
 
 ## When to use
 
 You are delineating glacier boundaries, estimating surface mass balance, classifying ice facies, or projecting glacier change.
 
-## Key concepts
+## Usage
 
-- **Glacier segmentation**: deep learning for clean-ice, debris-covered, and snow/firn mapping.
-- **Surface mass balance (SMB)**: temperature-index and machine-learning models.
-- **Geodetic and glaciological data fusion**: MassBalanceMachine, OGGM, ERA5.
-- **Multi-sensor inputs**: optical, SAR, DEM, and meteorological reanalysis.
+- Fuse optical, SAR, DEM, and meteorological reanalysis.
+- Segment glacier outlines (clean ice, debris, snow/firn).
+- Estimate surface mass balance with point and geodetic data.
+- Track area and elevation change over time.
+
+## Steps
+
+1. Fuse optical, SAR, DEM, and meteorological reanalysis.
+2. Segment glacier outlines (clean ice, debris, snow/firn).
+3. Estimate surface mass balance with point and geodetic data.
+4. Track area and elevation change over time.
+5. Validate against manual inventories and in-situ stakes.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

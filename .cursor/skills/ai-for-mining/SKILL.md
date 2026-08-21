@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for mineral exploration, ore grade estimation, predictive maintenance, autonomous haulage, and mine safety.
+Use AI for Mining to target exploration, estimate ore grade, predict equipment failures and dispatch fleets.
 
 ## When to use
 
 You are working with drill data, geophysical logs, equipment sensors, rock/core images, or tailings and need to improve exploration targeting, grade control, operations, or safety.
 
-## Key concepts
 
-- **Geostatistics + ML for grade estimation**: combine kriging with random forests or neural networks for ore grade and resource modeling.
-- **Computer vision for rock and mineral identification**: classify lithology, texture, and alteration from core photos, thin sections, or conveyor images.
-- **Predictive maintenance**: forecast crusher, mill, and haul-truck failures from vibration, oil, and telemetry data.
-- **Autonomous haulage and fleet dispatch**: optimize routes, speeds, and shovel-truck matching.
-- **Environmental monitoring**: track tailings, dust, water, and reclamation with remote sensing and IoT.
+## Usage
+
+
+- **Geostatistics + ML for grade estimation**: Combine kriging with random forests or neural networks for ore grade and resource modeling.
+- **Computer vision for rock and mineral identification**: Classify lithology, texture, and alteration from core photos, thin sections, or conveyor images.
+- **Predictive maintenance**: Forecast crusher, mill, and haul-truck failures from vibration, oil, and telemetry data.
+- **Autonomous haulage and fleet dispatch**: Optimize routes, speeds, and shovel-truck matching.
+- **Environmental monitoring**: Track tailings, dust, water, and reclamation with remote sensing and IoT.
+
+## Steps
+
+1. Collect and prepare drill, geophysical, geochemical and equipment sensor data.
+2. Worke with drill data.
+3. Geophysical logs.
+4. Equipment sensors.
+5. Validate by predicting ore grade with R2 > 0.6 on a blind drill-hole test set.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -31,12 +42,14 @@ model = RandomForestRegressor(n_estimators=200).fit(X_train, y_train)
 y_pred = model.predict(X_test)
 ```
 
+
 ## Tuning notes
 
 - Handle highly skewed grade distributions and sparse positive labels.
 - Integrate domain geology; models should respect structure and contacts.
 - Use spatial cross-validation to avoid optimistic estimates from clustered samples.
 - Combine point cloud, hyperspectral, and geochemical data for richer features.
+
 
 ## Verification
 

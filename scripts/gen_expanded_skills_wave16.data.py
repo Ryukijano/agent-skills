@@ -2,18 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-climate-policy",
         "title": "AI for Climate Policy",
-        "description": "Natural-language analysis of climate laws, NDCs, and policies; target extraction, alignment scoring, and climate-finance tracking.",
+        "description": "Extract and classify quantified climate targets from national laws and NDCs to track policy alignment and accountability.",
         "devin_body": r'''
 ## When to use
 
 You need to analyze, compare, or monitor national climate laws, Nationally Determined Contributions (NDCs), or corporate climate disclosures at scale.
 
-## Key concepts
+## Usage
 
-- **NDC and VNR alignment**: compare Nationally Determined Contributions with Voluntary National Reviews using NLP and classifiers.
-- **Target extraction**: identify quantified climate targets (net-zero, reduction, renewable) in long documents.
-- **Climate policy NLP**: domain-adapted language models (ClimateBERT) for climate-finance and policy text.
-- **Policy impact monitoring**: track implementation progress, theme shifts, and equity implications over time.
+- Extract quantified climate targets (net-zero, reduction, renewable) from NDCs, laws, and corporate disclosures.
+- Compare NDCs with Voluntary National Reviews (VNRs) and SDGs to score alignment.
+- Apply domain-adapted language models such as ClimateBERT to climate-finance and policy text.
+- Track policy implementation, theme shifts, and equity implications over time.
+
+## Steps
+
+1. Collect NDCs, national climate laws, VNRs, and corporate climate reports from official registries.
+2. Chunk and normalize the documents; use a domain-adapted LM (e.g., ClimateBERT) to classify paragraphs and extract quantified targets.
+3. Build an alignment-scoring pipeline that maps commitments to SDGs and NDC objectives.
+4. Track climate-finance flows and implementation progress against stated targets across countries and years.
+5. Validate extraction and alignment results against expert annotations and produce transparent, auditable tables.
+6. Deploy the pipeline as a monitoring dashboard for policy analysts and climate-finance stakeholders.
 
 ## Code pattern
 
@@ -52,19 +61,27 @@ probs = outputs.logits.softmax(dim=-1)
     {
         "name": "ai-for-energy-grid",
         "title": "AI for Energy Grid",
-        "description": "Power-flow surrogates, renewable and load forecasting, grid stability, optimal power flow, and AI-assisted grid operations.",
+        "description": "Solve AC optimal power flow with neural surrogates to schedule generation and integrate renewables within milliseconds.",
         "devin_body": r'''
 ## When to use
 
 You are building, operating, or studying power systems with high renewable penetration and need fast, scalable, and physically consistent predictions or optimizations.
 
-## Key concepts
+## Usage
 
-- **AC/DC power flow**: compute bus voltages, branch flows, and generator dispatch subject to physical and operational constraints.
-- **Optimal Power Flow (OPF)**: cost-minimizing dispatch while satisfying voltage, thermal, and generator limits.
-- **Renewable and load forecasting**: probabilistic time-series models for solar, wind, and demand.
-- **Grid foundation models**: neural surrogates such as GridSFM and OpenGridFM that solve OPF in milliseconds.
-- **Stability and contingency**: N-1 security, fault detection, and dynamic stability analysis.
+- Solve or approximate AC/DC power flow and Optimal Power Flow (OPF) with neural surrogates.
+- Forecast solar, wind, and demand with probabilistic time-series models.
+- Monitor grid stability, fault detection, and N-1 contingency security in real time.
+- Deploy grid foundation models (e.g., GridSFM, OpenGridFM, GridFM) for millisecond dispatch decisions.
+
+## Steps
+
+1. Build or load a grid model (e.g., pandapower IEEE case or a real network) and define constraints (voltage, thermal, generator limits).
+2. Train a neural surrogate or foundation model to predict power-flow/OPF solutions from load and generation inputs.
+3. Implement probabilistic solar, wind, and load forecasting with rolling cross-validation.
+4. Run stability and N-1 contingency checks, flagging constraint violations and critical branches.
+5. Compare the neural OPF surrogate to a conventional solver on held-out operating conditions and check feasibility.
+6. Deploy the fastest-acceptable model in a control room or market-clearing loop with uncertainty-aware reserve scheduling.
 
 ## Code pattern
 
@@ -99,19 +116,27 @@ print(net.res_bus.vm_pu.min(), net.res_bus.vm_pu.max())
     {
         "name": "ai-for-smart-cities",
         "title": "AI for Smart Cities",
-        "description": "Urban computing, IoT analytics, spatio-temporal forecasting, mobility, public safety, and citizen-centric services.",
+        "description": "Optimize fixed-time traffic signals from connected-vehicle trajectories to cut urban delays and stops by up to 30 percent.",
         "devin_body": r'''
 ## When to use
 
 You are analyzing urban sensor, mobility, or demographic data to support city planning, operations, or citizen services.
 
-## Key concepts
+## Usage
 
-- **Urban computing**: integration of sensing, data, and computing to understand and manage cities.
-- **Spatio-temporal graph learning**: STGNNs for traffic, air quality, and crowd flow prediction.
-- **Digital twins and IoT platforms**: real-time city models fed by heterogeneous sensors.
-- **Citizen engagement and governance**: NLP and recommendation for participatory urban planning.
-- **Sustainability and equity**: energy, emissions, accessibility, and resource distribution.
+- Forecast traffic, air quality, crowd flow, and energy demand with spatio-temporal graph and sequence models.
+- Build digital twins and IoT platforms that mirror real-time city operations.
+- Apply NLP and recommendation systems to participatory planning and citizen engagement.
+- Optimize energy, emissions, accessibility, and resource distribution for sustainable and equitable cities.
+
+## Steps
+
+1. Ingest heterogeneous urban data: traffic loops, public transit, air-quality sensors, weather, mobility, and demographics.
+2. Build a spatio-temporal graph or digital-twin model to represent city zones, roads, and sensor networks.
+3. Train forecasting models for traffic, air quality, and energy demand and evaluate them on multiple horizons.
+4. Deploy anomaly detection and decision-support modules for public safety, transit, and emergency response.
+5. Audit model outputs for fairness across neighborhoods and incorporate citizen feedback.
+6. Integrate validated predictions into city operations dashboards and policy planning tools.
 
 ## Code pattern
 
@@ -146,19 +171,27 @@ train, test = temporal_signal_split(dataset, train_ratio=0.8)
     {
         "name": "ai-for-transportation",
         "title": "AI for Transportation",
-        "description": "Traffic prediction, route optimization, public transit planning, autonomous driving, and multi-modal mobility.",
+        "description": "Retime city traffic signals from sparse vehicle trajectories and prioritize public transit to reduce congestion and emissions.",
         "devin_body": r'''
 ## When to use
 
 You need to predict, optimize, or simulate traffic, routes, transit, or autonomous-vehicle behavior in urban or highway networks.
 
-## Key concepts
+## Usage
 
-- **Spatio-temporal traffic forecasting**: predict flow, speed, or congestion on road graphs using GNNs and transformers.
-- **Autonomous driving prediction**: multi-agent motion forecasting and planning under uncertainty.
-- **Route and network optimization**: shortest paths, traffic-equilibrium, and multi-modal itinerary planning.
-- **Public transit analytics**: ridership prediction, schedule optimization, and disruption recovery.
-- **Sim-to-real and safety**: robustness to rare events, adversarial weather, and sensor failures.
+- Forecast traffic flow, speed, and congestion on road graphs with GNNs and spatio-temporal models.
+- Predict multi-agent motion and plan safe trajectories for autonomous vehicles.
+- Optimize shortest paths, traffic equilibrium, and multi-modal itineraries.
+- Predict transit ridership, optimize schedules, and recover from disruptions.
+
+## Steps
+
+1. Ingest road graph, real-time traffic, weather, transit, and incident data for the target network.
+2. Train a spatio-temporal traffic-forecasting model and validate on rolling cross-validation against baselines.
+3. Implement route or network-optimization algorithms (A*, traffic-equilibrium, multi-modal) and benchmark travel time.
+4. Build a multi-agent motion-prediction or trajectory-planning model for autonomous driving and test on a public benchmark.
+5. Add public-transit ridership and schedule-optimization modules and simulate disruption recovery.
+6. Deploy the integrated forecasting, routing, and planning pipeline with safety and sim-to-real checks.
 
 ## Code pattern
 
@@ -194,19 +227,27 @@ route = nx.shortest_path(G, orig, dest, weight="length")
     {
         "name": "ai-for-logistics",
         "title": "AI for Logistics",
-        "description": "Vehicle routing, last-mile delivery, warehouse automation, fleet scheduling, and dynamic logistics optimization.",
+        "description": "Use optimization and learning-based methods to solve vehicle routing, last-mile delivery, warehouse automation, and fleet-scheduling problems.",
         "devin_body": r'''
 ## When to use
 
 You are optimizing delivery routes, fleet dispatch, warehouse operations, or inventory flows under capacity, time, and cost constraints.
 
-## Key concepts
+## Usage
 
-- **Vehicle Routing Problem (VRP) and variants**: CVRP, VRPTW, multi-depot, dynamic, and stochastic VRP.
-- **Last-mile optimization**: demand forecasting, route sequencing, and delivery-time windows.
-- **Warehouse automation**: pick-path optimization, robot scheduling, and inventory placement.
-- **Learning-based heuristics**: GNNs, reinforcement learning, and attention models for routing.
-- **Sustainability**: fuel, emissions, and multi-modal trade-offs in logistics planning.
+- Model and solve VRP variants (CVRP, VRPTW, multi-depot, dynamic, stochastic) with exact or learned heuristics.
+- Optimize last-mile demand forecasting, route sequencing, and time-window compliance.
+- Automate warehouse pick-paths, robot scheduling, and inventory slotting.
+- Reduce fuel, emissions, and cost by balancing multi-modal and real-time re-routing trade-offs.
+
+## Steps
+
+1. Gather order, depot, vehicle, traffic, weather, and customer time-window data for the logistics network.
+2. Build a VRP or routing model with capacity and time-window constraints using OR-Tools, RL, or GNN heuristics.
+3. Integrate demand forecasting to pre-position inventory and sequence last-mile routes.
+4. Add warehouse pick-path and robot-scheduling optimization, measuring throughput and travel distance.
+5. Implement real-time re-routing when disruptions occur and compare cost and SLA performance to baselines.
+6. Track fuel, emissions, and cost KPIs, and deploy the integrated logistics decision-support system.
 
 ## Code pattern
 
@@ -243,19 +284,27 @@ solution = routing.SolveWithParameters(search_parameters)
     {
         "name": "ai-for-manufacturing",
         "title": "AI for Manufacturing",
-        "description": "Predictive maintenance, quality control, process optimization, digital twins, and human-interpretable factory AI.",
+        "description": "Apply predictive maintenance, vision-based quality control, process modeling, and edge AI to improve uptime and efficiency in factories.",
         "devin_body": r'''
 ## When to use
 
 You are improving uptime, product quality, or process efficiency in a factory or industrial setting using sensor, image, or log data.
 
-## Key concepts
+## Usage
 
-- **Predictive maintenance (PdM)**: forecast equipment failures from vibration, temperature, acoustic, or current signatures.
-- **Quality and defect detection**: vision and sensor-based inspection of products and processes.
-- **Digital twins and process modeling**: simulation and optimization of production lines.
-- **Explainable AI for operations**: SHAP, Grad-CAM, and attention for operator trust and regulatory compliance.
-- **Edge deployment**: real-time inference on factory-floor devices and PLCs.
+- Forecast equipment failures from vibration, temperature, acoustic, or current signatures.
+- Detect product and process defects with vision and sensor-based inspection.
+- Build digital twins and process models to simulate and optimize production lines.
+- Deploy explainable AI on edge devices and PLCs for operator trust and regulatory compliance.
+
+## Steps
+
+1. Collect sensor, image, log, and maintenance records from production machines and lines.
+2. Train anomaly-detection or survival models for predictive maintenance and measure warning lead time.
+3. Build computer-vision classifiers or segmentation models for defect inspection and compare to human inspection.
+4. Create a digital twin or process model and use it to simulate line bottlenecks and what-if optimizations.
+5. Add explainability (SHAP, Grad-CAM, attention) and validate with operators and domain experts.
+6. Deploy approved models on edge devices or PLCs and continuously monitor drift and false-alarm rates.
 
 ## Code pattern
 
@@ -291,19 +340,27 @@ anomalies = model.predict(X)
     {
         "name": "ai-for-supply-chain",
         "title": "AI for Supply Chain",
-        "description": "Demand forecasting, inventory optimization, risk and resilience, supplier analytics, and end-to-end supply chain visibility.",
+        "description": "Use ML to forecast demand, optimize inventory, score supplier risk, and improve visibility and resilience across multi-echelon supply chains.",
         "devin_body": r'''
 ## When to use
 
 You need to forecast demand, plan inventory, detect disruptions, or optimize sourcing and distribution across a multi-echelon supply chain.
 
-## Key concepts
+## Usage
 
-- **Demand forecasting**: statistical, ML, and deep-learning models for SKU-, store-, and channel-level demand.
-- **Inventory optimization**: safety stock, reorder points, and multi-echelon optimization under uncertainty.
-- **Resilience and risk**: disruption prediction, supplier risk scoring, and scenario planning.
-- **Hierarchical forecasting**: reconcile forecasts across product, location, and time hierarchies.
-- **Real-time visibility**: IoT, ERP, and EDI data integration for end-to-end tracking.
+- Forecast SKU-, store-, and channel-level demand with statistical, ML, or deep-learning models.
+- Optimize safety stock, reorder points, and multi-echelon inventory under uncertainty.
+- Predict disruptions and score supplier risk with multi-criteria and scenario models.
+- Reconcile forecasts hierarchically and integrate IoT, ERP, and EDI data for real-time visibility.
+
+## Steps
+
+1. Ingest historical demand, promotions, external signals, inventory, supplier, and logistics data.
+2. Train demand-forecasting models at the right granularity and reconcile them across product, location, and time.
+3. Build inventory-optimization models that balance service level, holding cost, and obsolescence under demand uncertainty.
+4. Score supplier risk and predict disruptions from financial, geopolitical, weather, and quality signals.
+5. Integrate real-time IoT/ERP/EDI feeds and build exception alerts for stockouts, delays, and bottlenecks.
+6. Backtest forecasts and inventory policies with rolling origin and measure total landed cost and service level.
 
 ## Code pattern
 
@@ -340,19 +397,27 @@ fcst = sf.predict(h=8, level=[90])
     {
         "name": "ai-for-public-health",
         "title": "AI for Public Health",
-        "description": "Disease surveillance, outbreak prediction, resource allocation, geospatial health modeling, and health-equity analytics.",
+        "description": "Use ML and geospatial models for disease surveillance, outbreak forecasting, resource allocation, and health-equity analytics.",
         "devin_body": r'''
 ## When to use
 
 You are working to predict disease burden, allocate resources, or understand health inequities at the population or health-system level.
 
-## Key concepts
+## Usage
 
-- **Syndromic and digital surveillance**: combine traditional epidemiology with search, social, mobile, and environmental signals.
-- **Outbreak forecasting**: nowcasting and short-term forecasting of infectious diseases.
-- **Geospatial and Earth-AI modeling**: link environmental, climate, and mobility data to health outcomes.
-- **Resource allocation**: optimize clinic, vaccine, or workforce distribution under constraints.
-- **Health equity and bias**: audit models for demographic and geographic disparities.
+- Combine traditional epidemiology with search, social, mobile, and environmental signals for syndromic surveillance.
+- Nowcast and short-term forecast infectious disease burden and outbreaks.
+- Link environmental, climate, and mobility data to health outcomes through geospatial ML.
+- Optimize clinic, vaccine, and workforce distribution and audit for demographic and geographic equity.
+
+## Steps
+
+1. Aggregate case data, syndromic signals, search/social trends, mobility, weather, and environmental covariates.
+2. Build a nowcasting or short-term forecasting model and validate probabilistic calibration on held-out seasons.
+3. Train geospatial models that link climate, land use, and mobility to disease risk and health outcomes.
+4. Optimize resource allocation (clinics, vaccines, workforce) under capacity and equity constraints.
+5. Audit predictions for bias across age, gender, race, and geography and report equity metrics.
+6. Deploy a decision-support dashboard for public-health agencies and update as new data streams arrive.
 
 ## Code pattern
 
@@ -387,19 +452,27 @@ model.fit(X_train, y_train, eval_set=[(X_test, y_test)])
     {
         "name": "ai-for-disaster-response",
         "title": "AI for Disaster Response",
-        "description": "Situational awareness, damage assessment, evacuation planning, supply pre-positioning, and multi-modal disaster imagery analysis.",
+        "description": "Use multi-modal imagery and ML to assess damage, map situational awareness, plan evacuations, and pre-position supplies during disasters.",
         "devin_body": r'''
 ## When to use
 
 You are supporting first responders, emergency managers, or humanitarian agencies before, during, or after a natural or human-made disaster.
 
-## Key concepts
+## Usage
 
-- **Multi-modal disaster imagery**: satellite, aerial, drone (sUAS), and social-media imagery for rapid assessment.
-- **Damage and change detection**: segmentation and classification of building, road, and infrastructure damage.
-- **Situational awareness and common operating picture**: fuse imagery, sensor, and crowd data into GIS-ready outputs.
-- **Evacuation and logistics**: optimize routes, shelter assignment, and resource pre-positioning.
-- **Operational constraints**: disconnected environments, real-time deadlines, and heterogeneous data quality.
+- Analyze satellite, aerial, drone, and social-media imagery for rapid disaster assessment.
+- Detect and classify building, road, and infrastructure damage from multi-temporal imagery.
+- Build a common operating picture by fusing imagery, sensors, and crowd data into GIS-ready outputs.
+- Optimize evacuation routes, shelter assignment, and resource pre-positioning under real-time constraints.
+
+## Steps
+
+1. Collect pre- and post-event satellite, aerial, drone, and social-media imagery and align them to a common CRS.
+2. Run a change-detection or damage-segmentation model and classify damage levels (e.g., xBD-style labels).
+3. Extract roads, shelters, and critical infrastructure and estimate affected population and needs.
+4. Optimize evacuation routes, shelter assignment, and resource pre-positioning with capacity and time constraints.
+5. Build a live situational-awareness dashboard that fuses model outputs with field reports and sensor data.
+6. Validate damage labels with ground truth and train a lightweight edge model for offline field deployment.
 
 ## Code pattern
 
@@ -435,19 +508,27 @@ show(rgb)
     {
         "name": "ai-for-space-exploration",
         "title": "AI for Space Exploration",
-        "description": "Onboard autonomy, science target selection, anomaly detection, mission planning, and analysis of space and Earth-observation data.",
+        "description": "Select science targets and detect anomalies onboard spacecraft and rovers to maximize discovery without round-trip latency.",
         "devin_body": r'''
 ## When to use
 
 You are designing, simulating, or operating spacecraft, rovers, or satellites that must make decisions with limited communication, power, or compute.
 
-## Key concepts
+## Usage
 
-- **Onboard autonomy and science agents**: detect events, prioritize observations, and retarget instruments without ground-in-the-loop.
-- **Dynamic targeting and opportunistic science**: AI-driven selection of targets during orbital overflights.
-- **Anomaly detection and health monitoring**: detect faults in telemetry, instruments, and subsystems.
-- **Mission planning and scheduling**: optimize observation campaigns under constraints.
-- **Earth-observation and planetary data**: analyze multispectral, hyperspectral, and mass-spectrometer data.
+- Run onboard science agents that detect events, prioritize targets, and retarget instruments without ground-in-the-loop.
+- Select targets dynamically during orbital overflights or rover traverses.
+- Detect faults in telemetry, instruments, and subsystems with anomaly detection.
+- Optimize observation and operations schedules under power, memory, and downlink constraints.
+
+## Steps
+
+1. Define science goals, instrument constraints, and onboard compute/downlink budgets for the mission.
+2. Train event-detection and target-priority models on representative orbital or rover datasets.
+3. Implement onboard anomaly detection on telemetry and instrument health data.
+4. Build a scheduler that optimizes observation campaigns and downlink priorities under resource constraints.
+5. Validate the autonomy stack in high-fidelity mission simulators and analog test datasets.
+6. Deploy the qualified models on flight-like hardware and monitor performance during operations.
 
 ## Code pattern
 
@@ -486,19 +567,27 @@ anomaly_mask = score > 5
     {
         "name": "ai-for-governance",
         "title": "AI for Governance",
-        "description": "Public-service delivery, regulatory compliance, algorithmic accountability, participatory policy tools, and fair decision-support systems.",
+        "description": "Audit public-sector algorithms against governance, privacy, and fairness standards to ensure accountable and participatory AI deployment.",
         "devin_body": r'''
 ## When to use
 
 You are building or auditing AI systems used by governments, public agencies, or regulated industries where accountability, fairness, and transparency are essential.
 
-## Key concepts
+## Usage
 
-- **Algorithmic accountability and transparency**: model cards, documentation, explainability, and audit trails.
-- **Fairness and bias auditing**: group fairness, equalized odds, demographic parity, and calibration by subgroup.
-- **Public-service automation**: eligibility, benefits, permitting, and case routing with human oversight.
-- **Regulatory compliance**: EU AI Act, U.S. AI accountability frameworks, OECD AI Principles.
-- **Participatory and deliberative AI**: citizen input, redress mechanisms, and public comment analysis.
+- Document and audit AI systems with model cards, explainability, and algorithmic accountability frameworks.
+- Audit for group fairness, equalized odds, demographic parity, and calibration across subgroups.
+- Automate public-service decisions (eligibility, benefits, permitting) with human oversight and due process.
+- Map systems to regulatory frameworks (EU AI Act, NIST AI RMF, OECD AI Principles).
+
+## Steps
+
+1. Inventory the AI system, its training data, intended use, stakeholders, and risk profile.
+2. Document assumptions, limitations, and model cards, and establish audit trails for decisions.
+3. Measure fairness and bias across subgroups using appropriate metrics and mitigations (e.g., Fairlearn, Aequitas).
+4. Generate explainable outputs (SHAP, LIME, counterfactuals) and review representative decisions with stakeholders.
+5. Map risks and mitigations to applicable governance and regulatory frameworks.
+6. Set up continuous monitoring, redress mechanisms, and periodic re-audits.
 
 ## Code pattern
 
@@ -534,19 +623,27 @@ mitigated.fit(X_train, y_train, sensitive_features=A_train)
     {
         "name": "ai-for-social-good",
         "title": "AI for Social Good",
-        "description": "Education, poverty alleviation, agriculture, humanitarian response, accessibility, and community-driven AI for underserved populations.",
+        "description": "Optimize vaccination outreach and agricultural advice for low-resource communities to improve health and livelihood outcomes.",
         "devin_body": r'''
 ## When to use
 
 You are deploying AI to improve outcomes in education, health, agriculture, humanitarian aid, or economic inclusion, especially in low-resource or marginalized communities.
 
-## Key concepts
+## Usage
 
-- **Education and personalized tutoring**: adaptive learning, chat-based tutoring, and low-bandwidth delivery.
-- **Poverty and development economics**: rigorous impact evaluation, cost-effectiveness, and scalable social programs.
-- **Agriculture and food security**: crop-health monitoring, yield prediction, and extension services for smallholder farmers.
-- **Humanitarian and crisis response**: information triage, needs assessment, and resource matching.
-- **Participatory design and ethics**: co-design with communities, local language support, and harm prevention.
+- Deliver personalized, low-bandwidth tutoring and educational support with adaptive learning systems.
+- Evaluate impact with randomized or quasi-experimental designs and cost-effectiveness analysis.
+- Support smallholder agriculture with crop-health monitoring, yield prediction, and extension chatbots.
+- Triage information, assess needs, and match resources in humanitarian and crisis response.
+
+## Steps
+
+1. Engage affected communities and domain partners to define the problem, outcomes, and ethical constraints.
+2. Co-design a low-cost, low-bandwidth, and accessible AI solution (chatbot, advisory app, monitoring tool).
+3. Collect local data and train or adapt models, ensuring local language and cultural relevance.
+4. Run a pilot with an RCT, A/B test, or quasi-experimental design to measure learning, adoption, or welfare outcomes.
+5. Assess cost-effectiveness, equity, and unintended consequences compared to non-AI alternatives.
+6. Iterate with community feedback, scale responsibly, and monitor for harm and drift.
 
 ## Code pattern
 

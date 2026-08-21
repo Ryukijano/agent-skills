@@ -2,26 +2,25 @@ SKILLS = [
     {
         "name": "ai-for-e-government",
         "title": "AI for E-Government",
-        "description": "Chatbots and virtual assistants, proactive public services, document automation, eligibility screening, and responsible AI in digital government.",
+        "description": "Automates citizen-facing public services through conversational agents, document processing, and proactive eligibility screening.",
         "devin_body": r'''## When to use
 
 You are modernizing digital government services, automating citizen inquiries, or designing proactive, citizen-centric public service delivery.
 
 ## Usage
 
-- **Virtual assistants and chatbots**: handle FAQs, guide applicants, and triage service requests.
-- **Proactive public services**: predict needs, pre-fill forms, and deliver personalized notifications.
-- **Document processing**: extract data, classify submissions, and automate routine approvals.
-- **Eligibility and benefits**: screen citizens, match services, and reduce administrative burden.
-- **Responsible AI**: ensure transparency, accountability, and accessibility in public systems.
+- **Citizen chatbots and voice assistants**: answer FAQs, guide form completion, and route complex queries using services such as Portugal's ePortugal Virtual Assistant or India's Jan-Sahayak.
+- **Document processing and pre-fill**: extract fields from submissions, classify requests, and auto-populate forms with NLP/LLM pipelines.
+- **Proactive eligibility screening**: match residents to benefits, send renewal reminders, and flag missing documents.
+- **Responsible AI governance**: monitor responses for bias, maintain audit trails, and provide human escalation paths.
 
 ## Steps
 
-1. Map citizen journeys and high-volume service touchpoints.
-2. Curate and clean government documents, forms, and policy text.
-3. Build or fine-tune a conversational AI or classification pipeline.
-4. Implement human-in-the-loop review for high-stakes decisions.
-5. Monitor usage, satisfaction, and bias metrics continuously.
+1. Map high-volume citizen journeys and identify service pain points.
+2. Curate official policy documents, forms, and FAQs into a vetted knowledge base.
+3. Build a retrieval-augmented generation or conversational pipeline grounded in authoritative sources.
+4. Pilot with one service, measuring deflection, resolution, and satisfaction.
+5. Audit outputs for accuracy, fairness, and accessibility before scaling.
 
 ## Code pattern
 
@@ -58,26 +57,25 @@ print(result["answer"])
     {
         "name": "ai-for-civic-tech",
         "title": "AI for Civic Tech",
-        "description": "Digital participation, deliberation, civic engagement, public comment analysis, and participatory budgeting tools powered by AI.",
+        "description": "Supports participatory democracy by analyzing public comments, mapping priorities, and summarizing deliberation themes.",
         "devin_body": r'''## When to use
 
 You are facilitating public participation, analyzing community input, or building tools for deliberative democracy and civic engagement.
 
 ## Usage
 
-- **Public comment analysis**: classify, summarize, and cluster citizen feedback.
-- **Participatory budgeting**: recommend allocation options and visualize trade-offs.
-- **Deliberation support**: cluster arguments, surface consensus, and identify concerns.
-- **Civic chatbots**: answer questions and collect input on local issues.
-- **Transparency**: make government data and decisions more accessible and explainable.
+- **Public comment analysis**: classify, summarize, and cluster feedback from consultations using NLP and topic modeling.
+- **Participatory budgeting**: visualize trade-offs, recommend allocations, and report community priorities.
+- **Deliberation support**: identify consensus, surface concerns, and map argument themes from town halls or digital platforms.
+- **Civic chatbots and issue mapping**: answer local questions and collect georeported community input.
 
 ## Steps
 
 1. Define participation goals and target communities.
-2. Collect public comments, petitions, survey data, or participatory inputs.
-3. Clean and anonymize inputs; apply PII redaction.
-4. Use NLP to summarize themes and sentiment.
-5. Report findings back to participants and decision-makers.
+2. Collect comments, surveys, and petitions from platforms such as Commonplace or DIPAS, then redact PII.
+3. Use open-source NLP or LLMs to summarize themes, sentiment, and geographic patterns.
+4. Validate AI themes against manual coding and report findings back to participants.
+5. Track demographic reach and the actionability of recommendations.
 
 ## Code pattern
 
@@ -117,26 +115,25 @@ print(summary[0]["summary_text"])
     {
         "name": "ai-for-public-transport",
         "title": "AI for Public Transport",
-        "description": "Ridership prediction, service scheduling, bus and rail dispatch optimization, disruption recovery, and multi-modal transit analytics.",
+        "description": "Optimizes transit operations with ridership forecasts, dynamic scheduling, and real-time disruption recovery.",
         "devin_body": r'''## When to use
 
 You are optimizing bus/rail operations, forecasting ridership, planning schedules, or recovering from transit disruptions.
 
 ## Usage
 
-- **Ridership forecasting**: predict passenger flows by route, stop, and time.
-- **Schedule optimization**: set headways, fleet size, and crew rosters.
-- **Disruption recovery**: re-route vehicles and inform passengers in real time.
-- **Demand-responsive transit**: match on-demand shuttles with riders.
-- **Multi-modal analytics**: integrate feeds from trains, buses, bikeshare, and ride-hail.
+- **Ridership forecasting**: predict passenger flows by route, stop, and time using GTFS, AFC, and weather data.
+- **Dynamic headways and scheduling**: adjust frequencies, fleet rosters, and vehicle assignments to match demand and reduce crowding.
+- **Disruption recovery**: re-route vehicles and push passenger alerts during incidents and special events.
+- **Demand-responsive transit**: match on-demand shuttles with riders and integrate trains, buses, bikeshare, and ride-hail feeds.
 
 ## Steps
 
-1. Ingest GTFS, AFC, AVL, and passenger count data.
-2. Build forecasting models for short- and medium-term demand.
-3. Simulate service scenarios and cost-service trade-offs.
-4. Deploy real-time decision support for dispatchers.
-5. Evaluate equity across routes and population groups.
+1. Ingest GTFS, AVL, AFC, and passenger count data.
+2. Build short- to medium-term forecasting models with seasonality, weather, and event features.
+3. Simulate headway, fleet, and route scenarios against cost and service targets.
+4. Deploy real-time decision support for dispatchers and operations centers.
+5. Backtest forecasts and measure on-time performance, crowding, and equity.
 
 ## Code pattern
 
@@ -174,26 +171,25 @@ print(fcst.head())
     {
         "name": "ai-for-public-utilities",
         "title": "AI for Public Utilities",
-        "description": "Smart grid load forecasting, water and energy demand prediction, asset maintenance, leak and outage detection, and resource allocation.",
+        "description": "Detect leaks and anomalies across water and energy smart-meter networks to cut non-revenue water and response times.",
         "devin_body": r'''## When to use
 
 You are managing electricity, water, or gas distribution, forecasting demand, detecting faults, or optimizing infrastructure assets.
 
 ## Usage
 
-- **Load and demand forecasting**: predict electricity, water, and gas consumption.
-- **Asset health**: predict transformer, pump, pipe, and meter failures.
-- **Leak and outage detection**: identify anomalies in AMI/SCADA data.
-- **Conservation voltage optimization**: reduce peak demand and losses.
-- **Renewable integration**: forecast solar/water availability and storage dispatch.
+- **Demand forecasting**: predict electricity, water, and gas consumption using AMI, SCADA, GIS, and weather feeds.
+- **Leak and outage detection**: identify anomalies in pressure, flow, voltage, and meter data.
+- **Asset health scoring**: rank transformers, pumps, pipes, and meters for risk-based maintenance.
+- **Conservation and voltage optimization**: reduce peak demand, non-revenue water, and distribution losses.
 
 ## Steps
 
-1. Integrate AMI, SCADA, GIS, weather, and customer data.
-2. Build time-series and anomaly models for demand and faults.
-3. Prioritize maintenance and inspections by risk score.
-4. Deploy real-time dashboards and alerts for operators.
-5. Validate with field crews and operational outcomes.
+1. Integrate AMI, SCADA, GIS, weather, and customer data into a unified time-series platform.
+2. Build forecasting and anomaly models for demand, leaks, and voltage deviations.
+3. Prioritize maintenance and inspections by risk score and consequence.
+4. Deploy real-time dashboards and alerts for control-room operators.
+5. Validate with field crews and operational outcomes, retraining as DERs and demand patterns evolve.
 
 ## Code pattern
 
@@ -230,26 +226,25 @@ df["anomaly"] = clf.fit_predict(X)
     {
         "name": "ai-for-taxation",
         "title": "AI for Taxation",
-        "description": "Tax compliance risk scoring, fraud and evasion detection, audit selection, taxpayer assistance, and revenue forecasting.",
+        "description": "Prioritizes tax audits and flags non-compliance by scoring returns, third-party data, and network relationships.",
         "devin_body": r'''## When to use
 
 You are modernizing tax administration, detecting non-compliance, prioritizing audits, or assisting taxpayers with filings.
 
 ## Usage
 
-- **Risk scoring**: prioritize returns and transactions for review.
-- **Fraud detection**: identify refund scams, under-reporting, and shell networks.
-- **Taxpayer assistance**: answer questions and guide filings with chatbots.
-- **Audit support**: classify documents and extract entities.
-- **Revenue forecasting**: predict collections and evaluate policy impacts.
+- **Risk scoring and audit selection**: prioritize returns and transactions by compliance risk.
+- **Fraud and evasion detection**: flag refund scams, under-reporting, and shell-company networks.
+- **Taxpayer assistance**: answer filing questions and guide compliance through chatbots and portals.
+- **Revenue forecasting and policy impact**: predict collections and simulate tax-policy changes.
 
 ## Steps
 
-1. Integrate tax returns, payments, third-party data, and satellite/imagery data.
-2. Build supervised and unsupervised risk models with features and networks.
-3. Explain model scores to auditors and legal reviewers.
-4. Implement human-in-the-loop audit selection.
-5. Monitor outcomes for fairness and revenue impact.
+1. Integrate tax returns, payments, third-party data, and entity network relationships.
+2. Build supervised and unsupervised risk models with explainable scores.
+3. Implement human-in-the-loop review for high-stakes audit selection.
+4. Deploy taxpayer-facing assistants and monitor resolution and accuracy rates.
+5. Monitor fairness, revenue impact, and model drift against audit outcomes.
 
 ## Code pattern
 
@@ -287,26 +282,25 @@ clf = RandomForestClassifier(random_state=42, class_weight="balanced").fit(X_tra
     {
         "name": "ai-for-budgeting",
         "title": "AI for Budgeting",
-        "description": "Public expenditure forecasting, budget allocation optimization, fiscal scenario analysis, program-cost modeling, and spending anomaly detection.",
+        "description": "Forecasts expenditures and simulates fiscal scenarios to optimize program allocations and spending controls.",
         "devin_body": r'''## When to use
 
 You are preparing government budgets, forecasting expenditures, optimizing allocations, or analyzing fiscal scenarios.
 
 ## Usage
 
-- **Expenditure forecasting**: predict revenue and spending by program and time.
-- **Allocation optimization**: balance objectives, constraints, and priorities.
-- **Scenario analysis**: simulate economic shocks and policy changes.
-- **Performance-based budgeting**: link funding to program outcomes.
-- **Anomaly detection**: flag unusual commitments or spending patterns.
+- **Expenditure and revenue forecasting**: predict spending by program and time horizon using historical execution and macro data.
+- **Allocation optimization**: balance priorities under fiscal constraints and policy goals.
+- **Scenario analysis**: simulate economic shocks, policy changes, and revenue shortfalls.
+- **Spending anomaly detection**: flag unusual commitments, cost overruns, and reallocation patterns.
 
 ## Steps
 
 1. Gather historical budgets, execution data, and macroeconomic indicators.
-2. Build forecasting models for revenue and expenditure lines.
-3. Define policy objectives and constraints for allocation.
-4. Use optimization or simulation to compare budget scenarios.
-5. Validate projections with finance officers and economists.
+2. Build hierarchical forecasting models for revenue and expenditure lines.
+3. Define objectives, constraints, and policy priorities.
+4. Run optimization or simulation to compare budget scenarios.
+5. Validate projections with finance officers and publish confidence intervals.
 
 ## Code pattern
 
@@ -344,26 +338,25 @@ for train_idx, test_idx in TimeSeriesSplit(n_splits=3).split(X):
     {
         "name": "ai-for-social-services",
         "title": "AI for Social Services",
-        "description": "Eligibility screening, benefits triage, case management support, risk stratification, and resource matching for social care and public assistance.",
+        "description": "Matches clients to benefits and services by triaging eligibility, risk, and available community resources.",
         "devin_body": r'''## When to use
 
 You are supporting social service delivery, eligibility determination, case prioritization, or benefit navigation.
 
 ## Usage
 
-- **Eligibility screening**: pre-screen applicants for benefits and services.
-- **Case prioritization**: rank cases by risk, urgency, or complexity.
+- **Eligibility pre-screening**: triage applicants for benefits and services.
+- **Case prioritization**: rank cases by risk, urgency, and complexity.
 - **Resource matching**: connect clients to housing, food, health, and employment programs.
-- **Case-worker support**: summarize notes, suggest next steps, and check policy.
-- **Fraud and error detection**: flag duplicate or inconsistent applications.
+- **Caseworker support**: summarize case notes, suggest next steps, and check policy.
 
 ## Steps
 
 1. Map programs, eligibility rules, and referral pathways.
-2. Collect client, program, and service data with consent.
-3. Build rule-based and ML triage models.
-4. Provide explainable scores and human review for high-stakes decisions.
-5. Track outcomes, wait times, and access disparities.
+2. Collect client, program, and service data with consent and data minimization.
+3. Build rule-based and ML triage models with explainable outputs.
+4. Provide human review for high-stakes benefit and placement decisions.
+5. Track outcomes, wait times, and access disparities across groups.
 
 ## Code pattern
 
@@ -400,18 +393,17 @@ df["risk_score"] = model.predict_proba(X)[:, 1]
     {
         "name": "ai-for-veterans-services",
         "title": "AI for Veterans Services",
-        "description": "Claims processing, benefits eligibility, health risk identification, veteran-centered care coordination, and administrative automation at VA and related agencies.",
+        "description": "Accelerates veteran benefit claims and care coordination by triaging cases, summarizing evidence, and scheduling services.",
         "devin_body": r'''## When to use
 
 You are improving access to benefits, healthcare, and memorial services for veterans, or streamlining VA claims and casework.
 
 ## Usage
 
-- **Claims triage**: route, prioritize, and summarize disability claims.
-- **Benefits eligibility**: match veterans to available programs.
+- **Claims triage and routing**: prioritize and summarize disability claims evidence.
+- **Benefits matching**: match veterans to eligible programs and track status.
 - **Clinical decision support**: identify risk, predict readmissions, and suggest care.
-- **Veteran experience**: chatbots, scheduling, and status updates.
-- **Backlog reduction**: automate evidence review and document classification.
+- **Veteran-facing assistants**: provide plain-language answers and appointment scheduling.
 
 ## Steps
 
@@ -456,26 +448,25 @@ print(summary[0]["summary_text"])
     {
         "name": "ai-for-public-records",
         "title": "AI for Public Records",
-        "description": "Automated records classification, sensitivity review, metadata enrichment, archival appraisal, and access to digital government archives.",
+        "description": "Classifies, appraises, and redacts born-digital government records to accelerate archival review and public access.",
         "devin_body": r'''## When to use
 
 You are managing born-digital government records, reducing archival backlogs, or improving public access to official documents.
 
 ## Usage
 
-- **Records classification**: assign retention, security, and access labels.
-- **Sensitivity review**: flag personal, classified, or confidential content.
-- **Metadata extraction**: identify entities, dates, and topics.
-- **Appraisal and selection**: surface historically significant material.
-- **Public access**: redact, index, and search records for disclosure.
+- **Records classification and retention**: assign retention, security, and access labels.
+- **Sensitivity review and redaction**: flag personal, classified, or confidential content.
+- **Metadata extraction**: identify entities, dates, and topics for search and discovery.
+- **Appraisal and selection**: surface historically significant material for transfer.
 
 ## Steps
 
 1. Inventory records formats, systems, and retention schedules.
-2. Pre-process text, images, audio, and structured data.
-3. Train or apply classifiers for sensitivity and retention.
+2. Pre-process text, images, audio, and structured data from repositories.
+3. Train or apply classifiers for sensitivity, retention, and PII.
 4. Route uncertain cases to records professionals for review.
-5. Publish or release approved records with rich metadata.
+5. Publish approved records with rich metadata and redactions.
 
 ## Code pattern
 
@@ -511,18 +502,17 @@ print(redacted)
     {
         "name": "ai-for-urban-planning",
         "title": "AI for Urban Planning",
-        "description": "Spatial plan generation, land-use optimization, urban digital twins, scenario simulation, and participatory planning analytics.",
+        "description": "Generates land-use scenarios and simulates urban growth to balance density, accessibility, and sustainability.",
         "devin_body": r'''## When to use
 
 You are developing land-use plans, simulating urban growth, designing neighborhoods, or engaging communities in planning.
 
 ## Usage
 
-- **Land-use optimization**: allocate residential, commercial, and green spaces.
-- **Urban digital twins**: simulate mobility, energy, and environmental impacts.
-- **Scenario simulation**: test zoning, density, and infrastructure options.
-- **Participatory planning**: analyze public input and design trade-offs.
-- **Remote sensing**: derive built-up, vegetation, and infrastructure data.
+- **Land-use optimization**: allocate residential, commercial, and green spaces across scenarios.
+- **Urban digital twins**: simulate mobility, energy, and environmental impacts at city scale.
+- **Scenario simulation**: test zoning, density, and infrastructure options using agent-based and cellular models.
+- **Participatory planning**: analyze public input and design trade-offs with stakeholder feedback.
 
 ## Steps
 
@@ -566,25 +556,24 @@ print(gdf[["parcel_id", "allowed_units"]].head())
     {
         "name": "ai-for-zoning",
         "title": "AI for Zoning",
-        "description": "Zoning code interpretation, compliance checking, variance analysis, automated answers to zoning questions, and land-use regulation analytics.",
+        "description": "Answers zoning questions and checks parcel compliance against local codes using retrieval-augmented code assistants.",
         "devin_body": r'''## When to use
 
 You are interpreting zoning codes, checking compliance, answering applicant questions, or analyzing land-use regulations.
 
 ## Usage
 
-- **Code Q&A**: answer natural-language questions about zoning rules.
-- **Compliance checks**: determine whether a proposal meets code requirements.
+- **Code Q&A**: answer natural-language questions about zoning rules and permitted uses.
+- **Compliance checks**: determine whether a proposal meets code requirements and overlays.
 - **Variance and exception analysis**: identify required approvals or waivers.
-- **Mapping and overlays**: reconcile zoning districts with environmental and historic layers.
-- **Policy drafting**: generate and compare code language options.
+- **GIS-linked mapping**: reconcile zoning districts with environmental and historic layers.
 
 ## Steps
 
-1. Digitize zoning code text, maps, and related regulations.
-2. Build a retrieval-augmented generation (RAG) pipeline over the code.
-3. Validate answers against authoritative code sections.
-4. Integrate with GIS for map-based compliance.
+1. Digitize zoning code text, maps, and related regulations into a corpus.
+2. Build a retrieval-augmented generation pipeline over the vetted code.
+3. Validate answers against authoritative code sections and map overlays.
+4. Integrate with GIS for parcel-based compliance checks.
 5. Monitor Q&A logs for errors, bias, and outdated answers.
 
 ## Code pattern
@@ -621,7 +610,7 @@ vectorstore = FAISS.from_texts(zoning_paragraphs, embeddings)
     {
         "name": "ai-for-permitting",
         "title": "AI for Permitting",
-        "description": "Automated permit intake, plan review, code compliance checks, application completeness screening, and permit workflow optimization.",
+        "description": "Pre-screens permit applications and checks plan compliance against building and zoning codes to shorten review cycles.",
         "devin_body": r'''## When to use
 
 You are streamlining building or development permits, automating intake screening, or supporting plan review.
@@ -629,7 +618,7 @@ You are streamlining building or development permits, automating intake screenin
 ## Usage
 
 - **Application pre-screening**: check completeness and required documents.
-- **Plan review**: detect code issues and compare against building/zoning codes.
+- **Plan review**: detect code issues and compare against building and zoning codes.
 - **Code compliance**: flag violations and cite relevant sections.
 - **Workflow routing**: assign applications to reviewers by type and complexity.
 - **Status and Q&A**: keep applicants informed and answer common questions.

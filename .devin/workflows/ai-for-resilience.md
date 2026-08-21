@@ -1,6 +1,6 @@
 # /ai-for-resilience
 
-Critical infrastructure resilience, disaster recovery planning, stress testing, and learning-based restoration optimization.
+Use machine learning and network modeling to assess critical infrastructure resilience, optimize recovery, and stress-test systems against cascading failures.
 
 ## Trigger
 

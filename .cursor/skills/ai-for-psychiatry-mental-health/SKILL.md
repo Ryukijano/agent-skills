@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for digital phenotyping, diagnostic support, treatment prediction, and crisis detection.
+Use machine learning and sensing to support mental-health monitoring, diagnostic decision support, treatment prediction, and crisis detection.
 
 ## When to use
 
 You are building models to support mental health diagnosis, monitoring, or personalized intervention.
 
-## Key concepts
+## Usage
 
-- **Digital phenotyping**: behavior signals from phones, wearables, or speech.
-- **Crisis detection**: identify self-harm or suicidal ideation in text.
-- **Treatment response prediction**: predict outcomes for therapy or medications.
-- **Privacy and ethics**: mental health data is highly sensitive.
-- **Clinical validation**: models must be evaluated with clinical experts.
+- Detect symptom changes and crisis risk from smartphone, wearable, speech, text, and EHR signals.
+- Predict treatment response to medications or therapy from clinical notes and structured data.
+- Augment clinical decision support and documentation while preserving clinician oversight.
+- Build conversational and digital therapeutic agents that deliver CBT, skills training, and triage.
+- Evaluate safety, bias, privacy, and regulatory compliance before deployment in clinical settings.
+
+## Steps
+
+1. Collect and harmonize multimodal data (wearables, app usage, audio, EHR, clinical notes) with consent and governance.
+2. Engineer behavioral and clinical features that capture symptom trajectories, sleep, activity, and mood.
+3. Train classifiers or survival models to predict diagnosis, treatment response, or imminent crisis.
+4. Integrate model outputs into clinician-facing dashboards or decision-support tools with human oversight.
+5. Validate predictions against clinical expert judgment, structured outcomes, and representative populations.
+6. Monitor for algorithmic bias, privacy breaches, and safety events; iterate under regulatory and ethical review.
 
 ## Code pattern
 

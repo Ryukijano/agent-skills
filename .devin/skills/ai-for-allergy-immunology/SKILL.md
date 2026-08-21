@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for asthma phenotyping and exacerbation prediction, allergic rhinitis and food/drug allergy risk, anaphylaxis, and primary immunodeficiency screening.
+Use machine learning to phenotype asthma, predict exacerbations, assess allergy risk, and screen immunodeficiency.
 
 ## When to use
 
 You are modeling asthma, allergic rhinitis, atopic dermatitis, food or drug allergy, anaphylaxis risk, or primary immunodeficiency from clinical, wearable, laboratory, or genomic data.
 
-## Key concepts
+## Usage
 
-- **Asthma phenotyping**: clustering by inflammation, spirometry, FeNO, and exacerbation patterns.
-- **Exacerbation prediction**: environmental, medication, and physiological triggers.
-- **Allergy diagnostics**: skin-prick tests, specific IgE, component-resolved diagnostics, and oral food challenges.
-- **Drug and food allergy risk**: medication exposure, reaction history, and biologics.
-- **Immunodeficiency screening**: infection frequency, immune cell counts, and genomic variants.
+- Cluster asthma phenotypes by inflammation, spirometry, FeNO, and exacerbation patterns.
+- Predict asthma exacerbations from environmental, medication, and physiological triggers.
+- Interpret skin-prick, specific IgE, component-resolved diagnostics, and oral challenge data.
+- Predict drug and food allergy risk and anaphylaxis severity.
+- Screen primary immunodeficiency from infection history, cell counts, and genomics.
+
+## Steps
+
+1. Collect clinical, wearable, lab, genomic, and environmental data for the target allergy or immune condition.
+2. Define outcomes (exacerbation, reaction severity, immunodeficiency flag) and windows.
+3. Train models with seasonality, device standardization, and class imbalance in mind.
+4. Validate against challenge-based labels and clinical expert review.
+5. Integrate predictions into asthma action plans, allergy clinics, or screening tools.
+6. Monitor pediatric and adult differences and update as immunological understanding evolves.
 
 ## Code pattern
 

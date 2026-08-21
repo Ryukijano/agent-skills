@@ -1,6 +1,6 @@
 # /ai-for-nlp
 
-Large language models, text classification, machine translation, question answering, information extraction, and prompt engineering.
+Use AI for NLP to classify text, translate, answer questions and align language models.
 
 ## Trigger
 

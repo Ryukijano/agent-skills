@@ -1,6 +1,6 @@
 # /ai-for-hospitality
 
-AI for guest personalization, revenue management, dynamic pricing, operations, and conversational service.
+Use AI for Hospitality to forecast demand, set prices, staff operations and personalize guest service.
 
 ## Trigger
 

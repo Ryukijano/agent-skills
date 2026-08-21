@@ -1,6 +1,6 @@
 # /ai-for-oceanography
 
-Data-driven ocean forecasting, current reconstruction, eddy detection, and marine ecosystem modeling.
+Use data-driven models to reconstruct ocean currents, detect mesoscale eddies, and forecast ocean state from satellite and in-situ observations.
 
 ## Trigger
 

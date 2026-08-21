@@ -2,19 +2,28 @@
 
 ## Description
 
-Spatially resolved transcriptomics and proteomics, cell segmentation, neighborhood analysis, and integration with imaging data.
+Use machine learning on spatially resolved transcriptomics and proteomics to segment cells, analyze neighborhoods, integrate imaging and map tissue microenvironments.
 
 ## When to use
 
 You are analyzing spatially resolved transcriptomics, proteomics, or multi-omics data and need to account for tissue context, neighborhood structure, and image features.
 
-## Key concepts
+## Usage
 
-- **Spatial transcriptomics**: Visium, Slide-seq, Xenium, MERFISH, Stereo-seq, and seqFISH.
-- **Spatial proteomics**: imaging mass cytometry, CODEX, and MIBI-TOF.
-- **Cell segmentation and deconvolution**: mapping spots or pixels to cell types.
-- **Neighborhood and interaction**: spatial domains, cell-cell communication, and niches.
-- **Spatially variable genes (SVGs)**: genes with expression patterns tied to location.
+- **Process platforms**: analyze Visium, Slide-seq, Xenium, MERFISH, Stereo-seq, and seqFISH data.
+- **Segment or deconvolve**: map spots or pixels to cell types using single-cell references.
+- **Find spatial patterns**: identify spatially variable genes and tissue domains.
+- **Model neighborhoods**: compute cell-cell communication, niches, and enrichment.
+- **Integrate modalities**: combine with H&E images and matched single-cell data.
+
+## Steps
+
+1. Load spatial data and align coordinates with tissue images or H&E sections.
+2. Preprocess expression, select spatially variable genes, and perform normalization.
+3. Segment cells or deconvolve spots into cell-type proportions using single-cell references.
+4. Build spatial neighbor graphs and compute spatial autocorrelation and domain detection.
+5. Infer cell-cell communication, niches, and interactions in spatial neighborhoods.
+6. Validate deconvolution and spatial patterns with IHC, smFISH, or matched scRNA-seq.
 
 ## Code pattern
 

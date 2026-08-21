@@ -1,6 +1,6 @@
 # /ai-for-conservation-planning
 
-Spatial prioritization, protected-area design, systematic conservation planning, and trade-off analysis using optimization and ML.
+Use AI to decide where to protect, restore, or manage land/sea to meet biodiversity targets under budget and equity constraints.
 
 ## Trigger
 

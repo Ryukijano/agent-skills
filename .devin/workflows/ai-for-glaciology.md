@@ -1,6 +1,6 @@
 # /ai-for-glaciology
 
-Glacier mapping, surface mass balance estimation, snow/ice classification, and climate-change impact assessment.
+Use AI to delineate glacier boundaries, estimating surface mass balance, classify ice facies, or project glacier change.
 
 ## Trigger
 

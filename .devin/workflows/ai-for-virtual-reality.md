@@ -1,6 +1,6 @@
 # /ai-for-virtual-reality
 
-Natural interaction, intent recognition, multimodal input, foveated rendering, virtual agents, and AI-driven content creation for VR.
+Use AI for Virtual Reality to recognize intent, render foveated scenes and populate virtual agents.
 
 ## Trigger
 

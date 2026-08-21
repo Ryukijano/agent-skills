@@ -1,6 +1,6 @@
 # /ai-for-spatial-omics
 
-Spatially resolved transcriptomics and proteomics, cell segmentation, neighborhood analysis, and integration with imaging data.
+Use machine learning on spatially resolved transcriptomics and proteomics to segment cells, analyze neighborhoods, integrate imaging and map tissue microenvironments.
 
 ## Trigger
 

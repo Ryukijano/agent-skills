@@ -1,6 +1,6 @@
 # /ai-for-process-manufacturing
 
-Machine learning for continuous and batch chemical, pharmaceutical, food, and materials processes: recipe optimization, soft sensors, advanced process control, and real-time quality prediction.
+Builds soft sensors, optimizes recipes, and controls continuous or batch chemical and pharmaceutical processes in real time.
 
 ## Trigger
 

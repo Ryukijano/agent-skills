@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for corrosion rate prediction, risk-based inspection, cathodic protection, coating lifetime, EIS interpretation, and materials selection.
+Use AI to predict corrosion rates, monitor cathodic protection, optimize materials and coatings and extend asset life for pipelines and industrial infrastructure.
 
 ## When to use
 
 You are managing corrosion risk in infrastructure, pipelines, marine, automotive, or energy assets and need to predict corrosion rates, interpret electrochemical data, schedule inspections, select materials, or evaluate protection systems.
 
-## Key concepts
+## Usage
 
-- **Corrosion informatics**: data-driven prediction of corrosion rate and form from environment and material data.
-- **Electrochemical sensing**: EIS, polarization, Tafel, and open-circuit potential interpretation.
-- **Coating and inhibitor lifetime**: barrier breakdown, water uptake, and inhibitor release prediction.
-- **Risk-based inspection**: prioritizing assets using degradation forecasts and consequence analysis.
-- **Cathodic protection**: optimizing anode layout and current density with data-driven models.
+- **Predict rates**: model corrosion from environment, material, coating, and operating data.
+- **Monitor CP**: assess cathodic protection current, potential, and stray-current effects.
+- **Estimate remaining life**: combine inspection, EIS, and thickness data.
+- **Optimize materials**: select alloys, coatings, and inhibitors for the environment.
+- **Plan inspections**: prioritize high-risk locations and extend in-line inspection intervals.
+
+## Steps
+
+1. Collect environmental, material, coating, and inspection data for the asset.
+2. Train corrosion-rate or remaining-life models and validate against coupons or pull tests.
+3. Integrate CP monitoring data and flag under- or over-protection conditions.
+4. Map corrosion risk across the asset using a digital twin or knowledge graph.
+5. Recommend materials, coatings, or inhibitors and simulate their effect.
+6. Update the model with new inspections and optimize maintenance schedules.
 
 ## Code pattern
 

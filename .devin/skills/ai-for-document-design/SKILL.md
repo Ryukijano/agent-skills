@@ -2,19 +2,28 @@
 
 ## Description
 
-Automating layout, typography, templates, and multi-format rendering of reports, certificates, and proposals.
+Generate consistent, on-brand reports and certificates, proposals and invoices from structured data using templates, typography rules and multi-format rendering.
 
 ## When to use
 
 You need to produce many reports, certificates, proposals, invoices, or policy briefs from structured data while keeping layouts consistent and on-brand.
 
-## Key concepts
+## Usage
 
-- **Document layout generation**: produce structured page layouts from content and design constraints.
-- **Template-based design**: create reusable templates with dynamic fields for text, tables, and images.
-- **Data binding**: map CSV, JSON, or database records into document fields.
-- **Multi-format rendering**: output PDF, DOCX, PPTX, or HTML from a single source of truth.
-- **Typography and accessibility**: choose readable fonts, spacing, color contrast, and tagged PDFs.
+- **Produce structured page layouts from content and design constraints.**
+- **Create reusable templates with dynamic fields for text, tables, and images.**
+- **Map CSV, JSON, or database records into document fields.**
+- **Output PDF, DOCX, PPTX, or HTML from a single source of truth.**
+- **Choose readable fonts, spacing, color contrast, and tagged PDFs.**
+
+## Steps
+
+1. Design and validate a template with brand fonts, colors, margins, and dynamic field placeholders.
+2. Connect the template to a CSV, JSON, or database source and map fields to content areas.
+3. Add conditional logic for optional sections and repeating rows for tables and lists.
+4. Render a batch of documents and inspect page breaks, headers, footers, and formatting.
+5. Validate that dynamic fields are bound and no placeholder text remains.
+6. Test output across PDF, DOCX, PPTX, or HTML and add accessibility tags where required.
 
 ## Code pattern
 

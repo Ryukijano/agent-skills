@@ -2,18 +2,27 @@
 
 ## Description
 
-Computational mythography, knowledge graphs of mythological figures, structural analysis of myths, and cross-cultural narrative comparison.
+Use AI to model mythological narratives, build knowledge graphs of mythic figures, or compare structural patterns across world mythologies.
 
 ## When to use
 
 You are modeling mythological narratives, building knowledge graphs of mythic figures, or comparing structural patterns across world mythologies.
 
-## Key concepts
+## Usage
 
-- **Mythological knowledge graphs**: structured representations of characters, events, objects, and relationships in myths.
-- **Structural analysis**: Levi-Straussian transformations, narrative oppositions, and formal models of mythic variation.
-- **Entity and allusion detection**: LLM-based annotation of mythological references in literary and historical texts.
-- **Cross-cultural comparison**: schema induction and network analysis to compare creation myths and pantheons.
+- Build structured myth databases (characters, events, motifs).
+- Align myths across cultures and language families.
+- Map narrative networks and archetypes.
+- Generate comparative analyses.
+
+## Steps
+
+1. Build structured myth databases (characters, events, motifs).
+2. Align myths across cultures and language families.
+3. Map narrative networks and archetypes.
+4. Generate comparative analyses.
+5. Cite primary sources and mythographers.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

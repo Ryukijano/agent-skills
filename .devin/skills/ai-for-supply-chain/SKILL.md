@@ -2,19 +2,27 @@
 
 ## Description
 
-Demand forecasting, inventory optimization, risk and resilience, supplier analytics, and end-to-end supply chain visibility.
+Use ML to forecast demand, optimize inventory, score supplier risk, and improve visibility and resilience across multi-echelon supply chains.
 
 ## When to use
 
 You need to forecast demand, plan inventory, detect disruptions, or optimize sourcing and distribution across a multi-echelon supply chain.
 
-## Key concepts
+## Usage
 
-- **Demand forecasting**: statistical, ML, and deep-learning models for SKU-, store-, and channel-level demand.
-- **Inventory optimization**: safety stock, reorder points, and multi-echelon optimization under uncertainty.
-- **Resilience and risk**: disruption prediction, supplier risk scoring, and scenario planning.
-- **Hierarchical forecasting**: reconcile forecasts across product, location, and time hierarchies.
-- **Real-time visibility**: IoT, ERP, and EDI data integration for end-to-end tracking.
+- Forecast SKU-, store-, and channel-level demand with statistical, ML, or deep-learning models.
+- Optimize safety stock, reorder points, and multi-echelon inventory under uncertainty.
+- Predict disruptions and score supplier risk with multi-criteria and scenario models.
+- Reconcile forecasts hierarchically and integrate IoT, ERP, and EDI data for real-time visibility.
+
+## Steps
+
+1. Ingest historical demand, promotions, external signals, inventory, supplier, and logistics data.
+2. Train demand-forecasting models at the right granularity and reconcile them across product, location, and time.
+3. Build inventory-optimization models that balance service level, holding cost, and obsolescence under demand uncertainty.
+4. Score supplier risk and predict disruptions from financial, geopolitical, weather, and quality signals.
+5. Integrate real-time IoT/ERP/EDI feeds and build exception alerts for stockouts, delays, and bottlenecks.
+6. Backtest forecasts and inventory policies with rolling origin and measure total landed cost and service level.
 
 ## Code pattern
 

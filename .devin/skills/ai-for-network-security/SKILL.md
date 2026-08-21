@@ -2,19 +2,27 @@
 
 ## Description
 
-Intrusion detection, malware classification, anomaly detection, adversarial defenses, and threat intelligence using ML and LLMs.
+Detect intrusions, malware, and anomalies in network traffic and infrastructure.
 
 ## When to use
 
 You need to detect intrusions, malware, anomalies, or adversarial threats in network traffic, logs, or endpoints.
 
-## Key concepts
+## Usage
 
-- **Network intrusion detection (NIDS)**: classify flows, packets, and sessions as benign or malicious.
-- **Anomaly detection**: one-class SVM, isolation forests, autoencoders, and variational models.
-- **Graph-based threat detection**: use GNNs to detect lateral movement and command-and-control.
-- **Adversarial robustness**: evasion and poisoning attacks against ML security models and defenses.
-- **Threat intelligence and LLM-assisted analysis**: summarize alerts and correlate IOCs.
+- Analyze Zeek, Suricata, and NetFlow logs with AutoZeekWatch.
+- Detect DDoS, C2, and exfiltration patterns.
+- Hunt threats with MITRE ATT&CK and ELK/Splunk.
+- Identify anomalous hosts and lateral movement.
+- Correlate alerts with SIEM and asset context.
+
+## Steps
+
+1. Collect packet captures, flow records, and alert logs.
+2. Engineer features for hosts, ports, protocols, and payloads.
+3. Train supervised or unsupervised anomaly/IDS models.
+4. Integrate with SIEM and SOAR workflows.
+5. Tune and retrain with red-team findings.
 
 ## Code pattern
 

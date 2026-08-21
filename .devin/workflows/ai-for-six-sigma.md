@@ -1,6 +1,6 @@
 # /ai-for-six-sigma
 
-ML-augmented DMAIC for defect reduction, statistical process control, capability analysis, and automated root-cause prioritization in quality improvement.
+Augments DMAIC projects with defect prediction, statistical process control, and designed-experiment optimization.
 
 ## Trigger
 

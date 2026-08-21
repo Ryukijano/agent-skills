@@ -1,6 +1,6 @@
 # /ai-for-lifestyle
 
-Habit formation, hobby and style recommendations, personal goal coaching, and holistic life-planning agents for everyday decisions.
+Use AI to build habits, recommend hobbies, coach personal goals, and deliver holistic lifestyle nudges that fit a user's values.
 
 ## Trigger
 

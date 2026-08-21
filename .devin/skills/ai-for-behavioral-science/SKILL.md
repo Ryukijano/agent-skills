@@ -2,19 +2,27 @@
 
 ## Description
 
-Computational modeling of human behavior, n-of-1 and ecological momentary assessment, digital interventions, and experimentally validated behavior change.
+Use AI to study or influencing human behavior using digital experiments, sensor data, reinforcement learning, or generative models of behavior.
 
 ## When to use
 
 You are studying or influencing human behavior using digital experiments, sensor data, reinforcement learning, or generative models of behavior.
 
-## Key concepts
+## Usage
 
-- **Behavioral experiments and A/B testing**: randomized and within-subject designs for digital interventions.
-- **Ecological momentary assessment (EMA) and digital phenotyping**: in-the-moment, repeated measurements in natural environments.
-- **N-of-1 trials and personalized intervention optimization**: single-participant designs and adaptive optimization.
-- **Computational psychiatry and reinforcement learning models of choice**: model-based and model-free learning, drift-diffusion, and reward models.
-- **Causal and mechanistic behavior-change frameworks**: identifying drivers and mediators of behavior change.
+- Design digital experiments and A/B/n tests.
+- Collect EMA and digital phenotyping data.
+- Run n-of-1 and personalized intervention trials.
+- Model learning and decision-making.
+
+## Steps
+
+1. Design digital experiments and A/B/n tests.
+2. Collect EMA and digital phenotyping data.
+3. Run n-of-1 and personalized intervention trials.
+4. Model learning and decision-making.
+5. Pre-register and replicate findings.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

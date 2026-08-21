@@ -1,6 +1,6 @@
 # /ai-for-building-design
 
-AI for energy, daylight, HVAC, envelope, and MEP performance optimization in the built environment.
+Use AI for Building Design to optimize energy, daylight, HVAC and envelope performance.
 
 ## Trigger
 

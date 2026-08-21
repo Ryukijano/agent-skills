@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for membrane material design, permeability and selectivity prediction, fouling control, and separation process optimization.
+Design polymer membranes for gas and carbon-capture separations using graph ML to surpass selectivity-permeability upper bounds.
 
 ## When to use
 
 You are designing polymeric, ceramic, or 2D membranes for gas separation, water treatment, fuel cells, or energy applications.
 
-## Key concepts
+## Usage
 
-- **Membrane property prediction**: permeability, selectivity, fouling resistance, and mechanical/chemical stability from structure.
-- **Polymeric and 2D material screening**: ML-accelerated virtual screening of gas- and ion-selective membranes.
-- **Fouling and process modeling**: predict transmembrane pressure, flux decline, and cleaning schedules.
-- **Explainable AI for transport mechanisms**: identify structural features controlling free volume, pore size, and solubility.
-- **Inverse design and optimization**: generate polymer repeat units or nanopore structures for target separation performance.
+- Predict membrane permeability, selectivity, fouling resistance, and stability from chemical structure.
+- Screen polymeric and 2D materials for gas, ion, or water-selective membranes.
+- Model fouling, flux decline, and cleaning cycles from process data.
+- Generate polymer repeat units or pore structures for target separation performance.
+
+## Steps
+
+1. Collect membrane chemical structures and measured performance data under relevant conditions.
+2. Represent polymers and 2D materials with repeat units, fragments, and topological descriptors.
+3. Train regression models for permeability/selectivity, applying log-transforms for wide-ranging targets.
+4. Use explainable AI to identify structural drivers of free volume, pore size, and solubility.
+5. Run virtual screening or inverse design to propose candidates and validate top performers with synthesis.
+6. Model fouling and flux decline from process data and optimize cleaning and operating schedules.
 
 ## Code pattern
 

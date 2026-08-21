@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for extrusion, injection molding, blow molding, compounding, mixing, and polymer recycling process optimization and quality control.
+Use machine learning on polymer processing data to predict part quality, detect instabilities, optimize cycle times and reduce scrap.
 
 ## When to use
 
 You are running polymer processing equipment and need to set initial operating points, predict part quality, monitor melt quality, detect process instabilities, or optimize energy and material use in extrusion, injection, or blow molding.
 
-## Key concepts
+## Usage
 
-- **Injection molding**: plasticizing, filling, packing, cooling, shrinkage, warpage, and cycle time.
-- **Extrusion and compounding**: screw geometry, throughput, melt temperature, mixing, and residence time.
-- **Process signatures**: pressure, temperature, torque, and inline rheometry or NIR spectra.
-- **Quality prediction**: dimensional accuracy, sink marks, flash, short shots, and mechanical properties.
-- **Recycling and variability**: handling post-consumer, post-industrial, and mixed feedstocks.
+- **Predict quality**: forecast dimensional, cosmetic, and mechanical properties from process data.
+- **Detect instabilities**: identify flow-front, pressure, and temperature excursions.
+- **Optimize parameters**: tune injection velocity, pack/hold, cooling, and extruder settings.
+- **Monitor extrusion**: predict diameter, thickness, and die swell from in-line sensors.
+- **Reduce scrap**: classify and trace defects to root process conditions.
+
+## Steps
+
+1. Install sensors for temperature, pressure, flow, and machine setpoints and log per-shot data.
+2. Label quality outcomes and defects from inspection or SPC data.
+3. Train regression or classification models to predict part quality or stability.
+4. Identify key process parameters with feature importance and DOE validation.
+5. Optimize settings with surrogate models and validate on production trials.
+6. Deploy a real-time dashboard and controller to flag out-of-control conditions.
 
 ## Code pattern
 

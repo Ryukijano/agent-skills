@@ -2,18 +2,27 @@
 
 ## Description
 
-Coral reef monitoring, bleaching detection, benthic classification, and reef-health assessment from underwater and drone imagery.
+Classify coral health and bleaching from underwater and drone imagery to quantify reef loss and guide conservation actions.
 
 ## When to use
 
 You need to classify benthic habitats, detect coral bleaching, or monitor reef recovery from underwater, drone, or satellite imagery.
 
-## Key concepts
+## Usage
 
-- **Benthic image classification**: CoralNet, mRES-uNet, and point-count models.
-- **Bleaching detection**: healthy vs bleached coral segmentation.
-- **Reef-scale monitoring**: drone RGB, photo-quadrats, and satellite-derived bathymetry.
-- **Underwater image correction**: color restoration and radiometric normalization.
+- Collect underwater, drone, and satellite imagery.
+- Correct color and radiometry for underwater conditions.
+- Train benthic classifiers and bleaching detectors.
+- Aggregate point/pixel predictions to colony or transect scale.
+
+## Steps
+
+1. Collect underwater, drone, and satellite imagery.
+2. Correct color and radiometry for underwater conditions.
+3. Train benthic classifiers and bleaching detectors.
+4. Aggregate point/pixel predictions to colony or transect scale.
+5. Validate against in-situ bleaching and cover surveys.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

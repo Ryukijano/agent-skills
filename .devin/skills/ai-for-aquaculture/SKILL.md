@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for water quality, feeding, disease, and stock management in fish, shrimp, and shellfish farming.
+Optimize feeding, water quality, and disease management in fish and shrimp farms.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are operating or designing a fish, shrimp, or shellfish farm and want to pre
 
 ## Usage
 
-- **Water quality forecasting**: predict dissolved oxygen, pH, ammonia, and temperature dynamics.
-- **Precision feeding and feed optimisation**: adjust rations based on appetite, biomass, and water conditions.
-- **Disease early warning and health monitoring**: detect abnormal behaviour, gill conditions, or mortality trends.
-- **Biomass and growth estimation**: estimate size distribution and stock weight from cameras and sensors.
+- Monitor water quality with DryDock and AquaGrid sensors.
+- Detect pathogens on-site with Sentry or Celvera.
+- Optimize feed rations with iQuatic/Cargill.
+- Predict growth and harvest timing.
+- Automate aeration and feeding based on sensor thresholds.
 
 ## Steps
 
-1. Deploy water-quality sensors, cameras, and/or acoustic devices in tanks, ponds, or cages.
-2. Integrate time-series, image, and feeding records into a farm data platform.
-3. Train models for each target: water forecast, feed response, health, or biomass.
-4. Validate under different stocking densities, seasons, and species conditions.
-5. Connect predictions to automated feeders, aerators, or management dashboards.
+1. Deploy water-quality and feeding sensors in ponds/tanks.
+2. Collect growth, feed, and disease records.
+3. Train models for water quality, growth, and disease risk.
+4. Integrate with automated feeders and aerators.
+5. Validate with survival, growth, and feed conversion.
 
 ## Code pattern
 

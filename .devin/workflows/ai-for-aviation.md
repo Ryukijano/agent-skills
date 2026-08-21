@@ -1,6 +1,6 @@
 # /ai-for-aviation
 
-AI for airline and airport operations, including predictive maintenance, crew and fleet scheduling, disruption recovery, fuel optimization, and safety analytics.
+Use machine learning to predict component failures, optimize flight operations, recover from disruptions, and improve fleet reliability in aviation.
 
 ## Trigger
 

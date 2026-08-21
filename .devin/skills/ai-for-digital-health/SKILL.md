@@ -2,19 +2,27 @@
 
 ## Description
 
-Consumer-facing health apps, wearable biosensors, remote monitoring, patient portals, and data-driven digital wellness interventions.
+Use AI to build or evaluate consumer-facing digital health tools, integrate wearable or sensor data, or conducting remote monitoring and digital-biomarker studies.
 
 ## When to use
 
 You are building or evaluating consumer-facing digital health tools, integrating wearable or sensor data, or conducting remote monitoring and digital-biomarker studies.
 
-## Key concepts
+## Usage
 
-- **mHealth and digital biomarkers**: smartphone apps, wearables, and connected sensors that capture physiology and behavior.
-- **Remote patient monitoring and digital clinical trials**: decentralized data collection, telehealth integration, and virtual trial endpoints.
-- **Wearable signal processing**: PPG, accelerometry, sleep staging, and activity recognition from consumer devices.
-- **Digital phenotyping and ecological momentary assessment**: in-situ, high-frequency behavioral and symptom measurement.
-- **Regulatory and evidence standards**: FDA 510(k)/De Novo, Digital Health Software Precertification, and clinical-validation requirements.
+- Capture wearable, app, and sensor signals.
+- Process PPG, accelerometry, sleep, and activity data.
+- Extract digital biomarkers and EMA endpoints.
+- Build remote monitoring dashboards and alerts.
+
+## Steps
+
+1. Capture wearable, app, and sensor signals.
+2. Process PPG, accelerometry, sleep, and activity data.
+3. Extract digital biomarkers and EMA endpoints.
+4. Build remote monitoring dashboards and alerts.
+5. Validate against clinical gold standards and reference devices.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

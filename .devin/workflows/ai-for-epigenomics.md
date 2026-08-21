@@ -1,6 +1,6 @@
 # /ai-for-epigenomics
 
-DNA methylation, histone modifications, chromatin accessibility, enhancer-promoter interactions, and deep learning models of gene regulation.
+Use deep learning to predict gene-regulatory states and interpret non-coding variants from DNA methylation, histone marks, chromatin accessibility and 3D contact data.
 
 ## Trigger
 

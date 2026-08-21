@@ -1,6 +1,6 @@
 # /ai-for-hunger-relief
 
-AI/ML for food-security early warning, acute food-insecurity forecasting, remote-sensing crop monitoring, and targeted food assistance.
+Use AI/ML to forecast food insecurity, monitor crops, and target emergency food assistance.
 
 ## Trigger
 

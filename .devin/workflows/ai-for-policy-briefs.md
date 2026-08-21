@@ -1,6 +1,6 @@
 # /ai-for-policy-briefs
 
-Converting scientific evidence and legislative text into concise, actionable policy briefs and impact analyses.
+Convert scientific evidence and legislative text into concise, decision-ready policy briefs and impact analyses for government agencies, regulators and advocacy groups.
 
 ## Trigger
 

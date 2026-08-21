@@ -1,6 +1,6 @@
 # /ai-for-permitting
 
-Automated permit intake, plan review, code compliance checks, application completeness screening, and permit workflow optimization.
+Pre-screens permit applications and checks plan compliance against building and zoning codes to shorten review cycles.
 
 ## Trigger
 

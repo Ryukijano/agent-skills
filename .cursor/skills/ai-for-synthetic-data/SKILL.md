@@ -2,18 +2,27 @@
 
 ## Description
 
-Generative models, differential privacy, tabular/image/text synthesis, and utility-privacy evaluation for creating realistic synthetic datasets.
+Use generative models and differential privacy to create realistic, useful, and privacy-preserving synthetic datasets.
 
 ## When to use
 
 You need to augment, privatize, or replace a real dataset with artificial samples for downstream ML, testing, or sharing while preserving privacy and utility.
 
-## Key concepts
+## Usage
 
-- **Tabular synthetic data**: GANs, VAEs, diffusion, copulas, and Bayesian networks for structured records.
-- **Differential privacy (DP)**: formal privacy budgets (epsilon/delta) when training generative models.
-- **LLM-driven text synthesis**: instruction-based generation for low-resource NLP.
-- **Utility-privacy trade-off**: fidelity metrics, downstream task performance, and membership-inference audits.
+- Generate tabular synthetic records with GANs, VAEs, diffusion, copulas, and Bayesian networks.
+- Apply differential privacy budgets when training generative models for release.
+- Synthesize text, images, and low-resource NLP data with LLMs.
+- Audit the utility-privacy trade-off with fidelity, downstream, and membership-inference tests.
+
+## Steps
+
+1. Profile the real dataset and identify sensitive variables and downstream use cases.
+2. Choose a synthesis method (GAN, VAE, diffusion, copula, LLM) and set privacy parameters.
+3. Train the generative model and apply differential privacy or other protections.
+4. Evaluate fidelity with marginals, conditionals, and propensity-score-based metrics.
+5. Audit with membership-inference and attribute-inference attacks before release.
+6. Document method, privacy assumptions, and utility limitations for downstream users.
 
 ## Code pattern
 

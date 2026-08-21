@@ -1,6 +1,6 @@
 # /ai-for-particle-physics
 
-ML for collider event classification, jet tagging, fast detector simulation, neutrino event reconstruction, and new-physics searches.
+Use machine learning to tag jets, reconstruct events, accelerate detector simulation, and search for anomalous signatures at colliders and neutrino experiments.
 
 ## Trigger
 

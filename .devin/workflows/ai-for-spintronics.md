@@ -1,6 +1,6 @@
 # /ai-for-spintronics
 
-ML for magnetic material discovery, skyrmion and MRAM device modeling, spin-orbit torque optimization, and spin-wave logic.
+Use machine learning to discover magnetic materials, model skyrmions, and optimize spintronic devices such as MRAM.
 
 ## Trigger
 

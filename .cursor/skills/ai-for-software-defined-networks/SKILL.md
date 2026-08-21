@@ -2,19 +2,27 @@
 
 ## Description
 
-ML-driven traffic classification, routing, QoS/QoE prediction, resource management, and security in SDN control and data planes.
+Apply AI to SDN control planes for traffic classification, routing, and security.
 
 ## When to use
 
 You are building or operating an SDN/NFV architecture and want to add intelligence for traffic classification, routing, QoS, or security.
 
-## Key concepts
+## Usage
 
-- **SDN control plane**: OpenFlow, Ryu, ONOS, and ODL enable centralized, programmatic control.
-- **Traffic classification and prediction**: ML on flow tables to identify applications and anomalies.
-- **Dynamic routing and resource allocation**: adapt forwarding rules using DRL or optimization.
-- **QoS/QoE prediction**: forecast user experience from network telemetry.
-- **Security and DDoS mitigation**: ML-driven detection and reactive rule installation.
+- Classify OpenFlow traffic in ONOS/RYU with SDN-CF.
+- Detect and block malicious flows at the controller.
+- Optimize routing and load balancing via northbound APIs.
+- Enforce microsegmentation and QoS policies.
+- Integrate with Mininet and OpenFlow switches.
+
+## Steps
+
+1. Set up SDN controller and network emulator.
+2. Collect flow and packet-in events.
+3. Train classification or optimization models.
+4. Deploy control-plane applications (xApps, controller modules).
+5. Validate with network metrics and security scenarios.
 
 ## Code pattern
 

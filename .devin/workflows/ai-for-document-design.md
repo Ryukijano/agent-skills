@@ -1,6 +1,6 @@
 # /ai-for-document-design
 
-Automating layout, typography, templates, and multi-format rendering of reports, certificates, and proposals.
+Generate consistent, on-brand reports and certificates, proposals and invoices from structured data using templates, typography rules and multi-format rendering.
 
 ## Trigger
 

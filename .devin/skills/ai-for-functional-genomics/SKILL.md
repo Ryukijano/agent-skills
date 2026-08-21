@@ -2,19 +2,28 @@
 
 ## Description
 
-Predicting gene regulatory function from sequence and epigenomic data, mapping cis-regulatory elements, and interpreting non-coding variants.
+Use sequence-to-function models to predict gene-regulatory activity, map cis-regulatory elements and interpret non-coding variants from genomic sequence and epigenomic data.
 
 ## When to use
 
 You want to predict gene regulatory function from DNA sequence, map cis-regulatory elements, interpret genetic variants, or link epigenomic and transcriptomic states.
 
-## Key concepts
+## Usage
 
-- **Regulatory grammar**: how TF motifs, chromatin, and sequence context encode activity.
-- **Functional assays**: ChIP-seq, ATAC-seq, MPRA, STARR-seq, and CAGE.
-- **Sequence-to-function models**: DeepSEA, Basset, Enformer, and Basenji.
-- **Variant effect prediction**: scoring non-coding variants for regulatory impact.
-- **TF binding and expression**: linking enhancer states to target genes.
+- **Map regulatory grammar**: infer TF motifs, chromatin, and sequence context.
+- **Integrate assays**: combine ChIP-seq, ATAC-seq, MPRA, STARR-seq, and CAGE data.
+- **Train sequence models**: build or apply DeepSEA, Basset, Enformer, Borzoi, or AlphaGenome.
+- **Predict variant effects**: score non-coding and fine-mapped GWAS variants.
+- **Interpret mechanisms**: link enhancers to genes and explain with motif and attribution analysis.
+
+## Steps
+
+1. Assemble reference genomes, blacklist regions, and collect functional assay data.
+2. Preprocess and binarize or quantify regulatory activity across cell types and conditions.
+3. Train or load a sequence-to-function model and evaluate on held-out chromosomes.
+4. Score non-coding variants and fine-mapped GWAS loci for regulatory impact.
+5. Interpret model predictions with motif discovery, attribution, and in silico mutagenesis.
+6. Validate predicted regulatory effects with MPRA, reporter assays, or eQTL data.
 
 ## Code pattern
 

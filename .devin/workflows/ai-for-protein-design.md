@@ -1,6 +1,6 @@
 # /ai-for-protein-design
 
-Inverse folding, generative backbone design, and binder engineering with ProteinMPNN, RFdiffusion, structure predictors, and Rosetta validation.
+Generate de novo binders and enzymes from target structures or reactions using inverse folding and diffusion models.
 
 ## Trigger
 

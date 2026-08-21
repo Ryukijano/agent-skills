@@ -1,6 +1,6 @@
 # /ai-for-legal-operations
 
-Contract review, clause extraction, matter intake, and AI-assisted legal workflow automation.
+Use AI to automate contract review, triaging legal requests, extract clauses, or streamlining matter management and e-billing.
 
 ## Trigger
 

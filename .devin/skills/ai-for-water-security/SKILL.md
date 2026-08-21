@@ -2,18 +2,27 @@
 
 ## Description
 
-ML for water quality prediction, leak detection, flood forecasting, and hydrological modeling.
+Apply ML to forecast streamflow and floods, monitor water quality, detect leaks, and model hydrological and water-distribution systems.
 
 ## When to use
 
 You are modeling water resources, contamination, distribution systems, or flood risk.
 
-## Key concepts
+## Usage
 
-- **Hydrological forecasting**: rainfall-runoff, streamflow prediction.
-- **Water quality monitoring**: sensor anomaly detection and contaminant classification.
-- **Leak detection**: pressure and flow anomaly detection in distribution networks.
-- **Flood and drought mapping**: satellite and weather-driven risk models.
+- Forecast streamflow and rainfall-runoff with time-series and hybrid physical-ML models.
+- Monitor water quality by detecting sensor anomalies and classifying contamination sources.
+- Detect and localize leaks from pressure, flow, and acoustic data in water distribution networks.
+- Map flood and drought risk using satellite, weather, and hydrological inputs.
+
+## Steps
+
+1. Ingest hydrometeorological time series, sensor networks, and remote-sensing data for the watershed or utility.
+2. Engineer lag, seasonal, and catchment features and split data with proper temporal cross-validation.
+3. Train a streamflow, water-quality, or flood-forecasting model and evaluate with NSE, KGE, or exceedance metrics.
+4. Build a leak-detection model from pressure/flow residuals, graph transformers, or acoustic signatures.
+5. Integrate predictions into a decision-support dashboard for reservoir operations, water-treatment, or emergency response.
+6. Monitor model drift, update with new observations, and validate against regulatory or ground-truth records.
 
 ## Code pattern
 
@@ -41,6 +50,6 @@ model.fit(X_train, y_train)
 ## References
 
 - https://arxiv.org/abs/2402.08989
-- https://www.hydrosdk.org/
+- https://neuralhydrology.readthedocs.io/en/stable/
 - https://github.com/neuralhydrology/neuralhydrology
 - https://waterdata.usgs.gov/

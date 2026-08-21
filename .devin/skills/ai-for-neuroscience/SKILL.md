@@ -2,20 +2,29 @@
 
 ## Description
 
-Deep learning for neural recordings, brain decoding, neuroimaging analysis, connectomics, and NeuroAI foundation models.
+Decode speech and motor intent from electrocorticography to restore communication and movement via brain-computer interfaces.
 
 ## When to use
 
 You are analyzing EEG, MEG, fMRI, calcium imaging, or spike data and want to decode neural states, detect biomarkers, or build NeuroAI models.
 
-## Key concepts
+## Usage
 
-- **Neural encoding / decoding**: mapping stimuli to neural activity or vice versa.
-- **Spike sorting**: separating single-unit activity from extracellular recordings.
-- **Time-series models**: CNNs, RNNs, transformers for neural signals.
-- **Neuroimaging pipelines**: fMRI/EEG preprocessing with MNE/FSL/AFNI.
-- **Connectomics**: mapping structural and functional brain connectivity.
-- **NeuroAI benchmarks**: NeuralBench, brain foundation models.
+- **Neural decoding**: predict cognitive states, movements, or stimuli from EEG, MEG, fMRI, or spike data.
+- **Foundation models**: apply self-supervised models (DIVER-1, NeuroSTORM, AdaBrain) for cross-subject/cross-device representations.
+- **Signal preprocessing**: use MNE, FSL, or AFNI to standardize, filter, and artifact-reject recordings.
+- **Biomarker discovery**: identify neural signatures that correlate with disease, behavior, or treatment response.
+- **Brain-computer interfaces**: build real-time decoders and map them to output devices or feedback.
+- **Connectomics**: model structural and functional brain connectivity from imaging or electrophysiology.
+
+## Steps
+
+1. Choose the neural modality and task (e.g., sleep staging, motor BCI, naturalistic decoding) and curate datasets.
+2. Preprocess signals: re-reference, filter, artifact-reject, and segment into epochs or trials.
+3. Extract features (band power, spectrograms, connectivity) or load pretrained foundation-model embeddings.
+4. Train a task-specific decoder with cross-subject or leave-one-subject validation.
+5. Evaluate on held-out data and compare to expert or clinical annotations (accuracy, kappa, AUROC).
+6. Deploy on the target hardware or device and validate in a real-time, closed-loop setting.
 
 ## Code pattern
 

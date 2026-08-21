@@ -2,18 +2,27 @@
 
 ## Description
 
-Remote sensing, LiDAR, and computer vision for site detection, artifact analysis, and heritage preservation.
+Map hidden archaeological features beneath dense vegetation from airborne LiDAR using deep segmentation to speed discovery of ancient settlements.
 
 ## When to use
 
 You are discovering archaeological sites, classifying artifacts, or monitoring heritage sites.
 
-## Key concepts
+## Usage
 
-- **Predictive modeling**: identify likely site locations from environmental covariates.
-- **Remote sensing and LiDAR**: detect crop marks, microtopography, and buried features.
-- **Artifact classification**: pottery, coins, lithics from images.
-- **3D reconstruction and photogrammetry**: document excavation and monuments.
+- Predict likely archaeological site locations from environmental and landscape covariates.
+- Detect crop marks, microtopography, and buried features in airborne LiDAR and multispectral imagery.
+- Classify artifacts (pottery, coins, lithics) and ecofacts from photographs and 3D scans.
+- Reconstruct excavation contexts and monuments with photogrammetry and 3D mesh processing.
+
+## Steps
+
+1. Assemble remote-sensing, LiDAR, aerial photographs, and field-survey data for the study landscape.
+2. Generate LiDAR visualizations (RVT hillshades, local relief) and train object detectors for mounds, enclosures, or barrows.
+3. Build a predictive site model from environmental covariates and validate against known sites.
+4. Collect artifact images or 3D models and train a classifier with transfer learning and few-shot augmentation.
+5. Run photogrammetry or structured-light scanning to produce 3D records of contexts and monuments.
+6. Curate results in a GIS, review with domain experts, and flag legal/ethical constraints before fieldwork.
 
 ## Code pattern
 

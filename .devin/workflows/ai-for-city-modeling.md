@@ -1,6 +1,6 @@
 # /ai-for-city-modeling
 
-Urban digital twins, 3D city reconstruction, generative city models, and AI-driven urban simulation for planning and operations.
+Reconstructs 3D city environments and integrates live data into digital twins for planning and operations.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-preservation
 
-Predictive monitoring, environmental risk assessment, digital twins, and preventive conservation for built heritage and cultural collections.
+Use AI to monitor environmental conditions, predict degradation, prioritize conservation actions, or build digital twins for heritage preservation.
 
 ## Trigger
 

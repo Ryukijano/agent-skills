@@ -1,6 +1,6 @@
 # /ai-for-public-safety
 
-Emergency call dispatch, response-time optimization, situational awareness, and fairness-aware public safety analytics.
+Use machine learning to triage emergency calls, forecast incident hotspots, position response units, and promote equitable public safety analytics.
 
 ## Trigger
 

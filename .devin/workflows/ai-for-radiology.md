@@ -1,6 +1,6 @@
 # /ai-for-radiology
 
-Deep learning for X-ray, CT, MRI, and mammography interpretation, including lesion detection, segmentation, report generation, and radiology foundation models.
+Use AI for Radiology to detect, segment and report abnormalities in radiological images such as X-ray, CT, MRI and mammography.
 
 ## Trigger
 

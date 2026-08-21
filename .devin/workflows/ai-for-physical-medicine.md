@@ -1,6 +1,6 @@
 # /ai-for-physical-medicine
 
-Machine learning for electrodiagnostic studies, musculoskeletal ultrasound, gait and motion analysis, prosthetics/orthotics, and functional assessment in physiatry.
+Use machine learning to interpret electrodiagnostic studies, musculoskeletal ultrasound, gait, and prosthetics data in physiatry.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-approximation-algorithms
 
-Learning-augmented approximation, learned heuristics for NP-hard maximization and CSPs, and data-driven rounding.
+Use machine learning to improve polynomial-time approximations and rounding for NP-hard problems.
 
 ## Trigger
 

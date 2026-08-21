@@ -1,6 +1,6 @@
 # /ai-for-transportation
 
-Traffic prediction, route optimization, public transit planning, autonomous driving, and multi-modal mobility.
+Retime city traffic signals from sparse vehicle trajectories and prioritize public transit to reduce congestion and emissions.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-fog-computing
 
-AI for hierarchical fog resource management, task scheduling, load balancing, latency optimization, and IoT-fog-cloud orchestration.
+Orchestrate tasks, resources, and services across fog and cloud tiers.
 
 ## Trigger
 

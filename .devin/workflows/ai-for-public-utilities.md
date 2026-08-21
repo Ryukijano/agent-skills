@@ -1,6 +1,6 @@
 # /ai-for-public-utilities
 
-Smart grid load forecasting, water and energy demand prediction, asset maintenance, leak and outage detection, and resource allocation.
+Detect leaks and anomalies across water and energy smart-meter networks to cut non-revenue water and response times.
 
 ## Trigger
 

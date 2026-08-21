@@ -1,6 +1,6 @@
 # /ai-for-renewable-energy
 
-Machine learning for solar, wind, and other renewable energy forecasting, resource assessment, yield optimization, and predictive O&M.
+Forecasts solar and wind output, optimizes site selection, and improves O&M across renewable portfolios with satellite and SCADA data.
 
 ## Trigger
 

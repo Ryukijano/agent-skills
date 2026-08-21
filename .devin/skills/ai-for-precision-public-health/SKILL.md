@@ -2,19 +2,27 @@
 
 ## Description
 
-Subpopulation-targeted prevention, genomics-guided public health, geospatial risk modeling, and equitable intervention targeting.
+Use AI to design data-driven public health interventions that tailor prevention, screening, or resource allocation to specific populations or contexts.
 
 ## When to use
 
 You are designing data-driven public health interventions that tailor prevention, screening, or resource allocation to specific populations or contexts.
 
-## Key concepts
+## Usage
 
-- **Precision public health and stratified prevention**: delivering the right intervention to the right population at the right time.
-- **Genomics, exposomics, and social determinants of health integration**: layered risk modeling.
-- **Geospatial and spatiotemporal risk modeling**: identifying local disease clusters and hotspots.
-- **Targeted intervention allocation and microplanning**: prioritizing communities, facilities, or individuals under constraints.
-- **Equity, ethics, and community engagement**: avoiding stigma and ensuring fair distribution of benefits.
+- Layer genomics, exposome, and social-determinant data.
+- Model local disease risk and hotspots.
+- Prioritize communities and facilities under budget.
+- Design targeted prevention and screening.
+
+## Steps
+
+1. Layer genomics, exposome, and social-determinant data.
+2. Model local disease risk and hotspots.
+3. Prioritize communities and facilities under budget.
+4. Design targeted prevention and screening.
+5. Audit for equity, stigma, and community trust.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

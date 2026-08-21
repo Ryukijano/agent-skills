@@ -1,6 +1,6 @@
 # /ai-for-budgeting
 
-Public expenditure forecasting, budget allocation optimization, fiscal scenario analysis, program-cost modeling, and spending anomaly detection.
+Forecasts expenditures and simulates fiscal scenarios to optimize program allocations and spending controls.
 
 ## Trigger
 

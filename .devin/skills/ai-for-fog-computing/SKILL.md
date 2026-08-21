@@ -2,19 +2,27 @@
 
 ## Description
 
-AI for hierarchical fog resource management, task scheduling, load balancing, latency optimization, and IoT-fog-cloud orchestration.
+Orchestrate tasks, resources, and services across fog and cloud tiers.
 
 ## When to use
 
 You are designing a fog layer between IoT devices and the cloud for low-latency, distributed processing and resource orchestration.
 
-## Key concepts
+## Usage
 
-- **Fog architecture**: hierarchical compute between edge and cloud.
-- **Task scheduling and placement**: optimize latency, energy, and cost across fog nodes.
-- **Resource management**: container orchestration, VM placement, and load balancing.
-- **AI/ML for fog**: RL for service placement, forecasting, and auto-scaling.
-- **Fog-cloud integration**: tiered offloading and data aggregation.
+- Schedule latency-sensitive tasks with FogSim and RL.
+- Place containers and microservices across fog nodes.
+- Predict workload and resource demands.
+- Manage IoT data streams and actuation.
+- Optimize energy and cost with tier-aware policies.
+
+## Steps
+
+1. Model the fog/cloud/edge topology and workloads.
+2. Collect telemetry and latency data.
+3. Train task-placement and resource-allocation models.
+4. Deploy orchestration policies.
+5. Validate end-to-end latency and throughput.
 
 ## Code pattern
 

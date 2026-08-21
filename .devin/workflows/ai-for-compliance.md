@@ -1,6 +1,6 @@
 # /ai-for-compliance
 
-Regulatory mapping, policy gap analysis, automated control testing, and AI-assisted compliance monitoring.
+Use AI to map regulations to controls, identify policy gaps, test compliance automatically, or answer regulatory questions at scale.
 
 ## Trigger
 

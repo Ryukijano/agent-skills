@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for architecting complex systems, model-based systems engineering (MBSE), requirements analysis, trade studies, and verification.
+Apply AI to requirements, MBSE, and system reliability verification.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are architecting a complex system, managing requirements, running trade stud
 
 ## Usage
 
-- **Model-based systems engineering (MBSE)**: SysML models and AI-augmented authoring.
-- **Requirements engineering**: extraction, consistency checking, and traceability.
-- **Trade studies and design-space exploration**: multi-objective optimization and digital threads.
-- **Verification and validation (V&V)**: test planning, simulation-based validation, assurance cases.
-- **Digital twins and digital threads**: linking lifecycle data to system models.
+- Parse requirements with NLP and flag inconsistencies.
+- Build SysML/MBSE models in Cameo/MagicDraw with AI assist.
+- Predict reliability and failure modes from digital threads.
+- Optimize system architectures with multi-objective search.
+- Verify and validate designs through simulation and digital twins.
 
 ## Steps
 
-1. Collect requirements, MBSE models, trade-study data, and test plans.
-2. Structure data into traceable requirements and architecture elements.
-3. Train a requirements/traceability/optimization model with human review.
-4. Validate against system simulations and stakeholder review.
-5. Maintain model provenance as the design evolves.
+1. Elicit and structure requirements in DOORS or Jama.
+2. Build or import SysML/UML models and system digital threads.
+3. Train NLP or simulation models for risk and V&V.
+4. Integrate predictions into MBSE and PLM workflows.
+5. Update models as requirements and architectures evolve.
 
 ## Code pattern
 

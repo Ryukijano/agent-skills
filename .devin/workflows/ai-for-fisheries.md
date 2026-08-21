@@ -1,6 +1,6 @@
 # /ai-for-fisheries
 
-Fish stock assessment, catch forecasting, aquaculture monitoring, eDNA, and IUU fishing detection with ML.
+Detect illegal, unreported, and unregulated fishing by fusing AIS tracks with satellite radar and vessel behavior models.
 
 ## Trigger
 

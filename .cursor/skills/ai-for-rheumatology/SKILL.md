@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for autoimmune disease diagnosis and phenotyping, flare prediction, treatment response in RA and SLE, and imaging-based joint inflammation scoring.
+Use machine learning to phenotype autoimmune disease, predict flares, forecast treatment response, and score joint inflammation.
 
 ## When to use
 
 You are studying rheumatoid arthritis, systemic lupus erythematosus, spondyloarthritis, or other autoimmune rheumatic diseases and need predictive models for diagnosis, flares, or therapy selection.
 
-## Key concepts
+## Usage
 
-- **Disease activity indices**: DAS28, CDAI, SLEDAI, and patient-reported outcomes.
-- **Multi-omics integration**: genetics, transcriptomics, cytokines, and autoantibody panels.
-- **Imaging biomarkers**: ultrasound power Doppler, MRI synovitis/erosion, and radiographic damage.
-- **Treatment response**: prediction of biologic or JAK inhibitor response and adverse events.
-- **Flare prediction**: temporal clustering of clinical, lab, and patient-reported signals.
+- Model disease activity with DAS28, CDAI, SLEDAI, and patient-reported outcomes.
+- Integrate genetics, transcriptomics, cytokines, and autoantibody panels.
+- Score ultrasound, MRI, and radiographic joint damage and inflammation.
+- Predict response to biologics or JAK inhibitors and adverse events.
+- Forecast flares from temporal clinical, lab, and patient-reported data.
+
+## Steps
+
+1. Curate EHR, multi-omics, imaging, and patient-reported data for the target rheumatic disease.
+2. Define outcomes (flare, response, damage) and time windows for prediction.
+3. Train predictive or image models and validate externally across sites.
+4. Integrate predictions into treatment selection and flare monitoring workflows.
+5. Address confounding from treatment effects using causal or time-varying methods.
+6. Report subgroup performance and iterate with rheumatologist feedback.
 
 ## Code pattern
 

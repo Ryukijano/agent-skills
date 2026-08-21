@@ -1,6 +1,6 @@
 # /ai-for-emergency-management
 
-Incident prediction, resource allocation, damage assessment, and generative AI for emergency operations.
+Model flood inundation and evacuation traffic in real time to reroute populations and preposition emergency responders.
 
 ## Trigger
 

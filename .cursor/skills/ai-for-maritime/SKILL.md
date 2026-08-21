@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for maritime autonomous surface ships, route and weather routing optimization, collision avoidance, port logistics, and vessel situational awareness.
+Use machine learning to route vessels autonomously, avoid collisions, predict traffic, and optimize port logistics and schedules.
 
 ## When to use
 
 You are routing ships autonomously, predicting maritime traffic, avoiding collisions, or optimizing port operations and schedules.
 
-## Key concepts
+## Usage
 
-- **Maritime Autonomous Surface Ships (MASS)**: COLREGs-compliant navigation, path planning, and decision-making.
-- **Situational awareness**: sensor fusion across AIS, radar, LiDAR, cameras, and GNSS.
-- **Route optimization**: weather routing, fuel minimization, and just-in-time arrival.
-- **Port and logistics AI**: berth scheduling, cargo handling, and supply-chain synchronization.
+- Plan COLREGs-aware paths and predict collision risk from AIS and radar.
+- Fuse AIS, camera, LiDAR, and GNSS for maritime situational awareness.
+- Optimize weather routing, fuel use, and just-in-time arrival.
+- Schedule berths, cargo, and supply-chain synchronization.
+
+## Steps
+
+1. Collect and clean AIS tracks, weather forecasts, and port schedules.
+2. Train a route-prediction or collision-risk model with historical encounter data.
+3. Validate against rule-based CPA and expert maritime assessments.
+4. Implement a simulator test for COLREGs give-way behavior.
+5. Deploy in a closed loop with human oversight on the bridge.
 
 ## Code pattern
 

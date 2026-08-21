@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for immune repertoire analysis, epitope prediction, vaccine design, and immunotherapy optimization.
+Use AI to work with immune sequencing, epitope prediction, vaccine design, or predicting response to immunotherapy.
 
 ## When to use
 
 You are working with immune sequencing, epitope prediction, vaccine design, or predicting response to immunotherapy.
 
-## Key concepts
+## Usage
 
-- **B-cell and T-cell receptor repertoire analysis**: V(D)J recombination, clonality, and diversity metrics.
-- **MHC/peptide binding and epitope prediction**: prediction of immunogenic peptides and antigen presentation.
-- **Antigen specificity and immunogenicity modeling**: TCR/pMHC and BCR/antigen interaction prediction.
-- **Single-cell immunoprofiling and spatial transcriptomics**: immune-cell states and tissue microenvironment.
-- **Vaccine and immunotherapy design**: CAR-T, checkpoint inhibitors, and personalized cancer vaccines.
+- Process B-cell and T-cell receptor repertoire data.
+- Predict MHC/peptide binding and epitope presentation.
+- Model TCR/pMHC and BCR/antigen interactions.
+- Profile single-cell immune states.
+
+## Steps
+
+1. Process B-cell and T-cell receptor repertoire data.
+2. Predict MHC/peptide binding and epitope presentation.
+3. Model TCR/pMHC and BCR/antigen interactions.
+4. Profile single-cell immune states.
+5. Validate predicted epitopes with IEDB and assays.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

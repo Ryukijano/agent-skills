@@ -1,6 +1,6 @@
 # /ai-for-condensed-matter
 
-Machine learning for phase classification, topological order, Hamiltonian learning, density functional surrogates, and quantum many-body systems.
+Use machine learning to classify phases, learn interatomic potentials, and emulate quantum many-body and density-functional calculations.
 
 ## Trigger
 

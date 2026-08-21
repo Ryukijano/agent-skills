@@ -1,6 +1,6 @@
 # /ai-for-single-cell
 
-Single-cell transcriptomics, epigenomics, proteomics, and multi-omics integration, cell type annotation, trajectory inference, and foundation models.
+Use single-cell and multi-omics foundation models to annotate cell types, integrate batches, infer trajectories and predict perturbation responses.
 
 ## Trigger
 

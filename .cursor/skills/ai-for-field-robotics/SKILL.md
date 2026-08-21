@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for robots operating in outdoor, unstructured environments such as agriculture, construction, mining, environmental monitoring, and disaster response.
+Navigate autonomous robots through farms and construction sites to target weeds, harvest crops, and inspect hazards.
 
 ## When to use
 
 You are building robots for crop monitoring, infrastructure inspection, environmental survey, mining, construction, or search-and-rescue in unstructured terrain.
 
-## Key concepts
+## Usage
 
-- **Terrain perception and navigation**: SLAM, semantic segmentation, and traversability estimation in off-road environments.
-- **Agricultural and environmental robotics**: phenotyping, weed detection, and precision spraying.
-- **Disaster and inspection robotics**: damage assessment, human detection, and autonomous traverse in hazardous zones.
-- **Robustness to field conditions**: weather, dust, lighting variation, and GPS-denied operation.
+- Estimate terrain traversability and build semantic maps for off-road navigation.
+- Detect crops, weeds, and stress with agricultural robots.
+- Assess damage and locate humans in disaster and inspection missions.
+- Fuse aerial and ground observations for field situational awareness.
+
+## Steps
+
+1. Collect diverse, georeferenced sensor data across weather and lighting.
+2. Train a terrain or crop segmentation model with field labels.
+3. Validate across locations and seasons for robustness.
+4. Plan autonomous missions in a high-fidelity simulator with power/comms constraints.
+5. Run a real-world field test and compare coverage and safety to baseline.
 
 ## Code pattern
 

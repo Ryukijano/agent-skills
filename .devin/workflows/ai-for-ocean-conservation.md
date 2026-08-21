@@ -1,6 +1,6 @@
 # /ai-for-ocean-conservation
 
-Marine protected area monitoring, illegal fishing detection, species tracking, and ocean health assessment from satellite and vessel data.
+Use AI to monitor marine protected areas, detect illegal fishing, tracking vessels, or assess marine ecosystem health.
 
 ## Trigger
 

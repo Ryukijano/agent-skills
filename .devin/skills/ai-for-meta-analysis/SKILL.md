@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning and LLMs for automating literature search, screening, data extraction, effect-size estimation, and heterogeneity assessment in meta-analyses.
+Automate systematic reviews and synthesize effect sizes across clinical and epidemiological studies.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are conducting a meta-analysis or systematic review and want to automate or 
 
 ## Usage
 
-- **Automated literature search and screening**: classify and rank citations for inclusion.
-- **Data extraction**: parse study characteristics, outcomes, and effect sizes from PDFs.
-- **Statistical modeling**: estimate pooled effects, heterogeneity, and subgroup differences.
-- **Network meta-analysis**: synthesize direct and indirect treatment comparisons.
+- Screen citations with LLMs and Rayyan/AiReview.
+- Extract study characteristics and outcomes with GPT-4 pipelines.
+- Fit random-effects and Bayesian meta-analysis models.
+- Assess heterogeneity, publication bias, and study quality.
+- Update living systematic reviews continuously.
 
 ## Steps
 
-1. Register the protocol and define PICO/PECO and analysis plan.
-2. Run a reproducible search and import citations into an AI-assisted screening tool.
-3. Use ML or LLMs to extract study data with human verification.
-4. Compute effect sizes and pooled estimates using appropriate models (fixed, random, Bayesian).
-5. Assess risk of bias, heterogeneity, and sensitivity to study inclusion.
+1. Define the PICO question and search strategy.
+2. Run automated screening and data extraction.
+3. Appraise risk of bias and study quality.
+4. Pool effect sizes with appropriate meta-analytic models.
+5. Report forest plots, heterogeneity, and sensitivity.
 
 ## Code pattern
 

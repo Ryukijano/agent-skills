@@ -2,19 +2,28 @@
 
 ## Description
 
-LC-MS/MS lipid species quantification, structural isomer resolution, lipid class normalization, and predictive modeling of lipid phenotypes.
+Use machine learning on LC-MS/MS and shotgun lipidomics data to annotate lipid classes, resolve isomers, normalize variation and link lipid profiles to phenotypes.
 
 ## When to use
 
 You are quantifying or classifying lipid species from LC-MS/MS or shotgun lipidomics data and need to annotate lipid classes, correct for technical variation, or link lipid profiles to phenotypes.
 
-## Key concepts
+## Usage
 
-- **Lipid classes**: fatty acyls, glycerolipids, glycerophospholipids, sphingolipids, and sterols.
-- **LC-MS/MS lipidomics**: separation and fragmentation for species and isomer resolution.
-- **Epilipidomics**: post-translationally modified lipids and oxidation products.
-- **LipidMaps**: curated lipid nomenclature and classification database.
-- **Statistical modeling**: univariate tests, multivariate PCA, and supervised classifiers.
+- **Classify lipids**: assign species to fatty acyls, glycerolipids, glycerophospholipids, sphingolipids, and sterols.
+- **Resolve isomers**: use fragmentation and retention patterns to separate structural isomers and epilipidomics modifications.
+- **Normalize signals**: scale by total lipid class sum or internal standards and correct batch drift.
+- **Map nomenclature**: align annotations with LipidMaps and pathway databases.
+- **Build phenotype models**: link lipid signatures to disease, diet, or intervention outcomes.
+
+## Steps
+
+1. Acquire LC-MS/MS or shotgun lipidomics data and apply peak picking and alignment.
+2. Annotate lipid classes and molecular species with LipidMaps and MS/MS fragment rules.
+3. Normalize intensities by class sums or internal standards and correct batch effects.
+4. Perform PCA, univariate tests, or supervised classification on lipid features.
+5. Validate isomer resolution and annotation confidence with reference standards.
+6. Integrate lipid signatures with clinical or phenotypic data and replicate in independent cohorts.
 
 ## Code pattern
 

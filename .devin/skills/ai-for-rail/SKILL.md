@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for railway infrastructure health, predictive maintenance, train scheduling, energy optimization, and real-time disruption management.
+Use machine learning to monitor rail infrastructure, predict failures, optimize timetables, and manage service disruptions.
 
 ## When to use
 
 You are monitoring track and rolling stock, predicting rail failures, optimizing timetables, or managing service disruptions.
 
-## Key concepts
+## Usage
 
-- **Track geometry and infrastructure monitoring**: ride quality, rail/sleeper defects, and ultrasonic/vision inspection.
-- **Predictive maintenance for rolling stock**: wheelset bearing, brake, and HVAC prognostics.
-- **Timetabling and traffic control**: mixed-integer programming, reinforcement learning, and rescheduling under delays.
-- **Energy and operations**: eco-driving, regenerative braking, and passenger flow forecasting.
+- Detect rail, sleeper, and track-geometry defects from inspection and sensor data.
+- Predict wheelset, bearing, brake, and HVAC failures in rolling stock.
+- Optimize timetables and rescheduling under delays.
+- Forecast passenger flow and energy use for eco-driving.
+
+## Steps
+
+1. Aggregate track geometry, inspection images, and rolling-stock sensor streams.
+2. Engineer per-route features to account for geography and seasonality.
+3. Train an anomaly or survival model for rare infrastructure and component failures.
+4. Validate recall and false-positive trade-offs with maintenance crews.
+5. Integrate predictions into timetable optimization and dispatch dashboards.
 
 ## Code pattern
 

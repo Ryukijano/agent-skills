@@ -2,18 +2,27 @@
 
 ## Description
 
-Neuro-symbolic reasoning, learning logical rules and constraints, probabilistic logics, and SAT/SMT/ASP guided by ML.
+Use machine learning to combine logical reasoning with neural models, learning rules, constraints, and solver guidance.
 
 ## When to use
 
 You want to combine logical reasoning with machine learning: learning rules, constraints, or logical representations from data, or using ML to accelerate logic solvers.
 
-## Key concepts
+## Usage
 
-- **Neuro-symbolic AI**: integrating neural networks with symbolic logic and reasoning.
-- **Statistical relational and probabilistic logics**: Markov logic networks, probabilistic soft logic, and probabilistic answer set programming.
-- **Rule and constraint learning**: extract interpretable rules or constraints from data.
-- **Solver guidance**: use learned value functions or heuristics inside SAT/SMT/ASP solvers.
+- Integrate neural networks with symbolic logic for neuro-symbolic reasoning.
+- Learn interpretable rules and constraints from data and logical formulas.
+- Apply probabilistic and statistical relational logics to structured problems.
+- Guide SAT/SMT/ASP solvers with learned value functions and heuristics.
+
+## Steps
+
+1. Collect logical data, truth tables, or structured examples for the target rules or constraints.
+2. Train a rule learner, constraint extractor, or neuro-symbolic model on the data.
+3. Validate learned rules on held-out logical formulas and compare to expert constraints.
+4. Combine the learned heuristic with a SAT/SMT/ASP solver and measure runtime improvements.
+5. Enforce logical constraints as regularizers or post-hoc corrections in the neural model.
+6. Monitor that model predictions respect the specified logical constraints.
 
 ## Code pattern
 

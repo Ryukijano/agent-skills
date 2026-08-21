@@ -1,6 +1,6 @@
 # /ai-for-nanotechnology
 
-ML for nanoparticle design, nanomaterial discovery, nano-architectonics, nanoscale imaging, and nanomanufacturing optimization.
+Use machine learning to design nanoparticles, predict nanoscale properties, and optimize synthesis and imaging workflows.
 
 ## Trigger
 

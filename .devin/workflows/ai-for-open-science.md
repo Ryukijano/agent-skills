@@ -1,6 +1,6 @@
 # /ai-for-open-science
 
-Reproducible research agents, open-source workbenches, provenance tracking, and computational reproducibility with AI.
+Make research reproducible and auditable by automating literature review, code execution, provenance tracking and FAIR data packaging with AI agents.
 
 ## Trigger
 

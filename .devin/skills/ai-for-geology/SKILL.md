@@ -2,19 +2,27 @@
 
 ## Description
 
-Geologic mapping, mineral prospectivity, geophysical inversion, drill-core imagery, and remote sensing with ML and deep learning.
+Use ML and remote sensing to map lithology, assess mineral prospectivity, run geophysical inversions, and analyze drill-core and geologic data.
 
 ## When to use
 
 You are working with geologic, geophysical, geochemical, or remote-sensing data and want to map lithology, structures, or mineral potential.
 
-## Key concepts
+## Usage
 
-- **Geologic mapping**: supervised classification of lithology and structural units from multispectral/hyperspectral imagery and DEMs.
-- **Mineral prospectivity mapping (MPM)**: integrate multi-source evidential layers to rank exploration targets.
-- **Geophysical inversion**: ML surrogates and neural operators for fast magnetic, gravity, and EM inversion.
-- **Drill-core imagery**: core logging, fracture detection, and mineral abundance from drill-core photos and XRF scans.
-- **Remote sensing**: satellite and airborne data for alteration mapping and structural interpretation.
+- Classify lithology and structural units from multispectral/hyperspectral imagery and DEMs.
+- Integrate geologic, geochemical, and geophysical layers for mineral prospectivity mapping.
+- Build ML surrogates for fast magnetic, gravity, and electromagnetic geophysical inversion.
+- Log drill-core images, detect fractures, and estimate mineral abundance from photos and XRF scans.
+
+## Steps
+
+1. Co-register geology, geophysics, geochemistry, and remote-sensing rasters to a common CRS and resolution.
+2. Build a lithology/alteration classifier from satellite or airborne imagery and validate with field observations.
+3. Generate multi-source evidential layers and rank mineral prospectivity with a weighted or ML-based model.
+4. Train a neural operator or surrogate for geophysical inversion and compare predicted fields to forward models.
+5. Process drill-core imagery and XRF data to log lithology, detect fractures, and estimate mineral abundance.
+6. Produce GIS-ready maps and integrate them into exploration targeting and geologic interpretation workflows.
 
 ## Code pattern
 

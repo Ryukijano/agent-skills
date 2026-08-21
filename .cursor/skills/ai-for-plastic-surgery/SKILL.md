@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for aesthetic and reconstructive surgical planning, facial analysis, flap monitoring, wound assessment, and patient-reported outcomes.
+Use machine learning to plan aesthetic and reconstructive surgery, assess outcomes, monitor flaps, and analyze craniofacial images.
 
 ## When to use
 
 You are planning aesthetic or reconstructive procedures, predicting surgical outcomes, monitoring free flaps, or analyzing craniofacial images and patient-reported outcome measures.
 
-## Key concepts
+## Usage
 
-- **3D surface imaging and photogrammetry**: facial and breast symmetry, volumetric change, and surgical simulation.
-- **Flap monitoring**: computer vision and perfusion signal analysis for free-tissue transfer.
-- **Aesthetic outcome prediction**: patient-reported satisfaction, scar quality, and complications.
-- **Wound and burn assessment**: image-based depth, infection, and healing trajectory.
-- **Craniofacial analysis**: cephalometric landmarks, dysmorphology, and growth prediction.
+- Analyze 3D surface imaging and photogrammetry for facial and breast symmetry.
+- Monitor free-tissue transfer flaps with computer vision and perfusion signals.
+- Predict patient-reported satisfaction, scar quality, and complications.
+- Assess wound and burn depth, infection, and healing trajectory from images.
+- Measure craniofacial landmarks, dysmorphology, and growth.
+
+## Steps
+
+1. Collect de-identified 3D scans, photos, perfusion data, and patient-reported outcomes.
+2. Define endpoints (complication, symmetry score, healing stage) with expert consensus.
+3. Train segmentation, regression, or classification models on standardized images.
+4. Validate against surgeon and patient ratings and across multicenter data.
+5. Integrate tools into surgical planning, flap monitoring, or follow-up workflows.
+6. Ensure privacy, consent, and standardization of acquisition protocols.
 
 ## Code pattern
 

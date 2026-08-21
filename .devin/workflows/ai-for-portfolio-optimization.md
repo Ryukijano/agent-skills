@@ -1,6 +1,6 @@
 # /ai-for-portfolio-optimization
 
-Diversification, risk-return balancing, rebalancing strategies, and generative-AI analytics for real estate and mixed-asset portfolios.
+Balances risk and return across property sectors and geographies using return forecasts and scenario stress tests.
 
 ## Trigger
 

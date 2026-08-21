@@ -1,6 +1,6 @@
 # /ai-for-air-quality
 
-Pollutant forecasting, spatiotemporal PM modeling, emission source apportionment, and early warning for air quality.
+Use AI to forecast pollutant levels, issuing air-quality alerts, or identify emission sources for urban and regional scales.
 
 ## Trigger
 

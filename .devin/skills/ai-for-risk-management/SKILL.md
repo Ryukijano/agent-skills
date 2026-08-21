@@ -2,18 +2,27 @@
 
 ## Description
 
-Credit, market, operational, and emerging risk modeling with ML and scenario analysis.
+Use AI to quantify credit, market, operational, or emerging risks; building early-warning systems; or stress-testing portfolios and operations.
 
 ## When to use
 
 You are quantifying credit, market, operational, or emerging risks; building early-warning systems; or stress-testing portfolios and operations.
 
-## Key concepts
+## Usage
 
-- **Risk modeling**: probability of default, loss distribution, and value-at-risk estimation.
-- **Anomaly and tail-risk detection**: spot rare events and emerging vulnerabilities.
-- **Scenario and stress testing**: evaluate sensitivity to shocks and regime changes.
-- **Model risk management**: validate, monitor, and govern AI risk models.
+- Calibrate probability and loss models.
+- Detect anomalies and tail risks.
+- Run stress and scenario tests.
+- Separate model development and governance.
+
+## Steps
+
+1. Calibrate probability and loss models.
+2. Detect anomalies and tail risks.
+3. Run stress and scenario tests.
+4. Separate model development and governance.
+5. Monitor for distribution shift and adversarial behavior.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-gravitational-waves
 
-Deep learning for compact binary coalescence search, parameter estimation, and glitch classification.
+Use deep learning to search for compact binary mergers, estimate source parameters, and classify glitches in LIGO/Virgo/KAGRA detector data.
 
 ## Trigger
 

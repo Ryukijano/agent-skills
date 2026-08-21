@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for patient registries, disease surveillance, regulatory-grade real-world evidence, and longitudinal outcome tracking.
+Analyze disease and product registries to monitor safety, effectiveness, and utilization.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are using a disease, product, or population registry to generate real-world 
 
 ## Usage
 
-- **Registry-based outcome prediction**: forecast events and treatment responses.
-- **Quality and completeness assessment**: identify missing data and reporting gaps.
-- **Comparative effectiveness**: emulate target trials within registry populations.
-- **Surveillance and safety monitoring**: detect signals of adverse events or product issues.
+- Identify fit-for-purpose registries with AI-powered RWD catalogues.
+- Define phenotypes using CQL, SNOMED, and FHIR (PhEMA).
+- Track drug utilization and adverse events across registries.
+- Benchmark outcomes against external controls.
+- Generate real-world evidence for regulatory and HTA submissions.
 
 ## Steps
 
-1. Understand registry design, inclusion criteria, and variable definitions.
-2. Clean and link registry records, handling duplicates and missingness.
-3. Define the target population and time-at-risk for the analysis.
-4. Train and validate models appropriate to the registry structure and outcomes.
-5. Produce transparent reports with clear limitations about generalizability.
+1. Identify relevant registries and assess data quality.
+2. Define the study population and phenotype algorithms.
+3. Extract exposure, outcome, and covariate records.
+4. Apply epidemiological and ML methods for safety/effectiveness.
+5. Prepare regulatory-grade reports and evidence packages.
 
 ## Code pattern
 

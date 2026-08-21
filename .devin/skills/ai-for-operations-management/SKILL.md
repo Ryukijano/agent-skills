@@ -2,18 +2,27 @@
 
 ## Description
 
-Process mining, service-level optimization, quality control, and AI-driven operational decision support.
+Use AI to optimize business processes, improve service levels, monitor quality, or augmenting operational decisions with data and AI.
 
 ## When to use
 
 You are optimizing business processes, improving service levels, monitoring quality, or augmenting operational decisions with data and AI.
 
-## Key concepts
+## Usage
 
-- **Process mining and discovery**: reconstruct workflows from event logs.
-- **Service-level optimization**: balance demand, capacity, and waiting times.
-- **Quality and anomaly detection**: monitor SPC, defect patterns, and drift.
-- **Human-AI teaming**: design trust, incentives, and escalation in operations.
+- Reconstruct workflows from event logs.
+- Forecast demand, capacity, and queues.
+- Optimize staffing and scheduling.
+- Deploy quality and anomaly detection.
+
+## Steps
+
+1. Reconstruct workflows from event logs.
+2. Forecast demand, capacity, and queues.
+3. Optimize staffing and scheduling.
+4. Deploy quality and anomaly detection.
+5. Compare as-designed and as-mined process maps.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

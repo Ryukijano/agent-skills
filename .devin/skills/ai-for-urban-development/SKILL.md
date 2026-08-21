@@ -2,7 +2,7 @@
 
 ## Description
 
-GeoAI, spatial modeling, generative urban design, and scenario simulation for sustainable, equitable, and data-driven urban development.
+Simulates urban growth and land-use scenarios to balance housing, infrastructure, and sustainability outcomes.
 
 ## When to use
 
@@ -19,7 +19,7 @@ You are planning urban growth, evaluating zoning or land-use scenarios, modeling
 
 1. Define planning objectives, boundaries, and stakeholder questions.
 2. Integrate geospatial, demographic, economic, and mobility datasets.
-3. Build or train spatial ML and generative models.
+3. Build or train spatial ML and generative models such as UESP or agent-based urban simulators.
 4. Run scenarios and quantify impacts across sustainability and equity metrics.
 5. Co-design and iterate with planners and communities.
 

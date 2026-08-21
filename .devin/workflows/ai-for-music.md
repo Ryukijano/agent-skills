@@ -1,6 +1,6 @@
 # /ai-for-music
 
-Music generation, transcription, recommendation, and audio processing with deep learning.
+Use deep learning to generate music, transcribe audio, recommend tracks, and process audio signals.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-pain-management
 
-Machine learning for chronic pain phenotyping, opioid and analgesic response prediction, procedural guidance, and patient self-management and monitoring.
+Use machine learning to phenotype chronic pain, predict treatment and opioid response, guide procedures, and support self-management.
 
 ## Trigger
 

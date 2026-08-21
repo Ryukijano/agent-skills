@@ -2,18 +2,25 @@ SKILLS = [
     {
         "name": "ai-for-personal-finance",
         "title": "AI for Personal Finance",
-        "description": "Budget optimization, cash-flow forecasting, robo-advisory, credit scoring, and personalized savings and investment guidance for household financial decisions.",
+        "description": 'Use machine learning to categorize transactions, forecast cash flow, build robo-advisory portfolios, and guide debt and savings decisions for households.',
         "devin_body": r'''## When to use
 
 You want to manage household budgets, forecast cash flow, choose an investment allocation, or get personalized savings and debt-payoff guidance.
 
-## Key concepts
+## Usage
 
-- **Transaction categorization**: classify bank and credit-card transactions into budgets using NLP or heuristics.
-- **Cash-flow forecasting**: time-series models for income, bills, and discretionary spending.
-- **Robo-advisory**: automated, risk-profiled portfolio construction and rebalancing.
-- **Credit and risk scoring**: predict default risk, affordability, and creditworthiness.
-- **Goal-based planning**: optimize savings rates toward targets (emergency fund, retirement, major purchase).
+- Categorize bank and credit-card transactions into budgets automatically.
+- Forecast income, bills, and discretionary cash flow over weeks to months.
+- Construct and rebalance risk-profiled investment portfolios.
+- Score credit risk and optimize savings toward personal goals.
+
+## Steps
+
+1. Connect and label transaction data with strict encryption and on-device processing where possible.
+2. Train a categorization or forecasting model with chronological train/test splits.
+3. Backtest cash-flow and portfolio recommendations against historical behavior.
+4. Calibrate risk and explain fees, taxes, and liquidity trade-offs.
+5. Deliver personalized nudges and rebalancing alerts with opt-out controls.
 
 ## Code pattern
 
@@ -54,18 +61,25 @@ assert sum(goals.values()) <= discretionary
     {
         "name": "ai-for-legal-assistance",
         "title": "AI for Legal Assistance",
-        "description": "Legal intake, contract review, plain-language document summarization, form filling, and accessible legal triage for non-experts.",
+        "description": 'Use NLP to triage legal questions, summarize contracts, flag risky clauses, and help non-experts fill forms and find the right jurisdiction.',
         "devin_body": r'''## When to use
 
 You need to understand a contract, fill out a legal form, triage a civil legal issue, or summarize a legal document without immediate access to a lawyer.
 
-## Key concepts
+## Usage
 
-- **Legal NLP**: clause extraction, entity recognition, and document summarization on legal text.
-- **Contract review**: risk scoring, plain-language explanations, and redline suggestions.
-- **Legal triage and intake**: match user descriptions to relevant legal topics and services.
-- **Retrieval-augmented generation (RAG)**: ground answers in statutes, forms, and trusted FAQs.
-- **Hallucination and jurisdiction control**: verify citations and reason over the correct jurisdiction.
+- Extract clauses, entities, and obligations from contracts and leases.
+- Summarize legal documents into plain language and redline suggestions.
+- Triage intake queries to relevant legal topics and services.
+- Ground answers in statutes, forms, and verified FAQs with RAG.
+
+## Steps
+
+1. Collect the document or user query and identify the relevant jurisdiction.
+2. Run a clause-extraction or summarization model with a disclaimer that it is not legal advice.
+3. Retrieve statutes or form templates from verified sources.
+4. Flag high-risk terms and generate redline or plain-language explanations.
+5. Escalate complex or high-stakes matters to a licensed attorney.
 
 ## Code pattern
 
@@ -101,18 +115,25 @@ summary = summarizer(clause, max_length=60, min_length=10, do_sample=False)
     {
         "name": "ai-for-wellness",
         "title": "AI for Wellness",
-        "description": "Holistic wellness, sleep, stress, mindfulness, HRV biofeedback, and personalized lifestyle recommendations for everyday well-being.",
+        "description": 'Use machine learning to track sleep, stress, and activity, then deliver personalized wellness nudges grounded in behavior-change science.',
         "devin_body": r'''## When to use
 
 You want to monitor sleep, stress, activity, and mood, then deliver personalized wellness nudges grounded in behavior-change science.
 
-## Key concepts
+## Usage
 
-- **Multi-modal wellness signals**: wearables, ecological momentary assessments, and sleep diaries.
-- **Stress and HRV modeling**: infer autonomic stress from heart-rate variability and activity.
-- **Sleep staging and hygiene**: classify sleep stages and recommend evidence-based habits.
-- **Mindfulness personalization**: adapt guided practices to user state, time, and goals.
-- **Behavior-change techniques**: goal setting, self-monitoring, and habit stacking.
+- Fuse wearable, EMA, and sleep-diary signals into wellness scores.
+- Model stress from HRV, activity, and sleep patterns.
+- Classify sleep stages and recommend hygiene habits.
+- Personalize mindfulness and habit-nudge interventions.
+
+## Steps
+
+1. Ingest wearable, sleep, and self-report data with user consent.
+2. Align time-series signals and compute validated features.
+3. Train a stress, sleep, or wellness model and validate against scales like PSS, PSQI, WHO-5.
+4. Generate personalized recommendations and explain the reasoning.
+5. Let users opt out, adjust goals, and avoid alarm fatigue.
 
 ## Code pattern
 
@@ -149,18 +170,25 @@ clf = RandomForestClassifier(n_estimators=100).fit(X, y)
     {
         "name": "ai-for-fitness",
         "title": "AI for Fitness",
-        "description": "Personalized workout plans, exercise form analysis, pose estimation, wearables, and adaptive recovery for individual fitness.",
+        "description": 'Use machine learning to build adaptive workout plans, count reps, check exercise form, and prevent injury from wearable and video feedback.',
         "devin_body": r'''## When to use
 
 You want to build personalized workouts, count reps, check exercise form, or adapt a training plan from wearable and video feedback.
 
-## Key concepts
+## Usage
 
-- **Pose estimation**: MediaPipe, YOLOv8-pose, or sparse IMU methods for form analysis.
-- **Human activity recognition (HAR)**: classify exercises from accelerometer, gyroscope, or video.
-- **Repetition counting**: detect peaks and phases in time-series motion signals.
-- **Adaptive exercise prescription**: adjust volume, intensity, and recovery based on progress and fatigue.
-- **Injury-risk flags**: detect excessive range of motion, asymmetry, or rapid load increases.
+- Estimate exercise pose and count reps from camera or IMU data.
+- Classify human activities and exercises from wearables.
+- Adapt training volume and recovery based on progress and fatigue.
+- Flag excessive range of motion, asymmetry, or load spikes.
+
+## Steps
+
+1. Collect video, IMU, or wearable data during a set of exercises.
+2. Calibrate pose estimation or activity recognition for the user's body and camera.
+3. Train a rep-counting or form-deviation model on diverse participants.
+4. Validate against manual counts and expert form assessments.
+5. Adjust the workout plan based on completion, fatigue, and injury signals.
 
 ## Code pattern
 
@@ -199,18 +227,25 @@ landmarks = results.pose_landmarks
     {
         "name": "ai-for-mental-health",
         "title": "AI for Mental Health",
-        "description": "CBT-based chatbots, mood tracking, crisis triage, digital therapeutics, and scalable psychological support for consumers.",
+        "description": 'Use AI to deliver low-intensity CBT support, track mood, triage crisis risk, and keep human clinicians in the loop for escalation.',
         "devin_body": r'''## When to use
 
 You are building or using a consumer mental-health tool that offers CBT techniques, mood tracking, crisis triage, or low-intensity support.
 
-## Key concepts
+## Usage
 
-- **CBT and DBT chatbots**: deliver structured therapeutic techniques in conversation.
-- **Mood and EMA tracking**: collect self-reported symptoms (PHQ-9, GAD-7) and contextual data.
-- **Crisis detection and safety planning**: flag high-risk language and route to human help.
-- **Therapeutic alliance**: build rapport, personalization, and engagement over time.
-- **Human-in-the-loop escalation**: ensure clinicians are available when severity rises.
+- Deliver CBT and DBT techniques through structured conversational prompts.
+- Track mood and EMA scores with validated instruments such as PHQ-9 and GAD-7.
+- Detect crisis language and route to human help and emergency resources.
+- Build rapport and personalize engagement over time.
+
+## Steps
+
+1. Onboard the user with clear disclaimers and 24/7 crisis hotlines.
+2. Collect mood, sleep, and activity data with privacy controls.
+3. Deploy CBT worksheets or chatbot interactions tied to evidence-based techniques.
+4. Monitor for deterioration or crisis indicators and trigger human escalation.
+5. Validate outcomes with clinical measures and continuously audit safety.
 
 ## Code pattern
 
@@ -246,18 +281,25 @@ if mood.tail(3).mean() < 1.5:
     {
         "name": "ai-for-personal-productivity",
         "title": "AI for Personal Productivity",
-        "description": "Time management, task prioritization, calendar scheduling, meeting optimization, and personal workflow automation.",
+        "description": 'Use AI to prioritize tasks, resolve calendar conflicts, block focus time, and automate repetitive personal workflows.',
         "devin_body": r'''## When to use
 
 You want to prioritize tasks, resolve calendar conflicts, block focus time, or automate repetitive personal workflows.
 
-## Key concepts
+## Usage
 
-- **Task prioritization**: Eisenhower matrix, urgency/importance scoring, or learned user preferences.
-- **Calendar conflict resolution**: decide which meetings to attend, reschedule, or decline based on preferences.
-- **Time blocking**: allocate fixed windows for deep work, admin, and rest.
-- **Intelligent scheduling**: propose times that respect energy patterns and travel buffers.
-- **Agentic workflows**: combine LLMs with calendar, email, and task tools via tool use.
+- Prioritize tasks with urgency/importance scoring or learned preferences.
+- Resolve calendar conflicts and propose reschedules or declines.
+- Block deep-work windows and protect focus time.
+- Automate email triage, travel booking, and recurring task workflows.
+
+## Steps
+
+1. Sync calendar, task, and email data with minimal, scoped permissions.
+2. Build a preference model from user edits and past decisions.
+3. Generate a daily or weekly plan and compare it to the user's manual plan.
+4. Propose conflict resolutions and schedule focus blocks.
+5. Test on synthetic data first, then let the user approve every change.
 
 ## Code pattern
 
@@ -291,18 +333,25 @@ print([t[0] for t in ordered])
     {
         "name": "ai-for-cooking",
         "title": "AI for Cooking",
-        "description": "Recipe generation, meal planning, ingredient substitution, food image recognition, and personalized nutrition-aware cooking assistance.",
+        "description": 'Generate personalized recipes and meal plans that account for dietary restrictions, available ingredients, and nutrition goals.',
         "devin_body": r'''## When to use
 
 You want to generate recipes from available ingredients, plan weekly meals, substitute items for dietary needs, or estimate nutrition from a photo.
 
-## Key concepts
+## Usage
 
-- **Food image recognition**: identify dishes and ingredients from photos.
-- **Recipe generation and understanding**: text-to-recipe and ingredient-to-instruction mapping.
-- **Ingredient decomposition and substitution**: break down compound ingredients and swap for allergies or preferences.
-- **Nutritional optimization**: balance macronutrients and dietary guidelines across a meal plan.
-- **Multimodal food computing**: combine vision, text, and structured nutrition data.
+- Generate recipes from pantry lists and dietary goals.
+- Identify dishes and ingredients from photos and estimate portions.
+- Substitute ingredients for allergies, intolerances, and cultural preferences.
+- Optimize weekly meal plans for macros and dietary guidelines.
+
+## Steps
+
+1. Catalog pantry, appliances, dietary restrictions, and user goals.
+2. Look up nutritional values in a trusted database rather than generating them.
+3. Generate or adapt recipes, checking cook times and allergen safety.
+4. Validate output against reviewed recipes and food-safety rules.
+5. Build a weekly meal plan and shopping list with macro targets.
 
 ## Code pattern
 
@@ -341,18 +390,25 @@ data = response.json()
     {
         "name": "ai-for-home-automation",
         "title": "AI for Home Automation",
-        "description": "Smart home control, energy management, occupancy prediction, device scheduling, and comfort optimization with reinforcement learning and IoT.",
+        "description": 'Use machine learning to automate lighting and HVAC, reduce energy costs, predict occupancy, and improve comfort while preserving privacy.',
         "devin_body": r'''## When to use
 
 You want to automate lighting, HVAC, or appliances, reduce home energy costs, or improve comfort based on occupancy and weather.
 
-## Key concepts
+## Usage
 
-- **Home energy management systems (HEMS)**: schedule loads, storage, and HVAC to minimize cost or carbon.
-- **Occupancy and presence detection**: infer who is home from sensors, phones, or cameras.
-- **Demand response**: shift flexible loads in response to price or grid signals.
-- **Reinforcement learning for control**: learn thermostat and device policies from feedback.
-- **Edge and privacy**: run inference locally to keep home data in the home.
+- Schedule HVAC and appliances to minimize cost and carbon under time-of-use pricing.
+- Predict occupancy from sensors, phones, and cameras.
+- Shift flexible loads in response to price or grid signals.
+- Learn thermostat and device policies from occupant feedback.
+
+## Steps
+
+1. Install and calibrate sensors for occupancy, temperature, and weather.
+2. Collect historical usage, pricing, and occupant comfort data.
+3. Train a scheduling or control policy with user comfort constraints.
+4. Validate in simulation and allow manual override at all times.
+5. Deploy locally and measure energy savings and comfort complaints.
 
 ## Code pattern
 
@@ -389,18 +445,25 @@ else:
     {
         "name": "ai-for-shopping",
         "title": "AI for Shopping",
-        "description": "Product discovery, personalized recommendations, price comparison, review summarization, and AI buyer guides for consumer purchases.",
+        "description": 'Answer natural-language product questions and surface personalized recommendations from real-time catalog and behavior data.',
         "devin_body": r'''## When to use
 
 You want to discover products, compare prices, summarize reviews, or build a personalized buyer guide for a consumer purchase.
 
-## Key concepts
+## Usage
 
-- **Product search and ranking**: retrieve and score items by relevance, value, and constraints.
-- **Review summarization and sentiment**: extract pros, cons, and recurring issues from user reviews.
-- **Attribute extraction**: pull specs, dimensions, and compatibility from unstructured text.
-- **Price monitoring and alerts**: track price history and forecast deals.
-- **Trust and verification**: ground claims in real listings and flag uncertain information.
+- Rank products by relevance, value, and user constraints.
+- Summarize pros, cons, and recurring issues from customer reviews.
+- Extract specs, dimensions, and compatibility from listings.
+- Track price history and alert users to deals.
+
+## Steps
+
+1. Fetch real-time listings and reviews from trusted sources.
+2. Parse specs, prices, and availability with grounding in source pages.
+3. Train or prompt a summarizer for review pros and cons.
+4. Rank options against user constraints and explain trade-offs.
+5. Keep price alerts fresh and disclose affiliate or sponsored relationships.
 
 ## Code pattern
 
@@ -436,18 +499,25 @@ summary = summarizer(reviews, max_length=60, min_length=10, do_sample=False)
     {
         "name": "ai-for-travel",
         "title": "AI for Travel",
-        "description": "Itinerary planning, point-of-interest recommendation, flight and hotel personalization, trip optimization, and conversational travel agents.",
+        "description": 'Use AI to plan itineraries, recommend points of interest, personalize flights and hotels, and handle real-time disruptions within budget.',
         "devin_body": r'''## When to use
 
 You want to plan a trip, recommend points of interest, build an itinerary, or personalize travel options within time and budget constraints.
 
-## Key concepts
+## Usage
 
-- **POI recommendation**: predict attractions and restaurants a traveler will enjoy.
-- **Itinerary optimization**: orienteering and routing under time, budget, and preference constraints.
-- **Multi-constraint planning**: combine opening hours, travel times, group preferences, and accessibility.
-- **LLM travel agents**: conversational planning with tool use for live data.
-- **Real-time data integration**: weather, events, prices, and transport disruptions.
+- Recommend attractions and restaurants from user history and constraints.
+- Build optimized day-by-day itineraries under time and budget.
+- Adapt plans to weather, events, cancellations, and group preferences.
+- Use LLM agents with live data for conversational travel planning.
+
+## Steps
+
+1. Collect traveler preferences, budget, dates, and accessibility needs.
+2. Gather real-time POI, weather, pricing, and transit data from APIs.
+3. Solve an orienteering or routing problem for itinerary optimization.
+4. Validate opening hours, realistic travel times, and fallback options.
+5. Generate a shareable itinerary and update it as conditions change.
 
 ## Code pattern
 
@@ -491,18 +561,25 @@ print([p[0] for p in best])
     {
         "name": "ai-for-event-planning",
         "title": "AI for Event Planning",
-        "description": "Venue and vendor recommendation, guest-list management, scheduling, budget optimization, and group preference aggregation for personal and small events.",
+        "description": 'Use AI to match venues and vendors, aggregate guest preferences, schedule activities, and stay within budget for events.',
         "devin_body": r'''## When to use
 
 You want to plan a party, wedding, meeting, or community event by finding vendors, scheduling activities, managing guests, and staying within budget.
 
-## Key concepts
+## Usage
 
-- **Group preference aggregation**: combine attendee tastes, dietary needs, and location constraints.
-- **Venue and vendor matching**: score vendors by event requirements, reviews, and price.
-- **Scheduling under constraints**: room, time, and sequence constraints for sessions or ceremonies.
-- **Budget multi-objective optimization**: trade cost, quality, and capacity.
-- **Attendance forecasting**: predict RSVPs and no-shows from historical data.
+- Aggregate attendee dietary, accessibility, and location preferences.
+- Score and match vendors to event briefs and budgets.
+- Schedule sessions or ceremonies under room and time constraints.
+- Forecast RSVPs and no-shows from past event data.
+
+## Steps
+
+1. Collect event goals, budget, guest list, and constraints.
+2. Gather vendor or venue options and review ratings and availability.
+3. Match candidates to the brief using text similarity and budget filters.
+4. Build a schedule and menu that respects dietary and accessibility needs.
+5. Track RSVPs and generate a day-of run sheet with human approval for contracts.
 
 ## Code pattern
 
@@ -539,18 +616,25 @@ scores = cosine_similarity(X[-1:], X[:-1])
     {
         "name": "ai-for-lifestyle",
         "title": "AI for Lifestyle",
-        "description": "Habit formation, hobby and style recommendations, personal goal coaching, and holistic life-planning agents for everyday decisions.",
+        "description": "Use AI to build habits, recommend hobbies, coach personal goals, and deliver holistic lifestyle nudges that fit a user's values.",
         "devin_body": r'''## When to use
 
 You want to build habits, discover hobbies, coach personal goals, or deliver holistic lifestyle nudges that fit a user's context and values.
 
-## Key concepts
+## Usage
 
-- **Behavior-change models**: habit loops, self-determination theory, and the transtheoretical model.
-- **Habit tracking and streaks**: monitor adherence and predict dropout.
-- **Causal user modeling**: reason how actions affect goals and well-being.
-- **Multi-armed bandits for exploration**: test and personalize nudges.
-- **Explainable lifestyle recommendations**: make suggestions transparent and contestable.
+- Model habit loops and predict dropout from adherence data.
+- Recommend hobbies and activities from a short user profile.
+- Test and personalize nudges with multi-armed bandits.
+- Explain recommendations in terms of user values and goals.
+
+## Steps
+
+1. Elicit user values, goals, and constraints through a short onboarding.
+2. Track habit completion and objective adherence, not just engagement.
+3. Train a personalization or bandit model to select nudges.
+4. Validate with self-report and adherence metrics.
+5. Let users contest, adjust, or stop nudges at any time.
 
 ## Code pattern
 

@@ -2,19 +2,26 @@
 
 ## Description
 
-Holistic wellness, sleep, stress, mindfulness, HRV biofeedback, and personalized lifestyle recommendations for everyday well-being.
+Use machine learning to track sleep, stress, and activity, then deliver personalized wellness nudges grounded in behavior-change science.
 
 ## When to use
 
 You want to monitor sleep, stress, activity, and mood, then deliver personalized wellness nudges grounded in behavior-change science.
 
-## Key concepts
+## Usage
 
-- **Multi-modal wellness signals**: wearables, ecological momentary assessments, and sleep diaries.
-- **Stress and HRV modeling**: infer autonomic stress from heart-rate variability and activity.
-- **Sleep staging and hygiene**: classify sleep stages and recommend evidence-based habits.
-- **Mindfulness personalization**: adapt guided practices to user state, time, and goals.
-- **Behavior-change techniques**: goal setting, self-monitoring, and habit stacking.
+- Fuse wearable, EMA, and sleep-diary signals into wellness scores.
+- Model stress from HRV, activity, and sleep patterns.
+- Classify sleep stages and recommend hygiene habits.
+- Personalize mindfulness and habit-nudge interventions.
+
+## Steps
+
+1. Ingest wearable, sleep, and self-report data with user consent.
+2. Align time-series signals and compute validated features.
+3. Train a stress, sleep, or wellness model and validate against scales like PSS, PSQI, WHO-5.
+4. Generate personalized recommendations and explain the reasoning.
+5. Let users opt out, adjust goals, and avoid alarm fatigue.
 
 ## Code pattern
 

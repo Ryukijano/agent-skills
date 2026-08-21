@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for heterogeneous treatment effects, covariate adjustment, adaptive randomization, and efficient inference in randomized controlled trials.
+Estimate heterogeneous treatment effects and subgroup benefits in randomized experiments.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are analyzing an RCT and want to estimate average or heterogeneous treatment
 
 ## Usage
 
-- **Heterogeneous treatment effects**: identify subgroups that benefit most or least.
-- **Covariate adjustment**: improve precision using baseline prognostic variables.
-- **Adaptive designs**: inform response-adaptive randomization and enrichment.
-- **Efficient inference**: combine machine learning with valid randomization inference.
+- Estimate conditional average treatment effects with causal forests (grf).
+- Identify responder subgroups using uplift and ITE models.
+- Adjust for covariates to improve precision of ATE.
+- Detect treatment effect heterogeneity across sites and demographics.
+- Power adaptive enrichment and basket trials.
 
 ## Steps
 
-1. Lock the analysis plan, including adjustment variables and subgroups, before unblinding.
-2. Fit flexible outcome and propensity nuisance models with cross-fitting.
-3. Estimate average and conditional treatment effects with appropriate inference.
-4. Test for treatment-effect heterogeneity using pre-specified subgroups or learned partitions.
-5. Report confidence intervals and control the family-wise error rate for subgroup analyses.
+1. Lock the randomization schedule and outcome variables.
+2. Pre-specify covariates and subgroup hypotheses.
+3. Train causal forest or meta-learner models for CATE/ITE.
+4. Rank subgroups by estimated benefit and uncertainty.
+5. Validate with cross-fitting and false discovery control.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-algorithms
 
-Learning-augmented algorithms, learned data structures, and ML-guided design for search, routing, scheduling, and data-intensive pipelines.
+Use machine learning to augment classic algorithms with learned predictions, indexes, and data structures.
 
 ## Trigger
 

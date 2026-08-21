@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for process design, optimization, control, reaction engineering, materials discovery, and digital chemical plants.
+Apply AI to chemical process modeling, yield optimization, and reactor control.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are designing or operating chemical processes, building surrogate models of 
 
 ## Usage
 
-- **Process optimization and control**: surrogate-based and reinforcement-learning control.
-- **Reaction and kinetic modeling**: neural ODEs and graph neural networks for chemistry.
-- **Molecular and materials design**: generative models, property prediction, retrosynthesis.
-- **Digital twins of plants**: real-time soft sensors and anomaly detection.
-- **Safety and quality control**: fault detection and product quality prediction.
+- Predict product quality from spectroscopic or chromatographic data.
+- Optimize reactor conditions with Aspen Plus or gPROMS integrations.
+- Detect process drift and abnormal events in DCS historians.
+- Design molecules and formulations with generative models.
+- Forecast energy and raw-material demand.
 
 ## Steps
 
-1. Collect process data, lab assays, reaction conditions, and simulation outputs.
-2. Build a dataset that respects mass/energy balances and operating constraints.
-3. Train a surrogate, control, or property-prediction model.
-4. Validate against first-principles simulators and pilot-plant data.
-5. Deploy with real-time monitoring and periodic retraining.
+1. Collect batch/continuous process data and lab assay labels.
+2. Align sensor and laboratory timestamps into feature matrices.
+3. Train regression or time-series models for quality or yield.
+4. Deploy predictions to APC/MES or via Python API.
+5. Track model drift against lab reference and retrain.
 
 ## Code pattern
 

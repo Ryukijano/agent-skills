@@ -2,19 +2,26 @@
 
 ## Description
 
-Narrative generation, plot planning, character arcs, and worldbuilding with structured LLM workflows.
+Use structured LLM workflows to generate plots, build character arcs, manage worldbuilding, and create interactive or branching narratives.
 
 ## When to use
 
 You are building interactive fiction, game narratives, brand stories, or structured plots with multiple acts and characters.
 
-## Key concepts
+## Usage
 
-- **Narrative planning**: outlines, beat sheets, story graphs, and plot-point scaffolding.
-- **Character and world consistency**: memory, character sheets, and knowledge graphs to preserve continuity.
-- **Interactive storytelling**: branching choices, dynamic dialogue, and player or reader agency.
-- **Long-form coherence**: recursive summarization and hierarchical generation.
-- **Evaluation**: narrative coherence, engagement, originality, and human judgment.
+- Generate three-act outlines, beat sheets, and plot-point scaffolding.
+- Maintain character and world consistency with memory and knowledge graphs.
+- Build branching dialogue and choices for interactive fiction and games.
+- Use recursive summarization to preserve coherence in long-form stories.
+
+## Steps
+
+1. Write a one-page premise and target genre for the story.
+2. Generate a structured outline with acts, beats, and character arcs.
+3. Create a persistent character/world store and use it in every generation.
+4. Draft scenes and branch points, then check continuity against the store.
+5. Test with readers for engagement and coherence, then iterate.
 
 ## Code pattern
 

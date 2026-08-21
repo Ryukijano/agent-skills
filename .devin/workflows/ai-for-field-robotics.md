@@ -1,6 +1,6 @@
 # /ai-for-field-robotics
 
-AI for robots operating in outdoor, unstructured environments such as agriculture, construction, mining, environmental monitoring, and disaster response.
+Navigate autonomous robots through farms and construction sites to target weeds, harvest crops, and inspect hazards.
 
 ## Trigger
 

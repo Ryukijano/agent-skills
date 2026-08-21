@@ -2,18 +2,27 @@
 
 ## Description
 
-Competency-based education, skill gap analysis, adaptive credentialing, and AI-driven mastery and portfolio assessment.
+Use AI to design competency-based learning where demonstrated mastery, not seat time, drives progression and credentials.
 
 ## When to use
 
 You are designing competency-based learning where demonstrated mastery, not seat time, drives progression and credentials.
 
-## Key concepts
+## Usage
 
-- **Competency frameworks and skills taxonomies**: ESCO, O*NET, or institutional competency maps.
-- **Skill gap analysis**: compare current abilities to role or course requirements.
-- **Mastery assessment**: evaluate observable performances and artifacts.
-- **Portfolio and credentialing**: recognize competence through badges, micro-credentials, or transcripts.
+- Map roles to competency frameworks such as ESCO or O*NET.
+- Assess current skills and identify gaps.
+- Recommend micro-credentials and learning resources.
+- Build portfolios and mastery evidence.
+
+## Steps
+
+1. Map roles to competency frameworks such as ESCO or O*NET.
+2. Assess current skills and identify gaps.
+3. Recommend micro-credentials and learning resources.
+4. Build portfolios and mastery evidence.
+5. Compare credential outcomes to employer or academic requirements.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

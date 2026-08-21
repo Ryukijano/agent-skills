@@ -1,6 +1,6 @@
 # /ai-for-data-curation
 
-Automated selection, cleaning, labeling, augmentation, and documentation of datasets to produce high-quality, FAIR, and reusable ML data assets.
+Label, augment, and document training data for reliable machine learning.
 
 ## Trigger
 

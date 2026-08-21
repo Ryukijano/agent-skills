@@ -1,6 +1,6 @@
 # /ai-for-restoration
 
-Digital inpainting, virtual restoration, style-aware reconstruction, and diffusion models for repairing artworks, murals, and manuscripts.
+Use AI to virtually repair damaged paintings, murals, manuscripts, or photographs while preserving artistic style and historical authenticity.
 
 ## Trigger
 

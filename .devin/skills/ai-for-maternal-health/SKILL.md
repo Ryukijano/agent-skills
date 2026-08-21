@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for maternal risk stratification, preterm birth prediction, obstetric decision support, and neonatal outcome forecasting.
+Use machine learning to stratify maternal risk, predict preterm birth, support obstetric decisions, and forecast neonatal outcomes.
 
 ## When to use
 
 You are building tools to predict adverse pregnancy outcomes, triage antenatal care, or support low-resource maternal-health platforms.
 
-## Key concepts
+## Usage
 
-- **Adverse outcome prediction**: integrate clinical history, vitals, labs, and social determinants of health (SDoH).
-- **Preterm birth risk**: use longitudinal EHR, cervical measurements, and biomarkers.
-- **Obstetric imaging**: ultrasound-based fetal growth, anomaly detection, and placental assessment.
-- **WhatsApp/telehealth triage**: symptom checkers and decision support integrated into government health platforms.
+- Integrate clinical history, vitals, labs, and social determinants of health (SDoH).
+- Predict preterm birth from longitudinal EHR, cervical measurements, and biomarkers.
+- Detect fetal growth, anomalies, and placental issues from ultrasound.
+- Provide triage and decision support via WhatsApp/telehealth platforms.
+
+## Steps
+
+1. Assemble antenatal EHR, SDoH, imaging, and telehealth data.
+2. Define adverse outcomes and use chronological splits avoiding post-delivery leakage.
+3. Train risk models that include SDoH and access variables for equity.
+4. Validate on Medicaid or LMIC cohorts, not just privileged populations.
+5. Build a decision-support interface for midwives, nurses, and patients.
+6. Monitor outcomes and disparities across racial, ethnic, and geographic groups.
 
 ## Code pattern
 

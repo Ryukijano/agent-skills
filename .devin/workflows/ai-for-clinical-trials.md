@@ -1,6 +1,6 @@
 # /ai-for-clinical-trials
 
-Machine learning for clinical-trial design, patient eligibility, cohort selection, outcome prediction, and operational monitoring across the trial lifecycle.
+Optimize trial design, site selection, and enrollment for clinical studies.
 
 ## Trigger
 

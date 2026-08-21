@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning for aircraft and spacecraft design, aerodynamic optimization, structural health monitoring, satellite operations, and certification of safety-critical aerospace systems.
+Use machine learning to design aircraft and spacecraft, optimize aerodynamics, monitor structural health, and certify safety-critical aerospace systems.
 
 ## When to use
 
 You are designing aircraft or spacecraft, analyzing flight/structural data, building digital twins, or certifying ML for safety-critical aerospace applications.
 
-## Key concepts
+## Usage
 
-- **Aerodynamic and structural ML**: surrogate models, reduced-order models, and shape optimization for wings and airframes.
-- **Structural health monitoring (SHM)**: vibration, acoustic, and strain-based damage detection and remaining useful life.
-- **Satellite and mission operations**: telemetry anomaly detection, power/thermal forecasting, and autonomous scheduling.
-- **Certification and assurance**: interpretability, verification, and validation for airborne AI.
+- Build surrogate and reduced-order models for aerodynamic and structural analysis.
+- Detect damage and predict remaining useful life from vibration, acoustic, and strain data.
+- Forecast power, thermal, and telemetry anomalies for satellites and missions.
+- Document certification evidence and uncertainty for airborne AI.
+
+## Steps
+
+1. Collect flight, structural, or telemetry data with physics-informed preprocessing.
+2. Train a surrogate or anomaly detector with safety-critical validation splits.
+3. Compare the model to high-fidelity CFD, FEM, or flight-test baselines.
+4. Quantify uncertainty and trace data provenance for certification.
+5. Deploy with human-in-the-loop overrides and continuous monitoring.
 
 ## Code pattern
 

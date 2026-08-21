@@ -1,6 +1,6 @@
 # /ai-for-pulmonology
 
-Chest X-ray and CT interpretation, COPD and asthma assessment, respiratory sound analysis, and pulmonary disease risk prediction.
+Use AI for Pulmonology to read chest X-rays and CTs, assess COPD and analyze respiratory sounds.
 
 ## Trigger
 

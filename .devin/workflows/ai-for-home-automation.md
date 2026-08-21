@@ -1,6 +1,6 @@
 # /ai-for-home-automation
 
-Smart home control, energy management, occupancy prediction, device scheduling, and comfort optimization with reinforcement learning and IoT.
+Use machine learning to automate lighting and HVAC, reduce energy costs, predict occupancy, and improve comfort while preserving privacy.
 
 ## Trigger
 

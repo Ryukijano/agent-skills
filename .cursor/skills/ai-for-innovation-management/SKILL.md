@@ -2,18 +2,27 @@
 
 ## Description
 
-Idea generation, R&D portfolio prioritization, trend forecasting, and AI-enabled new product development.
+Use AI to manage an innovation pipeline, prioritize R&D projects, forecast technology trends, or accelerating concept-to-launch cycles.
 
 ## When to use
 
 You are managing an innovation pipeline, prioritizing R&D projects, forecasting technology trends, or accelerating concept-to-launch cycles.
 
-## Key concepts
+## Usage
 
-- **Idea mining and generation**: extract and evaluate ideas from patents, papers, and customer signals.
-- **Portfolio prioritization**: rank projects by strategic fit, risk, and expected value.
-- **Trend and weak-signal detection**: forecast emerging technologies and customer needs.
-- **Stage-gate acceleration**: use AI to screen concepts and reduce uncertainty early.
+- Mine ideas from patents, papers, and customer signals.
+- Score and rank projects by fit, risk, and value.
+- Forecast technology and market trends.
+- Screen concepts at stage-gates.
+
+## Steps
+
+1. Mine ideas from patents, papers, and customer signals.
+2. Score and rank projects by fit, risk, and value.
+3. Forecast technology and market trends.
+4. Screen concepts at stage-gates.
+5. Track portfolio outcomes against expert forecasts.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

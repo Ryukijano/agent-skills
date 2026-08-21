@@ -2,7 +2,7 @@
 
 ## Description
 
-KPI dashboards, OEE analysis, descriptive-to-prescriptive analytics, and association mining for manufacturing performance management.
+Turns MES and ERP data into OEE dashboards and predictive KPIs for prescriptive manufacturing decisions.
 
 ## When to use
 

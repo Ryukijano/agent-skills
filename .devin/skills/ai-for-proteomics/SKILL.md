@@ -2,19 +2,28 @@
 
 ## Description
 
-Mass spectrometry protein identification and quantification, DDA/DIA workflows, post-translational modifications, and AI-driven peptide property prediction.
+Use machine learning on mass-spectrometry proteomics data to improve peptide identification, quantify proteins, predict post-translational modifications and build spectral libraries for DDA and DIA workflows.
 
 ## When to use
 
 You are analyzing mass spectrometry proteomics data to quantify proteins, identify post-translational modifications, build spectral libraries, or predict peptide properties.
 
-## Key concepts
+## Usage
 
-- **LC-MS/MS workflows**: DDA, DIA, SRM/PRM, and data-independent acquisition.
-- **Peptide-spectrum matching**: search engines, spectral libraries, and rescoring.
-- **Protein inference and FDR**: PSM, peptide, and protein-level false discovery rates.
-- **PTMs**: phosphorylation, ubiquitination, glycosylation, and other modifications.
-- **AI for proteomics**: retention time, fragmentation, and MHC-peptide binding prediction.
+- **Identify peptides**: process DDA and DIA LC-MS/MS data with search engines and spectral libraries.
+- **Control FDR**: enforce 1% false discovery rates at PSM, peptide, and protein levels.
+- **Predict peptide properties**: use deep learning for retention time, fragmentation, and ionization.
+- **Detect PTMs**: identify and localize phosphorylation, glycosylation, ubiquitination, and other modifications.
+- **Quantify proteins**: measure abundance changes across conditions and integrate with other omics.
+
+## Steps
+
+1. Convert raw MS files and build or choose a search database or spectral library.
+2. Identify peptides with a search engine, control FDR, and infer proteins.
+3. Train or apply deep learning models for retention time, fragmentation, or PTM prediction.
+4. Quantify proteins across replicates and conditions with normalization and imputation.
+5. Detect differentially abundant proteins and validate with orthogonal assays.
+6. Share data and workflows in containers or repositories to support reproducibility.
 
 ## Code pattern
 

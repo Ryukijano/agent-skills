@@ -1,6 +1,6 @@
 # /ai-for-digital-twin-simulation
 
-High-fidelity virtual replicas, real-time synchronization, physics-informed and data-driven simulation, and AI training environments for cyber-physical systems.
+Use physics-informed and data-driven simulation to build digital twins of physical assets, processes, and environments.
 
 ## Trigger
 

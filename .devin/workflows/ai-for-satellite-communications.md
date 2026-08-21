@@ -1,6 +1,6 @@
 # /ai-for-satellite-communications
 
-ML for satellite link prediction, beam hopping, resource allocation, non-terrestrial networks, and onboard edge AI.
+Optimize beam hopping, resource allocation, and coverage in LEO and GEO constellations.
 
 ## Trigger
 

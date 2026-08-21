@@ -2,19 +2,27 @@
 
 ## Description
 
-Multi-omics integration, tumor subtyping, biomarker discovery, and precision oncology using AI.
+Predict immunotherapy response from routine H&E whole-slide images and multi-omic profiles to match cancer patients to targeted treatments.
 
 ## When to use
 
 You are analyzing cancer genomics, transcriptomics, proteomics, pathology images, or clinical data to identify biomarkers or guide oncology decisions.
 
-## Key concepts
+## Usage
 
-- **Multi-omics data integration**: genomics, transcriptomics, epigenomics, proteomics, and metabolomics for a holistic tumor view.
-- **Tumor classification and subtyping**: molecular subtypes, histology, and consensus clustering.
-- **Somatic mutation and copy-number analysis**: driver mutations, mutational signatures, and tumor heterogeneity.
-- **Pathology image and radiomics analysis**: whole-slide imaging and quantitative imaging features.
-- **Immunotherapy and targeted-therapy response prediction**: biomarkers such as tumor mutational burden and microsatellite instability.
+- Integrate genomics, transcriptomics, proteomics, and imaging.
+- Cluster tumor subtypes and molecular profiles.
+- Predict survival and treatment response.
+- Identify actionable biomarkers.
+
+## Steps
+
+1. Integrate genomics, transcriptomics, proteomics, and imaging.
+2. Cluster tumor subtypes and molecular profiles.
+3. Predict survival and treatment response.
+4. Identify actionable biomarkers.
+5. Validate on external cohorts and cancer pathways.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

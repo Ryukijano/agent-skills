@@ -1,6 +1,6 @@
 # /ai-for-natural-hazards
 
-Multi-hazard susceptibility mapping and early warning for landslides, floods, wildfires, and land subsidence with ML and remote sensing.
+Predict landslide and wildfire risk from satellite and sensor data to trigger early warnings and protect infrastructure.
 
 ## Trigger
 

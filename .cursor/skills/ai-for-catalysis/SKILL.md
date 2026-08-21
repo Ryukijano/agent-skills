@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for catalyst discovery, reaction mechanism elucidation, activity and selectivity prediction, and catalytic process optimization.
+Use catalysis informatics and active learning to discover catalysts, predict activity/selectivity, explore reaction networks, and optimize processes.
 
 ## When to use
 
 You are designing heterogeneous, homogeneous, or enzymatic catalysts and need to predict activity, selectivity, stability, or optimal reaction conditions from structure and data.
 
-## Key concepts
+## Usage
 
-- **Catalysis informatics**: structured datasets, reaction descriptors, and ML models for catalyst screening.
-- **Adsorption-energy and scaling-relation models**: predict binding energies and use them as microkinetic inputs.
-- **Reaction network exploration**: ML-guided discovery of elementary steps and kinetic rate laws.
-- **Active learning and Bayesian optimization**: efficient experimental campaigns for catalyst synthesis and testing.
-- **Single-atom, electrocatalyst, and photocatalyst design**: data-driven design for energy and sustainable chemistry.
+- Screen catalysts with structured datasets, reaction descriptors, and ML models.
+- Predict adsorption energies and scaling relations as inputs to microkinetic simulations.
+- Explore reaction networks and elementary steps with ML-guided search.
+- Optimize catalyst synthesis and reaction conditions with active learning and Bayesian optimization.
+
+## Steps
+
+1. Curate catalyst-adsorbate datasets, harmonizing units, structures, and reaction conditions.
+2. Compute or collect adsorption-energy, surface, and adsorbate descriptors for the target reaction.
+3. Train ML models to predict activity, selectivity, or binding energy and validate against DFT.
+4. Build microkinetic models using ML-predicted rate constants and compare to measured conversion/selectivity.
+5. Use active learning or Bayesian optimization to choose the next catalyst composition or reaction condition.
+6. Synthesize and test the selected catalysts, then feed results back to refine the models.
 
 ## Code pattern
 

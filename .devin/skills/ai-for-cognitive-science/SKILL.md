@@ -2,19 +2,27 @@
 
 ## Description
 
-Computational models of perception, memory, language, reasoning, and human-like cognition, bridging AI and psychological theory.
+Use AI to build or evaluate computational models of human cognition, compare AI behavior to human data, or use AI as a model organism for cognitive theory.
 
 ## When to use
 
 You want to build or evaluate computational models of human cognition, compare AI behavior to human data, or use AI as a model organism for cognitive theory.
 
-## Key concepts
+## Usage
 
-- **Computational modeling of perception, memory, and decision-making**: symbolic, Bayesian, and neural-network cognitive models.
-- **Cognitive architectures**: ACT-R, SOAR, and subsymbolic neural models of cognition.
-- **Psychophysical and behavioral experiments**: linking model predictions to human measurements.
-- **Large language models as cognitive models**: evaluating emergent reasoning, semantic processing, and language production.
-- **Symbolic versus subsymbolic representations**: trade-offs between interpretability and scalability.
+- Build computational models of perception, memory, or reasoning.
+- Compare AI behavior to human data.
+- Probe LLM next-token predictions against human cloze.
+- Evaluate symbolic vs. subsymbolic representations.
+
+## Steps
+
+1. Build computational models of perception, memory, or reasoning.
+2. Compare AI behavior to human data.
+3. Probe LLM next-token predictions against human cloze.
+4. Evaluate symbolic vs. subsymbolic representations.
+5. Validate with reaction time and error-pattern metrics.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

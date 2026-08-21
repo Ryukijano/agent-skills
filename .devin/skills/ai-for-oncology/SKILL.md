@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for cancer detection, subtyping, treatment response, prognosis, radiomics, pathology, and clinical trial matching.
+Use AI for Oncology to detect tumors, predict biomarkers and response and match patients to trials.
 
 ## When to use
 
 You are building AI for cancer detection, tumor subtyping, treatment response prediction, prognosis, or matching patients to clinical trials.
 
-## Key concepts
 
-- **Radiomics and deep learning for tumor imaging**: high-throughput feature extraction and CNN-based biomarkers.
-- **Digital and computational pathology**: molecular biomarker prediction from H&E slides.
-- **Treatment response and survival prediction**: from imaging, genomics, and EHR data.
-- **Multimodal data fusion**: imaging, genomics, pathology, and clinical variables.
+## Usage
+
+
+- **Radiomics and deep learning for tumor imaging**: High-throughput feature extraction and CNN-based biomarkers.
+- **Digital and computational pathology**: Molecular biomarker prediction from H&E slides.
+- **Treatment response and survival prediction**: From imaging, genomics, and EHR data.
+- **Multimodal data fusion**: Imaging, genomics, pathology, and clinical variables.
 - **Clinical trial matching and real-world evidence**: NLP and eligibility criteria.
+
+## Steps
+
+1. Collect and prepare imaging, pathology, genomics and EHR data.
+2. Build AI for cancer detection.
+3. Tumor subtyping.
+4. Treatment response prediction.
+5. Validate by training a tumor classification or response model and compare with standard care.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -30,12 +41,14 @@ model = RandomForestClassifier(n_estimators=200, class_weight='balanced')
 model.fit(X, y)
 ```
 
+
 ## Tuning notes
 
 - Use standardized radiomic feature extraction (e.g., pyradiomics with IBSI filters).
 - Validate with external and prospective cohorts, not just public leaderboards.
 - Integrate pathology, genomics, and clinical data when available.
 - Report uncertainty and ensure models support clinical decisions.
+
 
 ## Verification
 

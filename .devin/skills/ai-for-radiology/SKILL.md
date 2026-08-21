@@ -2,19 +2,30 @@
 
 ## Description
 
-Deep learning for X-ray, CT, MRI, and mammography interpretation, including lesion detection, segmentation, report generation, and radiology foundation models.
+Use AI for Radiology to detect, segment and report abnormalities in radiological images such as X-ray, CT, MRI and mammography.
 
 ## When to use
 
 You need to detect, classify, or segment abnormalities on radiological images; build foundation models for radiology; or integrate an AI triage tool into a PACS/DICOM workflow.
 
-## Key concepts
+
+## Usage
+
 
 - **Modality-aware preprocessing**: HU scaling for CT, window/level for X-ray, bias field correction and intensity normalization for MRI.
 - **Lesion segmentation**: U-Net, nnU-Net, SwinUNETR, and VISTA-3D for 2D/3D anatomy.
-- **Radiology foundation models**: self-supervised pretraining on large radiology corpora (e.g., RADImageNet, CheXzero, MedImageInsight).
+- **Radiology foundation models**: Self-supervised pretraining on large radiology corpora (e.g., RADImageNet, CheXzero, MedImageInsight).
 - **Workflow integration**: DICOM/FHIR I/O, AI result routing, worklist prioritization, and structured reporting.
-- **Safety and equity**: external validation, underdiagnosis bias in underserved populations, and confidence calibration.
+- **Safety and equity**: External validation, underdiagnosis bias in underserved populations, and confidence calibration.
+
+## Steps
+
+1. Collect and prepare DICOM/NIfTI studies and radiology reports.
+2. Detect, classify, or segment abnormalities on radiological images.
+3. Build foundation models for radiology.
+4. Integrate an AI triage tool into a PACS/DICOM workflow.
+5. Validate by training a lesion segmentation model and compare Dice to an inter-reader benchmark.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -37,12 +48,14 @@ model = UNet(
 )
 ```
 
+
 ## Tuning notes
 
 - Use clinically relevant CT window/level and HU ranges; avoid training on unwindowed DICOM pixel values.
 - Account for slice thickness, in-plane resolution, and scanner variability with resampling to a common spacing.
 - Validate on external cohorts and report AUC/Dice with confidence intervals.
 - Monitor for underdiagnosis bias across sex, race, age, and socioeconomic strata.
+
 
 ## Verification
 

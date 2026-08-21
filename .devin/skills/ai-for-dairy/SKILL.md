@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for health, fertility, behaviour, and production monitoring in dairy cattle and dairy farm decision support.
+Monitor dairy cattle health, reproduction, and behavior with computer vision and wearables.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are monitoring individual dairy cows to detect mastitis, lameness, oestrus, 
 
 ## Usage
 
-- **Mastitis and disease detection**: classify early health events from milk, sensor, or image data.
-- **Reproductive management**: predict heat, calving, and optimal insemination timing.
-- **Milk yield and body-condition scoring**: forecast production and body reserves.
-- **Feeding and behaviour monitoring**: detect changes in rumination, activity, and feed intake.
+- Detect mastitis, lameness, and heat with AiHerd or smaXtec.
+- Track feeding, rumination, and activity with bolus/IMU sensors.
+- Monitor body condition and mobility from cameras.
+- Predict calving and metabolic disorders.
+- Generate to-do lists and treatment alerts.
 
 ## Steps
 
-1. Collect animal-level data from milking systems, wearables, cameras, and farm records.
-2. Engineer time-series and per-cow features (lactation stage, parity, days in milk).
-3. Train classification or regression models for each target health or production outcome.
-4. Validate with chronological splits and across multiple farms or breeds.
-5. Deploy real-time alerts and integrate with herd management software.
+1. Install cameras, wearables, or bolus sensors in the barn.
+2. Collect and label health, behavior, and production records.
+3. Train detection and prediction models.
+4. Deploy dashboards and alert systems.
+5. Validate against veterinarian diagnoses and production metrics.
 
 ## Code pattern
 

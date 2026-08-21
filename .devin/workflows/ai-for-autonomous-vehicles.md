@@ -1,6 +1,6 @@
 # /ai-for-autonomous-vehicles
 
-Perception, prediction, planning, and simulation for self-driving cars and mobile robots.
+Use perception, motion forecasting, planning, and closed-loop simulation to develop safe autonomous driving and mobile robot systems.
 
 ## Trigger
 

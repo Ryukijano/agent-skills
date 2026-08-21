@@ -1,6 +1,6 @@
 # /ai-for-philosophy
 
-Computational philosophy, argument mining, automated reasoning, text analysis of philosophical corpora, and LLM-assisted conceptual analysis.
+Use AI for Philosophy to mine arguments, formalize reasoning and analyze conceptual spaces in texts.
 
 ## Trigger
 

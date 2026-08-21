@@ -2,18 +2,27 @@
 
 ## Description
 
-Diffusion, VAE, and generative inverse design for engineering concepts, constraint-aware generation, and performance-conditioned shape and material synthesis.
+Use diffusion, VAEs, and flow models to generate engineering designs that meet performance and manufacturing constraints.
 
 ## When to use
 
 You are exploring novel engineering designs (shapes, structures, materials, or processes) and want to generate or complete candidates that satisfy performance and manufacturing constraints.
 
-## Key concepts
+## Usage
 
-- **Generative inverse design**: learn a distribution over design parameters conditioned on target performance.
-- **Constraint-aware generation**: embed physics, safety, or feasibility constraints into the generative process (e.g., negative-data training, repair loops).
-- **Diffusion and flow matching for design**: denoising and conditional diffusion for continuous or structured design spaces.
-- **Multi-objective and topology optimization**: generate Pareto-optimal designs and structures.
+- Generate design candidates conditioned on target performance with generative inverse design.
+- Embed physics, safety, and feasibility constraints into the generative process.
+- Apply diffusion and flow matching to continuous or structured design spaces.
+- Produce Pareto-optimal designs across multiple objectives.
+
+## Steps
+
+1. Define the design space, performance targets, and constraints (physics, safety, manufacturability).
+2. Train a generative model on existing designs and their performance labels.
+3. Add feasibility classifiers or repair loops to reject physically impossible designs.
+4. Generate a diverse set of candidates and evaluate with surrogate or full simulations.
+5. Check constraint satisfaction and compute the Pareto front across objectives.
+6. Validate top designs with high-fidelity FE/CFD and physical tests.
 
 ## Code pattern
 

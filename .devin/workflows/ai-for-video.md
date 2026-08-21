@@ -1,6 +1,6 @@
 # /ai-for-video
 
-Video understanding, action recognition, video generation, temporal modeling, video captioning, and multimodal video models.
+Use AI for Video to recognize actions, generate and edit video and caption content.
 
 ## Trigger
 

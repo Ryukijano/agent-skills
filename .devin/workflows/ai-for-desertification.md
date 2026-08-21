@@ -1,6 +1,6 @@
 # /ai-for-desertification
 
-Land degradation and desertification risk mapping, sensitivity assessment, and early warning from remote sensing and ML.
+Use AI to assess desertification sensitivity, map degraded land, or forecast land degradation in dryland regions.
 
 ## Trigger
 

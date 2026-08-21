@@ -1,6 +1,6 @@
 # /ai-for-curriculum-design
 
-Goal-aligned course sequencing, personalized learning paths, content alignment, adaptive curricula, and standards mapping.
+Map course content to career skills and learner competencies to recommend personalized, job-relevant learning pathways.
 
 ## Trigger
 

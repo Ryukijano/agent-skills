@@ -1,6 +1,6 @@
 # /ai-for-art-history
 
-Computer vision, deep learning, and vision-language models for style classification, iconography, provenance, and quantitative art history.
+Use AI to classify art styles, attributing works, analyze iconography, or study large-scale visual trends in art history.
 
 ## Trigger
 

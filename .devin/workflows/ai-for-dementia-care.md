@@ -1,6 +1,6 @@
 # /ai-for-dementia-care
 
-Machine learning for cognitive impairment screening, dementia risk stratification, voice and EHR analytics, and caregiver support.
+Use machine learning to screen for cognitive decline, stratify dementia risk, and support caregivers.
 
 ## Trigger
 

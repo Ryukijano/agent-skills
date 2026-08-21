@@ -1,6 +1,6 @@
 # /ai-for-site-selection
 
-Geospatial ML, graph neural networks, urban knowledge graphs, and location analytics for retail, logistics, and facility siting.
+Rank retail and facility locations using mobility, demographic, and competitor data to maximize customer capture.
 
 ## Trigger
 

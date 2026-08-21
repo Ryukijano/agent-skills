@@ -2,20 +2,29 @@
 
 ## Description
 
-Graph ML, knowledge graphs, LLMs, and transcriptomics for identifying new indications for existing drugs.
+Predict new indications for existing drugs by reasoning over biomedical knowledge graphs and transcriptomic signatures.
 
 ## When to use
 
 You want to find a new therapeutic use for an existing drug, rank candidates for a disease, or explain mechanistic rationale for off-label use.
 
-## Key concepts
+## Usage
 
-- **Drug repurposing (repositioning)**: finding new indications for approved drugs.
-- **Knowledge graphs**: nodes for drugs, diseases, genes, pathways; edges for known relations.
-- **Graph neural networks**: TxGNN and similar models for zero-shot indication prediction.
-- **Signature matching**: match disease and drug transcriptomic signatures (e.g., LINCS, CMap).
-- **Mechanistic grounding**: pathways, targets, and literature support.
-- **Contraindications**: predicting when a repurposed drug is unsafe.
+- **Knowledge-graph reasoning**: use GNNs (e.g., TxGNN) to rank drug-disease indications and contraindications.
+- **Transcriptomic signature matching**: match drug-perturbation and disease expression profiles (LINCS, CMap).
+- **Real-world evidence integration**: combine in silico predictions with EHR, claims, or trial data.
+- **Mechanistic explanation**: generate multi-hop graph paths or literature rationales for a prediction.
+- **Safety filtering**: flag contraindications, adverse events, and pharmacokinetic concerns.
+- **Candidate triage**: prioritize approved drugs with known human safety for faster experimental validation.
+
+## Steps
+
+1. Build or load a biomedical knowledge graph (diseases, drugs, genes, pathways) and/or a transcriptomic compendium.
+2. Train or apply a graph/Siamese model to embed drugs and diseases (e.g., TxGNN, RPath, CellAwareGNN).
+3. For a query disease, retrieve top drug candidates and compute indication and contraindication scores.
+4. Cross-check candidates against opposing transcriptomic signatures and supporting literature.
+5. Generate multi-hop mechanistic explanations and prioritize by safety and contraindication profiles.
+6. Validate in cell or animal models, retrospective EHR, or clinical-trial registries.
 
 ## Code pattern
 

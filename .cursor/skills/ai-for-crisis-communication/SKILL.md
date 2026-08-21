@@ -2,25 +2,27 @@
 
 ## Description
 
-Automated situational awareness, rumor detection, multilingual crisis summarization, and public information chatbots.
+Use machine learning and NLP to extract verified information, detect rumors, translate and summarize crisis messages, and power public information chatbots.
 
 ## When to use
 
 You must quickly extract, verify, and disseminate accurate information
 during a disaster, emergency, or rapidly evolving public event.
 
-## Key concepts
+## Usage
 
-- **Situational awareness from social media**: event detection,
-  classification, and geolocation.
-- **Rumor and misinformation detection**: claim verification and source
-  credibility scoring.
-- **Multilingual and cross-cultural communication**: machine
-  translation and summarization for diverse populations.
-- **Chatbots and public alerts**: LLM-driven, retrieval-grounded
-  response systems.
-- **Needs-offers matching**: connecting requests and resources during
-  a crisis.
+- Detect and classify crisis-related social media posts and events.
+- Verify claims and score source credibility for rumor detection.
+- Translate and summarize crisis briefs for diverse populations.
+- Match needs and offers and power retrieval-grounded public chatbots.
+
+## Steps
+
+1. Collect crisis social media, official feeds, and fact-check data in multiple languages.
+2. Train a classifier for information type and urgency.
+3. Build a claim-verification pipeline that distinguishes confirmed from unverified reports.
+4. Generate multilingual crisis briefs and evaluate clarity with experts.
+5. Coordinate messaging through official channels and maintain uncertainty labels.
 
 ## Code pattern
 

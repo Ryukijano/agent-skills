@@ -1,6 +1,6 @@
 # /ai-for-data-monetization
 
-Data valuation, pricing, data products, marketplaces, and revenue allocation for turning data assets into measurable business value.
+Value, price, and package data assets for market exchange and revenue.
 
 ## Trigger
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Industrial Internet of Things, edge-fog-cloud architectures, and AI for real-time monitoring, predictive maintenance, and secure shop-floor connectivity.
+Connects machines, sensors, and actuators over edge-fog-cloud architectures for real-time monitoring and predictive maintenance.
 
 ## When to use
 

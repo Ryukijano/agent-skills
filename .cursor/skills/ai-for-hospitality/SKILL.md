@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for guest personalization, revenue management, dynamic pricing, operations, and conversational service.
+Use AI for Hospitality to forecast demand, set prices, staff operations and personalize guest service.
 
 ## When to use
 
 You are running hotels, restaurants, events, or travel services and need to forecast demand, set prices, staff operations, or personalize guest interactions.
 
-## Key concepts
 
-- **RevPAR and demand forecasting**: time-series models with seasonality, events, and competitor data.
-- **Dynamic pricing and availability optimization**: adjust rates in real time based on demand signals.
-- **NLP for reviews and chatbots**: sentiment, topic extraction, and conversational concierge.
-- **Customer segmentation and personalization**: target offers, room upgrades, and loyalty rewards.
-- **Workforce scheduling and maintenance**: optimize staffing and housekeeping routes.
+## Usage
+
+
+- **RevPAR and demand forecasting**: Time-series models with seasonality, events, and competitor data.
+- **Dynamic pricing and availability optimization**: Adjust rates in real time based on demand signals.
+- **NLP for reviews and chatbots**: Sentiment, topic extraction, and conversational concierge.
+- **Customer segmentation and personalization**: Target offers, room upgrades, and loyalty rewards.
+- **Workforce scheduling and maintenance**: Optimize staffing and housekeeping routes.
+
+## Steps
+
+1. Collect and prepare bookings, reviews, competitor rates and operational data.
+2. Runne hotels.
+3. Restaurants.
+4. Events.
+5. Validate by forecasting daily RevPAR and measure MAPE against actuals.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -32,12 +43,14 @@ future = m.make_future_dataframe(periods=30)
 forecast = m.predict(future)
 ```
 
+
 ## Tuning notes
 
 - Add holidays, events, competitor rates, and weather as regressors.
 - Use chronological splits; do not leak future booking data into training.
 - Calibrate price sensitivity with controlled A/B tests.
 - Protect guest privacy and comply with GDPR and hospitality data policies.
+
 
 ## Verification
 

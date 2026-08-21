@@ -1,6 +1,6 @@
 # /ai-for-additive-manufacturing
 
-Machine learning for powder-bed fusion, directed energy deposition, in-situ monitoring, defect detection, build simulation, and process parameter optimization in additive manufacturing.
+Use machine learning on in-situ sensor and process data together with post-build inspection to detect defects, optimize build settings and certify metal or polymer additive parts.
 
 ## Trigger
 

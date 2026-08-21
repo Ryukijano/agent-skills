@@ -2,19 +2,30 @@
 
 ## Description
 
-Multimodal interfaces, natural language instructions, shared autonomy, social robotics, and embodied AI for human-robot collaboration.
+Use AI for Human-Robot Interaction to understand multimodal commands, plan tasks and share autonomy.
 
 ## When to use
 
 You are designing robots that understand, plan, or communicate with humans via language, gestures, gaze, or shared control.
 
-## Key concepts
 
-- **Natural language and gesture understanding**: map multimodal commands to robot actions.
+## Usage
+
+
+- **Natural language and gesture understanding**: Map multimodal commands to robot actions.
 - **Task planning and grounding**: LLM and VLM agents that plan and perceive.
-- **Shared autonomy and intent prediction**: adapt robot behavior to human intent.
-- **Social and affective HRI**: trust, engagement, and personalization.
-- **Safety and explainability**: legible motion, uncertainty, and human oversight.
+- **Shared autonomy and intent prediction**: Adapt robot behavior to human intent.
+- **Social and affective HRI**: Trust, engagement, and personalization.
+- **Safety and explainability**: Legible motion, uncertainty, and human oversight.
+
+## Steps
+
+1. Collect and prepare robot sensor, language and gesture data.
+2. Design robots that understand.
+3. Plan.
+4. Communicate with humans via language.
+5. Validate by building a system that maps a natural language command to a robot plan and execute it in simulation.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -27,12 +38,14 @@ result = qa(question="Where is the mug?", context=context)
 print(result["answer"])
 ```
 
+
 ## Tuning notes
 
 - Ground language in the robot's perception and action space.
 - Use feedback loops for clarification and error recovery.
 - Consider cultural and individual differences in interaction.
 - Evaluate with task success, human effort, and subjective trust.
+
 
 ## Verification
 

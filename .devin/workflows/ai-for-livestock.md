@@ -1,6 +1,6 @@
 # /ai-for-livestock
 
-Machine learning for health, behaviour, welfare, grazing, and reproduction across cattle, pigs, sheep, goats, and other farm animals.
+Track and predict health, behavior, and productivity across livestock.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-learning-analytics
 
-Learning management system analysis, learner trajectory modeling, early warning systems, engagement dashboards, and educational data mining.
+Mine LMS logs and assessment traces to predict at-risk students and trigger timely advising interventions.
 
 ## Trigger
 

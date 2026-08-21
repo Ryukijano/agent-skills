@@ -1,6 +1,6 @@
 # /ai-for-gas-utilities
 
-Machine learning for natural gas demand forecasting, pipeline leak detection, compressor optimization, and asset integrity.
+Forecasts gas demand, detects pipeline leaks, and optimizes pressure and compression across distribution networks.
 
 ## Trigger
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for battery state estimation, degradation modeling, storage dispatch, and energy storage asset optimization.
+Estimates battery state-of-health, predicts remaining useful life, and optimizes charge schedules for stationary and mobile storage.
 
 ## When to use
 
@@ -10,10 +10,10 @@ You need to estimate battery state, predict degradation, optimize storage dispat
 
 ## Usage
 
-- **State estimation**: predict state-of-charge (SOC) and state-of-health (SOH) from voltage, current, and temperature.
-- **Degradation and RUL forecasting**: estimate capacity fade and remaining useful life under different operating conditions.
-- **Storage dispatch**: optimize charge/discharge for arbitrage, peak shaving, or grid services.
-- **Thermal and safety monitoring**: detect abnormal temperature or impedance trends.
+- **State-of-charge and health estimation**: predict SOC and SOH from voltage, current, and temperature.
+- **Remaining useful life forecasting**: estimate capacity fade and end-of-life under operating conditions.
+- **Storage dispatch optimization**: optimize charge/discharge for arbitrage, peak shaving, and grid services.
+- **Thermal and safety monitoring**: detect abnormal temperature and impedance trends.
 
 ## Steps
 
@@ -52,4 +52,4 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 - https://www.mdpi.com/1996-1073/14/2/306
 - https://www.mdpi.com/1996-1073/16/10/4243
 - https://doi.org/10.1109/tte.2025.3525742
-- https://www.nrel.gov/transportation/battery-lifespan.html
+- https://doi.org/10.2172/1867877

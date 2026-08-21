@@ -1,6 +1,6 @@
 # /ai-for-cancer-bioinformatics
 
-Multi-omics integration, tumor subtyping, biomarker discovery, and precision oncology using AI.
+Predict immunotherapy response from routine H&E whole-slide images and multi-omic profiles to match cancer patients to targeted treatments.
 
 ## Trigger
 

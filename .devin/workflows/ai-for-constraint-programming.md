@@ -1,6 +1,6 @@
 # /ai-for-constraint-programming
 
-ML for constraint learning, search heuristics, model acquisition, and combining CP solvers with neural predictors.
+Use machine learning to learn constraints, heuristics, and models for constraint programming and CP-SAT solvers.
 
 ## Trigger
 

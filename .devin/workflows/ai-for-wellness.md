@@ -1,6 +1,6 @@
 # /ai-for-wellness
 
-Holistic wellness, sleep, stress, mindfulness, HRV biofeedback, and personalized lifestyle recommendations for everyday well-being.
+Use machine learning to track sleep, stress, and activity, then deliver personalized wellness nudges grounded in behavior-change science.
 
 ## Trigger
 

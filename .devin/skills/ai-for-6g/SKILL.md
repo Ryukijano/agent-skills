@@ -2,19 +2,27 @@
 
 ## Description
 
-AI-native 6G architectures, semantic communications, integrated sensing and communication, reconfigurable intelligent surfaces, and distributed learning.
+Design AI-native 6G systems for semantic communication, ISAC, and non-terrestrial networks.
 
 ## When to use
 
 You are designing or prototyping future 6G systems involving semantic communications, ISAC, RIS, NTN, or AI-native architectures.
 
-## Key concepts
+## Usage
 
-- **AI-native 6G**: embed ML across PHY, MAC, network, and application layers.
-- **Semantic communications**: transmit semantic meaning rather than raw bits.
-- **Integrated sensing and communication (ISAC)**: share waveforms for both radar and comms.
-- **Reconfigurable intelligent surfaces (RIS)**: optimize phase shifts with ML.
-- **Non-terrestrial networks (NTN)**: LEO/GEO satellite and aerial platforms.
+- Build semantic communication and meaning-extraction models.
+- Optimize integrated sensing and communication (ISAC).
+- Manage reconfigurable intelligent surfaces and satellite links.
+- Allocate resources in space-air-ground integrated networks.
+- Simulate 6G scenarios in MATLAB/NS-3.
+
+## Steps
+
+1. Define 6G use case and channel model.
+2. Generate or collect multi-domain dataset (terrestrial/satellite).
+3. Train semantic, ISAC, or resource-allocation models.
+4. Evaluate over-the-air or in simulation.
+5. Iterate with RIS, RAN, and satellite constraints.
 
 ## Code pattern
 

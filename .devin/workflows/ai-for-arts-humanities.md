@@ -1,6 +1,6 @@
 # /ai-for-arts-humanities
 
-Digital humanities, text analysis, image restoration, and creative AI for cultural heritage.
+Use machine learning to transcribe, restore, analyze, and enrich cultural heritage and humanities collections.
 
 ## Trigger
 

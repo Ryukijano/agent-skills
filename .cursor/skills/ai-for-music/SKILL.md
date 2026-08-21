@@ -2,19 +2,28 @@
 
 ## Description
 
-Music generation, transcription, recommendation, and audio processing with deep learning.
+Use deep learning to generate music, transcribe audio, recommend tracks, and process audio signals.
 
 ## When to use
 
 You are generating music, transcribing audio, or building music recommendation systems.
 
-## Key concepts
+## Usage
 
-- **Symbolic music models**: transformers on MIDI, ABC notation, or piano roll.
-- **Audio generation**: diffusion, VAE, GAN, and autoregressive models.
-- **Source separation**: isolate vocals, drums, bass, etc.
-- **Music information retrieval**: beat tracking, key detection, genre classification.
-- **Copyright**: be aware of training data and output ownership.
+- Generate symbolic music (MIDI, ABC) or audio from text, style, or melodic prompts with transformer, diffusion, or GAN models.
+- Transcribe melodies, chords, beats, and instruments from audio into symbolic notation.
+- Recommend tracks and playlists from listening history, natural-language prompts, and catalog embeddings.
+- Separate and process audio sources (vocals, drums, bass, other) with dedicated models.
+- Track provenance and rights for AI-generated or assisted music before distribution.
+
+## Steps
+
+1. Curate audio or symbolic datasets and define the creative or analytical goal (generation, transcription, recommendation).
+2. Train or select a model (transformer, diffusion, VAE, GAN, or MIR classifier) for the target task.
+3. Generate, transcribe, classify, or separate audio and post-process for quality and style consistency.
+4. Evaluate outputs against ground-truth labels, reference tracks, or perceptual listening tests.
+5. Handle rights, provenance, and AI-disclosure metadata before publishing or distribution.
+6. Iterate on prompts, conditioning, and model size to improve coherence, fidelity, and user satisfaction.
 
 ## Code pattern
 

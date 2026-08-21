@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for wearable exoskeleton and exosuit control, gait and intention recognition, human-robot interaction, rehabilitation, and assistive augmentation.
+Use machine learning to recognize gait and intent, personalize assistance, and control wearable exoskeletons for rehabilitation and industrial augmentation.
 
 ## When to use
 
 You are designing control for an exoskeleton or exosuit, predicting user gait intention, personalizing assistance, or rehabilitating movement disorders.
 
-## Key concepts
+## Usage
 
-- **Intention and gait recognition**: EMG, IMU, and motion-capture-based classification of gait phase and activity.
-- **Task-agnostic and adaptive control**: biological joint-moment estimation, reinforcement learning, and human-in-the-loop optimization.
-- **Rehabilitation robotics**: personalized therapy, assistance-as-needed, and outcome monitoring.
-- **Soft exosuits and assistive devices**: lightweight textiles, cable drives, and energy-efficient control.
+- Classify gait phase and activity from EMG, IMU, and motion-capture data.
+- Estimate biological joint moments and adapt assistance in real time.
+- Personalize rehabilitation therapy with assistance-as-needed control.
+- Design soft exosuit control for energy-efficient, comfortable support.
+
+## Steps
+
+1. Collect wearable sensor and motion-capture data during walking and tasks.
+2. Calibrate subject-specific models and segment gait phases.
+3. Train an intention/phase classifier or a reinforcement-learning controller.
+4. Validate with clinical populations and real-world activities, not only lab walking.
+5. Measure effort or metabolic reduction and iterate the assistance profile.
 
 ## Code pattern
 

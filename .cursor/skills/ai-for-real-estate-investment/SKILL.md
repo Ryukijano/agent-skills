@@ -2,7 +2,7 @@
 
 ## Description
 
-Predictive analytics, investment screening, REIT return forecasting, and risk-adjusted underwriting for real estate investment decisions.
+Forecasts REIT returns, screens acquisitions, and underwrites cash-flow risk for real estate investment decisions.
 
 ## When to use
 
@@ -18,9 +18,9 @@ You are evaluating acquisitions, forecasting REIT returns, screening markets, or
 ## Steps
 
 1. Define investment thesis, asset universe, and performance target.
-2. Collect macro, market, and asset-level features.
-3. Train predictive models (gradient boosting, GMDH, econometric-ML hybrids).
-4. Backtest strategies across market regimes.
+2. Collect macro, market, and asset-level features from sources such as NAREIT or MSCI.
+3. Train predictive models such as XGBoost, random forests, or neural-network hybrids.
+4. Backtest strategies across market regimes with transaction-cost and liquidity adjustments.
 5. Generate sensitivity and scenario reports for capital-committee decisions.
 
 ## Code pattern

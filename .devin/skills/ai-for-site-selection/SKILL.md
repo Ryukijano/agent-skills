@@ -2,7 +2,7 @@
 
 ## Description
 
-Geospatial ML, graph neural networks, urban knowledge graphs, and location analytics for retail, logistics, and facility siting.
+Rank retail and facility locations using mobility, demographic, and competitor data to maximize customer capture.
 
 ## When to use
 
@@ -11,15 +11,15 @@ You are choosing locations for stores, warehouses, facilities, or services based
 ## Usage
 
 - **Location analytics**: integrate POI, mobility, satellite, and census data.
-- **Graph neural networks**: model spatial interactions and neighborhood effects.
-- **Urban knowledge graphs**: combine semantic urban facts with site scoring.
+- **Revenue and footfall forecasting**: predict site performance by catchment and trade area.
+- **Graph and spatial modeling**: capture neighborhood effects and cannibalization across a portfolio.
 - **Multi-criteria decision**: balance revenue, cost, accessibility, and risk.
 
 ## Steps
 
 1. Define site type, catchment, and success metric (revenue, footfall, ROI).
-2. Assemble geospatial, mobility, demographic, and competitor data.
-3. Build features and train spatial, GNN, or knowledge-graph models.
+2. Assemble geospatial, mobility, demographic, and competitor data from CARTO, Kalibrate, or StreetLight.
+3. Build features and train spatial or graph models.
 4. Score and rank candidate sites.
 5. Validate with actual site performance.
 

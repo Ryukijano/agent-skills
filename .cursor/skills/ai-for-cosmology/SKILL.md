@@ -2,18 +2,26 @@
 
 ## Description
 
-ML for large-scale structure, weak lensing, CMB analysis, 21-cm cosmology, and cosmological parameter inference.
+Emulate nonlinear structure formation and CMB observables to infer cosmological parameters 50x faster than full N-body simulations.
 
 ## When to use
 
 You are analyzing cosmic microwave background maps, galaxy surveys, weak-lensing convergence, or 21-cm tomography.
 
-## Key concepts
+## Usage
 
-- **N-body surrogates**: fast approximations of dark-matter structure formation.
-- **Summary statistics**: power spectra, bispectra, peak counts, and Minkowski functionals.
-- **Simulation-based inference**: neural posterior estimation and likelihood-free methods.
-- **Emulation and Gaussian processes**: replacing expensive Boltzmann and radiative-transfer codes.
+- Emulate matter power spectra and N-body simulations with Gaussian processes or neural nets.
+- Compress weak-lensing, galaxy, and 21-cm maps into informative summary statistics.
+- Run simulation-based inference for cosmological parameters.
+- Accelerate expensive Boltzmann and radiative-transfer codes.
+
+## Steps
+
+1. Generate a training set of cosmological parameters and high-fidelity observables from simulations.
+2. Train an emulator for the power spectrum, peak counts, or full-field maps.
+3. Validate the emulator outside the training range and propagate uncertainties into posteriors.
+4. Use the emulator in a neural posterior-estimation or MCMC pipeline.
+5. Compare inferred parameter constraints against two-point-statistics baselines.
 
 ## Code pattern
 

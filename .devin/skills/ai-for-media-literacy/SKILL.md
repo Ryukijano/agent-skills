@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for detecting disinformation, prebunking, source credibility, and teaching critical thinking and digital literacy.
+Use AI for Media Literacy to detect misinformation, prebunk manipulation and teach source credibility.
 
 ## When to use
 
 You want to help users identify misinformation, understand manipulation tactics, evaluate sources, and develop resilience against online deception.
 
-## Key concepts
 
-- **Misinformation and disinformation detection**: classify false or misleading claims across text, images, and video.
-- **Prebunking and inoculation**: expose users to weakened manipulation tactics before they encounter them.
-- **Source and claim credibility**: assess website reliability, author expertise, and evidence quality.
-- **Explainable AI for literacy**: make detection models transparent so users learn from them.
-- **Generative AI awareness**: teach users how synthetic media is created and how to spot it.
+## Usage
+
+
+- **Misinformation and disinformation detection**: Classify false or misleading claims across text, images, and video.
+- **Prebunking and inoculation**: Expose users to weakened manipulation tactics before they encounter them.
+- **Source and claim credibility**: Assess website reliability, author expertise, and evidence quality.
+- **Explainable AI for literacy**: Make detection models transparent so users learn from them.
+- **Generative AI awareness**: Teach users how synthetic media is created and how to spot it.
+
+## Steps
+
+1. Collect and prepare news, social media and fact-check datasets.
+2. Help users identify misinformation.
+3. Understand manipulation tactics.
+4. Evaluate sources.
+5. Validate by testing a misinformation detector on a labeled fact-check dataset and report AUC-PR.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -30,12 +41,14 @@ for label, score in zip(result["labels"], result["scores"]):
     print(f"{label}: {score:.3f}")
 ```
 
+
 ## Tuning notes
 
 - Frame tools as learning aids, not oracles; avoid undermining trust in genuine news.
 - Include media-literacy explanations and interactive exercises, not just flags.
 - Tailor interventions to age, language, and cultural context.
 - Evaluate impact with pre/post tests and real-world believability measures.
+
 
 ## Verification
 

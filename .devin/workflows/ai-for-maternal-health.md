@@ -1,6 +1,6 @@
 # /ai-for-maternal-health
 
-Machine learning for maternal risk stratification, preterm birth prediction, obstetric decision support, and neonatal outcome forecasting.
+Use machine learning to stratify maternal risk, predict preterm birth, support obstetric decisions, and forecast neonatal outcomes.
 
 ## Trigger
 

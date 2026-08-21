@@ -2,26 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-cybersecurity",
         "title": "AI for Cybersecurity",
-        "description": "Network intrusion detection, malware and phishing classification, "
-                       "vulnerability discovery, adversarial ML, and SOC automation.",
+        "description": 'Use machine learning to detect intrusions, classify malware and phishing, discover vulnerabilities, and automate SOC workflows while hardening against adversarial attacks.',
         "devin_body": r'''
 ## When to use
 
 You are defending networks, endpoints, or cloud environments against
 intrusions, malware, phishing, or adversarial ML attacks.
 
-## Key concepts
+## Usage
 
-- **AI-driven intrusion detection**: anomaly and signature detection on
-  network and host telemetry.
-- **Malware and phishing classification**: static/dynamic analysis and
-  URL or email content models.
-- **Vulnerability discovery**: ML-assisted fuzzing, static analysis, and
-  patch prioritization.
-- **Adversarial ML**: evasion, poisoning, model extraction, and
-  hardening defenses.
-- **SOC automation**: triage, correlation, and response playbooks with
-  LLM agents.
+- Detect anomalies and signatures in network and host telemetry.
+- Classify malware, phishing, and malicious URLs from static and dynamic analysis.
+- Assist fuzzing, static analysis, and patch prioritization for vulnerability discovery.
+- Automate SOC triage, correlation, and response playbooks with LLM agents.
+
+## Steps
+
+1. Ingest network flows, logs, and endpoint telemetry with chronological train/test splits.
+2. Train an anomaly, signature, or classification model for the target threat.
+3. Validate against adversarial evasion on a held-out attack set.
+4. Build a phishing or malware detector and test on a time-separated test set.
+5. Integrate the model into SOC workflows with auditable rule-based and ML alerts.
 
 ## Code pattern
 
@@ -57,24 +58,27 @@ scores = model.decision_function(X_test)
     {
         "name": "ai-for-physical-security",
         "title": "AI for Physical Security",
-        "description": "Perimeter intrusion detection, access control analytics, "
-                       "video anomaly detection, and AI-augmented guard operations.",
+        "description": 'Use machine learning to detect perimeter intrusions, analyze access-control anomalies, spot video anomalies, and augment guard operations while respecting privacy.',
         "devin_body": r'''
 ## When to use
 
 You are protecting facilities, people, and assets with cameras, sensors,
 and access-control systems that must detect and respond to anomalies.
 
-## Key concepts
+## Usage
 
-- **Video anomaly detection**: unusual behaviors, loitering, line-crossing,
-  and abandoned objects.
-- **Access control analytics**: tailgating, credential sharing, and
-  unauthorized zone entry.
-- **Perimeter and seismic sensing**: multi-modal fusion for intrusion
-  detection.
-- **Guard force augmentation**: AI-generated incident summaries and
-  alarm triage.
+- Detect unusual behaviors, loitering, and abandoned objects in surveillance video.
+- Flag tailgating, credential sharing, and unauthorized zone entry.
+- Fuse radar, video, and seismic sensors for perimeter and maritime sensing.
+- Generate AI-assisted incident summaries and alarm triage for guards.
+
+## Steps
+
+1. Collect and anonymize surveillance and access-control data with privacy controls.
+2. Train a video anomaly or access-control detector with balanced false-positive rates.
+3. Validate performance across lighting, weather, and camera angles.
+4. Compare edge and cloud latency on a live camera feed.
+5. Deploy with alert-threshold tuning and human-in-the-loop review.
 
 ## Code pattern
 
@@ -110,24 +114,27 @@ anomaly_scores = clf.decision_function(X_test)
     {
         "name": "ai-for-search-and-rescue",
         "title": "AI for Search and Rescue",
-        "description": "UAV and robot search planning, victim detection from imagery "
-                       "and sensors, and SAR mission coordination with AI.",
+        "description": 'Use machine learning and robotics to plan search coverage, detect victims from aerial and ground sensors, and coordinate human-robot teams in GNSS-denied or hazardous terrain.',
         "devin_body": r'''
 ## When to use
 
 You are coordinating air, ground, or maritime search-and-rescue missions
 in GNSS-denied, cluttered, or time-critical environments.
 
-## Key concepts
+## Usage
 
-- **Search planning**: coverage path planning, information-theoretic
-  search, and multi-UAV task allocation.
-- **Victim detection**: vision, thermal, and acoustic detection of
-  persons and distress signals.
-- **Rescue robotics**: autonomous navigation, manipulation, and
-  payload delivery in rough terrain.
-- **Human-robot teaming**: shared situational awareness and safe
-  proximity navigation.
+- Plan coverage paths and information-theoretic search for air, ground, or maritime units.
+- Detect victims from RGB, thermal, LiDAR, and acoustic sensors.
+- Navigate autonomously and deliver payloads in rough terrain.
+- Coordinate human-robot teaming with shared situational awareness.
+
+## Steps
+
+1. Fuse heterogeneous sensors and calibrate them for the environment.
+2. Build a prior map of terrain, accessibility, and probability of detection.
+3. Train a victim-detection or search-priority model on labeled aerial data.
+4. Validate coverage and detection in a high-fidelity SAR simulator.
+5. Run a field or simulation mission with human override for safety-critical calls.
 
 ## Code pattern
 
@@ -164,24 +171,27 @@ best_cell = np.unravel_index(likelihood.argmax(), likelihood.shape)
     {
         "name": "ai-for-emergency-management",
         "title": "AI for Emergency Management",
-        "description": "Incident prediction, resource allocation, damage assessment, "
-                       "and generative AI for emergency operations.",
+        "description": 'Model flood inundation and evacuation traffic in real time to reroute populations and preposition emergency responders.',
         "devin_body": r'''
 ## When to use
 
 You are preparing for, responding to, or recovering from natural or
 human-made incidents that require fast coordination of people and assets.
 
-## Key concepts
+## Usage
 
-- **Incident prediction and forecasting**: spatiotemporal models for
-  calls, accidents, fires, and service demand.
-- **Resource dispatch and allocation**: optimization under uncertainty
-  for ambulances, fire, and police units.
-- **Damage assessment**: remote sensing, social media, and generative AI
-  for rapid situational awareness.
-- **Crisis informatics**: extracting needs, offers, and actionable
-  information from large message streams.
+- Forecast call volumes, accidents, fires, and service demand in space and time.
+- Optimize dispatch of ambulances, fire, and police units under uncertainty.
+- Assess damage from remote sensing, social media, and generative AI summaries.
+- Extract needs, offers, and actionable information from message streams.
+
+## Steps
+
+1. Ingest historical incident, weather, demographic, and infrastructure data.
+2. Build spatiotemporal prediction models with time-based validation.
+3. Optimize resource dispatch for response time and equity metrics.
+4. Validate the dispatch plan against simulated disruption scenarios.
+5. Deploy in an EOC workflow with human review of AI-generated summaries.
 
 ## Code pattern
 
@@ -218,24 +228,27 @@ forecast = model.predict(X_test)
     {
         "name": "ai-for-border-security",
         "title": "AI for Border Security",
-        "description": "Biometric identity verification, contraband and anomaly "
-                       "detection, and multi-sensor fusion at ports of entry.",
+        "description": 'Screen cargo X-ray and CT imagery for anomalies and contraband while fusing biometrics to speed legitimate flows at ports of entry.',
         "devin_body": r'''
 ## When to use
 
 You are securing air, land, and sea borders with biometric checks,
 cargo inspection, and surveillance of people, vehicles, and vessels.
 
-## Key concepts
+## Usage
 
-- **Biometric verification**: facial and iris matching for entry/exit
-  and identity confirmation.
-- **Cargo and baggage screening**: X-ray and multi-spectral anomaly
-  detection for contraband.
-- **Perimeter and maritime surveillance**: radar, video, and seismic
-  sensor fusion.
-- **Risk-based targeting**: machine learning for traveler and shipment
-  risk scoring.
+- Verify identity from facial and iris matching at entry/exit.
+- Detect contraband in X-ray and multi-spectral cargo and baggage scans.
+- Fuse radar, video, and seismic data for perimeter and maritime surveillance.
+- Risk-score travelers and shipments for targeted inspection.
+
+## Steps
+
+1. Collect biometric, cargo-image, and sensor data with demographic fairness controls.
+2. Train a matcher or anomaly detector for the target inspection task.
+3. Audit false-match rates and disparate impact across demographic groups.
+4. Validate multi-modal fusion against officer baselines in operational conditions.
+5. Deploy with human adjudication and audit logs for accountability.
 
 ## Code pattern
 
@@ -275,26 +288,27 @@ risk_score = clf.predict_proba(X_test)[:, 1]
     {
         "name": "ai-for-surveillance-ethics",
         "title": "AI for Surveillance Ethics",
-        "description": "Fairness, privacy, proportionality, and algorithmic "
-                       "accountability for AI surveillance and facial recognition.",
+        "description": 'Audit police facial-recognition deployments against legal and fairness standards to enforce proportionality and transparency.',
         "devin_body": r'''
 ## When to use
 
 You are designing, deploying, or auditing surveillance or biometric
 systems where privacy, human rights, and societal trust are at stake.
 
-## Key concepts
+## Usage
 
-- **Proportionality and necessity**: balancing security gains against
-  individual rights and freedoms.
-- **Algorithmic fairness**: auditing demographic disparities in
-  detection and recognition rates.
-- **Privacy by design**: data minimization, retention limits, and
-  anonymization.
-- **Transparency and accountability**: explainability, audit trails,
-  and redress mechanisms.
-- **Regulatory compliance**: AI Act, biometric data rules, and sector
-  guidelines.
+- Audit demographic parity and equalized odds in recognition and detection models.
+- Assess proportionality and necessity against individual rights.
+- Design data minimization, retention limits, and anonymization into systems.
+- Maintain explainability, audit trails, and redress mechanisms.
+
+## Steps
+
+1. Define the legitimate security goal, data sources, and decision logic.
+2. Run an independent demographic and error-rate audit across subgroups.
+3. Write a proportionality assessment that weighs security gains against rights.
+4. Implement retention, deletion, and human-in-the-loop review policies.
+5. Verify that audit logs and deletion policies match stated governance.
 
 ## Code pattern
 
@@ -329,26 +343,27 @@ print(classification_report(y_true, y_pred, target_names=groups))
     {
         "name": "ai-for-threat-intelligence",
         "title": "AI for Threat Intelligence",
-        "description": "Cyber threat intelligence extraction, attribution, knowledge "
-                       "graphs, and automated indicator analysis with ML and LLMs.",
+        "description": 'Use machine learning and NLP to extract indicators, attribute threat actors, build knowledge graphs, and prioritize cyber-threat intelligence.',
         "devin_body": r'''
 ## When to use
 
 You are turning large volumes of security reports, logs, and dark-web
 sources into structured, actionable intelligence about threats.
 
-## Key concepts
+## Usage
 
-- **Indicator extraction and normalization**: IoCs, TTPs, and
-  MITRE ATT&CK mapping.
-- **Threat actor attribution**: behavioral and artifact similarity
-  analysis.
-- **Knowledge graphs**: entity-relationship models for multi-hop
-  reasoning over CTI.
-- **Natural language processing**: LLM summarization, question
-  answering, and report triage.
-- **Prioritization and situational awareness**: risk scoring and
-  alert enrichment.
+- Extract and normalize IoCs, TTPs, and MITRE ATT&CK mappings from reports.
+- Attribute threat actors from behavioral and artifact similarity.
+- Build knowledge graphs for multi-hop reasoning over CTI.
+- Summarize and triage reports, and enrich alerts with risk scoring.
+
+## Steps
+
+1. Collect structured and unstructured threat reports and dark-web sources.
+2. Train or run an NER and relationship-extraction model on a labeled corpus.
+3. Normalize entities to a shared taxonomy and build a CTI knowledge graph.
+4. Validate extraction against a labeled gold set and analyst summaries.
+5. Integrate low-confidence triage with analyst-in-the-loop attribution.
 
 ## Code pattern
 
@@ -387,26 +402,27 @@ entities = [(ent.text, ent.label_) for ent in doc.ents]
     {
         "name": "ai-for-public-safety",
         "title": "AI for Public Safety",
-        "description": "Emergency call dispatch, response-time optimization, "
-                       "situational awareness, and fairness-aware public safety analytics.",
+        "description": 'Use machine learning to triage emergency calls, forecast incident hotspots, position response units, and promote equitable public safety analytics.',
         "devin_body": r'''
 ## When to use
 
 You are helping police, fire, EMS, and 911 systems respond faster and
 more equitably while respecting civil liberties.
 
-## Key concepts
+## Usage
 
-- **Call triage and dispatch**: natural-language and audio classifiers
-  for priority and unit assignment.
-- **Spatiotemporal incident prediction**: forecasting call volumes and
-  demand hotspots.
-- **Response optimization**: patrol, unit positioning, and routing
-  under constraints.
-- **Situational awareness**: video, social media, and IoT fusion for
-  live events.
-- **Fairness and oversight**: auditing for biased deployment and
-  feedback loops.
+- Classify 911 call priority and assign units from text and metadata.
+- Forecast call volumes and demand hotspots in space and time.
+- Optimize patrol positioning and routing under response-time and equity constraints.
+- Audit models for biased deployment and feedback loops.
+
+## Steps
+
+1. Ingest call text, metadata, and historical response data with chronological splits.
+2. Train a call-priority or incident-prediction model with class balance.
+3. Optimize unit positioning and compare response times to baseline.
+4. Audit hotspot prediction for demographic fairness and feedback loops.
+5. Deploy with interpretable models and human review of high-stakes decisions.
 
 ## Code pattern
 
@@ -442,25 +458,27 @@ priority = clf.predict(X_test)
     {
         "name": "ai-for-cyber-physical-security",
         "title": "AI for Cyber-Physical Security",
-        "description": "Securing industrial control systems, SCADA anomaly detection, "
-                       "physical invariants, and cross-layer intrusion detection.",
+        "description": 'Use machine learning to secure industrial control systems, detect SCADA anomalies, learn physical invariants, and trace cross-layer cyber-physical attacks.',
         "devin_body": r'''
 ## When to use
 
 You are protecting power, water, manufacturing, or transport systems
 where IT, OT, and physical processes must be defended together.
 
-## Key concepts
+## Usage
 
-- **ICS/SCADA security**: network and process telemetry monitoring.
-- **Anomaly detection with invariants**: learning normal physical and
-  logical relationships in sensor data.
-- **Attack detection and attribution**: multi-stage cyber-physical
-  attack chains and provenance analysis.
-- **Resilient control**: safe fallback and recovery for compromised
-  processes.
-- **Digital twins**: simulation-based stress testing and response
-  planning.
+- Monitor network and process telemetry for ICS and SCADA anomalies.
+- Learn physical invariants and flag residual anomalies in sensor data.
+- Trace multi-stage attack chains across IT, OT, and physical layers.
+- Plan safe fallback and recovery actions for compromised processes.
+
+## Steps
+
+1. Ingest network and process sensor data from a CPS dataset or testbed.
+2. Encode physical invariants and known safe states as features.
+3. Train an anomaly or sequence model to detect attacks and process faults.
+4. Validate on labeled CPS datasets such as SWaT or WADI.
+5. Define and test safe fallback procedures before automated response.
 
 ## Code pattern
 
@@ -498,26 +516,27 @@ flags = np.abs(zscore(residuals)) > 3.5
     {
         "name": "ai-for-crisis-communication",
         "title": "AI for Crisis Communication",
-        "description": "Automated situational awareness, rumor detection, "
-                       "multilingual crisis summarization, and public information chatbots.",
+        "description": 'Use machine learning and NLP to extract verified information, detect rumors, translate and summarize crisis messages, and power public information chatbots.',
         "devin_body": r'''
 ## When to use
 
 You must quickly extract, verify, and disseminate accurate information
 during a disaster, emergency, or rapidly evolving public event.
 
-## Key concepts
+## Usage
 
-- **Situational awareness from social media**: event detection,
-  classification, and geolocation.
-- **Rumor and misinformation detection**: claim verification and source
-  credibility scoring.
-- **Multilingual and cross-cultural communication**: machine
-  translation and summarization for diverse populations.
-- **Chatbots and public alerts**: LLM-driven, retrieval-grounded
-  response systems.
-- **Needs-offers matching**: connecting requests and resources during
-  a crisis.
+- Detect and classify crisis-related social media posts and events.
+- Verify claims and score source credibility for rumor detection.
+- Translate and summarize crisis briefs for diverse populations.
+- Match needs and offers and power retrieval-grounded public chatbots.
+
+## Steps
+
+1. Collect crisis social media, official feeds, and fact-check data in multiple languages.
+2. Train a classifier for information type and urgency.
+3. Build a claim-verification pipeline that distinguishes confirmed from unverified reports.
+4. Generate multilingual crisis briefs and evaluate clarity with experts.
+5. Coordinate messaging through official channels and maintain uncertainty labels.
 
 ## Code pattern
 
@@ -560,26 +579,27 @@ labels = classifier(posts)
     {
         "name": "ai-for-resilience",
         "title": "AI for Resilience",
-        "description": "Critical infrastructure resilience, disaster recovery planning, "
-                       "stress testing, and learning-based restoration optimization.",
+        "description": 'Use machine learning and network modeling to assess critical infrastructure resilience, optimize recovery, and stress-test systems against cascading failures.',
         "devin_body": r'''
 ## When to use
 
 You need to prepare critical systems and communities to absorb shocks,
 recover quickly, and adapt after disruptions.
 
-## Key concepts
+## Usage
 
-- **Resilience metrics**: robustness, redundancy, resourcefulness, and
-  rapidity.
-- **Critical infrastructure interdependencies**: power, water, telecom,
-  and transport network modeling.
-- **Recovery optimization**: resource allocation and restoration
-  sequencing under uncertainty.
-- **Scenario and stress testing**: simulation, digital twins, and
-  counterfactual analysis.
-- **Learning for adaptation**: online learning and reinforcement
-  learning for recovery policies.
+- Model interdependencies and cascading failures across power, water, telecom, and transport.
+- Optimize restoration sequencing and resource allocation under uncertainty.
+- Stress-test systems with simulations, digital twins, and counterfactuals.
+- Incorporate equity metrics so recovery does not leave vulnerable groups behind.
+
+## Steps
+
+1. Build a network model of critical infrastructure and interdependencies.
+2. Simulate component failures and measure robustness, redundancy, and rapidity.
+3. Train an optimizer or reinforcement-learning policy for restoration sequencing.
+4. Validate against historical disruption events and equity constraints.
+5. Stress-test the recovery plan across a range of scenarios.
 
 ## Code pattern
 
@@ -617,26 +637,27 @@ nodes_lost = len(G) - len(list(nx.connected_components(G))[0])
     {
         "name": "ai-for-disaster-preparedness",
         "title": "AI for Disaster Preparedness",
-        "description": "Hazard risk assessment, early warning systems, scenario "
-                       "simulation, and mitigation planning with AI.",
+        "description": 'Use machine learning to model hazards, build early warnings, simulate impacts, and plan mitigations and resource pre-positioning before disasters strike.',
         "devin_body": r'''
 ## When to use
 
 You are working before a disaster strikes to assess risk, issue timely
 warnings, and plan mitigations that reduce harm.
 
-## Key concepts
+## Usage
 
-- **Hazard and risk modeling**: flood, fire, earthquake, and weather
-  risk estimation.
-- **Early warning systems**: multi-hazard forecasting, trigger models,
-  and dissemination.
-- **Pre-event impact simulation**: building-level damage and
-  population-exposure estimation.
-- **Preparedness planning**: evacuation routes, shelter allocation, and
-  resource pre-positioning.
-- **Generative AI for scenarios**: LLM-based tabletop exercises and
-  public communication.
+- Model flood, fire, earthquake, and weather risk from physical and historical data.
+- Issue multi-hazard early warnings with trigger models and ensemble forecasts.
+- Simulate building-level damage and population exposure for impact estimation.
+- Plan evacuations, shelter allocation, and resource pre-positioning.
+
+## Steps
+
+1. Fuse physical models, remote sensing, and historical event data for the hazard.
+2. Train a hazard-risk or early-warning model with probabilistic outputs.
+3. Validate the model against a past event and measure lead time and false-alarm rate.
+4. Simulate impact and plan shelters, routes, and pre-positioned resources.
+5. Co-design the warning pipeline with communities to ensure trust and uptake.
 
 ## Code pattern
 

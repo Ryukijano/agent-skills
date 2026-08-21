@@ -1,6 +1,6 @@
 # /ai-for-games
 
-Procedural content generation, game-playing agents via reinforcement learning, NPC behavior, and generative AI for game assets and narratives.
+Use AI for Games to generate content, train game-playing agents and model players.
 
 ## Trigger
 

@@ -2,19 +2,28 @@
 
 ## Description
 
-Using AI to find stories in datasets, fact-check claims, generate visualizations, and produce data-driven reporting.
+Find, verify and visualize stories in public datasets, documents and real-time data streams to produce data-driven investigative reporting.
 
 ## When to use
 
 You are investigating public datasets, leaked documents, FOIA releases, or real-time data streams and need to find and verify stories at speed.
 
-## Key concepts
+## Usage
 
-- **Computational journalism**: algorithmic story discovery, monitoring, and verification.
-- **Structured data parsing**: read CSV, JSON, PDF tables, and APIs with reproducible scripts.
-- **Entity and anomaly detection**: identify people, organizations, and outliers in large corpora.
-- **Verifiable claims**: every number, quote, and chart must link to the underlying source.
-- **Document intelligence**: full-text search, named-entity recognition, and cross-document linking.
+- **Algorithmically discover, monitor, and verify stories.**
+- **Read CSV, JSON, PDF tables, and APIs with reproducible scripts.**
+- **Identify people, organizations, and outliers in large corpora.**
+- **Link every number, quote, and chart to the underlying source.**
+- **Use full-text search, named-entity recognition, and cross-document linking.**
+
+## Steps
+
+1. Acquire public datasets, FOIA releases, or scraped documents and document the source and date.
+2. Parse, clean, and join tables with reproducible scripts, tracking each transformation.
+3. Use statistics, LLMs, or entity extraction to find anomalies, trends, and story leads.
+4. Build charts and interactive graphics and ensure every value matches the source table.
+5. Fact-check generated claims by locating the exact row, sentence, or document they came from.
+6. Publish the methodology and data alongside the story for transparency and reproducibility.
 
 ## Code pattern
 

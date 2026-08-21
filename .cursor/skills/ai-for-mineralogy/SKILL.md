@@ -2,19 +2,27 @@
 
 ## Description
 
-XRD, SEM-EDS, Raman, and hyperspectral imaging for automated mineral identification, classification, and segmentation.
+Identify and quantify mineral phases from powder XRD patterns in near real time to automate geological and recycling workflows.
 
 ## When to use
 
 You need to identify, classify, or segment minerals from spectroscopic, diffraction, or image data.
 
-## Key concepts
+## Usage
 
-- **XRD phase identification**: classify powder diffraction patterns into mineral assemblages.
-- **SEM-EDS and microanalysis**: segment grains and classify mineral phases from elemental maps.
-- **Raman and hyperspectral spectroscopy**: identify minerals from spectral signatures.
-- **Mineral segmentation**: separate mineral grains in thin-section or drill-core imagery.
-- **Spectral libraries**: use reference libraries such as RRUFF for training and validation.
+- Identify mineral phases from XRD powder patterns and compare against reference libraries.
+- Segment grains and classify mineral phases from SEM-EDS elemental maps and images.
+- Classify minerals from Raman and hyperspectral signatures.
+- Separate mineral grains in thin-section or drill-core imagery.
+
+## Steps
+
+1. Collect XRD, Raman, SEM-EDS, hyperspectral, or image data and normalize/background-correct spectra.
+2. Augment data with shifts, scaling, and noise and compare CNNs against spectral-angle mapping and traditional methods.
+3. Train a mineral classifier and validate against expert labels and reference libraries (e.g., RRUFF, XRD-AutoAnalyzer).
+4. Segment mineral grains in images and compute mask IoU against hand-labeled masks.
+5. Interpret predictions with attention maps or SHAP to identify diagnostic peaks or elemental features.
+6. Integrate the pipeline into a core-logging or thin-section analysis workflow and update with new standards.
 
 ## Code pattern
 

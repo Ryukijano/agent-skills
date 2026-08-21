@@ -1,6 +1,6 @@
 # /ai-for-energy-trading
 
-Machine learning for electricity price forecasting, algorithmic trading, arbitrage, and bidding in day-ahead, intraday, and balancing markets.
+Forecasts electricity prices and optimizes bidding strategies across day-ahead, intraday, and balancing markets.
 
 ## Trigger
 

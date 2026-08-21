@@ -1,6 +1,6 @@
 # /ai-for-educational-games
 
-Game-based learning, adaptive difficulty, intelligent NPCs, scaffolding, and learning analytics embedded in playful environments.
+Use AI to build or adapt games that teach concepts through interactive, adaptive, and engaging play.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Predictive monitoring, environmental risk assessment, digital twins, and preventive conservation for built heritage and cultural collections.
+Use AI to monitor environmental conditions, predict degradation, prioritize conservation actions, or build digital twins for heritage preservation.
 
 ## When to use
 
 You need to monitor environmental conditions, predict degradation, prioritize conservation actions, or build digital twins for heritage preservation.
 
-## Key concepts
+## Usage
 
-- **Preventive conservation**: condition-based maintenance, microclimate control, and risk forecasting.
-- **IoT and environmental monitoring**: temperature, humidity, vibration, and air-quality sensors for heritage sites.
-- **Digital twins for heritage**: dynamic 3D models coupled with sensor data and predictive analytics.
-- **Damage detection and risk assessment**: semantic segmentation, structural health monitoring, and spatiotemporal risk mapping.
+- Assess environmental and material risk factors.
+- Model degradation and pest/disease spread.
+- Prioritize preservation actions and budgets.
+- Monitor condition changes.
+
+## Steps
+
+1. Assess environmental and material risk factors.
+2. Model degradation and pest/disease spread.
+3. Prioritize preservation actions and budgets.
+4. Monitor condition changes.
+5. Calibrate with conservators and preventive-conservation data.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Perception, motion planning, and control for autonomous robots that weed, spray, scout, and harvest in field and greenhouse environments.
+Enable autonomous robots for weeding, harvesting, and navigation in crop fields.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are building or deploying an autonomous ground or aerial robot to perform pr
 
 ## Usage
 
-- **Vision-based detection and localisation**: locate crops, fruit, weeds, and obstacles.
-- **Autonomous navigation**: follow crop rows and avoid hazards without continuous GPS.
-- **Selective actuation**: trigger sprayers, cutters, or grippers based on real-time perception.
-- **Field coverage and task planning**: optimise routes and schedules across fields.
+- Build perception with ROS 2, YOLO-World, and SAM.
+- Plan navigation and manipulation in unstructured fields.
+- Detect and localize fruits, weeds, and crop rows.
+- Integrate with farm machinery and RTK-GPS.
+- Evaluate with field benchmarks and safety standards.
 
 ## Steps
 
-1. Specify the target crop, task, platform, and field operating conditions.
-2. Design the sensor stack (cameras, LiDAR, IMU, GPS) and data pipeline.
-3. Train perception models for the target objects and field conditions.
-4. Integrate localisation, motion planning, and end-effector control.
-5. Validate progressively in simulation, controlled environments, and production fields.
+1. Select robot platform and task (weeding, picking, scouting).
+2. Collect field images and sensor data.
+3. Train perception and control models.
+4. Simulate in Gazebo or field test.
+5. Validate precision, speed, and crop damage.
 
 ## Code pattern
 

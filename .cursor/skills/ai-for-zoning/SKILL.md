@@ -2,7 +2,7 @@
 
 ## Description
 
-Zoning code interpretation, compliance checking, variance analysis, automated answers to zoning questions, and land-use regulation analytics.
+Answers zoning questions and checks parcel compliance against local codes using retrieval-augmented code assistants.
 
 ## When to use
 
@@ -10,18 +10,17 @@ You are interpreting zoning codes, checking compliance, answering applicant ques
 
 ## Usage
 
-- **Code Q&A**: answer natural-language questions about zoning rules.
-- **Compliance checks**: determine whether a proposal meets code requirements.
+- **Code Q&A**: answer natural-language questions about zoning rules and permitted uses.
+- **Compliance checks**: determine whether a proposal meets code requirements and overlays.
 - **Variance and exception analysis**: identify required approvals or waivers.
-- **Mapping and overlays**: reconcile zoning districts with environmental and historic layers.
-- **Policy drafting**: generate and compare code language options.
+- **GIS-linked mapping**: reconcile zoning districts with environmental and historic layers.
 
 ## Steps
 
-1. Digitize zoning code text, maps, and related regulations.
-2. Build a retrieval-augmented generation (RAG) pipeline over the code.
-3. Validate answers against authoritative code sections.
-4. Integrate with GIS for map-based compliance.
+1. Digitize zoning code text, maps, and related regulations into a corpus.
+2. Build a retrieval-augmented generation pipeline over the vetted code.
+3. Validate answers against authoritative code sections and map overlays.
+4. Integrate with GIS for parcel-based compliance checks.
 5. Monitor Q&A logs for errors, bias, and outdated answers.
 
 ## Code pattern

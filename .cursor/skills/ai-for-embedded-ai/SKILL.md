@@ -2,18 +2,27 @@
 
 ## Description
 
-TinyML, on-device inference, quantization, neural architecture search, and co-optimization for microcontrollers and DSPs.
+Use machine learning and co-optimization to deploy tiny models on microcontrollers, DSPs, and low-power SoCs.
 
 ## When to use
 
 You are deploying ML on microcontrollers, DSPs, or low-power SoCs and need to meet latency, memory, and energy budgets.
 
-## Key concepts
+## Usage
 
-- **TinyML**: sub-1 mW inference on Cortex-M, RISC-V, or custom DSP cores.
-- **Quantization and pruning**: int8/int16, unstructured/structured pruning, and mixed-precision search.
-- **Neural architecture search (NAS)**: TinyNAS co-designs networks and inference engines for a target MCU.
-- **Hardware-software co-design**: matching operator support, memory hierarchy, and on-device training.
+- Run sub-milliwatt inference on Cortex-M, RISC-V, or custom DSP cores.
+- Quantize and prune models to int8/int16 with mixed precision.
+- Co-design neural architectures and inference engines for a target MCU.
+- Match operators, memory hierarchy, and on-device training to the hardware.
+
+## Steps
+
+1. Profile the target MCU for SRAM, Flash, and MAC limits.
+2. Select or search a TinyML network with NAS and quantization.
+3. Convert to TFLite Micro or CMSIS-NN with per-layer quantization.
+4. Validate on the actual device, not just the simulator.
+5. Measure latency and energy with MLPerf Tiny or board-level benchmarks.
+6. Iterate on the network, operator support, and memory allocation.
 
 ## Code pattern
 

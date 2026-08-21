@@ -1,6 +1,6 @@
 # /ai-for-chemistry
 
-Molecular property prediction, generative chemistry, reaction prediction, and cheminformatics with deep learning.
+Use deep learning to predict molecular properties, design novel molecules, and forecast chemical reactions and retrosynthetic routes.
 
 ## Trigger
 

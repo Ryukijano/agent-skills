@@ -1,6 +1,6 @@
 # /ai-for-acoustics
 
-Machine learning for source localization, room acoustics, bioacoustics, structural health monitoring, and spatial audio.
+Use machine learning to localize sources, classify bioacoustic events, monitor structural health, and model spatial sound fields.
 
 ## Trigger
 

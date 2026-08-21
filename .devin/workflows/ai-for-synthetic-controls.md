@@ -1,6 +1,6 @@
 # /ai-for-synthetic-controls
 
-Machine learning for constructing, validating, and extending synthetic and virtual control arms from observational data to augment clinical and policy evaluation.
+Construct synthetic control arms from historical or real-world data to augment clinical evidence.
 
 ## Trigger
 

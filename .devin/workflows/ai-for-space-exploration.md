@@ -1,6 +1,6 @@
 # /ai-for-space-exploration
 
-Onboard autonomy, science target selection, anomaly detection, mission planning, and analysis of space and Earth-observation data.
+Select science targets and detect anomalies onboard spacecraft and rovers to maximize discovery without round-trip latency.
 
 ## Trigger
 

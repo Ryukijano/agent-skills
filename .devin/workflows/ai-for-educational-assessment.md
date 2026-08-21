@@ -1,6 +1,6 @@
 # /ai-for-educational-assessment
 
-Automated essay scoring, conversational assessment, LLM rubric grading, feedback generation, and validity and fairness of AI-driven evaluation.
+Score open-ended student work and generate targeted feedback at scale while monitoring fairness and validity.
 
 ## Trigger
 

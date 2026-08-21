@@ -2,7 +2,7 @@
 
 ## Description
 
-Remote sensing, multi-source data fusion, functional-zone mapping, and neural-symbolic planning for land-use analysis and policy.
+Maps urban functional zones and monitors land-cover change from remote sensing and multi-source geospatial data.
 
 ## When to use
 
@@ -18,7 +18,7 @@ You want to map, monitor, and plan land use; identify functional zones; or suppo
 ## Steps
 
 1. Define land-use classes and study area.
-2. Gather multi-source geospatial and socio-economic data.
+2. Gather Sentinel-2, SDGSAT-1, OSM, and socio-economic data.
 3. Train and validate multi-modal deep learning models.
 4. Produce land-use maps and uncertainty estimates.
 5. Translate maps into planning dashboards and policy inputs.

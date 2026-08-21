@@ -1,6 +1,6 @@
 # /ai-for-data-quality
 
-Automated profiling, anomaly detection, data cleaning, imputation, validation, and continuous data quality monitoring for ML and analytics.
+Detect and repair data quality issues across pipelines, warehouses, and AI inputs.
 
 ## Trigger
 

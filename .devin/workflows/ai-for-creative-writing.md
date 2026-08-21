@@ -1,6 +1,6 @@
 # /ai-for-creative-writing
 
-Co-writing novels, screenplays, and long-form fiction with LLMs, prompt engineering for voice and style, and human-AI revision workflows.
+Use large language models to co-write fiction and long-form prose, brainstorm outlines, calibrate voice, and run human-AI revision workflows.
 
 ## Trigger
 

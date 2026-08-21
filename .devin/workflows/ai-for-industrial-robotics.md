@@ -1,6 +1,6 @@
 # /ai-for-industrial-robotics
 
-Machine learning for factory manipulation, assembly, pick-and-place, force control, sim-to-real, and vision-language-action models in industrial settings.
+Use machine learning to automate precision assembly, bin picking, cable routing, and force-guided manipulation in manufacturing cells.
 
 ## Trigger
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Predictive maintenance, fault detection, digital twins, and AI-enabled asset lifecycle management for built facilities.
+Predicts equipment failures, manages asset lifecycles, and optimizes energy and maintenance in built facilities.
 
 ## When to use
 
@@ -17,9 +17,9 @@ You are managing maintenance, energy, and asset performance in commercial, indus
 
 ## Steps
 
-1. Ingest sensor, BMS, CMMS, and asset master data.
+1. Ingest sensor, BMS, CMMS, and asset master data into a common data environment.
 2. Label faults, failures, and maintenance events.
-3. Train predictive models (XGBoost, LSTM, autoencoders).
+3. Train predictive models (XGBoost, LSTM, autoencoders) on asset health indicators.
 4. Deploy real-time anomaly alerts and work-order integration.
 5. Continuously retrain on new data and feedback.
 

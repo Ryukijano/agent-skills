@@ -1,6 +1,6 @@
 # /ai-for-data-observability
 
-ML-driven monitoring of data freshness, schema drift, volume anomalies, lineage breaks, and pipeline health to ensure reliable data operations.
+Monitor data freshness, volume, and lineage to detect pipeline failures.
 
 ## Trigger
 

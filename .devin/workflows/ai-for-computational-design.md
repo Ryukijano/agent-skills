@@ -1,6 +1,6 @@
 # /ai-for-computational-design
 
-Differentiable simulation, topology optimization, CAD-aware generative models, and solver-in-the-loop co-design for architecture, products, and structures.
+Use differentiable simulation, topology optimization, and CAD-aware generative models to co-design products and structures.
 
 ## Trigger
 

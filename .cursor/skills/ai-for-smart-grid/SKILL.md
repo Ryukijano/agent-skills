@@ -2,7 +2,7 @@
 
 ## Description
 
-AI and machine learning for load and renewable forecasting, grid state estimation, optimal power flow, and smart-grid control.
+Forecasts load and renewable generation, estimates grid state, and accelerates optimal power flow for reliable power system operations.
 
 ## When to use
 
@@ -10,7 +10,7 @@ You are operating or designing a smart power grid and need accurate forecasts, f
 
 ## Usage
 
-- **Load and renewable forecasting**: short- to medium-term predictions for operations and markets.
+- **Load and renewable forecasting**: produce short- to medium-term predictions for operations and markets.
 - **State estimation and bad-data detection**: infer grid states from SCADA and AMI measurements.
 - **Optimal power flow surrogates**: accelerate AC OPF with learned approximations.
 - **Anomaly and event detection**: identify disturbances, faults, and cyber-physical anomalies.

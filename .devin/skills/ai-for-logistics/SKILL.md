@@ -2,19 +2,27 @@
 
 ## Description
 
-Vehicle routing, last-mile delivery, warehouse automation, fleet scheduling, and dynamic logistics optimization.
+Use optimization and learning-based methods to solve vehicle routing, last-mile delivery, warehouse automation, and fleet-scheduling problems.
 
 ## When to use
 
 You are optimizing delivery routes, fleet dispatch, warehouse operations, or inventory flows under capacity, time, and cost constraints.
 
-## Key concepts
+## Usage
 
-- **Vehicle Routing Problem (VRP) and variants**: CVRP, VRPTW, multi-depot, dynamic, and stochastic VRP.
-- **Last-mile optimization**: demand forecasting, route sequencing, and delivery-time windows.
-- **Warehouse automation**: pick-path optimization, robot scheduling, and inventory placement.
-- **Learning-based heuristics**: GNNs, reinforcement learning, and attention models for routing.
-- **Sustainability**: fuel, emissions, and multi-modal trade-offs in logistics planning.
+- Model and solve VRP variants (CVRP, VRPTW, multi-depot, dynamic, stochastic) with exact or learned heuristics.
+- Optimize last-mile demand forecasting, route sequencing, and time-window compliance.
+- Automate warehouse pick-paths, robot scheduling, and inventory slotting.
+- Reduce fuel, emissions, and cost by balancing multi-modal and real-time re-routing trade-offs.
+
+## Steps
+
+1. Gather order, depot, vehicle, traffic, weather, and customer time-window data for the logistics network.
+2. Build a VRP or routing model with capacity and time-window constraints using OR-Tools, RL, or GNN heuristics.
+3. Integrate demand forecasting to pre-position inventory and sequence last-mile routes.
+4. Add warehouse pick-path and robot-scheduling optimization, measuring throughput and travel distance.
+5. Implement real-time re-routing when disruptions occur and compare cost and SLA performance to baselines.
+6. Track fuel, emissions, and cost KPIs, and deploy the integrated logistics decision-support system.
 
 ## Code pattern
 

@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for generative spatial layouts, floorplan synthesis, style exploration, and text/sketch-driven conceptual design.
+Use AI for Architecture to generate massing, floorplans and style variations from text or sketches.
 
 ## When to use
 
 You are in early architectural concept design and want to generate massing, floorplans, spatial layouts, or style variations from text, sketches, or adjacency constraints.
 
-## Key concepts
 
-- **Language-driven layout generation**: prompt large language models to produce structured floorplan descriptions and adjacency graphs.
-- **3D architectural synthesis**: autoregressive or diffusion models for building forms and interiors.
-- **Sketch-to-architecture**: convert freehand sketches into 3D massing or floorplan renderings.
-- **Graph and constraint-based layout**: encode room adjacencies and area constraints as optimization problems.
-- **Space syntax and typology conditioning**: guide generation with circulation, daylight, and program rules.
+## Usage
+
+
+- **Language-driven layout generation**: Prompt large language models to produce structured floorplan descriptions and adjacency graphs.
+- **3D architectural synthesis**: Autoregressive or diffusion models for building forms and interiors.
+- **Sketch-to-architecture**: Convert freehand sketches into 3D massing or floorplan renderings.
+- **Graph and constraint-based layout**: Encode room adjacencies and area constraints as optimization problems.
+- **Space syntax and typology conditioning**: Guide generation with circulation, daylight, and program rules.
+
+## Steps
+
+1. Collect and prepare design briefs, sketches, adjacency graphs and constraints.
+2. In early architectural concept design and want to generate massing.
+3. Floorplans.
+4. Spatial layouts.
+5. Validate by generating 100 layouts from text prompts and check valid room adjacencies.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -37,12 +48,14 @@ pos = nx.spring_layout(G, seed=42)
 # pos gives an initial spatial topology for refinement into a floorplan
 ```
 
+
 ## Tuning notes
 
 - Use adjacency, area, and aspect-ratio constraints to filter invalid layouts.
 - Fine-tune language models on domain-specific floorplan text or synthetic bubble diagrams.
 - Combine parametric geometry (e.g., shapely, Rhino/Grasshopper) with generative models.
 - Evaluate both design diversity and hard-constraint satisfaction, not just visual realism.
+
 
 ## Verification
 

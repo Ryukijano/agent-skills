@@ -2,24 +2,27 @@
 
 ## Description
 
-Securing industrial control systems, SCADA anomaly detection, physical invariants, and cross-layer intrusion detection.
+Use machine learning to secure industrial control systems, detect SCADA anomalies, learn physical invariants, and trace cross-layer cyber-physical attacks.
 
 ## When to use
 
 You are protecting power, water, manufacturing, or transport systems
 where IT, OT, and physical processes must be defended together.
 
-## Key concepts
+## Usage
 
-- **ICS/SCADA security**: network and process telemetry monitoring.
-- **Anomaly detection with invariants**: learning normal physical and
-  logical relationships in sensor data.
-- **Attack detection and attribution**: multi-stage cyber-physical
-  attack chains and provenance analysis.
-- **Resilient control**: safe fallback and recovery for compromised
-  processes.
-- **Digital twins**: simulation-based stress testing and response
-  planning.
+- Monitor network and process telemetry for ICS and SCADA anomalies.
+- Learn physical invariants and flag residual anomalies in sensor data.
+- Trace multi-stage attack chains across IT, OT, and physical layers.
+- Plan safe fallback and recovery actions for compromised processes.
+
+## Steps
+
+1. Ingest network and process sensor data from a CPS dataset or testbed.
+2. Encode physical invariants and known safe states as features.
+3. Train an anomaly or sequence model to detect attacks and process faults.
+4. Validate on labeled CPS datasets such as SWaT or WADI.
+5. Define and test safe fallback procedures before automated response.
 
 ## Code pattern
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Contract review, clause extraction, matter intake, and AI-assisted legal workflow automation.
+Use AI to automate contract review, triaging legal requests, extract clauses, or streamlining matter management and e-billing.
 
 ## When to use
 
 You are automating contract review, triaging legal requests, extracting clauses, or streamlining matter management and e-billing.
 
-## Key concepts
+## Usage
 
-- **Contract review and clause extraction**: identify risks, obligations, and deviations.
-- **Legal intake and routing**: classify matters and route to the right team.
-- **E-billing and spend analytics**: detect anomalies and benchmark legal spend.
-- **RAG and source grounding**: ground legal answers in contracts, policies, and precedent.
+- Extract clauses, entities, and obligations from contracts.
+- Triage legal intake and route matters.
+- Ground answers in approved playbooks and precedent.
+- Detect spend anomalies and benchmark fees.
+
+## Steps
+
+1. Extract clauses, entities, and obligations from contracts.
+2. Triage legal intake and route matters.
+3. Ground answers in approved playbooks and precedent.
+4. Detect spend anomalies and benchmark fees.
+5. Require attorney review before final advice.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

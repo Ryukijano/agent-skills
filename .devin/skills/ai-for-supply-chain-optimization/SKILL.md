@@ -2,18 +2,29 @@
 
 ## Description
 
-Multi-echelon inventory, distribution network design, demand-supply synchronization, and resilient supply chain planning.
+Use AI for Supply Chain Optimization to coordinate inventory, design networks and synchronize demand and supply.
 
 ## When to use
 
 You are designing distribution networks, setting inventory policies, synchronizing supply with demand, or mitigating disruption risk.
 
-## Key concepts
 
-- **Multi-echelon inventory optimization**: coordinate stock levels across warehouses, plants, and retailers.
-- **Distribution network design**: facility location, allocation, and transportation trade-offs under demand uncertainty.
+## Usage
+
+
+- **Multi-echelon inventory optimization**: Coordinate stock levels across warehouses, plants, and retailers.
+- **Distribution network design**: Facility location, allocation, and transportation trade-offs under demand uncertainty.
 - **Demand-supply synchronization**: RL and digital twins to adapt to stochastic, non-stationary environments.
-- **Resilience and risk**: scenario optimization and robustness to disruptions.
+- **Resilience and risk**: Scenario optimization and robustness to disruptions.
+
+## Steps
+
+1. Collect and prepare supply-chain, inventory and demand data.
+2. Design distribution networks.
+3. Sette inventory policies.
+4. Synchronize supply with demand.
+5. Validate by formulating and solve a multi-warehouse allocation problem with real cost data.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -36,11 +47,13 @@ for c in customers:
 prob.solve()
 ```
 
+
 ## Tuning notes
 
 - Combine forecasting and optimization; small forecast errors can have large downstream cost effects.
 - Use safety stock and robustness to protect against demand and lead-time uncertainty.
 - RL policies need careful simulation environments before production deployment.
+
 
 ## Verification
 

@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for composite material design, manufacturing process optimization, defect detection, and multiscale property prediction.
+Apply ML to design composites, optimize manufacturing, detect defects, and predict multiscale mechanical and thermal properties.
 
 ## When to use
 
 You are engineering fiber-reinforced, polymer-matrix, metal-matrix, or ceramic-matrix composites and need to predict or optimize mechanical, thermal, or processing behavior.
 
-## Key concepts
+## Usage
 
-- **Microstructure-property prediction**: link fiber orientation, volume fraction, void content, and interface properties to stiffness, strength, and toughness.
-- **Defect detection and NDE**: ultrasonic, X-ray, and thermography image analysis for delaminations, voids, and fiber waviness.
-- **Manufacturing process modeling**: resin infusion, automated fiber placement, curing, and consolidation parameter optimization.
-- **Multiscale and surrogate modeling**: homogenization, finite-element surrogates, and data-driven multiscale simulators.
-- **Inverse design of architected composites**: topology optimization and generative design for tailored anisotropic properties.
+- Link microstructure features (fiber orientation, volume fraction, voids) to stiffness, strength, and toughness.
+- Detect delaminations, voids, and fiber waviness from ultrasonic, X-ray, and thermography data.
+- Optimize resin infusion, automated fiber placement, curing, and consolidation parameters.
+- Build multiscale surrogates and inverse-design tools for tailored anisotropic composite properties.
+
+## Steps
+
+1. Collect composite microstructure images, NDE data, manufacturing parameters, and mechanical/thermal test results.
+2. Extract microstructural features and train models to predict stiffness, strength, toughness, or thermal conductivity.
+3. Train defect-detection classifiers/segmenters on NDE images and validate against destructive inspection.
+4. Optimize manufacturing parameters (temperature, pressure, feed rate) using Bayesian or physics-informed methods.
+5. Build multiscale or FE surrogates and use them for rapid design-space exploration.
+6. Validate predicted properties and process settings with mechanical tests and quality inspections.
 
 ## Code pattern
 

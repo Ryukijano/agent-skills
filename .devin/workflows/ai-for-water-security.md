@@ -1,6 +1,6 @@
 # /ai-for-water-security
 
-ML for water quality prediction, leak detection, flood forecasting, and hydrological modeling.
+Apply ML to forecast streamflow and floods, monitor water quality, detect leaks, and model hydrological and water-distribution systems.
 
 ## Trigger
 

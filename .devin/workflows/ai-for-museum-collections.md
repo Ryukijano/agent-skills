@@ -1,6 +1,6 @@
 # /ai-for-museum-collections
 
-Computer vision, natural language processing, and metadata enrichment for cataloging, searching, and interpreting museum and archive collections.
+Enrich collection records by auto-tagging objects, linking entities to knowledge graphs, and generating searchable descriptions.
 
 ## Trigger
 

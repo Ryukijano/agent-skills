@@ -2,7 +2,7 @@
 
 ## Description
 
-ML-integrated PLCs, edge controllers, motion control, robot programming, and real-time AI inference on the shop floor.
+Runs ML inference on PLCs, edge devices, and robot controllers for low-latency motion and quality control.
 
 ## When to use
 

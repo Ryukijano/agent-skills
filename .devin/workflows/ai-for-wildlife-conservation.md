@@ -1,6 +1,6 @@
 # /ai-for-wildlife-conservation
 
-Camera-trap image classification, acoustic monitoring, animal re-identification, and anti-poaching analytics.
+Use camera-trap and acoustic ML to identify species, re-identify individuals, and detect poaching and habitat threats for wildlife conservation.
 
 ## Trigger
 

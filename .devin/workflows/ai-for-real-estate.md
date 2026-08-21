@@ -1,6 +1,6 @@
 # /ai-for-real-estate
 
-Automated valuation, market analysis, lead matching, and AI-assisted property due diligence.
+Use AI to valuing properties, analyze market trends, matching buyers to listings, or screening properties for investment or lending.
 
 ## Trigger
 

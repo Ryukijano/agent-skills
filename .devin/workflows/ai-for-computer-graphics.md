@@ -1,6 +1,6 @@
 # /ai-for-computer-graphics
 
-Neural rendering, differentiable rendering, inverse rendering, geometry and material estimation, and generative image synthesis for photorealistic graphics.
+Use AI for Computer Graphics to synthesize photorealistic images, reconstruct geometry and estimate materials.
 
 ## Trigger
 

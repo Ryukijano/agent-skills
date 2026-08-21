@@ -2,7 +2,7 @@
 
 ## Description
 
-Automated records classification, sensitivity review, metadata enrichment, archival appraisal, and access to digital government archives.
+Classifies, appraises, and redacts born-digital government records to accelerate archival review and public access.
 
 ## When to use
 
@@ -10,19 +10,18 @@ You are managing born-digital government records, reducing archival backlogs, or
 
 ## Usage
 
-- **Records classification**: assign retention, security, and access labels.
-- **Sensitivity review**: flag personal, classified, or confidential content.
-- **Metadata extraction**: identify entities, dates, and topics.
-- **Appraisal and selection**: surface historically significant material.
-- **Public access**: redact, index, and search records for disclosure.
+- **Records classification and retention**: assign retention, security, and access labels.
+- **Sensitivity review and redaction**: flag personal, classified, or confidential content.
+- **Metadata extraction**: identify entities, dates, and topics for search and discovery.
+- **Appraisal and selection**: surface historically significant material for transfer.
 
 ## Steps
 
 1. Inventory records formats, systems, and retention schedules.
-2. Pre-process text, images, audio, and structured data.
-3. Train or apply classifiers for sensitivity and retention.
+2. Pre-process text, images, audio, and structured data from repositories.
+3. Train or apply classifiers for sensitivity, retention, and PII.
 4. Route uncertain cases to records professionals for review.
-5. Publish or release approved records with rich metadata.
+5. Publish approved records with rich metadata and redactions.
 
 ## Code pattern
 

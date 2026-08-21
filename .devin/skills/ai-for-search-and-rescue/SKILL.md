@@ -2,23 +2,27 @@
 
 ## Description
 
-UAV and robot search planning, victim detection from imagery and sensors, and SAR mission coordination with AI.
+Use machine learning and robotics to plan search coverage, detect victims from aerial and ground sensors, and coordinate human-robot teams in GNSS-denied or hazardous terrain.
 
 ## When to use
 
 You are coordinating air, ground, or maritime search-and-rescue missions
 in GNSS-denied, cluttered, or time-critical environments.
 
-## Key concepts
+## Usage
 
-- **Search planning**: coverage path planning, information-theoretic
-  search, and multi-UAV task allocation.
-- **Victim detection**: vision, thermal, and acoustic detection of
-  persons and distress signals.
-- **Rescue robotics**: autonomous navigation, manipulation, and
-  payload delivery in rough terrain.
-- **Human-robot teaming**: shared situational awareness and safe
-  proximity navigation.
+- Plan coverage paths and information-theoretic search for air, ground, or maritime units.
+- Detect victims from RGB, thermal, LiDAR, and acoustic sensors.
+- Navigate autonomously and deliver payloads in rough terrain.
+- Coordinate human-robot teaming with shared situational awareness.
+
+## Steps
+
+1. Fuse heterogeneous sensors and calibrate them for the environment.
+2. Build a prior map of terrain, accessibility, and probability of detection.
+3. Train a victim-detection or search-priority model on labeled aerial data.
+4. Validate coverage and detection in a high-fidelity SAR simulator.
+5. Run a field or simulation mission with human override for safety-critical calls.
 
 ## Code pattern
 

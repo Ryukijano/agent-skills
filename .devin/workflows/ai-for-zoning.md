@@ -1,6 +1,6 @@
 # /ai-for-zoning
 
-Zoning code interpretation, compliance checking, variance analysis, automated answers to zoning questions, and land-use regulation analytics.
+Answers zoning questions and checks parcel compliance against local codes using retrieval-augmented code assistants.
 
 ## Trigger
 

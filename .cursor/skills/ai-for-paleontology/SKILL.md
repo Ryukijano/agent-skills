@@ -2,19 +2,27 @@
 
 ## Description
 
-Automated fossil identification, morphometric analysis, 3D segmentation, and taxonomic classification from images and point clouds.
+Segment fossil CT volumes with minimal annotated data to extract fragile 3D anatomy and accelerate taxonomic study.
 
 ## When to use
 
 You are analyzing fossil images, CT scans, or 3D models and want to speed up identification, segmentation, or morphological quantification.
 
-## Key concepts
+## Usage
 
-- **Fossil image classification**: deep learning for taxonomic identification of macro- and microfossils.
-- **3D segmentation**: segment bone, shell, or tooth structures from CT or photogrammetry meshes.
-- **Morphometrics**: landmark-free geometric morphometrics from segmented shapes.
-- **Paleoecological inference**: predict habitat, diet, or climate from fossil morphology.
-- **Citizen-science and dark data**: leverage web-crawled and museum images to build training sets.
+- Classify macro- and microfossil images with deep learning for taxonomic identification.
+- Segment bone, shell, or tooth structures from CT or photogrammetry meshes.
+- Extract landmark-free geometric morphometrics from segmented shapes.
+- Infer habitat, diet, or climate from fossil morphology.
+
+## Steps
+
+1. Gather fossil images, CT scans, or 3D models from museums, publications, or field collections.
+2. Preprocess images and use ImageNet or domain pretraining to fine-tune a fossil classifier.
+3. Segment 3D specimens with strong augmentation and validate per-clade accuracy with taxonomists.
+4. Extract morphometric measurements from segmentations and compare to manual landmarks.
+5. Build models that link morphology to paleoecological variables (habitat, diet, climate).
+6. Apply XAI to highlight diagnostic morphological features and publish validated datasets.
 
 ## Code pattern
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Learning-augmented approximation, learned heuristics for NP-hard maximization and CSPs, and data-driven rounding.
+Use machine learning to improve polynomial-time approximations and rounding for NP-hard problems.
 
 ## When to use
 
 You want polynomial-time approximate solutions for NP-hard problems and are willing to use ML predictions to improve approximation factors or runtime.
 
-## Key concepts
+## Usage
 
-- **Approximation ratios and hardness**: worst-case guarantees and PTAS/FPTAS.
-- **Learning-augmented approximation**: use predictions to beat classical lower bounds.
-- **CSP and Max-Cut rounding**: learned rounding policies and semidefinite programming relaxations.
-- **Data-driven heuristics**: train fast heuristics that approximate optimal solutions on a distribution.
+- Predict approximate solution values and rounding decisions for NP-hard maximization and CSPs.
+- Use learning-augmented predictions to improve average-case approximation factors.
+- Learn fast heuristics that approximate optimal solutions on typical instances.
+- Build convex relaxations (LP/SDP) as scaffolds for learned rounding policies.
+
+## Steps
+
+1. Choose an NP-hard problem and generate training instances with exact or relaxed labels.
+2. Train a regressor or policy to predict objective values or rounding probabilities.
+3. Combine the learned predictions with an LP/SDP relaxation or greedy algorithm.
+4. Empirically verify approximation ratios on instance families and compare to classical algorithms.
+5. Evaluate on out-of-distribution instances and certify average-case guarantees.
+6. Deploy the fast approximation inside an optimization or decision pipeline.
 
 ## Code pattern
 

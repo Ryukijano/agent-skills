@@ -1,6 +1,6 @@
 # /ai-for-linguistics
 
-Computational linguistics, corpus analysis, morphosyntactic annotation, syntactic parsing, language modeling, and NLP tools for linguistic research.
+Use AI for Linguistics to annotate, parse, model and compare language structure at scale.
 
 ## Trigger
 

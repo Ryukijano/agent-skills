@@ -1,6 +1,6 @@
 # /ai-for-drug-repurposing
 
-Graph ML, knowledge graphs, LLMs, and transcriptomics for identifying new indications for existing drugs.
+Predict new indications for existing drugs by reasoning over biomedical knowledge graphs and transcriptomic signatures.
 
 ## Trigger
 

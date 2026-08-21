@@ -1,6 +1,6 @@
 # /ai-for-optics
 
-Computational imaging, lens design, wavefront shaping, optical metrology, and inverse scattering with deep learning.
+Use deep learning to reconstruct images, retrieve phase, design optical elements, and solve inverse scattering problems in computational imaging.
 
 ## Trigger
 

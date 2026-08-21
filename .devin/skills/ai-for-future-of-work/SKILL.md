@@ -2,19 +2,28 @@
 
 ## Description
 
-Automation and augmentation analysis, skill demand forecasting, workforce transitions, algorithmic management, and human-centered labor market policy.
+Use AI exposure and skill-demand analysis to understand workforce transitions and support human-centered labor policy.
 
 ## When to use
 
 You are analyzing how AI changes occupations, tasks, hiring, productivity, job quality, or workforce skills and designing policy or organizational responses.
 
-## Key concepts
+## Usage
 
-- **AI exposure and task automation**: task-level models of automation and augmentation potential.
-- **Skill demand and transitions**: reskilling, upskilling, and occupational mobility.
-- **Algorithmic management**: AI-driven scheduling, monitoring, evaluation, and worker autonomy.
-- **Job quality and equity**: wages, working conditions, discrimination, and worker voice.
-- **Human-centered labor policy**: social dialogue, safety nets, and lifelong learning.
+- Estimate task-level automation and augmentation potential.
+- Model skill demand, reskilling, upskilling, and occupational mobility.
+- Analyze algorithmic management in scheduling, monitoring, and evaluation.
+- Assess job quality, wages, equity, and worker voice.
+- Co-design labor policy with workers and social partners.
+
+## Steps
+
+1. Collect task-level occupational data and identify AI-exposed tasks.
+2. Build or use an AI-exposure scoring model and validate against expert labels.
+3. Model task reallocation, reskilling needs, and occupational mobility.
+4. Pilot an AI tool and measure effects on task time, output, and job quality.
+5. Engage workers and unions in co-designing transitions and safeguards.
+6. Evaluate outcomes and adjust policy or organizational responses.
 
 ## Code pattern
 

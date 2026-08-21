@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for data and model discovery, pricing, valuation, matching, trust, and governance in data-sharing marketplaces and AI model markets.
+Match buyers and sellers, price data products, and manage data exchange.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are designing, operating, or participating in a marketplace that trades data
 
 ## Usage
 
-- **Asset discovery and recommendation**: match buyers to relevant datasets or models.
-- **Data and model valuation**: estimate worth using Shapley, information, or auction methods.
-- **Pricing and bundling**: set prices that are arbitrage-free and incentive-aligned.
-- **Trust and reputation**: score sellers, buyers, and data quality.
-- **License and access control**: enforce usage terms and track consumption.
+- Build searchable data-product catalogs with quality scores.
+- Estimate data value with Shapley, SHAP, or auction models.
+- Set usage-based, subscription, or outcome pricing.
+- Automate contracts, licensing, and access controls.
+- Track product performance and seller reputation.
 
 ## Steps
 
-1. Define marketplace assets, participants, and business rules.
-2. Build search, profiling, and recommendation systems for assets.
-3. Implement valuation and pricing models.
-4. Add trust, rating, and dispute mechanisms.
-5. Monitor transactions, enforce licenses, and adjust pricing.
+1. Curate and profile data products for the marketplace.
+2. Train data valuation and price-prediction models.
+3. Build pricing, negotiation, and contract workflows.
+4. Enforce access, privacy, and audit terms.
+5. Monitor transactions and refine pricing.
 
 ## Code pattern
 

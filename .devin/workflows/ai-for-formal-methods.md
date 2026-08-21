@@ -1,6 +1,6 @@
 # /ai-for-formal-methods
 
-Neuro-symbolic verification, LLM-assisted autoformalization, and learned heuristics for theorem provers and model checkers.
+Use machine learning and LLMs to translate informal specifications into formal models and guide theorem provers and model checkers.
 
 ## Trigger
 

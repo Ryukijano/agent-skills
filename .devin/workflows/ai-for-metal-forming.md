@@ -1,6 +1,6 @@
 # /ai-for-metal-forming
 
-Machine learning for sheet-metal stamping, deep drawing, forging, rolling, extrusion, springback prediction, die design, and forming-limit prediction.
+Use machine learning and finite-element surrogates to predict springback, wrinkling and tearing while optimizing die design and controlling stamping and deep-drawing or forging processes.
 
 ## Trigger
 

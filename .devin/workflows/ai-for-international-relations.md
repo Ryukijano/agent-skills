@@ -1,6 +1,6 @@
 # /ai-for-international-relations
 
-Conflict forecasting, event data analysis, crisis early warning, treaty and negotiation text mining, and geopolitical risk modeling.
+Use AI for International Relations to forecast conflict, mine event data and model geopolitical networks.
 
 ## Trigger
 

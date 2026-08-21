@@ -1,6 +1,6 @@
 # /ai-for-building-operations
 
-Smart building control, energy optimization, occupant-centric HVAC and lighting, and IoT-BMS integration for operational performance.
+Controls HVAC, lighting, and energy use in real time while maintaining comfort and lowering operational carbon.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-medical-imaging
 
-General medical image preprocessing, segmentation, classification, and deployment with DICOM, MONAI, nnU-Net, and clinical AI pipelines.
+Use AI for Medical Imaging to preprocess, segment and deploy clinical AI pipelines with DICOM and MONAI.
 
 ## Trigger
 

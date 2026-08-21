@@ -2,19 +2,30 @@
 
 ## Description
 
-Predictive policing, recidivism risk assessment, crime forecasting, criminal network analysis, and fairness-aware public safety research.
+Use AI for Criminology to forecast crime, assess recidivism risk and analyze criminal networks fairly.
 
 ## When to use
 
 You are analyzing crime patterns, assessing risk, or designing public-safety interventions and want to use data and models responsibly.
 
-## Key concepts
 
-- **Crime forecasting**: spatiotemporal models for hot spots and future incident counts.
-- **Recidivism risk assessment**: predict reoffending to inform sentencing or rehabilitation.
-- **Criminal network analysis**: detect co-offending, money-laundering, and gang structures.
-- **Victimization and fear-of-crime mapping**: combine survey, sensor, and report data.
-- **Fairness and accountability**: audit for racial and neighborhood bias in predictions and deployment.
+## Usage
+
+
+- **Crime forecasting**: Spatiotemporal models for hot spots and future incident counts.
+- **Recidivism risk assessment**: Predict reoffending to inform sentencing or rehabilitation.
+- **Criminal network analysis**: Detect co-offending, money-laundering, and gang structures.
+- **Victimization and fear-of-crime mapping**: Combine survey, sensor, and report data.
+- **Fairness and accountability**: Audit for racial and neighborhood bias in predictions and deployment.
+
+## Steps
+
+1. Collect and prepare crime reports, sensor and administrative records.
+2. Analyze crime patterns.
+3. Assess risk.
+4. Design public-safety interventions and want to use data and models responsibly.
+5. Validate by evaluating a crime-forecasting model on held-out spatial and temporal data.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -31,12 +42,14 @@ clf = RandomForestClassifier(class_weight="balanced", random_state=42)
 clf.fit(X_train, y_train)
 ```
 
+
 ## Tuning notes
 
 - Predictive models can amplify historical biases; require fairness audits before deployment.
 - Avoid feedback loops where predictions influence policing patterns and then future data.
 - Use transparent, interpretable models in high-stakes criminal justice settings.
 - Engage affected communities and legal stakeholders in model design and review.
+
 
 ## Verification
 

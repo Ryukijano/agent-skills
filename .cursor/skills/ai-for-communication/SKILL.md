@@ -2,19 +2,30 @@
 
 ## Description
 
-Computational communication science: content analysis, information diffusion, agenda setting, and audience effects across digital platforms.
+Use AI for Communication to analyze content, model diffusion and study audience effects.
 
 ## When to use
 
 You are studying how information, opinions, and narratives spread across media and platforms and want to analyze content, networks, and audience effects at scale.
 
-## Key concepts
 
-- **Automated content analysis**: classify frames, topics, emotions, and persuasion strategies.
-- **Information diffusion and virality**: model retweet cascades, rumor spread, and influence.
-- **Agenda setting and framing**: track salience and framing over time and across actors.
-- **Audience analytics and segmentation**: understand engagement, polarization, and selective exposure.
-- **Ethical platform research**: respect terms of service, privacy, and representative sampling.
+## Usage
+
+
+- **Automated content analysis**: Classify frames, topics, emotions, and persuasion strategies.
+- **Information diffusion and virality**: Model retweet cascades, rumor spread, and influence.
+- **Agenda setting and framing**: Track salience and framing over time and across actors.
+- **Audience analytics and segmentation**: Understand engagement, polarization, and selective exposure.
+- **Ethical platform research**: Respect terms of service, privacy, and representative sampling.
+
+## Steps
+
+1. Collect and prepare social media, news and platform data.
+2. Studye how information.
+3. Opinions.
+4. And narratives spread across media and platforms and want to analyze content.
+5. Validate by replicating a known finding on information diffusion in a new dataset.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -27,12 +38,14 @@ print("Density:", nx.density(G))
 print("Top influencers:", sorted(dict(G.in_degree()).items(), key=lambda x: x[1], reverse=True)[:5])
 ```
 
+
 ## Tuning notes
 
 - Link computational measures to communication theory and prior literature.
 - Address platform-specific biases and changes in APIs and algorithms.
 - Combine text, network, and temporal features rather than relying on one signal.
 - Validate automated content codes with human coders and inter-rater reliability.
+
 
 ## Verification
 

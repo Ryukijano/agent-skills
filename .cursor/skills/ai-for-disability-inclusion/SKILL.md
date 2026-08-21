@@ -2,18 +2,27 @@
 
 ## Description
 
-Accessible AI, disability-aware bias evaluation, inclusive design, and assistive technologies that respect the rights and agency of people with disabilities.
+Use accessible, disability-aware AI to improve assistive technologies and reduce algorithmic harm for people with disabilities.
 
 ## When to use
 
 You are building AI systems used by, or about, people with disabilities and want to avoid ableism and improve accessibility.
 
-## Key concepts
+## Usage
 
-- **Disability-aware evaluation**: benchmark models for stereotypes, factual errors, and sentiment drift on disability-related queries.
-- **Assistive AI**: speech-to-text, image captioning, sign-language recognition, and real-time captioning.
-- **Inclusive co-design**: involve people with disabilities in data collection, model design, and deployment.
-- **Algorithmic harm taxonomy**: representational, allocative, quality-of-service, and interpersonal harms.
+- Benchmark models for stereotypes, factual errors, and sentiment on disability-related queries.
+- Build assistive AI such as speech-to-text, image captioning, and sign-language recognition.
+- Involve people with disabilities in co-design, data collection, and deployment.
+- Detect representational, allocative, quality-of-service, and interpersonal harms.
+
+## Steps
+
+1. Identify the disability community and use case and establish CRPD-aligned governance.
+2. Collect representative, consent-based data that captures diverse disability experiences.
+3. Train or adapt speech, vision, or language models for the assistive task.
+4. Audit for bias against mobility, sensory, cognitive, and psychosocial disability groups.
+5. Build human override and explainability into high-stakes decisions.
+6. Pilot with disabled users and iterate on model and UI decisions.
 
 ## Code pattern
 

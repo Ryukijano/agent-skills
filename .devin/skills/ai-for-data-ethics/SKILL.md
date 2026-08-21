@@ -2,7 +2,7 @@
 
 ## Description
 
-Fairness, accountability, transparency, data dignity, consent, and responsible data use in ML pipelines and AI systems.
+Assess and mitigate fairness, bias, and societal impacts of data and AI.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You need to identify and mitigate ethical risks in data collection, processing, 
 
 ## Usage
 
-- **Bias and fairness**: measure demographic parity, equalized odds, and calibration.
-- **Transparency and explainability**: produce interpretable models and data cards.
-- **Consent and data dignity**: respect user preferences and withdrawal rights.
-- **Accountability**: assign responsibilities and audit decisions.
-- **Environmental and societal impact**: assess energy, labor, and downstream harms.
+- Audit model fairness with Fairlearn and Aequitas.
+- Measure group and intersectional disparities.
+- Test for biases in data collection and labeling.
+- Review model cards and explainability reports.
+- Engage stakeholders and document mitigation.
 
 ## Steps
 
-1. Identify stakeholders, harms, and ethical principles for the use case.
-2. Audit data and models for bias, representativeness, and consent.
-3. Implement fairness constraints, explainability, and redress mechanisms.
-4. Document decisions, data cards, and model cards.
-5. Monitor deployed systems for emerging ethical risks.
+1. Define protected attributes and fairness metrics.
+2. Audit data, features, and model outputs for disparities.
+3. Train bias-mitigation models or apply post-processing.
+4. Generate model cards and fairness reports.
+5. Iterate with stakeholders and re-audit.
 
 ## Code pattern
 

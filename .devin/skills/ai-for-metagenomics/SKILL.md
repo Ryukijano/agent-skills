@@ -2,19 +2,28 @@
 
 ## Description
 
-16S rRNA and shotgun microbial community profiling, taxonomic and functional prediction, MAG binning, and microbiome-host association modeling.
+Use machine learning on 16S rRNA and shotgun metagenomic data to profile microbial communities, infer functions, assemble metagenome-assembled genomes and link the microbiome to host phenotypes.
 
 ## When to use
 
 You are profiling microbial communities from 16S rRNA or shotgun metagenomic data to classify taxa, infer function, assemble MAGs, or link the microbiome to host phenotypes.
 
-## Key concepts
+## Usage
 
-- **Amplicon vs shotgun**: 16S rRNA profiling versus whole-genome metagenomics.
-- **Taxonomic and functional profiling**: read classification, gene catalogues, and pathway inference.
-- **Metagenome-assembled genomes (MAGs)**: binning contigs into draft microbial genomes.
-- **Compositional data**: relative abundance, sparsity, and library size effects.
-- **Host-microbiome models**: classification, time-series, and causal inference.
+- **Profile taxonomy**: classify 16S amplicon or shotgun reads into taxonomic and functional profiles.
+- **Assemble MAGs**: bin contigs into metagenome-assembled genomes and assess quality.
+- **Handle composition**: apply CLR, ILR, or other transformations to relative-abundance data.
+- **Model host associations**: link taxonomic and functional features to phenotype or intervention.
+- **Validate generalization**: test microbiome associations in independent cohorts.
+
+## Steps
+
+1. Quality-filter and trim reads, remove contaminants, and account for negative controls.
+2. Profile taxonomy from 16S or shotgun data, or assemble and bin MAGs from metagenomes.
+3. Infer functional content with gene catalogs and pathway databases.
+4. Apply compositional transformations and batch correction before statistical testing.
+5. Train classification or regression models linking microbiome features to host phenotypes.
+6. Validate associations in independent cohorts and confirm with targeted experiments.
 
 ## Code pattern
 

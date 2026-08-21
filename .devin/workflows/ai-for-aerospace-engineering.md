@@ -1,6 +1,6 @@
 # /ai-for-aerospace-engineering
 
-AI for aerodynamic design, propulsion, structural analysis, flight dynamics, GNC, and certification of aerospace vehicles.
+Use AI for flight-dynamics prediction, structural-health monitoring, and mission planning.
 
 ## Trigger
 

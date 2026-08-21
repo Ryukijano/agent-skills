@@ -1,6 +1,6 @@
 # /ai-for-photovoltaics
 
-Machine learning for solar-cell materials discovery, perovskite and organic PV optimization, device engineering, and stability prediction.
+Use ML and high-throughput experimentation to discover solar-cell absorbers, optimize perovskite and organic PV, and predict device performance and stability.
 
 ## Trigger
 

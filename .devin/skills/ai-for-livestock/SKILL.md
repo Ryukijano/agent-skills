@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for health, behaviour, welfare, grazing, and reproduction across cattle, pigs, sheep, goats, and other farm animals.
+Track and predict health, behavior, and productivity across livestock.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are monitoring livestock health, behaviour, or productivity across species a
 
 ## Usage
 
-- **Animal health and disease detection**: identify lameness, respiratory issues, and metabolic disorders.
-- **Behaviour and welfare monitoring**: classify feeding, resting, rumination, social, and heat behaviours.
-- **Grazing and pasture management**: estimate intake, forage availability, and animal distribution.
-- **Reproduction and growth tracking**: predict calving, farrowing, weight gain, and market readiness.
+- Monitor behavior and posture with AnimalFormer and WERS.
+- Detect lameness, heat, and calving with video and wearables.
+- Track individual animals with RFID, UWB, and computer vision.
+- Predict weight gain and feed conversion.
+- Build farm-level decision support dashboards.
 
 ## Steps
 
-1. Choose sensors appropriate to the species and environment (wearables, cameras, microphones, scales).
-2. Identify and track individual animals with RFID, computer vision, or biometrics.
-3. Engineer features and train models per target health, behaviour, or production outcome.
-4. Validate across farms, breeds, seasons, and production systems.
-5. Deploy alerts and integrate with farm management software and veterinary workflows.
+1. Select species and target traits (health, behavior, production).
+2. Install cameras, wearables, or RFID readers.
+3. Collect and annotate phenotypes and events.
+4. Train species-specific models.
+5. Validate against farm records and expert scoring.
 
 ## Code pattern
 

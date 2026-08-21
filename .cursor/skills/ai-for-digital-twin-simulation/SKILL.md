@@ -2,19 +2,28 @@
 
 ## Description
 
-High-fidelity virtual replicas, real-time synchronization, physics-informed and data-driven simulation, and AI training environments for cyber-physical systems.
+Use physics-informed and data-driven simulation to build digital twins of physical assets, processes, and environments.
 
 ## When to use
 
 You are building a virtual replica of a physical asset, process, or environment to monitor, simulate, optimize, or train AI agents before real-world deployment.
 
-## Key concepts
+## Usage
 
-- **Digital twin architecture**: ISO 23247 reference architecture, modeling, mirroring, intervention, and management.
-- **Real-time synchronization**: sensor fusion, state estimation, and IoT data pipelines.
-- **Physics-informed and data-driven simulation**: combine first-principle models with ML surrogates.
-- **AI simulation and synthetic environments**: train and test AI agents safely in virtual worlds.
-- **Lifecycle value**: predictive maintenance, what-if analysis, and closed-loop control.
+- Mirror physical assets with ISO 23247 architecture and IoT data pipelines.
+- Synchronize real-time state with sensor fusion and state estimation.
+- Combine first-principle models with ML surrogates.
+- Train and test AI agents safely in virtual replicas.
+- Support predictive maintenance, what-if analysis, and closed-loop control.
+
+## Steps
+
+1. Define the physical asset, process, or environment and the twin's purpose.
+2. Build a physics-based or data-driven model and connect live sensor streams.
+3. Train ML surrogates for computationally expensive sub-models.
+4. Validate the twin continuously against real measurements and detect drift.
+5. Run what-if scenarios, optimize control, or train RL agents in the twin.
+6. Deploy closed-loop control with safety limits and update the twin over its lifecycle.
 
 ## Code pattern
 

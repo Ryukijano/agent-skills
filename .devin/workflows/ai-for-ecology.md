@@ -1,6 +1,6 @@
 # /ai-for-ecology
 
-Species distribution modeling, habitat suitability, biodiversity monitoring, and ecological forecasting using ML and remote sensing.
+Use ML and remote sensing to model species distributions, map habitat suitability, monitor biodiversity, and forecast ecological change.
 
 ## Trigger
 

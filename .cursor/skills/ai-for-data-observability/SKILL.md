@@ -2,7 +2,7 @@
 
 ## Description
 
-ML-driven monitoring of data freshness, schema drift, volume anomalies, lineage breaks, and pipeline health to ensure reliable data operations.
+Monitor data freshness, volume, and lineage to detect pipeline failures.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You need end-to-end visibility into data pipelines and want to detect, diagnose,
 
 ## Usage
 
-- **Freshness and volume monitoring**: detect late or missing data.
-- **Schema and distribution drift**: identify unexpected changes in data shape or distributions.
-- **Lineage-aware anomaly detection**: localize pipeline failures using dependency graphs.
-- **Automated root cause analysis**: rank likely causes and suggest fixes.
-- **SLO dashboards**: track data reliability, completeness, and freshness KPIs.
+- Auto-generate freshness, volume, and schema monitors (Monte Carlo, dataobservability.ai).
+- Detect anomalies in row counts and distribution (Soda, Prizm).
+- Map column-level lineage and downstream impact.
+- Correlate data incidents with cost and performance metrics.
+- Build runbooks and root-cause analysis with AIOps.
 
 ## Steps
 
-1. Instrument pipelines with run, dataset, and model metadata.
-2. Define observability signals: freshness, row count, schema, distributions.
-3. Train anomaly detectors on historical pipeline behavior.
-4. Correlate anomalies with lineage and code or infrastructure changes.
-5. Alert and auto-remediate common failure modes.
+1. Connect warehouses, lakes, and pipeline orchestrators.
+2. Baseline historical metrics for freshness, volume, and schema.
+3. Deploy ML-based or rule-based anomaly detection.
+4. Alert teams and route incidents by lineage.
+5. Track MTTR and refine thresholds.
 
 ## Code pattern
 

@@ -2,19 +2,26 @@
 
 ## Description
 
-SEO, SEM, social media, email automation, marketing analytics, and AI-driven personalization across digital channels.
+Use AI to optimize search, social, email, and analytics across digital channels while respecting privacy and first-party data.
 
 ## When to use
 
 You need to drive traffic, engagement, and conversions across digital channels with AI-assisted search, social, email, and analytics.
 
-## Key concepts
+## Usage
 
-- **SEO and GEO**: keyword intent, technical SEO, structured data, and answer-first content.
-- **Paid search and social**: automated bidding, audience signals, and creative rotation.
-- **Email and marketing automation**: segmentation, send-time optimization, and personalization.
-- **Attribution and analytics**: multi-touch, cohorts, incrementality, and marketing mix modeling.
-- **Privacy and first-party data**: consent, clean rooms, and server-side tracking.
+- Optimize SEO and GEO for answer-first, citeable content.
+- Automate bidding, audience signals, and creative rotation in paid channels.
+- Personalize email and marketing automation with segmentation and send-time optimization.
+- Attribute impact with multi-touch, cohort, and marketing-mix models.
+
+## Steps
+
+1. Unify first-party data and ensure consent and privacy compliance.
+2. Audit technical SEO, structured data, and keyword visibility.
+3. Build a keyword-visibility or send-time optimization experiment.
+4. Test an AI-recommended audience segment against a rule-based baseline.
+5. Measure lift with causal methods and holdouts, then refine the mix.
 
 ## Code pattern
 

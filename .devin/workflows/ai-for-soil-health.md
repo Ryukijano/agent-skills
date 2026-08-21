@@ -1,6 +1,6 @@
 # /ai-for-soil-health
 
-Machine learning for predicting soil carbon, nutrients, biology, compaction, erosion risk, and overall soil health from sensors and remote sensing.
+Estimate soil carbon, nutrients, and texture from spectra and remote sensing.
 
 ## Trigger
 

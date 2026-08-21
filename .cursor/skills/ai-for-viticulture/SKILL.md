@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for vineyard monitoring, grape and canopy sensing, disease detection, yield and quality prediction, and harvest decision support.
+Improve grape quality, yield, and disease management with vineyard AI.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are managing a vineyard and want to monitor vine health, detect diseases, es
 
 ## Usage
 
-- **Canopy and berry detection**: locate and count grape bunches from images and point clouds.
-- **Disease and pest monitoring**: detect powdery mildew, downy mildew, and grapevine pests.
-- **Yield and quality prediction**: forecast grape quantity and maturity (sugar, acidity).
-- **Irrigation, fertilisation, and harvest scheduling**: support precision management and winery logistics.
+- Map vines, count buds, and detect diseases with Cropsy or AgScout.
+- Predict yield and harvest windows from canopy and cluster data.
+- Monitor virus and fungal disease risk.
+- Optimize irrigation and spraying by zone.
+- Track pruning and canopy development.
 
 ## Steps
 
-1. Collect drone, satellite, or proximal sensing data across vineyard blocks.
-2. Gather weather, soil, and phenology records and link them to management zones.
-3. Train detection and regression models for the specific grape variety and terroir.
-4. Validate predictions at harvest and across multiple vintages.
-5. Integrate outputs into vineyard management plans and winery receiving schedules.
+1. Capture drone, tractor, or smartphone imagery by block.
+2. Label vines, clusters, symptoms, and yield data.
+3. Train detection, segmentation, and yield models.
+4. Generate prescription maps for spray and irrigation.
+5. Validate with harvest weights and lab analysis.
 
 ## Code pattern
 

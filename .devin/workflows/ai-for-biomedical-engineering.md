@@ -1,6 +1,6 @@
 # /ai-for-biomedical-engineering
 
-AI for medical devices, wearable biosensors, biomechanics, neural engineering, tissue engineering, and clinical diagnostics.
+Apply AI to medical imaging, biosignal monitoring, and medical-device design.
 
 ## Trigger
 

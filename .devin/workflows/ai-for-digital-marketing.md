@@ -1,6 +1,6 @@
 # /ai-for-digital-marketing
 
-SEO, SEM, social media, email automation, marketing analytics, and AI-driven personalization across digital channels.
+Use AI to optimize search, social, email, and analytics across digital channels while respecting privacy and first-party data.
 
 ## Trigger
 

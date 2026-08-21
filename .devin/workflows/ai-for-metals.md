@@ -1,6 +1,6 @@
 # /ai-for-metals
 
-Machine learning for alloy design, phase stability, mechanical properties, process optimization, and microstructure-property mapping.
+Use ML to design alloys, predict phase stability and properties, quantify microstructure, and optimize metal processing and additive manufacturing.
 
 ## Trigger
 

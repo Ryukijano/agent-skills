@@ -2,25 +2,27 @@
 
 ## Description
 
-Emergency call dispatch, response-time optimization, situational awareness, and fairness-aware public safety analytics.
+Use machine learning to triage emergency calls, forecast incident hotspots, position response units, and promote equitable public safety analytics.
 
 ## When to use
 
 You are helping police, fire, EMS, and 911 systems respond faster and
 more equitably while respecting civil liberties.
 
-## Key concepts
+## Usage
 
-- **Call triage and dispatch**: natural-language and audio classifiers
-  for priority and unit assignment.
-- **Spatiotemporal incident prediction**: forecasting call volumes and
-  demand hotspots.
-- **Response optimization**: patrol, unit positioning, and routing
-  under constraints.
-- **Situational awareness**: video, social media, and IoT fusion for
-  live events.
-- **Fairness and oversight**: auditing for biased deployment and
-  feedback loops.
+- Classify 911 call priority and assign units from text and metadata.
+- Forecast call volumes and demand hotspots in space and time.
+- Optimize patrol positioning and routing under response-time and equity constraints.
+- Audit models for biased deployment and feedback loops.
+
+## Steps
+
+1. Ingest call text, metadata, and historical response data with chronological splits.
+2. Train a call-priority or incident-prediction model with class balance.
+3. Optimize unit positioning and compare response times to baseline.
+4. Audit hotspot prediction for demographic fairness and feedback loops.
+5. Deploy with interpretable models and human review of high-stakes decisions.
 
 ## Code pattern
 

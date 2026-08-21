@@ -1,6 +1,6 @@
 # /ai-for-immunology
 
-Machine learning for adaptive immune receptor repertoires, epitope-MHC binding, immune cell phenotyping, and vaccine/immunotherapy design.
+Predict MHC-bound epitopes and vaccine candidates from receptor and omic data to prioritize immunotherapy and prophylaxis designs.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-public-transport
 
-Ridership prediction, service scheduling, bus and rail dispatch optimization, disruption recovery, and multi-modal transit analytics.
+Optimizes transit operations with ridership forecasts, dynamic scheduling, and real-time disruption recovery.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-strategy
 
-Data-driven strategy formulation, competitive scenario modeling, market sensing, and AI-augmented strategic decision-making.
+Use AI to formulate corporate strategy, evaluate strategic options, sense market shifts, or build decision support for leadership choices.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-influencer-marketing
 
-Creator discovery, campaign matching, content co-creation, performance prediction, and authenticity measurement for influencer marketing.
+Use machine learning to discover and vet creators, match them to campaigns, predict performance, and measure ROI and authenticity.
 
 ## Trigger
 

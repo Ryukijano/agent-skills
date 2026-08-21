@@ -2,18 +2,27 @@
 
 ## Description
 
-Waste classification, automated sorting, route optimization, recycling quality, and lifecycle assessment with ML and robotics.
+Use AI to design waste-sorting systems, optimize collection routes, or improve recycling quality and material recovery.
 
 ## When to use
 
 You are designing waste-sorting systems, optimizing collection routes, or improving recycling quality and material recovery.
 
-## Key concepts
+## Usage
 
-- **Waste classification and detection**: CNNs and vision transformers for recyclable categories.
-- **Robotic sorting**: AI-guided pick-and-place for municipal/recyclable waste.
-- **Route and logistics optimization**: vehicle routing and bin-level IoT scheduling.
-- **Lifecycle assessment (LCA)**: quantify environmental impact of waste pathways.
+- Collect waste images and sensor data (RGB, NIR, hyperspectral).
+- Train material classifiers and vision-transformer sorters.
+- Optimize collection routes and bin scheduling.
+- Track sorted-stream purity and contamination.
+
+## Steps
+
+1. Collect waste images and sensor data (RGB, NIR, hyperspectral).
+2. Train material classifiers and vision-transformer sorters.
+3. Optimize collection routes and bin scheduling.
+4. Track sorted-stream purity and contamination.
+5. Benchmark recovery and purity against manual sorting.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

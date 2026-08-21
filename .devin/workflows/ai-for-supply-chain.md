@@ -1,6 +1,6 @@
 # /ai-for-supply-chain
 
-Demand forecasting, inventory optimization, risk and resilience, supplier analytics, and end-to-end supply chain visibility.
+Use ML to forecast demand, optimize inventory, score supplier risk, and improve visibility and resilience across multi-echelon supply chains.
 
 ## Trigger
 

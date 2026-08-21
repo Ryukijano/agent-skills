@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for semiconductor fabrication yield enhancement, wafer defect detection, equipment fault classification, process control, and advanced lithography/etch modeling.
+Use AI to predict wafer yield, detect defects, run virtual metrology, schedule equipment and control advanced processes in high-volume semiconductor fabrication.
 
 ## When to use
 
 You are working with wafer fabrication data, trying to predict die yield, classify wafer or equipment faults, build virtual metrology models, or optimize lithography and etch processes.
 
-## Key concepts
+## Usage
 
-- **Yield and WAT prediction**: models that map equipment, process, and inline metrology data to final test yield.
-- **Fault detection and classification (FDC)**: anomaly detection on tool trace data for chamber drift or misprocess.
-- **Virtual metrology**: inferring wafer properties from process data when inline measurement is sparse.
-- **Lithography and etch**: hotspot detection, overlay correction, critical dimension prediction, and endpoint control.
-- **Run-to-run control**: adaptive adjustment of recipe parameters using feedback from measured outputs.
+- **Virtual metrology**: predict wafer properties such as film thickness and CD from tool sensor data.
+- **Defect detection**: classify wafer defects, reticle defects, and macro defects from images.
+- **Yield prediction**: combine process parameters, tool data, and inspection results to forecast yield.
+- **Predictive maintenance**: forecast tool failures, chamber matching issues, and unscheduled downtime.
+- **Run-to-run control**: adjust process recipes based on real-time predictions and feedback.
+
+## Steps
+
+1. Collect tool sensor data, process parameters, and inspection/metrology results per wafer.
+2. Build a virtual metrology model for target properties and validate against physical measurements.
+3. Train defect classifiers on wafer images and review precision-recall for each defect type.
+4. Engineer wafer-level features for yield prediction and rank root causes.
+5. Deploy a run-to-run controller that updates recipe parameters based on predictions.
+6. Continuously retrain models as tools, products, and processes evolve.
 
 ## Code pattern
 

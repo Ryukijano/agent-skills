@@ -1,6 +1,6 @@
 # /ai-for-network-management
 
-AIOps for network monitoring, anomaly detection, root-cause analysis, configuration management, and predictive maintenance.
+Use AIOps to correlate alerts, find root causes, and automate network remediation.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Pollutant forecasting, spatiotemporal PM modeling, emission source apportionment, and early warning for air quality.
+Use AI to forecast pollutant levels, issuing air-quality alerts, or identify emission sources for urban and regional scales.
 
 ## When to use
 
 You are forecasting pollutant levels, issuing air-quality alerts, or identifying emission sources for urban and regional scales.
 
-## Key concepts
+## Usage
 
-- **Pollutant forecasting**: PM2.5, PM10, NO2, O3, CO from meteorology and emissions.
-- **Spatiotemporal deep learning**: ConvLSTM, transformers, and graph neural networks.
-- **Source apportionment**: PMF, receptor models, and SHAP-based attribution.
-- **Hybrid physical-ML models**: combine chemical-transport with deep learning.
+- Ingest meteorology, emissions, and regulatory monitor data.
+- Engineer diurnal, weekly, and seasonal features.
+- Train spatiotemporal PM and pollutant forecasters.
+- Attribute sources with receptor models and SHAP.
+
+## Steps
+
+1. Ingest meteorology, emissions, and regulatory monitor data.
+2. Engineer diurnal, weekly, and seasonal features.
+3. Train spatiotemporal PM and pollutant forecasters.
+4. Attribute sources with receptor models and SHAP.
+5. Compare forecasts to persistence and chemical-transport baselines.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

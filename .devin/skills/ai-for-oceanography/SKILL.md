@@ -2,18 +2,27 @@
 
 ## Description
 
-Data-driven ocean forecasting, current reconstruction, eddy detection, and marine ecosystem modeling.
+Use data-driven models to reconstruct ocean currents, detect mesoscale eddies, and forecast ocean state from satellite and in-situ observations.
 
 ## When to use
 
 You are predicting ocean state, reconstructing currents, or detecting mesoscale features from satellite and in-situ data.
 
-## Key concepts
+## Usage
 
-- **Neural ocean models**: data-driven surrogates for ocean circulation.
-- **Eddy detection**: identify and track mesoscale eddies in satellite altimetry.
-- **Current reconstruction**: fuse sea-level, wind, and in-situ observations.
-- **Nowcasting to seasonal forecasting**: lead-time-specific prediction tasks.
+- Reconstruct high-resolution surface currents by fusing sea surface height, temperature, and wind data.
+- Detect and track mesoscale eddies in satellite altimetry and multi-modal ocean imagery.
+- Build neural surrogates for ocean circulation and biogeochemical variables at nowcasting to seasonal lead times.
+- Downscale and gap-fill satellite ocean fields using deep-learning super-resolution and data imputation.
+
+## Steps
+
+1. Ingest satellite altimetry, SST, wind, in-situ drifters, and model reanalysis for the target region.
+2. Preprocess data (regrid, gap-fill, normalize) and derive dynamic variables such as SSH, EKE, and geostrophic currents.
+3. Train a neural current-reconstruction model (e.g., U-Net, GESTNet) on matched SSH/SST/wind and drifter observations.
+4. Run an eddy-detection model on the reconstructed fields and track eddy trajectories over time.
+5. Validate current maps against independent drifter trajectories and eddy tracks against a reference catalog.
+6. Deploy the workflow for operational nowcasting or downscale climate projections for ecosystem and shipping applications.
 
 ## Code pattern
 

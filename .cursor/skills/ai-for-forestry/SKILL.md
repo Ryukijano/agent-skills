@@ -2,19 +2,27 @@
 
 ## Description
 
-Forest inventory, tree segmentation, biomass estimation, and species mapping from remote sensing and LiDAR.
+Use remote sensing and LiDAR to inventory forests, segment trees, estimate biomass, and map species and disturbances.
 
 ## When to use
 
 You are measuring, mapping, or monitoring forests using field plots, aerial/satellite imagery, or LiDAR point clouds.
 
-## Key concepts
+## Usage
 
-- **Forest inventory**: estimate tree counts, diameter, height, and volume.
-- **Individual tree detection (ITD)**: segment crowns from CHM or point clouds.
-- **LiDAR point clouds**: derive height, canopy density, intensity, and 3D structure metrics.
-- **Above-ground biomass (AGB)**: regress structural metrics against field-measured biomass.
-- **Species and disturbance mapping**: classify forest types, fire, insect, and harvest events.
+- Estimate forest inventory variables (tree counts, DBH, height, volume) from field and remote-sensing data.
+- Detect and segment individual tree crowns from CHM or LiDAR point clouds.
+- Predict above-ground biomass by regressing LiDAR structural metrics against field plots.
+- Classify forest types and disturbance (fire, insects, harvest) from multi-temporal imagery.
+
+## Steps
+
+1. Collect field inventory plots, airborne/satellite imagery, and LiDAR point clouds for the forest area.
+2. Preprocess LiDAR (ground classification, CHM, normalization) and extract structural features per plot.
+3. Train a tree-crown segmentation or detection model and validate counts against field inventory.
+4. Build an AGB regression model using LiDAR metrics and independent field-measured biomass.
+5. Classify forest species and disturbance from spectral/temporal features and validate with aerial photo interpretation.
+6. Map uncertainty, integrate with forest management systems, and update with new acquisitions.
 
 ## Code pattern
 

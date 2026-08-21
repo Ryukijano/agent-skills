@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning, NLP, and network analysis for historical texts, archives, languages, and multimodal humanities collections.
+Use AI to work with digitized historical texts, multilingual archives, ancient languages, or multimodal humanities corpora that require scalable computational analysis.
 
 ## When to use
 
 You are working with digitized historical texts, multilingual archives, ancient languages, or multimodal humanities corpora that require scalable computational analysis.
 
-## Key concepts
+## Usage
 
-- **Text mining and NLP for DH**: OCR, spelling normalization, named entity recognition, and semantic search.
-- **Historical and ancient languages**: transfer learning, low-resource adaptation, and digitization pipelines for classical and endangered texts.
-- **Corpus curation and thematic modeling**: word embeddings, topic models, and expert-in-the-loop curation platforms.
-- **Intertextuality and semantic search**: paraphrase detection, passage alignment, and reception studies.
+- Ingest text, image, audio, and structured data.
+- Apply OCR, NER, topic modeling, and stylometry.
+- Build searchable, linked digital editions.
+- Visualize patterns and networks.
+
+## Steps
+
+1. Ingest text, image, audio, and structured data.
+2. Apply OCR, NER, topic modeling, and stylometry.
+3. Build searchable, linked digital editions.
+4. Visualize patterns and networks.
+5. Publish FAIR data with provenance and source citation.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

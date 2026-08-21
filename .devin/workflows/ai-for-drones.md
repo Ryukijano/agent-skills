@@ -1,6 +1,6 @@
 # /ai-for-drones
 
-AI for UAV perception, navigation, obstacle avoidance, mission planning, multi-drone coordination, and vision-language drone control.
+Assess earthquake and flood damage from UAV imagery in real time to prioritize rescue routes and distribute aid.
 
 ## Trigger
 

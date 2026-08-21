@@ -2,19 +2,27 @@
 
 ## Description
 
-AIOps for network monitoring, anomaly detection, root-cause analysis, configuration management, and predictive maintenance.
+Use AIOps to correlate alerts, find root causes, and automate network remediation.
 
 ## When to use
 
 You are managing enterprise, cloud, or telecom networks and want to automate monitoring, troubleshooting, configuration, and capacity planning.
 
-## Key concepts
+## Usage
 
-- **AIOps and NetOps**: AI for IT operations and network operations.
-- **Telemetry and observability**: logs, metrics, flows, traces, and topology data.
-- **Anomaly detection and root-cause analysis**: time-series models, causal discovery, and LLMs.
-- **Incident management and self-healing**: ticket triage, remediation recommendation, and runbook automation.
-- **Configuration and change management**: validate config changes and predict risk.
+- Correlate multi-source alerts with BigPanda or Moogsoft.
+- Build IT/network knowledge graphs.
+- Predict and prevent incidents with anomaly detection.
+- Automate runbooks and remediation actions.
+- Track SLA, MTTR, and change impact.
+
+## Steps
+
+1. Ingest logs, metrics, events, and topology data.
+2. Build CMDB/knowledge graph and normalize alerts.
+3. Train correlation, RCA, and prediction models.
+4. Deploy AIOps playbooks and automation.
+5. Measure incident response and refine.
 
 ## Code pattern
 

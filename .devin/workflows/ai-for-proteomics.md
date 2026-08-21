@@ -1,6 +1,6 @@
 # /ai-for-proteomics
 
-Mass spectrometry protein identification and quantification, DDA/DIA workflows, post-translational modifications, and AI-driven peptide property prediction.
+Use machine learning on mass-spectrometry proteomics data to improve peptide identification, quantify proteins, predict post-translational modifications and build spectral libraries for DDA and DIA workflows.
 
 ## Trigger
 

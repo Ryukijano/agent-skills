@@ -2,18 +2,27 @@
 
 ## Description
 
-Game-based learning, adaptive difficulty, intelligent NPCs, scaffolding, and learning analytics embedded in playful environments.
+Use AI to build or adapt games that teach concepts through interactive, adaptive, and engaging play.
 
 ## When to use
 
 You are building or adapting games that teach concepts through interactive, adaptive, and engaging play.
 
-## Key concepts
+## Usage
 
-- **Digital game-based learning (DGBL)**: use games to motivate and support learning.
-- **Adaptive difficulty and player modeling**: adjust challenge to maintain flow.
-- **Intelligent NPCs**: AI characters that scaffold, coach, or converse with players.
-- **Procedural content generation**: create varied levels, puzzles, and scenarios.
+- Define learning objectives and game mechanics.
+- Generate or adapt levels and puzzles.
+- Implement adaptive difficulty and player modeling.
+- Validate learning gains and motivation.
+
+## Steps
+
+1. Define learning objectives and game mechanics.
+2. Generate or adapt levels and puzzles.
+3. Implement adaptive difficulty and player modeling.
+4. Validate learning gains and motivation.
+5. A/B test game variants against a traditional lesson control.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

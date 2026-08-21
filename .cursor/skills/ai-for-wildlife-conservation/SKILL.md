@@ -2,19 +2,27 @@
 
 ## Description
 
-Camera-trap image classification, acoustic monitoring, animal re-identification, and anti-poaching analytics.
+Use camera-trap and acoustic ML to identify species, re-identify individuals, and detect poaching and habitat threats for wildlife conservation.
 
 ## When to use
 
 You need to monitor wildlife, automate species identification from images or audio, or detect threats such as poaching and habitat loss.
 
-## Key concepts
+## Usage
 
-- **Camera-trap analytics**: automated detection, species classification, and individual ID.
-- **Acoustic monitoring**: classify animal calls, gunshots, and chainsaw noise in audio recordings.
-- **MegaDetector and open models**: use pre-trained animal/empty/human/vehicle detectors.
-- **Animal re-identification**: match individuals by coat patterns, fin shapes, or facial features.
-- **Conservation planning**: prioritize habitats and corridors using movement and occupancy data.
+- Detect, classify species, and identify individuals from camera-trap images.
+- Classify animal calls, gunshots, and chainsaw noise from audio recordings.
+- Re-identify individuals by coat patterns, fin shapes, or facial features.
+- Prioritize habitats and corridors and detect poaching activity from movement and occupancy data.
+
+## Steps
+
+1. Collect camera-trap or acoustic data and label/curate images or recordings with species and individual IDs.
+2. Fine-tune an object detector (e.g., MegaDetector) to filter empties and localize animals, people, and vehicles.
+3. Train a species classifier and re-identification model, handling severe class imbalance with active learning.
+4. Deploy acoustic classifiers to detect animal calls and anthropogenic threats (gunshots, chainsaws).
+5. Analyze occupancy, movement, and corridor-use patterns to inform conservation planning.
+6. Validate with field experts, push alerts to rangers, and deploy lightweight edge models in low-bandwidth settings.
 
 ## Code pattern
 

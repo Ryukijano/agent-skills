@@ -1,6 +1,6 @@
 # /ai-for-tenant-experience
 
-Personalization, occupancy analytics, indoor environmental quality, and tenant engagement for workplace and residential environments.
+Personalizes indoor environments, predicts satisfaction, and optimizes space utilization for workplace and residential tenants.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-precision-medicine
 
-Multimodal machine learning for personalized diagnosis, treatment selection, risk prediction, and integration of genomics, EHRs, imaging, and wearables.
+Match patients to genotype-tailored therapies and clinical trials by integrating EHR, genomic, and biomarker data.
 
 ## Trigger
 

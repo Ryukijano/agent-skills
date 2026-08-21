@@ -1,6 +1,6 @@
 # /ai-for-catalysis
 
-Machine learning for catalyst discovery, reaction mechanism elucidation, activity and selectivity prediction, and catalytic process optimization.
+Use catalysis informatics and active learning to discover catalysts, predict activity/selectivity, explore reaction networks, and optimize processes.
 
 ## Trigger
 

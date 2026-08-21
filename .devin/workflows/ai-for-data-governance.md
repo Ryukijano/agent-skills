@@ -1,6 +1,6 @@
 # /ai-for-data-governance
 
-Automated policy enforcement, metadata management, data lineage, stewardship, and AI-driven regulatory compliance for enterprise data governance.
+Build policy, catalog, and lineage-driven governance for trusted data and AI assets.
 
 ## Trigger
 

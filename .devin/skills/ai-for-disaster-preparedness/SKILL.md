@@ -2,25 +2,27 @@
 
 ## Description
 
-Hazard risk assessment, early warning systems, scenario simulation, and mitigation planning with AI.
+Use machine learning to model hazards, build early warnings, simulate impacts, and plan mitigations and resource pre-positioning before disasters strike.
 
 ## When to use
 
 You are working before a disaster strikes to assess risk, issue timely
 warnings, and plan mitigations that reduce harm.
 
-## Key concepts
+## Usage
 
-- **Hazard and risk modeling**: flood, fire, earthquake, and weather
-  risk estimation.
-- **Early warning systems**: multi-hazard forecasting, trigger models,
-  and dissemination.
-- **Pre-event impact simulation**: building-level damage and
-  population-exposure estimation.
-- **Preparedness planning**: evacuation routes, shelter allocation, and
-  resource pre-positioning.
-- **Generative AI for scenarios**: LLM-based tabletop exercises and
-  public communication.
+- Model flood, fire, earthquake, and weather risk from physical and historical data.
+- Issue multi-hazard early warnings with trigger models and ensemble forecasts.
+- Simulate building-level damage and population exposure for impact estimation.
+- Plan evacuations, shelter allocation, and resource pre-positioning.
+
+## Steps
+
+1. Fuse physical models, remote sensing, and historical event data for the hazard.
+2. Train a hazard-risk or early-warning model with probabilistic outputs.
+3. Validate the model against a past event and measure lead time and false-alarm rate.
+4. Simulate impact and plan shelters, routes, and pre-positioned resources.
+5. Co-design the warning pipeline with communities to ensure trust and uptake.
 
 ## Code pattern
 

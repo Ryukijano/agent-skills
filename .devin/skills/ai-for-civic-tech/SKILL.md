@@ -2,7 +2,7 @@
 
 ## Description
 
-Digital participation, deliberation, civic engagement, public comment analysis, and participatory budgeting tools powered by AI.
+Supports participatory democracy by analyzing public comments, mapping priorities, and summarizing deliberation themes.
 
 ## When to use
 
@@ -10,19 +10,18 @@ You are facilitating public participation, analyzing community input, or buildin
 
 ## Usage
 
-- **Public comment analysis**: classify, summarize, and cluster citizen feedback.
-- **Participatory budgeting**: recommend allocation options and visualize trade-offs.
-- **Deliberation support**: cluster arguments, surface consensus, and identify concerns.
-- **Civic chatbots**: answer questions and collect input on local issues.
-- **Transparency**: make government data and decisions more accessible and explainable.
+- **Public comment analysis**: classify, summarize, and cluster feedback from consultations using NLP and topic modeling.
+- **Participatory budgeting**: visualize trade-offs, recommend allocations, and report community priorities.
+- **Deliberation support**: identify consensus, surface concerns, and map argument themes from town halls or digital platforms.
+- **Civic chatbots and issue mapping**: answer local questions and collect georeported community input.
 
 ## Steps
 
 1. Define participation goals and target communities.
-2. Collect public comments, petitions, survey data, or participatory inputs.
-3. Clean and anonymize inputs; apply PII redaction.
-4. Use NLP to summarize themes and sentiment.
-5. Report findings back to participants and decision-makers.
+2. Collect comments, surveys, and petitions from platforms such as Commonplace or DIPAS, then redact PII.
+3. Use open-source NLP or LLMs to summarize themes, sentiment, and geographic patterns.
+4. Validate AI themes against manual coding and report findings back to participants.
+5. Track demographic reach and the actionability of recommendations.
 
 ## Code pattern
 

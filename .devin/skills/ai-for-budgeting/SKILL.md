@@ -2,7 +2,7 @@
 
 ## Description
 
-Public expenditure forecasting, budget allocation optimization, fiscal scenario analysis, program-cost modeling, and spending anomaly detection.
+Forecasts expenditures and simulates fiscal scenarios to optimize program allocations and spending controls.
 
 ## When to use
 
@@ -10,19 +10,18 @@ You are preparing government budgets, forecasting expenditures, optimizing alloc
 
 ## Usage
 
-- **Expenditure forecasting**: predict revenue and spending by program and time.
-- **Allocation optimization**: balance objectives, constraints, and priorities.
-- **Scenario analysis**: simulate economic shocks and policy changes.
-- **Performance-based budgeting**: link funding to program outcomes.
-- **Anomaly detection**: flag unusual commitments or spending patterns.
+- **Expenditure and revenue forecasting**: predict spending by program and time horizon using historical execution and macro data.
+- **Allocation optimization**: balance priorities under fiscal constraints and policy goals.
+- **Scenario analysis**: simulate economic shocks, policy changes, and revenue shortfalls.
+- **Spending anomaly detection**: flag unusual commitments, cost overruns, and reallocation patterns.
 
 ## Steps
 
 1. Gather historical budgets, execution data, and macroeconomic indicators.
-2. Build forecasting models for revenue and expenditure lines.
-3. Define policy objectives and constraints for allocation.
-4. Use optimization or simulation to compare budget scenarios.
-5. Validate projections with finance officers and economists.
+2. Build hierarchical forecasting models for revenue and expenditure lines.
+3. Define objectives, constraints, and policy priorities.
+4. Run optimization or simulation to compare budget scenarios.
+5. Validate projections with finance officers and publish confidence intervals.
 
 ## Code pattern
 

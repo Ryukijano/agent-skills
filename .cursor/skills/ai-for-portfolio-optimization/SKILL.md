@@ -2,7 +2,7 @@
 
 ## Description
 
-Diversification, risk-return balancing, rebalancing strategies, and generative-AI analytics for real estate and mixed-asset portfolios.
+Balances risk and return across property sectors and geographies using return forecasts and scenario stress tests.
 
 ## When to use
 
@@ -10,15 +10,15 @@ You are allocating capital, rebalancing holdings, managing concentration risk, o
 
 ## Usage
 
-- **Risk-return optimization**: mean-variance, CVaR, or genetic-algorithm approaches.
+- **Risk-return optimization**: use mean-variance, CVaR, or genetic-algorithm approaches.
 - **Diversification**: analyze geography, sector, tenant, and lease-maturity exposures.
-- **Scenario stress testing**: market shocks, interest-rate, and vacancy scenarios.
-- **AI agents**: autonomous monitoring and rebalancing recommendations.
+- **Scenario stress testing**: run market shocks, interest-rate, and vacancy scenarios.
+- **AI-driven rebalancing**: generate monitoring and rebalancing recommendations.
 
 ## Steps
 
 1. Define portfolio objectives, constraints, and investable universe.
-2. Collect asset-level cash flows, market, and risk-factor data.
+2. Collect asset-level cash flows, market, and risk-factor data from sources such as NAREIT or MSCI.
 3. Estimate return forecasts and covariance or risk matrices.
 4. Run optimization under constraints and scenarios.
 5. Monitor and rebalance on a regular cadence.

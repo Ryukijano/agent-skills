@@ -1,6 +1,6 @@
 # /ai-for-aquaculture
 
-Machine learning for water quality, feeding, disease, and stock management in fish, shrimp, and shellfish farming.
+Optimize feeding, water quality, and disease management in fish and shrimp farms.
 
 ## Trigger
 

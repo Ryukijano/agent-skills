@@ -1,6 +1,6 @@
 # /ai-for-pollution
 
-Air, water, and soil pollution monitoring, source apportionment, forecasting, and regulatory compliance with ML.
+Forecast air and water pollutant exceedances from sensor and satellite data to guide regulatory alerts and remediation.
 
 ## Trigger
 

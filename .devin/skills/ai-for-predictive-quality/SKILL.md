@@ -2,7 +2,7 @@
 
 ## Description
 
-In-process quality forecasting, virtual metrology, and causal quality models that predict final part quality from machine and sensor data before completion.
+Forecasts final part quality from in-process sensor data to enable early rework, scrap, or recipe adjustment.
 
 ## When to use
 

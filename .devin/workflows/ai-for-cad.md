@@ -1,6 +1,6 @@
 # /ai-for-cad
 
-Deep generative models for parametric CAD sketches, B-rep synthesis, sketch-and-extrude sequences, and vision-language conditional CAD generation.
+Generate editable parametric CAD command sequences from text or sketches to accelerate mechanical design iteration.
 
 ## Trigger
 

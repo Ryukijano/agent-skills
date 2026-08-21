@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for electricity price forecasting, algorithmic trading, arbitrage, and bidding in day-ahead, intraday, and balancing markets.
+Forecasts electricity prices and optimizes bidding strategies across day-ahead, intraday, and balancing markets.
 
 ## When to use
 
@@ -10,7 +10,7 @@ You need to forecast electricity prices, bid into wholesale or balancing markets
 
 ## Usage
 
-- **Price forecasting**: day-ahead, intraday, and balancing market price prediction.
+- **Price forecasting**: predict day-ahead, intraday, and balancing market prices.
 - **Statistical arbitrage and position management**: exploit price differences across markets.
 - **Asset bidding strategies**: optimize bids for batteries, renewables, and VPPs.
 - **Risk and imbalance management**: manage exposure and penalty costs.

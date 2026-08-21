@@ -2,19 +2,30 @@
 
 ## Description
 
-HTR and OCR for historical documents, event extraction, temporal reasoning, geospatial and network analysis, and distant reading for historical research.
+Use AI for History to transcribe documents, extract entities and events and analyze historical networks.
 
 ## When to use
 
 You are working with digitized archives, newspapers, manuscripts, or historical corpora and want to extract, structure, and analyze events, actors, places, and trends over time.
 
-## Key concepts
 
-- **Handwritten text recognition (HTR) and OCR**: convert scanned manuscripts and prints into searchable text.
-- **Distant reading**: summarize large corpora through topic models, embeddings, and clustering.
-- **Event extraction and entity linking**: identify people, places, organizations, and events in historical narratives.
-- **Temporal knowledge graphs**: represent historical facts with time-aware relations and provenance.
-- **Geospatial and network analysis**: map trade, migration, correspondence, and conflict networks.
+## Usage
+
+
+- **Handwritten text recognition (HTR) and OCR**: Convert scanned manuscripts and prints into searchable text.
+- **Distant reading**: Summarize large corpora through topic models, embeddings, and clustering.
+- **Event extraction and entity linking**: Identify people, places, organizations, and events in historical narratives.
+- **Temporal knowledge graphs**: Represent historical facts with time-aware relations and provenance.
+- **Geospatial and network analysis**: Map trade, migration, correspondence, and conflict networks.
+
+## Steps
+
+1. Collect and prepare scanned manuscripts, newspapers and archival text.
+2. Worke with digitized archives.
+3. Newspapers.
+4. Manuscripts.
+5. Validate by runing HTR/OCR on a small manuscript set and compare word error rate to a gold transcript.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -29,12 +40,14 @@ for ent in ner(text):
     print(ent["word"], ent["entity_group"])
 ```
 
+
 ## Tuning notes
 
 - Account for historical spelling variation, abbreviations, and dated language.
 - Combine HTR confidence scores with human review for critical sources.
 - Link extracted entities to authority files (VIAF, GeoNames, Wikidata).
 - Be transparent about digitization and selection biases in archival collections.
+
 
 ## Verification
 

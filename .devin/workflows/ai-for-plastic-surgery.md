@@ -1,6 +1,6 @@
 # /ai-for-plastic-surgery
 
-Machine learning for aesthetic and reconstructive surgical planning, facial analysis, flap monitoring, wound assessment, and patient-reported outcomes.
+Use machine learning to plan aesthetic and reconstructive surgery, assess outcomes, monitor flaps, and analyze craniofacial images.
 
 ## Trigger
 

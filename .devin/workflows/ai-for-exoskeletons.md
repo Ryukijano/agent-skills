@@ -1,6 +1,6 @@
 # /ai-for-exoskeletons
 
-AI for wearable exoskeleton and exosuit control, gait and intention recognition, human-robot interaction, rehabilitation, and assistive augmentation.
+Use machine learning to recognize gait and intent, personalize assistance, and control wearable exoskeletons for rehabilitation and industrial augmentation.
 
 ## Trigger
 

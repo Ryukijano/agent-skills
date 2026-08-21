@@ -2,7 +2,7 @@
 
 ## Description
 
-AI-driven digital twins, virtual commissioning, real-time simulation, and lifecycle data integration for smart, connected factories.
+Builds digital twins, validates control logic through virtual commissioning, and synchronizes real-time factory data.
 
 ## When to use
 

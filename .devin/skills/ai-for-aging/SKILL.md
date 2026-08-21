@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for geriatric health monitoring, aging-in-place, fall prevention, cognitive and social support, and age-friendly AI design.
+Use machine learning to support older adults with health monitoring, fall prevention, cognitive and social support, and age-friendly design.
 
 ## When to use
 
 You are supporting older adults to age safely at home, manage chronic conditions, or maintain cognitive and social well-being.
 
-## Key concepts
+## Usage
 
-- **Aging-in-place sensing**: passive environmental and wearable sensors for activity, gait, sleep, and falls.
-- **Cognitive and mental-health support**: conversational agents and personalized content for memory, mood, and loneliness.
-- **Multimorbidity risk models**: predict hospitalization, frailty, and functional decline from EHR and sensor streams.
-- **Age-friendly design**: legible interfaces, voice interaction, and digital literacy support.
+- Sense activity, gait, sleep, and falls with passive environmental and wearable sensors.
+- Support memory, mood, and loneliness with conversational agents and personalized content.
+- Predict hospitalization, frailty, and functional decline from EHR and sensor streams.
+- Design legible, voice-enabled interfaces and digital literacy support.
+
+## Steps
+
+1. Define the aging outcome (fall, hospitalization, isolation) and data sources (sensors, EHR).
+2. Collect longitudinal data and use time-aware validation.
+3. Train predictive or conversational models and handle class imbalance.
+4. Prioritize on-device or edge processing for privacy.
+5. Involve older adults and caregivers in interface and alert design.
+6. Pilot in aging-in-place or care settings and measure adherence and outcomes.
 
 ## Code pattern
 

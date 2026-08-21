@@ -2,19 +2,27 @@
 
 ## Description
 
-Onboard autonomy, science target selection, anomaly detection, mission planning, and analysis of space and Earth-observation data.
+Select science targets and detect anomalies onboard spacecraft and rovers to maximize discovery without round-trip latency.
 
 ## When to use
 
 You are designing, simulating, or operating spacecraft, rovers, or satellites that must make decisions with limited communication, power, or compute.
 
-## Key concepts
+## Usage
 
-- **Onboard autonomy and science agents**: detect events, prioritize observations, and retarget instruments without ground-in-the-loop.
-- **Dynamic targeting and opportunistic science**: AI-driven selection of targets during orbital overflights.
-- **Anomaly detection and health monitoring**: detect faults in telemetry, instruments, and subsystems.
-- **Mission planning and scheduling**: optimize observation campaigns under constraints.
-- **Earth-observation and planetary data**: analyze multispectral, hyperspectral, and mass-spectrometer data.
+- Run onboard science agents that detect events, prioritize targets, and retarget instruments without ground-in-the-loop.
+- Select targets dynamically during orbital overflights or rover traverses.
+- Detect faults in telemetry, instruments, and subsystems with anomaly detection.
+- Optimize observation and operations schedules under power, memory, and downlink constraints.
+
+## Steps
+
+1. Define science goals, instrument constraints, and onboard compute/downlink budgets for the mission.
+2. Train event-detection and target-priority models on representative orbital or rover datasets.
+3. Implement onboard anomaly detection on telemetry and instrument health data.
+4. Build a scheduler that optimizes observation campaigns and downlink priorities under resource constraints.
+5. Validate the autonomy stack in high-fidelity mission simulators and analog test datasets.
+6. Deploy the qualified models on flight-like hardware and monitor performance during operations.
 
 ## Code pattern
 

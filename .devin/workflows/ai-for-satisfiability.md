@@ -1,6 +1,6 @@
 # /ai-for-satisfiability
 
-ML-enhanced SAT/SMT/QSAT solvers, end-to-end neural solvers like NeuroSAT, and learned branching and restart heuristics.
+Guide CDCL SAT solver branching and resets with offline neural predictions to solve more competition instances without GPU overhead.
 
 ## Trigger
 

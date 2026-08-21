@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for reservoir characterization, production optimization, well placement, drilling, and digital oilfield twins.
+Apply AI to reservoir characterization, production optimization, and predictive maintenance.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are characterizing reservoirs, optimizing production, planning wells, or mon
 
 ## Usage
 
-- **Reservoir characterization**: facies, porosity, and permeability prediction from logs/seismic.
-- **Surrogate reservoir simulation**: deep-learning proxy models to replace expensive flow simulators.
-- **Production optimization**: well control, waterflooding, and life-cycle NPV.
-- **Drilling and completion**: rate-of-penetration, stuck-pipe, and well-placement risk.
-- **Digital oilfield twins**: integrated asset models and real-time surveillance.
+- Predict reservoir properties from well logs and seismic.
+- Optimize well spacing and hydraulic-fracture design.
+- Detect kicks, stuck pipe, and equipment failures.
+- Forecast production and decline curves.
+- Model CO2 storage and enhanced oil recovery.
 
 ## Steps
 
-1. Collect well logs, seismic, production history, and reservoir simulation data.
-2. Build multi-fidelity datasets and define NPV/objective functions.
-3. Train a surrogate, characterization, or optimization model.
-4. Validate against history-matched simulation and field data.
-5. Update the model as new wells and reservoir data arrive.
+1. Collect well logs, seismic, and production time series.
+2. Build geostatistical and physics-informed features.
+3. Train regression and time-series forecasting models.
+4. Integrate with reservoir simulation or SCADA.
+5. Validate with decline-curve analysis and field trials.
 
 ## Code pattern
 

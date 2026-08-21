@@ -2,18 +2,27 @@
 
 ## Description
 
-Neuro-symbolic verification, LLM-assisted autoformalization, and learned heuristics for theorem provers and model checkers.
+Use machine learning and LLMs to translate informal specifications into formal models and guide theorem provers and model checkers.
 
 ## When to use
 
 You want to translate informal specifications into formal models, guide proof search, or apply ML to model checking, program verification, and certified systems.
 
-## Key concepts
+## Usage
 
-- **Autoformalization**: converting natural language or code into formal specifications using LLMs.
-- **Neuro-symbolic verification**: combining neural guidance with SAT/SMT/TLA+ and model checkers.
-- **Proof search guidance**: premise selection, tactic prediction, and lemma synthesis.
-- **Invariants and certificates**: using ML to discover loop invariants or safety certificates.
+- Autoformalize natural-language or code specifications into formal logic using LLMs and domain-tuned models.
+- Combine neural guidance with SAT/SMT/TLA+ solvers and model checkers for neuro-symbolic verification.
+- Predict the next proof step, relevant premises, and useful tactics from the current proof state.
+- Discover loop invariants and safety certificates from data and program structure.
+
+## Steps
+
+1. Collect a corpus of informal specifications, code, and corresponding formal models for the target domain.
+2. Train or prompt an LLM to autoformalize specifications and validate outputs with a trusted checker.
+3. Build a premise selector or tactic predictor from a proof corpus and integrate it with the proof assistant.
+4. Run model-checking or verification tasks with learned guidance and compare proof search effort.
+5. Use the system to synthesize invariants or certificates for safety-critical programs.
+6. Iterate with human experts to correct formalizations and maintain soundness guarantees.
 
 ## Code pattern
 

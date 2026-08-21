@@ -2,18 +2,27 @@
 
 ## Description
 
-Accelerate diagnostic research, market sizing, client synthesis, and GenAI-assisted advisory workflows while managing epistemic risk.
+Use AI to build AI-augmented consulting workflows for market analysis, synthesis of client data, hypothesis generation, or executive-ready deliverables.
 
 ## When to use
 
 You are building AI-augmented consulting workflows for market analysis, synthesis of client data, hypothesis generation, or executive-ready deliverables.
 
-## Key concepts
+## Usage
 
-- **Task-GenAI fit**: decide where to automate, augment, or avoid GenAI based on ambiguity and stakes.
-- **Knowledge synthesis**: summarize interviews, documents, and benchmarks into defensible insights.
-- **Market sizing and scenario modeling**: combine structured data with LLM-driven assumptions.
-- **Epistemic risk and source grounding**: validate AI output against client facts and cited sources.
+- Map tasks to GenAI fit (automate, augment, or avoid).
+- Synthesize client documents and prior proposals.
+- Draft proposals, status reports, and deliverables.
+- Ground claims to sources and cite evidence.
+
+## Steps
+
+1. Map tasks to GenAI fit (automate, augment, or avoid).
+2. Synthesize client documents and prior proposals.
+3. Draft proposals, status reports, and deliverables.
+4. Ground claims to sources and cite evidence.
+5. Audit for hallucinations and epistemic risk.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

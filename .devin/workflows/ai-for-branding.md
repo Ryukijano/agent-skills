@@ -1,6 +1,6 @@
 # /ai-for-branding
 
-Brand strategy, visual identity, brand voice, naming, and AI-assisted brand co-creation with human curation.
+Use AI to co-create brand strategy, name and tagline options, visual identity concepts, and brand voice guides with human designers in the loop.
 
 ## Trigger
 

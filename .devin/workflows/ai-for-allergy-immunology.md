@@ -1,6 +1,6 @@
 # /ai-for-allergy-immunology
 
-Machine learning for asthma phenotyping and exacerbation prediction, allergic rhinitis and food/drug allergy risk, anaphylaxis, and primary immunodeficiency screening.
+Use machine learning to phenotype asthma, predict exacerbations, assess allergy risk, and screen immunodeficiency.
 
 ## Trigger
 

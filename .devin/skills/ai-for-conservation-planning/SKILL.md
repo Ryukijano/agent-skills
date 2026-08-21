@@ -2,18 +2,27 @@
 
 ## Description
 
-Spatial prioritization, protected-area design, systematic conservation planning, and trade-off analysis using optimization and ML.
+Use AI to decide where to protect, restore, or manage land/sea to meet biodiversity targets under budget and equity constraints.
 
 ## When to use
 
 You must decide where to protect, restore, or manage land/sea to meet biodiversity targets under budget and equity constraints.
 
-## Key concepts
+## Usage
 
-- **Systematic conservation planning (SCP)**: cost-effective selection of actions and areas (Marxan, Zonation).
-- **AI-driven prioritization**: reinforcement learning for spatial conservation (CAPTAIN).
-- **Trade-offs**: biodiversity, carbon, water, and livelihood objectives.
-- **Connectivity and climate adaptation**: corridor design and climate-smart prioritization.
+- Compile species, cost, threat, and connectivity data.
+- Model site irreplaceability and trade-offs.
+- Run optimization (Marxan/Zonation/CAPTAIN) under budget.
+- Generate prioritization maps for protection and restoration.
+
+## Steps
+
+1. Compile species, cost, threat, and connectivity data.
+2. Model site irreplaceability and trade-offs.
+3. Run optimization (Marxan/Zonation/CAPTAIN) under budget.
+4. Generate prioritization maps for protection and restoration.
+5. Stress-test priorities under climate and land-use scenarios.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 
@@ -43,5 +52,5 @@ irreplaceability = LogisticRegression(
 
 - https://doi.org/10.1016/j.tree.2024.12.002
 - https://www.nature.com/articles/s41893-022-00851-6
-- https://doi.org/10.1101/2025.01.06.631540
+- https://doi.org/10.1029/2025ef007560
 - https://www.ijcai.org/proceedings/2025/1086.pdf

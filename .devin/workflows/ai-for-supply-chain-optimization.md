@@ -1,6 +1,6 @@
 # /ai-for-supply-chain-optimization
 
-Multi-echelon inventory, distribution network design, demand-supply synchronization, and resilient supply chain planning.
+Use AI for Supply Chain Optimization to coordinate inventory, design networks and synchronize demand and supply.
 
 ## Trigger
 

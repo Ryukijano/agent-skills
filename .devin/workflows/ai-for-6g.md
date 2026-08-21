@@ -1,6 +1,6 @@
 # /ai-for-6g
 
-AI-native 6G architectures, semantic communications, integrated sensing and communication, reconfigurable intelligent surfaces, and distributed learning.
+Design AI-native 6G systems for semantic communication, ISAC, and non-terrestrial networks.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-LLM and multimodal mental health screening, CBT chatbots, psychosocial risk assessment, and clinical interview support.
+Use LLMs and multimodal AI to screen, triage, monitor, and support mental-health care at scale.
 
 ## When to use
 
 You are building tools to screen, triage, monitor, or support mental-health care at scale, especially when clinicians are scarce.
 
-## Key concepts
+## Usage
 
-- **Multimodal mental-health monitoring**: combine text, speech, wearables, and neuroimaging for early detection.
-- **CBT-based conversational agents**: structured, evidence-based chatbots for depression, anxiety, and stress.
-- **Psychosocial risk assessment**: suicidality, intimate partner violence, and substance misuse triage.
-- **Clinical interview support**: multi-agent LLM frameworks for structured psychiatric screening.
+- Combine text, speech, wearables, and neuroimaging for early detection and monitoring.
+- Deploy CBT-based conversational agents for depression, anxiety, and stress.
+- Triage psychosocial risks such as suicidality, intimate partner violence, and substance misuse.
+- Support clinical interviews with multi-agent LLM frameworks.
+
+## Steps
+
+1. Collect representative, demographically diverse, clinically validated mental-health data.
+2. Fine-tune or prompt a triage, screening, or CBT model with safety guardrails.
+3. Build human escalation and crisis pathways; never use AI as the sole diagnostic tool.
+4. Validate against clinician-rated vignettes and standard symptom scales.
+5. Monitor for hallucinations, biased responses, and false reassurance.
+6. Protect privacy and obtain informed consent before deployment.
 
 ## Code pattern
 

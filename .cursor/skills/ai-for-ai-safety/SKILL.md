@@ -2,19 +2,28 @@
 
 ## Description
 
-Alignment, robustness, interpretability, red teaming, monitoring, and safe deployment of AI systems, especially large language and agentic models.
+Use alignment, red teaming, interpretability, and monitoring to reduce harmful or unintended AI behavior.
 
 ## When to use
 
 You are training, aligning, evaluating, or deploying an AI system and want to reduce harmful, unintended, or adversarial behavior before and after release.
 
-## Key concepts
+## Usage
 
-- **Alignment and value learning**: RLHF, RLAIF, DPO, Constitutional AI, and preference learning.
-- **Robustness and adversarial evaluation**: red teaming, jailbreaks, and safety evaluation benchmarks.
-- **Interpretability for safety**: representation engineering, activation probes, and concept-based explanations.
-- **Monitoring and assurance**: behavioral monitoring, anomaly detection, and model reporting.
-- **Scalable oversight**: handle tasks where human evaluation is expensive or error-prone.
+- Align models with RLHF, RLAIF, DPO, Constitutional AI, and preference learning.
+- Red-team for jailbreaks, adversarial behavior, and safety benchmark failures.
+- Interpret representations with activation probes and concept-based explanations.
+- Monitor behavior and detect anomalies in deployment.
+- Provide scalable oversight for tasks where human evaluation is expensive.
+
+## Steps
+
+1. Define the safety properties and adversarial evaluation set.
+2. Run red teaming with diverse, multilingual, and multi-turn attacks.
+3. Apply an alignment or preference-learning method and measure safety vs. capability.
+4. Use interpretability tools to inspect harmful concepts and steering.
+5. Implement behavioral monitoring and anomaly detection.
+6. Iterate with human review, incident-response playbooks, and deployment gating.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-fraud-detection
 
-Transaction fraud, anti-money laundering, anomaly detection, graph-based fraud networks, and concept-drift monitoring.
+Use AI for Fraud Detection to detect transaction fraud, money laundering and graph-based fraud rings.
 
 ## Trigger
 

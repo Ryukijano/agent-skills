@@ -1,6 +1,6 @@
 # /ai-for-smart-grid
 
-AI and machine learning for load and renewable forecasting, grid state estimation, optimal power flow, and smart-grid control.
+Forecasts load and renewable generation, estimates grid state, and accelerates optimal power flow for reliable power system operations.
 
 ## Trigger
 

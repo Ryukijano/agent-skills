@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning and computer vision for automated inspection, defect detection, statistical process control, and zero-defect manufacturing.
+Use machine learning and computer vision to inspect products, detect defects, monitor process stability, and move toward zero-defect manufacturing.
 
 ## When to use
 
 You are automating visual inspection, detecting product defects, monitoring process stability, or building zero-defect manufacturing systems.
 
-## Key concepts
+## Usage
 
-- **Machine-vision defect detection**: CNNs, transformers, and anomaly segmentation for scratches, dents, and contamination.
-- **Statistical process control (SPC)**: control charts, process capability, and drift monitoring.
-- **Unsupervised and few-shot learning**: training on nominal samples and detecting novel defects.
-- **Edge deployment**: real-time inference on cameras and PLCs on the factory floor.
+- Classify and segment scratches, dents, and contamination from production images.
+- Track control charts and process capability for drift and out-of-control points.
+- Detect novel defects with unsupervised or few-shot anomaly models.
+- Deploy real-time inspection on cameras and PLCs at the edge.
+
+## Steps
+
+1. Collect nominal and defect images from real production, not just clean labs.
+2. Balance the dataset with augmentation, weighted loss, or anomaly methods.
+3. Train and calibrate a classifier or segmentation model for false-accept/reject trade-offs.
+4. Validate on a hold-out production sample with operator review.
+5. Deploy at the edge and monitor drift over shifts and suppliers.
 
 ## Code pattern
 

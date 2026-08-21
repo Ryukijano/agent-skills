@@ -2,19 +2,27 @@
 
 ## Description
 
-Assistive technologies, personalized interventions, augmentative and alternative communication, accessibility, and inclusive learning for learners with disabilities.
+Use AI to support learners with disabilities, neurodiversity, or special educational needs through accessible and personalized AI tools.
 
 ## When to use
 
 You are supporting learners with disabilities, neurodiversity, or special educational needs through accessible and personalized AI tools.
 
-## Key concepts
+## Usage
 
-- **Assistive communication (AAC)**: AI-powered speech, symbol, and text supports.
-- **Personalized adaptive learning**: tailor pacing, content, and interaction modality.
-- **Multimodal interaction**: speech, vision, touch, and haptics for diverse abilities.
-- **Co-design and inclusion**: involve learners, families, and educators in design.
-- **Ethics and equity**: protect privacy, avoid stigma, and audit for ableist bias.
+- Profile learner needs, abilities, and accommodations.
+- Select AAC, speech, or multimodal interfaces.
+- Personalize pacing and scaffolding.
+- Co-design with families and educators.
+
+## Steps
+
+1. Profile learner needs, abilities, and accommodations.
+2. Select AAC, speech, or multimodal interfaces.
+3. Personalize pacing and scaffolding.
+4. Co-design with families and educators.
+5. Validate IEP drafts and supports against compliance and usability criteria.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

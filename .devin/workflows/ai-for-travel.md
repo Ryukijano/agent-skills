@@ -1,6 +1,6 @@
 # /ai-for-travel
 
-Itinerary planning, point-of-interest recommendation, flight and hotel personalization, trip optimization, and conversational travel agents.
+Use AI to plan itineraries, recommend points of interest, personalize flights and hotels, and handle real-time disruptions within budget.
 
 ## Trigger
 

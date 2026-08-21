@@ -2,19 +2,27 @@
 
 ## Description
 
-Data science for brain imaging, neural signals, connectomics, and computational neuroscience workflows.
+Synthesize high-resolution fMRI activity from EEG and unify multimodal neural signals to study brain dynamics across datasets.
 
 ## When to use
 
 You are integrating, analyzing, or sharing large-scale neuroscience data such as neuroimaging, electrophysiology, genomics, and connectomics.
 
-## Key concepts
+## Usage
 
-- **Neuroimaging data formats and pipelines**: NIfTI, CIFTI, BIDS, and tools such as fMRIPrep and FreeSurfer.
-- **Electrophysiology and calcium imaging analysis**: spike sorting, local field potentials, and time-series neural data.
-- **Brain connectomics and network neuroscience**: structural and functional connectivity, graph theory, and network dynamics.
-- **Open neuroscience data repositories and standards**: OpenNeuro, NeuroVault, and data-sharing conventions.
-- **Multimodal fusion of neural, genetic, and behavioral data**: integrating across scales and modalities.
+- Organize neuroimaging and electrophysiology data in BIDS.
+- Preprocess fMRI, EEG, and calcium-imaging data.
+- Build structural and functional connectivity graphs.
+- Decode cognitive states from neural signals.
+
+## Steps
+
+1. Organize neuroimaging and electrophysiology data in BIDS.
+2. Preprocess fMRI, EEG, and calcium-imaging data.
+3. Build structural and functional connectivity graphs.
+4. Decode cognitive states from neural signals.
+5. Share preprocessed data and code openly.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

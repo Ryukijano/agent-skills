@@ -2,19 +2,30 @@
 
 ## Description
 
-Algorithmic journalism, automated reporting, fact-checking, news recommendation, and AI-assisted investigative data reporting.
+Use AI for Journalism to automate reporting, find data leads, fact-check and personalize news.
 
 ## When to use
 
 You are producing, verifying, or distributing news and want to automate routine reporting, find leads in data, or assist reporters with research and drafting.
 
-## Key concepts
 
-- **Robot and automated journalism**: generate data-driven stories from structured feeds.
-- **Computational news discovery**: detect anomalies, trends, and leads in public datasets.
-- **Fact-checking and verification**: identify claims, source evidence, and detect misinformation.
-- **News summarization and personalization**: adapt stories for platforms and audiences.
-- **Editorial oversight and provenance**: log decisions, keep humans in the loop, and cite sources.
+## Usage
+
+
+- **Robot and automated journalism**: Generate data-driven stories from structured feeds.
+- **Computational news discovery**: Detect anomalies, trends, and leads in public datasets.
+- **Fact-checking and verification**: Identify claims, source evidence, and detect misinformation.
+- **News summarization and personalization**: Adapt stories for platforms and audiences.
+- **Editorial oversight and provenance**: Log decisions, keep humans in the loop, and cite sources.
+
+## Steps
+
+1. Collect and prepare public datasets, articles and fact-check corpora.
+2. Automate routine reporting.
+3. Find leads in data.
+4. Assist reporters with research and drafting.
+5. Validate by generating a batch of briefs from a public dataset and have a reporter review them.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -28,12 +39,14 @@ row = {"n": 42, "city": "Springfield", "month": "March", "pct": 12}
 print(template.render(**row))
 ```
 
+
 ## Tuning notes
 
 - Human editorial judgment remains responsible for publication decisions and framing.
 - Avoid hallucination by grounding generated text in verified source data.
 - Monitor for bias in story selection, source diversity, and recommendation algorithms.
 - Ensure transparent disclosure when content is automated or AI-assisted.
+
 
 ## Verification
 

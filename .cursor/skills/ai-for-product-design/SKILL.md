@@ -2,19 +2,26 @@
 
 ## Description
 
-Concept generation, design space exploration, prototyping, and engineering handoff with generative AI in product development.
+Use AI to explore design spaces, generate concepts, prototype products, and hand off to engineering while tracking constraints and human decisions.
 
 ## When to use
 
 You are designing physical or digital products, from early ideation and concept exploration to prototyping, testing, and engineering handoff.
 
-## Key concepts
+## Usage
 
-- **Design space exploration**: generative concepts, parametric variants, and trade-off analysis.
-- **Human-AI co-creation**: the designer sets constraints, the AI proposes candidates, and the human selects and refines.
-- **Prototyping and simulation**: CAD, generative design, digital twins, and FEA/CFD integration.
-- **User-centered validation**: rapid user testing, conjoint analysis, and desirability studies.
-- **Sustainability and manufacturing**: material selection, design for manufacturing, and lifecycle considerations.
+- Generate and rank concepts across a parametric design space.
+- Co-create with designers by combining constraints, AI proposals, and human selection.
+- Integrate CAD, generative design, simulation, and FEA/CFD workflows.
+- Validate concepts with user studies and manufacturability checks.
+
+## Steps
+
+1. Capture requirements, constraints, and success metrics in a design brief.
+2. Generate and sample a design space with AI-assisted concept tools.
+3. Rank concepts by preference, engineering, and cost constraints.
+4. Run a small user study and validate top concepts.
+5. Hand off the selected concept to CAD, simulation, or manufacturing.
 
 ## Code pattern
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Automated permit intake, plan review, code compliance checks, application completeness screening, and permit workflow optimization.
+Pre-screens permit applications and checks plan compliance against building and zoning codes to shorten review cycles.
 
 ## When to use
 
@@ -11,7 +11,7 @@ You are streamlining building or development permits, automating intake screenin
 ## Usage
 
 - **Application pre-screening**: check completeness and required documents.
-- **Plan review**: detect code issues and compare against building/zoning codes.
+- **Plan review**: detect code issues and compare against building and zoning codes.
 - **Code compliance**: flag violations and cite relevant sections.
 - **Workflow routing**: assign applications to reviewers by type and complexity.
 - **Status and Q&A**: keep applicants informed and answer common questions.

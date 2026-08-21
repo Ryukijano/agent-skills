@@ -1,6 +1,6 @@
 # /ai-for-precision-public-health
 
-Subpopulation-targeted prevention, genomics-guided public health, geospatial risk modeling, and equitable intervention targeting.
+Use AI to design data-driven public health interventions that tailor prevention, screening, or resource allocation to specific populations or contexts.
 
 ## Trigger
 

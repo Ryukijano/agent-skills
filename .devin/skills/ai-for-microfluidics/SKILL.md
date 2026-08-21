@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning for droplet generation, lab-on-a-chip control, cell sorting, reaction optimization, and high-throughput screening.
+Use machine learning to control droplet generation, sort cells, optimize reactions, and automate high-throughput screening on chip.
 
 ## When to use
 
 You are controlling microfluidic droplets, analyzing high-throughput cell assays, or optimizing on-chip reactions.
 
-## Key concepts
+## Usage
 
-- **Droplet microfluidics**: flow-focusing, generation, and encapsulation.
-- **Image-based sorting and analysis**: high-speed vision for cells and particles.
-- **Reaction optimization**: Bayesian optimization of flow rates and reagents.
-- **Organ-on-a-chip and organoids**: multiscale physiological models.
+- Classify and sort droplets, cells, and particles from high-speed video or sensor signals.
+- Optimize flow rates and reagents for droplet size and encapsulation.
+- Monitor organ-on-chip and single-cell assays in real time.
+- Detect sorting errors and control actuators in closed loop.
+
+## Steps
+
+1. Set up high-speed imaging or impedance/fluorescence sensors synchronized with flow controls.
+2. Extract droplet or cell features and train a real-time classifier or detector.
+3. Validate sorting accuracy and throughput on labeled reference samples.
+4. Optimize flow rates and reagent concentrations with Bayesian or reinforcement-learning control.
+5. Close the loop with actuators and log drift for continuous retraining.
 
 ## Code pattern
 

@@ -2,19 +2,28 @@
 
 ## Description
 
-Converting scientific evidence and legislative text into concise, actionable policy briefs and impact analyses.
+Convert scientific evidence and legislative text into concise, decision-ready policy briefs and impact analyses for government agencies, regulators and advocacy groups.
 
 ## When to use
 
 You need to turn a scientific paper, a body of evidence, or a legislative document into a short, decision-ready policy brief for government, agencies, or advocacy groups.
 
-## Key concepts
+## Usage
 
-- **Policy brief structure**: problem, evidence, policy options, recommendations, and implications.
-- **Science-to-policy translation**: reframe technical findings into actionable, audience-specific guidance.
-- **Stakeholder and impact analysis**: map who is affected, how, and what trade-offs exist.
-- **Evidence synthesis**: combine multiple studies while tracking source credibility and recency.
-- **Hallucination control**: policy briefs must not invent statistics, legal clauses, or citations.
+- **Assemble problem, evidence, policy options, recommendations, and implications.**
+- **Reframe technical findings into actionable, audience-specific guidance.**
+- **Map who is affected, how, and what trade-offs exist.**
+- **Combine multiple studies while tracking source credibility and recency.**
+- **Ensure briefs do not invent statistics, legal clauses, or citations.**
+
+## Steps
+
+1. Define the decision-maker, policy question, and the brief's length and format.
+2. Gather and appraise evidence from peer-reviewed research, official legislation, and government data.
+3. Synthesize key findings into problem, options, and recommendation statements with citations.
+4. Quantify or map stakeholder impacts, costs, and trade-offs for each policy option.
+5. Verify every statistic, legal clause, and citation against its original source.
+6. Submit the brief for expert review and test clarity with a policy professional or target reader.
 
 ## Code pattern
 

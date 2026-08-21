@@ -2,18 +2,27 @@
 
 ## Description
 
-ML for magnetic material discovery, skyrmion and MRAM device modeling, spin-orbit torque optimization, and spin-wave logic.
+Use machine learning to discover magnetic materials, model skyrmions, and optimize spintronic devices such as MRAM.
 
 ## When to use
 
 You are discovering spintronic materials, modeling magnetic textures such as skyrmions, or optimizing spin-orbit-torque MRAM devices.
 
-## Key concepts
+## Usage
 
-- **Spin-orbit torque (SOT) and spin-transfer torque (STT)**: ML screens heavy-metal/ferromagnet stacks for high charge-to-spin conversion.
-- **Skyrmion materials**: classifiers predict stable skyrmion-host compounds and Dzyaloshinskii-Moriya interaction strength.
-- **MRAM device modeling**: surrogate models map stack parameters to switching current, retention, and read/write margins.
-- **Generative materials design**: GANs and diffusion models propose novel magnetic compounds for spintronic applications.
+- Screen heavy-metal/ferromagnet stacks for high spin-orbit and spin-transfer torque efficiency.
+- Predict stable skyrmion-host compounds and Dzyaloshinskii-Moriya interaction strength.
+- Build surrogate models that map MRAM stack parameters to switching current, retention, and margins.
+- Propose novel magnetic compounds with generative models for spintronic applications.
+
+## Steps
+
+1. Curate DFT, micromagnetic, and experimental data for candidate spintronic materials.
+2. Train predictors for spin Hall conductivity, skyrmion stability, or MRAM switching.
+3. Screen new materials or stack designs against fabrication and stability criteria.
+4. Validate magnetic texture predictions with micromagnetic simulations.
+5. Optimize an SOT-MRAM or skyrmion device and compare switching energy to a baseline.
+6. Iterate with foundry constraints and experimental feedback.
 
 ## Code pattern
 

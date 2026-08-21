@@ -2,19 +2,27 @@
 
 ## Description
 
-Air, water, and soil pollution monitoring, source apportionment, forecasting, and regulatory compliance with ML.
+Forecast air and water pollutant exceedances from sensor and satellite data to guide regulatory alerts and remediation.
 
 ## When to use
 
 You need to monitor pollutant concentrations, identify sources, forecast exceedances, or prioritize remediation.
 
-## Key concepts
+## Usage
 
-- **Air quality forecasting**: predict PM2.5, PM10, NO2, O3 from meteorology and emissions data.
-- **Water quality monitoring**: estimate nutrient, heavy metal, and pathogen levels from in-situ and remote-sensing data.
-- **Soil pollution detection**: map contamination from reflectance spectroscopy or multisensor data.
-- **Source apportionment**: attribute pollution to sectors, traffic, industry, or natural sources.
-- **Regulatory compliance**: detect threshold exceedances and support emission-control decisions.
+- Forecast PM2.5, PM10, NO2, O3, and other pollutants from meteorology and emissions data.
+- Estimate nutrient, heavy-metal, and pathogen levels in water from in-situ and remote-sensing data.
+- Map soil contamination from reflectance spectroscopy or multisensor data.
+- Attribute pollution to sources and detect regulatory threshold exceedances.
+
+## Steps
+
+1. Ingest air, water, or soil monitoring data plus meteorology, emissions, traffic, and remote-sensing covariates.
+2. Engineer lag, diurnal, and seasonal features and handle missing sensors with imputation.
+3. Train pollutant-concentration or exceedance-forecasting models and evaluate against persistence and regulatory monitors.
+4. Apply source-apportionment methods or SHAP-based attribution to identify traffic, industry, and natural contributions.
+5. Map soil or water contamination with spectroscopic or multisensor models and validate with lab samples.
+6. Build a decision-support dashboard for exceedance alerts, compliance reporting, and remediation prioritization.
 
 ## Code pattern
 

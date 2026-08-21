@@ -2,19 +2,28 @@
 
 ## Description
 
-Drafting manuscripts, abstracts, cover letters, response-to-reviewers, and translating findings across disciplines with LLMs.
+Use LLMs to draft, refine and translate academic manuscripts, cover letters, responses to reviewers and interdisciplinary summaries while grounding every claim in verified sources.
 
 ## When to use
 
 You are writing or refining academic manuscripts, abstracts, cover letters, response-to-reviewers, or interdisciplinary summaries of research findings.
 
-## Key concepts
+## Usage
 
-- **Structured scientific writing**: follow IMRaD, abstract structures, and journal-specific guidelines.
-- **Academic tone and style**: use LLMs to adjust formality, clarity, and field-specific conventions.
-- **Citation and reference management**: ground drafts in uploaded PDFs and verified bibliographies.
-- **Integrity checks**: detect accidental plagiarism, AI-patterned text, and citation errors.
-- **Cross-disciplinary translation**: reframe findings for readers in adjacent fields.
+- **Draft and revise IMRaD sections, abstracts, and cover letters that follow journal guidelines.**
+- **Adjust formality, clarity, and field-specific conventions for the target venue.**
+- **Ground drafts in uploaded PDFs and verified bibliographies, not invented DOIs.**
+- **Detect accidental plagiarism, AI-patterned phrasing, and citation errors before submission.**
+- **Reframe findings for readers in adjacent fields and for broader impact statements.**
+
+## Steps
+
+1. Assemble source materials: paper, outline, reviewer comments, target journal guidelines, and reference library.
+2. Generate a structured first draft of the section (abstract, cover letter, response to reviewers) using the sources as context.
+3. Refine tone, length, and terminology to match the journal or correspondence style.
+4. Verify every citation, DOI, statistic, and claim against the original sources.
+5. Run integrity and style checks, then compare the draft to the original human version.
+6. Finalize with author edits and maintain a record of AI involvement for transparency.
 
 ## Code pattern
 

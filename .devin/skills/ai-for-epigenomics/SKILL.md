@@ -2,19 +2,28 @@
 
 ## Description
 
-DNA methylation, histone modifications, chromatin accessibility, enhancer-promoter interactions, and deep learning models of gene regulation.
+Use deep learning to predict gene-regulatory states and interpret non-coding variants from DNA methylation, histone marks, chromatin accessibility and 3D contact data.
 
 ## When to use
 
 You are working with DNA methylation, histone modifications, chromatin accessibility, or other epigenomic assays and want to predict regulatory states, annotate genomic elements, or integrate epigenomic data with expression or phenotype data.
 
-## Key concepts
+## Usage
 
-- **DNA methylation**: CpG and non-CpG methylation patterns, often measured by WGBS or array-based assays.
-- **Histone modifications**: ChIP-seq marks such as H3K4me3, H3K27ac, and H3K27me3 that define promoters and enhancers.
-- **Chromatin accessibility**: ATAC-seq and DNase-seq that identify open regulatory regions.
-- **Enhancer-promoter interactions**: 3D contact data linking distal regulatory elements to target genes.
-- **Deep epigenomics models**: DeepSEA, Basenji, and Enformer-style sequence-to-activity predictors.
+- **Predict DNA methylation**: identify regulatory and imprinting changes from WGBS or array data.
+- **Classify enhancers and promoters**: use ChIP-seq marks such as H3K4me3, H3K27ac, and H3K27me3.
+- **Model chromatin accessibility**: interpret ATAC-seq and DNase-seq to find open regulatory regions.
+- **Link distal elements**: connect enhancers to target genes with 3D contact and HiChIP data.
+- **Score variants**: predict the impact of non-coding variants and interpret with motif and attribution analysis.
+
+## Steps
+
+1. Collect and align WGBS, ChIP-seq, ATAC-seq, or array data to the same reference and blacklist.
+2. Call peaks or quantify signals, normalize for depth and input control, and annotate genomic regions.
+3. Train or load a sequence-to-activity model such as Enformer, Basenji, or Corgi on genomic windows.
+4. Annotate enhancers, promoters, and 3D contacts and link distal elements to target genes.
+5. Score variants and interpret predictions with motif analysis and attribution maps.
+6. Validate predicted regulatory effects against reporter assays, RNA-seq, or matched epigenomic profiles.
 
 ## Code pattern
 

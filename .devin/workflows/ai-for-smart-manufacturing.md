@@ -1,6 +1,6 @@
 # /ai-for-smart-manufacturing
 
-AI for cyber-physical manufacturing, digital twins, real-time process optimization, predictive maintenance, and sustainable Industry 4.0/5.0 systems.
+Use machine learning to build digital twins, optimize processes in real time, predict maintenance, and improve sustainability in cyber-physical factories.
 
 ## Trigger
 

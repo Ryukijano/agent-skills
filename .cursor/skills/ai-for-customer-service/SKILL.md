@@ -2,18 +2,29 @@
 
 ## Description
 
-Conversational AI, intent classification, sentiment and satisfaction analysis, ticket routing, and agent-assist systems.
+Use AI for Customer Service to classify intent, route tickets, analyze sentiment and assist agents.
 
 ## When to use
 
 You want to automate customer support, triage tickets, route inquiries, or augment human agents with real-time suggestions.
 
-## Key concepts
 
-- **Intent classification and slot filling**: map user utterances to intents and extract entities.
-- **Conversational AI and LLMs**: chatbots, retrieval-augmented generation, and human escalation.
-- **Sentiment and user satisfaction**: detect frustration, satisfaction, and conversation quality.
-- **Ticket routing and agent assist**: classify and route to the right team or suggest responses.
+## Usage
+
+
+- **Intent classification and slot filling**: Map user utterances to intents and extract entities.
+- **Conversational AI and LLMs**: Chatbots, retrieval-augmented generation, and human escalation.
+- **Sentiment and user satisfaction**: Detect frustration, satisfaction, and conversation quality.
+- **Ticket routing and agent assist**: Classify and route to the right team or suggest responses.
+
+## Steps
+
+1. Collect and prepare support tickets, chat logs and knowledge-base articles.
+2. Automate customer support.
+3. Triage tickets.
+4. Route inquiries.
+5. Validate by building an intent classifier and measure F1 on a labeled test set.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -26,11 +37,13 @@ result = classifier("The chatbot resolved my issue in seconds.")
 print(result)
 ```
 
+
 ## Tuning notes
 
 - Design for graceful handoff to human agents when automation fails.
 - Use retrieval-augmented generation to ground answers in approved knowledge bases.
 - Track resolution rate, CSAT, and cost per contact to measure real value.
+
 
 ## Verification
 

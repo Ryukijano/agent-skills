@@ -2,19 +2,30 @@
 
 ## Description
 
-3D reconstruction, point cloud processing, NeRF and Gaussian splatting, depth estimation, 3D detection, and scene understanding.
+Use AI for 3D Vision to reconstruct scenes, process point clouds and estimate depth.
 
 ## When to use
 
 You need to reconstruct, represent, or interpret 3D geometry from images, point clouds, or depth sensors.
 
-## Key concepts
+
+## Usage
+
 
 - **Point cloud deep learning**: PointNet, PointNet++, DGCNN, and Point Transformer.
-- **Neural radiance fields and 3D Gaussian splatting**: implicit and explicit scene representations.
-- **Depth estimation**: monocular and stereo depth and completion.
+- **Neural radiance fields and 3D Gaussian splatting**: Implicit and explicit scene representations.
+- **Depth estimation**: Monocular and stereo depth and completion.
 - **3D object detection and segmentation**: VoteNet, PointRCNN, and 3D instance segmentation.
-- **Surface reconstruction and registration**: traditional and learning-based methods.
+- **Surface reconstruction and registration**: Traditional and learning-based methods.
+
+## Steps
+
+1. Collect and prepare multi-view images, point clouds and depth maps.
+2. Reconstruct.
+3. Represent.
+4. Interpret 3D geometry from images.
+5. Validate by reconstructing a small object from multi-view images with NeRF or Gaussian splatting and render novel views.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -28,12 +39,14 @@ pcd.estimate_normals(
 o3d.io.write_point_cloud("scene_normals.ply", pcd)
 ```
 
+
 ## Tuning notes
 
 - Normalize point clouds and handle varying density.
 - Use multi-view consistency for depth and reconstruction.
 - Combine geometric and photometric cues.
 - Validate with Chamfer distance, F-score, or mAP on 3D benchmarks.
+
 
 ## Verification
 

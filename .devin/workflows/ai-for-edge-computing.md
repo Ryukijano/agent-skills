@@ -1,6 +1,6 @@
 # /ai-for-edge-computing
 
-Model compression, inference offloading, task placement, federated learning, and MLOps at the network edge.
+Optimize model inference, task offloading, and resource management at the network edge.
 
 ## Trigger
 

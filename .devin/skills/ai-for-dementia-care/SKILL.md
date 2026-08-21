@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for cognitive impairment screening, dementia risk stratification, voice and EHR analytics, and caregiver support.
+Use machine learning to screen for cognitive decline, stratify dementia risk, and support caregivers.
 
 ## When to use
 
 You need to detect cognitive decline early, triage memory-clinic referrals, or support people with dementia and their caregivers.
 
-## Key concepts
+## Usage
 
-- **Cognitive screening from voice and language**: acoustic and linguistic markers from short speech samples or questionnaire responses.
-- **EHR-based dementia risk**: low-burden models using comorbidity, medication, and encounter data.
-- **Multimodal diagnosis**: combine neuropsychology, imaging, and biomarkers for etiology differentiation.
-- **Resource-stratified models**: tier inputs from basic demographics to full neuropsych batteries.
+- Screen for cognitive impairment from voice, language, and questionnaire responses.
+- Build EHR-based dementia risk models with low-burden inputs.
+- Combine neuropsychology, imaging, and biomarkers for differential diagnosis.
+- Tier models from basic demographics to full neuropsych batteries.
+
+## Steps
+
+1. Collect voice, EHR, imaging, and neuropsych data with careful timestamping.
+2. Define the screening or risk target and avoid leakage from future visits.
+3. Train minimal-input screeners and more comprehensive diagnostic models.
+4. Validate across health systems, countries, and cognitive assessment norms.
+5. Balance sensitivity and specificity and provide explanations to clinicians.
+6. Integrate into memory clinic triage and monitor referral outcomes.
 
 ## Code pattern
 

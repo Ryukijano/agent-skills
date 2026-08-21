@@ -1,6 +1,6 @@
 # /ai-for-semiconductors
 
-Machine learning for semiconductor materials discovery, bandgap engineering, defect analysis, and fabrication process optimization.
+Apply ML to discover semiconductors, engineer bandgaps and defects, and optimize fabrication and layout processes.
 
 ## Trigger
 

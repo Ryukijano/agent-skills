@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for pediatric diagnostics, developmental surveillance, pediatric AI readiness, and risk stratification for children.
+Use machine learning to support pediatric diagnostics, developmental surveillance, and risk stratification.
 
 ## When to use
 
 You are building AI tools for pediatric screening, diagnosis, monitoring, or treatment planning across neonatal, childhood, and adolescent populations.
 
-## Key concepts
+## Usage
 
-- **Pediatric growth and development**: age-adjusted norms, developmental milestones, and anomaly detection.
-- **Diagnostic support for common conditions**: pneumonia, sepsis, congenital heart disease, and retinopathy of prematurity.
-- **Multimodal pediatric data**: EHR notes, imaging, labs, and parent-reported outcomes.
-- **Pediatric AI readiness (PAIR)**: governance, validation, low-resource adaptation, and child-centric design.
+- Track age-adjusted growth, developmental milestones, and anomaly detection.
+- Support diagnosis of pneumonia, sepsis, congenital heart disease, and retinopathy of prematurity.
+- Integrate EHR notes, imaging, labs, and parent-reported outcomes into pediatric models.
+- Apply pediatric AI readiness (PAIR) governance, validation, and child-centric design.
+
+## Steps
+
+1. Collect pediatric data and normalize by age, sex, and developmental stage.
+2. Define diagnosis or screening targets with child-appropriate reference ranges.
+3. Train models with class imbalance and data-scarcity handling (transfer, federated learning).
+4. Validate across pediatric subgroups and institutions.
+5. Complete a pediatric AI readiness checklist and address low-resource adaptation.
+6. Integrate into pediatric workflows with guardian consent and age-appropriate interfaces.
 
 ## Code pattern
 

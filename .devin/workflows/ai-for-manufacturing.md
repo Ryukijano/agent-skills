@@ -1,6 +1,6 @@
 # /ai-for-manufacturing
 
-Predictive maintenance, quality control, process optimization, digital twins, and human-interpretable factory AI.
+Apply predictive maintenance, vision-based quality control, process modeling, and edge AI to improve uptime and efficiency in factories.
 
 ## Trigger
 

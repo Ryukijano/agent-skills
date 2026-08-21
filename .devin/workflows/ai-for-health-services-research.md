@@ -1,6 +1,6 @@
 # /ai-for-health-services-research
 
-AI for healthcare access, quality, utilization, policy, workforce, and health-system performance.
+Analyze real-world care delivery and access patterns to identify disparities and evaluate whether digital tools improve equity.
 
 ## Trigger
 

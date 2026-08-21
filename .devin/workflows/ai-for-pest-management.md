@@ -1,6 +1,6 @@
 # /ai-for-pest-management
 
-Machine and deep learning for pest detection, identification, population monitoring, and integrated pest management decision support.
+Detect and count insect pests with smart traps, pheromones, and computer vision.
 
 ## Trigger
 

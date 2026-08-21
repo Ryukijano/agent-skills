@@ -2,7 +2,7 @@
 
 ## Description
 
-Claims processing, benefits eligibility, health risk identification, veteran-centered care coordination, and administrative automation at VA and related agencies.
+Accelerates veteran benefit claims and care coordination by triaging cases, summarizing evidence, and scheduling services.
 
 ## When to use
 
@@ -10,11 +10,10 @@ You are improving access to benefits, healthcare, and memorial services for vete
 
 ## Usage
 
-- **Claims triage**: route, prioritize, and summarize disability claims.
-- **Benefits eligibility**: match veterans to available programs.
+- **Claims triage and routing**: prioritize and summarize disability claims evidence.
+- **Benefits matching**: match veterans to eligible programs and track status.
 - **Clinical decision support**: identify risk, predict readmissions, and suggest care.
-- **Veteran experience**: chatbots, scheduling, and status updates.
-- **Backlog reduction**: automate evidence review and document classification.
+- **Veteran-facing assistants**: provide plain-language answers and appointment scheduling.
 
 ## Steps
 

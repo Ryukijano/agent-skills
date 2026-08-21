@@ -2,25 +2,27 @@
 
 ## Description
 
-Network intrusion detection, malware and phishing classification, vulnerability discovery, adversarial ML, and SOC automation.
+Use machine learning to detect intrusions, classify malware and phishing, discover vulnerabilities, and automate SOC workflows while hardening against adversarial attacks.
 
 ## When to use
 
 You are defending networks, endpoints, or cloud environments against
 intrusions, malware, phishing, or adversarial ML attacks.
 
-## Key concepts
+## Usage
 
-- **AI-driven intrusion detection**: anomaly and signature detection on
-  network and host telemetry.
-- **Malware and phishing classification**: static/dynamic analysis and
-  URL or email content models.
-- **Vulnerability discovery**: ML-assisted fuzzing, static analysis, and
-  patch prioritization.
-- **Adversarial ML**: evasion, poisoning, model extraction, and
-  hardening defenses.
-- **SOC automation**: triage, correlation, and response playbooks with
-  LLM agents.
+- Detect anomalies and signatures in network and host telemetry.
+- Classify malware, phishing, and malicious URLs from static and dynamic analysis.
+- Assist fuzzing, static analysis, and patch prioritization for vulnerability discovery.
+- Automate SOC triage, correlation, and response playbooks with LLM agents.
+
+## Steps
+
+1. Ingest network flows, logs, and endpoint telemetry with chronological train/test splits.
+2. Train an anomaly, signature, or classification model for the target threat.
+3. Validate against adversarial evasion on a held-out attack set.
+4. Build a phishing or malware detector and test on a time-separated test set.
+5. Integrate the model into SOC workflows with auditable rule-based and ML alerts.
 
 ## Code pattern
 

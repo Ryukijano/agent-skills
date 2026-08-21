@@ -2,25 +2,27 @@
 
 ## Description
 
-Fairness, privacy, proportionality, and algorithmic accountability for AI surveillance and facial recognition.
+Audit police facial-recognition deployments against legal and fairness standards to enforce proportionality and transparency.
 
 ## When to use
 
 You are designing, deploying, or auditing surveillance or biometric
 systems where privacy, human rights, and societal trust are at stake.
 
-## Key concepts
+## Usage
 
-- **Proportionality and necessity**: balancing security gains against
-  individual rights and freedoms.
-- **Algorithmic fairness**: auditing demographic disparities in
-  detection and recognition rates.
-- **Privacy by design**: data minimization, retention limits, and
-  anonymization.
-- **Transparency and accountability**: explainability, audit trails,
-  and redress mechanisms.
-- **Regulatory compliance**: AI Act, biometric data rules, and sector
-  guidelines.
+- Audit demographic parity and equalized odds in recognition and detection models.
+- Assess proportionality and necessity against individual rights.
+- Design data minimization, retention limits, and anonymization into systems.
+- Maintain explainability, audit trails, and redress mechanisms.
+
+## Steps
+
+1. Define the legitimate security goal, data sources, and decision logic.
+2. Run an independent demographic and error-rate audit across subgroups.
+3. Write a proportionality assessment that weighs security gains against rights.
+4. Implement retention, deletion, and human-in-the-loop review policies.
+5. Verify that audit logs and deletion policies match stated governance.
 
 ## Code pattern
 

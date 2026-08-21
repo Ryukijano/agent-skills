@@ -1,6 +1,6 @@
 # /ai-for-law
 
-Legal document analysis, case law retrieval, contract review, and legal reasoning benchmarks.
+Use NLP and retrieval systems to analyze contracts, retrieve case law, review clauses, and answer legal questions with verifiable sources.
 
 ## Trigger
 

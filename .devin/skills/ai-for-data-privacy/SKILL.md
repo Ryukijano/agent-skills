@@ -2,7 +2,7 @@
 
 ## Description
 
-Differential privacy, federated learning, homomorphic encryption, PETs, and privacy-preserving ML for sensitive data.
+Protect sensitive data using differential privacy, anonymization, and federated learning.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You train or serve ML models on personal, sensitive, or regulated data and need 
 
 ## Usage
 
-- **Differential privacy**: add calibrated noise to queries, gradients, or outputs.
-- **Federated and split learning**: keep raw data at the edge while training shared models.
-- **Homomorphic encryption and secure multiparty computation**: compute on encrypted data.
-- **Anonymization and pseudonymization**: de-identify datasets and evaluate re-identification risk.
-- **Privacy auditing**: run membership inference and model inversion tests.
+- Train models with differential privacy (Opacus, TensorFlow Privacy).
+- Apply k-anonymity, l-diversity, and synthetic data generation.
+- Run federated learning across institutions (NVIDIA FLARE, Flower).
+- Audit re-identification risk and privacy budgets.
+- De-identify free text with named-entity recognition.
 
 ## Steps
 
-1. Classify data sensitivity and identify privacy requirements.
-2. Choose PETs (DP, FL, SMPC, HE) appropriate to the threat model.
-3. Implement privacy mechanisms and tune privacy budgets or noise.
-4. Audit models with attack simulations and privacy metrics.
-5. Document privacy controls and compliance evidence.
+1. Classify sensitive attributes and privacy requirements.
+2. Choose privacy mechanism (DP, federated, anonymization).
+3. Implement training, aggregation, or synthesis.
+4. Evaluate privacy-utility trade-off and budget.
+5. Document privacy guarantees and audits.
 
 ## Code pattern
 

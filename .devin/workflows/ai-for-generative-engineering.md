@@ -1,6 +1,6 @@
 # /ai-for-generative-engineering
 
-Diffusion, VAE, and generative inverse design for engineering concepts, constraint-aware generation, and performance-conditioned shape and material synthesis.
+Use diffusion, VAEs, and flow models to generate engineering designs that meet performance and manufacturing constraints.
 
 ## Trigger
 

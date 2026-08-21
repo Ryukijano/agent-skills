@@ -1,6 +1,6 @@
 # /ai-for-immunoinformatics
 
-Machine learning for immune repertoire analysis, epitope prediction, vaccine design, and immunotherapy optimization.
+Use AI to work with immune sequencing, epitope prediction, vaccine design, or predicting response to immunotherapy.
 
 ## Trigger
 

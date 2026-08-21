@@ -1,6 +1,6 @@
 # /ai-for-network-optimization
 
-Graph neural networks, deep reinforcement learning, traffic engineering, resource allocation, and learning-augmented optimization for routing, load balancing, and network design.
+Optimize routing, traffic engineering, and resource allocation in communication networks.
 
 ## Trigger
 

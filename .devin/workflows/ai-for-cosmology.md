@@ -1,6 +1,6 @@
 # /ai-for-cosmology
 
-ML for large-scale structure, weak lensing, CMB analysis, 21-cm cosmology, and cosmological parameter inference.
+Emulate nonlinear structure formation and CMB observables to infer cosmological parameters 50x faster than full N-body simulations.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-infectious-disease
 
-Machine learning for pathogen identification, antimicrobial resistance prediction, sepsis early warning, and infectious disease outbreak surveillance.
+Use machine learning to identify pathogens, predict antimicrobial resistance, detect sepsis, and monitor disease outbreaks.
 
 ## Trigger
 

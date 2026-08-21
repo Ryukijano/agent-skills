@@ -1,6 +1,6 @@
 # /ai-for-hardware-security
 
-ML for side-channel analysis, hardware Trojan and PUF detection, supply-chain assurance, and secure accelerator design.
+Use machine learning to detect Trojans, analyze side-channel leakage, evaluate PUFs, and secure accelerators.
 
 ## Trigger
 

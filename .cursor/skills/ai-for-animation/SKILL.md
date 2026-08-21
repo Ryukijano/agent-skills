@@ -2,19 +2,30 @@
 
 ## Description
 
-Motion synthesis, inbetweening, character retargeting, physics-based animation, and style transfer for animated content.
+Use AI for Animation to clean motion capture, generate inbetweens, retarget and simulate physics.
 
 ## When to use
 
 You are producing character motion, automating inbetween frames, retargeting across skeletons, or blending styles in games and film.
 
-## Key concepts
 
-- **Motion capture and cleanup**: denoise and segment motion data.
-- **Motion inbetweening**: generate plausible intermediate frames between key poses.
-- **Motion diffusion models**: generate diverse, controllable character movements.
-- **Retargeting**: transfer motion between skeletons with different topologies.
-- **Physics-based animation**: combine deep networks with simulation for realistic contact.
+## Usage
+
+
+- **Motion capture and cleanup**: Denoise and segment motion data.
+- **Motion inbetweening**: Generate plausible intermediate frames between key poses.
+- **Motion diffusion models**: Generate diverse, controllable character movements.
+- **Retargeting**: Transfer motion between skeletons with different topologies.
+- **Physics-based animation**: Combine deep networks with simulation for realistic contact.
+
+## Steps
+
+1. Collect and prepare motion-capture sequences and skeleton data.
+2. Produce character motion.
+3. Automate inbetween frames.
+4. Retarget across skeletons.
+5. Validate by generating inbetween frames and measure pose smoothness and foot slide.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -38,12 +49,14 @@ class MotionInbetweener(nn.Module):
         return self.net(torch.cat([start, end], dim=-1))
 ```
 
+
 ## Tuning notes
 
 - Normalize joint rotations and positions to root-relative coordinate frames.
 - Train with diverse skeleton topologies to improve retargeting.
 - Use foot-contact losses for ground-adherent locomotion.
 - Evaluate with FID-like motion metrics and perceptual studies.
+
 
 ## Verification
 

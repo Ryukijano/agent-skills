@@ -2,19 +2,30 @@
 
 ## Description
 
-Chest X-ray and CT interpretation, COPD and asthma assessment, respiratory sound analysis, and pulmonary disease risk prediction.
+Use AI for Pulmonology to read chest X-rays and CTs, assess COPD and analyze respiratory sounds.
 
 ## When to use
 
 You are interpreting chest X-rays and CTs, diagnosing COPD or asthma, analyzing respiratory sounds, or predicting respiratory disease outcomes.
 
-## Key concepts
 
-- **Chest X-ray abnormality detection**: nodules, consolidation, pleural effusion, and pneumothorax.
-- **CT-based pulmonary assessment**: emphysema quantification, airway wall thickness, and lung cancer screening.
+## Usage
+
+
+- **Chest X-ray abnormality detection**: Nodules, consolidation, pleural effusion, and pneumothorax.
+- **CT-based pulmonary assessment**: Emphysema quantification, airway wall thickness, and lung cancer screening.
 - **COPD severity and GOLD staging** with deep learning.
-- **Respiratory sound analysis**: cough, breath sounds, and spirometry curves.
-- **Longitudinal risk prediction**: lung disease mortality and exacerbation risk.
+- **Respiratory sound analysis**: Cough, breath sounds, and spirometry curves.
+- **Longitudinal risk prediction**: Lung disease mortality and exacerbation risk.
+
+## Steps
+
+1. Collect and prepare chest X-rays, CTs, spirometry and respiratory audio.
+2. Interpret chest X-rays and CTs.
+3. Diagnose COPD or asthma.
+4. Analyze respiratory sounds.
+5. Validate by training a chest X-ray pathology classifier and compare with radiologist reads.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -33,12 +44,14 @@ img = (img - img.min()) / (img.max() - img.min())
 img = np.stack([img, img, img], axis=0)  # pseudo-RGB for pretrained encoders
 ```
 
+
 ## Tuning notes
 
 - Apply DICOM windowing and handle rescale slope/intercept.
 - Use large public datasets (CheXpert, MIMIC-CXR, PadChest) for pretraining.
 - Address label noise, class imbalance, and hidden confounders (pneumothorax drains).
 - Evaluate for subgroup bias across age, sex, race, and disease severity.
+
 
 ## Verification
 

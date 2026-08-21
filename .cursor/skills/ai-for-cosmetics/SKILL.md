@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for personalized skincare, formulation optimization, shade matching, safety/toxicity prediction, and consumer insight.
+Use AI for Cosmetics to analyze skin, personalize products, match shades and predict tolerability.
 
 ## When to use
 
 You are analyzing skin from images, recommending products, optimizing formulations, matching shades, or predicting tolerability and safety in cosmetics and dermocosmetics.
 
-## Key concepts
 
-- **Computer vision for skin analysis**: classify type, condition, acne, wrinkles, pigmentation, and sensitivity.
-- **Predictive formulation modeling**: forecast texture, stability, shelf life, and sensory properties.
-- **In silico toxicology**: predict sensitization, irritation, and allergen risk with computational models.
-- **Personalized skincare**: combine selfies, environment, lifestyle, and preference data.
-- **Color science for shade matching**: foundation and makeup matching across skin tones.
+## Usage
+
+
+- **Computer vision for skin analysis**: Classify type, condition, acne, wrinkles, pigmentation, and sensitivity.
+- **Predictive formulation modeling**: Forecast texture, stability, shelf life, and sensory properties.
+- **In silico toxicology**: Predict sensitization, irritation, and allergen risk with computational models.
+- **Personalized skincare**: Combine selfies, environment, lifestyle, and preference data.
+- **Color science for shade matching**: Foundation and makeup matching across skin tones.
+
+## Steps
+
+1. Collect and prepare facial images, ingredient and user preference data.
+2. Analyze skin from images.
+3. Recommend products.
+4. Optimize formulations.
+5. Validate by classifying skin type/condition with balanced accuracy across skin tones.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -41,12 +52,14 @@ class SkinNet(nn.Module):
         return self.fc(x)
 ```
 
+
 ## Tuning notes
 
 - Train on diverse skin tones, Fitzpatrick types, and imaging conditions.
 - Validate recommendations with dermatologists and comply with cosmetic regulations.
 - Combine facial images with environment and historical data for personalization.
 - Use class weights for rare skin conditions and balanced sampling across demographics.
+
 
 ## Verification
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning and econometric ML for farm decision support, risk, policy, market analysis, adoption, and the economics of digital agriculture.
+Support farm decisions, commodity pricing, and risk management with AI.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are evaluating the economic outcomes of farm technologies, forecasting price
 
 ## Usage
 
-- **Yield and price forecasting**: predict crop yields, commodity prices, and revenue at regional or farm scale.
-- **Risk and insurance analytics**: estimate weather, yield, and price risk for crop insurance or hedging.
-- **Adoption and impact evaluation**: model technology adoption, treatment effects, and farm-level impact.
-- **Decision support systems**: build cost-benefit and farm-planning tools that integrate agronomic and economic models.
-- **Policy and market analysis**: assess subsidies, trade, and supply-chain effects.
+- Forecast grain prices and basis with Croploo or Quantum Hedging.
+- Optimize grain marketing and hedging strategies.
+- Predict input costs and farm profitability.
+- Assess climate and policy risk scenarios.
+- Build farm budgeting and decision support dashboards.
 
 ## Steps
 
-1. Collect farm accounts, market, policy, weather, and agronomic data.
-2. Define the economic outcome (profit, cost, revenue, adoption, risk).
-3. Build predictive, causal, or optimisation models suited to the question.
-4. Validate on held-out farms, regions, or time periods.
-5. Translate results into actionable recommendations and policy briefs.
+1. Collect market, weather, and farm financial data.
+2. Engineer features for price, basis, and yield.
+3. Train forecasting and optimization models.
+4. Deploy decision support tools and alerts.
+5. Validate with realized prices and farm outcomes.
 
 ## Code pattern
 

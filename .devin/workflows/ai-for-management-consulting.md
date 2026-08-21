@@ -1,6 +1,6 @@
 # /ai-for-management-consulting
 
-Accelerate diagnostic research, market sizing, client synthesis, and GenAI-assisted advisory workflows while managing epistemic risk.
+Use AI to build AI-augmented consulting workflows for market analysis, synthesis of client data, hypothesis generation, or executive-ready deliverables.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-synthetic-data
 
-Generative models, differential privacy, tabular/image/text synthesis, and utility-privacy evaluation for creating realistic synthetic datasets.
+Use generative models and differential privacy to create realistic, useful, and privacy-preserving synthetic datasets.
 
 ## Trigger
 

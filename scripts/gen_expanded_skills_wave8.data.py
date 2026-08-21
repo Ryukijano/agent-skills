@@ -2,19 +2,29 @@ SKILLS = [
     {
         "name": "ai-for-chemistry",
         "title": "AI for Chemistry",
-        "description": "Molecular property prediction, generative chemistry, reaction prediction, and cheminformatics with deep learning.",
+        "description": "Use deep learning to predict molecular properties, design novel molecules, and forecast chemical reactions and retrosynthetic routes.",
         "devin_body": r'''
 ## When to use
 
 You are predicting molecular properties, designing new molecules, or forecasting chemical reactions.
 
-## Key concepts
+## Usage
 
-- **Molecular fingerprints / SMILES / SELFIES**: text or vector representations of molecules.
-- **Graph neural networks for molecules**: GNNs operate on atom-bond graphs.
-- **Generative chemistry**: VAE, diffusion, or flow models for molecule design.
-- **Reaction prediction**: models that predict products from reactants and reagents.
-- **Datasets**: QM9, ZINC, ChEMBL, PubChem.
+- Predict molecular properties (solubility, toxicity, binding affinity) from SMILES, SELFIES, or molecular graphs.
+- Generate and optimize drug or material candidates with VAE, diffusion, or flow models.
+- Propose retrosynthetic routes and reaction conditions to shorten the DMTA cycle.
+- Represent molecules with SMILES, SELFIES, fingerprints, or atom-bond graphs for model input.
+- Filter generated structures for chemical plausibility and synthesizability with cheminformatics tools.
+- Benchmark and validate models on datasets like QM9, ZINC, ChEMBL, and PubChem.
+
+## Steps
+
+1. Featurize molecules (SMILES/SELFIES, fingerprints, or graph) from a chemical dataset.
+2. Train or fine-tune a GNN or transformer to predict a target molecular property.
+3. Generate candidate molecules with a generative or diffusion model against a desired property profile.
+4. Filter candidates for chemical plausibility, synthesizability, and patentability using RDKit and retrosynthesis tools.
+5. Predict reaction products or retrosynthetic routes for the most promising candidates.
+6. Validate shortlisted compounds with experimental or high-fidelity computational assays.
 
 ## Code pattern
 
@@ -44,7 +54,7 @@ model.fit(dataset)
 ''',
         "references": [
             "https://deepchem.io/",
-            "https://www.rdkit.org/",
+            "https://github.com/rdkit/rdkit",
             "https://arxiv.org/abs/2401.14876",
             "https://doi.org/10.1038/s41586-023-06197-z"
         ],
@@ -52,18 +62,28 @@ model.fit(dataset)
     {
         "name": "ai-for-biology",
         "title": "AI for Biology",
-        "description": "Deep learning for genomics, transcriptomics, proteomics, cell imaging, and biological sequence modeling.",
+        "description": "Use deep learning to analyze biological sequences, single-cell and spatial omics, microscopy images, and molecular structures.",
         "devin_body": r'''
 ## When to use
 
 You are analyzing biological sequences, microscopy images, single-cell data, or molecular structures.
 
-## Key concepts
+## Usage
 
-- **Sequence models for DNA/RNA/protein**: CNNs, transformers, and k-mer embeddings.
-- **Foundation models for biology**: ESM, AlphaFold, scBERT, HyenaDNA.
-- **Single-cell analysis**: cell type classification, perturbation prediction, trajectory inference.
-- **Biomedical image analysis**: segmentation, classification, and phenotyping.
+- Embed DNA, RNA, and protein sequences with transformer or CNN models (e.g., ESM, HyenaDNA).
+- Classify cell types and infer trajectories from single-cell RNA-seq or spatial transcriptomics.
+- Quantify proteins and cell phenotypes from multiplexed imaging or mass spectrometry proteomics.
+- Predict protein structures and interactions from sequences (e.g., AlphaFold, ESM embeddings).
+- Build disease or perturbation classifiers from multi-omics and imaging data.
+
+## Steps
+
+1. Load and quality-control sequence, omics, or imaging data for the target organism and tissue.
+2. Featurize biological inputs (k-mers, embeddings, expression matrices, image patches).
+3. Train or fine-tune a sequence, graph, or vision model for the prediction task (e.g., cell type, binding, biomarker).
+4. Integrate multiple modalities (genomics, transcriptomics, proteomics, imaging) to improve robustness.
+5. Control for batch effects and biological confounders with integration and harmonization methods.
+6. Validate predictions with held-out patients, datasets, or expert biological annotations.
 
 ## Code pattern
 
@@ -99,18 +119,28 @@ outputs = model(**inputs)
     {
         "name": "ai-for-physics-simulation",
         "title": "AI for Physics Simulation",
-        "description": "Neural operators, surrogate models, and learned emulators for partial differential equations and physical systems.",
+        "description": "Use neural operators and physics-informed surrogates to learn fast emulators of partial differential equations and physical systems.",
         "devin_body": r'''
 ## When to use
 
 You want to speed up expensive physics simulations or learn emulators from data.
 
-## Key concepts
+## Usage
 
-- **Neural operators**: map between infinite-dimensional function spaces (FNO, DeepONet).
-- **Surrogate models**: ML approximations of costly solvers.
-- **Physics-informed neural networks (PINNs)**: embed PDE constraints in loss.
-- **Digital twins**: online-learned models coupled to sensors.
+- Train Fourier Neural Operators (FNO), DeepONet, or GNN surrogates to approximate PDE solutions.
+- Embed physics constraints (PDEs, boundary conditions, conservation laws) into neural network losses (PINNs).
+- Build real-time digital twins for CFD, structural mechanics, heat transfer, or additive manufacturing.
+- Calibrate and update surrogates with sensor data for online monitoring and control.
+- Accelerate engineering design loops with interactive, AI-powered simulation and visualization.
+
+## Steps
+
+1. Define the physics problem, governing PDEs, input distributions, and output quantities of interest.
+2. Generate training data with a high-fidelity solver or experimental measurements across parameter ranges.
+3. Build a surrogate model (FNO, DeepONet, GNN, or PINN) and train it on the generated data.
+4. Validate the surrogate against the high-fidelity solver on out-of-distribution parameters and geometries.
+5. Deploy the model inside a digital twin or design loop with real-time sensor feedback and uncertainty quantification.
+6. Iterate: refine the surrogate with online data and retrain as the physical system or design space evolves.
 
 ## Code pattern
 
@@ -145,19 +175,28 @@ y = model(x)
     {
         "name": "ai-for-quantum-computing",
         "title": "AI for Quantum Computing",
-        "description": "Machine learning for quantum state tomography, variational quantum algorithms, quantum control, and error mitigation.",
+        "description": "Use machine learning to design, optimize, and error-mitigate variational quantum algorithms and quantum control pulses.",
         "devin_body": r'''
 ## When to use
 
 You are designing variational circuits, optimizing quantum controls, or mitigating errors in NISQ devices.
 
-## Key concepts
+## Usage
 
-- **Variational Quantum Eigensolver (VQE)**: hybrid quantum-classical optimization.
-- **Quantum Neural Networks**: parameterized circuits as models.
-- **Quantum control with RL/optimization**: pulse shaping and gate design.
-- **Error mitigation**: zero-noise extrapolation, probabilistic error cancellation.
-- **Simulators**: Qiskit, PennyLane, Cirq, cuQuantum.
+- Optimize parameterized quantum circuits (VQE, QAOA) with hybrid quantum-classical loops.
+- Discover high-fidelity, time-optimal control pulses for quantum gates and state preparation.
+- Mitigate hardware noise with learned error models, zero-noise extrapolation, or probabilistic cancellation.
+- Accelerate quantum state tomography and characterization from limited measurements.
+- Benchmark and compare algorithms on simulators (Qiskit, PennyLane, Cirq) and real NISQ hardware.
+
+## Steps
+
+1. Encode the target problem (molecular Hamiltonian, optimization, or control target) into a quantum circuit or pulse ansatz.
+2. Choose a simulator or NISQ backend and define the noise model and device constraints.
+3. Optimize circuit parameters or control pulses with a classical optimizer, using parameter-shift or finite-difference gradients.
+4. Apply error mitigation (ZNE, learned models, or probabilistic cancellation) to reduce noise in expectation values.
+5. Verify results against exact or classically simulable baselines on small problem instances.
+6. Benchmark on real hardware when feasible and iterate the ansatz, control, or mitigation strategy.
 
 ## Code pattern
 
@@ -197,19 +236,28 @@ opt = qml.GradientDescentOptimizer(stepsize=0.4)
     {
         "name": "ai-for-robotics",
         "title": "AI for Robotics",
-        "description": "Imitation learning, reinforcement learning, sim-to-real, and foundation models for robot manipulation and navigation.",
+        "description": "Use imitation learning, reinforcement learning, and foundation models to train robot manipulation and navigation policies that transfer from simulation to reality.",
         "devin_body": r'''
 ## When to use
 
 You are building robot perception, control, or planning systems using learning.
 
-## Key concepts
+## Usage
 
-- **Imitation learning**: behavioral cloning, DAgger.
-- **Reinforcement learning for control**: PPO, SAC, MBPO.
-- **Sim-to-real**: domain randomization, adaptation, distillation.
-- **Foundation models for robotics**: vision-language-action models (RT-X, Open X-Embodiment).
-- **ROS / Isaac Sim / PyBullet**: common robot middleware and simulators.
+- Learn manipulation and navigation policies from human demonstrations or expert trajectories (imitation learning).
+- Train control policies with reinforcement learning (PPO, SAC) in simulated environments.
+- Close the sim-to-real gap with domain randomization, co-training, actuator gap estimation, and adaptation.
+- Leverage vision-language-action (VLA) and foundation models (RT-X, GR00T, Open X-Embodiment) for generalist robot behavior.
+- Integrate robot middleware and simulators (ROS, Isaac Sim, Isaac Lab, PyBullet) into data collection and deployment.
+
+## Steps
+
+1. Define the robot task, embodiment, sensor inputs, and action space.
+2. Build or select a simulation environment and collect demonstration or replay data.
+3. Train a policy with imitation learning, reinforcement learning, or a foundation VLA model.
+4. Apply sim-to-real techniques (domain randomization, camera calibration, actuator modeling, co-training).
+5. Validate the policy in simulation on task success, robustness, and safety metrics.
+6. Deploy to the physical robot and compare real vs. simulated trajectories; iterate on the gap.
 
 ## Code pattern
 
@@ -244,19 +292,28 @@ model.learn(total_timesteps=100_000)
     {
         "name": "ai-for-autonomous-vehicles",
         "title": "AI for Autonomous Vehicles",
-        "description": "Perception, prediction, planning, and simulation for self-driving cars and mobile robots.",
+        "description": "Use perception, motion forecasting, planning, and closed-loop simulation to develop safe autonomous driving and mobile robot systems.",
         "devin_body": r'''
 ## When to use
 
 You are working on perception, motion forecasting, path planning, or end-to-end driving for autonomous vehicles.
 
-## Key concepts
+## Usage
 
-- **Perception**: 3D object detection, tracking, lane detection, segmentation.
-- **Prediction**: trajectory forecasting for agents in a scene.
-- **Planning**: rule-based, sampling-based, or learned planners.
-- **Simulation**: CARLA, nuPlan, Waymo Open, nuScenes.
-- **Safety and redundancy**: functional safety, ODD, scenario coverage.
+- Detect and track 3D objects, lanes, and road surfaces from camera, LiDAR, and radar data.
+- Forecast the future trajectories of vehicles, pedestrians, and cyclists in a scene.
+- Generate safe, comfortable ego-vehicle plans with rule-based, sampling-based, or learned planners.
+- Test and benchmark perception, prediction, and planning in closed-loop simulation (CARLA, nuPlan, nuScenes, Waymo Open).
+- Validate safety under diverse weather, lighting, geographic, and edge-case scenarios.
+
+## Steps
+
+1. Ingest and synchronize multi-sensor data (cameras, LiDAR, radar, GNSS/IMU, HD maps) for a driving scene.
+2. Build or fine-tune perception models for 3D object detection, tracking, and lane/road segmentation.
+3. Train motion-prediction models to forecast agent trajectories and interactions.
+4. Implement a planner that combines predictions, map constraints, and comfort/safety objectives.
+5. Evaluate the full stack in closed-loop simulation across diverse scenarios and weather/lighting conditions.
+6. Track regression metrics, edge cases, and ODD coverage; iterate on data collection and model updates.
 
 ## Code pattern
 
@@ -290,19 +347,28 @@ nusc = NuScenes(version='v1.0-mini', dataroot='/data/nuscenes', verbose=False)
     {
         "name": "ai-for-finance",
         "title": "AI for Finance",
-        "description": "Machine learning for time-series forecasting, risk modeling, algorithmic trading, and financial NLP.",
+        "description": "Use machine learning to forecast markets, model risk, detect fraud, and extract insight from financial documents and transactions.",
         "devin_body": r'''
 ## When to use
 
 You are building predictive models for markets, credit, fraud, or financial documents.
 
-## Key concepts
+## Usage
 
-- **Time-series forecasting**: ARIMA, Prophet, deep state-space, transformers.
-- **Risk modeling**: Value-at-Risk, stress testing, default prediction.
-- **Fraud detection**: anomaly detection, imbalanced classification.
-- **Financial NLP**: sentiment, earnings calls, filings, FinBERT.
-- **Backtesting**: avoid lookahead bias and overfitting.
+- Forecast prices, demand, or macro indicators with time-series and transformer models.
+- Model credit, market, and operational risk (Value-at-Risk, default prediction, stress testing).
+- Detect anomalous transactions, document forgeries, and fraud rings with classification, autoencoders, and LLM reasoning.
+- Analyze financial documents, earnings calls, and filings with domain-tuned NLP (FinBERT, trade-assistant agents).
+- Backtest strategies and reconciliation workflows with realistic costs, slippage, and temporal cross-validation.
+
+## Steps
+
+1. Curate financial data (prices, transactions, fundamentals, news, filings) and define the prediction or decision target.
+2. Engineer temporal features and create train/validation/test splits that respect causality (no leakage).
+3. Train a model for forecasting, risk scoring, fraud detection, or document classification.
+4. Backtest or evaluate the model with realistic transaction costs, slippage, and temporal cross-validation.
+5. Build guardrails (human-in-the-loop, explainability, audit logs) for high-stakes financial decisions.
+6. Deploy with monitoring for distribution shift, market regime changes, and regulatory compliance.
 
 ## Code pattern
 
@@ -338,19 +404,28 @@ model.fit(X_train, y_train)
     {
         "name": "ai-for-education",
         "title": "AI for Education",
-        "description": "Personalized learning, knowledge tracing, automated assessment, and intelligent tutoring systems.",
+        "description": "Use machine learning to personalize learning paths, trace student knowledge, automate assessment, and power intelligent tutoring systems.",
         "devin_body": r'''
 ## When to use
 
 You are building adaptive learning, student modeling, or automated grading systems.
 
-## Key concepts
+## Usage
 
-- **Knowledge tracing**: predict what skills a student has mastered (BKT, DKT).
-- **Personalized recommendation**: next-item or next-exercise suggestion.
-- **Automated essay / code scoring**: LLM or learned rubric scoring.
-- **Learning analytics**: engagement, dropout prediction, performance dashboards.
-- **Fairness**: ensure models do not disadvantage subgroups.
+- Trace student mastery of skills and predict next-exercise difficulty with BKT, DKT, and LLM-guided RL.
+- Recommend personalized learning content, schedules, and interventions based on performance and engagement.
+- Automate grading of essays, code, and quizzes with learned or LLM-based rubrics.
+- Analyze learning analytics (engagement, dropout risk, completion) to support instructors.
+- Evaluate fairness and pedagogical impact across student subgroups and educational settings.
+
+## Steps
+
+1. Collect and structure learning data (assessments, interactions, submissions, metadata) while protecting privacy.
+2. Train a knowledge-tracing or student-embedding model to estimate current mastery and predict future performance.
+3. Build an adaptive recommendation engine that selects the next problem, resource, or study plan.
+4. Implement automated assessment (essay, code, or quiz scoring) aligned with human rubrics.
+5. Surface dashboards and alerts for instructors on engagement, at-risk students, and learning gaps.
+6. Run controlled evaluations (e.g., RCT or A/B tests) to measure learning gains, fairness, and safety.
 
 ## Code pattern
 
@@ -391,19 +466,28 @@ class DKT(nn.Module):
     {
         "name": "ai-for-law",
         "title": "AI for Law",
-        "description": "Legal document analysis, case law retrieval, contract review, and legal reasoning benchmarks.",
+        "description": "Use NLP and retrieval systems to analyze contracts, retrieve case law, review clauses, and answer legal questions with verifiable sources.",
         "devin_body": r'''
 ## When to use
 
 You are processing contracts, statutes, case law, or legal queries with NLP.
 
-## Key concepts
+## Usage
 
-- **Legal NLP**: NER, classification, summarization, question answering.
-- **Case law retrieval**: dense and sparse retrieval over court opinions.
-- **Contract review**: clause extraction, risk flagging, comparison.
-- **Benchmarks**: LegalBench, COLIEE, Law School Admission Test tasks.
-- **Hallucination**: citations and claims must be verifiable.
+- Classify, summarize, and extract clauses from contracts, statutes, and court opinions.
+- Retrieve and synthesize case law, statutes, and regulations across jurisdictions with dense and sparse retrieval.
+- Compare contracts against playbooks to flag risks, obligations, and deviations.
+- Power legal research assistants that provide structured memos with verified citations.
+- Benchmark legal reasoning on LegalBench, COLIEE, and jurisdiction-specific tasks.
+
+## Steps
+
+1. Ingest and parse legal documents (contracts, briefs, statutes, case law) into structured, retrievable chunks.
+2. Build or fine-tune a legal-domain embedding or language model for classification, extraction, and summarization.
+3. Implement retrieval over authoritative sources (case law, statutes, firm knowledge bases) with citation tracking.
+4. Run contract review by comparing clauses to a playbook and scoring risk or missing provisions.
+5. Generate research memos or answers that include verified citations and flag outdated or overruled authorities.
+6. Validate outputs with legal experts, measure accuracy against annotations, and maintain auditability.
 
 ## Code pattern
 
@@ -436,19 +520,28 @@ result = qa(question="What is the governing law?", context=contract_text)
     {
         "name": "ai-for-arts-humanities",
         "title": "AI for Arts and Humanities",
-        "description": "Digital humanities, text analysis, image restoration, and creative AI for cultural heritage.",
+        "description": "Use machine learning to transcribe, restore, analyze, and enrich cultural heritage and humanities collections.",
         "devin_body": r'''
 ## When to use
 
 You are applying ML to literature, history, art, archives, or cultural heritage collections.
 
-## Key concepts
+## Usage
 
-- **Textual analysis**: stylometry, topic modeling, named entity recognition.
-- **OCR and handwriting**: transcribe historical documents.
-- **Image restoration and colorization**: repair and enhance artworks.
-- **Multimodal collections**: align text, images, audio, and metadata.
-- **Ethics and provenance**: respect copyright, indigenous data sovereignty.
+- Transcribe printed and handwritten historical documents with OCR/HTR and LLM post-correction.
+- Restore, colorize, and enhance degraded images, artworks, and photographs.
+- Analyze text corpora with stylometry, topic modeling, named-entity recognition, and sentiment analysis.
+- Link and align multimodal collections (text, images, audio, metadata) for searchable digital archives.
+- Address ethics, provenance, copyright, and indigenous data sovereignty in digital humanities projects.
+
+## Steps
+
+1. Digitize and preprocess source material (scans, photos, audio, metadata) for quality and consistency.
+2. Train or apply OCR/HTR and image restoration models adapted to historical fonts, layouts, and degradation.
+3. Extract named entities, topics, and stylistic patterns from transcribed texts.
+4. Build multimodal indexes that link images, transcriptions, audio, and contextual metadata.
+5. Enrich records with crowdsourced or expert annotations and reconcile errors through human-in-the-loop review.
+6. Publish or archive the corpus with clear provenance, rights metadata, and access controls.
 
 ## Code pattern
 
@@ -482,19 +575,28 @@ print(text)
     {
         "name": "ai-for-music",
         "title": "AI for Music",
-        "description": "Music generation, transcription, recommendation, and audio processing with deep learning.",
+        "description": "Use deep learning to generate music, transcribe audio, recommend tracks, and process audio signals.",
         "devin_body": r'''
 ## When to use
 
 You are generating music, transcribing audio, or building music recommendation systems.
 
-## Key concepts
+## Usage
 
-- **Symbolic music models**: transformers on MIDI, ABC notation, or piano roll.
-- **Audio generation**: diffusion, VAE, GAN, and autoregressive models.
-- **Source separation**: isolate vocals, drums, bass, etc.
-- **Music information retrieval**: beat tracking, key detection, genre classification.
-- **Copyright**: be aware of training data and output ownership.
+- Generate symbolic music (MIDI, ABC) or audio from text, style, or melodic prompts with transformer, diffusion, or GAN models.
+- Transcribe melodies, chords, beats, and instruments from audio into symbolic notation.
+- Recommend tracks and playlists from listening history, natural-language prompts, and catalog embeddings.
+- Separate and process audio sources (vocals, drums, bass, other) with dedicated models.
+- Track provenance and rights for AI-generated or assisted music before distribution.
+
+## Steps
+
+1. Curate audio or symbolic datasets and define the creative or analytical goal (generation, transcription, recommendation).
+2. Train or select a model (transformer, diffusion, VAE, GAN, or MIR classifier) for the target task.
+3. Generate, transcribe, classify, or separate audio and post-process for quality and style consistency.
+4. Evaluate outputs against ground-truth labels, reference tracks, or perceptual listening tests.
+5. Handle rights, provenance, and AI-disclosure metadata before publishing or distribution.
+6. Iterate on prompts, conditioning, and model size to improve coherence, fidelity, and user satisfaction.
 
 ## Code pattern
 
@@ -529,19 +631,28 @@ audio = model.generate(**inputs, max_new_tokens=512)
     {
         "name": "ai-for-psychiatry-mental-health",
         "title": "AI for Psychiatry and Mental Health",
-        "description": "Machine learning for digital phenotyping, diagnostic support, treatment prediction, and crisis detection.",
+        "description": "Use machine learning and sensing to support mental-health monitoring, diagnostic decision support, treatment prediction, and crisis detection.",
         "devin_body": r'''
 ## When to use
 
 You are building models to support mental health diagnosis, monitoring, or personalized intervention.
 
-## Key concepts
+## Usage
 
-- **Digital phenotyping**: behavior signals from phones, wearables, or speech.
-- **Crisis detection**: identify self-harm or suicidal ideation in text.
-- **Treatment response prediction**: predict outcomes for therapy or medications.
-- **Privacy and ethics**: mental health data is highly sensitive.
-- **Clinical validation**: models must be evaluated with clinical experts.
+- Detect symptom changes and crisis risk from smartphone, wearable, speech, text, and EHR signals.
+- Predict treatment response to medications or therapy from clinical notes and structured data.
+- Augment clinical decision support and documentation while preserving clinician oversight.
+- Build conversational and digital therapeutic agents that deliver CBT, skills training, and triage.
+- Evaluate safety, bias, privacy, and regulatory compliance before deployment in clinical settings.
+
+## Steps
+
+1. Collect and harmonize multimodal data (wearables, app usage, audio, EHR, clinical notes) with consent and governance.
+2. Engineer behavioral and clinical features that capture symptom trajectories, sleep, activity, and mood.
+3. Train classifiers or survival models to predict diagnosis, treatment response, or imminent crisis.
+4. Integrate model outputs into clinician-facing dashboards or decision-support tools with human oversight.
+5. Validate predictions against clinical expert judgment, structured outcomes, and representative populations.
+6. Monitor for algorithmic bias, privacy breaches, and safety events; iterate under regulatory and ethical review.
 
 ## Code pattern
 

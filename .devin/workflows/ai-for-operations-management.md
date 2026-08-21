@@ -1,6 +1,6 @@
 # /ai-for-operations-management
 
-Process mining, service-level optimization, quality control, and AI-driven operational decision support.
+Use AI to optimize business processes, improve service levels, monitor quality, or augmenting operational decisions with data and AI.
 
 ## Trigger
 

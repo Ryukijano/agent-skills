@@ -2,19 +2,26 @@
 
 ## Description
 
-AI-generated and AI-assisted podcast production, including scriptwriting, voice synthesis, editing, transcription, and show notes.
+Automate transcripts, show notes and chapter markers to speed podcast production and improve accessibility.
 
 ## When to use
 
 You are producing podcasts: planning, scripting, recording, editing, and distributing, where AI can speed up production or enable synthetic hosts.
 
-## Key concepts
+## Usage
 
-- **Script and outline generation**: episode structures, interview questions, hooks, and summaries.
-- **Voice synthesis and cloning**: TTS, multi-speaker conversation, and zero-shot voice.
-- **Audio editing and enhancement**: noise removal, auto-leveling, and filler-word removal.
-- **Transcription and show notes**: ASR, speaker diarization, and chapter markers.
-- **Ethics and disclosure**: synthetic-voice labels, consent, and copyright.
+- Generate episode outlines, interview questions, and hooks.
+- Synthesize or clone voices for hosts and guests with disclosure.
+- Edit audio with noise removal, auto-leveling, and filler-word removal.
+- Transcribe, diarize speakers, and generate show notes and chapter markers.
+
+## Steps
+
+1. Plan the episode theme, structure, and guest questions.
+2. Record or synthesize audio and label any synthetic voices.
+3. Transcribe and diarize the recording with an ASR pipeline.
+4. Edit for noise, levels, and filler words, then generate show notes.
+5. Verify transcription accuracy and listener engagement before publishing.
 
 ## Code pattern
 

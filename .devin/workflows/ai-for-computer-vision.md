@@ -1,6 +1,6 @@
 # /ai-for-computer-vision
 
-Image classification, detection, segmentation, vision-language models, generative vision, and efficient deep learning deployment.
+Use AI for Computer Vision to classify, detect, segment and understand images.
 
 ## Trigger
 

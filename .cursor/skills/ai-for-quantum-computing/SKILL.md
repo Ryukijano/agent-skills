@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for quantum state tomography, variational quantum algorithms, quantum control, and error mitigation.
+Use machine learning to design, optimize, and error-mitigate variational quantum algorithms and quantum control pulses.
 
 ## When to use
 
 You are designing variational circuits, optimizing quantum controls, or mitigating errors in NISQ devices.
 
-## Key concepts
+## Usage
 
-- **Variational Quantum Eigensolver (VQE)**: hybrid quantum-classical optimization.
-- **Quantum Neural Networks**: parameterized circuits as models.
-- **Quantum control with RL/optimization**: pulse shaping and gate design.
-- **Error mitigation**: zero-noise extrapolation, probabilistic error cancellation.
-- **Simulators**: Qiskit, PennyLane, Cirq, cuQuantum.
+- Optimize parameterized quantum circuits (VQE, QAOA) with hybrid quantum-classical loops.
+- Discover high-fidelity, time-optimal control pulses for quantum gates and state preparation.
+- Mitigate hardware noise with learned error models, zero-noise extrapolation, or probabilistic cancellation.
+- Accelerate quantum state tomography and characterization from limited measurements.
+- Benchmark and compare algorithms on simulators (Qiskit, PennyLane, Cirq) and real NISQ hardware.
+
+## Steps
+
+1. Encode the target problem (molecular Hamiltonian, optimization, or control target) into a quantum circuit or pulse ansatz.
+2. Choose a simulator or NISQ backend and define the noise model and device constraints.
+3. Optimize circuit parameters or control pulses with a classical optimizer, using parameter-shift or finite-difference gradients.
+4. Apply error mitigation (ZNE, learned models, or probabilistic cancellation) to reduce noise in expectation values.
+5. Verify results against exact or classically simulable baselines on small problem instances.
+6. Benchmark on real hardware when feasible and iterate the ansatz, control, or mitigation strategy.
 
 ## Code pattern
 

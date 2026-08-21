@@ -2,18 +2,27 @@
 
 ## Description
 
-Goal-aligned course sequencing, personalized learning paths, content alignment, adaptive curricula, and standards mapping.
+Map course content to career skills and learner competencies to recommend personalized, job-relevant learning pathways.
 
 ## When to use
 
 You are designing or adapting courses, modules, or learning pathways to align with learner goals, prior knowledge, and competency standards.
 
-## Key concepts
+## Usage
 
-- **Competency and prerequisite graphs**: model skills and their dependencies.
-- **Learning path planning**: sequence content to optimize mastery and engagement.
-- **Standards alignment**: map learning objectives to curriculum or accreditation frameworks.
-- **Adaptive curricula**: adjust pacing, depth, and examples based on learner data.
+- Map competencies and prerequisite dependencies.
+- Sequence content using learner goals and prior knowledge.
+- Align activities and assessments to standards.
+- Generate differentiated materials for diverse learners.
+
+## Steps
+
+1. Map competencies and prerequisite dependencies.
+2. Sequence content using learner goals and prior knowledge.
+3. Align activities and assessments to standards.
+4. Generate differentiated materials for diverse learners.
+5. Validate the sequence with learning-outcome data and expert review.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

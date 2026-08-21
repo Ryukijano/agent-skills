@@ -2,19 +2,28 @@
 
 ## Description
 
-Plain-language summaries, research storytelling, audience adaptation, and ethical, evidence-based use of generative AI for public-facing science.
+Use generative AI to turn scientific findings into clear, audience-tailored public communications—such as plain-language summaries and multimedia explainers—while preserving accuracy.
 
 ## When to use
 
 You need to translate technical scientific findings into accessible, engaging formats for the public, patients, educators, or policymakers while preserving accuracy.
 
-## Key concepts
+## Usage
 
-- **Plain-language summaries**: rewrite abstracts and papers for non-expert reading levels.
-- **Audience adaptation**: tune tone, length, and examples for patients, teachers, journalists, or legislators.
-- **Narrative and framing**: use story structure, metaphors, and relatable examples without overclaiming.
-- **Multimodal science communication**: combine text, audio, slides, and visuals for broader reach.
-- **Hallucination and fact-checking**: every generated claim must be traceable to the source paper.
+- **Rewrite abstracts and papers into plain-language summaries for non-expert, patient, and public reading levels.**
+- **Tune tone, length, and examples for policymakers, journalists, educators, patients, and social media.**
+- **Use story structure, metaphors, and relatable examples while preserving uncertainty and avoiding overclaiming.**
+- **Combine text, audio, slides, and visuals into accessible, multimodal explainers.**
+- **Make every generated claim traceable to the source paper and disclose AI assistance.**
+
+## Steps
+
+1. Identify the target audience, channel, and reading level for the science message.
+2. Extract and verify key claims, uncertainties, and source evidence from the original paper or dataset.
+3. Generate a plain-language or narrative draft with an LLM prompted for the specific audience and format.
+4. Enrich the draft with analogies, visuals, or multimedia while preserving scientific nuance.
+5. Fact-check every claim against the source, cite evidence, and disclose AI assistance.
+6. Pilot test with a sample audience and refine for comprehension, trust, and accessibility.
 
 ## Code pattern
 

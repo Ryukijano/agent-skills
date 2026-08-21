@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for wireless networks, 5G/6G, network optimization, traffic forecasting, security, and edge intelligence.
+Use AI to optimize 5G and 6G RAN, network slicing, and self-organizing networks.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are designing, optimizing, or operating telecom networks, including RAN, cor
 
 ## Usage
 
-- **Radio access network (RAN) intelligence**: beam management, channel estimation, and resource allocation.
-- **Network slicing and orchestration**: traffic prediction and dynamic slice scaling.
-- **Self-organizing networks (SON)**: auto-configuration, optimization, and healing.
-- **Network security and fraud detection**: anomaly detection and intrusion prevention.
-- **Edge and cloud optimization**: caching, compute offloading, and energy efficiency.
+- Predict RAN congestion and optimize beam management.
+- Automate network slicing and resource allocation with O-RAN.
+- Detect fraud and anomalies in CDRs and traffic.
+- Optimize cell handover and coverage with SON.
+- Model customer churn and QoE from probes and CRM.
 
 ## Steps
 
-1. Collect RAN/core/edge/transport KPIs, traffic traces, and alarm logs.
-2. Engineer temporal, spatial, and graph features for network state.
-3. Train a forecasting, optimization, or anomaly model.
-4. Validate in a network simulator or with A/B testing on live traffic.
-5. Monitor SLA compliance and retrain for new services and topologies.
+1. Collect CDR, PM/FM, and geospatial network data.
+2. Engineer KPI and traffic features across cells and slices.
+3. Train forecasting, classification, or RL models.
+4. Deploy via O-RAN RIC xApps or AIOps platforms.
+5. Validate with network KPIs and drive-test data.
 
 ## Code pattern
 

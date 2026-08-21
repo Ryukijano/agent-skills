@@ -1,6 +1,6 @@
 # /ai-for-operations-research
 
-Optimization, MILP/CP, vehicle routing and scheduling, decision-focused learning, and learning-augmented heuristics.
+Use AI for Operations Research to formulate and solve mixed-integer, constraint, routing, scheduling and learning-augmented optimization problems.
 
 ## Trigger
 

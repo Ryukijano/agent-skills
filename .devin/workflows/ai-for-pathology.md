@@ -1,6 +1,6 @@
 # /ai-for-pathology
 
-Computational pathology, whole-slide image analysis, cancer subtyping, biomarker discovery, and vision-language models for histopathology.
+Use AI for Pathology to analyze whole-slide images, subtype cancer and predict molecular biomarkers.
 
 ## Trigger
 

@@ -2,19 +2,27 @@
 
 ## Description
 
-Remote sensing, land-cover mapping, ecosystem service assessment, and integrated modeling for environmental monitoring and analysis.
+Use remote sensing and integrated modeling to map land cover, monitor ecosystems, and assess environmental change and risk.
 
 ## When to use
 
 You are analyzing environmental systems using satellite, in-situ, or model data and need classification, regression, or change detection.
 
-## Key concepts
+## Usage
 
-- **Land-use/land-cover mapping**: classify satellite or drone imagery into thematic classes.
-- **Ecosystem monitoring**: track vegetation condition, water bodies, snow/ice, and urban expansion.
-- **Environmental fate and exposure**: predict pollutant transport and ecological risk.
-- **Integrated assessment models**: couple physical, ecological, and socio-economic data.
-- **Remote sensing time series**: use multi-temporal indices to detect anomalies and trends.
+- Map land use and land cover from satellite or drone imagery.
+- Monitor vegetation, water bodies, snow/ice, and urban expansion over time.
+- Predict pollutant transport and ecological exposure with integrated models.
+- Detect anomalies and trends from multi-temporal remote-sensing indices.
+
+## Steps
+
+1. Collect satellite, in-situ, and model data; apply atmospheric correction, cloud masking, and spectral indices.
+2. Build time-composited training datasets and define a land-cover or ecosystem-change classification scheme.
+3. Train a classifier (e.g., Random Forest, U-Net) and validate with spatial cross-validation and a reference product.
+4. Compute overall accuracy, kappa, and per-class F1; generate land-cover and change maps.
+5. Run integrated assessment or pollutant-fate models and compare to observations.
+6. Deploy the monitoring pipeline and update maps as new imagery becomes available.
 
 ## Code pattern
 

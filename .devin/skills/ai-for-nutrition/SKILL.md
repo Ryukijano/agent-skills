@@ -2,20 +2,29 @@
 
 ## Description
 
-Machine learning and generative AI for personalized nutrition, dietary assessment, meal planning, food recognition, and nutrition-health modeling.
+Predict personal metabolic responses and automate dietary assessment to deliver personalized nutrition and meal planning.
 
 ## When to use
 
 You are building a personalized diet recommendation system, analyzing food intake, or predicting metabolic response from multi-modal data.
 
-## Key concepts
+## Usage
 
-- **Precision nutrition**: tailoring dietary advice to genetics, microbiome, metabolome, and lifestyle.
-- **Dietary assessment**: food diaries, image-based food logging, automated nutrient estimation.
-- **Food effect prediction**: postprandial glucose, insulin, and metabolite response.
-- **Meal planning**: constraint optimization over nutrients, preferences, and costs.
-- **Compositional data**: macronutrient ratios sum to 100%; use log-ratios or Dirichlet models.
-- **Bias and equity**: cultural, socioeconomic, and access factors affect recommendations.
+- **Postprandial response prediction**: predict personal glucose, insulin, or metabolite responses from meals and participant features.
+- **Image-based dietary assessment**: recognize foods and estimate portions/nutrients from photos using computer vision or multimodal LLMs.
+- **Personalized meal planning**: optimize menus against nutrient targets, preferences, costs, and health constraints.
+- **Diet-health modeling**: link dietary intake, microbiome, metabolome, and clinical outcomes.
+- **Compositional-data handling**: respect macronutrient sum-to-one with log-ratios or Dirichlet models.
+- **Equity-aware recommendations**: account for cultural, socioeconomic, and access factors in advice.
+
+## Steps
+
+1. Collect multimodal input (food logs/images, CGM, anthropometrics, microbiome, blood markers).
+2. Standardize and clean dietary data: meal timing, portion estimation, and macronutrient content.
+3. Train a personalized PPGR or nutrient model with per-user features and cross-validation.
+4. Generate personalized meal or diet recommendations by ranking predicted metabolic responses.
+5. Validate predictions against continuous glucose monitoring, doubly labeled water, or clinical biomarkers.
+6. Run a dietary intervention trial and compare glycemic/metabolic outcomes to standard advice.
 
 ## Code pattern
 

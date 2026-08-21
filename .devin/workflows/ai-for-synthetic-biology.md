@@ -1,6 +1,6 @@
 # /ai-for-synthetic-biology
 
-Machine learning for genetic circuit design, promoter and RBS optimization, metabolic pathway engineering, and closed-loop Design-Build-Test-Learn biofoundry pipelines.
+AI accelerates closed-loop Design-Build-Test-Learn cycles by predicting and optimizing genetic parts, pathways, and strains before they are built.
 
 ## Trigger
 

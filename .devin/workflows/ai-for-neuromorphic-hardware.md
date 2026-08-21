@@ -1,6 +1,6 @@
 # /ai-for-neuromorphic-hardware
 
-Spiking neural network training, SNN-to-chip mapping, event-based processing, and co-design with analog/mixed-signal neuromorphic platforms.
+Use machine learning to train spiking neural networks and map them to neuromorphic chips such as Loihi and SpiNNaker.
 
 ## Trigger
 

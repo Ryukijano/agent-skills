@@ -1,6 +1,6 @@
 # /ai-for-edge-accelerators
 
-NPU/TPU/FPGA edge accelerator design, benchmarking, mapping, and optimization for low-latency, energy-efficient inference.
+Compile and deploy tiny language models and vision detectors onto RISC-V microcontrollers and NPUs for milliwatt inference.
 
 ## Trigger
 

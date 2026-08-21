@@ -2,18 +2,26 @@
 
 ## Description
 
-Computational imaging, lens design, wavefront shaping, optical metrology, and inverse scattering with deep learning.
+Use deep learning to reconstruct images, retrieve phase, design optical elements, and solve inverse scattering problems in computational imaging.
 
 ## When to use
 
 You are reconstructing images from indirect optical measurements, designing phase masks, or calibrating complex optical systems.
 
-## Key concepts
+## Usage
 
-- **Inverse problems**: image reconstruction from undersampled or coded measurements.
-- **Wave propagation**: Fourier optics, diffraction, and point-spread functions.
-- **Coded apertures and phase masks**: jointly optimizing hardware and algorithms.
-- **Phase retrieval**: recovering phase from intensity measurements.
+- Reconstruct images from undersampled, coded, or indirect optical measurements.
+- Retrieve phase from intensity-only measurements in microscopy and astronomy.
+- Co-design phase masks, coded apertures, and metalenses with reconstruction networks.
+- Deconvolve images from measured point-spread functions and aberrations.
+
+## Steps
+
+1. Formulate the physical forward model (PSF, diffraction, or scattering operator).
+2. Acquire paired measurements and ground truth, or use self-supervised/physics-informed training.
+3. Train an inversion network or optimize an optical element end-to-end.
+4. Validate on realistic noise, aberrations, and sensor nonlinearities.
+5. Compare reconstruction quality to classical methods such as Gerchberg-Saxton or deconvolution.
 
 ## Code pattern
 

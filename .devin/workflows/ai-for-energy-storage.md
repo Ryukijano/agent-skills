@@ -1,6 +1,6 @@
 # /ai-for-energy-storage
 
-Machine learning for battery state estimation, degradation modeling, storage dispatch, and energy storage asset optimization.
+Estimates battery state-of-health, predicts remaining useful life, and optimizes charge schedules for stationary and mobile storage.
 
 ## Trigger
 

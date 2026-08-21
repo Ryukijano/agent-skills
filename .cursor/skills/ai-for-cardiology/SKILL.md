@@ -2,19 +2,30 @@
 
 ## Description
 
-ECG interpretation, arrhythmia detection, heart failure screening, echocardiography analysis, and cardiovascular risk stratification with deep learning.
+Use AI for Cardiology to interpret ECGs, detect arrhythmias and predict heart failure risk.
 
 ## When to use
 
 You are interpreting ECGs, detecting arrhythmias, predicting heart failure or ejection fraction, or integrating wearables into cardiovascular care.
 
-## Key concepts
 
-- **ECG signal processing**: filtering, baseline wander removal, R-peak detection, and resampling to a standard rate.
-- **Arrhythmia detection**: atrial fibrillation, flutter, premature ventricular contractions, and blocks.
+## Usage
+
+
+- **ECG signal processing**: Filtering, baseline wander removal, R-peak detection, and resampling to a standard rate.
+- **Arrhythmia detection**: Atrial fibrillation, flutter, premature ventricular contractions, and blocks.
 - **Convolutional and 1D networks for 12-lead ECG classification**.
-- **AI-enabled ECG**: detect low ejection fraction or prior AF even during sinus rhythm.
-- **Holter and wearable monitoring**: long-term, low-fidelity single-lead data.
+- **AI-enabled ECG**: Detect low ejection fraction or prior AF even during sinus rhythm.
+- **Holter and wearable monitoring**: Long-term, low-fidelity single-lead data.
+
+## Steps
+
+1. Collect and prepare 12-lead ECGs, Holter recordings and clinical labels.
+2. Interpret ECGs.
+3. Detect arrhythmias.
+4. Predict heart failure or ejection fraction.
+5. Validate by training an atrial fibrillation classifier and report F1 on an external test set.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -37,12 +48,14 @@ model = nn.Sequential(
 )
 ```
 
+
 ## Tuning notes
 
 - Standardize sampling rate (e.g., 500 Hz) and lead order across datasets.
 - Use patient-level or time-based splits to avoid leakage.
 - Align with AAMI/ESC annotation standards.
 - Calibrate scores and integrate with clinical workflows (EMR, ECG carts).
+
 
 ## Verification
 

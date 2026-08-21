@@ -2,19 +2,28 @@
 
 ## Description
 
-Anticipatory governance, ethical deliberation, stakeholder engagement, regulatory foresight, and impact assessment for emerging AI technologies.
+Use anticipatory governance, stakeholder engagement, and impact assessment to steer emerging AI technologies responsibly.
 
 ## When to use
 
 You are developing or steering a novel AI technology and want to anticipate social, ethical, and regulatory impacts early and embed responsible practices into R&D.
 
-## Key concepts
+## Usage
 
-- **Anticipatory governance**: foresight, horizon scanning, and scenario planning for emerging technologies.
-- **Responsible research and innovation (RRI)**: inclusivity, anticipation, reflexivity, and responsiveness.
-- **Stakeholder and public engagement**: deliberative forums, citizen juries, and participatory design.
-- **Regulatory foresight and sandboxes**: adaptive governance, experimentation, and learning.
-- **Impact assessment**: societal, environmental, and human-rights impact analysis.
+- Conduct foresight, horizon scanning, and scenario planning.
+- Apply responsible research and innovation principles (inclusivity, anticipation, reflexivity, responsiveness).
+- Engage the public and stakeholders through deliberative forums and co-design.
+- Run regulatory sandboxes and adaptive governance experiments.
+- Assess societal, environmental, and human-rights impacts.
+
+## Steps
+
+1. Identify the emerging technology and its possible societal implications.
+2. Run horizon scanning and develop scenarios with diverse stakeholders.
+3. Map stakeholders, risks, and responsible-innovation actions.
+4. Design a sandbox, pilot, or stakeholder deliberation to test assumptions.
+5. Evaluate impacts and document trade-offs and uncertainties.
+6. Iterate governance and R&D as impacts become clearer.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-iot
 
-TinyML, edge AI, anomaly detection, device fingerprinting, and predictive maintenance for IoT systems.
+Deploy TinyML and edge AI for monitoring, prediction, and control in IoT systems.
 
 ## Trigger
 

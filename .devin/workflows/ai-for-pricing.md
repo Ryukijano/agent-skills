@@ -1,6 +1,6 @@
 # /ai-for-pricing
 
-Price elasticity, dynamic and personalized pricing, revenue management, promotion optimization, and causal demand forecasting for pricing.
+Use AI for Pricing to estimate elasticity, set dynamic prices, manage revenue and optimize promotions.
 
 ## Trigger
 

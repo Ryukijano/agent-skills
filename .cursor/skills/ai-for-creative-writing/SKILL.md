@@ -2,19 +2,26 @@
 
 ## Description
 
-Co-writing novels, screenplays, and long-form fiction with LLMs, prompt engineering for voice and style, and human-AI revision workflows.
+Use large language models to co-write fiction and long-form prose, brainstorm outlines, calibrate voice, and run human-AI revision workflows.
 
 ## When to use
 
 You are drafting fiction, scripts, or long-form prose and want an AI collaborator for ideation, continuation, style calibration, and revision.
 
-## Key concepts
+## Usage
 
-- **Human-AI co-writing**: treat the LLM as a brainstorming partner, outline generator, first-drafter, or revision assistant.
-- **Voice and style control**: use few-shot examples, persona prompts, tone descriptors, and style guides to keep output on-brand.
-- **Long-context planning**: maintain coherence across chapters or scenes with outlines, character sheets, and worldbuilding bibles.
-- **Retrieval and memory**: use vector stores or note systems to ground the model in characters, settings, and prior events.
-- **Bias and safety**: audit for stereotypes, toxicity, and hallucinations; respect copyright and cultural context.
+- Brainstorm premises, outlines, and character sheets for novels and scripts.
+- Generate first drafts and continuations in a controlled voice and style.
+- Use few-shot examples and style guides to keep output on-brand.
+- Audit generated prose for stereotypes, toxicity, and hallucinations.
+
+## Steps
+
+1. Define the genre, audience, and style guide for the project.
+2. Create an outline, character sheet, and world bible to maintain long-context coherence.
+3. Generate scenes with structured prompts and a calibrated temperature.
+4. Review and rewrite with a human-in-the-loop, checking voice consistency.
+5. Run a toxicity, bias, and fact-check audit before finalizing the draft.
 
 ## Code pattern
 

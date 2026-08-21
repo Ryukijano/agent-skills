@@ -2,18 +2,29 @@
 
 ## Description
 
-Customer segmentation, personalization, propensity modeling, marketing-mix attribution, and generative AI for content and campaigns.
+Use AI for Marketing to segment customers, personalize messages, attribute marketing impact and generate creative.
 
 ## When to use
 
 You need to target customers more precisely, personalize messages, allocate marketing budget, or measure campaign effectiveness.
 
-## Key concepts
+
+## Usage
+
 
 - **Customer segmentation**: RFM, clustering, and behavioral segmentation to identify actionable personas.
-- **Propensity and uplift modeling**: predict likelihood to buy or respond to a treatment; target those most persuadable.
-- **Marketing attribution**: assign credit across touchpoints using rule-based, data-driven, or causal methods.
+- **Propensity and uplift modeling**: Predict likelihood to buy or respond to a treatment; target those most persuadable.
+- **Marketing attribution**: Assign credit across touchpoints using rule-based, data-driven, or causal methods.
 - **Generative AI for creative**: LLMs and diffusion models for copy, images, and dynamic creative assembly.
+
+## Steps
+
+1. Collect and prepare customer, transaction and campaign touchpoint data.
+2. Target customers more precisely.
+3. Personalize messages.
+4. Allocate marketing budget.
+5. Validate by comparing a clustering-based segment to a rule-based baseline in an A/B test.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -29,11 +40,13 @@ clusters = KMeans(n_clusters=4, random_state=42, n_init="auto").fit_predict(X_sc
 df["segment"] = clusters
 ```
 
+
 ## Tuning notes
 
 - Segmentations are only useful if they are stable and lead to differentiated actions.
 - Uplift models need randomized holdouts to validate true incremental impact.
 - Use causal or doubly robust estimators for attribution, especially with sequential data.
+
 
 ## Verification
 

@@ -1,6 +1,6 @@
 # /ai-for-electric-vehicles
 
-Machine learning for battery management, range and energy consumption prediction, predictive maintenance, and EV powertrain optimization.
+Predicts remaining range and energy consumption while estimating battery state-of-health from onboard CAN and telemetry data.
 
 ## Trigger
 

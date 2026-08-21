@@ -1,6 +1,6 @@
 # /ai-for-recommendation-systems
 
-Collaborative filtering, content-based and hybrid recommendation, sequence models, and multi-objective ranking for commerce and content.
+Use AI for Recommendation Systems to rank products and content with collaborative, content and sequential models.
 
 ## Trigger
 

@@ -2,19 +2,30 @@
 
 ## Description
 
-Natural interaction, intent recognition, multimodal input, foveated rendering, virtual agents, and AI-driven content creation for VR.
+Use AI for Virtual Reality to recognize intent, render foveated scenes and populate virtual agents.
 
 ## When to use
 
 You are building immersive VR experiences that need gesture, gaze, voice, or intent-driven interaction, or AI-generated virtual worlds.
 
-## Key concepts
 
-- **Multimodal interaction**: combine hand tracking, eye tracking, and speech.
-- **Intent recognition**: map low-level input streams to high-level user goals.
-- **Foveated and gaze-contingent rendering**: optimize quality at the fixation point.
+## Usage
+
+
+- **Multimodal interaction**: Combine hand tracking, eye tracking, and speech.
+- **Intent recognition**: Map low-level input streams to high-level user goals.
+- **Foveated and gaze-contingent rendering**: Optimize quality at the fixation point.
 - **Virtual agents and avatars**: LLM-driven embodied characters in VR.
-- **AI-assisted 3D scene editing**: natural language or sketch-based scene manipulation.
+- **AI-assisted 3D scene editing**: Natural language or sketch-based scene manipulation.
+
+## Steps
+
+1. Collect and prepare hand, gaze, voice and scene data.
+2. Build immersive VR experiences that need gesture.
+3. Gaze.
+4. Voice.
+5. Validate by building a classifier that maps speech to VR actions and report accuracy.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -32,12 +43,14 @@ result = classifier(
 )
 ```
 
+
 ## Tuning notes
 
 - Calibrate trackers to each user and environment.
 - Reduce latency for real-time interaction; prefer on-device inference.
 - Use gaze plus hand fusion to resolve ambiguous commands.
 - Test usability with target user groups in head-mounted displays.
+
 
 ## Verification
 

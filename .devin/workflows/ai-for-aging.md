@@ -1,6 +1,6 @@
 # /ai-for-aging
 
-Machine learning for geriatric health monitoring, aging-in-place, fall prevention, cognitive and social support, and age-friendly AI design.
+Use machine learning to support older adults with health monitoring, fall prevention, cognitive and social support, and age-friendly design.
 
 ## Trigger
 

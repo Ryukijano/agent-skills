@@ -1,6 +1,6 @@
 # /ai-for-oil-and-gas
 
-AI for seismic interpretation, reservoir characterization, production forecasting, and predictive maintenance in energy operations.
+Use AI for Oil and Gas to interpret seismic and well logs, characterize reservoirs and forecast production.
 
 ## Trigger
 

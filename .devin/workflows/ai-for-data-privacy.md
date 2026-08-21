@@ -1,6 +1,6 @@
 # /ai-for-data-privacy
 
-Differential privacy, federated learning, homomorphic encryption, PETs, and privacy-preserving ML for sensitive data.
+Protect sensitive data using differential privacy, anonymization, and federated learning.
 
 ## Trigger
 

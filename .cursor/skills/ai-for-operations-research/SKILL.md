@@ -2,18 +2,29 @@
 
 ## Description
 
-Optimization, MILP/CP, vehicle routing and scheduling, decision-focused learning, and learning-augmented heuristics.
+Use AI for Operations Research to formulate and solve mixed-integer, constraint, routing, scheduling and learning-augmented optimization problems.
 
 ## When to use
 
 You need to make optimal or near-optimal decisions under constraints for routing, scheduling, resource allocation, or network design.
 
-## Key concepts
+
+## Usage
+
 
 - **Mathematical programming**: LP, MILP, and constraint programming for feasibility and optimality.
-- **Combinatorial optimization augmented ML**: embed optimization oracles inside learning pipelines.
+- **Combinatorial optimization augmented ML**: Embed optimization oracles inside learning pipelines.
 - **Learning for routing and scheduling**: GNNs and reinforcement learning to learn heuristics for TSP/VRP/job shop.
-- **Decision-focused learning**: train models with losses that account for downstream optimization costs.
+- **Decision-focused learning**: Train models with losses that account for downstream optimization costs.
+
+## Steps
+
+1. Collect and prepare optimization problem data, constraints and objectives.
+2. Make optimal or near-optimal decisions under constraints for routing.
+3. Schedule.
+4. Resource allocation.
+5. Validate by solving a small MILP and compare the objective to a greedy baseline.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -32,11 +43,13 @@ print(solver.Objective().Value())
 print(x.solution_value(), y.solution_value())
 ```
 
+
 ## Tuning notes
 
 - Choose exact solvers when problem size permits; otherwise use metaheuristics or learned heuristics.
 - In decision-focused learning, backpropagate through the optimization layer with care.
 - Validate learned policies against strong OR baselines (e.g., LKH, CP-SAT).
+
 
 ## Verification
 

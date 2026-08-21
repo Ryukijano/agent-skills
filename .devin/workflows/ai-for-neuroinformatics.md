@@ -1,6 +1,6 @@
 # /ai-for-neuroinformatics
 
-Data science for brain imaging, neural signals, connectomics, and computational neuroscience workflows.
+Synthesize high-resolution fMRI activity from EEG and unify multimodal neural signals to study brain dynamics across datasets.
 
 ## Trigger
 

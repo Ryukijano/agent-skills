@@ -2,19 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-geology",
         "title": "AI for Geology",
-        "description": "Geologic mapping, mineral prospectivity, geophysical inversion, drill-core imagery, and remote sensing with ML and deep learning.",
+        "description": "Use ML and remote sensing to map lithology, assess mineral prospectivity, run geophysical inversions, and analyze drill-core and geologic data.",
         "devin_body": r'''
 ## When to use
 
 You are working with geologic, geophysical, geochemical, or remote-sensing data and want to map lithology, structures, or mineral potential.
 
-## Key concepts
+## Usage
 
-- **Geologic mapping**: supervised classification of lithology and structural units from multispectral/hyperspectral imagery and DEMs.
-- **Mineral prospectivity mapping (MPM)**: integrate multi-source evidential layers to rank exploration targets.
-- **Geophysical inversion**: ML surrogates and neural operators for fast magnetic, gravity, and EM inversion.
-- **Drill-core imagery**: core logging, fracture detection, and mineral abundance from drill-core photos and XRF scans.
-- **Remote sensing**: satellite and airborne data for alteration mapping and structural interpretation.
+- Classify lithology and structural units from multispectral/hyperspectral imagery and DEMs.
+- Integrate geologic, geochemical, and geophysical layers for mineral prospectivity mapping.
+- Build ML surrogates for fast magnetic, gravity, and electromagnetic geophysical inversion.
+- Log drill-core images, detect fractures, and estimate mineral abundance from photos and XRF scans.
+
+## Steps
+
+1. Co-register geology, geophysics, geochemistry, and remote-sensing rasters to a common CRS and resolution.
+2. Build a lithology/alteration classifier from satellite or airborne imagery and validate with field observations.
+3. Generate multi-source evidential layers and rank mineral prospectivity with a weighted or ML-based model.
+4. Train a neural operator or surrogate for geophysical inversion and compare predicted fields to forward models.
+5. Process drill-core imagery and XRF data to log lithology, detect fractures, and estimate mineral abundance.
+6. Produce GIS-ready maps and integrate them into exploration targeting and geologic interpretation workflows.
 
 ## Code pattern
 
@@ -57,19 +65,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-mineralogy",
         "title": "AI for Mineralogy",
-        "description": "XRD, SEM-EDS, Raman, and hyperspectral imaging for automated mineral identification, classification, and segmentation.",
+        "description": "Identify and quantify mineral phases from powder XRD patterns in near real time to automate geological and recycling workflows.",
         "devin_body": r'''
 ## When to use
 
 You need to identify, classify, or segment minerals from spectroscopic, diffraction, or image data.
 
-## Key concepts
+## Usage
 
-- **XRD phase identification**: classify powder diffraction patterns into mineral assemblages.
-- **SEM-EDS and microanalysis**: segment grains and classify mineral phases from elemental maps.
-- **Raman and hyperspectral spectroscopy**: identify minerals from spectral signatures.
-- **Mineral segmentation**: separate mineral grains in thin-section or drill-core imagery.
-- **Spectral libraries**: use reference libraries such as RRUFF for training and validation.
+- Identify mineral phases from XRD powder patterns and compare against reference libraries.
+- Segment grains and classify mineral phases from SEM-EDS elemental maps and images.
+- Classify minerals from Raman and hyperspectral signatures.
+- Separate mineral grains in thin-section or drill-core imagery.
+
+## Steps
+
+1. Collect XRD, Raman, SEM-EDS, hyperspectral, or image data and normalize/background-correct spectra.
+2. Augment data with shifts, scaling, and noise and compare CNNs against spectral-angle mapping and traditional methods.
+3. Train a mineral classifier and validate against expert labels and reference libraries (e.g., RRUFF, XRD-AutoAnalyzer).
+4. Segment mineral grains in images and compute mask IoU against hand-labeled masks.
+5. Interpret predictions with attention maps or SHAP to identify diagnostic peaks or elemental features.
+6. Integrate the pipeline into a core-logging or thin-section analysis workflow and update with new standards.
 
 ## Code pattern
 
@@ -117,19 +133,27 @@ model = MineralCNN1D(num_classes=20)
     {
         "name": "ai-for-paleontology",
         "title": "AI for Paleontology",
-        "description": "Automated fossil identification, morphometric analysis, 3D segmentation, and taxonomic classification from images and point clouds.",
+        "description": "Segment fossil CT volumes with minimal annotated data to extract fragile 3D anatomy and accelerate taxonomic study.",
         "devin_body": r'''
 ## When to use
 
 You are analyzing fossil images, CT scans, or 3D models and want to speed up identification, segmentation, or morphological quantification.
 
-## Key concepts
+## Usage
 
-- **Fossil image classification**: deep learning for taxonomic identification of macro- and microfossils.
-- **3D segmentation**: segment bone, shell, or tooth structures from CT or photogrammetry meshes.
-- **Morphometrics**: landmark-free geometric morphometrics from segmented shapes.
-- **Paleoecological inference**: predict habitat, diet, or climate from fossil morphology.
-- **Citizen-science and dark data**: leverage web-crawled and museum images to build training sets.
+- Classify macro- and microfossil images with deep learning for taxonomic identification.
+- Segment bone, shell, or tooth structures from CT or photogrammetry meshes.
+- Extract landmark-free geometric morphometrics from segmented shapes.
+- Infer habitat, diet, or climate from fossil morphology.
+
+## Steps
+
+1. Gather fossil images, CT scans, or 3D models from museums, publications, or field collections.
+2. Preprocess images and use ImageNet or domain pretraining to fine-tune a fossil classifier.
+3. Segment 3D specimens with strong augmentation and validate per-clade accuracy with taxonomists.
+4. Extract morphometric measurements from segmentations and compare to manual landmarks.
+5. Build models that link morphology to paleoecological variables (habitat, diet, climate).
+6. Apply XAI to highlight diagnostic morphological features and publish validated datasets.
 
 ## Code pattern
 
@@ -171,19 +195,27 @@ transform = transforms.Compose([
     {
         "name": "ai-for-ecology",
         "title": "AI for Ecology",
-        "description": "Species distribution modeling, habitat suitability, biodiversity monitoring, and ecological forecasting using ML and remote sensing.",
+        "description": "Use ML and remote sensing to model species distributions, map habitat suitability, monitor biodiversity, and forecast ecological change.",
         "devin_body": r'''
 ## When to use
 
 You are modeling species distributions, predicting biodiversity, or analyzing ecological communities across space and time.
 
-## Key concepts
+## Usage
 
-- **Species distribution models (SDMs)**: correlate occurrence or abundance with environmental covariates.
-- **Habitat suitability**: estimate the probability of species presence under current and future conditions.
-- **Acoustic and camera-trap monitoring**: automate detection and classification of vocalizations and images.
-- **Occupancy and abundance models**: hierarchical models for imperfect detection.
-- **Ecological forecasting**: predict phenology, migrations, and ecosystem state changes.
+- Correlate species occurrence or abundance with environmental covariates in species distribution models.
+- Map habitat suitability under current and future climate scenarios.
+- Automate acoustic and camera-trap detection and classification.
+- Forecast phenology, migrations, and ecosystem state changes.
+
+## Steps
+
+1. Compile species occurrence, abundance, and environmental covariate data (climate, topography, remote sensing).
+2. Choose background/pseudo-absence points carefully and account for sampling bias.
+3. Train an SDM or habitat-suitability model using spatial cross-validation to avoid optimistic estimates.
+4. Validate against independent survey data and project models within the range of training conditions.
+5. Deploy acoustic/camera-trap classifiers and integrate detections into occupancy or abundance models.
+6. Forecast ecological changes under future scenarios and interpret partial dependence for ecological plausibility.
 
 ## Code pattern
 
@@ -223,19 +255,27 @@ model.fit(X, y)
     {
         "name": "ai-for-environmental-science",
         "title": "AI for Environmental Science",
-        "description": "Remote sensing, land-cover mapping, ecosystem service assessment, and integrated modeling for environmental monitoring and analysis.",
+        "description": "Use remote sensing and integrated modeling to map land cover, monitor ecosystems, and assess environmental change and risk.",
         "devin_body": r'''
 ## When to use
 
 You are analyzing environmental systems using satellite, in-situ, or model data and need classification, regression, or change detection.
 
-## Key concepts
+## Usage
 
-- **Land-use/land-cover mapping**: classify satellite or drone imagery into thematic classes.
-- **Ecosystem monitoring**: track vegetation condition, water bodies, snow/ice, and urban expansion.
-- **Environmental fate and exposure**: predict pollutant transport and ecological risk.
-- **Integrated assessment models**: couple physical, ecological, and socio-economic data.
-- **Remote sensing time series**: use multi-temporal indices to detect anomalies and trends.
+- Map land use and land cover from satellite or drone imagery.
+- Monitor vegetation, water bodies, snow/ice, and urban expansion over time.
+- Predict pollutant transport and ecological exposure with integrated models.
+- Detect anomalies and trends from multi-temporal remote-sensing indices.
+
+## Steps
+
+1. Collect satellite, in-situ, and model data; apply atmospheric correction, cloud masking, and spectral indices.
+2. Build time-composited training datasets and define a land-cover or ecosystem-change classification scheme.
+3. Train a classifier (e.g., Random Forest, U-Net) and validate with spatial cross-validation and a reference product.
+4. Compute overall accuracy, kappa, and per-class F1; generate land-cover and change maps.
+5. Run integrated assessment or pollutant-fate models and compare to observations.
+6. Deploy the monitoring pipeline and update maps as new imagery becomes available.
 
 ## Code pattern
 
@@ -275,19 +315,27 @@ clf.fit(X, y)
     {
         "name": "ai-for-wildlife-conservation",
         "title": "AI for Wildlife Conservation",
-        "description": "Camera-trap image classification, acoustic monitoring, animal re-identification, and anti-poaching analytics.",
+        "description": "Use camera-trap and acoustic ML to identify species, re-identify individuals, and detect poaching and habitat threats for wildlife conservation.",
         "devin_body": r'''
 ## When to use
 
 You need to monitor wildlife, automate species identification from images or audio, or detect threats such as poaching and habitat loss.
 
-## Key concepts
+## Usage
 
-- **Camera-trap analytics**: automated detection, species classification, and individual ID.
-- **Acoustic monitoring**: classify animal calls, gunshots, and chainsaw noise in audio recordings.
-- **MegaDetector and open models**: use pre-trained animal/empty/human/vehicle detectors.
-- **Animal re-identification**: match individuals by coat patterns, fin shapes, or facial features.
-- **Conservation planning**: prioritize habitats and corridors using movement and occupancy data.
+- Detect, classify species, and identify individuals from camera-trap images.
+- Classify animal calls, gunshots, and chainsaw noise from audio recordings.
+- Re-identify individuals by coat patterns, fin shapes, or facial features.
+- Prioritize habitats and corridors and detect poaching activity from movement and occupancy data.
+
+## Steps
+
+1. Collect camera-trap or acoustic data and label/curate images or recordings with species and individual IDs.
+2. Fine-tune an object detector (e.g., MegaDetector) to filter empties and localize animals, people, and vehicles.
+3. Train a species classifier and re-identification model, handling severe class imbalance with active learning.
+4. Deploy acoustic classifiers to detect animal calls and anthropogenic threats (gunshots, chainsaws).
+5. Analyze occupancy, movement, and corridor-use patterns to inform conservation planning.
+6. Validate with field experts, push alerts to rangers, and deploy lightweight edge models in low-bandwidth settings.
 
 ## Code pattern
 
@@ -326,19 +374,27 @@ model.classifier[-1] = torch.nn.Linear(
     {
         "name": "ai-for-forestry",
         "title": "AI for Forestry",
-        "description": "Forest inventory, tree segmentation, biomass estimation, and species mapping from remote sensing and LiDAR.",
+        "description": "Use remote sensing and LiDAR to inventory forests, segment trees, estimate biomass, and map species and disturbances.",
         "devin_body": r'''
 ## When to use
 
 You are measuring, mapping, or monitoring forests using field plots, aerial/satellite imagery, or LiDAR point clouds.
 
-## Key concepts
+## Usage
 
-- **Forest inventory**: estimate tree counts, diameter, height, and volume.
-- **Individual tree detection (ITD)**: segment crowns from CHM or point clouds.
-- **LiDAR point clouds**: derive height, canopy density, intensity, and 3D structure metrics.
-- **Above-ground biomass (AGB)**: regress structural metrics against field-measured biomass.
-- **Species and disturbance mapping**: classify forest types, fire, insect, and harvest events.
+- Estimate forest inventory variables (tree counts, DBH, height, volume) from field and remote-sensing data.
+- Detect and segment individual tree crowns from CHM or LiDAR point clouds.
+- Predict above-ground biomass by regressing LiDAR structural metrics against field plots.
+- Classify forest types and disturbance (fire, insects, harvest) from multi-temporal imagery.
+
+## Steps
+
+1. Collect field inventory plots, airborne/satellite imagery, and LiDAR point clouds for the forest area.
+2. Preprocess LiDAR (ground classification, CHM, normalization) and extract structural features per plot.
+3. Train a tree-crown segmentation or detection model and validate counts against field inventory.
+4. Build an AGB regression model using LiDAR metrics and independent field-measured biomass.
+5. Classify forest species and disturbance from spectral/temporal features and validate with aerial photo interpretation.
+6. Map uncertainty, integrate with forest management systems, and update with new acquisitions.
 
 ## Code pattern
 
@@ -377,19 +433,27 @@ rfr.fit(X, y)
     {
         "name": "ai-for-fisheries",
         "title": "AI for Fisheries",
-        "description": "Fish stock assessment, catch forecasting, aquaculture monitoring, eDNA, and IUU fishing detection with ML.",
+        "description": "Detect illegal, unreported, and unregulated fishing by fusing AIS tracks with satellite radar and vessel behavior models.",
         "devin_body": r'''
 ## When to use
 
 You are managing or studying fisheries, aquaculture, or marine ecosystems and need to predict catch, identify species, or detect illegal fishing.
 
-## Key concepts
+## Usage
 
-- **Stock assessment and catch forecasting**: relate catch or abundance to environmental and effort covariates.
-- **eDNA metabarcoding**: detect species from environmental samples using sequencing and ML classifiers.
-- **Acoustic and sonar surveys**: classify echograms and estimate fish biomass.
-- **Aquaculture monitoring**: water quality, feeding, disease, and welfare prediction.
-- **IUU detection**: analyze vessel AIS trajectories and imagery for illegal activity.
+- Forecast catch or abundance from environmental and effort covariates.
+- Detect species from eDNA metabarcoding and sequence-classification workflows.
+- Classify acoustic/sonar echograms and estimate fish biomass.
+- Monitor aquaculture water quality, feeding, disease, and welfare, and detect IUU vessel activity.
+
+## Steps
+
+1. Ingest catch/effort, eDNA, acoustic, AIS, and environmental (SST, chlorophyll, depth) data.
+2. Engineer spatial-temporal features and train a catch/CPUE forecast model, handling zero-inflation and seasonality.
+3. Classify eDNA reads or metabarcoding sequences and compare taxonomic assignments to reference databases.
+4. Process acoustic/sonar data to detect schools and estimate biomass, validating with trawl or visual surveys.
+5. Build aquaculture monitoring models for water quality, feeding, and disease, and detect anomalous vessel trajectories for IUU activity.
+6. Integrate forecasts and detections into fishery management dashboards and compare to surplus-production baselines.
 
 ## Code pattern
 
@@ -428,19 +492,27 @@ model.fit(X, y)
     {
         "name": "ai-for-hydrology",
         "title": "AI for Hydrology",
-        "description": "Rainfall-runoff modeling, streamflow forecasting, flood prediction, and physics-informed deep learning for water systems.",
+        "description": "Use ML and physics-informed models to predict rainfall-runoff, forecast streamflow, predict floods, and build digital twins for water systems.",
         "devin_body": r'''
 ## When to use
 
 You are modeling rainfall-runoff, streamflow, floods, or water quality and want data-driven forecasts or surrogates.
 
-## Key concepts
+## Usage
 
-- **Rainfall-runoff modeling**: predict discharge from precipitation and catchment properties.
-- **Streamflow forecasting**: use LSTM, transformers, or NARX networks for time-series prediction.
-- **Flood prediction**: classify or forecast flood events from meteorological and hydrological inputs.
-- **Physics-informed neural networks (PINNs)**: embed mass and momentum conservation into neural networks.
-- **Digital twins**: integrate real-time sensor data with AI models for operational forecasting.
+- Predict discharge from precipitation and catchment properties.
+- Forecast streamflow with LSTM, transformers, or NARX time-series models.
+- Classify or forecast flood events from meteorological and hydrological inputs.
+- Embed mass and momentum conservation with PINNs and build real-time digital twins of water systems.
+
+## Steps
+
+1. Collect precipitation, streamflow, catchment attributes, and weather data for target basins.
+2. Normalize inputs by catchment area and long-term statistics; engineer lag and sequence features.
+3. Train a rainfall-runoff or streamflow model (LSTM, transformer, NARX) and evaluate with NSE/KGE/bias.
+4. Build a flood-forecasting or classification pipeline and validate on extreme events not seen in training.
+5. Add physics-informed constraints or a digital-twin layer that assimilates real-time sensor data.
+6. Compare with conceptual/physical hydrologic models and deploy the best model for operational forecasting.
 
 ## Code pattern
 
@@ -485,19 +557,27 @@ model = LSTMFlow(input_dim=5, hidden_dim=64, num_layers=2)
     {
         "name": "ai-for-meteorology",
         "title": "AI for Meteorology",
-        "description": "Numerical weather prediction emulators, precipitation nowcasting, extreme-weather detection, and weather foundation models.",
+        "description": "Nowcast extreme precipitation from radar with physics-embedded deep generative models to improve flood and hydropower decisions.",
         "devin_body": r'''
 ## When to use
 
 You need to forecast weather, downscale climate output, nowcast precipitation, or detect extreme-weather events.
 
-## Key concepts
+## Usage
 
-- **Nowcasting**: short-term (<6 h) prediction of precipitation and storms from radar/satellite.
-- **NWP emulators and surrogates**: ML models that emulate or bias-correct numerical weather prediction.
-- **Foundation models**: GraphCast, FourCastNet, Pangu-Weather, FengWu, ClimaX.
-- **Downscaling and bias correction**: super-resolution and statistical adjustment of model output.
-- **Extreme weather detection**: identify tropical cyclones, atmospheric rivers, and convective hazards.
+- Nowcast precipitation and storms (<6 h) from radar and satellite data.
+- Emulate or bias-correct numerical weather prediction (NWP) with fast neural surrogates.
+- Apply weather foundation models (GraphCast, FourCastNet, Pangu-Weather, FengWu, Aurora, ClimaX) for medium-range forecasts.
+- Downscale and bias-correct model output, and detect tropical cyclones, atmospheric rivers, and convective hazards.
+
+## Steps
+
+1. Ingest radar, satellite, NWP, reanalysis, and climate-projection data for the target region and lead time.
+2. Train a precipitation nowcaster (ConvLSTM, diffusion) and compare RMSE/CSI to persistence and NWP baselines.
+3. Fine-tune or run a weather foundation model for deterministic or probabilistic medium-range forecasting.
+4. Downscale and bias-correct model output with super-resolution or statistical adjustment methods.
+5. Detect and track extreme events (cyclones, atmospheric rivers, convective hazards) and compare to labeled databases.
+6. Evaluate with CRPS, CSI, Brier score, and physical-conservation metrics, then deploy operationally with ensemble post-processing.
 
 ## Code pattern
 
@@ -539,19 +619,27 @@ model = ConvLSTMNowcast(in_channels=10, hidden_channels=32)
     {
         "name": "ai-for-soil-science",
         "title": "AI for Soil Science",
-        "description": "Digital soil mapping, pedotransfer functions, spectroscopic prediction, and soil health assessment with ML.",
+        "description": "Use ML to map soil properties, build pedotransfer functions, predict soil carbon from spectra, and assess soil health.",
         "devin_body": r'''
 ## When to use
 
 You are mapping soil properties, predicting soil carbon, or analyzing spectroscopic and legacy soil data.
 
-## Key concepts
+## Usage
 
-- **Digital soil mapping (DSM)**: predict soil classes or properties from environmental covariates using the SCORPAN model.
-- **Pedotransfer functions (PTFs)**: infer hydraulic or mechanical properties from easier-to-measure soil data.
-- **Visible-infrared (VIS-NIR) spectroscopy**: predict organic carbon, texture, and nutrients from spectra.
-- **Soil health indicators**: biological, chemical, and physical proxies of soil function.
-- **Legacy data integration**: harmonize old soil maps and lab records with new observations.
+- Predict soil classes and properties from environmental covariates with digital soil mapping.
+- Infer hydraulic and mechanical properties from easier-to-measure data with pedotransfer functions.
+- Predict organic carbon, texture, and nutrients from visible-infrared (VIS-NIR) spectra.
+- Assess soil health by integrating biological, chemical, and physical indicators.
+
+## Steps
+
+1. Compile legacy soil maps, lab records, and new observations; harmonize units and depths.
+2. Collect environmental covariates (terrain, climate, geology, remote sensing) for the target area.
+3. Standardize spectra, remove water/CO2 absorption bands, and train models to predict SOC, texture, or nutrients.
+4. Build DSM or PTF models using spatial cross-validation and pedological knowledge for plausible predictions.
+5. Map uncertainty and flag extrapolation outside the training covariate space.
+6. Validate against independent lab samples and integrate maps into land-management or carbon-accounting systems.
 
 ## Code pattern
 
@@ -590,19 +678,27 @@ model.fit(X, y)
     {
         "name": "ai-for-pollution",
         "title": "AI for Pollution",
-        "description": "Air, water, and soil pollution monitoring, source apportionment, forecasting, and regulatory compliance with ML.",
+        "description": "Forecast air and water pollutant exceedances from sensor and satellite data to guide regulatory alerts and remediation.",
         "devin_body": r'''
 ## When to use
 
 You need to monitor pollutant concentrations, identify sources, forecast exceedances, or prioritize remediation.
 
-## Key concepts
+## Usage
 
-- **Air quality forecasting**: predict PM2.5, PM10, NO2, O3 from meteorology and emissions data.
-- **Water quality monitoring**: estimate nutrient, heavy metal, and pathogen levels from in-situ and remote-sensing data.
-- **Soil pollution detection**: map contamination from reflectance spectroscopy or multisensor data.
-- **Source apportionment**: attribute pollution to sectors, traffic, industry, or natural sources.
-- **Regulatory compliance**: detect threshold exceedances and support emission-control decisions.
+- Forecast PM2.5, PM10, NO2, O3, and other pollutants from meteorology and emissions data.
+- Estimate nutrient, heavy-metal, and pathogen levels in water from in-situ and remote-sensing data.
+- Map soil contamination from reflectance spectroscopy or multisensor data.
+- Attribute pollution to sources and detect regulatory threshold exceedances.
+
+## Steps
+
+1. Ingest air, water, or soil monitoring data plus meteorology, emissions, traffic, and remote-sensing covariates.
+2. Engineer lag, diurnal, and seasonal features and handle missing sensors with imputation.
+3. Train pollutant-concentration or exceedance-forecasting models and evaluate against persistence and regulatory monitors.
+4. Apply source-apportionment methods or SHAP-based attribution to identify traffic, industry, and natural contributions.
+5. Map soil or water contamination with spectroscopic or multisensor models and validate with lab samples.
+6. Build a decision-support dashboard for exceedance alerts, compliance reporting, and remediation prioritization.
 
 ## Code pattern
 

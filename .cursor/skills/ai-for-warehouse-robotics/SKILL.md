@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for autonomous mobile robots, goods-to-person systems, picking, multi-agent path finding, task allocation, and warehouse traffic management.
+Use machine learning to route mobile robots, allocate tasks, avoid congestion, and manage traffic in goods-to-person warehouses.
 
 ## When to use
 
 You are deploying mobile robots in a warehouse, coordinating fleets, allocating pick/place tasks, or optimizing traffic and throughput.
 
-## Key concepts
+## Usage
 
-- **Multi-Agent Path Finding (MAPF)**: conflict-free routing for large robot fleets in grid-based or graph warehouses.
-- **Task allocation and scheduling**: assignment of orders to robots and stations under deadlines and capacity.
-- **Foundation models for fleet prediction**: traffic prediction, congestion management, and learning-augmented planning.
-- **Perception and manipulation**: barcode scanning, shelf picking, and obstacle detection.
+- Solve conflict-free multi-agent path finding for large robot fleets.
+- Assign orders to robots and stations under deadlines and capacity constraints.
+- Predict traffic and congestion to learn-augment planning.
+- Integrate barcode scanning, shelf picking, and obstacle detection.
+
+## Steps
+
+1. Model the warehouse as a graph or grid with zones, charging, and stations.
+2. Implement a MAPF or task-allocation baseline and a greedy comparator.
+3. Train a congestion-prediction or learning-augmented policy on trajectory data.
+4. Validate throughput and latency in a discrete-event simulator.
+5. Deploy with online replanning for dynamic obstacles and order spikes.
 
 ## Code pattern
 

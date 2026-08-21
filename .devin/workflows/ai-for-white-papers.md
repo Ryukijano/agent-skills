@@ -1,6 +1,6 @@
 # /ai-for-white-papers
 
-Authoring long-form, evidence-based white papers and thought-leadership documents grounded in verified sources.
+Author long-form, evidence-based white papers and thought-leadership documents that define problems, survey evidence and present solutions while establishing credibility.
 
 ## Trigger
 

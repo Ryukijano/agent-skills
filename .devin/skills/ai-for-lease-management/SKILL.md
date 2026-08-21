@@ -2,7 +2,7 @@
 
 ## Description
 
-NLP-based lease abstraction, clause extraction, compliance tracking, and predictive analytics for commercial and residential lease portfolios.
+Abstracts lease terms, extracts clauses, and tracks critical dates for commercial and residential portfolios.
 
 ## When to use
 
@@ -10,16 +10,16 @@ You need to abstract, structure, monitor, and analyze lease contracts at scale a
 
 ## Usage
 
-- **Lease abstraction**: extract key terms, dates, rent, options, and obligations.
+- **Lease abstraction**: extract key terms, dates, rent, options, and obligations from PDFs, Word, and scanned leases.
 - **Clause classification**: identify renewal, termination, escalation, and default clauses.
 - **Compliance and accounting**: feed structured data into IFRS 16 / ASC 842 workflows.
 - **Portfolio analytics**: monitor rent roll, expirations, and option exposures.
 
 ## Steps
 
-1. Collect lease documents (PDFs, Word, scanned) and define an abstraction schema.
+1. Collect lease documents and define an abstraction schema aligned with accounting standards.
 2. Preprocess and OCR documents, segment pages and clauses.
-3. Fine-tune an NER or extractive model on annotated lease data.
+3. Fine-tune an NER or extractive model on annotated lease data or use tools such as ContractHive or LeaseIQ.
 4. Validate extraction against human-reviewed gold data.
 5. Load structured output into CMMS/ERP and analytics dashboards.
 

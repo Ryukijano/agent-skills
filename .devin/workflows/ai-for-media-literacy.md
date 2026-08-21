@@ -1,6 +1,6 @@
 # /ai-for-media-literacy
 
-AI for detecting disinformation, prebunking, source credibility, and teaching critical thinking and digital literacy.
+Use AI for Media Literacy to detect misinformation, prebunk manipulation and teach source credibility.
 
 ## Trigger
 

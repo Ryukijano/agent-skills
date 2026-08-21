@@ -2,19 +2,27 @@
 
 ## Description
 
-AI-enabled clinical decision support, EHR integration, workflow optimization, and evaluation in real-world care settings.
+Integrate sepsis prediction alerts into EHR workflows to flag at-risk patients and guide clinicians toward timely interventions.
 
 ## When to use
 
 You are building, deploying, or evaluating AI tools inside clinical workflows, such as decision support, risk scores, or automated alerts.
 
-## Key concepts
+## Usage
 
-- **Clinical decision support systems (CDSS) and human-AI teaming**: alerts, order sets, and recommendations embedded in the EHR.
-- **EHR integration, FHIR, and interoperability**: deploying models within existing clinical information systems.
-- **Risk prediction, triage, and prognostic models**: early warning, deterioration, and readmission scores.
-- **Implementation science and workflow integration**: adoption, usability, and clinical workflow redesign.
-- **Safety, fairness, and continuous monitoring of clinical AI**: drift, alert fatigue, and health-equity audits.
+- Build and integrate predictive models in the EHR.
+- Deploy FHIR-based decision support and alerts.
+- Predict deterioration, readmission, or triage needs.
+- Redesign workflow and human-AI teaming.
+
+## Steps
+
+1. Build and integrate predictive models in the EHR.
+2. Deploy FHIR-based decision support and alerts.
+3. Predict deterioration, readmission, or triage needs.
+4. Redesign workflow and human-AI teaming.
+5. Monitor drift, alert fatigue, and fairness.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

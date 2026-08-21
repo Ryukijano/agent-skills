@@ -1,6 +1,6 @@
 # /ai-for-heritage-tourism
 
-Recommender systems, itinerary planning, visitor behavior modeling, and personalized cultural heritage experiences for sustainable tourism.
+Use AI to build personalized heritage itineraries, recommend cultural sites, forecast visitor flows, or balance tourism with heritage preservation.
 
 ## Trigger
 

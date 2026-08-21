@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for power systems, smart grids, renewable integration, power electronics, fault diagnosis, and energy management.
+Use AI for power-system forecasting, fault detection, and smart-grid control.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are analyzing or operating power systems, smart grids, renewable plants, or 
 
 ## Usage
 
-- **Fault detection and location**: transient classification and protection schemes.
-- **Load and renewable forecasting**: solar, wind, and demand prediction.
-- **Power quality and stability**: anomaly detection and dynamic security assessment.
-- **Smart grid optimization**: unit commitment, voltage control, and demand response.
-- **Power electronics**: converter health monitoring and control design.
+- Forecast renewable generation and EV load in GridLAB-D or PyPSA.
+- Detect transmission-line faults and power-quality anomalies.
+- Optimize microgrid dispatch and battery scheduling.
+- Automate circuit sizing and PCB design checks.
+- Identify transformer or inverter degradation.
 
 ## Steps
 
-1. Collect PMU, SCADA, AMI, or power-electronics data and label fault/quality events.
-2. Engineer time- and frequency-domain features and respect grid topology.
-3. Train a fault or forecasting model with chronological cross-validation.
-4. Validate against power-flow or digital-twin simulations before deployment.
-5. Monitor for concept drift and renewable/load changes.
+1. Ingest SCADA, AMI, or PMU time series and weather data.
+2. Engineer features for load, generation, and voltage stability.
+3. Train forecasting, classification, or control models.
+4. Integrate with EMS/DMS or digital-twin platforms.
+5. Validate against grid codes and continuously retrain.
 
 ## Code pattern
 

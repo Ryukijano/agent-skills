@@ -2,19 +2,26 @@
 
 ## Description
 
-Ad creative generation, media buying optimization, dynamic creative optimization, and predictive performance modeling.
+Use machine learning to generate ad creatives, optimize media buying, run dynamic creative optimization, and model campaign performance.
 
 ## When to use
 
 You are building ad campaigns across search, social, display, and video; generating and selecting creatives; or optimizing budget allocation.
 
-## Key concepts
+## Usage
 
-- **Dynamic creative optimization (DCO)**: assemble and test copy, image, and video variants.
-- **Predictive creative performance**: CTR/CVR models trained on historical A/B tests.
-- **Audience and contextual targeting**: lookalikes, retargeting, and contextual signals.
-- **Attribution and incrementality**: multi-touch, geo-experiments, and causal lift.
-- **Brand safety and compliance**: ad policies, disclosures, and responsible AI.
+- Assemble and test copy, image, and video variants with dynamic creative optimization.
+- Predict CTR and CVR from creative and audience features.
+- Target lookalikes, retargeting segments, and contextual signals.
+- Measure incrementality with multi-touch, geo, and holdout experiments.
+
+## Steps
+
+1. Define campaign goals, audience, channels, and creative variables.
+2. Structure historical creative and audience features for model training.
+3. Train a CTR/CVR predictor and validate rank correlation on held-out creatives.
+4. Run a DCO or Thompson-sampling experiment against a static baseline.
+5. Measure incremental lift with a geo or randomized holdout and optimize spend.
 
 ## Code pattern
 

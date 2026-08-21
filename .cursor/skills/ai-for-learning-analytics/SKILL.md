@@ -2,19 +2,27 @@
 
 ## Description
 
-Learning management system analysis, learner trajectory modeling, early warning systems, engagement dashboards, and educational data mining.
+Mine LMS logs and assessment traces to predict at-risk students and trigger timely advising interventions.
 
 ## When to use
 
 You want to turn LMS logs, assessment records, and behavioral traces into actionable insight about student progress, risk, and course effectiveness.
 
-## Key concepts
+## Usage
 
-- **Learning analytics cycle**: data capture, analysis, intervention, and reflection.
-- **Clickstream and engagement features**: time-on-task, resource access, forum activity, and submission patterns.
-- **Knowledge tracing**: Deep Knowledge Tracing (DKT) and Bayesian Knowledge Tracing (BKT) to model mastery over time.
-- **Early warning systems**: predictive models that flag at-risk students for timely support.
-- **Fairness and privacy**: protect sensitive student data and audit for subgroup bias.
+- Ingest LMS logs, assessment records, and behavioral traces.
+- Engineer time-on-task, resource access, forum, and submission features.
+- Model mastery trajectories with DKT and BKT.
+- Train at-risk predictors and build an early-warning dashboard.
+
+## Steps
+
+1. Ingest LMS logs, assessment records, and behavioral traces.
+2. Engineer time-on-task, resource access, forum, and submission features.
+3. Model mastery trajectories with DKT and BKT.
+4. Train at-risk predictors and build an early-warning dashboard.
+5. Trigger advisor interventions and audit for subgroup fairness.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

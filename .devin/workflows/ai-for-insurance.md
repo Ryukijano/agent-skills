@@ -1,6 +1,6 @@
 # /ai-for-insurance
 
-Underwriting triage, claims automation, fraud detection, and AI-assisted pricing and reserving.
+Score claims for fraud and triage underwriting by combining image metadata, network linkages, and historical loss patterns.
 
 ## Trigger
 

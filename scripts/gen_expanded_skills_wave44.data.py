@@ -2,26 +2,26 @@ SKILLS = [
     {
         "name": "ai-for-data-governance",
         "title": "AI for Data Governance",
-        "description": "Automated policy enforcement, metadata management, data lineage, stewardship, and AI-driven regulatory compliance for enterprise data governance.",
+        "description": "Build policy, catalog, and lineage-driven governance for trusted data and AI assets.",
         "devin_body": r'''## When to use
 
 You need to define, enforce, and monitor policies, ownership, and lifecycle rules for data assets across an organization.
 
 ## Usage
 
-- **Policy automation**: classify, tag, and enforce retention, access, and quality policies at scale.
-- **Metadata and cataloging**: auto-extract business, technical, and operational metadata.
-- **Lineage and stewardship**: map data ownership and provenance to support accountability.
-- **Compliance and risk**: align with GDPR, CCPA, AI Act, and sector regulations.
-- **Glossary and standards**: maintain consistent definitions, taxonomies, and master data.
+- Map business terms and data assets in Collibra or Informatica.
+- Automate data classification and sensitivity tagging.
+- Define and enforce data and AI policies across clouds.
+- Track lineage from source to AI model in an active catalog.
+- Score data and AI system trust with governance dashboards.
 
 ## Steps
 
-1. Inventory data assets, owners, and critical systems.
-2. Define governance policies, data domains, and quality rules.
-3. Implement automated policy checks and metadata capture.
-4. Build a searchable data catalog with lineage views.
-5. Monitor compliance and audit policy exceptions.
+1. Inventory data, models, and policies across the estate.
+2. Build a business glossary and assign data owners.
+3. Automate classification, lineage, and policy workflows.
+4. Integrate with data quality, privacy, and model-risk tools.
+5. Monitor compliance and update policies as assets evolve.
 
 ## Code pattern
 
@@ -51,36 +51,31 @@ print(json.dumps(policy, indent=2))
 3. Audit a sample of cataloged assets for metadata completeness.
 
 ''',
-        "references": [
-            "https://doi.org/10.1109/access.2024.3476373",
-            "https://doi.org/10.3390/bdcc10010008",
-            "https://doi.org/10.38035/rrj.v8i4.2110",
-            "https://doi.org/10.3390/data10120201",
-        ],
+        "references": ["https://doi.org/10.1109/access.2024.3476373", "https://doi.org/10.3390/bdcc10010008", "https://doi.org/10.38035/rrj.v8i4.2110", "https://doi.org/10.3390/data10120201"],
     },
     {
         "name": "ai-for-data-quality",
         "title": "AI for Data Quality",
-        "description": "Automated profiling, anomaly detection, data cleaning, imputation, validation, and continuous data quality monitoring for ML and analytics.",
+        "description": "Detect and repair data quality issues across pipelines, warehouses, and AI inputs.",
         "devin_body": r'''## When to use
 
 You need to detect, measure, and improve the accuracy, completeness, consistency, and timeliness of datasets used for analytics or ML.
 
 ## Usage
 
-- **Profiling and scoring**: compute quality dimensions across schema, values, and distributions.
-- **Anomaly detection**: use statistical or ML models to flag outliers and drift.
-- **Data cleaning**: auto-correct, impute, or standardize values.
-- **Validation rules**: encode constraints and monitor rule violations.
-- **Drift monitoring**: track data distribution and schema changes over time.
+- Profile tables and auto-generate data quality rules (Great Expectations, Soda).
+- Detect null spikes, distribution drift, and schema changes.
+- Build expectation suites and data contracts in CI.
+- Prioritize remediation with impact/lineage scoring.
+- Track data health SLAs and coverage.
 
 ## Steps
 
-1. Profile the dataset and define quality dimensions and thresholds.
-2. Build or integrate an anomaly detector and validation rule engine.
-3. Clean and impute data while preserving lineage.
-4. Monitor quality metrics in dashboards and alerts.
-5. Retrain models when quality issues or drift are detected.
+1. Profile source and warehouse tables.
+2. Define business rules and data contracts.
+3. Train or configure anomaly detection on historical patterns.
+4. Alert, quarantine, and repair bad records.
+5. Report data health and retrain baselines.
 
 ## Code pattern
 
@@ -106,36 +101,31 @@ df["anomaly_score"] = clf.decision_function(X)
 3. Compare a model trained on cleaned data to one trained on raw data.
 
 ''',
-        "references": [
-            "https://doi.org/10.1145/3592616",
-            "https://doi.org/10.1016/j.infsof.2023.107268",
-            "https://doi.org/10.1145/3722214",
-            "https://doi.org/10.1109/aitest62860.2024.00023",
-        ],
+        "references": ["https://doi.org/10.1145/3592616", "https://doi.org/10.1016/j.infsof.2023.107268", "https://doi.org/10.1145/3722214", "https://doi.org/10.1109/aitest62860.2024.00023"],
     },
     {
         "name": "ai-for-data-observability",
         "title": "AI for Data Observability",
-        "description": "ML-driven monitoring of data freshness, schema drift, volume anomalies, lineage breaks, and pipeline health to ensure reliable data operations.",
+        "description": "Monitor data freshness, volume, and lineage to detect pipeline failures.",
         "devin_body": r'''## When to use
 
 You need end-to-end visibility into data pipelines and want to detect, diagnose, and remediate data incidents automatically.
 
 ## Usage
 
-- **Freshness and volume monitoring**: detect late or missing data.
-- **Schema and distribution drift**: identify unexpected changes in data shape or distributions.
-- **Lineage-aware anomaly detection**: localize pipeline failures using dependency graphs.
-- **Automated root cause analysis**: rank likely causes and suggest fixes.
-- **SLO dashboards**: track data reliability, completeness, and freshness KPIs.
+- Auto-generate freshness, volume, and schema monitors (Monte Carlo, dataobservability.ai).
+- Detect anomalies in row counts and distribution (Soda, Prizm).
+- Map column-level lineage and downstream impact.
+- Correlate data incidents with cost and performance metrics.
+- Build runbooks and root-cause analysis with AIOps.
 
 ## Steps
 
-1. Instrument pipelines with run, dataset, and model metadata.
-2. Define observability signals: freshness, row count, schema, distributions.
-3. Train anomaly detectors on historical pipeline behavior.
-4. Correlate anomalies with lineage and code or infrastructure changes.
-5. Alert and auto-remediate common failure modes.
+1. Connect warehouses, lakes, and pipeline orchestrators.
+2. Baseline historical metrics for freshness, volume, and schema.
+3. Deploy ML-based or rule-based anomaly detection.
+4. Alert teams and route incidents by lineage.
+5. Track MTTR and refine thresholds.
 
 ## Code pattern
 
@@ -163,36 +153,31 @@ For production, integrate with tools such as Great Expectations, Soda, or Monte 
 3. Compare anomaly detection precision to threshold-only monitoring.
 
 ''',
-        "references": [
-            "https://www.vldb.org/pvldb/vol15/p4015-shankar.pdf",
-            "https://doi.org/10.60087/jaigs.v6i1.412",
-            "https://doi.org/10.5281/zenodo.20801568",
-            "https://doi.org/10.5281/zenodo.19487347",
-        ],
+        "references": ["https://www.vldb.org/pvldb/vol15/p4015-shankar.pdf", "https://doi.org/10.60087/jaigs.v6i1.412", "https://doi.org/10.5281/zenodo.20801568", "https://doi.org/10.5281/zenodo.19487347"],
     },
     {
         "name": "ai-for-data-curation",
         "title": "AI for Data Curation",
-        "description": "Automated selection, cleaning, labeling, augmentation, and documentation of datasets to produce high-quality, FAIR, and reusable ML data assets.",
+        "description": "Label, augment, and document training data for reliable machine learning.",
         "devin_body": r'''## When to use
 
 You are building or maintaining reusable datasets and need to select, clean, label, augment, and document them systematically.
 
 ## Usage
 
-- **Dataset selection and deduplication**: identify representative, non-redundant samples.
-- **Data cleaning and imputation**: detect and repair errors, missing values, and inconsistencies.
-- **Active and programmatic labeling**: prioritize and scale data annotation.
-- **Data augmentation and balancing**: synthesize or reweight samples for better coverage.
-- **Documentation and metadata**: produce datasheets, data cards, and provenance records.
+- Run weak supervision and programmatic labeling (Snorkel, Alfred).
+- Synthesize training examples with GANs or LLM augmenters.
+- Create data cards and datasheets for datasets.
+- Validate label quality with consensus and error analysis.
+- Version datasets with DVC or Pachyderm.
 
 ## Steps
 
-1. Define the target population and collection criteria.
-2. Profile the raw data and identify quality and coverage gaps.
-3. Clean, deduplicate, and (re)label the dataset.
-4. Augment or resample to improve representation and balance.
-5. Publish with metadata, data cards, and usage licenses.
+1. Define labeling schemas and data-card templates.
+2. Collect raw data and apply rules, model, or LLM heuristics.
+3. Aggregate and denoise labels with weak supervision.
+4. Generate data sheets and quality reports.
+5. Version and distribute curated datasets.
 
 ## Code pattern
 
@@ -218,36 +203,31 @@ df["outlier"] = lof.fit_predict(df.select_dtypes(include="number").fillna(0))
 3. Measure label quality (inter-annotator agreement or consistency).
 
 ''',
-        "references": [
-            "https://doi.org/10.1145/3711118",
-            "https://doi.org/10.1016/j.dsm.2023.06.001",
-            "https://doi.org/10.1145/3630106.3658955",
-            "https://doi.org/10.48550/arxiv.2112.06409",
-        ],
+        "references": ["https://doi.org/10.1145/3711118", "https://doi.org/10.1016/j.dsm.2023.06.001", "https://doi.org/10.1145/3630106.3658955", "https://doi.org/10.48550/arxiv.2112.06409"],
     },
     {
         "name": "ai-for-data-discovery",
         "title": "AI for Data Discovery",
-        "description": "Intelligent dataset search, metadata enrichment, schema inference, and conversational data catalog exploration to find the right data quickly.",
+        "description": "Help users find, understand, and trust the right data and AI assets.",
         "devin_body": r'''## When to use
 
 Users cannot find the right data in a lake, catalog, or open repository, and keyword search is insufficient.
 
 ## Usage
 
-- **Dataset search and recommendation**: match needs by metadata, content, or examples.
-- **Schema and semantic inference**: auto-extract columns, types, and relationships.
-- **Data profiling and summarization**: surface distributions, coverage, and quality.
-- **Conversational exploration**: use LLMs to answer natural-language data requests.
-- **Similarity and join discovery**: identify related datasets and linkable keys.
+- Search catalogs with natural language (Alation, Atlan, DataHub).
+- Auto-generate descriptions, tags, and glossary links.
+- Recommend similar or related datasets.
+- Show data quality, popularity, and owner context.
+- Embed search into BI and notebooks for self-service.
 
 ## Steps
 
-1. Collect and index datasets with metadata, schema, and samples.
-2. Build embeddings and similarity indexes over metadata and content.
-3. Deploy search and recommendation APIs or chat interfaces.
-4. Let users explore lineage, quality, and usage statistics.
-5. Refine ranking from user feedback and query logs.
+1. Crawl data sources and extract metadata.
+2. Build knowledge graph of datasets, terms, and users.
+3. Train ranking and recommendation models.
+4. Expose natural-language search and recommendations.
+5. Track adoption and improve relevance.
 
 ## Code pattern
 
@@ -274,36 +254,31 @@ scores = cosine_similarity([query_emb], dataset_embs)[0]
 3. Compare a semantic search to a keyword baseline on real queries.
 
 ''',
-        "references": [
-            "https://doi.org/10.1145/3626521",
-            "https://doi.org/10.1007/s00778-019-00564-x",
-            "https://doi.org/10.48550/arxiv.2509.00728",
-            "https://doi.org/10.1002/pra2.1242",
-        ],
+        "references": ["https://doi.org/10.1145/3626521", "https://doi.org/10.1007/s00778-019-00564-x", "https://doi.org/10.48550/arxiv.2509.00728", "https://doi.org/10.1002/pra2.1242"],
     },
     {
         "name": "ai-for-data-marketplaces",
         "title": "AI for Data Marketplaces",
-        "description": "AI for data and model discovery, pricing, valuation, matching, trust, and governance in data-sharing marketplaces and AI model markets.",
+        "description": "Match buyers and sellers, price data products, and manage data exchange.",
         "devin_body": r'''## When to use
 
 You are designing, operating, or participating in a marketplace that trades data, datasets, or AI models and need discovery, pricing, or trust mechanisms.
 
 ## Usage
 
-- **Asset discovery and recommendation**: match buyers to relevant datasets or models.
-- **Data and model valuation**: estimate worth using Shapley, information, or auction methods.
-- **Pricing and bundling**: set prices that are arbitrage-free and incentive-aligned.
-- **Trust and reputation**: score sellers, buyers, and data quality.
-- **License and access control**: enforce usage terms and track consumption.
+- Build searchable data-product catalogs with quality scores.
+- Estimate data value with Shapley, SHAP, or auction models.
+- Set usage-based, subscription, or outcome pricing.
+- Automate contracts, licensing, and access controls.
+- Track product performance and seller reputation.
 
 ## Steps
 
-1. Define marketplace assets, participants, and business rules.
-2. Build search, profiling, and recommendation systems for assets.
-3. Implement valuation and pricing models.
-4. Add trust, rating, and dispute mechanisms.
-5. Monitor transactions, enforce licenses, and adjust pricing.
+1. Curate and profile data products for the marketplace.
+2. Train data valuation and price-prediction models.
+3. Build pricing, negotiation, and contract workflows.
+4. Enforce access, privacy, and audit terms.
+5. Monitor transactions and refine pricing.
 
 ## Code pattern
 
@@ -331,36 +306,31 @@ estimates = model.predict(X)
 3. Simulate a transaction and verify license enforcement.
 
 ''',
-        "references": [
-            "https://www.vldb.org/pvldb/vol16/p3872-pei.pdf",
-            "https://doi.org/10.3390/jtaer16070180",
-            "https://doi.org/10.48550/arxiv.2411.07267",
-            "https://doi.org/10.3390/fi17010035",
-        ],
+        "references": ["https://www.vldb.org/pvldb/vol16/p3872-pei.pdf", "https://doi.org/10.3390/jtaer16070180", "https://doi.org/10.48550/arxiv.2411.07267", "https://doi.org/10.3390/fi17010035"],
     },
     {
         "name": "ai-for-data-provenance",
         "title": "AI for Data Provenance",
-        "description": "Lineage tracking, W3C PROV, reproducible ML pipelines, experiment tracking, and provenance for explainable and trustworthy AI.",
+        "description": "Track the origin, transformation, and flow of data and AI artifacts.",
         "devin_body": r'''## When to use
 
 You need to trace data origins, transformations, and decisions to ensure reproducibility, compliance, and explainability.
 
 ## Usage
 
-- **Lineage and traceability**: record transformations from source to model.
-- **W3C PROV and standards**: represent provenance with interoperable models.
-- **ML experiment tracking**: version datasets, code, models, and metrics.
-- **Reproducibility and audit**: replay pipelines and verify outputs.
-- **Explainable AI**: link model predictions to training data and features.
+- Capture lineage with W3C PROV, MLflow, or yProv4ML.
+- Trace model training data, code, and parameters.
+- Version data, code, and models with DVC and Git.
+- Query provenance graphs in graph databases.
+- Reproduce experiments and audit AI systems.
 
 ## Steps
 
-1. Identify sources, transformations, and outputs in the data pipeline.
-2. Capture provenance metadata at each step using PROV or lineage APIs.
-3. Version data, code, and model artifacts.
-4. Index provenance for query, replay, and impact analysis.
-5. Audit provenance for compliance and debugging.
+1. Instrument pipelines to log activities and artifacts.
+2. Map entities, activities, and agents to a provenance graph.
+3. Store provenance in PROV-JSON, RDF, or graph DB.
+4. Build queries and visualizations for lineage.
+5. Audit and verify reproducibility.
 
 ## Code pattern
 
@@ -387,36 +357,31 @@ mlflow.end_run()
 3. Show provenance supports an audit or explainability request.
 
 ''',
-        "references": [
-            "https://doi.org/10.1162/dint_a_00119",
-            "https://doi.org/10.3390/bdcc5020020",
-            "https://doi.org/10.5220/0014732400004015",
-            "https://doi.org/10.1145/3788853.3801877",
-        ],
+        "references": ["https://doi.org/10.1162/dint_a_00119", "https://doi.org/10.3390/bdcc5020020", "https://doi.org/10.5220/0014732400004015", "https://doi.org/10.1145/3788853.3801877"],
     },
     {
         "name": "ai-for-data-privacy",
         "title": "AI for Data Privacy",
-        "description": "Differential privacy, federated learning, homomorphic encryption, PETs, and privacy-preserving ML for sensitive data.",
+        "description": "Protect sensitive data using differential privacy, anonymization, and federated learning.",
         "devin_body": r'''## When to use
 
 You train or serve ML models on personal, sensitive, or regulated data and need to protect privacy across the lifecycle.
 
 ## Usage
 
-- **Differential privacy**: add calibrated noise to queries, gradients, or outputs.
-- **Federated and split learning**: keep raw data at the edge while training shared models.
-- **Homomorphic encryption and secure multiparty computation**: compute on encrypted data.
-- **Anonymization and pseudonymization**: de-identify datasets and evaluate re-identification risk.
-- **Privacy auditing**: run membership inference and model inversion tests.
+- Train models with differential privacy (Opacus, TensorFlow Privacy).
+- Apply k-anonymity, l-diversity, and synthetic data generation.
+- Run federated learning across institutions (NVIDIA FLARE, Flower).
+- Audit re-identification risk and privacy budgets.
+- De-identify free text with named-entity recognition.
 
 ## Steps
 
-1. Classify data sensitivity and identify privacy requirements.
-2. Choose PETs (DP, FL, SMPC, HE) appropriate to the threat model.
-3. Implement privacy mechanisms and tune privacy budgets or noise.
-4. Audit models with attack simulations and privacy metrics.
-5. Document privacy controls and compliance evidence.
+1. Classify sensitive attributes and privacy requirements.
+2. Choose privacy mechanism (DP, federated, anonymization).
+3. Implement training, aggregation, or synthesis.
+4. Evaluate privacy-utility trade-off and budget.
+5. Document privacy guarantees and audits.
 
 ## Code pattern
 
@@ -446,36 +411,31 @@ optimizer = tfp.DPKerasSGDOptimizer(
 3. Audit a synthetic or anonymized dataset for re-identification risk.
 
 ''',
-        "references": [
-            "https://doi.org/10.1145/3440754",
-            "https://doi.org/10.1145/3624010",
-            "https://doi.org/10.1016/j.cose.2023.103605",
-            "https://doi.org/10.3390/app16010277",
-        ],
+        "references": ["https://doi.org/10.1145/3440754", "https://doi.org/10.1145/3624010", "https://doi.org/10.1016/j.cose.2023.103605", "https://doi.org/10.3390/app16010277"],
     },
     {
         "name": "ai-for-data-security",
         "title": "AI for Data Security",
-        "description": "Adversarial robustness, data poisoning detection, access control, threat detection, and AI-driven security for ML training and inference data.",
+        "description": "Defend AI systems against adversarial attacks, data poisoning, and model extraction.",
         "devin_body": r'''## When to use
 
 You need to protect data and models from adversarial manipulation, unauthorized access, and data-centric attacks.
 
 ## Usage
 
-- **Adversarial and poisoning defenses**: detect or mitigate malicious data and perturbations.
-- **Access control and zero trust**: enforce least-privilege access to data and model artifacts.
-- **Anomaly and intrusion detection**: identify exfiltration, unauthorized queries, or breaches.
-- **Data sanitization and provenance**: verify data sources and remove poisoned samples.
-- **Secure pipelines**: encrypt data at rest and in transit, harden CI/CD.
+- Evaluate adversarial robustness with ART (Adversarial Robustness Toolbox).
+- Detect and remove poisoned samples (PoisonSpot, training provenance).
+- Protect model APIs from extraction and inversion attacks.
+- Scan for vulnerabilities in model artifacts and supply chain.
+- Monitor production drift and anomalous queries.
 
 ## Steps
 
-1. Inventory data and model assets and threat surfaces.
-2. Apply encryption, access control, and network segmentation.
-3. Monitor for anomalies in data access, ingestion, and model usage.
-4. Test robustness with adversarial and poisoning simulations.
-5. Respond to incidents and update defenses and data provenance.
+1. Threat-model the AI system and data pipeline.
+2. Run adversarial and poisoning attacks in a sandbox.
+3. Train or harden models with robust defenses.
+4. Deploy monitoring and anomaly detection in production.
+5. Red-team and update defenses regularly.
 
 ## Code pattern
 
@@ -501,36 +461,31 @@ poison_labels = clf.fit_predict(X)
 3. Audit access logs for anomalous data exfiltration patterns.
 
 ''',
-        "references": [
-            "https://doi.org/10.48550/arxiv.2310.04513",
-            "https://link.springer.com/article/10.1186/s13635-024-00158-3",
-            "https://doi.org/10.1007/s11432-025-4388-5",
-            "https://doi.org/10.1145/3670007",
-        ],
+        "references": ["https://doi.org/10.48550/arxiv.2310.04513", "https://link.springer.com/article/10.1186/s13635-024-00158-3", "https://doi.org/10.1007/s11432-025-4388-5", "https://doi.org/10.1145/3670007"],
     },
     {
         "name": "ai-for-data-ethics",
         "title": "AI for Data Ethics",
-        "description": "Fairness, accountability, transparency, data dignity, consent, and responsible data use in ML pipelines and AI systems.",
+        "description": "Assess and mitigate fairness, bias, and societal impacts of data and AI.",
         "devin_body": r'''## When to use
 
 You need to identify and mitigate ethical risks in data collection, processing, and model deployment, including bias, consent, and transparency.
 
 ## Usage
 
-- **Bias and fairness**: measure demographic parity, equalized odds, and calibration.
-- **Transparency and explainability**: produce interpretable models and data cards.
-- **Consent and data dignity**: respect user preferences and withdrawal rights.
-- **Accountability**: assign responsibilities and audit decisions.
-- **Environmental and societal impact**: assess energy, labor, and downstream harms.
+- Audit model fairness with Fairlearn and Aequitas.
+- Measure group and intersectional disparities.
+- Test for biases in data collection and labeling.
+- Review model cards and explainability reports.
+- Engage stakeholders and document mitigation.
 
 ## Steps
 
-1. Identify stakeholders, harms, and ethical principles for the use case.
-2. Audit data and models for bias, representativeness, and consent.
-3. Implement fairness constraints, explainability, and redress mechanisms.
-4. Document decisions, data cards, and model cards.
-5. Monitor deployed systems for emerging ethical risks.
+1. Define protected attributes and fairness metrics.
+2. Audit data, features, and model outputs for disparities.
+3. Train bias-mitigation models or apply post-processing.
+4. Generate model cards and fairness reports.
+5. Iterate with stakeholders and re-audit.
 
 ## Code pattern
 
@@ -558,36 +513,31 @@ print("Demographic parity difference:", dp)
 3. Conduct a stakeholder review of consent and redress workflows.
 
 ''',
-        "references": [
-            "https://doi.org/10.3390/informatics13040051",
-            "https://doi.org/10.1007/s41060-024-00541-w",
-            "https://doi.org/10.1007/s00778-021-00671-8",
-            "https://doi.org/10.30574/msarr.2023.7.2.0043",
-        ],
+        "references": ["https://doi.org/10.3390/informatics13040051", "https://doi.org/10.1007/s41060-024-00541-w", "https://doi.org/10.1007/s00778-021-00671-8", "https://doi.org/10.30574/msarr.2023.7.2.0043"],
     },
     {
         "name": "ai-for-data-sharing",
         "title": "AI for Data Sharing",
-        "description": "Federated learning, data sharing incentives, interoperability, trust, and privacy-preserving collaboration for shared data ecosystems.",
+        "description": "Enable privacy-preserving collaboration and data exchange across organizations.",
         "devin_body": r'''## When to use
 
 Organizations need to share data across silos, partners, or jurisdictions while preserving privacy and trust.
 
 ## Usage
 
-- **Federated and collaborative learning**: train models on distributed data without centralizing it.
-- **Incentive and reward design**: fairly compensate data contributors.
-- **Interoperability and standards**: use common schemas, ontologies, and APIs.
-- **Trust and reputation**: score participants and data quality.
-- **Privacy-preserving sharing**: apply DP, SMPC, or synthetic data releases.
+- Train federated models with Flower or NVIDIA FLARE.
+- Share synthetic data generated from real datasets.
+- Establish data trusts and consortium contracts.
+- Exchange data via APIs with differential privacy.
+- Track usage and compliance with smart contracts.
 
 ## Steps
 
-1. Define sharing objectives, participants, and data sensitivity.
-2. Choose a collaboration architecture (federated, pool, or synthetic release).
-3. Implement access, consent, and privacy controls.
-4. Build trust, reputation, and contribution-scoring mechanisms.
-5. Monitor usage, enforce agreements, and audit compliance.
+1. Identify data partners, use case, and governance.
+2. Set up a federated or synthetic-data platform.
+3. Align schemas, privacy budgets, and access rules.
+4. Train or generate shared data products.
+5. Audit contributions and outputs.
 
 ## Code pattern
 
@@ -612,36 +562,31 @@ state = iterative_process.initialize()
 3. Audit that no raw data leaves participant boundaries.
 
 ''',
-        "references": [
-            "https://doi.org/10.1007/s44248-024-00006-2",
-            "https://doi.org/10.3390/data10110182",
-            "https://doi.org/10.1007/s10115-022-01664-x",
-            "https://doi.org/10.48550/arxiv.2307.10655",
-        ],
+        "references": ["https://doi.org/10.1007/s44248-024-00006-2", "https://doi.org/10.3390/data10110182", "https://doi.org/10.1007/s10115-022-01664-x", "https://doi.org/10.48550/arxiv.2307.10655"],
     },
     {
         "name": "ai-for-data-monetization",
         "title": "AI for Data Monetization",
-        "description": "Data valuation, pricing, data products, marketplaces, and revenue allocation for turning data assets into measurable business value.",
+        "description": "Value, price, and package data assets for market exchange and revenue.",
         "devin_body": r'''## When to use
 
 You want to turn raw data, derived features, models, or insights into revenue or measurable economic value.
 
 ## Usage
 
-- **Data valuation**: estimate worth with Shapley, information, or influence-based methods.
-- **Pricing models**: arbitrage-free pricing, auctions, and subscription tiers.
-- **Data products**: package datasets, features, embeddings, or APIs for sale.
-- **Revenue allocation**: reward contributors based on marginal value.
-- **Marketplace dynamics**: match buyers and sellers and optimize liquidity.
+- Estimate data Shapley value for contribution-based pricing.
+- Build price-prediction models (DataPrice, SHAP explanations).
+- Bundle data products for target buyers and use cases.
+- Set dynamic pricing based on freshness and exclusivity.
+- Track revenue, usage, and customer value.
 
 ## Steps
 
-1. Identify data products and potential buyers.
-2. Profile and value data assets using ML-driven valuation.
-3. Set pricing, bundling, and licensing terms.
-4. Operate a marketplace or direct sales channel.
-5. Track revenue, usage, and contribution-based payouts.
+1. Catalog data assets and assess quality, uniqueness, and demand.
+2. Train data valuation and price-prediction models.
+3. Design pricing and packaging strategies.
+4. Launch marketplace listings with access controls.
+5. Measure revenue and iterate.
 
 ## Code pattern
 
@@ -668,11 +613,6 @@ model = Ridge(alpha=1.0).fit(X, y)
 3. Allocate revenue to multiple contributors and verify fairness axioms.
 
 ''',
-        "references": [
-            "https://doi.org/10.1007/s11301-022-00309-1",
-            "https://doi.org/10.1109/tbdata.2023.3254152",
-            "https://doi.org/10.24963/ijcai.2022/782",
-            "https://doi.org/10.48550/arxiv.2108.07915",
-        ],
+        "references": ["https://doi.org/10.1007/s11301-022-00309-1", "https://doi.org/10.1109/tbdata.2023.3254152", "https://doi.org/10.24963/ijcai.2022/782", "https://doi.org/10.48550/arxiv.2108.07915"],
     },
 ]

@@ -1,6 +1,6 @@
 # /ai-for-storytelling
 
-Narrative generation, plot planning, character arcs, and worldbuilding with structured LLM workflows.
+Use structured LLM workflows to generate plots, build character arcs, manage worldbuilding, and create interactive or branching narratives.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Engagement prediction, behavioral analytics, early warning systems, intervention targeting, and motivational feedback.
+Use AI to identify disengaged or at-risk learners and trigger timely, evidence-based supports before performance declines.
 
 ## When to use
 
 You want to identify disengaged or at-risk learners and trigger timely, evidence-based supports before performance declines.
 
-## Key concepts
+## Usage
 
-- **Behavioral, cognitive, and affective engagement**: combine log, academic, and self-report signals.
-- **Early warning systems**: predict dropout or failure with time-aware models.
-- **Intervention targeting**: match at-risk students to the most effective supports.
-- **Nudges and feedback**: send timely, actionable messages to learners and advisors.
+- Collect LMS, academic, and self-report signals.
+- Build engagement features and risk scores.
+- Match at-risk students to supports.
+- Send timely nudges to students and advisors.
+
+## Steps
+
+1. Collect LMS, academic, and self-report signals.
+2. Build engagement features and risk scores.
+3. Match at-risk students to supports.
+4. Send timely nudges to students and advisors.
+5. Measure re-engagement and equity of intervention reach.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

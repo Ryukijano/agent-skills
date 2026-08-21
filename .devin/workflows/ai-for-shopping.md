@@ -1,6 +1,6 @@
 # /ai-for-shopping
 
-Product discovery, personalized recommendations, price comparison, review summarization, and AI buyer guides for consumer purchases.
+Answer natural-language product questions and surface personalized recommendations from real-time catalog and behavior data.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-civil-engineering
 
-Machine learning for structural health monitoring, geotechnical prediction, transportation systems, water resources, and resilient infrastructure.
+Build predictive models for civil infrastructure, natural hazards, and water resources.
 
 ## Trigger
 

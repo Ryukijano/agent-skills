@@ -1,6 +1,6 @@
 # /ai-for-geology
 
-Geologic mapping, mineral prospectivity, geophysical inversion, drill-core imagery, and remote sensing with ML and deep learning.
+Use ML and remote sensing to map lithology, assess mineral prospectivity, run geophysical inversions, and analyze drill-core and geologic data.
 
 ## Trigger
 

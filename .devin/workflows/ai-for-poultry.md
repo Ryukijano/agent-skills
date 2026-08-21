@@ -1,6 +1,6 @@
 # /ai-for-poultry
 
-AI for flock health, welfare, behaviour, environmental control, and productivity in broiler, layer, and turkey production.
+Monitor poultry welfare, behavior, and health with computer vision and edge sensors.
 
 ## Trigger
 

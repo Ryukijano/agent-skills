@@ -2,19 +2,30 @@
 
 ## Description
 
-Large language models, text classification, machine translation, question answering, information extraction, and prompt engineering.
+Use AI for NLP to classify text, translate, answer questions and align language models.
 
 ## When to use
 
 You are processing, generating, or understanding text for chatbots, search, translation, summarization, or information extraction.
 
-## Key concepts
+
+## Usage
+
 
 - **Transformer language models**: BERT, GPT, T5, and LLaMA.
-- **Prompting and in-context learning**: zero and few-shot, chain-of-thought, and RAG.
-- **Fine-tuning and alignment**: instruction tuning, RLHF, and DPO.
+- **Prompting and in-context learning**: Zero and few-shot, chain-of-thought, and RAG.
+- **Fine-tuning and alignment**: Instruction tuning, RLHF, and DPO.
 - **Information extraction and semantic parsing**: NER, relation extraction, and parsing.
-- **Evaluation and safety**: perplexity, BLEU, ROUGE, toxicity, and bias.
+- **Evaluation and safety**: Perplexity, BLEU, ROUGE, toxicity, and bias.
+
+## Steps
+
+1. Collect and prepare text corpora and task-specific datasets.
+2. Process.
+3. Generate.
+4. Understand text for chatbots.
+5. Validate by fine-tuning an LLM on a domain QA dataset and measure exact match and F1.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -29,12 +40,14 @@ outputs = model.generate(**inputs, max_new_tokens=128)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
+
 ## Tuning notes
 
 - Use instruction and chat templates for dialog models.
 - Combine retrieval augmentation to reduce hallucination.
 - Balance context length, batch size, and learning rate for fine-tuning.
 - Evaluate on task-specific benchmarks and human judgments.
+
 
 ## Verification
 

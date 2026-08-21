@@ -1,6 +1,6 @@
 # /ai-for-distributed-energy
 
-Machine learning and multi-agent methods for DER forecasting, microgrid optimization, peer-to-peer trading, and prosumer coordination.
+Coordinates distributed solar, batteries, and electric vehicles behind the meter through forecasting and microgrid scheduling.
 
 ## Trigger
 

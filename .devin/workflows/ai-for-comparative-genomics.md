@@ -1,6 +1,6 @@
 # /ai-for-comparative-genomics
 
-Cross-species and population genome comparison, orthology inference, phylogenomics, selection scans, and pan-genome analysis.
+Use machine learning and phylogenomics to compare genomes across species and populations, infer orthology, detect selection and analyze pan-genomes.
 
 ## Trigger
 

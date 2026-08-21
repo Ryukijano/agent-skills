@@ -2,18 +2,27 @@
 
 ## Description
 
-AI chatbots for conversation practice, automated writing and pronunciation feedback, CEFR-level adaptation, and second-language acquisition support.
+Use AI to support second or foreign language learners with interactive practice, corrective feedback, and level-appropriate content.
 
 ## When to use
 
 You are supporting second or foreign language learners with interactive practice, corrective feedback, and level-appropriate content.
 
-## Key concepts
+## Usage
 
-- **Computer-assisted language learning (CALL/MALL)**: AI tools for speaking, listening, reading, and writing.
-- **Conversational agents and chatbots**: simulate dialogue partners for practice.
-- **Corrective recasts and scaffolding**: provide graduated feedback on learner errors.
-- **Proficiency-level adaptation**: align content and feedback with frameworks such as CEFR.
+- Set CEFR level, topic, and learner profile.
+- Generate level-appropriate dialogues and prompts.
+- Provide recasts and pronunciation feedback.
+- Track fluency, vocabulary, and recurring errors.
+
+## Steps
+
+1. Set CEFR level, topic, and learner profile.
+2. Generate level-appropriate dialogues and prompts.
+3. Provide recasts and pronunciation feedback.
+4. Track fluency, vocabulary, and recurring errors.
+5. Calibrate the experience against CEFR-aligned proficiency tests.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

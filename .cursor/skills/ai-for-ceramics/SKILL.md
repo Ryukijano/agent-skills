@@ -2,19 +2,27 @@
 
 ## Description
 
-Data-driven design, processing optimization, and microstructure-property prediction for ceramic and refractory materials.
+Use data-driven models to design ceramics, optimize sintering and additive processes, and predict microstructure-property relationships.
 
 ## When to use
 
 You are designing or processing functional, structural, or refractory ceramics and want to predict phase stability, sintering behavior, or mechanical/dielectric properties from composition and process parameters.
 
-## Key concepts
+## Usage
 
-- **High-entropy and functional ceramics**: composition design for piezoelectric, dielectric, thermal-barrier, and structural ceramics.
-- **Sintering and process optimization**: ML models for densification, grain growth, and shrinkage as a function of time, temperature, and atmosphere.
-- **Additive manufacturing of ceramics**: direct ink writing and binder jetting parameter optimization, defect detection, and print-path planning.
-- **Microstructure-property mapping**: computer-vision analysis of ceramic micrographs and property prediction.
-- **Digital twins and physics-informed ML**: integrate CALPHAD/DFT with data-driven models for constrained optimization.
+- Design piezoelectric, dielectric, thermal-barrier, and structural ceramics from composition descriptors.
+- Predict and optimize sintering densification, grain growth, and shrinkage with process parameters.
+- Optimize additive manufacturing parameters (direct ink writing, binder jetting) and detect defects.
+- Map microstructure to mechanical/dielectric properties using image analysis and multi-fidelity models.
+
+## Steps
+
+1. Collect composition, processing (temperature, time, atmosphere), microstructure, and property data.
+2. Encode composition with element fractions or thermodynamic descriptors and split data by chemistry/process.
+3. Train models to predict phase stability, sintering behavior, or properties from composition and process inputs.
+4. Use Bayesian optimization or active learning to optimize firing profiles and additive-manufacturing settings.
+5. Segment microstructure images and correlate features with measured properties.
+6. Validate the best recipes with new synthesis runs and compare to CALPHAD/DFT or experimental baselines.
 
 ## Code pattern
 
@@ -45,4 +53,4 @@ model = GradientBoostingRegressor().fit(X, y)
 - https://doi.org/10.1111/ijac.70195
 - https://doi.org/10.1016/j.jeurceramsoc.2026.118426
 - https://osf.io/d8bk9
-- https://ijsrmt.com/index.php/ijsrmt/article/view/1033
+- https://doi.org/10.1038/s41598-025-12011-9

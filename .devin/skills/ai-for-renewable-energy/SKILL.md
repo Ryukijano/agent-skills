@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for solar, wind, and other renewable energy forecasting, resource assessment, yield optimization, and predictive O&M.
+Forecasts solar and wind output, optimizes site selection, and improves O&M across renewable portfolios with satellite and SCADA data.
 
 ## When to use
 
@@ -10,10 +10,10 @@ You are developing, operating, or investing in solar, wind, or other renewable a
 
 ## Usage
 
-- **Resource assessment and site screening**: estimate long-term energy yield and geospatial suitability for new projects.
-- **Generation forecasting**: predict solar and wind output from weather and satellite data for grid and market operations.
-- **Yield optimization**: detect underperformance, curtailment, and inverter or turbine degradation.
-- **Predictive O&M**: schedule maintenance and identify faults before they lead to major losses.
+- **Solar and wind forecasting**: predict hourly to day-ahead generation using weather, satellite, and SCADA data.
+- **Resource assessment and site screening**: estimate long-term yield and geospatial suitability with tools such as NREL's reV and SAM.
+- **Yield optimization**: detect underperformance, curtailment, and turbine or inverter degradation.
+- **Predictive O&M**: schedule maintenance and identify faults before they cause major losses.
 
 ## Steps
 
@@ -53,4 +53,4 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 - https://link.springer.com/article/10.1186/s43067-025-00239-4
 - https://doi.org/10.3390/en13081979
 - https://github.com/NREL/sup3r
-- https://www.nrel.gov/research/software/rev-the-renewable-energy-potential-model-open-source
+- https://github.com/NREL/reV

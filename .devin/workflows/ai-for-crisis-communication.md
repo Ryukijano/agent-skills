@@ -1,6 +1,6 @@
 # /ai-for-crisis-communication
 
-Automated situational awareness, rumor detection, multilingual crisis summarization, and public information chatbots.
+Use machine learning and NLP to extract verified information, detect rumors, translate and summarize crisis messages, and power public information chatbots.
 
 ## Trigger
 

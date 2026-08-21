@@ -2,20 +2,29 @@
 
 ## Description
 
-Machine learning for adaptive immune receptor repertoires, epitope-MHC binding, immune cell phenotyping, and vaccine/immunotherapy design.
+Predict MHC-bound epitopes and vaccine candidates from receptor and omic data to prioritize immunotherapy and prophylaxis designs.
 
 ## When to use
 
 You are analyzing B-cell or T-cell receptor repertoires, predicting epitope binding, or prioritizing vaccine/immunotherapy candidates.
 
-## Key concepts
+## Usage
 
-- **AIRR**: adaptive immune receptor repertoire sequencing.
-- **BCR/TCR clonotypes**: V(D)J rearranged receptor sequences.
-- **MHC binding**: peptide presentation by class I and class II MHC molecules.
-- **Epitope prediction**: mapping receptors to antigens.
-- **Immune cell phenotyping**: flow/mass cytometry, single-cell RNA/CITE-seq.
-- **Vaccine design**: immunogen selection, epitope mapping, mRNA optimization.
+- **MHC/peptide prediction**: predict peptide presentation for class I and II alleles using MHCflurry/NetMHCpan.
+- **AIRR analysis**: parse BCR/TCR clonotypes and link repertoire features to disease or response.
+- **Receptor-antigen specificity**: model TCR/BCR recognition of epitopes and peptide-MHC complexes.
+- **Vaccine and immunotherapy design**: select immunogens, map epitopes, and optimize mRNA or receptor constructs.
+- **Immune-cell phenotyping**: classify cell types and states from flow, mass cytometry, or single-cell data.
+- **Safety checking**: assess cross-reactivity, autoimmunity risk, and off-target binding of designed receptors.
+
+## Steps
+
+1. Gather peptide, MHC allele, receptor, or repertoire data and link them to the clinical question (vaccine, therapy, biomarker).
+2. Predict peptide presentation and binding for candidate epitopes with allele-specific models.
+3. Model TCR/BCR specificity using sequence, structure, or generative models (e.g., TCR-TRANSLATE, AlphaFold 3, HERMES).
+4. Integrate immune repertoire and clinical labels to identify disease-associated clonotypes or cell states.
+5. Prioritize vaccine epitopes or therapeutic receptors and check cross-reactivity and safety.
+6. Validate with MHC multimer, ELISPOT, tetramer, or binding assays and refine the design.
 
 ## Code pattern
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Knowledge graphs, causal discovery, graph neural networks, and SHAP-based diagnostics for identifying fault origins and propagations in complex systems.
+Traces faults to originating causes using causal discovery, knowledge graphs, and SHAP-based diagnostics.
 
 ## When to use
 
@@ -11,7 +11,7 @@ A quality, safety, or equipment failure has occurred and you need to trace it to
 ## Usage
 
 - **5-Why and fishbone**: structured qualitative root-cause exploration.
-- **Causal discovery**: learn causal graphs from time-series or tabular data (PC, GES, NOTEARS).
+- **Causal discovery**: learn causal graphs from time-series or tabular data with PC, GES, or NOTEARS.
 - **Knowledge graphs**: model equipment, materials, recipes, and fault propagation.
 - **Graph neural networks**: propagate fault evidence and rank root-cause variables.
 - **SHAP and counterfactuals**: attribute defect or failure to specific sensors and settings.
@@ -20,7 +20,7 @@ A quality, safety, or equipment failure has occurred and you need to trace it to
 
 1. Gather event logs, sensor data, and failure records for the incident window.
 2. Build a knowledge graph of equipment, materials, and process dependencies.
-3. Run causal discovery or train an attribution model to score suspect variables.
+3. Run causal discovery with DoWhy or DirectLiNGAM, or train an attribution model to score suspect variables.
 4. Cross-check the top candidates with domain experts and known incidents.
 5. Document the validated root cause and prescribe corrective actions.
 

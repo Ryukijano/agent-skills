@@ -1,6 +1,6 @@
 # /ai-for-logistics
 
-Vehicle routing, last-mile delivery, warehouse automation, fleet scheduling, and dynamic logistics optimization.
+Use optimization and learning-based methods to solve vehicle routing, last-mile delivery, warehouse automation, and fleet-scheduling problems.
 
 ## Trigger
 

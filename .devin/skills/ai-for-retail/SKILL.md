@@ -2,18 +2,29 @@
 
 ## Description
 
-Demand forecasting, inventory placement, personalized recommendations, dynamic pricing, and omnichannel fulfillment for retail.
+Use AI for Retail to forecast demand, place inventory, personalize recommendations and manage omnichannel fulfillment.
 
 ## When to use
 
 You are optimizing retail operations across merchandising, supply chain, pricing, and customer experience.
 
-## Key concepts
 
-- **Omnichannel demand forecasting**: integrate store, online, and marketplace data.
-- **Inventory and fulfillment**: allocate stock across stores, DCs, and dark stores for fast fulfillment.
-- **Personalization and search**: recommendations, visual search, and conversational commerce.
-- **Dynamic pricing and promotions**: react to competition, stock levels, and customer segments.
+## Usage
+
+
+- **Omnichannel demand forecasting**: Integrate store, online, and marketplace data.
+- **Inventory and fulfillment**: Allocate stock across stores, DCs, and dark stores for fast fulfillment.
+- **Personalization and search**: Recommendations, visual search, and conversational commerce.
+- **Dynamic pricing and promotions**: React to competition, stock levels, and customer segments.
+
+## Steps
+
+1. Collect and prepare point-of-sale, online and marketplace data.
+2. Optimize retail operations across merchandising.
+3. Supply chain.
+4. Price.
+5. Validate by building a product-level demand forecast and evaluate on a heldout period with promotions.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -29,11 +40,13 @@ future = m.make_future_dataframe(periods=30)
 forecast = m.predict(future)
 ```
 
+
 ## Tuning notes
 
 - Retail time series are noisy and event-driven; include promotions, holidays, and competitor pricing.
 - Use hierarchical reconciliation to keep store, category, and chain forecasts consistent.
 - Balance personalization with inventory availability and margin constraints.
+
 
 ## Verification
 

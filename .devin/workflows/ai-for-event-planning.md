@@ -1,6 +1,6 @@
 # /ai-for-event-planning
 
-Venue and vendor recommendation, guest-list management, scheduling, budget optimization, and group preference aggregation for personal and small events.
+Use AI to match venues and vendors, aggregate guest preferences, schedule activities, and stay within budget for events.
 
 ## Trigger
 

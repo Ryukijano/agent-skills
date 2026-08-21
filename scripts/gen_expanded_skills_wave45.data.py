@@ -2,18 +2,26 @@ SKILLS = [
     {
         "name": "ai-for-network-optimization",
         "title": "AI for Network Optimization",
-        "description": "Graph neural networks, deep reinforcement learning, traffic engineering, resource allocation, and learning-augmented optimization for routing, load balancing, and network design.",
+        "description": "Optimize routing, traffic engineering, and resource allocation in communication networks.",
         "devin_body": r'''## When to use
 
 You need to optimize routing, traffic engineering, resource allocation, load balancing, or network design in large-scale communication networks.
 
-## Key concepts
+## Usage
 
-- **Graph neural networks (GNNs)**: model network topology and node/link states for scalable predictions.
-- **Deep reinforcement learning (DRL)**: learn dynamic control policies for routing, caching, and scheduling.
-- **Traffic prediction and prescriptive optimization**: forecast demand and feed it into a combinatorial solver.
-- **Learning-augmented heuristics**: combine model-based optimization with ML-predicted parameters.
-- **Network slicing and QoS-aware allocation**: reserve resources for service-level guarantees.
+- Solve traffic engineering with GRL-TE, RedTE, or TELGEN.
+- Predict congestion and adjust routing with GNNs.
+- Allocate bandwidth and paths across WAN and data-center fabrics.
+- Optimize CDN and load-balancer decisions.
+- Improve network utilization with deep reinforcement learning.
+
+## Steps
+
+1. Collect topology, traffic matrices, and performance metrics.
+2. Build graph or path features for the network.
+3. Train GNN, RL, or optimization surrogates.
+4. Deploy recommendations to SDN or traffic-engineering controllers.
+5. Validate against throughput, latency, and utilization KPIs.
 
 ## Code pattern
 
@@ -44,28 +52,31 @@ print(path)
 2. Use a traffic forecaster to drive a prescriptive bandwidth-allocation model.
 3. Evaluate generalization when node/link failure patterns differ from training.
 ''',
-        "references": [
-            "https://doi.org/10.1186/s13174-018-0087-2",
-            "https://arxiv.org/abs/2507.01773",
-            "https://arxiv.org/abs/2308.05384v2",
-            "https://arxiv.org/abs/2402.01665v1",
-        ],
+        "references": ["https://doi.org/10.1186/s13174-018-0087-2", "https://arxiv.org/abs/2507.01773", "https://arxiv.org/abs/2308.05384v2", "https://arxiv.org/abs/2402.01665v1"],
     },
     {
         "name": "ai-for-network-security",
         "title": "AI for Network Security",
-        "description": "Intrusion detection, malware classification, anomaly detection, adversarial defenses, and threat intelligence using ML and LLMs.",
+        "description": "Detect intrusions, malware, and anomalies in network traffic and infrastructure.",
         "devin_body": r'''## When to use
 
 You need to detect intrusions, malware, anomalies, or adversarial threats in network traffic, logs, or endpoints.
 
-## Key concepts
+## Usage
 
-- **Network intrusion detection (NIDS)**: classify flows, packets, and sessions as benign or malicious.
-- **Anomaly detection**: one-class SVM, isolation forests, autoencoders, and variational models.
-- **Graph-based threat detection**: use GNNs to detect lateral movement and command-and-control.
-- **Adversarial robustness**: evasion and poisoning attacks against ML security models and defenses.
-- **Threat intelligence and LLM-assisted analysis**: summarize alerts and correlate IOCs.
+- Analyze Zeek, Suricata, and NetFlow logs with AutoZeekWatch.
+- Detect DDoS, C2, and exfiltration patterns.
+- Hunt threats with MITRE ATT&CK and ELK/Splunk.
+- Identify anomalous hosts and lateral movement.
+- Correlate alerts with SIEM and asset context.
+
+## Steps
+
+1. Collect packet captures, flow records, and alert logs.
+2. Engineer features for hosts, ports, protocols, and payloads.
+3. Train supervised or unsupervised anomaly/IDS models.
+4. Integrate with SIEM and SOAR workflows.
+5. Tune and retrain with red-team findings.
 
 ## Code pattern
 
@@ -94,28 +105,31 @@ df["anomaly_score"] = clf.decision_function(X)
 2. Build a graph feature extractor and measure lift over tabular features.
 3. Test robustness to adversarial perturbations of network-flow features.
 ''',
-        "references": [
-            "https://arxiv.org/abs/1911.02621",
-            "https://arxiv.org/abs/2405.04760v3",
-            "https://arxiv.org/abs/2504.07839",
-            "https://arxiv.org/abs/2409.18736",
-        ],
+        "references": ["https://arxiv.org/abs/1911.02621", "https://arxiv.org/abs/2405.04760v3", "https://arxiv.org/abs/2504.07839", "https://arxiv.org/abs/2409.18736"],
     },
     {
         "name": "ai-for-software-defined-networks",
         "title": "AI for Software-Defined Networks",
-        "description": "ML-driven traffic classification, routing, QoS/QoE prediction, resource management, and security in SDN control and data planes.",
+        "description": "Apply AI to SDN control planes for traffic classification, routing, and security.",
         "devin_body": r'''## When to use
 
 You are building or operating an SDN/NFV architecture and want to add intelligence for traffic classification, routing, QoS, or security.
 
-## Key concepts
+## Usage
 
-- **SDN control plane**: OpenFlow, Ryu, ONOS, and ODL enable centralized, programmatic control.
-- **Traffic classification and prediction**: ML on flow tables to identify applications and anomalies.
-- **Dynamic routing and resource allocation**: adapt forwarding rules using DRL or optimization.
-- **QoS/QoE prediction**: forecast user experience from network telemetry.
-- **Security and DDoS mitigation**: ML-driven detection and reactive rule installation.
+- Classify OpenFlow traffic in ONOS/RYU with SDN-CF.
+- Detect and block malicious flows at the controller.
+- Optimize routing and load balancing via northbound APIs.
+- Enforce microsegmentation and QoS policies.
+- Integrate with Mininet and OpenFlow switches.
+
+## Steps
+
+1. Set up SDN controller and network emulator.
+2. Collect flow and packet-in events.
+3. Train classification or optimization models.
+4. Deploy control-plane applications (xApps, controller modules).
+5. Validate with network metrics and security scenarios.
 
 ## Code pattern
 
@@ -145,28 +159,31 @@ predicted_app = model.predict(X)
 2. Compare a learned routing policy to shortest-path routing on a Mininet topology.
 3. Demonstrate DDoS mitigation by installing drop rules when an anomaly is detected.
 ''',
-        "references": [
-            "https://doi.org/10.1109/comst.2018.2866942",
-            "https://doi.org/10.1007/s44230-023-00025-3",
-            "https://doi.org/10.2478/jsiot-2023-0002",
-            "https://doi.org/10.1109/ssd.2019.8893244",
-        ],
+        "references": ["https://doi.org/10.1109/comst.2018.2866942", "https://doi.org/10.1007/s44230-023-00025-3", "https://doi.org/10.2478/jsiot-2023-0002", "https://doi.org/10.1109/ssd.2019.8893244"],
     },
     {
         "name": "ai-for-5g",
         "title": "AI for 5G",
-        "description": "AI/ML for 5G RAN optimization, network slicing, beam management, mobility, and core automation.",
+        "description": "Optimize 5G RAN, network slicing, and beam management with AI and NWDAF.",
         "devin_body": r'''## When to use
 
 You are optimizing 5G RAN, core, or transport functions such as network slicing, beam management, mobility, or resource allocation.
 
-## Key concepts
+## Usage
 
-- **AI/ML in 3GPP 5G-Advanced**: NWDAF, RAN intelligence, and network-data analytics.
-- **Network slicing**: slice admission, isolation, and resource orchestration.
-- **Massive MIMO and beam management**: ML for beam selection, tracking, and failure prediction.
-- **Mobility and handover optimization**: predict handover timing and target cells.
-- **RAN resource allocation**: power, spectrum, and compute for eMBB, URLLC, and mMTC.
+- Predict RAN congestion and optimize beam prediction (3GPP Rel-18/19).
+- Manage network slices with NWDAF and O-RAN RIC.
+- Improve handover, coverage, and capacity optimization.
+- Detect anomalies in 5G core and RAN KPIs.
+- Optimize energy and resource allocation.
+
+## Steps
+
+1. Collect 5G RAN and core performance data.
+2. Engineer beam, cell, slice, and mobility features.
+3. Train prediction, classification, or RL models.
+4. Deploy xApps/rApps in O-RAN or NWDAF frameworks.
+5. Validate with 3GPP KPIs and drive tests.
 
 ## Code pattern
 
@@ -196,28 +213,31 @@ model.fit(X, y)
 2. Compare a learned beam-selection policy to an exhaustive search baseline.
 3. Demonstrate slice resource orchestration under varying load.
 ''',
-        "references": [
-            "https://arxiv.org/abs/2306.06178v1",
-            "https://arxiv.org/pdf/2305.05092",
-            "https://arxiv.org/abs/2009.04943",
-            "https://arxiv.org/abs/1911.03585",
-        ],
+        "references": ["https://arxiv.org/abs/2306.06178v1", "https://arxiv.org/pdf/2305.05092", "https://arxiv.org/abs/2009.04943", "https://arxiv.org/abs/1911.03585"],
     },
     {
         "name": "ai-for-6g",
         "title": "AI for 6G",
-        "description": "AI-native 6G architectures, semantic communications, integrated sensing and communication, reconfigurable intelligent surfaces, and distributed learning.",
+        "description": "Design AI-native 6G systems for semantic communication, ISAC, and non-terrestrial networks.",
         "devin_body": r'''## When to use
 
 You are designing or prototyping future 6G systems involving semantic communications, ISAC, RIS, NTN, or AI-native architectures.
 
-## Key concepts
+## Usage
 
-- **AI-native 6G**: embed ML across PHY, MAC, network, and application layers.
-- **Semantic communications**: transmit semantic meaning rather than raw bits.
-- **Integrated sensing and communication (ISAC)**: share waveforms for both radar and comms.
-- **Reconfigurable intelligent surfaces (RIS)**: optimize phase shifts with ML.
-- **Non-terrestrial networks (NTN)**: LEO/GEO satellite and aerial platforms.
+- Build semantic communication and meaning-extraction models.
+- Optimize integrated sensing and communication (ISAC).
+- Manage reconfigurable intelligent surfaces and satellite links.
+- Allocate resources in space-air-ground integrated networks.
+- Simulate 6G scenarios in MATLAB/NS-3.
+
+## Steps
+
+1. Define 6G use case and channel model.
+2. Generate or collect multi-domain dataset (terrestrial/satellite).
+3. Train semantic, ISAC, or resource-allocation models.
+4. Evaluate over-the-air or in simulation.
+5. Iterate with RIS, RAN, and satellite constraints.
 
 ## Code pattern
 
@@ -245,28 +265,31 @@ print("Estimated SNR:", snr)
 2. Optimize RIS phases with DRL and verify channel gain improvement.
 3. Model an ISAC scenario and evaluate sensing accuracy versus communication rate.
 ''',
-        "references": [
-            "https://arxiv.org/abs/2412.14538v3",
-            "https://doi.org/10.1109/ojcoms.2026.3677293",
-            "https://arxiv.org/abs/2207.13382",
-            "https://arxiv.org/abs/2406.13335",
-        ],
+        "references": ["https://arxiv.org/abs/2412.14538v3", "https://doi.org/10.1109/ojcoms.2026.3677293", "https://arxiv.org/abs/2207.13382", "https://arxiv.org/abs/2406.13335"],
     },
     {
         "name": "ai-for-iot",
         "title": "AI for IoT",
-        "description": "TinyML, edge AI, anomaly detection, device fingerprinting, and predictive maintenance for IoT systems.",
+        "description": "Deploy TinyML and edge AI for monitoring, prediction, and control in IoT systems.",
         "devin_body": r'''## When to use
 
 You are deploying intelligence on IoT sensors, gateways, or edge devices for monitoring, predictive maintenance, anomaly detection, or control.
 
-## Key concepts
+## Usage
 
-- **TinyML and edge AI**: run compressed models on microcontrollers and gateways.
-- **IoT device fingerprinting**: identify devices from traffic or sensor signatures.
-- **Time-series anomaly detection**: LSTM, TCN, and transformers for sensor streams.
-- **Predictive maintenance**: forecast failures from vibration, temperature, or current.
-- **Security and privacy**: lightweight encryption, federated learning, and anomaly detection.
+- Build anomaly detection on STM32 with NanoEdge AI Studio.
+- Deploy time-series classifiers with tinyml-tensorlab.
+- Predict equipment failure in industrial IoT (EsoCore).
+- Optimize battery and bandwidth with on-device learning.
+- Classify audio/vibration/IMU signals at the edge.
+
+## Steps
+
+1. Select MCU and sensors and collect edge data.
+2. Train, prune, and quantize TinyML models.
+3. Compile and deploy with CMSIS-NN or vendor tools.
+4. Verify latency, memory, and power budgets.
+5. Retrain on-device or via federated updates.
 
 ## Code pattern
 
@@ -294,28 +317,31 @@ df["anomaly"] = clf.fit_predict(X)
 2. Build a device-fingerprinting classifier and evaluate on unseen device models.
 3. Predict equipment failure and compare to a rule-based maintenance schedule.
 ''',
-        "references": [
-            "https://arxiv.org/abs/2410.19998v1",
-            "https://doi.org/10.1145/3690639",
-            "https://arxiv.org/abs/2011.08612",
-            "https://arxiv.org/abs/2406.03820",
-        ],
+        "references": ["https://arxiv.org/abs/2410.19998v1", "https://doi.org/10.1145/3690639", "https://arxiv.org/abs/2011.08612", "https://arxiv.org/abs/2406.03820"],
     },
     {
         "name": "ai-for-edge-computing",
         "title": "AI for Edge Computing",
-        "description": "Model compression, inference offloading, task placement, federated learning, and MLOps at the network edge.",
+        "description": "Optimize model inference, task offloading, and resource management at the network edge.",
         "devin_body": r'''## When to use
 
 You need to deploy, orchestrate, or optimize ML inference and training at the edge for low latency, privacy, and bandwidth savings.
 
-## Key concepts
+## Usage
 
-- **Edge inference and model serving**: TensorFlow Lite, ONNX Runtime, NVIDIA Triton.
-- **Offloading decisions**: when to run on device, edge, or cloud.
-- **Model compression**: quantization, pruning, knowledge distillation.
-- **Federated and split learning**: train and infer across distributed edge nodes.
-- **Edge MLOps**: continuous deployment, drift detection, and A/B testing at the edge.
+- Deploy TensorFlow Lite or ONNX Runtime on edge devices.
+- Optimize models with Triton Model Navigator or LiteRT.
+- Schedule inference and offloading between edge and cloud.
+- Manage edge clusters with Kubernetes/K3s.
+- Profile latency and energy across edge nodes.
+
+## Steps
+
+1. Characterize edge hardware, network, and workloads.
+2. Quantize, prune, and convert models for edge runtimes.
+3. Build offloading and scheduling policies.
+4. Deploy via edge serving frameworks.
+5. Monitor latency, accuracy, and energy.
 
 ## Code pattern
 
@@ -342,28 +368,31 @@ print("Assignments:", list(zip(row_ind, col_ind)))
 2. Optimize task offloading across a set of edge nodes and compare to a greedy baseline.
 3. Run a small federated-learning round and evaluate convergence vs. centralized.
 ''',
-        "references": [
-            "https://doi.org/10.3390/fi17090417",
-            "https://ieeexplore.ieee.org/document/9933792",
-            "https://www.mdpi.com/2227-7080/12/6/81",
-            "https://www.mdpi.com/2673-8732/5/2/16",
-        ],
+        "references": ["https://doi.org/10.3390/fi17090417", "https://ieeexplore.ieee.org/document/9933792", "https://www.mdpi.com/2227-7080/12/6/81", "https://www.mdpi.com/2673-8732/5/2/16"],
     },
     {
         "name": "ai-for-fog-computing",
         "title": "AI for Fog Computing",
-        "description": "AI for hierarchical fog resource management, task scheduling, load balancing, latency optimization, and IoT-fog-cloud orchestration.",
+        "description": "Orchestrate tasks, resources, and services across fog and cloud tiers.",
         "devin_body": r'''## When to use
 
 You are designing a fog layer between IoT devices and the cloud for low-latency, distributed processing and resource orchestration.
 
-## Key concepts
+## Usage
 
-- **Fog architecture**: hierarchical compute between edge and cloud.
-- **Task scheduling and placement**: optimize latency, energy, and cost across fog nodes.
-- **Resource management**: container orchestration, VM placement, and load balancing.
-- **AI/ML for fog**: RL for service placement, forecasting, and auto-scaling.
-- **Fog-cloud integration**: tiered offloading and data aggregation.
+- Schedule latency-sensitive tasks with FogSim and RL.
+- Place containers and microservices across fog nodes.
+- Predict workload and resource demands.
+- Manage IoT data streams and actuation.
+- Optimize energy and cost with tier-aware policies.
+
+## Steps
+
+1. Model the fog/cloud/edge topology and workloads.
+2. Collect telemetry and latency data.
+3. Train task-placement and resource-allocation models.
+4. Deploy orchestration policies.
+5. Validate end-to-end latency and throughput.
 
 ## Code pattern
 
@@ -400,28 +429,31 @@ prob.solve()
 2. Compare an RL scheduler against a greedy latency-minimizing baseline.
 3. Evaluate end-to-end latency for a hybrid cloud-fog deployment.
 ''',
-        "references": [
-            "https://doi.org/10.1016/j.iot.2022.100674",
-            "https://www.mdpi.com/1424-8220/25/3/687",
-            "https://arxiv.org/abs/2208.00761",
-            "https://arxiv.org/abs/2212.04645",
-        ],
+        "references": ["https://doi.org/10.1016/j.iot.2022.100674", "https://www.mdpi.com/1424-8220/25/3/687", "https://arxiv.org/abs/2208.00761", "https://arxiv.org/abs/2212.04645"],
     },
     {
         "name": "ai-for-satellite-communications",
         "title": "AI for Satellite Communications",
-        "description": "ML for satellite link prediction, beam hopping, resource allocation, non-terrestrial networks, and onboard edge AI.",
+        "description": "Optimize beam hopping, resource allocation, and coverage in LEO and GEO constellations.",
         "devin_body": r'''## When to use
 
 You are building AI for satellite systems, including constellation management, link prediction, beam hopping, resource allocation, and NTN integration.
 
-## Key concepts
+## Usage
 
-- **LEO/MEO/GEO constellations**: trade-offs in latency, coverage, and Doppler.
-- **Machine learning for SatCom**: channel prediction, beam management, and fault detection.
-- **Non-terrestrial networks (NTN)**: 5G/6G integration with satellite and aerial platforms.
-- **On-board AI**: radiation-tolerant, energy-efficient inference in orbit.
-- **Resource allocation**: power, bandwidth, and beam scheduling across footprints.
+- Optimize beam-hopping patterns with multi-agent DRL.
+- Allocate power and bandwidth for LEO/GEO networks.
+- Build digital twins of satellite constellations.
+- Manage inter-satellite links and handovers.
+- Predict demand and traffic hotspots.
+
+## Steps
+
+1. Collect constellation ephemeris and traffic demand.
+2. Build channel and demand models.
+3. Train DRL or optimization policies for beam/power.
+4. Evaluate in STK or custom simulators.
+5. Deploy on-board or ground-based controllers.
 
 ## Code pattern
 
@@ -450,28 +482,31 @@ model.fit(X, y)
 2. Design a beam-hopping policy and compare to a fixed beam plan.
 3. Simulate an NTN scenario and show throughput/latency trade-offs.
 ''',
-        "references": [
-            "https://doi.org/10.1109/comst.2025.3534617",
-            "https://arxiv.org/abs/2304.13008",
-            "https://doi.org/10.1002/sat.1482",
-            "https://ieeexplore.ieee.org/document/10886927",
-        ],
+        "references": ["https://doi.org/10.1109/comst.2025.3534617", "https://arxiv.org/abs/2304.13008", "https://doi.org/10.1002/sat.1482", "https://ieeexplore.ieee.org/document/10886927"],
     },
     {
         "name": "ai-for-optical-networks",
         "title": "AI for Optical Networks",
-        "description": "ML for optical performance monitoring, QoT estimation, traffic prediction, nonlinearity compensation, and optical layer provisioning.",
+        "description": "Estimate QoT, assign spectrum, and route traffic in elastic optical networks.",
         "devin_body": r'''## When to use
 
 You need to add intelligence to optical transport and access networks for performance monitoring, QoT estimation, traffic engineering, and fault management.
 
-## Key concepts
+## Usage
 
-- **Optical performance monitoring (OPM)**: infer OSNR, Q-factor, CD, PMD from signals.
-- **Quality of transmission (QoT) estimation**: predict whether a lightpath meets BER requirements.
-- **Traffic prediction and provisioning**: forecast demand and set up optical paths proactively.
-- **Nonlinearity compensation**: ML for digital backpropagation and amplifier control.
-- **AI/ML in elastic optical networks (EON)**: spectrum assignment and defragmentation.
+- Predict OSNR, BER, and QoT with DNNs (OCATA).
+- Solve QoT-aware routing and spectrum assignment (PtrNet-RSA).
+- Detect physical-layer anomalies in multiband links.
+- Optimize amplifier settings and launch power.
+- Plan lightpaths with digital twins.
+
+## Steps
+
+1. Collect topology, traffic, and physical-layer parameters.
+2. Build GN-model or data-driven QoT features.
+3. Train QoT and RSA models.
+4. Integrate with optical control plane.
+5. Validate against BER/Q-factor and blocking rate.
 
 ## Code pattern
 
@@ -500,28 +535,31 @@ model.fit(X, y)
 2. Predict traffic demand and provision optical paths ahead of peak load.
 3. Implement an ML-based nonlinearity precompensation and measure BER improvement.
 ''',
-        "references": [
-            "https://arxiv.org/abs/2003.05290",
-            "https://doi.org/10.1016/j.osn.2017.12.006",
-            "https://doi.org/10.1109/access.2023.3312387",
-            "https://doi.org/10.1109/access.2025.3569559",
-        ],
+        "references": ["https://arxiv.org/abs/2003.05290", "https://doi.org/10.1016/j.osn.2017.12.006", "https://doi.org/10.1109/access.2023.3312387", "https://doi.org/10.1109/access.2025.3569559"],
     },
     {
         "name": "ai-for-wireless-communications",
         "title": "AI for Wireless Communications",
-        "description": "ML for channel estimation, modulation recognition, MIMO, spectrum sensing, and end-to-end physical-layer design.",
+        "description": "Estimate channels, classify signals, and optimize MIMO and waveform design.",
         "devin_body": r'''## When to use
 
 You are applying ML to physical-layer and MAC-layer wireless problems such as channel estimation, modulation recognition, MIMO, and spectrum sensing.
 
-## Key concepts
+## Usage
 
-- **End-to-end and modular ML for PHY**: autoencoders, GNNs, and learned channel codes.
-- **Channel estimation and prediction**: LSTMs, transformers, and Gaussian processes.
-- **Modulation and signal classification**: CNNs on IQ samples and spectrograms.
-- **MIMO and beamforming**: hybrid precoding with learned analog/digital codebooks.
-- **Spectrum sensing and dynamic spectrum access**: detect and exploit spectrum holes.
+- Classify modulation and detect signals with SigKit.
+- Estimate MIMO-OFDM channels with diffusion or deep learning.
+- Optimize beamforming and precoding.
+- Detect anomalies and interference in RF data.
+- Build over-the-air datasets with GNU Radio.
+
+## Steps
+
+1. Collect IQ samples, channel measurements, or SDR data.
+2. Engineer RF features and impairments.
+3. Train modulation, channel, or waveform models.
+4. Validate over-the-air or with simulated channels.
+5. Deploy on SDR or baseband platforms.
 
 ## Code pattern
 
@@ -552,28 +590,31 @@ clf.fit(X, y)
 2. Build a learned channel estimator and compare to a pilot-based least-squares baseline.
 3. Demonstrate spectrum sensing on a real or emulated RF dataset.
 ''',
-        "references": [
-            "https://arxiv.org/abs/1809.08707",
-            "https://arxiv.org/abs/2407.11595",
-            "https://arxiv.org/abs/2001.04561",
-            "https://arxiv.org/abs/2007.05952",
-        ],
+        "references": ["https://arxiv.org/abs/1809.08707", "https://arxiv.org/abs/2407.11595", "https://arxiv.org/abs/2001.04561", "https://arxiv.org/abs/2007.05952"],
     },
     {
         "name": "ai-for-network-management",
         "title": "AI for Network Management",
-        "description": "AIOps for network monitoring, anomaly detection, root-cause analysis, configuration management, and predictive maintenance.",
+        "description": "Use AIOps to correlate alerts, find root causes, and automate network remediation.",
         "devin_body": r'''## When to use
 
 You are managing enterprise, cloud, or telecom networks and want to automate monitoring, troubleshooting, configuration, and capacity planning.
 
-## Key concepts
+## Usage
 
-- **AIOps and NetOps**: AI for IT operations and network operations.
-- **Telemetry and observability**: logs, metrics, flows, traces, and topology data.
-- **Anomaly detection and root-cause analysis**: time-series models, causal discovery, and LLMs.
-- **Incident management and self-healing**: ticket triage, remediation recommendation, and runbook automation.
-- **Configuration and change management**: validate config changes and predict risk.
+- Correlate multi-source alerts with BigPanda or Moogsoft.
+- Build IT/network knowledge graphs.
+- Predict and prevent incidents with anomaly detection.
+- Automate runbooks and remediation actions.
+- Track SLA, MTTR, and change impact.
+
+## Steps
+
+1. Ingest logs, metrics, events, and topology data.
+2. Build CMDB/knowledge graph and normalize alerts.
+3. Train correlation, RCA, and prediction models.
+4. Deploy AIOps playbooks and automation.
+5. Measure incident response and refine.
 
 ## Code pattern
 
@@ -601,11 +642,6 @@ df["anomaly_score"] = clf.decision_function(X)
 2. Correlate alerts into incident clusters and compare to manual ticket data.
 3. Prototype a configuration-risk classifier and test on historical change records.
 ''',
-        "references": [
-            "https://arxiv.org/abs/2507.12472v1",
-            "https://arxiv.org/abs/2406.11213",
-            "https://arxiv.org/abs/2605.12729v2",
-            "https://arxiv.org/abs/2404.01363",
-        ],
+        "references": ["https://arxiv.org/abs/2507.12472v1", "https://arxiv.org/abs/2406.11213", "https://arxiv.org/abs/2605.12729v2", "https://arxiv.org/abs/2404.01363"],
     },
 ]

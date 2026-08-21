@@ -2,20 +2,29 @@
 
 ## Description
 
-Computational models, simulations, and multiscale foundation models of living systems as AI-driven digital organisms.
+Build multiscale AI models that simulate living systems from molecules to organisms to guide biology and medicine in silico.
 
 ## When to use
 
 You want to simulate evolution, cellular behavior, or multiscale biological systems in silico as an alternative to risky or expensive wet-lab experiments.
 
-## Key concepts
+## Usage
 
-- **Digital organisms**: self-replicating programs or agents that evolve in a virtual environment.
-- **Artificial life (ALife)**: simulation of living systems and open-ended evolution.
-- **Multiscale foundation models**: AIDO-style integration from molecules to organisms.
-- **Agent-based models**: individuals interact, compete, and reproduce.
-- **Genotype-phenotype maps**: how genotypic changes translate to phenotypes.
-- **Evolutionary dynamics**: selection, mutation, drift, robustness, evolvability.
+- **Multiscale simulation**: integrate DNA, RNA, protein, cell, and phenotype models across biological scales.
+- **In silico perturbation**: predict the effects of mutations, drugs, or environmental changes at multiple levels.
+- **Evolutionary simulation**: study selection, mutation, drift, robustness, and evolvability in digital organisms.
+- **Agent-based modeling**: simulate individuals that interact, compete, and reproduce.
+- **AIDO-style workflows**: use YAML-driven frameworks to assemble and benchmark component foundation models.
+- **Wet-lab guidance**: compare in silico predictions to first-principles biology and targeted experiments.
+
+## Steps
+
+1. Define the biological scale and question (molecular, cellular, tissue, organism, or population).
+2. Assemble multimodal training data (sequences, structures, omics, images, phenotypes, spatial-temporal data).
+3. Select or pretrain component foundation models for each modality and scale.
+4. Integrate models via hierarchical representation propagation, nested fine-tuning, or cross-scale links.
+5. Run in silico perturbation or simulation experiments and compare outcomes to known biology.
+6. Validate key predictions with targeted wet-lab experiments and iterate the multiscale model.
 
 ## Code pattern
 

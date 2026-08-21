@@ -1,6 +1,6 @@
 # /ai-for-child-health
 
-Machine learning for pediatric diagnostics, developmental surveillance, pediatric AI readiness, and risk stratification for children.
+Use machine learning to support pediatric diagnostics, developmental surveillance, and risk stratification.
 
 ## Trigger
 

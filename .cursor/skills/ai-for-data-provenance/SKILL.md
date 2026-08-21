@@ -2,7 +2,7 @@
 
 ## Description
 
-Lineage tracking, W3C PROV, reproducible ML pipelines, experiment tracking, and provenance for explainable and trustworthy AI.
+Track the origin, transformation, and flow of data and AI artifacts.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You need to trace data origins, transformations, and decisions to ensure reprodu
 
 ## Usage
 
-- **Lineage and traceability**: record transformations from source to model.
-- **W3C PROV and standards**: represent provenance with interoperable models.
-- **ML experiment tracking**: version datasets, code, models, and metrics.
-- **Reproducibility and audit**: replay pipelines and verify outputs.
-- **Explainable AI**: link model predictions to training data and features.
+- Capture lineage with W3C PROV, MLflow, or yProv4ML.
+- Trace model training data, code, and parameters.
+- Version data, code, and models with DVC and Git.
+- Query provenance graphs in graph databases.
+- Reproduce experiments and audit AI systems.
 
 ## Steps
 
-1. Identify sources, transformations, and outputs in the data pipeline.
-2. Capture provenance metadata at each step using PROV or lineage APIs.
-3. Version data, code, and model artifacts.
-4. Index provenance for query, replay, and impact analysis.
-5. Audit provenance for compliance and debugging.
+1. Instrument pipelines to log activities and artifacts.
+2. Map entities, activities, and agents to a provenance graph.
+3. Store provenance in PROV-JSON, RDF, or graph DB.
+4. Build queries and visualizations for lineage.
+5. Audit and verify reproducibility.
 
 ## Code pattern
 

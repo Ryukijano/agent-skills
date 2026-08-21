@@ -2,17 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-synthetic-data",
         "title": "AI for Synthetic Data",
-        "description": "Generative models, differential privacy, tabular/image/text synthesis, and utility-privacy evaluation for creating realistic synthetic datasets.",
-        "devin_body": r'''## When to use
+        "description": "Use generative models and differential privacy to create realistic, useful, and privacy-preserving synthetic datasets.",
+        "devin_body": r'''
+## When to use
 
 You need to augment, privatize, or replace a real dataset with artificial samples for downstream ML, testing, or sharing while preserving privacy and utility.
 
-## Key concepts
+## Usage
 
-- **Tabular synthetic data**: GANs, VAEs, diffusion, copulas, and Bayesian networks for structured records.
-- **Differential privacy (DP)**: formal privacy budgets (epsilon/delta) when training generative models.
-- **LLM-driven text synthesis**: instruction-based generation for low-resource NLP.
-- **Utility-privacy trade-off**: fidelity metrics, downstream task performance, and membership-inference audits.
+- Generate tabular synthetic records with GANs, VAEs, diffusion, copulas, and Bayesian networks.
+- Apply differential privacy budgets when training generative models for release.
+- Synthesize text, images, and low-resource NLP data with LLMs.
+- Audit the utility-privacy trade-off with fidelity, downstream, and membership-inference tests.
+
+## Steps
+
+1. Profile the real dataset and identify sensitive variables and downstream use cases.
+2. Choose a synthesis method (GAN, VAE, diffusion, copula, LLM) and set privacy parameters.
+3. Train the generative model and apply differential privacy or other protections.
+4. Evaluate fidelity with marginals, conditionals, and propensity-score-based metrics.
+5. Audit with membership-inference and attribute-inference attacks before release.
+6. Document method, privacy assumptions, and utility limitations for downstream users.
 
 ## Code pattern
 
@@ -44,7 +54,7 @@ print("Utility gap:", real_on_real - syn_on_real)
 1. Train a classifier on synthetic data and evaluate its test AUC on real held-out data.
 2. Run a membership-inference attack against the synthetic release and report precision at fixed recall.
 3. Compare histograms and conditional distributions of key variables between real and synthetic data.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2403.04190",
             "https://arxiv.org/abs/2302.04062",
@@ -55,17 +65,27 @@ print("Utility gap:", real_on_real - syn_on_real)
     {
         "name": "ai-for-generative-engineering",
         "title": "AI for Generative Engineering",
-        "description": "Diffusion, VAE, and generative inverse design for engineering concepts, constraint-aware generation, and performance-conditioned shape and material synthesis.",
-        "devin_body": r'''## When to use
+        "description": "Use diffusion, VAEs, and flow models to generate engineering designs that meet performance and manufacturing constraints.",
+        "devin_body": r'''
+## When to use
 
 You are exploring novel engineering designs (shapes, structures, materials, or processes) and want to generate or complete candidates that satisfy performance and manufacturing constraints.
 
-## Key concepts
+## Usage
 
-- **Generative inverse design**: learn a distribution over design parameters conditioned on target performance.
-- **Constraint-aware generation**: embed physics, safety, or feasibility constraints into the generative process (e.g., negative-data training, repair loops).
-- **Diffusion and flow matching for design**: denoising and conditional diffusion for continuous or structured design spaces.
-- **Multi-objective and topology optimization**: generate Pareto-optimal designs and structures.
+- Generate design candidates conditioned on target performance with generative inverse design.
+- Embed physics, safety, and feasibility constraints into the generative process.
+- Apply diffusion and flow matching to continuous or structured design spaces.
+- Produce Pareto-optimal designs across multiple objectives.
+
+## Steps
+
+1. Define the design space, performance targets, and constraints (physics, safety, manufacturability).
+2. Train a generative model on existing designs and their performance labels.
+3. Add feasibility classifiers or repair loops to reject physically impossible designs.
+4. Generate a diverse set of candidates and evaluate with surrogate or full simulations.
+5. Check constraint satisfaction and compute the Pareto front across objectives.
+6. Validate top designs with high-fidelity FE/CFD and physical tests.
 
 ## Code pattern
 
@@ -95,7 +115,7 @@ def repair(design, simulator, target, max_iter=20, lr=0.01):
 1. Generate 100 structural/aerodynamic candidates and check what fraction satisfy constraints.
 2. Compare a generative inverse-design pipeline to a gradient-based inverse-design baseline.
 3. Plot the Pareto front of generated designs across performance and manufacturability.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2412.13281",
             "https://arxiv.org/abs/2306.15166",
@@ -106,17 +126,27 @@ def repair(design, simulator, target, max_iter=20, lr=0.01):
     {
         "name": "ai-for-computational-design",
         "title": "AI for Computational Design",
-        "description": "Differentiable simulation, topology optimization, CAD-aware generative models, and solver-in-the-loop co-design for architecture, products, and structures.",
-        "devin_body": r'''## When to use
+        "description": "Use differentiable simulation, topology optimization, and CAD-aware generative models to co-design products and structures.",
+        "devin_body": r'''
+## When to use
 
 You are designing buildings, products, mechanical parts, or architectural structures and need to integrate physical simulation, constraints, and AI-driven exploration into the design loop.
 
-## Key concepts
+## Usage
 
-- **Differentiable design**: combine neural networks with differentiable physics and geometry kernels.
-- **Topology and shape optimization**: SIMP, level-set, evolutionary, and gradient-based methods.
-- **Solver-aided generative models**: use geometric/physics solvers to ensure procedural CAD and structural feasibility.
-- **Design-space exploration**: multi-fidelity surrogates and optimal-transport interpolation of shapes.
+- Combine neural networks with differentiable physics and geometry kernels.
+- Run topology and shape optimization with SIMP, level-set, evolutionary, or gradient methods.
+- Ensure procedural CAD and structural feasibility with solver-aided generative models.
+- Explore multi-fidelity design spaces and interpolate shapes.
+
+## Steps
+
+1. Translate the design brief into geometry parameters, physics constraints, and objectives.
+2. Build or wrap a differentiable surrogate or high-fidelity solver for the design.
+3. Optimize topology or shape parameters with gradient or evolutionary search.
+4. Add fabrication and assembly constraints early in the loop.
+5. Validate optimized designs with high-fidelity FE/CFD and physical prototypes.
+6. Generate production-ready CAD and run DRC or kernel checks.
 
 ## Code pattern
 
@@ -149,7 +179,7 @@ for _ in range(100):
 1. Optimize a simple truss or shell structure and compare compliance to a baseline.
 2. Generate a parametric CAD part from a design brief and verify it with a CAD kernel.
 3. Run a multi-objective design sweep and identify the knee of the Pareto front.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2409.02606",
             "https://arxiv.org/abs/2511.17111",
@@ -160,18 +190,28 @@ for _ in range(100):
     {
         "name": "ai-for-human-centered-ai",
         "title": "AI for Human-Centered AI",
-        "description": "Human-AI interaction, explainability, trust, feedback loops, participatory design, and human-in-the-loop ML to keep people at the center of AI systems.",
-        "devin_body": r'''## When to use
+        "description": "Use human-AI interaction, explainability, and participatory design to keep people at the center of AI systems.",
+        "devin_body": r'''
+## When to use
 
 You are building an AI system that people must understand, trust, and effectively collaborate with, and you want to center end-user needs, capabilities, and values in the design.
 
-## Key concepts
+## Usage
 
-- **Human-AI interaction (HAII)**: designing prompts, interfaces, and interaction modes for collaboration.
-- **Explainability and transparency**: feature attribution, counterfactuals, and model cards.
-- **Human-in-the-loop ML**: active learning, feedback, and interactive model refinement.
-- **Trust and overreliance**: calibrated trust, appropriate reliance, and cognitive load.
-- **Participatory and value-sensitive design**: co-design with stakeholders and impacted communities.
+- Design prompts and interfaces for effective human-AI collaboration.
+- Provide feature attribution, counterfactuals, and model cards for explainability.
+- Collect human feedback with active learning and interactive model refinement.
+- Calibrate trust and avoid overreliance through appropriate reliance interfaces.
+- Co-design with stakeholders and impacted communities.
+
+## Steps
+
+1. Identify user needs, mental models, and values for the target task or decision.
+2. Design the interaction (prompts, displays, explanations) and collect user feedback.
+3. Implement explainability methods matched to the user's level of expertise.
+4. Run human-AI experiments and measure task success, trust, and overreliance.
+5. Iterate on the interface and model based on user feedback.
+6. Deploy with monitoring for fairness, accessibility, and sustained human control.
 
 ## Code pattern
 
@@ -200,7 +240,7 @@ feature_rank = dict(zip(X_test.columns, importance.importances_mean))
 1. Run a human-AI co-creation study and compare idea quality and ownership across interaction modes.
 2. Evaluate an explanation interface with a think-aloud protocol and task success.
 3. Monitor for overreliance in a deployed decision-support tool and adjust confidence displays.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2601.11812",
             "https://dl.acm.org/doi/10.1145/3544548.3580959",
@@ -211,18 +251,28 @@ feature_rank = dict(zip(X_test.columns, importance.importances_mean))
     {
         "name": "ai-for-ai-ethics",
         "title": "AI for AI Ethics",
-        "description": "Fairness, accountability, transparency, privacy, and value alignment in AI systems, including bias auditing, model cards, and stakeholder deliberation.",
-        "devin_body": r'''## When to use
+        "description": "Audit automated hiring and public-sector AI systems for disparate impact, transparency gaps, and compliance with bias-auditing laws like NYC Local Law 144.",
+        "devin_body": r'''
+## When to use
 
 You need to identify, measure, and mitigate ethical risks such as bias, discrimination, privacy violations, lack of transparency, or harm in an AI system or dataset.
 
-## Key concepts
+## Usage
 
-- **Fairness and non-discrimination**: demographic parity, equalized odds, calibration, and fairness constraints.
-- **Explainability and transparency**: model cards, datasheets, SHAP, LIME, and counterfactual explanations.
-- **Accountability and auditability**: algorithmic audits, logging, and governance records.
-- **Privacy and data ethics**: consent, differential privacy, and data minimization.
-- **Value pluralism and stakeholder engagement**: participatory ethics and value-sensitive design.
+- Audit models for demographic parity, equalized odds, and calibration across groups.
+- Generate SHAP, LIME, and counterfactual explanations for high-stakes decisions.
+- Maintain model cards, datasheets, and algorithmic audit logs.
+- Apply differential privacy, consent, and data minimization practices.
+- Engage stakeholders and use value-sensitive design.
+
+## Steps
+
+1. Define the protected groups and ethical risks for the use case.
+2. Run a quantitative fairness audit and report subgroup performance.
+3. Generate explanations and conduct stakeholder impact assessments.
+4. Choose and apply an intervention (reweighting, threshold tuning, etc.).
+5. Re-audit the system and document trade-offs in a model card.
+6. Establish ongoing monitoring and governance for ethical risks.
 
 ## Code pattern
 
@@ -248,7 +298,7 @@ print("DP:", dp, "EO:", eo)
 1. Run a fairness audit on a credit or hiring model and report disparities by protected group.
 2. Generate SHAP or counterfactual explanations for high-stakes decisions.
 3. Compare an intervention (e.g., reweighting or threshold tuning) against a baseline across metrics.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2402.08323",
             "https://arxiv.org/abs/2311.17228",
@@ -259,18 +309,28 @@ print("DP:", dp, "EO:", eo)
     {
         "name": "ai-for-ai-governance",
         "title": "AI for AI Governance",
-        "description": "Risk management, accountability, lifecycle governance, standards, and multi-stakeholder oversight for trustworthy and responsible AI organizations.",
-        "devin_body": r'''## When to use
+        "description": "Use frameworks, risk registers, and lifecycle oversight to manage AI systems responsibly.",
+        "devin_body": r'''
+## When to use
 
 You are establishing or operating governance for an AI system or portfolio and need to map risks, assign accountability, and align with standards and regulations.
 
-## Key concepts
+## Usage
 
-- **AI risk management**: identify, assess, treat, and monitor risks across the AI lifecycle.
-- **Governance frameworks**: NIST AI RMF, OECD AI Principles, ISO/IEC 42001, and AI management systems.
-- **Accountability and roles**: map responsibilities for developers, deployers, users, and impacted parties.
-- **Lifecycle governance**: requirements, data, model, deployment, monitoring, and incident response.
-- **Stakeholder and multi-stakeholder governance**: oversight boards, audits, and public engagement.
+- Map, assess, treat, and monitor risks across the AI lifecycle.
+- Align with NIST AI RMF, OECD AI Principles, ISO/IEC 42001, and other frameworks.
+- Assign accountability to developers, deployers, users, and impacted parties.
+- Maintain lifecycle governance over data, model, deployment, monitoring, and incident response.
+- Engage oversight boards and multi-stakeholder governance.
+
+## Steps
+
+1. Identify the AI system, use case, and applicable regulations or standards.
+2. Create a risk register with likelihood, impact, owners, and treatment controls.
+3. Map the lifecycle against the chosen governance framework.
+4. Assign roles and responsibilities for each lifecycle stage.
+5. Run incident-response tabletop exercises and establish monitoring.
+6. Review and update governance artifacts as the system and regulations evolve.
 
 ## Code pattern
 
@@ -298,7 +358,7 @@ print(risks.sort_values("score", ascending=False))
 1. Produce a risk register and control plan for a high-risk AI use case.
 2. Map an AI system's lifecycle against a chosen framework (e.g., NIST AI RMF).
 3. Run a tabletop incident-response exercise for a model failure or bias complaint.
-''',
+        ''',
         "references": [
             "https://www.oecd.org/en/topics/ai-principles.html",
             "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
@@ -309,18 +369,28 @@ print(risks.sort_values("score", ascending=False))
     {
         "name": "ai-for-ai-safety",
         "title": "AI for AI Safety",
-        "description": "Alignment, robustness, interpretability, red teaming, monitoring, and safe deployment of AI systems, especially large language and agentic models.",
-        "devin_body": r'''## When to use
+        "description": "Use alignment, red teaming, interpretability, and monitoring to reduce harmful or unintended AI behavior.",
+        "devin_body": r'''
+## When to use
 
 You are training, aligning, evaluating, or deploying an AI system and want to reduce harmful, unintended, or adversarial behavior before and after release.
 
-## Key concepts
+## Usage
 
-- **Alignment and value learning**: RLHF, RLAIF, DPO, Constitutional AI, and preference learning.
-- **Robustness and adversarial evaluation**: red teaming, jailbreaks, and safety evaluation benchmarks.
-- **Interpretability for safety**: representation engineering, activation probes, and concept-based explanations.
-- **Monitoring and assurance**: behavioral monitoring, anomaly detection, and model reporting.
-- **Scalable oversight**: handle tasks where human evaluation is expensive or error-prone.
+- Align models with RLHF, RLAIF, DPO, Constitutional AI, and preference learning.
+- Red-team for jailbreaks, adversarial behavior, and safety benchmark failures.
+- Interpret representations with activation probes and concept-based explanations.
+- Monitor behavior and detect anomalies in deployment.
+- Provide scalable oversight for tasks where human evaluation is expensive.
+
+## Steps
+
+1. Define the safety properties and adversarial evaluation set.
+2. Run red teaming with diverse, multilingual, and multi-turn attacks.
+3. Apply an alignment or preference-learning method and measure safety vs. capability.
+4. Use interpretability tools to inspect harmful concepts and steering.
+5. Implement behavioral monitoring and anomaly detection.
+6. Iterate with human review, incident-response playbooks, and deployment gating.
 
 ## Code pattern
 
@@ -352,7 +422,7 @@ probe = SafetyProbe(hidden_dim=4096)
 1. Run an automated red-team benchmark and report attack success rate before and after mitigations.
 2. Train or evaluate an alignment method (e.g., DPO) on a preference dataset.
 3. Inspect model activations for a harmful concept and compare to a benign baseline.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2310.19852",
             "https://arxiv.org/abs/2604.20945",
@@ -363,18 +433,28 @@ probe = SafetyProbe(hidden_dim=4096)
     {
         "name": "ai-for-ai-policy",
         "title": "AI for AI Policy",
-        "description": "Regulatory analysis, risk classification, standards mapping, policy evaluation, and evidence synthesis for national and international AI governance.",
-        "devin_body": r'''## When to use
+        "description": "Use regulatory analysis, risk classification, and standards mapping to inform AI policy and compliance.",
+        "devin_body": r'''
+## When to use
 
 You are advising or developing AI policy, mapping regulations to technical requirements, or evaluating how a law or standard affects an AI system or market.
 
-## Key concepts
+## Usage
 
-- **Risk-based regulation**: classify AI systems by risk level and assign obligations (e.g., EU AI Act).
-- **Policy instruments**: hard law, soft law, standards, sandboxes, procurement, and sectoral guidance.
-- **Regulatory learning**: monitoring, feedback, and iterative policy updates as technology evolves.
-- **International cooperation and interoperability**: OECD, ISO, and cross-border alignment.
-- **Policy evaluation**: ex-ante and ex-post assessment of economic, social, and rights impacts.
+- Classify AI systems by risk tier and map obligations (e.g., EU AI Act).
+- Compare policy instruments: hard law, soft law, standards, sandboxes, procurement.
+- Track regulatory learning and iterative updates as technology evolves.
+- Align international standards (OECD, ISO) and cross-border requirements.
+- Evaluate ex-ante and ex-post policy impacts.
+
+## Steps
+
+1. Identify the AI system, jurisdiction, and relevant legal and standards landscape.
+2. Map features and risk tier to specific obligations and technical requirements.
+3. Translate legal terms into verifiable engineering checks (data quality, logging, oversight).
+4. Compare national or regional strategies for convergence and divergence.
+5. Produce a policy brief with concrete technical and governance measures.
+6. Track regulatory changes and update compliance mapping.
 
 ## Code pattern
 
@@ -403,7 +483,7 @@ print(compliance_matrix)
 1. Map the EU AI Act obligations for a candidate high-risk AI system.
 2. Compare national AI strategies across at least three jurisdictions for convergence and divergence.
 3. Produce a policy brief with technical requirements derived from a regulation or standard.
-''',
+        ''',
         "references": [
             "https://arxiv.org/pdf/2409.00264",
             "https://arxiv.org/abs/2503.05787",
@@ -414,18 +494,28 @@ print(compliance_matrix)
     {
         "name": "ai-for-responsible-innovation",
         "title": "AI for Responsible Innovation",
-        "description": "Anticipatory governance, ethical deliberation, stakeholder engagement, regulatory foresight, and impact assessment for emerging AI technologies.",
-        "devin_body": r'''## When to use
+        "description": "Use anticipatory governance, stakeholder engagement, and impact assessment to steer emerging AI technologies responsibly.",
+        "devin_body": r'''
+## When to use
 
 You are developing or steering a novel AI technology and want to anticipate social, ethical, and regulatory impacts early and embed responsible practices into R&D.
 
-## Key concepts
+## Usage
 
-- **Anticipatory governance**: foresight, horizon scanning, and scenario planning for emerging technologies.
-- **Responsible research and innovation (RRI)**: inclusivity, anticipation, reflexivity, and responsiveness.
-- **Stakeholder and public engagement**: deliberative forums, citizen juries, and participatory design.
-- **Regulatory foresight and sandboxes**: adaptive governance, experimentation, and learning.
-- **Impact assessment**: societal, environmental, and human-rights impact analysis.
+- Conduct foresight, horizon scanning, and scenario planning.
+- Apply responsible research and innovation principles (inclusivity, anticipation, reflexivity, responsiveness).
+- Engage the public and stakeholders through deliberative forums and co-design.
+- Run regulatory sandboxes and adaptive governance experiments.
+- Assess societal, environmental, and human-rights impacts.
+
+## Steps
+
+1. Identify the emerging technology and its possible societal implications.
+2. Run horizon scanning and develop scenarios with diverse stakeholders.
+3. Map stakeholders, risks, and responsible-innovation actions.
+4. Design a sandbox, pilot, or stakeholder deliberation to test assumptions.
+5. Evaluate impacts and document trade-offs and uncertainties.
+6. Iterate governance and R&D as impacts become clearer.
 
 ## Code pattern
 
@@ -453,7 +543,7 @@ print(actions.sort_values("priority"))
 1. Conduct a scenario-planning workshop for an emerging AI application and document key uncertainties.
 2. Map stakeholders, risks, and mitigation actions for a technology launch.
 3. Evaluate a regulatory sandbox proposal against responsible-innovation criteria.
-''',
+        ''',
         "references": [
             "https://arxiv.org/pdf/2501.05921",
             "https://arxiv.org/abs/2502.14869",
@@ -464,18 +554,28 @@ print(actions.sort_values("priority"))
     {
         "name": "ai-for-tech-forecasting",
         "title": "AI for Tech Forecasting",
-        "description": "Patent and publication analysis, trend extrapolation, expert elicitation, and ML models for predicting technological progress and emerging AI capabilities.",
-        "devin_body": r'''## When to use
+        "description": "Use patents, publications, funding, and expert judgment to forecast technological progress and emerging capabilities.",
+        "devin_body": r'''
+## When to use
 
 You want to predict the pace, direction, or feasibility of technological progress to guide R&D investment, policy, or safety planning.
 
-## Key concepts
+## Usage
 
-- **Data sources for tech forecasting**: patents, publications, funding, product releases, and expert surveys.
-- **Trend and time-series models**: S-curves, ARIMA, autoencoders, and transformer-based predictors.
-- **Technological convergence and opportunity discovery**: link prediction and topic modeling on patent/paper graphs.
-- **Expert judgement and Delphi methods**: structured elicitation, aggregation, and calibration.
-- **Forecast evaluation**: calibration, Brier score, and accuracy over multiple time horizons.
+- Collect patents, papers, funding, product releases, and expert surveys.
+- Model S-curves, ARIMA, autoencoders, and transformer-based technology trends.
+- Discover technological convergence and opportunities with topic and link models.
+- Aggregate expert judgment with Delphi and structured elicitation.
+- Evaluate forecasts with Brier scores and calibration over horizons.
+
+## Steps
+
+1. Define the technology, metric, and forecasting horizon.
+2. Gather historical data (patents, papers, funding, product releases) and expert judgments.
+3. Train or fit trend, topic, or link-prediction models.
+4. Backtest on held-out time periods and avoid look-ahead bias.
+5. Combine model and expert forecasts and report uncertainty scenarios.
+6. Update regularly as new signals and events emerge.
 
 ## Code pattern
 
@@ -504,7 +604,7 @@ print("Forecasts:", model.predict(future_years))
 1. Build a model to forecast a technology metric and backtest on historical data.
 2. Use patent topic modeling to identify emerging technology combinations.
 3. Compare an ML forecast to expert elicitation on a set of concrete questions.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2605.22681",
             "https://arxiv.org/pdf/2008.01848",
@@ -515,18 +615,28 @@ print("Forecasts:", model.predict(future_years))
     {
         "name": "ai-for-future-of-work",
         "title": "AI for Future of Work",
-        "description": "Automation and augmentation analysis, skill demand forecasting, workforce transitions, algorithmic management, and human-centered labor market policy.",
-        "devin_body": r'''## When to use
+        "description": "Use AI exposure and skill-demand analysis to understand workforce transitions and support human-centered labor policy.",
+        "devin_body": r'''
+## When to use
 
 You are analyzing how AI changes occupations, tasks, hiring, productivity, job quality, or workforce skills and designing policy or organizational responses.
 
-## Key concepts
+## Usage
 
-- **AI exposure and task automation**: task-level models of automation and augmentation potential.
-- **Skill demand and transitions**: reskilling, upskilling, and occupational mobility.
-- **Algorithmic management**: AI-driven scheduling, monitoring, evaluation, and worker autonomy.
-- **Job quality and equity**: wages, working conditions, discrimination, and worker voice.
-- **Human-centered labor policy**: social dialogue, safety nets, and lifelong learning.
+- Estimate task-level automation and augmentation potential.
+- Model skill demand, reskilling, upskilling, and occupational mobility.
+- Analyze algorithmic management in scheduling, monitoring, and evaluation.
+- Assess job quality, wages, equity, and worker voice.
+- Co-design labor policy with workers and social partners.
+
+## Steps
+
+1. Collect task-level occupational data and identify AI-exposed tasks.
+2. Build or use an AI-exposure scoring model and validate against expert labels.
+3. Model task reallocation, reskilling needs, and occupational mobility.
+4. Pilot an AI tool and measure effects on task time, output, and job quality.
+5. Engage workers and unions in co-designing transitions and safeguards.
+6. Evaluate outcomes and adjust policy or organizational responses.
 
 ## Code pattern
 
@@ -555,7 +665,7 @@ print("Job-level AI exposure:", job_exposure)
 1. Compute AI-exposure scores for a set of occupations and compare to official estimates.
 2. Model the effect of an AI tool on task time and output quality with a pilot study.
 3. Evaluate a reskilling program by tracking job placement and wage outcomes.
-''',
+        ''',
         "references": [
             "https://www.oecd.org/en/topics/future-of-work.html",
             "https://oecd.ai/en/working-group-future-of-work",
@@ -566,18 +676,28 @@ print("Job-level AI exposure:", job_exposure)
     {
         "name": "ai-for-digital-twin-simulation",
         "title": "AI for Digital Twin Simulation",
-        "description": "High-fidelity virtual replicas, real-time synchronization, physics-informed and data-driven simulation, and AI training environments for cyber-physical systems.",
-        "devin_body": r'''## When to use
+        "description": "Use physics-informed and data-driven simulation to build digital twins of physical assets, processes, and environments.",
+        "devin_body": r'''
+## When to use
 
 You are building a virtual replica of a physical asset, process, or environment to monitor, simulate, optimize, or train AI agents before real-world deployment.
 
-## Key concepts
+## Usage
 
-- **Digital twin architecture**: ISO 23247 reference architecture, modeling, mirroring, intervention, and management.
-- **Real-time synchronization**: sensor fusion, state estimation, and IoT data pipelines.
-- **Physics-informed and data-driven simulation**: combine first-principle models with ML surrogates.
-- **AI simulation and synthetic environments**: train and test AI agents safely in virtual worlds.
-- **Lifecycle value**: predictive maintenance, what-if analysis, and closed-loop control.
+- Mirror physical assets with ISO 23247 architecture and IoT data pipelines.
+- Synchronize real-time state with sensor fusion and state estimation.
+- Combine first-principle models with ML surrogates.
+- Train and test AI agents safely in virtual replicas.
+- Support predictive maintenance, what-if analysis, and closed-loop control.
+
+## Steps
+
+1. Define the physical asset, process, or environment and the twin's purpose.
+2. Build a physics-based or data-driven model and connect live sensor streams.
+3. Train ML surrogates for computationally expensive sub-models.
+4. Validate the twin continuously against real measurements and detect drift.
+5. Run what-if scenarios, optimize control, or train RL agents in the twin.
+6. Deploy closed-loop control with safety limits and update the twin over its lifecycle.
 
 ## Code pattern
 
@@ -606,7 +726,7 @@ for t in range(100):
 1. Build a digital twin of a production line and compare predicted KPIs to actual measurements.
 2. Train an RL agent in the twin and transfer the policy to the physical system.
 3. Run what-if scenarios and stress tests to assess resilience to disruptions.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2506.06580",
             "https://arxiv.org/abs/2601.01321",

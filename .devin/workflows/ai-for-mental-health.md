@@ -1,6 +1,6 @@
 # /ai-for-mental-health
 
-CBT-based chatbots, mood tracking, crisis triage, digital therapeutics, and scalable psychological support for consumers.
+Use AI to deliver low-intensity CBT support, track mood, triage crisis risk, and keep human clinicians in the loop for escalation.
 
 ## Trigger
 

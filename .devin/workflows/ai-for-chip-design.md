@@ -1,6 +1,6 @@
 # /ai-for-chip-design
 
-ML for RTL generation, EDA scripting, floorplanning, placement, routing, timing optimization, and analog/mixed-signal design.
+Use machine learning to generate RTL, floorplan chips, optimize placement, and assist analog and mixed-signal design.
 
 ## Trigger
 

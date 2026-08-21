@@ -1,6 +1,6 @@
 # /ai-for-discrete-manufacturing
 
-Machine learning for assembly, machining, electronics, and automotive part production: process planning, scheduling, robotic assembly, and work-in-progress tracking.
+Schedules jobs, routes work through machines, and coordinates robotic cells for assembly and machining operations.
 
 ## Trigger
 

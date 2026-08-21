@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for predicting crop water demand, scheduling irrigation, and optimising water use through IoT and weather data integration.
+Optimize water use and irrigation schedules from weather, soil, and crop data.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You want to improve irrigation scheduling, estimate crop evapotranspiration, or 
 
 ## Usage
 
-- **Soil moisture and water demand prediction**: forecast short-term crop water requirements.
-- **Irrigation scheduling**: recommend timing, depth, and frequency of irrigation events.
-- **Deficit and precision irrigation**: optimise water use under scarcity constraints.
-- **Smart valve and pump control**: integrate ML forecasts with automated actuators.
+- Predict evapotranspiration with NeuralFAO56 or pyfao56.
+- Schedule irrigation from soil moisture and weather forecasts.
+- Detect water stress with satellite and drone imagery.
+- Optimize deficit irrigation for yield and water savings.
+- Integrate with drip, pivot, and automated valve systems.
 
 ## Steps
 
-1. Assemble soil, weather, crop-stage, and (optionally) remote-sensing time series.
-2. Define the target: soil moisture, evapotranspiration, or applied water volume.
-3. Train a regression or time-series model with season-aware train/test splits.
-4. Generate irrigation schedules and quantify expected water savings and yield effects.
-5. Deploy the model with sensor feeds and feedback loops for continuous improvement.
+1. Collect weather, soil moisture, and crop growth data.
+2. Compute reference ET and crop coefficients.
+3. Train models for ET, soil moisture, or yield response.
+4. Generate irrigation prescriptions and triggers.
+5. Validate against soil moisture and yield outcomes.
 
 ## Code pattern
 

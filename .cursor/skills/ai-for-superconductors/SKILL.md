@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for superconductor discovery, critical temperature prediction, electron-phonon modeling, and materials screening.
+Apply ML to discover superconductors, predict critical temperature and electron-phonon coupling, and screen candidates through DFT-integrated pipelines.
 
 ## When to use
 
 You are searching for new superconducting compounds or trying to predict $T_c$, critical fields, or electron-phonon coupling from crystal and electronic structure.
 
-## Key concepts
+## Usage
 
-- **Critical temperature prediction**: supervised models trained on the SuperCon database and DFT descriptors.
-- **High-throughput screening**: ML filters for electron-phonon coupling, structural stability, and thermodynamic synthesizability.
-- **Equivariant graph neural networks**: structure-aware models that respect crystal symmetries for superconducting properties.
-- **AI-accelerated discovery pipelines**: combine generative models, interatomic potentials, and DFT to propose and validate candidates.
-- **Unconventional and topological superconductivity**: data-driven searches for non-phonon pairing mechanisms and quantum materials.
+- Predict $T_c$ and electron-phonon properties from crystal structure and DFT descriptors.
+- Screen large databases for electron-phonon coupling, stability, and synthesizability.
+- Use equivariant graph neural networks that respect crystal symmetries for superconducting properties.
+- Combine generative models, ML potentials, and DFT in an AI-accelerated discovery pipeline.
+
+## Steps
+
+1. Curate the SuperCon database or DFT-derived electron-phonon data and compute composition/structure descriptors.
+2. Train a classifier or regression model to predict $T_c$ and rank candidates for further study.
+3. Screen databases with ML filters for structural stability, electron-phonon coupling, and synthesizability.
+4. Apply equivariant GNNs to refine predictions using crystal-symmetry-aware representations.
+5. Use generative models and ML potentials to propose novel candidates and relax them with DFT.
+6. Validate the most promising candidates experimentally and report both MAE and true-positive rates.
 
 ## Code pattern
 

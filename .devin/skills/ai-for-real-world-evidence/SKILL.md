@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for extracting, validating, and synthesizing real-world evidence from EHRs, claims, registries, and wearables for regulatory and clinical decisions.
+Generate regulatory and HTA evidence from EHR, claims, and registry data.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You need to generate or evaluate clinical evidence from routinely collected data
 
 ## Usage
 
-- **RWE generation**: design and analyze non-interventional studies from RWD.
-- **Data fit-for-purpose assessment**: evaluate reliability and relevance of RWD sources.
-- **Target trial emulation**: mimic an RCT design using observational data.
-- **Decision support**: translate RWE into individualized treatment recommendations.
+- Link RWD sources across EHR, claims, and disease registries.
+- Apply fit-for-purpose assessments per FDA/EMA guidance.
+- Run target trial emulation and causal inference.
+- Build external control arms for single-arm studies.
+- Create interactive evidence dashboards for HTA bodies.
 
 ## Steps
 
-1. Define the research question and regulatory or decision context.
-2. Map RWD sources (EHR, claims, registries, wearables) to study variables.
-3. Apply causal inference and ML methods with appropriate validation.
-4. Assess data quality, representativeness, and bias.
-5. Document fit-for-purpose and produce reproducible evidence packages.
+1. Define the research question and regulatory use case.
+2. Assess RWD source fitness and data quality.
+3. Curate exposure, outcome, and confounder variables.
+4. Apply causal or predictive methods and sensitivity checks.
+5. Document evidence in a regulatory/HTA submission package.
 
 ## Code pattern
 
@@ -56,7 +57,7 @@ for train_idx, test_idx in tscv.split(X):
 ## References
 
 - https://www.fda.gov/drugs/development-resources/advancing-real-world-evidence-program-frequently-asked-questions
-- https://uscode.house.gov/view.xhtml?req=%28title%3A21+section%3A355g+edition%3Aprelim%29
+- https://www.law.cornell.edu/uscode/text/21/355g
 - https://bmcmedinformdecismak.biomedcentral.com/counter/pdf/10.1186/s12911-021-01403-2.pdf
 - https://pmc.ncbi.nlm.nih.gov/articles/PMC9189725/
 - https://www.nature.com/articles/s43588-025-00901-x

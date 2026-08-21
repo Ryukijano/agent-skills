@@ -1,6 +1,6 @@
 # /ai-for-rail
 
-AI for railway infrastructure health, predictive maintenance, train scheduling, energy optimization, and real-time disruption management.
+Use machine learning to monitor rail infrastructure, predict failures, optimize timetables, and manage service disruptions.
 
 ## Trigger
 

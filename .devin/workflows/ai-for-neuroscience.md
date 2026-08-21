@@ -1,6 +1,6 @@
 # /ai-for-neuroscience
 
-Deep learning for neural recordings, brain decoding, neuroimaging analysis, connectomics, and NeuroAI foundation models.
+Decode speech and motor intent from electrocorticography to restore communication and movement via brain-computer interfaces.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-warehouse-robotics
 
-AI for autonomous mobile robots, goods-to-person systems, picking, multi-agent path finding, task allocation, and warehouse traffic management.
+Use machine learning to route mobile robots, allocate tasks, avoid congestion, and manage traffic in goods-to-person warehouses.
 
 ## Trigger
 

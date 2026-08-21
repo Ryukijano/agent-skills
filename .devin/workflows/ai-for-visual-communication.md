@@ -1,6 +1,6 @@
 # /ai-for-visual-communication
 
-Generating and refining posters, slides, brand assets, and visual narratives with diffusion models and design tools.
+Create and refine posters, slides, pitch decks and social-media assets using diffusion models, layout tools and human-in-the-loop design.
 
 ## Trigger
 

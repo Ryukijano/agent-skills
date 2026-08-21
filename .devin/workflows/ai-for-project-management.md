@@ -1,6 +1,6 @@
 # /ai-for-project-management
 
-Schedule and cost forecasting, risk triage, resource optimization, and AI-driven project health monitoring.
+Use AI to plan or execute projects and need to forecast duration, cost, risk, or resource bottlenecks across the project lifecycle.
 
 ## Trigger
 

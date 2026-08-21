@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for code generation, testing, debugging, program repair, code review, and design assistance.
+Use AI to generate, review, and test code across the software lifecycle.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are building, maintaining, or reviewing software and want to use AI to gener
 
 ## Usage
 
-- **Code generation and completion**: large language models and code-specific foundation models.
-- **Automated testing and fuzzing**: generating test cases and oracles.
-- **Bug detection and program repair**: static analysis, code review, and patch generation.
-- **Requirements and design**: natural-language-to-code, architecture suggestion.
-- **Software verification and security**: formal methods, vulnerability detection.
+- Complete and refactor code with GitHub Copilot or Cody.
+- Run static analysis with SonarQube and ESLint.
+- Generate unit tests and property-based checks.
+- Predict bug-prone files and triage CI failures.
+- Summarize code and documentation with LLMs.
 
 ## Steps
 
-1. Collect code repositories, issue trackers, test suites, and documentation.
-2. Preprocess and chunk code, add retrieval context, and build prompts.
-3. Fine-tune or prompt a code model for generation, test, or repair tasks.
-4. Validate generated outputs with compilers, linters, and CI tests.
-5. Iterate with developer feedback and versioned benchmarks.
+1. Index repositories and set up code-quality baselines.
+2. Fine-tune or prompt LLMs on internal style and APIs.
+3. Automate generation, review, and test coverage checks in CI.
+4. Track bug-proneness and build-failure trends.
+5. Measure impact on cycle time and defect escape rate.
 
 ## Code pattern
 

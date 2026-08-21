@@ -1,6 +1,6 @@
 # /ai-for-satellite-imaging
 
-Earth observation foundation models, land-use classification, change detection, and disaster mapping.
+Apply remote-sensing foundation models and deep learning to classify land cover, detect changes, and map disasters from satellite and aerial imagery.
 
 ## Trigger
 

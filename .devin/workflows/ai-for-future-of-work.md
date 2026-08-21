@@ -1,6 +1,6 @@
 # /ai-for-future-of-work
 
-Automation and augmentation analysis, skill demand forecasting, workforce transitions, algorithmic management, and human-centered labor market policy.
+Use AI exposure and skill-demand analysis to understand workforce transitions and support human-centered labor policy.
 
 ## Trigger
 

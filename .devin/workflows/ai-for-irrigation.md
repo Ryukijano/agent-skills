@@ -1,6 +1,6 @@
 # /ai-for-irrigation
 
-Machine learning for predicting crop water demand, scheduling irrigation, and optimising water use through IoT and weather data integration.
+Optimize water use and irrigation schedules from weather, soil, and crop data.
 
 ## Trigger
 

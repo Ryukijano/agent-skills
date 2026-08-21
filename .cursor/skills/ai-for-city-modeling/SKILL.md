@@ -2,7 +2,7 @@
 
 ## Description
 
-Urban digital twins, 3D city reconstruction, generative city models, and AI-driven urban simulation for planning and operations.
+Reconstructs 3D city environments and integrates live data into digital twins for planning and operations.
 
 ## When to use
 
@@ -17,8 +17,8 @@ You are building or querying a digital twin, synthesizing urban environments, or
 
 ## Steps
 
-1. Gather geospatial, sensor, and asset data for the target city.
-2. Reconstruct 3D geometry and semantics.
+1. Gather geospatial, sensor, and asset data from OpenStreetMap, DEM, and satellite sources.
+2. Reconstruct 3D geometry and semantics with CityGML, TUM2TWIN, or OpenUSD toolchains.
 3. Integrate data streams into a digital twin or simulator platform.
 4. Train and validate AI models for prediction and scenario analysis.
 5. Visualize and continuously update the model.

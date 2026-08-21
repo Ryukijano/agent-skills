@@ -1,6 +1,6 @@
 # /ai-for-quantum-hardware
 
-ML-driven qubit control, calibration, error decoding, and quantum processor design for superconducting, trapped-ion, and neutral-atom systems.
+Use machine learning to calibrate qubits, decode errors, optimize control pulses, and design quantum processor components.
 
 ## Trigger
 

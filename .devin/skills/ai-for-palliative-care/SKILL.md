@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for prognostication, symptom management, hospice suitability, advance care planning, and ethical decision support in end-of-life care.
+Use machine learning for prognostication, symptom management, hospice suitability, and advance care planning in end-of-life care.
 
 ## When to use
 
 You need to identify patients who may benefit from palliative or hospice care, forecast prognosis, or personalize symptom management.
 
-## Key concepts
+## Usage
 
-- **Mortality and prognosis models**: EHR-based models that estimate 6- or 12-month mortality for referral triggers.
-- **Hospice suitability**: classify optimal care model (home, inpatient, shared) from health-assessment data.
-- **Symptom assessment**: NLP of clinical notes for pain, dyspnea, fatigue, and psychosocial distress.
-- **Advance care planning**: automated alerts for goals-of-care conversations and do-not-resuscitate documentation.
+- Estimate 6- or 12-month mortality from EHR for referral triggers.
+- Classify optimal care models (home, inpatient, shared) from health assessments.
+- Extract pain, dyspnea, fatigue, and psychosocial distress from clinical notes.
+- Alert clinicians to goals-of-care conversations and documentation needs.
+
+## Steps
+
+1. Define the palliative outcome (mortality, symptom, care setting) and assemble EHR.
+2. Use time-stamped EHR splits and avoid labels that depend on the referral decision itself.
+3. Train prognostic or NLP symptom models and calibrate probabilities.
+4. Validate against palliative screening rules and chart review.
+5. Integrate as decision support, keeping clinicians and patients at the center.
+6. Monitor for bias in access to hospice and palliative services across groups.
 
 ## Code pattern
 

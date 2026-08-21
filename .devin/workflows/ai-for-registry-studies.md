@@ -1,6 +1,6 @@
 # /ai-for-registry-studies
 
-Machine learning for patient registries, disease surveillance, regulatory-grade real-world evidence, and longitudinal outcome tracking.
+Analyze disease and product registries to monitor safety, effectiveness, and utilization.
 
 ## Trigger
 

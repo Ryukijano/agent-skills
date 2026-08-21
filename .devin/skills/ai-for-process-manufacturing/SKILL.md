@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for continuous and batch chemical, pharmaceutical, food, and materials processes: recipe optimization, soft sensors, advanced process control, and real-time quality prediction.
+Builds soft sensors, optimizes recipes, and controls continuous or batch chemical and pharmaceutical processes in real time.
 
 ## When to use
 
@@ -10,7 +10,7 @@ You are optimizing continuous or batch processes where quality is inferred from 
 
 ## Usage
 
-- **Soft sensing**: predict hard-to-measure quality variables from easy-to-measure process data.
+- **Soft sensing**: predict hard-to-measure quality variables from process data using Gaussian process or neural surrogates.
 - **Recipe optimization**: set initial conditions and temperature/feed profiles for batch reactors.
 - **Advanced process control (APC)**: model-predictive control, real-time optimization, and constrained control.
 - **Process digital twins**: build physics-informed or data-driven surrogate models of reactors and separations.
@@ -52,7 +52,7 @@ y_hat, sigma = model.predict(X_new, return_std=True)
 ## References
 
 - https://doi.org/10.1088/2632-2153/ae2382
-- https://par.nsf.gov/biblio/10635953
+- https://doi.org/10.1515/revce-2024-0060
 - https://doi.org/10.1088/1361-6501/ad8be6
 - https://doi.org/10.1021/acsomega.5c01274
 - https://doi.org/10.1021/acs.iecr.0c03806

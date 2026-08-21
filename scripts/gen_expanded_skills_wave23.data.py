@@ -2,19 +2,29 @@ SKILLS = [
     {
         "name": "ai-for-linguistics",
         "title": "AI for Linguistics",
-        "description": "Computational linguistics, corpus analysis, morphosyntactic annotation, syntactic parsing, language modeling, and NLP tools for linguistic research.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Linguistics to annotate, parse, model and compare language structure at scale.",
+        "devin_body": r'''## When to use
 
 You are studying language structure, change, or use and need to annotate, parse, model, or compare linguistic data at scale.
 
-## Key concepts
 
-- **Corpus linguistics**: analyze frequency, collocation, and distribution in large text collections.
+## Usage
+
+
+- **Corpus linguistics**: Analyze frequency, collocation, and distribution in large text collections.
 - **Morphosyntactic annotation**: POS tagging, lemmatization, dependency parsing, and universal dependencies.
-- **Language modeling**: n-gram, neural, and transformer-based models of syntax and semantics.
-- **Historical and comparative linguistics**: phylogenetic language trees, cognate detection, and diachronic corpus analysis.
+- **Language modeling**: N-gram, neural, and transformer-based models of syntax and semantics.
+- **Historical and comparative linguistics**: Phylogenetic language trees, cognate detection, and diachronic corpus analysis.
 - **Speech and phonetics**: ASR, forced alignment, and phoneme recognition for spoken language.
+
+## Steps
+
+1. Collect and prepare text corpora, treebanks and speech recordings.
+2. Studye language structure.
+3. Change.
+4. Use and need to annotate.
+5. Validate by parsing a small annotated treebank and compute UAS/LAS against gold dependencies.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -29,6 +39,7 @@ for token in doc:
     print(token.text, token.lemma_, token.pos_, token.dep_)
 ```
 
+
 ## Tuning notes
 
 - Use treebank-specific or Universal Dependencies guidelines consistently.
@@ -36,12 +47,12 @@ for token in doc:
 - Evaluate against gold annotations rather than generic accuracy alone.
 - Watch for tokenization mismatches between modern and historical orthography.
 
+
 ## Verification
 
 1. Parse a small annotated treebank and compute UAS/LAS against gold dependencies.
 2. Compare a fine-tuned tagger to the pretrained pipeline on your target corpus.
-3. Train a small language model and measure perplexity on a held-out test set.
-''',
+3. Train a small language model and measure perplexity on a held-out test set.''',
         "references": [
             "https://plato.stanford.edu/entries/computational-linguistics/",
             "https://dl.acm.org/doi/10.1145/3605943",
@@ -52,19 +63,29 @@ for token in doc:
     {
         "name": "ai-for-history",
         "title": "AI for History",
-        "description": "HTR and OCR for historical documents, event extraction, temporal reasoning, geospatial and network analysis, and distant reading for historical research.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for History to transcribe documents, extract entities and events and analyze historical networks.",
+        "devin_body": r'''## When to use
 
 You are working with digitized archives, newspapers, manuscripts, or historical corpora and want to extract, structure, and analyze events, actors, places, and trends over time.
 
-## Key concepts
 
-- **Handwritten text recognition (HTR) and OCR**: convert scanned manuscripts and prints into searchable text.
-- **Distant reading**: summarize large corpora through topic models, embeddings, and clustering.
-- **Event extraction and entity linking**: identify people, places, organizations, and events in historical narratives.
-- **Temporal knowledge graphs**: represent historical facts with time-aware relations and provenance.
-- **Geospatial and network analysis**: map trade, migration, correspondence, and conflict networks.
+## Usage
+
+
+- **Handwritten text recognition (HTR) and OCR**: Convert scanned manuscripts and prints into searchable text.
+- **Distant reading**: Summarize large corpora through topic models, embeddings, and clustering.
+- **Event extraction and entity linking**: Identify people, places, organizations, and events in historical narratives.
+- **Temporal knowledge graphs**: Represent historical facts with time-aware relations and provenance.
+- **Geospatial and network analysis**: Map trade, migration, correspondence, and conflict networks.
+
+## Steps
+
+1. Collect and prepare scanned manuscripts, newspapers and archival text.
+2. Worke with digitized archives.
+3. Newspapers.
+4. Manuscripts.
+5. Validate by runing HTR/OCR on a small manuscript set and compare word error rate to a gold transcript.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -79,6 +100,7 @@ for ent in ner(text):
     print(ent["word"], ent["entity_group"])
 ```
 
+
 ## Tuning notes
 
 - Account for historical spelling variation, abbreviations, and dated language.
@@ -86,12 +108,12 @@ for ent in ner(text):
 - Link extracted entities to authority files (VIAF, GeoNames, Wikidata).
 - Be transparent about digitization and selection biases in archival collections.
 
+
 ## Verification
 
 1. Run HTR/OCR on a small manuscript set and compare word error rate to a gold transcript.
 2. Extract a timeline of events from a corpus and cross-check against a reference chronology.
-3. Build a historical network and verify that key nodes match known actors.
-''',
+3. Build a historical network and verify that key nodes match known actors.''',
         "references": [
             "https://doi.org/10.3366/ijhac.2026.0361",
             "https://aclanthology.org/2023.cl-3.5/",
@@ -102,19 +124,29 @@ for ent in ner(text):
     {
         "name": "ai-for-philosophy",
         "title": "AI for Philosophy",
-        "description": "Computational philosophy, argument mining, automated reasoning, text analysis of philosophical corpora, and LLM-assisted conceptual analysis.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Philosophy to mine arguments, formalize reasoning and analyze conceptual spaces in texts.",
+        "devin_body": r'''## When to use
 
 You are analyzing philosophical arguments, formalizing reasoning, mining large corpora of philosophical texts, or exploring conceptual spaces with computational tools.
 
-## Key concepts
 
-- **Argument mining**: identify premises, conclusions, and argumentation schemes in text.
-- **Automated theorem proving and formal logic**: encode arguments in SAT/SMT or proof assistants.
-- **Corpus-based conceptual analysis**: track concepts across canonical texts using embeddings and topic models.
-- **Philosophy of AI and mind**: use AI systems as objects of study for agency, consciousness, and reasoning.
-- **Computational ethics and normative reasoning**: model dilemmas, value alignment, and preference aggregation.
+## Usage
+
+
+- **Argument mining**: Identify premises, conclusions, and argumentation schemes in text.
+- **Automated theorem proving and formal logic**: Encode arguments in SAT/SMT or proof assistants.
+- **Corpus-based conceptual analysis**: Track concepts across canonical texts using embeddings and topic models.
+- **Philosophy of AI and mind**: AI systems as objects of study for agency, consciousness, and reasoning.
+- **Computational ethics and normative reasoning**: Model dilemmas, value alignment, and preference aggregation.
+
+## Steps
+
+1. Collect and prepare philosophical corpora and formal logic specifications.
+2. Analyze philosophical arguments.
+3. Formalize reasoning.
+4. Mine large corpora of philosophical texts.
+5. Validate by mining arguments from a short philosophical text and compare to a human annotation.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -133,6 +165,7 @@ if s.check() == sat:
     print(s.model())
 ```
 
+
 ## Tuning notes
 
 - Natural-language arguments are often enthymematic; supply missing premises carefully.
@@ -140,12 +173,12 @@ if s.check() == sat:
 - Use domain-specific embeddings or fine-tuned models for philosophical corpora.
 - Engage with human philosophers to validate mined argument structures.
 
+
 ## Verification
 
 1. Mine arguments from a short philosophical text and compare to a human annotation.
 2. Prove a simple syllogism in a theorem prover and verify the conclusion.
-3. Track a concept (e.g., free will) across texts and inspect nearest-neighbor terms.
-''',
+3. Track a concept (e.g., free will) across texts and inspect nearest-neighbor terms.''',
         "references": [
             "https://plato.stanford.edu/entries/computational-philosophy/",
             "https://philarchive.org/rec/MLLPOA",
@@ -156,19 +189,29 @@ if s.check() == sat:
     {
         "name": "ai-for-sociology",
         "title": "AI for Sociology",
-        "description": "Computational social science for sociology: text and image classification, survey augmentation, social network analysis, and modeling social inequalities.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Sociology to classify texts, analyze networks and model social inequalities.",
+        "devin_body": r'''## When to use
 
 You are studying social behavior, institutions, or inequalities and want to use large-scale digital data, text, images, and networks to test sociological theories.
 
-## Key concepts
 
-- **Text-as-data**: classify, scale, and topic-model documents to measure social constructs.
-- **Social network analysis**: identify communities, influencers, and diffusion patterns.
-- **Survey augmentation and imputation**: use ML to handle item nonresponse and improve estimation.
-- **Heterogeneity and segmentation**: discover subpopulations with causal forests or clustering.
-- **Computational approaches to inequality**: audit algorithms, analyze mobility, and detect disparities.
+## Usage
+
+
+- **Text-as-data**: Classify, scale, and topic-model documents to measure social constructs.
+- **Social network analysis**: Identify communities, influencers, and diffusion patterns.
+- **Survey augmentation and imputation**: Handle item nonresponse and improve estimation.
+- **Heterogeneity and segmentation**: Discover subpopulations with causal forests or clustering.
+- **Computational approaches to inequality**: Audit algorithms, analyze mobility, and detect disparities.
+
+## Steps
+
+1. Collect and prepare survey, text, image and network data.
+2. Studye social behavior.
+3. Institutions.
+4. Inequalities and want to use large-scale digital data.
+5. Validate by replicating a published text-as-data finding on a new sample.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -186,6 +229,7 @@ clf.fit(vec.fit_transform(X_train), y_train)
 print(clf.score(vec.transform(X_test), y_test))
 ```
 
+
 ## Tuning notes
 
 - Validate text-based measures against representative surveys when possible.
@@ -193,12 +237,12 @@ print(clf.score(vec.transform(X_test), y_test))
 - Ensure constructs like class, race, and gender are measured with care and theory.
 - Use causal inference rather than purely predictive models to support sociological claims.
 
+
 ## Verification
 
 1. Replicate a published text-as-data finding on a new sample.
 2. Compare a network-derived community partition to a demographic baseline.
-3. Validate a survey-imputation model against a gold-standard subsample.
-''',
+3. Validate a survey-imputation model against a gold-standard subsample.''',
         "references": [
             "https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041106",
             "https://doi.org/10.1146/annurev-soc-121919-054621",
@@ -209,19 +253,29 @@ print(clf.score(vec.transform(X_test), y_test))
     {
         "name": "ai-for-anthropology",
         "title": "AI for Anthropology",
-        "description": "Computational ethnography, NLP for field notes and interviews, multimodal cultural analysis, and AI-assisted thick description and reflexivity.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Anthropology to transcribe interviews, code field notes and analyze multimodal cultural data.",
+        "devin_body": r'''## When to use
 
 You are conducting ethnographic or qualitative research and want to support transcription, coding, translation, and analysis of field notes, interviews, images, and artifacts.
 
-## Key concepts
 
-- **Computational ethnography**: combine fieldwork with computational text and media analysis.
-- **Qualitative coding with AI**: assist open, axial, and thematic coding with embeddings and classifiers.
-- **Speech-to-text for oral histories**: transcribe interviews in low-resource languages.
-- **Multimodal cultural analysis**: analyze images, video, and material culture with vision models.
-- **Reflexivity and positionality**: keep researcher interpretation central and audit AI-assisted claims.
+## Usage
+
+
+- **Computational ethnography**: Combine fieldwork with computational text and media analysis.
+- **Qualitative coding with AI**: Assist open, axial, and thematic coding with embeddings and classifiers.
+- **Speech-to-text for oral histories**: Transcribe interviews in low-resource languages.
+- **Multimodal cultural analysis**: Analyze images, video, and material culture with vision models.
+- **Reflexivity and positionality**: Keep researcher interpretation central and audit AI-assisted claims.
+
+## Steps
+
+1. Collect and prepare interviews, field notes, images and artifacts.
+2. Conducte ethnographic or qualitative research and want to support transcription.
+3. Code.
+4. Translation.
+5. Validate by comparing AI-generated codes to human-coded excerpts and compute Cohen's kappa.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -237,6 +291,7 @@ df["theme"] = labels
 print(df.groupby("theme")["note"].apply(lambda x: " ".join(x.head(3))))
 ```
 
+
 ## Tuning notes
 
 - Obtain informed consent and protect participant privacy for all field data.
@@ -244,12 +299,12 @@ print(df.groupby("theme")["note"].apply(lambda x: " ".join(x.head(3))))
 - Co-design with communities and reflect on how AI reshapes ethnographic authority.
 - Validate AI codes through participant checking and inter-rater agreement.
 
+
 ## Verification
 
 1. Compare AI-generated codes to human-coded excerpts and compute Cohen's kappa.
 2. Transcribe a short interview and verify key passages with a native speaker.
-3. Cluster field notes and have domain experts interpret the resulting themes.
-''',
+3. Cluster field notes and have domain experts interpret the resulting themes.''',
         "references": [
             "https://doi.org/10.1177/20539517231153803",
             "https://doi.org/10.1177/20539517211069891",
@@ -260,19 +315,29 @@ print(df.groupby("theme")["note"].apply(lambda x: " ".join(x.head(3))))
     {
         "name": "ai-for-political-science",
         "title": "AI for Political Science",
-        "description": "Text-as-data for politics: manifesto scaling, sentiment and stance detection, legislative and voting analysis, and causal inference for political institutions.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Political Science to scale texts, detect stances and model legislative behavior.",
+        "devin_body": r'''## When to use
 
 You are analyzing political texts, campaigns, legislatures, or public opinion and need to measure ideology, sentiment, stance, or institutional behavior from unstructured data.
 
-## Key concepts
 
-- **Text-as-data in politics**: scale party manifestos, speeches, and social media posts.
-- **Stance and sentiment detection**: classify support or opposition toward candidates, issues, and policies.
-- **Legislative roll-call and voting**: predict votes, measure polarization, and detect coalitions.
-- **Causal inference for institutions**: estimate effects of reforms, campaigns, and policies.
-- **Surveys and synthetic populations**: augment or benchmark measures with LLMs and polls.
+## Usage
+
+
+- **Text-as-data in politics**: Scale party manifestos, speeches, and social media posts.
+- **Stance and sentiment detection**: Classify support or opposition toward candidates, issues, and policies.
+- **Legislative roll-call and voting**: Predict votes, measure polarization, and detect coalitions.
+- **Causal inference for institutions**: Estimate effects of reforms, campaigns, and policies.
+- **Surveys and synthetic populations**: Augment or benchmark measures with LLMs and polls.
+
+## Steps
+
+1. Collect and prepare manifestos, speeches, social media and roll-call data.
+2. Analyze political texts.
+3. Campaigns.
+4. Legislatures.
+5. Validate by replicating a published manifesto scaling result and compare rankings.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -288,6 +353,7 @@ clf.fit(train["text"], train["stance"])
 predictions = clf.predict(test["text"])
 ```
 
+
 ## Tuning notes
 
 - Validate classifiers against expert or crowd-coded labels, not just accuracy.
@@ -295,12 +361,12 @@ predictions = clf.predict(test["text"])
 - Be cautious about using LLM outputs as data without transparency and validation.
 - Use out-of-time and cross-country tests to assess generalizability.
 
+
 ## Verification
 
 1. Replicate a published manifesto scaling result and compare rankings.
 2. Build a stance detector and evaluate F1 against expert annotations.
-3. Predict roll-call votes and compare to a majority-class baseline.
-''',
+3. Predict roll-call votes and compare to a majority-class baseline.''',
         "references": [
             "https://doi.org/10.1017/psrm.2024.64",
             "https://www.cambridge.org/core/journals/political-science-research-and-methods/article/toward-a-framework-for-creating-trustworthy-measures-with-supervised-machine-learning-for-text/4DECB1072FB983F991BA84ADB01EAFC4",
@@ -311,19 +377,29 @@ predictions = clf.predict(test["text"])
     {
         "name": "ai-for-international-relations",
         "title": "AI for International Relations",
-        "description": "Conflict forecasting, event data analysis, crisis early warning, treaty and negotiation text mining, and geopolitical risk modeling.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for International Relations to forecast conflict, mine event data and model geopolitical networks.",
+        "devin_body": r'''## When to use
 
 You are studying conflict, diplomacy, trade, sanctions, or global governance and want to forecast events, extract information from open-source reports, or model geopolitical networks.
 
-## Key concepts
 
-- **Event data and CAMEO/Phoenix**: code actor-action-target triples from news and reports.
-- **Conflict forecasting**: predict civil unrest, armed conflict, and fatalities at country or grid level.
-- **Crisis early warning**: combine event counts, economic indicators, and social media for alerts.
-- **Treaty and negotiation text mining**: analyze agreements, UN speeches, and diplomatic cables.
-- **Geopolitical network and spatial models**: capture alliances, trade dependencies, and neighborhood effects.
+## Usage
+
+
+- **Event data and CAMEO/Phoenix**: Code actor-action-target triples from news and reports.
+- **Conflict forecasting**: Predict civil unrest, armed conflict, and fatalities at country or grid level.
+- **Crisis early warning**: Combine event counts, economic indicators, and social media for alerts.
+- **Treaty and negotiation text mining**: Analyze agreements, UN speeches, and diplomatic cables.
+- **Geopolitical network and spatial models**: Capture alliances, trade dependencies, and neighborhood effects.
+
+## Steps
+
+1. Collect and prepare event databases, news and structural country data.
+2. Studye conflict.
+3. Diplomacy.
+4. Trade.
+5. Validate by backtesting a conflict-forecasting model on out-of-sample country-months.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -343,6 +419,7 @@ for train_idx, test_idx in cv.split(X):
     print(model.score(X.iloc[test_idx], y.iloc[test_idx]))
 ```
 
+
 ## Tuning notes
 
 - Conflict is rare; use class weights, cost-sensitive learning, and proper rare-event metrics.
@@ -350,35 +427,45 @@ for train_idx, test_idx in cv.split(X):
 - Spatial autocorrelation and diffusion must be modeled explicitly, not ignored.
 - Geopolitical models raise ethical and policy stakes; prioritize interpretability and caution.
 
+
 ## Verification
 
 1. Backtest a conflict-forecasting model on out-of-sample country-months.
 2. Compare your model to a strong baseline such as a random or lag-only model.
-3. Evaluate with proper rare-event metrics (precision-recall, Brier score, CRPS).
-''',
+3. Evaluate with proper rare-event metrics (precision-recall, Brier score, CRPS).''',
         "references": [
             "https://doi.org/10.1093/jeea/jvac025",
             "https://www.cambridge.org/core/journals/data-and-policy/article/promise-of-machine-learning-in-violent-conflict-forecasting/40D559ADA18FF7308915B08956B4E8F3",
             "https://doi.org/10.3389/frai.2022.893875",
-            "https://par.nsf.gov/servlets/purl/10376284",
+            "https://doi.org/10.1080/03050629.2022.2036987",
         ],
     },
     {
         "name": "ai-for-public-policy",
         "title": "AI for Public Policy",
-        "description": "Causal and predictive policy evaluation, program impact assessment, regulatory text analysis, and equitable resource allocation for government and public administration.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Public Policy to evaluate programs, predict service demand and audit equitable allocation.",
+        "devin_body": r'''## When to use
 
 You are designing, implementing, or evaluating public programs and need evidence on what works, for whom, and under what conditions.
 
-## Key concepts
 
-- **Causal machine learning for policy**: heterogeneous treatment effects, causal forests, and double/debiased ML.
-- **Counterfactual policy evaluation**: synthetic controls, difference-in-differences, and interrupted time series.
-- **Predictive analytics for public services**: risk modeling, demand forecasting, and resource allocation.
-- **Regulatory and legislative text analysis**: parse rulemaking comments, statutes, and contracts.
-- **Equity and accountability**: audit for disparate impact and ensure explainability.
+## Usage
+
+
+- **Causal machine learning for policy**: Heterogeneous treatment effects, causal forests, and double/debiased ML.
+- **Counterfactual policy evaluation**: Synthetic controls, difference-in-differences, and interrupted time series.
+- **Predictive analytics for public services**: Risk modeling, demand forecasting, and resource allocation.
+- **Regulatory and legislative text analysis**: Parse rulemaking comments, statutes, and contracts.
+- **Equity and accountability**: Audit for disparate impact and ensure explainability.
+
+## Steps
+
+1. Collect and prepare program, administrative and survey data.
+2. Design.
+3. Implemente.
+4. Evaluate public programs and need evidence on what works.
+5. Validate by replicating a published policy evaluation with a causal ML estimator.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -396,6 +483,7 @@ print("ATE:", est.ate_)
 print("CATE:", est.cate(X=covariates[:5]))
 ```
 
+
 ## Tuning notes
 
 - Use cross-fitting and out-of-fold nuisance predictions to avoid overfitting.
@@ -403,12 +491,12 @@ print("CATE:", est.cate(X=covariates[:5]))
 - Consider external validity and transportability across jurisdictions.
 - Balance predictive accuracy with fairness and transparency for high-stakes decisions.
 
+
 ## Verification
 
 1. Replicate a published policy evaluation with a causal ML estimator.
 2. Run a placebo test and confirm no effect before the treatment date.
-3. Compare model recommendations to a status-quo allocation on held-out cases.
-''',
+3. Compare model recommendations to a status-quo allocation on held-out cases.''',
         "references": [
             "https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en/full-report/ai-in-policy-evaluation_c88cc2fd.html",
             "https://www.cambridge.org/core/journals/data-and-policy/article/transparency-challenges-in-policy-evaluation-with-causal-machine-learning-improving-usability-and-accountability/DA780C002E4D4309655CB0DEEC88BC79",
@@ -419,19 +507,29 @@ print("CATE:", est.cate(X=covariates[:5]))
     {
         "name": "ai-for-journalism",
         "title": "AI for Journalism",
-        "description": "Algorithmic journalism, automated reporting, fact-checking, news recommendation, and AI-assisted investigative data reporting.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Journalism to automate reporting, find data leads, fact-check and personalize news.",
+        "devin_body": r'''## When to use
 
 You are producing, verifying, or distributing news and want to automate routine reporting, find leads in data, or assist reporters with research and drafting.
 
-## Key concepts
 
-- **Robot and automated journalism**: generate data-driven stories from structured feeds.
-- **Computational news discovery**: detect anomalies, trends, and leads in public datasets.
-- **Fact-checking and verification**: identify claims, source evidence, and detect misinformation.
-- **News summarization and personalization**: adapt stories for platforms and audiences.
-- **Editorial oversight and provenance**: log decisions, keep humans in the loop, and cite sources.
+## Usage
+
+
+- **Robot and automated journalism**: Generate data-driven stories from structured feeds.
+- **Computational news discovery**: Detect anomalies, trends, and leads in public datasets.
+- **Fact-checking and verification**: Identify claims, source evidence, and detect misinformation.
+- **News summarization and personalization**: Adapt stories for platforms and audiences.
+- **Editorial oversight and provenance**: Log decisions, keep humans in the loop, and cite sources.
+
+## Steps
+
+1. Collect and prepare public datasets, articles and fact-check corpora.
+2. Automate routine reporting.
+3. Find leads in data.
+4. Assist reporters with research and drafting.
+5. Validate by generating a batch of briefs from a public dataset and have a reporter review them.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -445,6 +543,7 @@ row = {"n": 42, "city": "Springfield", "month": "March", "pct": 12}
 print(template.render(**row))
 ```
 
+
 ## Tuning notes
 
 - Human editorial judgment remains responsible for publication decisions and framing.
@@ -452,12 +551,12 @@ print(template.render(**row))
 - Monitor for bias in story selection, source diversity, and recommendation algorithms.
 - Ensure transparent disclosure when content is automated or AI-assisted.
 
+
 ## Verification
 
 1. Generate a batch of briefs from a public dataset and have a reporter review them.
 2. Build a claim-detection pipeline and evaluate precision on a fact-check corpus.
-3. Compare an AI-written summary to the original article for factual consistency.
-''',
+3. Compare an AI-written summary to the original article for factual consistency.''',
         "references": [
             "https://arxiv.org/abs/2409.03462v1",
             "https://arxiv.org/abs/2603.13232",
@@ -468,19 +567,29 @@ print(template.render(**row))
     {
         "name": "ai-for-media-literacy",
         "title": "AI for Media Literacy",
-        "description": "AI for detecting disinformation, prebunking, source credibility, and teaching critical thinking and digital literacy.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Media Literacy to detect misinformation, prebunk manipulation and teach source credibility.",
+        "devin_body": r'''## When to use
 
 You want to help users identify misinformation, understand manipulation tactics, evaluate sources, and develop resilience against online deception.
 
-## Key concepts
 
-- **Misinformation and disinformation detection**: classify false or misleading claims across text, images, and video.
-- **Prebunking and inoculation**: expose users to weakened manipulation tactics before they encounter them.
-- **Source and claim credibility**: assess website reliability, author expertise, and evidence quality.
-- **Explainable AI for literacy**: make detection models transparent so users learn from them.
-- **Generative AI awareness**: teach users how synthetic media is created and how to spot it.
+## Usage
+
+
+- **Misinformation and disinformation detection**: Classify false or misleading claims across text, images, and video.
+- **Prebunking and inoculation**: Expose users to weakened manipulation tactics before they encounter them.
+- **Source and claim credibility**: Assess website reliability, author expertise, and evidence quality.
+- **Explainable AI for literacy**: Make detection models transparent so users learn from them.
+- **Generative AI awareness**: Teach users how synthetic media is created and how to spot it.
+
+## Steps
+
+1. Collect and prepare news, social media and fact-check datasets.
+2. Help users identify misinformation.
+3. Understand manipulation tactics.
+4. Evaluate sources.
+5. Validate by testing a misinformation detector on a labeled fact-check dataset and report AUC-PR.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -496,6 +605,7 @@ for label, score in zip(result["labels"], result["scores"]):
     print(f"{label}: {score:.3f}")
 ```
 
+
 ## Tuning notes
 
 - Frame tools as learning aids, not oracles; avoid undermining trust in genuine news.
@@ -503,12 +613,12 @@ for label, score in zip(result["labels"], result["scores"]):
 - Tailor interventions to age, language, and cultural context.
 - Evaluate impact with pre/post tests and real-world believability measures.
 
+
 ## Verification
 
 1. Test a misinformation detector on a labeled fact-check dataset and report AUC-PR.
 2. Run a prebunking micro-intervention and compare pre/post quiz scores.
-3. Have users rate the helpfulness and fairness of AI-generated explanations.
-''',
+3. Have users rate the helpfulness and fairness of AI-generated explanations.''',
         "references": [
             "https://aclanthology.org/2026.acl-demo.48/",
             "https://cordis.europa.eu/article/id/464673-when-ai-also-becomes-a-disinformation-ally",
@@ -519,19 +629,29 @@ for label, score in zip(result["labels"], result["scores"]):
     {
         "name": "ai-for-communication",
         "title": "AI for Communication",
-        "description": "Computational communication science: content analysis, information diffusion, agenda setting, and audience effects across digital platforms.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Communication to analyze content, model diffusion and study audience effects.",
+        "devin_body": r'''## When to use
 
 You are studying how information, opinions, and narratives spread across media and platforms and want to analyze content, networks, and audience effects at scale.
 
-## Key concepts
 
-- **Automated content analysis**: classify frames, topics, emotions, and persuasion strategies.
-- **Information diffusion and virality**: model retweet cascades, rumor spread, and influence.
-- **Agenda setting and framing**: track salience and framing over time and across actors.
-- **Audience analytics and segmentation**: understand engagement, polarization, and selective exposure.
-- **Ethical platform research**: respect terms of service, privacy, and representative sampling.
+## Usage
+
+
+- **Automated content analysis**: Classify frames, topics, emotions, and persuasion strategies.
+- **Information diffusion and virality**: Model retweet cascades, rumor spread, and influence.
+- **Agenda setting and framing**: Track salience and framing over time and across actors.
+- **Audience analytics and segmentation**: Understand engagement, polarization, and selective exposure.
+- **Ethical platform research**: Respect terms of service, privacy, and representative sampling.
+
+## Steps
+
+1. Collect and prepare social media, news and platform data.
+2. Studye how information.
+3. Opinions.
+4. And narratives spread across media and platforms and want to analyze content.
+5. Validate by replicating a known finding on information diffusion in a new dataset.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -544,6 +664,7 @@ print("Density:", nx.density(G))
 print("Top influencers:", sorted(dict(G.in_degree()).items(), key=lambda x: x[1], reverse=True)[:5])
 ```
 
+
 ## Tuning notes
 
 - Link computational measures to communication theory and prior literature.
@@ -551,12 +672,12 @@ print("Top influencers:", sorted(dict(G.in_degree()).items(), key=lambda x: x[1]
 - Combine text, network, and temporal features rather than relying on one signal.
 - Validate automated content codes with human coders and inter-rater reliability.
 
+
 ## Verification
 
 1. Replicate a known finding on information diffusion in a new dataset.
 2. Compare automated topic labels to human-coded topics and compute agreement.
-3. Test whether a framing measure predicts agenda salience in a time-series model.
-''',
+3. Test whether a framing measure predicts agenda salience in a time-series model.''',
         "references": [
             "https://iopscience.iop.org/article/10.1209/0295-5075/ade337",
             "https://doi.org/10.1177/08944393261457540",
@@ -567,19 +688,29 @@ print("Top influencers:", sorted(dict(G.in_degree()).items(), key=lambda x: x[1]
     {
         "name": "ai-for-criminology",
         "title": "AI for Criminology",
-        "description": "Predictive policing, recidivism risk assessment, crime forecasting, criminal network analysis, and fairness-aware public safety research.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Criminology to forecast crime, assess recidivism risk and analyze criminal networks fairly.",
+        "devin_body": r'''## When to use
 
 You are analyzing crime patterns, assessing risk, or designing public-safety interventions and want to use data and models responsibly.
 
-## Key concepts
 
-- **Crime forecasting**: spatiotemporal models for hot spots and future incident counts.
-- **Recidivism risk assessment**: predict reoffending to inform sentencing or rehabilitation.
-- **Criminal network analysis**: detect co-offending, money-laundering, and gang structures.
-- **Victimization and fear-of-crime mapping**: combine survey, sensor, and report data.
-- **Fairness and accountability**: audit for racial and neighborhood bias in predictions and deployment.
+## Usage
+
+
+- **Crime forecasting**: Spatiotemporal models for hot spots and future incident counts.
+- **Recidivism risk assessment**: Predict reoffending to inform sentencing or rehabilitation.
+- **Criminal network analysis**: Detect co-offending, money-laundering, and gang structures.
+- **Victimization and fear-of-crime mapping**: Combine survey, sensor, and report data.
+- **Fairness and accountability**: Audit for racial and neighborhood bias in predictions and deployment.
+
+## Steps
+
+1. Collect and prepare crime reports, sensor and administrative records.
+2. Analyze crime patterns.
+3. Assess risk.
+4. Design public-safety interventions and want to use data and models responsibly.
+5. Validate by evaluating a crime-forecasting model on held-out spatial and temporal data.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -596,6 +727,7 @@ clf = RandomForestClassifier(class_weight="balanced", random_state=42)
 clf.fit(X_train, y_train)
 ```
 
+
 ## Tuning notes
 
 - Predictive models can amplify historical biases; require fairness audits before deployment.
@@ -603,12 +735,12 @@ clf.fit(X_train, y_train)
 - Use transparent, interpretable models in high-stakes criminal justice settings.
 - Engage affected communities and legal stakeholders in model design and review.
 
+
 ## Verification
 
 1. Evaluate a crime-forecasting model on held-out spatial and temporal data.
 2. Audit a risk model for equalized odds across demographic groups.
-3. Compare a model to a simple baseline and document any deployment trade-offs.
-''',
+3. Compare a model to a simple baseline and document any deployment trade-offs.''',
         "references": [
             "https://link.springer.com/article/10.1007/s10940-025-09629-3",
             "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.587943/full",

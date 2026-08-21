@@ -1,6 +1,6 @@
 # /ai-for-microfluidics
 
-Machine learning for droplet generation, lab-on-a-chip control, cell sorting, reaction optimization, and high-throughput screening.
+Use machine learning to control droplet generation, sort cells, optimize reactions, and automate high-throughput screening on chip.
 
 ## Trigger
 

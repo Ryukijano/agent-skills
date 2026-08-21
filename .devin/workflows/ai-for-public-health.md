@@ -1,6 +1,6 @@
 # /ai-for-public-health
 
-Disease surveillance, outbreak prediction, resource allocation, geospatial health modeling, and health-equity analytics.
+Use ML and geospatial models for disease surveillance, outbreak forecasting, resource allocation, and health-equity analytics.
 
 ## Trigger
 

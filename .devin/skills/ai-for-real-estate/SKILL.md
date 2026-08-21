@@ -2,18 +2,27 @@
 
 ## Description
 
-Automated valuation, market analysis, lead matching, and AI-assisted property due diligence.
+Use AI to valuing properties, analyze market trends, matching buyers to listings, or screening properties for investment or lending.
 
 ## When to use
 
 You are valuing properties, analyzing market trends, matching buyers to listings, or screening properties for investment or lending.
 
-## Key concepts
+## Usage
 
-- **Automated valuation models (AVMs)**: predict price from property and market features.
-- **Hedonic and multi-modal models**: combine structured, text, and image data.
-- **Market and submarket analysis**: forecast rent, vacancy, and cap rates.
-- **Lead matching and due diligence**: score opportunities and surface risks.
+- Collect property, market, and location data.
+- Build AVMs and hedonic valuation models.
+- Forecast rent, vacancy, and cap-rate trends.
+- Score leads and screen properties for risks.
+
+## Steps
+
+1. Collect property, market, and location data.
+2. Build AVMs and hedonic valuation models.
+3. Forecast rent, vacancy, and cap-rate trends.
+4. Score leads and screen properties for risks.
+5. Validate on held-out geographies and time windows.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

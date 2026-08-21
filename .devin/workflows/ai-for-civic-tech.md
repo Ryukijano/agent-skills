@@ -1,6 +1,6 @@
 # /ai-for-civic-tech
 
-Digital participation, deliberation, civic engagement, public comment analysis, and participatory budgeting tools powered by AI.
+Supports participatory democracy by analyzing public comments, mapping priorities, and summarizing deliberation themes.
 
 ## Trigger
 

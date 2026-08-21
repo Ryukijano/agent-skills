@@ -1,6 +1,6 @@
 # /ai-for-materials-characterization
 
-Machine learning for automated interpretation of microscopy, spectroscopy, diffraction, and tomography data in materials science.
+Segment and quantify concrete and cement microstructure from X-ray and confocal microscopy to assess freeze-thaw durability.
 
 ## Trigger
 

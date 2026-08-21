@@ -1,6 +1,6 @@
 # /ai-for-palliative-care
 
-Machine learning for prognostication, symptom management, hospice suitability, advance care planning, and ethical decision support in end-of-life care.
+Use machine learning for prognostication, symptom management, hospice suitability, and advance care planning in end-of-life care.
 
 ## Trigger
 

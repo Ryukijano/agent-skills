@@ -2,7 +2,7 @@
 
 ## Description
 
-Intelligent dataset search, metadata enrichment, schema inference, and conversational data catalog exploration to find the right data quickly.
+Help users find, understand, and trust the right data and AI assets.
 
 ## When to use
 
@@ -10,19 +10,19 @@ Users cannot find the right data in a lake, catalog, or open repository, and key
 
 ## Usage
 
-- **Dataset search and recommendation**: match needs by metadata, content, or examples.
-- **Schema and semantic inference**: auto-extract columns, types, and relationships.
-- **Data profiling and summarization**: surface distributions, coverage, and quality.
-- **Conversational exploration**: use LLMs to answer natural-language data requests.
-- **Similarity and join discovery**: identify related datasets and linkable keys.
+- Search catalogs with natural language (Alation, Atlan, DataHub).
+- Auto-generate descriptions, tags, and glossary links.
+- Recommend similar or related datasets.
+- Show data quality, popularity, and owner context.
+- Embed search into BI and notebooks for self-service.
 
 ## Steps
 
-1. Collect and index datasets with metadata, schema, and samples.
-2. Build embeddings and similarity indexes over metadata and content.
-3. Deploy search and recommendation APIs or chat interfaces.
-4. Let users explore lineage, quality, and usage statistics.
-5. Refine ranking from user feedback and query logs.
+1. Crawl data sources and extract metadata.
+2. Build knowledge graph of datasets, terms, and users.
+3. Train ranking and recommendation models.
+4. Expose natural-language search and recommendations.
+5. Track adoption and improve relevance.
 
 ## Code pattern
 

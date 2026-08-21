@@ -1,6 +1,6 @@
 # /ai-for-responsible-innovation
 
-Anticipatory governance, ethical deliberation, stakeholder engagement, regulatory foresight, and impact assessment for emerging AI technologies.
+Use anticipatory governance, stakeholder engagement, and impact assessment to steer emerging AI technologies responsibly.
 
 ## Trigger
 

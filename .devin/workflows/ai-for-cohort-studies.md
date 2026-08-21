@@ -1,6 +1,6 @@
 # /ai-for-cohort-studies
 
-Machine learning for risk prediction, confounding control, survival analysis, and biomarker discovery in prospective and retrospective cohort studies.
+Analyze defined patient groups to estimate risk, survival, and treatment effects over time.
 
 ## Trigger
 

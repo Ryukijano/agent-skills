@@ -2,18 +2,26 @@
 
 ## Description
 
-AI for airline and airport operations, including predictive maintenance, crew and fleet scheduling, disruption recovery, fuel optimization, and safety analytics.
+Use machine learning to predict component failures, optimize flight operations, recover from disruptions, and improve fleet reliability in aviation.
 
 ## When to use
 
 You are optimizing airline operations, forecasting aircraft component failures, recovering from schedule disruptions, or improving fleet reliability.
 
-## Key concepts
+## Usage
 
-- **Predictive maintenance (PdM)**: time-series and survival models on engine and component sensor data (e.g., C-MAPSS).
-- **Flight operations optimization**: fuel burn, crew rostering, turnaround, and delay recovery.
-- **Fleet health platforms**: consolidation of in-flight and maintenance data for failure prediction.
-- **Safety and reliability analytics**: risk prediction, incident classification, and maintenance planning.
+- Predict remaining useful life from engine and component sensor data.
+- Optimize fuel burn, crew rostering, turnaround, and delay recovery.
+- Consolidate in-flight and maintenance data for fleet-health dashboards.
+- Classify safety incidents and predict unscheduled maintenance.
+
+## Steps
+
+1. Ingest time-series sensor and maintenance logs with chronological train/test splits.
+2. Engineer degradation features and handle censoring and class imbalance.
+3. Train a survival, regression, or classification model for RUL or failure risk.
+4. Validate predictions against actual failure events and false-positive rates.
+5. Integrate the model into maintenance planning and disruption-recovery workflows.
 
 ## Code pattern
 

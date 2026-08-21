@@ -1,6 +1,6 @@
 # /ai-for-physics-simulation
 
-Neural operators, surrogate models, and learned emulators for partial differential equations and physical systems.
+Use neural operators and physics-informed surrogates to learn fast emulators of partial differential equations and physical systems.
 
 ## Trigger
 

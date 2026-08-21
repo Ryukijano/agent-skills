@@ -1,6 +1,6 @@
 # /ai-for-veterans-services
 
-Claims processing, benefits eligibility, health risk identification, veteran-centered care coordination, and administrative automation at VA and related agencies.
+Accelerates veteran benefit claims and care coordination by triaging cases, summarizing evidence, and scheduling services.
 
 ## Trigger
 

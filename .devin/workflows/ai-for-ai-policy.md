@@ -1,6 +1,6 @@
 # /ai-for-ai-policy
 
-Regulatory analysis, risk classification, standards mapping, policy evaluation, and evidence synthesis for national and international AI governance.
+Use regulatory analysis, risk classification, and standards mapping to inform AI policy and compliance.
 
 ## Trigger
 

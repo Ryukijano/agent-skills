@@ -1,6 +1,6 @@
 # /ai-for-copywriting
 
-Marketing and advertising copy, email and landing-page text, conversion frameworks, and brand-voice calibration with LLMs.
+Draft and A/B-test personalized marketing emails that match brand voice and lift conversion rates by double digits.
 
 ## Trigger
 

@@ -2,19 +2,30 @@
 
 ## Description
 
-Skin lesion classification, dermoscopy analysis, melanoma detection, teledermatology, and fairness across skin tones with deep learning.
+Use AI for Dermatology to classify lesions, analyze dermoscopy and power teledermatology screening.
 
 ## When to use
 
 You are classifying skin lesions from dermoscopy or clinical photos, triaging suspicious lesions, or building teledermatology and mobile screening tools.
 
-## Key concepts
 
-- **Dermoscopy and clinical imaging**: polarized light, magnification, and standardized fields of view.
+## Usage
+
+
+- **Dermoscopy and clinical imaging**: Polarized light, magnification, and standardized fields of view.
 - **Convolutional and efficient architectures**: EfficientNet, ResNet, and Vision Transformers for lesion classification.
-- **Melanoma vs. benign nevi/keratinocyte carcinoma**: high-stakes binary and multi-class tasks.
-- **Teledermatology**: smartphone capture, asynchronous image review, and regulatory clearance.
-- **Equity and skin tone**: model performance can degrade on darker skin if training data are unbalanced.
+- **Melanoma vs. benign nevi/keratinocyte carcinoma**: High-stakes binary and multi-class tasks.
+- **Teledermatology**: Smartphone capture, asynchronous image review, and regulatory clearance.
+- **Equity and skin tone**: Model performance can degrade on darker skin if training data are unbalanced.
+
+## Steps
+
+1. Collect and prepare clinical and dermoscopy images with labels.
+2. Classify skin lesions from dermoscopy or clinical photos.
+3. Triage suspicious lesions.
+4. Build teledermatology and mobile screening tools.
+5. Validate by fine-tuning a lesion classifier and compare AUC to dermatologist diagnoses.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -34,12 +45,14 @@ model = models.efficientnet_b0(weights="IMAGENET1K_V1")
 model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, 2)
 ```
 
+
 ## Tuning notes
 
 - Fine-tune from ImageNet or use publicly available dermoscopy pretrained weights.
 - Address class imbalance with weighted sampling or focal loss.
 - Validate on images from different devices and Fitzpatrick skin types.
 - Interpret predictions with Grad-CAM or segmentation masks.
+
 
 ## Verification
 

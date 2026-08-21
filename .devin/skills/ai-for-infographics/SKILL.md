@@ -2,19 +2,28 @@
 
 ## Description
 
-Generating data-rich infographics and visual stories from documents, tables, and natural-language prompts.
+Turn reports, data tables and articles into data-rich infographics and visual stories using natural-language prompts and chart-composition tools.
 
 ## When to use
 
 You want to turn reports, data tables, or articles into shareable infographics, data stories, or social-media explainers.
 
-## Key concepts
+## Usage
 
-- **Text-to-infographic**: generate metadata, chart code, and layout from natural language or documents.
-- **Chart composition**: combine multiple sub-charts (bar, line, pie, maps) into a coherent layout.
-- **Data faithfulness**: ensure values, labels, and visual proportions match the source data.
-- **Visual hierarchy and accessibility**: guide the eye, use alt text, and maintain color-blind safe palettes.
-- **Evaluation benchmarks**: use benchmarks like IGENBENCH to assess reliability of generated infographics.
+- **Generate metadata, chart code, and layout from natural language or documents.**
+- **Combine multiple sub-charts (bar, line, pie, maps) into a coherent layout.**
+- **Ensure values, labels, and visual proportions match the source data.**
+- **Guide the eye, use alt text, and maintain color-blind safe palettes.**
+- **Use benchmarks like IGENBENCH to assess reliability of generated infographics.**
+
+## Steps
+
+1. Extract the key data, insights, and narrative from the source document or table.
+2. Choose the chart types and layout that best communicate the story for the target channel.
+3. Generate chart code and metadata, then verify every value and label against the source.
+4. Compose sub-charts into an on-brand layout with clear visual hierarchy and alt text.
+5. Evaluate the infographic for data faithfulness with a rubric or benchmark like IGENBENCH.
+6. Test engagement and comprehension with both data experts and general readers.
 
 ## Code pattern
 

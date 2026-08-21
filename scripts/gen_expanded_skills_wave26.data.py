@@ -2,17 +2,25 @@ SKILLS = [
     {
         "name": "ai-for-aerospace",
         "title": "AI for Aerospace",
-        "description": "Machine learning for aircraft and spacecraft design, aerodynamic optimization, structural health monitoring, satellite operations, and certification of safety-critical aerospace systems.",
+        "description": 'Use machine learning to design aircraft and spacecraft, optimize aerodynamics, monitor structural health, and certify safety-critical aerospace systems.',
         "devin_body": r'''## When to use
 
 You are designing aircraft or spacecraft, analyzing flight/structural data, building digital twins, or certifying ML for safety-critical aerospace applications.
 
-## Key concepts
+## Usage
 
-- **Aerodynamic and structural ML**: surrogate models, reduced-order models, and shape optimization for wings and airframes.
-- **Structural health monitoring (SHM)**: vibration, acoustic, and strain-based damage detection and remaining useful life.
-- **Satellite and mission operations**: telemetry anomaly detection, power/thermal forecasting, and autonomous scheduling.
-- **Certification and assurance**: interpretability, verification, and validation for airborne AI.
+- Build surrogate and reduced-order models for aerodynamic and structural analysis.
+- Detect damage and predict remaining useful life from vibration, acoustic, and strain data.
+- Forecast power, thermal, and telemetry anomalies for satellites and missions.
+- Document certification evidence and uncertainty for airborne AI.
+
+## Steps
+
+1. Collect flight, structural, or telemetry data with physics-informed preprocessing.
+2. Train a surrogate or anomaly detector with safety-critical validation splits.
+3. Compare the model to high-fidelity CFD, FEM, or flight-test baselines.
+4. Quantify uncertainty and trace data provenance for certification.
+5. Deploy with human-in-the-loop overrides and continuous monitoring.
 
 ## Code pattern
 
@@ -48,17 +56,25 @@ anomaly_scores = model.decision_function(X)
     {
         "name": "ai-for-aviation",
         "title": "AI for Aviation",
-        "description": "AI for airline and airport operations, including predictive maintenance, crew and fleet scheduling, disruption recovery, fuel optimization, and safety analytics.",
+        "description": 'Use machine learning to predict component failures, optimize flight operations, recover from disruptions, and improve fleet reliability in aviation.',
         "devin_body": r'''## When to use
 
 You are optimizing airline operations, forecasting aircraft component failures, recovering from schedule disruptions, or improving fleet reliability.
 
-## Key concepts
+## Usage
 
-- **Predictive maintenance (PdM)**: time-series and survival models on engine and component sensor data (e.g., C-MAPSS).
-- **Flight operations optimization**: fuel burn, crew rostering, turnaround, and delay recovery.
-- **Fleet health platforms**: consolidation of in-flight and maintenance data for failure prediction.
-- **Safety and reliability analytics**: risk prediction, incident classification, and maintenance planning.
+- Predict remaining useful life from engine and component sensor data.
+- Optimize fuel burn, crew rostering, turnaround, and delay recovery.
+- Consolidate in-flight and maintenance data for fleet-health dashboards.
+- Classify safety incidents and predict unscheduled maintenance.
+
+## Steps
+
+1. Ingest time-series sensor and maintenance logs with chronological train/test splits.
+2. Engineer degradation features and handle censoring and class imbalance.
+3. Train a survival, regression, or classification model for RUL or failure risk.
+4. Validate predictions against actual failure events and false-positive rates.
+5. Integrate the model into maintenance planning and disruption-recovery workflows.
 
 ## Code pattern
 
@@ -94,17 +110,25 @@ model = RandomForestRegressor(n_estimators=200).fit(X, y)
     {
         "name": "ai-for-maritime",
         "title": "AI for Maritime",
-        "description": "AI for maritime autonomous surface ships, route and weather routing optimization, collision avoidance, port logistics, and vessel situational awareness.",
+        "description": 'Use machine learning to route vessels autonomously, avoid collisions, predict traffic, and optimize port logistics and schedules.',
         "devin_body": r'''## When to use
 
 You are routing ships autonomously, predicting maritime traffic, avoiding collisions, or optimizing port operations and schedules.
 
-## Key concepts
+## Usage
 
-- **Maritime Autonomous Surface Ships (MASS)**: COLREGs-compliant navigation, path planning, and decision-making.
-- **Situational awareness**: sensor fusion across AIS, radar, LiDAR, cameras, and GNSS.
-- **Route optimization**: weather routing, fuel minimization, and just-in-time arrival.
-- **Port and logistics AI**: berth scheduling, cargo handling, and supply-chain synchronization.
+- Plan COLREGs-aware paths and predict collision risk from AIS and radar.
+- Fuse AIS, camera, LiDAR, and GNSS for maritime situational awareness.
+- Optimize weather routing, fuel use, and just-in-time arrival.
+- Schedule berths, cargo, and supply-chain synchronization.
+
+## Steps
+
+1. Collect and clean AIS tracks, weather forecasts, and port schedules.
+2. Train a route-prediction or collision-risk model with historical encounter data.
+3. Validate against rule-based CPA and expert maritime assessments.
+4. Implement a simulator test for COLREGs give-way behavior.
+5. Deploy in a closed loop with human oversight on the bridge.
 
 ## Code pattern
 
@@ -140,17 +164,25 @@ routes = DBSCAN(eps=0.5, min_samples=10).fit_predict(coords)
     {
         "name": "ai-for-rail",
         "title": "AI for Rail",
-        "description": "AI for railway infrastructure health, predictive maintenance, train scheduling, energy optimization, and real-time disruption management.",
+        "description": 'Use machine learning to monitor rail infrastructure, predict failures, optimize timetables, and manage service disruptions.',
         "devin_body": r'''## When to use
 
 You are monitoring track and rolling stock, predicting rail failures, optimizing timetables, or managing service disruptions.
 
-## Key concepts
+## Usage
 
-- **Track geometry and infrastructure monitoring**: ride quality, rail/sleeper defects, and ultrasonic/vision inspection.
-- **Predictive maintenance for rolling stock**: wheelset bearing, brake, and HVAC prognostics.
-- **Timetabling and traffic control**: mixed-integer programming, reinforcement learning, and rescheduling under delays.
-- **Energy and operations**: eco-driving, regenerative braking, and passenger flow forecasting.
+- Detect rail, sleeper, and track-geometry defects from inspection and sensor data.
+- Predict wheelset, bearing, brake, and HVAC failures in rolling stock.
+- Optimize timetables and rescheduling under delays.
+- Forecast passenger flow and energy use for eco-driving.
+
+## Steps
+
+1. Aggregate track geometry, inspection images, and rolling-stock sensor streams.
+2. Engineer per-route features to account for geography and seasonality.
+3. Train an anomaly or survival model for rare infrastructure and component failures.
+4. Validate recall and false-positive trade-offs with maintenance crews.
+5. Integrate predictions into timetable optimization and dispatch dashboards.
 
 ## Code pattern
 
@@ -186,17 +218,25 @@ anomalies = clf.predict(X)
     {
         "name": "ai-for-automotive",
         "title": "AI for Automotive",
-        "description": "AI for automotive design, manufacturing, battery management, ADAS, quality control, and supply-chain optimization across the vehicle lifecycle.",
+        "description": 'Inspect automotive spot welds and brake cylinders with vision models to catch micro-defects on the assembly line at 25 frames per second or faster.',
         "devin_body": r'''## When to use
 
 You are optimizing automotive design or manufacturing, forecasting battery state of health, detecting quality defects, or improving supply chain, production, and after-sales operations.
 
-## Key concepts
+## Usage
 
-- **Computer-aided engineering and design**: ML surrogates for crash, NVH, and aerodynamic simulations.
-- **Battery management and state estimation**: SOH/SOC prediction from voltage, current, and temperature.
-- **Factory and supply-chain AI**: predictive maintenance, demand forecasting, quality analytics, and production scheduling.
-- **Connected-vehicle and after-sales analytics**: telematics, warranty prediction, and customer-vehicle health insights.
+- Build ML surrogates for crash, NVH, and aerodynamic simulations.
+- Predict battery state of health and charge from voltage, current, and temperature.
+- Detect weld, paint, and assembly defects with computer vision.
+- Forecast demand, schedule production, and optimize after-sales analytics.
+
+## Steps
+
+1. Collect design-simulation data or battery-cycle logs with variant metadata.
+2. Train a surrogate, regression, or vision model with physics-aware features.
+3. Validate against electrochemical, CFD, or human-inspection baselines.
+4. Run edge-case and V&V tests for safety-related models.
+5. Deploy into design loops, battery management, or shop-floor inspection.
 
 ## Code pattern
 
@@ -232,17 +272,25 @@ model = GradientBoostingRegressor().fit(X, y)
     {
         "name": "ai-for-industrial-robotics",
         "title": "AI for Industrial Robotics",
-        "description": "Machine learning for factory manipulation, assembly, pick-and-place, force control, sim-to-real, and vision-language-action models in industrial settings.",
+        "description": 'Use machine learning to automate precision assembly, bin picking, cable routing, and force-guided manipulation in manufacturing cells.',
         "devin_body": r'''## When to use
 
 You are automating precision assembly, cable routing, bin picking, or contact-rich tasks in a manufacturing cell.
 
-## Key concepts
+## Usage
 
-- **Industrial dexterity and manipulation**: end-to-end imitation and diffusion policies, force/torque and tactile feedback.
-- **Sim-to-real transfer**: domain randomization, teacher-student distillation, and synthetic datasets.
-- **Vision-language-action (VLA) models**: grounding natural-language instructions in robot policies.
-- **Multimodal datasets and benchmarks**: PRISM, Industrial Dexterity Benchmark, and factory-relevant skills.
+- Learn end-to-end manipulation and diffusion policies with force/torque feedback.
+- Transfer skills from simulation to real with domain randomization.
+- Ground natural-language assembly instructions in vision-language-action models.
+- Curate multimodal teleoperation datasets for factory-relevant skills.
+
+## Steps
+
+1. Set up a robot cell with cameras, force sensors, and teleoperation recording.
+2. Collect small, high-quality demonstrations for the target assembly skill.
+3. Train an imitation, diffusion, or VLA policy with appropriate augmentations.
+4. Validate success rate on real hardware, not just simulation.
+5. Iterate with force feedback and failure analysis for contact-rich tasks.
 
 ## Code pattern
 
@@ -285,17 +333,25 @@ class ForcePolicy(nn.Module):
     {
         "name": "ai-for-drones",
         "title": "AI for Drones",
-        "description": "AI for UAV perception, navigation, obstacle avoidance, mission planning, multi-drone coordination, and vision-language drone control.",
+        "description": 'Assess earthquake and flood damage from UAV imagery in real time to prioritize rescue routes and distribute aid.',
         "devin_body": r'''## When to use
 
 You are building autonomous drones for inspection, delivery, search and rescue, mapping, or natural-language-guided navigation.
 
-## Key concepts
+## Usage
 
-- **Vision-based drone navigation**: VIO, visual SLAM, and object detection on embedded GPUs.
-- **Foundation models for drones**: vision-language navigation, LLM mission planners, and neural policies.
-- **Swarm and multi-UAV coordination**: task allocation, collision avoidance, and communication-constrained control.
-- **Sim-to-real**: AirSim, Gazebo, and photorealistic simulators with domain transfer.
+- Run visual-inertial odometry, SLAM, and object detection on embedded GPUs.
+- Plan missions and allocate tasks across multi-UAV swarms.
+- Use vision-language models and LLM planners for language-guided flight.
+- Bridge photorealistic simulation to real flight with domain transfer.
+
+## Steps
+
+1. Select a lightweight model and TensorRT/ONNX runtime for the onboard computer.
+2. Train perception and navigation networks on simulated and real flight data.
+3. Implement geofencing, fail-safe, and low-latency obstacle avoidance.
+4. Test in simulation for wind, lighting, and GNSS-denied scenarios.
+5. Fly limited real-world missions and log metrics for retraining.
 
 ## Code pattern
 
@@ -331,17 +387,25 @@ results = model(frame)
     {
         "name": "ai-for-smart-manufacturing",
         "title": "AI for Smart Manufacturing",
-        "description": "AI for cyber-physical manufacturing, digital twins, real-time process optimization, predictive maintenance, and sustainable Industry 4.0/5.0 systems.",
+        "description": 'Use machine learning to build digital twins, optimize processes in real time, predict maintenance, and improve sustainability in cyber-physical factories.',
         "devin_body": r'''## When to use
 
 You are designing cyber-physical factories, building digital twins, optimizing processes in real time, or deploying predictive maintenance across production lines.
 
-## Key concepts
+## Usage
 
-- **Digital twins and real-time analytics**: virtual-physical synchronization, IoT data integration, and closed-loop control.
-- **Smart process optimization**: Bayesian optimization, reinforcement learning, and multi-objective parameter tuning.
-- **Predictive quality and maintenance**: in-line defect prediction and remaining useful life for machine tools.
-- **Sustainable manufacturing**: energy optimization, waste reduction, and circular-economy analytics.
+- Synchronize virtual-physical twins with IoT and OT data.
+- Optimize process parameters with Bayesian or reinforcement learning.
+- Predict in-line defects and remaining useful life of machine tools.
+- Optimize energy, waste, and circular-economy metrics.
+
+## Steps
+
+1. Ingest and time-align machine, process, and quality data from OT/IT systems.
+2. Build a digital twin of the process and validate against real telemetry.
+3. Train a predictive model for quality or energy KPIs.
+4. Optimize parameters with Bayesian or RL and measure KPI improvement.
+5. Close the loop with interpretable dashboards for operators.
 
 ## Code pattern
 
@@ -370,24 +434,32 @@ model = GradientBoostingRegressor().fit(X, y)
         "references": [
             "https://iopscience.iop.org/article/10.1088/3049-4761/ae5967",
             "https://www.mdpi.com/2076-3417/13/3/1903",
-            "https://par.nsf.gov/servlets/purl/10544873",
+            "https://doi.org/10.1016/j.cirp.2024.04.101",
             "https://www.nature.com/articles/s41598-025-25413-6",
         ],
     },
     {
         "name": "ai-for-quality-control",
         "title": "AI for Quality Control",
-        "description": "Machine learning and computer vision for automated inspection, defect detection, statistical process control, and zero-defect manufacturing.",
+        "description": 'Use machine learning and computer vision to inspect products, detect defects, monitor process stability, and move toward zero-defect manufacturing.',
         "devin_body": r'''## When to use
 
 You are automating visual inspection, detecting product defects, monitoring process stability, or building zero-defect manufacturing systems.
 
-## Key concepts
+## Usage
 
-- **Machine-vision defect detection**: CNNs, transformers, and anomaly segmentation for scratches, dents, and contamination.
-- **Statistical process control (SPC)**: control charts, process capability, and drift monitoring.
-- **Unsupervised and few-shot learning**: training on nominal samples and detecting novel defects.
-- **Edge deployment**: real-time inference on cameras and PLCs on the factory floor.
+- Classify and segment scratches, dents, and contamination from production images.
+- Track control charts and process capability for drift and out-of-control points.
+- Detect novel defects with unsupervised or few-shot anomaly models.
+- Deploy real-time inspection on cameras and PLCs at the edge.
+
+## Steps
+
+1. Collect nominal and defect images from real production, not just clean labs.
+2. Balance the dataset with augmentation, weighted loss, or anomaly methods.
+3. Train and calibrate a classifier or segmentation model for false-accept/reject trade-offs.
+4. Validate on a hold-out production sample with operator review.
+5. Deploy at the edge and monitor drift over shifts and suppliers.
 
 ## Code pattern
 
@@ -423,17 +495,25 @@ model.fc = torch.nn.Linear(model.fc.in_features, 2)
     {
         "name": "ai-for-warehouse-robotics",
         "title": "AI for Warehouse Robotics",
-        "description": "AI for autonomous mobile robots, goods-to-person systems, picking, multi-agent path finding, task allocation, and warehouse traffic management.",
+        "description": 'Use machine learning to route mobile robots, allocate tasks, avoid congestion, and manage traffic in goods-to-person warehouses.',
         "devin_body": r'''## When to use
 
 You are deploying mobile robots in a warehouse, coordinating fleets, allocating pick/place tasks, or optimizing traffic and throughput.
 
-## Key concepts
+## Usage
 
-- **Multi-Agent Path Finding (MAPF)**: conflict-free routing for large robot fleets in grid-based or graph warehouses.
-- **Task allocation and scheduling**: assignment of orders to robots and stations under deadlines and capacity.
-- **Foundation models for fleet prediction**: traffic prediction, congestion management, and learning-augmented planning.
-- **Perception and manipulation**: barcode scanning, shelf picking, and obstacle detection.
+- Solve conflict-free multi-agent path finding for large robot fleets.
+- Assign orders to robots and stations under deadlines and capacity constraints.
+- Predict traffic and congestion to learn-augment planning.
+- Integrate barcode scanning, shelf picking, and obstacle detection.
+
+## Steps
+
+1. Model the warehouse as a graph or grid with zones, charging, and stations.
+2. Implement a MAPF or task-allocation baseline and a greedy comparator.
+3. Train a congestion-prediction or learning-augmented policy on trajectory data.
+4. Validate throughput and latency in a discrete-event simulator.
+5. Deploy with online replanning for dynamic obstacles and order spikes.
 
 ## Code pattern
 
@@ -469,17 +549,25 @@ route = nx.shortest_path(G, pos, goal)
     {
         "name": "ai-for-field-robotics",
         "title": "AI for Field Robotics",
-        "description": "AI for robots operating in outdoor, unstructured environments such as agriculture, construction, mining, environmental monitoring, and disaster response.",
+        "description": 'Navigate autonomous robots through farms and construction sites to target weeds, harvest crops, and inspect hazards.',
         "devin_body": r'''## When to use
 
 You are building robots for crop monitoring, infrastructure inspection, environmental survey, mining, construction, or search-and-rescue in unstructured terrain.
 
-## Key concepts
+## Usage
 
-- **Terrain perception and navigation**: SLAM, semantic segmentation, and traversability estimation in off-road environments.
-- **Agricultural and environmental robotics**: phenotyping, weed detection, and precision spraying.
-- **Disaster and inspection robotics**: damage assessment, human detection, and autonomous traverse in hazardous zones.
-- **Robustness to field conditions**: weather, dust, lighting variation, and GPS-denied operation.
+- Estimate terrain traversability and build semantic maps for off-road navigation.
+- Detect crops, weeds, and stress with agricultural robots.
+- Assess damage and locate humans in disaster and inspection missions.
+- Fuse aerial and ground observations for field situational awareness.
+
+## Steps
+
+1. Collect diverse, georeferenced sensor data across weather and lighting.
+2. Train a terrain or crop segmentation model with field labels.
+3. Validate across locations and seasons for robustness.
+4. Plan autonomous missions in a high-fidelity simulator with power/comms constraints.
+5. Run a real-world field test and compare coverage and safety to baseline.
 
 ## Code pattern
 
@@ -515,17 +603,25 @@ clf = RandomForestClassifier(n_estimators=200).fit(X, y)
     {
         "name": "ai-for-exoskeletons",
         "title": "AI for Exoskeletons",
-        "description": "AI for wearable exoskeleton and exosuit control, gait and intention recognition, human-robot interaction, rehabilitation, and assistive augmentation.",
+        "description": 'Use machine learning to recognize gait and intent, personalize assistance, and control wearable exoskeletons for rehabilitation and industrial augmentation.',
         "devin_body": r'''## When to use
 
 You are designing control for an exoskeleton or exosuit, predicting user gait intention, personalizing assistance, or rehabilitating movement disorders.
 
-## Key concepts
+## Usage
 
-- **Intention and gait recognition**: EMG, IMU, and motion-capture-based classification of gait phase and activity.
-- **Task-agnostic and adaptive control**: biological joint-moment estimation, reinforcement learning, and human-in-the-loop optimization.
-- **Rehabilitation robotics**: personalized therapy, assistance-as-needed, and outcome monitoring.
-- **Soft exosuits and assistive devices**: lightweight textiles, cable drives, and energy-efficient control.
+- Classify gait phase and activity from EMG, IMU, and motion-capture data.
+- Estimate biological joint moments and adapt assistance in real time.
+- Personalize rehabilitation therapy with assistance-as-needed control.
+- Design soft exosuit control for energy-efficient, comfortable support.
+
+## Steps
+
+1. Collect wearable sensor and motion-capture data during walking and tasks.
+2. Calibrate subject-specific models and segment gait phases.
+3. Train an intention/phase classifier or a reinforcement-learning controller.
+4. Validate with clinical populations and real-world activities, not only lab walking.
+5. Measure effort or metabolic reduction and iterate the assistance profile.
 
 ## Code pattern
 

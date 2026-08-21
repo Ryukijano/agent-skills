@@ -2,19 +2,30 @@
 
 ## Description
 
-Neuroimaging and EEG analysis for stroke, brain tumors, epilepsy, and neurodegeneration, including lesion segmentation and outcome prediction.
+Use AI for Neurology to segment stroke lesions, analyze EEG and predict outcomes.
 
 ## When to use
 
 You are analyzing neuroimaging, EEG, or clinical data for stroke, brain tumors, epilepsy, neurodegeneration, or brain-computer interfaces.
 
-## Key concepts
 
-- **Acute ischemic stroke imaging**: non-contrast CT, CT angiography, perfusion, and DWI MRI.
+## Usage
+
+
+- **Acute ischemic stroke imaging**: Non-contrast CT, CT angiography, perfusion, and DWI MRI.
 - **Lesion segmentation**: DeepISLES, nnU-Net, and U-Net for ischemic core and penumbra.
-- **Outcome prediction**: mRS and NIHSS prediction from imaging plus clinical data.
-- **EEG-based neurological monitoring**: seizure, stroke, and sleep stage analysis.
+- **Outcome prediction**: MRS and NIHSS prediction from imaging plus clinical data.
+- **EEG-based neurological monitoring**: Seizure, stroke, and sleep stage analysis.
 - **Multimodal fusion**: MRI + CT + EEG + clinical variables.
+
+## Steps
+
+1. Collect and prepare brain MRI, CT and EEG recordings.
+2. Analyze neuroimaging.
+3. EEG.
+4. Clinical data for stroke.
+5. Validate by segmenting ischemic stroke lesions and report Dice vs. expert.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -36,12 +47,14 @@ model = UNet(
 )
 ```
 
+
 ## Tuning notes
 
 - Register images to a common template for lesion-location-based analyses.
 - Balance small lesion sizes with weighted loss and data augmentation.
 - Combine imaging features with NIHSS and time-to-treatment.
 - Address cross-scanner and cross-hospital generalization.
+
 
 ## Verification
 

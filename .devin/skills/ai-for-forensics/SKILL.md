@@ -2,18 +2,27 @@
 
 ## Description
 
-ML for image authentication, deepfake detection, authorship attribution, and anomaly detection in forensic evidence.
+Use ML to detect deepfakes and image forgeries, attribute authorship, and surface anomalies in digital and network forensic evidence.
 
 ## When to use
 
 You are verifying digital evidence, detecting synthetic media, or attributing authorship.
 
-## Key concepts
+## Usage
 
-- **Deepfake detection**: identify GAN or diffusion-generated images, audio, video.
-- **Image forgery detection**: copy-move, splicing, and manipulation traces.
-- **Authorship attribution**: stylometry and behavioral biometrics.
-- **Anomaly detection**: identify unusual patterns in logs or network traffic.
+- Detect GAN- or diffusion-generated deepfakes in images, audio, and video evidence.
+- Identify image forgeries such as copy-move, splicing, and compression artifacts.
+- Attribute authorship of text, code, or behavioral patterns using stylometry and biometrics.
+- Find anomalies in logs, network traffic, or device telemetry that indicate intrusion or tampering.
+
+## Steps
+
+1. Collect and preserve the digital evidence with documented chain of custody and hashing.
+2. Extract forensic features (noise, EXIF, compression, artifacts) and run deepfake or forgery detectors.
+3. Use source-camera identification and manipulation-localization maps to pinpoint altered regions.
+4. Build stylometric or behavioral-biometric models to attribute authorship of suspicious content.
+5. Apply anomaly detection to logs and network traffic, correlating events with the media under investigation.
+6. Package findings with confidence scores and explainable evidence for legal review and chain-of-custody reporting.
 
 ## Code pattern
 

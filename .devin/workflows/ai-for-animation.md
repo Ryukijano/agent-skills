@@ -1,6 +1,6 @@
 # /ai-for-animation
 
-Motion synthesis, inbetweening, character retargeting, physics-based animation, and style transfer for animated content.
+Use AI for Animation to clean motion capture, generate inbetweens, retarget and simulate physics.
 
 ## Trigger
 

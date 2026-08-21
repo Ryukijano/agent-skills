@@ -2,19 +2,30 @@
 
 ## Description
 
-Diabetic retinopathy screening, OCT analysis, glaucoma detection, and AI for retinal disease diagnosis from fundus photography.
+Use AI for Ophthalmology to screen for diabetic retinopathy, segment OCT and detect glaucoma.
 
 ## When to use
 
 You are screening for diabetic retinopathy, analyzing OCT volumes, detecting glaucoma, or building AI for retinal disease diagnosis and triage.
 
-## Key concepts
 
-- **Fundus photography grading**: diabetic retinopathy severity, diabetic macular edema, and referable thresholds.
-- **OCT segmentation**: intraretinal fluid, subretinal fluid, retinal nerve fiber layer, and pigment epithelium detachment.
+## Usage
+
+
+- **Fundus photography grading**: Diabetic retinopathy severity, diabetic macular edema, and referable thresholds.
+- **OCT segmentation**: Intraretinal fluid, subretinal fluid, retinal nerve fiber layer, and pigment epithelium detachment.
 - **Glaucoma detection**: RNFL thickness maps, optic nerve head analysis, and visual field prediction.
-- **Teleophthalmology and autonomous screening**: point-of-care deployment in primary care.
+- **Teleophthalmology and autonomous screening**: Point-of-care deployment in primary care.
 - **Regulatory pathways**: FDA/CE-marked AI systems for diabetic eye disease.
+
+## Steps
+
+1. Collect and prepare fundus photographs and OCT volumes.
+2. Screen for diabetic retinopathy.
+3. Analyze OCT volumes.
+4. Detect glaucoma.
+5. Validate by training a diabetic retinopathy classifier and compute sensitivity/specificity at the referral threshold.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -37,12 +48,14 @@ preprocess = transforms.Compose([
 tensor = preprocess(img).unsqueeze(0)
 ```
 
+
 ## Tuning notes
 
 - Ensure consistent image quality, field-of-view, and pupil dilation.
 - Use data augmentation (rotation, brightness) appropriate to fundus images.
 - Calibrate operating point for high sensitivity in screening workflows.
 - Validate on racially and ethnically diverse cohorts.
+
 
 ## Verification
 

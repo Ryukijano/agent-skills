@@ -2,19 +2,27 @@
 
 ## Description
 
-ML for satellite link prediction, beam hopping, resource allocation, non-terrestrial networks, and onboard edge AI.
+Optimize beam hopping, resource allocation, and coverage in LEO and GEO constellations.
 
 ## When to use
 
 You are building AI for satellite systems, including constellation management, link prediction, beam hopping, resource allocation, and NTN integration.
 
-## Key concepts
+## Usage
 
-- **LEO/MEO/GEO constellations**: trade-offs in latency, coverage, and Doppler.
-- **Machine learning for SatCom**: channel prediction, beam management, and fault detection.
-- **Non-terrestrial networks (NTN)**: 5G/6G integration with satellite and aerial platforms.
-- **On-board AI**: radiation-tolerant, energy-efficient inference in orbit.
-- **Resource allocation**: power, bandwidth, and beam scheduling across footprints.
+- Optimize beam-hopping patterns with multi-agent DRL.
+- Allocate power and bandwidth for LEO/GEO networks.
+- Build digital twins of satellite constellations.
+- Manage inter-satellite links and handovers.
+- Predict demand and traffic hotspots.
+
+## Steps
+
+1. Collect constellation ephemeris and traffic demand.
+2. Build channel and demand models.
+3. Train DRL or optimization policies for beam/power.
+4. Evaluate in STK or custom simulators.
+5. Deploy on-board or ground-based controllers.
 
 ## Code pattern
 

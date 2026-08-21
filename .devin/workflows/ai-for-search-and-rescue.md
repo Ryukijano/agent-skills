@@ -1,6 +1,6 @@
 # /ai-for-search-and-rescue
 
-UAV and robot search planning, victim detection from imagery and sensors, and SAR mission coordination with AI.
+Use machine learning and robotics to plan search coverage, detect victims from aerial and ground sensors, and coordinate human-robot teams in GNSS-denied or hazardous terrain.
 
 ## Trigger
 

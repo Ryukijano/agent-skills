@@ -1,6 +1,6 @@
 # /ai-for-data-ethics
 
-Fairness, accountability, transparency, data dignity, consent, and responsible data use in ML pipelines and AI systems.
+Assess and mitigate fairness, bias, and societal impacts of data and AI.
 
 ## Trigger
 

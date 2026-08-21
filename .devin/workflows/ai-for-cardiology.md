@@ -1,6 +1,6 @@
 # /ai-for-cardiology
 
-ECG interpretation, arrhythmia detection, heart failure screening, echocardiography analysis, and cardiovascular risk stratification with deep learning.
+Use AI for Cardiology to interpret ECGs, detect arrhythmias and predict heart failure risk.
 
 ## Trigger
 

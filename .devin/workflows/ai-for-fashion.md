@@ -1,6 +1,6 @@
 # /ai-for-fashion
 
-AI for trend forecasting, outfit recommendation, virtual try-on, generative design, and personalized shopping.
+Use AI for Fashion to forecast trends, recommend outfits, enable virtual try-on and generate designs.
 
 ## Trigger
 

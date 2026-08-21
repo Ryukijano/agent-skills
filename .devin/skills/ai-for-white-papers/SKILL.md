@@ -2,19 +2,28 @@
 
 ## Description
 
-Authoring long-form, evidence-based white papers and thought-leadership documents grounded in verified sources.
+Author long-form, evidence-based white papers and thought-leadership documents that define problems, survey evidence and present solutions while establishing credibility.
 
 ## When to use
 
 You are producing a B2B or technical white paper that defines a problem, surveys evidence, presents a solution, and establishes thought leadership.
 
-## Key concepts
+## Usage
 
-- **Problem-solution narrative**: state the problem, quantify the cost, and present an evidence-based approach.
-- **Executive summary**: write it last, place it first, and make it self-contained.
-- **Evidence and case studies**: support claims with benchmarks, peer-reviewed studies, and real customer outcomes.
-- **ROI and implementation**: include practical guidance on cost, benefits, and adoption.
-- **Brand voice and design**: maintain a consistent, professional tone and visual format.
+- **State the problem, quantify the cost, and present an evidence-based approach.**
+- **Write the executive summary last, place it first, and make it self-contained.**
+- **Support claims with benchmarks, peer-reviewed studies, and real customer outcomes.**
+- **Include practical guidance on cost, benefits, and adoption.**
+- **Maintain a consistent, professional tone and visual format.**
+
+## Steps
+
+1. Define the audience, objective, and key evidence sources before drafting.
+2. Research and synthesize industry data, benchmarks, peer-reviewed studies, and customer case studies.
+3. Build a structured outline with problem, evidence, solution, implementation, and ROI sections.
+4. Draft the body section by section, feeding the model verified sources and avoiding invented citations.
+5. Write the executive summary as a self-contained synthesis of the full paper.
+6. Fact-check all claims, align with brand voice and design, and export to editable formats.
 
 ## Code pattern
 

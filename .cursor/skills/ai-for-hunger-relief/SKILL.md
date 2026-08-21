@@ -2,18 +2,27 @@
 
 ## Description
 
-AI/ML for food-security early warning, acute food-insecurity forecasting, remote-sensing crop monitoring, and targeted food assistance.
+Use AI/ML to forecast food insecurity, monitor crops, and target emergency food assistance.
 
 ## When to use
 
 You are building or improving early warning systems for famine, food-insecurity phase classification, or allocation of emergency food assistance.
 
-## Key concepts
+## Usage
 
-- **IPC phase forecasting**: predict Crisis, Emergency, and Famine conditions using Integrated Food Security Phase Classification data.
-- **Remote-sensing indicators**: NDVI/EVI anomalies, rainfall (CHIRPS), and temperature as leading signals of crop failure.
-- **Market and conflict signals**: cereal prices, market access, and conflict event counts improve short-term forecasts.
-- **Mobile VAM surveys**: high-frequency food-consumption and coping-strategy data from call or SMS surveys.
+- Forecast Integrated Food Security Phase Classification (IPC) phases.
+- Use NDVI/EVI, rainfall (CHIRPS), and temperature as crop-failure signals.
+- Incorporate cereal prices, market access, and conflict events into short-term forecasts.
+- Collect high-frequency food consumption and coping-strategy data via mobile surveys.
+
+## Steps
+
+1. Gather IPC, remote-sensing, market, conflict, and survey data for the target region.
+2. Build a time-series or classification model for food-insecurity phase transitions.
+3. Use time-based splits and avoid leakage from future market prices.
+4. Calibrate probabilities to match donor and response budgets.
+5. Combine model outputs with expert judgment and maintain human escalation paths.
+6. Backtest against official IPC assessments and refine as shocks evolve.
 
 ## Code pattern
 

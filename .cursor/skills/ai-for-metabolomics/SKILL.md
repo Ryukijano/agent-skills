@@ -2,19 +2,28 @@
 
 ## Description
 
-Mass spectrometry and NMR metabolite profiling, annotation, pathway analysis, normalization, and machine learning for biomarker discovery.
+Use machine learning on LC-MS, GC-MS and NMR metabolite profiles to annotate features, discover biomarkers and predict disease risk or metabolic phenotypes.
 
 ## When to use
 
 You are analyzing mass spectrometry or NMR metabolomics data to identify metabolites, find biomarkers, classify samples, or integrate metabolism with other omics layers.
 
-## Key concepts
+## Usage
 
-- **LC-MS and NMR**: major analytical platforms for untargeted and targeted metabolomics.
-- **Metabolite annotation**: matching m/z, retention time, and fragmentation to libraries.
-- **Pathway analysis**: mapping features to KEGG, HMDB, and Reactome pathways.
-- **Normalization**: batch, drift, and sample-wise scaling to remove technical variation.
-- **Predictive models**: random forests, SVMs, and deep learning for biomarker discovery.
+- **Process spectra**: convert LC-MS, GC-MS, and NMR data into aligned peak tables and features.
+- **Annotate metabolites**: match m/z, retention time, and fragmentation to reference libraries.
+- **Normalize data**: correct batch effects, drift, and sample size before modeling.
+- **Map pathways**: connect significant features to KEGG, HMDB, and Reactome pathways.
+- **Predict phenotypes**: train classifiers and risk scores for disease and patient stratification.
+
+## Steps
+
+1. Import raw spectral or peak-table data and apply quality control and missing-value imputation.
+2. Annotate metabolites with m/z, RT, MS/MS libraries, or NMR chemical-shift databases.
+3. Normalize and correct for batch effects using QC samples or statistical alignment.
+4. Perform univariate, multivariate, or ML-based biomarker discovery with cross-validation.
+5. Map significant features to metabolic pathways and interpret biological relevance.
+6. Validate biomarkers with targeted assays and independent cohorts.
 
 ## Code pattern
 

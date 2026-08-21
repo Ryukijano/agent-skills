@@ -1,6 +1,6 @@
 # /ai-for-casting
 
-Machine learning for sand, investment, die, and continuous casting: defect prediction, mold filling, solidification, microstructure, and process optimization.
+Use AI and digital twins to predict casting defects, microstructure and mechanical properties and optimize gating and solidification in foundries.
 
 ## Trigger
 

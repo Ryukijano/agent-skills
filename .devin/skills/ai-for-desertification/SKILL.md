@@ -2,18 +2,27 @@
 
 ## Description
 
-Land degradation and desertification risk mapping, sensitivity assessment, and early warning from remote sensing and ML.
+Use AI to assess desertification sensitivity, map degraded land, or forecast land degradation in dryland regions.
 
 ## When to use
 
 You are assessing desertification sensitivity, mapping degraded land, or forecasting land degradation in dryland regions.
 
-## Key concepts
+## Usage
 
-- **Desertification indices**: MEDALUS, NDVI, SAVI, BSI, LST, and land management.
-- **Machine learning classifiers**: Random Forest, XGBoost, SVM for risk zones.
-- **Spatiotemporal forecasting**: LSTM and DeepMLP for DSI time series.
-- **Google Earth Engine pipelines**: scalable cloud-based monitoring.
+- Combine NDVI, SAVI, BSI, LST, and management data.
+- Classify desertification risk zones.
+- Run temporal forecasting of land degradation.
+- Identify hotspots and long-term trends.
+
+## Steps
+
+1. Combine NDVI, SAVI, BSI, LST, and management data.
+2. Classify desertification risk zones.
+3. Run temporal forecasting of land degradation.
+4. Identify hotspots and long-term trends.
+5. Cross-check with ground photos and land-cover maps.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

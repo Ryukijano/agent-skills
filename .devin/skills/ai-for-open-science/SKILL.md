@@ -2,19 +2,28 @@
 
 ## Description
 
-Reproducible research agents, open-source workbenches, provenance tracking, and computational reproducibility with AI.
+Make research reproducible and auditable by automating literature review, code execution, provenance tracking and FAIR data packaging with AI agents.
 
 ## When to use
 
 You want to make a research project open, reproducible, and auditable by automating literature review, code execution, provenance tracking, and FAIR data packaging.
 
-## Key concepts
+## Usage
 
-- **Open science principles**: open data, code, protocols, preprints, and transparent methods.
-- **Reproducibility and replication packages**: containerized, documented, and versioned artifacts.
-- **Provenance and RO-Crate**: record the origin and transformation of every dataset, figure, and model.
-- **AI research workbenches**: agents that search literature, run experiments, and write reports with traceability.
-- **FAIR and knowledge graphs**: make data Findable, Accessible, Interoperable, and Reusable.
+- **Share open data, code, protocols, preprints, and transparent methods.**
+- **Build containerized, documented, and versioned replication packages.**
+- **Record the origin and transformation of every dataset, figure, and model.**
+- **Deploy agents that search literature, run experiments, and write reports with traceability.**
+- **Make data Findable, Accessible, Interoperable, and Reusable.**
+
+## Steps
+
+1. Organize the project with versioned data, code, environment files, and a clear README.
+2. Use an agent or script to search literature, extract methods, and draft reproducible analysis notebooks.
+3. Track provenance with content hashes, container definitions, and RO-Crate or PROV-O metadata.
+4. Run the analysis end-to-end and compare outputs to expected values and original data.
+5. Package results as a replication archive with figures linked to the scripts that produced them.
+6. Share the package under an open license and attempt an independent reproduction by a colleague.
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-composites-manufacturing
 
-Machine learning for automated fiber placement, tape laying, resin infusion, cure monitoring, defect detection, and process optimization in composite part manufacturing.
+Use computer vision and machine learning to inspect automated fiber placement and tape-laying processes, detect defects and optimize thermal and compaction parameters in composite curing.
 
 ## Trigger
 

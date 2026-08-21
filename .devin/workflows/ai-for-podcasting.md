@@ -1,6 +1,6 @@
 # /ai-for-podcasting
 
-AI-generated and AI-assisted podcast production, including scriptwriting, voice synthesis, editing, transcription, and show notes.
+Automate transcripts, show notes and chapter markers to speed podcast production and improve accessibility.
 
 ## Trigger
 

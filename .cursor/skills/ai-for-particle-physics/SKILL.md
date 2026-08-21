@@ -2,18 +2,26 @@
 
 ## Description
 
-ML for collider event classification, jet tagging, fast detector simulation, neutrino event reconstruction, and new-physics searches.
+Use machine learning to tag jets, reconstruct events, accelerate detector simulation, and search for anomalous signatures at colliders and neutrino experiments.
 
 ## When to use
 
 You are classifying high-energy physics events, accelerating detector simulation, or searching for rare signals in collider or neutrino data.
 
-## Key concepts
+## Usage
 
-- **Jet tagging and event classification**: CNNs, graph networks, and transformers on point clouds.
-- **Fast simulation**: generative models for calorimeter showers and detector response.
-- **Anomaly detection**: model-agnostic searches for new physics.
-- **Lorentz and SE(3) equivariance**: respecting spacetime symmetries in architectures.
+- Classify jets, taus, and heavy-flavor decays from collider event data.
+- Generate fast calorimeter and detector-response simulations.
+- Search for new-physics anomalies in a model-agnostic way.
+- Build Lorentz- and SE(3)-equivariant architectures for particle clouds.
+
+## Steps
+
+1. Preprocess detector events into point clouds or jet images with pile-up masks.
+2. Train a permutation- or equivariant-aware classifier for the target physics object.
+3. Calibrate confidence and test for adversarial robustness.
+4. Build a fast generative surrogate for detector showers and validate against Geant4.
+5. Run an anomaly-detection search on public collider data and report discovery significance.
 
 ## Code pattern
 

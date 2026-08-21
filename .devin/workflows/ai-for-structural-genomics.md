@@ -1,6 +1,6 @@
 # /ai-for-structural-genomics
 
-3D genome organization, Hi-C analysis, protein structure prediction with deep learning, and multiscale structural modeling.
+Use deep learning and polymer modeling to predict 3D genome organization, protein structures and chromatin conformations from sequence and contact data.
 
 ## Trigger
 

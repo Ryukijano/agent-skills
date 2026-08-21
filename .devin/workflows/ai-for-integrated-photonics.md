@@ -1,6 +1,6 @@
 # /ai-for-integrated-photonics
 
-Inverse design, layout generation, and fabrication-aware optimization of silicon-photonic and photonic-integrated-circuit components.
+Use machine learning to inversely design photonic components, train fast surrogates, and automate PIC layout.
 
 ## Trigger
 

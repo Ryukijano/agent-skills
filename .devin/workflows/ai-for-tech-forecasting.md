@@ -1,6 +1,6 @@
 # /ai-for-tech-forecasting
 
-Patent and publication analysis, trend extrapolation, expert elicitation, and ML models for predicting technological progress and emerging AI capabilities.
+Use patents, publications, funding, and expert judgment to forecast technological progress and emerging capabilities.
 
 ## Trigger
 

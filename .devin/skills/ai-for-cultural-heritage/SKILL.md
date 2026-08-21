@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning and deep learning for the digitization, documentation, analysis, and sustainable management of tangible and intangible cultural heritage.
+Transcribe and restore damaged manuscripts and inscriptions with OCR and lacuna filling to make fragile heritage accessible.
 
 ## When to use
 
 You are digitizing, analyzing, or preserving cultural heritage assets such as monuments, artifacts, manuscripts, oral traditions, or historic sites.
 
-## Key concepts
+## Usage
 
-- **Heritage digitization**: photogrammetry, laser scanning, 3D reconstruction, and digital twins for tangible and intangible assets.
-- **Recognition and classification**: object detection, iconography analysis, and style identification in heritage imagery.
-- **Virtual reconstruction and restoration**: AI-driven inpainting, point-cloud completion, and historical scene generation.
-- **Monitoring and risk prediction**: time-series forecasting, change detection, and environmental risk modeling for heritage sites.
-- **Ethics and provenance**: indigenous data sovereignty, copyright, cultural sensitivity, and transparent AI decision-making.
+- Digitize, annotate, and segment heritage assets.
+- Extract and link entities, provenance, and temporal metadata.
+- Reconstruct damaged or missing regions with inpainting.
+- Build knowledge graphs and digital twins.
+
+## Steps
+
+1. Digitize, annotate, and segment heritage assets.
+2. Extract and link entities, provenance, and temporal metadata.
+3. Reconstruct damaged or missing regions with inpainting.
+4. Build knowledge graphs and digital twins.
+5. Validate with domain experts and authority files.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

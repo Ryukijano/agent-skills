@@ -1,6 +1,6 @@
 # /ai-for-criminology
 
-Predictive policing, recidivism risk assessment, crime forecasting, criminal network analysis, and fairness-aware public safety research.
+Use AI for Criminology to forecast crime, assess recidivism risk and analyze criminal networks fairly.
 
 ## Trigger
 

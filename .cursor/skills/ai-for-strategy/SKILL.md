@@ -2,18 +2,27 @@
 
 ## Description
 
-Data-driven strategy formulation, competitive scenario modeling, market sensing, and AI-augmented strategic decision-making.
+Use AI to formulate corporate strategy, evaluate strategic options, sense market shifts, or build decision support for leadership choices.
 
 ## When to use
 
 You are formulating corporate strategy, evaluating strategic options, sensing market shifts, or building decision support for leadership choices.
 
-## Key concepts
+## Usage
 
-- **Strategic decision-making with AI**: augment search, representation, and aggregation of strategic options.
-- **Scenario and war-gaming models**: simulate competitive dynamics and uncertainty.
-- **Outside view and base rates**: calibrate strategic plans with reference-class forecasting.
-- **Strategy analytics**: apply causal and predictive models to resource allocation.
+- Integrate internal and external market and macro signals.
+- Build scenario and war-gaming models.
+- Apply reference-class forecasting and causal analytics.
+- Rank strategic initiatives by expected value and risk.
+
+## Steps
+
+1. Integrate internal and external market and macro signals.
+2. Build scenario and war-gaming models.
+3. Apply reference-class forecasting and causal analytics.
+4. Rank strategic initiatives by expected value and risk.
+5. Document assumptions and confidence intervals.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

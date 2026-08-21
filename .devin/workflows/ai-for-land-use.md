@@ -1,6 +1,6 @@
 # /ai-for-land-use
 
-Remote sensing, multi-source data fusion, functional-zone mapping, and neural-symbolic planning for land-use analysis and policy.
+Maps urban functional zones and monitors land-cover change from remote sensing and multi-source geospatial data.
 
 ## Trigger
 

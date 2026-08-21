@@ -2,23 +2,27 @@
 
 ## Description
 
-Perimeter intrusion detection, access control analytics, video anomaly detection, and AI-augmented guard operations.
+Use machine learning to detect perimeter intrusions, analyze access-control anomalies, spot video anomalies, and augment guard operations while respecting privacy.
 
 ## When to use
 
 You are protecting facilities, people, and assets with cameras, sensors,
 and access-control systems that must detect and respond to anomalies.
 
-## Key concepts
+## Usage
 
-- **Video anomaly detection**: unusual behaviors, loitering, line-crossing,
-  and abandoned objects.
-- **Access control analytics**: tailgating, credential sharing, and
-  unauthorized zone entry.
-- **Perimeter and seismic sensing**: multi-modal fusion for intrusion
-  detection.
-- **Guard force augmentation**: AI-generated incident summaries and
-  alarm triage.
+- Detect unusual behaviors, loitering, and abandoned objects in surveillance video.
+- Flag tailgating, credential sharing, and unauthorized zone entry.
+- Fuse radar, video, and seismic sensors for perimeter and maritime sensing.
+- Generate AI-assisted incident summaries and alarm triage for guards.
+
+## Steps
+
+1. Collect and anonymize surveillance and access-control data with privacy controls.
+2. Train a video anomaly or access-control detector with balanced false-positive rates.
+3. Validate performance across lighting, weather, and camera angles.
+4. Compare edge and cloud latency on a live camera feed.
+5. Deploy with alert-threshold tuning and human-in-the-loop review.
 
 ## Code pattern
 

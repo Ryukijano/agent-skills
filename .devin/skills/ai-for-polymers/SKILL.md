@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for polymer property prediction, generative design, process optimization, and structure representation.
+Use ML to predict polymer properties, generate novel structures, and optimize process-structure-property relationships for sustainable materials.
 
 ## When to use
 
 You are discovering or optimizing polymeric materials for mechanical, thermal, electronic, or sustainable applications and need to navigate the vast polymer chemical and morphological space.
 
-## Key concepts
+## Usage
 
-- **Polymer representations**: SMILES, BigSMILES, fingerprints, graph neural networks, and polyBERT-style sequence embeddings.
-- **Property prediction**: glass transition, viscosity, modulus, permeability, and degradation from structure.
-- **Generative and inverse design**: VAEs, GANs, diffusion models, and reinforcement learning for novel polymer structures.
-- **Process-structure-property relationships**: linking synthesis conditions, molecular weight, and morphology to performance.
-- **Sustainable and recyclable polymers**: ML-guided biodegradability, upcycling, and circular material design.
+- Represent polymers with SMILES, BigSMILES, fingerprints, graph neural networks, or polyBERT-style embeddings.
+- Predict glass transition, viscosity, modulus, permeability, and degradation from structure.
+- Generate novel polymer structures with VAEs, GANs, diffusion models, or reinforcement learning.
+- Link synthesis, molecular weight, and morphology to performance for sustainable and recyclable design.
+
+## Steps
+
+1. Curate polymer structures and property data, choosing repeat-unit, oligomer, or bulk representations as appropriate.
+2. Train property-prediction models for target properties (Tg, modulus, permeability, bandgap) with transfer learning.
+3. Generate candidate polymers using a generative model and filter for synthetic accessibility and target property windows.
+4. Incorporate process, molecular weight, crystallinity, and polydispersity descriptors into structure-property models.
+5. Evaluate candidates for biodegradability, recyclability, or circularity with sustainability scoring.
+6. Validate top candidates by synthesis and measurement, and retrain the models with new data.
 
 ## Code pattern
 

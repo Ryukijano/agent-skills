@@ -1,6 +1,6 @@
 # /ai-for-rheumatology
 
-Machine learning for autoimmune disease diagnosis and phenotyping, flare prediction, treatment response in RA and SLE, and imaging-based joint inflammation scoring.
+Use machine learning to phenotype autoimmune disease, predict flares, forecast treatment response, and score joint inflammation.
 
 ## Trigger
 

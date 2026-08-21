@@ -2,18 +2,27 @@
 
 ## Description
 
-Recommender systems, itinerary planning, visitor behavior modeling, and personalized cultural heritage experiences for sustainable tourism.
+Use AI to build personalized heritage itineraries, recommend cultural sites, forecast visitor flows, or balance tourism with heritage preservation.
 
 ## When to use
 
 You are building personalized heritage itineraries, recommending cultural sites, forecasting visitor flows, or balancing tourism with heritage preservation.
 
-## Key concepts
+## Usage
 
-- **Cultural recommender systems**: collaborative filtering, content-based, and hybrid recommendations for heritage sites.
-- **Itinerary and path planning**: route optimization, time constraints, and content-adaptive path recommendation.
-- **Visitor behavior modeling**: spatiotemporal forecasting, sequence modeling, and crowd-flow prediction.
-- **Sustainable heritage tourism**: balancing visitor experience with site carrying capacity and conservation.
+- Build multimodal heritage site experiences.
+- Personalize tours by interest, mobility, and language.
+- Generate AR/VR reconstructions.
+- Balance tourism access with conservation limits.
+
+## Steps
+
+1. Build multimodal heritage site experiences.
+2. Personalize tours by interest, mobility, and language.
+3. Generate AR/VR reconstructions.
+4. Balance tourism access with conservation limits.
+5. Evaluate visitor learning and satisfaction.
+6. Validate digital outputs with heritage experts, source communities, and authority files before publication or physical intervention (Heritage Digital Twin-style).
 
 ## Code pattern
 

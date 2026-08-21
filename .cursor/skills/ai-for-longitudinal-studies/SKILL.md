@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning and deep learning for repeated measurements, time-varying covariates, missing data, trajectories, and outcomes in longitudinal cohorts and EHR data.
+Model repeated measurements over time to track disease progression, treatment response, and biomarker trajectories.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are analyzing repeated observations over time, predicting future trajectorie
 
 ## Usage
 
-- **Trajectory modeling**: predict individual or population-level progression over time.
-- **Missing-data handling**: impute or model informative dropout and irregular visits.
-- **Feature engineering**: encode time-varying covariates, slopes, and exposure histories.
-- **Causal longitudinal analysis**: estimate dynamic treatment effects with sequential ignorability.
+- Impute sparse EHR and wearable time series with MUSE-Net or SADI.
+- Build mixed-effects and trajectory models in R lme4 or Python statsmodels.
+- Detect change points in patient trajectories.
+- Forecast future clinical events from longitudinal panels.
+- Integrate EHR with accelerometer, glucose, or blood pressure wearables.
 
 ## Steps
 
-1. Structure the data into long format with subject, time, and outcome columns.
-2. Encode temporal patterns (lags, rolling summaries, time-since-event).
-3. Choose a model suited to repeated measures (mixed-effects, RNN, transformer, or survival model).
-4. Evaluate with time-aware cross-validation and check temporal leakage.
-5. Report uncertainty and sensitivity to missing-data assumptions.
+1. Extract longitudinal patient records and define the outcome trajectory.
+2. Handle irregular sampling, missing values, and informative dropout.
+3. Engineer time-varying features (slopes, area-under-curve, lag windows).
+4. Train mixed-effects, joint, or deep sequence models.
+5. Evaluate with individual-specific predictions and calibration.
 
 ## Code pattern
 

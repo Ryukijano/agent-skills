@@ -2,7 +2,7 @@
 
 ## Description
 
-Chatbots and virtual assistants, proactive public services, document automation, eligibility screening, and responsible AI in digital government.
+Automates citizen-facing public services through conversational agents, document processing, and proactive eligibility screening.
 
 ## When to use
 
@@ -10,19 +10,18 @@ You are modernizing digital government services, automating citizen inquiries, o
 
 ## Usage
 
-- **Virtual assistants and chatbots**: handle FAQs, guide applicants, and triage service requests.
-- **Proactive public services**: predict needs, pre-fill forms, and deliver personalized notifications.
-- **Document processing**: extract data, classify submissions, and automate routine approvals.
-- **Eligibility and benefits**: screen citizens, match services, and reduce administrative burden.
-- **Responsible AI**: ensure transparency, accountability, and accessibility in public systems.
+- **Citizen chatbots and voice assistants**: answer FAQs, guide form completion, and route complex queries using services such as Portugal's ePortugal Virtual Assistant or India's Jan-Sahayak.
+- **Document processing and pre-fill**: extract fields from submissions, classify requests, and auto-populate forms with NLP/LLM pipelines.
+- **Proactive eligibility screening**: match residents to benefits, send renewal reminders, and flag missing documents.
+- **Responsible AI governance**: monitor responses for bias, maintain audit trails, and provide human escalation paths.
 
 ## Steps
 
-1. Map citizen journeys and high-volume service touchpoints.
-2. Curate and clean government documents, forms, and policy text.
-3. Build or fine-tune a conversational AI or classification pipeline.
-4. Implement human-in-the-loop review for high-stakes decisions.
-5. Monitor usage, satisfaction, and bias metrics continuously.
+1. Map high-volume citizen journeys and identify service pain points.
+2. Curate official policy documents, forms, and FAQs into a vetted knowledge base.
+3. Build a retrieval-augmented generation or conversational pipeline grounded in authoritative sources.
+4. Pilot with one service, measuring deflection, resolution, and satisfaction.
+5. Audit outputs for accuracy, fairness, and accessibility before scaling.
 
 ## Code pattern
 

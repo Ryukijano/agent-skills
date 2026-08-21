@@ -1,6 +1,6 @@
 # /ai-for-dermatology
 
-Skin lesion classification, dermoscopy analysis, melanoma detection, teledermatology, and fairness across skin tones with deep learning.
+Use AI for Dermatology to classify lesions, analyze dermoscopy and power teledermatology screening.
 
 ## Trigger
 

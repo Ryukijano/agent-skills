@@ -1,19 +1,27 @@
 SKILLS = [
     {
-        "name": "ai-for-management-consulting",
-        "title": "AI for Management Consulting",
-        "description": "Accelerate diagnostic research, market sizing, client synthesis, and GenAI-assisted advisory workflows while managing epistemic risk.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-management-consulting',
+        "title": 'AI for Management Consulting',
+        "description": 'Use AI to build AI-augmented consulting workflows for market analysis, synthesis of client data, hypothesis generation, or executive-ready deliverables.',
+        "devin_body": r'''## When to use
 
 You are building AI-augmented consulting workflows for market analysis, synthesis of client data, hypothesis generation, or executive-ready deliverables.
 
-## Key concepts
+## Usage
 
-- **Task-GenAI fit**: decide where to automate, augment, or avoid GenAI based on ambiguity and stakes.
-- **Knowledge synthesis**: summarize interviews, documents, and benchmarks into defensible insights.
-- **Market sizing and scenario modeling**: combine structured data with LLM-driven assumptions.
-- **Epistemic risk and source grounding**: validate AI output against client facts and cited sources.
+- Map tasks to GenAI fit (automate, augment, or avoid).
+- Synthesize client documents and prior proposals.
+- Draft proposals, status reports, and deliverables.
+- Ground claims to sources and cite evidence.
+
+## Steps
+
+1. Map tasks to GenAI fit (automate, augment, or avoid).
+2. Synthesize client documents and prior proposals.
+3. Draft proposals, status reports, and deliverables.
+4. Ground claims to sources and cite evidence.
+5. Audit for hallucinations and epistemic risk.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -38,30 +46,37 @@ sim = cosine_similarity(X)
 
 1. Build a document-synthesis pipeline and compare output to a manually written summary.
 2. Run a market-sizing model and verify inputs against published data.
-3. Audit a sample of GenAI outputs for factual accuracy and source attribution.
-''',
+3. Audit a sample of GenAI outputs for factual accuracy and source attribution.''',
         "references": [
-            "https://doi.org/10.1007/s12599-026-00992-4",
-            "https://www.wi.uni-muenster.de/research/publications/193019598",
-            "https://doi.org/10.1016/j.infoandorg.2025.100559",
-            "https://arxiv.org/abs/2409.06643",
+            'https://doi.org/10.1007/s12599-026-00992-4',
+            'https://www.wi.uni-muenster.de/research/publications/193019598',
+            'https://doi.org/10.1016/j.infoandorg.2025.100559',
+            'https://arxiv.org/abs/2409.06643',
         ],
     },
     {
-        "name": "ai-for-strategy",
-        "title": "AI for Strategy",
-        "description": "Data-driven strategy formulation, competitive scenario modeling, market sensing, and AI-augmented strategic decision-making.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-strategy',
+        "title": 'AI for Strategy',
+        "description": 'Use AI to formulate corporate strategy, evaluate strategic options, sense market shifts, or build decision support for leadership choices.',
+        "devin_body": r'''## When to use
 
 You are formulating corporate strategy, evaluating strategic options, sensing market shifts, or building decision support for leadership choices.
 
-## Key concepts
+## Usage
 
-- **Strategic decision-making with AI**: augment search, representation, and aggregation of strategic options.
-- **Scenario and war-gaming models**: simulate competitive dynamics and uncertainty.
-- **Outside view and base rates**: calibrate strategic plans with reference-class forecasting.
-- **Strategy analytics**: apply causal and predictive models to resource allocation.
+- Integrate internal and external market and macro signals.
+- Build scenario and war-gaming models.
+- Apply reference-class forecasting and causal analytics.
+- Rank strategic initiatives by expected value and risk.
+
+## Steps
+
+1. Integrate internal and external market and macro signals.
+2. Build scenario and war-gaming models.
+3. Apply reference-class forecasting and causal analytics.
+4. Rank strategic initiatives by expected value and risk.
+5. Document assumptions and confidence intervals.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -86,30 +101,37 @@ model = GradientBoostingRegressor(n_estimators=300, random_state=42).fit(X, y)
 
 1. Build a strategic initiative valuation model and backtest on historical outcomes.
 2. Run a scenario simulation and compare results to a static strategic plan.
-3. Evaluate whether AI insights change resource-allocation priorities in a blind test.
-''',
+3. Evaluate whether AI insights change resource-allocation priorities in a blind test.''',
         "references": [
-            "https://doi.org/10.48550/arxiv.2408.08811",
-            "https://arxiv.org/pdf/2210.12373",
-            "https://arxiv.org/abs/2404.01230",
-            "https://arxiv.org/abs/2412.13013",
+            'https://doi.org/10.48550/arxiv.2408.08811',
+            'https://arxiv.org/pdf/2210.12373',
+            'https://arxiv.org/abs/2404.01230',
+            'https://arxiv.org/abs/2412.13013',
         ],
     },
     {
-        "name": "ai-for-innovation-management",
-        "title": "AI for Innovation Management",
-        "description": "Idea generation, R&D portfolio prioritization, trend forecasting, and AI-enabled new product development.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-innovation-management',
+        "title": 'AI for Innovation Management',
+        "description": 'Use AI to manage an innovation pipeline, prioritize R&D projects, forecast technology trends, or accelerating concept-to-launch cycles.',
+        "devin_body": r'''## When to use
 
 You are managing an innovation pipeline, prioritizing R&D projects, forecasting technology trends, or accelerating concept-to-launch cycles.
 
-## Key concepts
+## Usage
 
-- **Idea mining and generation**: extract and evaluate ideas from patents, papers, and customer signals.
-- **Portfolio prioritization**: rank projects by strategic fit, risk, and expected value.
-- **Trend and weak-signal detection**: forecast emerging technologies and customer needs.
-- **Stage-gate acceleration**: use AI to screen concepts and reduce uncertainty early.
+- Mine ideas from patents, papers, and customer signals.
+- Score and rank projects by fit, risk, and value.
+- Forecast technology and market trends.
+- Screen concepts at stage-gates.
+
+## Steps
+
+1. Mine ideas from patents, papers, and customer signals.
+2. Score and rank projects by fit, risk, and value.
+3. Forecast technology and market trends.
+4. Screen concepts at stage-gates.
+5. Track portfolio outcomes against expert forecasts.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -132,30 +154,37 @@ clf = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X[fea
 
 1. Score a set of project ideas and compare to expert rankings.
 2. Build a trend-forecasting model and evaluate directional accuracy.
-3. Track stage-gate outcomes for AI-screened vs manually screened concepts.
-''',
+3. Track stage-gate outcomes for AI-screened vs manually screened concepts.''',
         "references": [
-            "https://doi.org/10.1016/j.techfore.2020.120392",
-            "https://doi.org/10.1016/j.technovation.2024.103081",
-            "https://doi.org/10.1016/j.jbusres.2024.114542",
-            "https://doi.org/10.1016/j.techfore.2022.121598",
+            'https://doi.org/10.1016/j.techfore.2020.120392',
+            'https://doi.org/10.1016/j.technovation.2024.103081',
+            'https://doi.org/10.1016/j.jbusres.2024.114542',
+            'https://doi.org/10.1016/j.techfore.2022.121598',
         ],
     },
     {
-        "name": "ai-for-knowledge-management",
-        "title": "AI for Knowledge Management",
-        "description": "Semantic knowledge search, enterprise RAG, expertise mining, and AI-assisted capture of institutional tacit knowledge.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-knowledge-management',
+        "title": 'AI for Knowledge Management',
+        "description": 'Use AI to make organizational knowledge searchable, capture tacit expertise, build enterprise RAG, or recommend relevant experts and documents.',
+        "devin_body": r'''## When to use
 
 You need to make organizational knowledge searchable, capture tacit expertise, build enterprise RAG, or recommend relevant experts and documents.
 
-## Key concepts
+## Usage
 
-- **Enterprise RAG**: ground LLM answers in internal documents and wikis.
-- **Knowledge graphs**: connect people, projects, and concepts across the organization.
-- **Expertise mining**: identify who knows what from publications, projects, and communications.
-- **Tacit knowledge capture**: turn meetings, tickets, and chats into reusable assets.
+- Chunk and embed enterprise documents and wikis.
+- Build RAG over internal knowledge.
+- Construct knowledge graphs of people, projects, and concepts.
+- Mine expertise and tacit knowledge from communications.
+
+## Steps
+
+1. Chunk and embed enterprise documents and wikis.
+2. Build RAG over internal knowledge.
+3. Construct knowledge graphs of people, projects, and concepts.
+4. Mine expertise and tacit knowledge from communications.
+5. Enforce access controls and source attribution.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -178,30 +207,37 @@ embeddings = model.encode(documents)
 
 1. Build an enterprise search and measure nDCG against a labeled test set.
 2. Run a RAG pipeline and verify answers cite the correct source passages.
-3. Mine expert profiles and validate recommendations with peer feedback.
-''',
+3. Mine expert profiles and validate recommendations with peer feedback.''',
         "references": [
-            "https://doi.org/10.3389/frai.2025.1595930",
-            "https://arxiv.org/abs/2607.02609",
-            "https://link.springer.com/article/10.1007/s44163-026-01780-5",
-            "https://doi.org/10.2478/czoto-2024-0027",
+            'https://doi.org/10.3389/frai.2025.1595930',
+            'https://arxiv.org/abs/2607.02609',
+            'https://link.springer.com/article/10.1007/s44163-026-01780-5',
+            'https://doi.org/10.2478/czoto-2024-0027',
         ],
     },
     {
-        "name": "ai-for-project-management",
-        "title": "AI for Project Management",
-        "description": "Schedule and cost forecasting, risk triage, resource optimization, and AI-driven project health monitoring.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-project-management',
+        "title": 'AI for Project Management',
+        "description": 'Use AI to plan or execute projects and need to forecast duration, cost, risk, or resource bottlenecks across the project lifecycle.',
+        "devin_body": r'''## When to use
 
 You are planning or executing projects and need to forecast duration, cost, risk, or resource bottlenecks across the project lifecycle.
 
-## Key concepts
+## Usage
 
-- **Predictive project analytics**: forecast cost, schedule, and risk from historical data.
-- **Resource and schedule optimization**: allocate people and tasks under constraints.
-- **Project health scoring**: aggregate scope, schedule, cost, and stakeholder signals.
-- **Natural-language project data**: extract risks and issues from status reports and emails.
+- Extract status, risks, and issues from project data.
+- Forecast cost, schedule, and resource bottlenecks.
+- Optimize allocation under constraints.
+- Build project health dashboards.
+
+## Steps
+
+1. Extract status, risks, and issues from project data.
+2. Forecast cost, schedule, and resource bottlenecks.
+3. Optimize allocation under constraints.
+4. Build project health dashboards.
+5. Backtest predictions on completed projects.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -225,30 +261,37 @@ model = GradientBoostingRegressor(n_estimators=300, random_state=42).fit(X, y)
 
 1. Build a cost-overrun forecast and backtest on completed projects.
 2. Predict schedule slippage and compare to a critical-path baseline.
-3. Triage at-risk projects and validate against manager assessments.
-''',
+3. Triage at-risk projects and validate against manager assessments.''',
         "references": [
-            "https://doi.org/10.48550/arxiv.2601.16392",
-            "https://arxiv.org/pdf/2604.21958",
-            "https://arxiv.org/pdf/2506.02214",
-            "https://arxiv.org/abs/2604.13814v1",
+            'https://doi.org/10.48550/arxiv.2601.16392',
+            'https://arxiv.org/pdf/2604.21958',
+            'https://arxiv.org/pdf/2506.02214',
+            'https://arxiv.org/abs/2604.13814v1',
         ],
     },
     {
-        "name": "ai-for-change-management",
-        "title": "AI for Change Management",
-        "description": "Stakeholder sentiment monitoring, adoption analytics, training personalization, and AI-assisted transformation communications.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-change-management',
+        "title": 'AI for Change Management',
+        "description": 'Use AI to leading organizational change, tracking adoption, personalize enablement, or tailoring communications to stakeholder segments.',
+        "devin_body": r'''## When to use
 
 You are leading organizational change, tracking adoption, personalizing enablement, or tailoring communications to stakeholder segments.
 
-## Key concepts
+## Usage
 
-- **Stakeholder sensing**: classify sentiment, concerns, and readiness from surveys and messages.
-- **ADKAR and behavioral stages**: map AI interventions to awareness, desire, knowledge, ability, reinforcement.
-- **Personalized learning paths**: recommend training and nudges by role and gap.
-- **Change communication optimization**: generate targeted messaging and FAQs.
+- Sense stakeholder sentiment and readiness.
+- Map interventions to ADKAR or Kotter stages.
+- Personalize training and nudges by role.
+- Generate targeted communications and FAQs.
+
+## Steps
+
+1. Sense stakeholder sentiment and readiness.
+2. Map interventions to ADKAR or Kotter stages.
+3. Personalize training and nudges by role.
+4. Generate targeted communications and FAQs.
+5. Measure adoption and engagement lift.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -272,30 +315,37 @@ clf = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, y)
 
 1. Classify stakeholder sentiment and compare to survey results.
 2. Build a readiness model and validate against actual adoption outcomes.
-3. Test personalized communication and measure engagement lift.
-''',
+3. Test personalized communication and measure engagement lift.''',
         "references": [
-            "https://arxiv.org/abs/2510.19997",
-            "https://arxiv.org/abs/2411.08693",
-            "https://aaltodoc.aalto.fi/items/f95a2878-deed-4814-bf3c-e326a4a1dc8d",
-            "https://www.inderscience.com/info/inarticle.php?artid=132074",
+            'https://arxiv.org/abs/2510.19997',
+            'https://arxiv.org/abs/2411.08693',
+            'https://doi.org/10.1177/00218863231168974',
+            'https://www.inderscience.com/info/inarticle.php?artid=132074',
         ],
     },
     {
-        "name": "ai-for-operations-management",
-        "title": "AI for Operations Management",
-        "description": "Process mining, service-level optimization, quality control, and AI-driven operational decision support.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-operations-management',
+        "title": 'AI for Operations Management',
+        "description": 'Use AI to optimize business processes, improve service levels, monitor quality, or augmenting operational decisions with data and AI.',
+        "devin_body": r'''## When to use
 
 You are optimizing business processes, improving service levels, monitoring quality, or augmenting operational decisions with data and AI.
 
-## Key concepts
+## Usage
 
-- **Process mining and discovery**: reconstruct workflows from event logs.
-- **Service-level optimization**: balance demand, capacity, and waiting times.
-- **Quality and anomaly detection**: monitor SPC, defect patterns, and drift.
-- **Human-AI teaming**: design trust, incentives, and escalation in operations.
+- Reconstruct workflows from event logs.
+- Forecast demand, capacity, and queues.
+- Optimize staffing and scheduling.
+- Deploy quality and anomaly detection.
+
+## Steps
+
+1. Reconstruct workflows from event logs.
+2. Forecast demand, capacity, and queues.
+3. Optimize staffing and scheduling.
+4. Deploy quality and anomaly detection.
+5. Compare as-designed and as-mined process maps.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -321,30 +371,37 @@ result = linprog(c, A_ub=A_ub, b_ub=b_ub, bounds=(0, max_staff))
 
 1. Mine a process from event logs and compare to an as-designed map.
 2. Optimize staffing or inventory and measure service-level improvement.
-3. Deploy an anomaly detector and validate against known quality issues.
-''',
+3. Deploy an anomaly detector and validate against known quality issues.''',
         "references": [
-            "https://arxiv.org/abs/2507.17927",
-            "https://arxiv.org/abs/2505.13580",
-            "https://arxiv.org/abs/2510.03310",
-            "https://arxiv.org/pdf/2601.06061",
+            'https://arxiv.org/abs/2507.17927',
+            'https://arxiv.org/abs/2505.13580',
+            'https://arxiv.org/abs/2510.03310',
+            'https://arxiv.org/pdf/2601.06061',
         ],
     },
     {
-        "name": "ai-for-risk-management",
-        "title": "AI for Risk Management",
-        "description": "Credit, market, operational, and emerging risk modeling with ML and scenario analysis.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-risk-management',
+        "title": 'AI for Risk Management',
+        "description": 'Use AI to quantify credit, market, operational, or emerging risks; building early-warning systems; or stress-testing portfolios and operations.',
+        "devin_body": r'''## When to use
 
 You are quantifying credit, market, operational, or emerging risks; building early-warning systems; or stress-testing portfolios and operations.
 
-## Key concepts
+## Usage
 
-- **Risk modeling**: probability of default, loss distribution, and value-at-risk estimation.
-- **Anomaly and tail-risk detection**: spot rare events and emerging vulnerabilities.
-- **Scenario and stress testing**: evaluate sensitivity to shocks and regime changes.
-- **Model risk management**: validate, monitor, and govern AI risk models.
+- Calibrate probability and loss models.
+- Detect anomalies and tail risks.
+- Run stress and scenario tests.
+- Separate model development and governance.
+
+## Steps
+
+1. Calibrate probability and loss models.
+2. Detect anomalies and tail risks.
+3. Run stress and scenario tests.
+4. Separate model development and governance.
+5. Monitor for distribution shift and adversarial behavior.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -368,30 +425,37 @@ model = GradientBoostingClassifier(n_estimators=300, random_state=42).fit(X, y)
 
 1. Build a default model and report AUC-ROC and calibration curves.
 2. Run a stress scenario and quantify tail losses vs a baseline.
-3. Deploy a drift monitor and simulate a regime shift.
-''',
+3. Deploy a drift monitor and simulate a regime shift.''',
         "references": [
-            "https://doi.org/10.48550/arxiv.2502.06656",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC12032382/",
-            "https://www.msci.com/downloads/web/msci-com/research-and-insights/paper/ai-portfolio-insights-and-the-future-of-risk-management/AI-Portfolio-Insights-and-the-Future-of-Risk-Management.pdf",
-            "https://arxiv.org/abs/2310.17721",
+            'https://doi.org/10.48550/arxiv.2502.06656',
+            'https://pmc.ncbi.nlm.nih.gov/articles/PMC12032382/',
+            'https://www.msci.com/downloads/web/msci-com/research-and-insights/paper/ai-portfolio-insights-and-the-future-of-risk-management/AI-Portfolio-Insights-and-the-Future-of-Risk-Management.pdf',
+            'https://arxiv.org/abs/2310.17721',
         ],
     },
     {
-        "name": "ai-for-compliance",
-        "title": "AI for Compliance",
-        "description": "Regulatory mapping, policy gap analysis, automated control testing, and AI-assisted compliance monitoring.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-compliance',
+        "title": 'AI for Compliance',
+        "description": 'Use AI to map regulations to controls, identify policy gaps, test compliance automatically, or answer regulatory questions at scale.',
+        "devin_body": r'''## When to use
 
 You need to map regulations to controls, identify policy gaps, test compliance automatically, or answer regulatory questions at scale.
 
-## Key concepts
+## Usage
 
-- **Regulatory intelligence**: parse and compare rules across jurisdictions.
-- **Policy gap analysis**: align internal policies against external requirements.
-- **Control testing automation**: sample and test controls with ML.
-- **Model-card and AI governance**: document and evaluate AI systems for regulatory fit.
+- Parse and map regulations to internal controls.
+- Identify policy gaps across jurisdictions.
+- Automate control testing and sampling.
+- Cite exact provisions for findings.
+
+## Steps
+
+1. Parse and map regulations to internal controls.
+2. Identify policy gaps across jurisdictions.
+3. Automate control testing and sampling.
+4. Cite exact provisions for findings.
+5. Maintain audit trails and human oversight.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -416,30 +480,37 @@ clf = MultinomialNB().fit(X, requirement_labels)
 
 1. Map a regulation to internal policies and report coverage gaps.
 2. Classify regulatory requirements and measure accuracy vs legal review.
-3. Automate a control test and compare results to manual sampling.
-''',
+3. Automate a control test and compare results to manual sampling.''',
         "references": [
-            "https://doi.org/10.1007/s44163-026-01196-1",
-            "https://doi.org/10.48550/arxiv.2601.04474",
-            "https://link.springer.com/article/10.1007/s43681-025-00708-6",
-            "https://arxiv.org/abs/2406.14758v2",
+            'https://doi.org/10.1007/s44163-026-01196-1',
+            'https://doi.org/10.48550/arxiv.2601.04474',
+            'https://link.springer.com/article/10.1007/s43681-025-00708-6',
+            'https://arxiv.org/abs/2406.14758v2',
         ],
     },
     {
-        "name": "ai-for-legal-operations",
-        "title": "AI for Legal Operations",
-        "description": "Contract review, clause extraction, matter intake, and AI-assisted legal workflow automation.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-legal-operations',
+        "title": 'AI for Legal Operations',
+        "description": 'Use AI to automate contract review, triaging legal requests, extract clauses, or streamlining matter management and e-billing.',
+        "devin_body": r'''## When to use
 
 You are automating contract review, triaging legal requests, extracting clauses, or streamlining matter management and e-billing.
 
-## Key concepts
+## Usage
 
-- **Contract review and clause extraction**: identify risks, obligations, and deviations.
-- **Legal intake and routing**: classify matters and route to the right team.
-- **E-billing and spend analytics**: detect anomalies and benchmark legal spend.
-- **RAG and source grounding**: ground legal answers in contracts, policies, and precedent.
+- Extract clauses, entities, and obligations from contracts.
+- Triage legal intake and route matters.
+- Ground answers in approved playbooks and precedent.
+- Detect spend anomalies and benchmark fees.
+
+## Steps
+
+1. Extract clauses, entities, and obligations from contracts.
+2. Triage legal intake and route matters.
+3. Ground answers in approved playbooks and precedent.
+4. Detect spend anomalies and benchmark fees.
+5. Require attorney review before final advice.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -462,30 +533,37 @@ entities = ner(contract_text)
 
 1. Extract clauses from a contract set and compare to manual annotations.
 2. Build a matter-intake classifier and measure routing accuracy.
-3. Test a contract-review pipeline against a discrepancy benchmark.
-''',
+3. Test a contract-review pipeline against a discrepancy benchmark.''',
         "references": [
-            "https://aclanthology.org/2026.findings-eacl.305/",
-            "https://arxiv.org/abs/2508.03080",
-            "https://arxiv.org/abs/2401.16212",
-            "https://www.cambridge.org/core/journals/international-journal-of-legal-information/article/evaluating-ai-in-legal-operations-a-comparative-analysis-of-accuracy-completeness-and-hallucinations-in-chatgpt4-copilot-deepseek-lexis-ai-and-llama-3/64E4DA3715DFCAA99DF3A1AC4680CAC8",
+            'https://aclanthology.org/2026.findings-eacl.305/',
+            'https://arxiv.org/abs/2508.03080',
+            'https://arxiv.org/abs/2401.16212',
+            'https://www.cambridge.org/core/journals/international-journal-of-legal-information/article/evaluating-ai-in-legal-operations-a-comparative-analysis-of-accuracy-completeness-and-hallucinations-in-chatgpt4-copilot-deepseek-lexis-ai-and-llama-3/64E4DA3715DFCAA99DF3A1AC4680CAC8',
         ],
     },
     {
-        "name": "ai-for-insurance",
-        "title": "AI for Insurance",
-        "description": "Underwriting triage, claims automation, fraud detection, and AI-assisted pricing and reserving.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-insurance',
+        "title": 'AI for Insurance',
+        "description": 'Score claims for fraud and triage underwriting by combining image metadata, network linkages, and historical loss patterns.',
+        "devin_body": r'''## When to use
 
 You are building predictive models for underwriting, claims, fraud, pricing, or customer churn in insurance operations.
 
-## Key concepts
+## Usage
 
-- **Underwriting risk scoring**: predict loss cost and quote appropriate premiums.
-- **Claims automation**: triage, document understanding, and fast-track routing.
-- **Fraud and leakage detection**: identify suspicious patterns and provider behavior.
-- **Pricing and reserving**: combine ML with actuarial methods for ratemaking.
+- Ingest underwriting, claims, and policy data.
+- Build risk, fraud, and severity models.
+- Calibrate probabilities and pricing.
+- Automate triage and fast-track routing.
+
+## Steps
+
+1. Ingest underwriting, claims, and policy data.
+2. Build risk, fraud, and severity models.
+3. Calibrate probabilities and pricing.
+4. Automate triage and fast-track routing.
+5. Audit for anti-discrimination and distribution shift.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -509,30 +587,37 @@ clf = RandomForestClassifier(class_weight="balanced_subsample", random_state=42)
 
 1. Build a fraud model and report precision-recall at the top decile.
 2. Predict claim severity and compare to actuarial baseline.
-3. Test an underwriting triage workflow and measure straight-through processing.
-''',
+3. Test an underwriting triage workflow and measure straight-through processing.''',
         "references": [
-            "https://arxiv.org/abs/2605.18784v2",
-            "https://arxiv.org/abs/2606.05449v1",
-            "https://doi.org/10.48550/arxiv.2506.18942",
-            "https://arxiv.org/abs/2306.01149",
+            'https://arxiv.org/abs/2605.18784v2',
+            'https://arxiv.org/abs/2606.05449v1',
+            'https://doi.org/10.48550/arxiv.2506.18942',
+            'https://arxiv.org/abs/2306.01149',
         ],
     },
     {
-        "name": "ai-for-real-estate",
-        "title": "AI for Real Estate",
-        "description": "Automated valuation, market analysis, lead matching, and AI-assisted property due diligence.",
-        "devin_body": r'''
-## When to use
+        "name": 'ai-for-real-estate',
+        "title": 'AI for Real Estate',
+        "description": 'Use AI to valuing properties, analyze market trends, matching buyers to listings, or screening properties for investment or lending.',
+        "devin_body": r'''## When to use
 
 You are valuing properties, analyzing market trends, matching buyers to listings, or screening properties for investment or lending.
 
-## Key concepts
+## Usage
 
-- **Automated valuation models (AVMs)**: predict price from property and market features.
-- **Hedonic and multi-modal models**: combine structured, text, and image data.
-- **Market and submarket analysis**: forecast rent, vacancy, and cap rates.
-- **Lead matching and due diligence**: score opportunities and surface risks.
+- Collect property, market, and location data.
+- Build AVMs and hedonic valuation models.
+- Forecast rent, vacancy, and cap-rate trends.
+- Score leads and screen properties for risks.
+
+## Steps
+
+1. Collect property, market, and location data.
+2. Build AVMs and hedonic valuation models.
+3. Forecast rent, vacancy, and cap-rate trends.
+4. Score leads and screen properties for risks.
+5. Validate on held-out geographies and time windows.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 
@@ -556,13 +641,12 @@ model = GradientBoostingRegressor(n_estimators=300, random_state=42).fit(X, y)
 
 1. Build an AVM and evaluate MAPE on a heldout geography and time window.
 2. Forecast rent or cap-rate trends and compare to market benchmarks.
-3. Score property leads and measure conversion lift over a rule-based baseline.
-''',
+3. Score property leads and measure conversion lift over a rule-based baseline.''',
         "references": [
-            "https://arxiv.org/abs/2603.12986v1",
-            "https://doi.org/10.48550/arxiv.2503.12344",
-            "https://arxiv.org/pdf/2107.05180",
-            "https://arxiv.org/abs/2506.11812",
+            'https://arxiv.org/abs/2603.12986v1',
+            'https://doi.org/10.48550/arxiv.2503.12344',
+            'https://arxiv.org/pdf/2107.05180',
+            'https://arxiv.org/abs/2506.11812',
         ],
     },
 ]

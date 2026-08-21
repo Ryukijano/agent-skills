@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning for phase classification, topological order, Hamiltonian learning, density functional surrogates, and quantum many-body systems.
+Use machine learning to classify phases, learn interatomic potentials, and emulate quantum many-body and density-functional calculations.
 
 ## When to use
 
 You are identifying phases and order parameters, learning interatomic potentials, or emulating quantum many-body Hamiltonians.
 
-## Key concepts
+## Usage
 
-- **Order parameters and phase transitions**: supervised classification of spin and electronic configurations.
-- **Topological invariants**: learning hidden order without local order parameters.
-- **ML potentials and DFT surrogates**: neural-network potentials and exchange-correlation functionals.
-- **Quantum many-body systems**: tensor networks, neural quantum states, and variational ansätze.
+- Classify spin, electronic, and structural phases across phase diagrams.
+- Learn neural-network interatomic potentials and DFT exchange-correlation surrogates.
+- Identify topological invariants and hidden order parameters.
+- Emulate quantum many-body systems with neural quantum states and tensor networks.
+
+## Steps
+
+1. Generate or load spin, electronic, and structural configurations with phase labels near critical points.
+2. Design symmetry-respecting descriptors or graph representations for the material.
+3. Train a classifier, neural potential, or DFT surrogate with physics-aware featurization.
+4. Validate generalization at critical points, topological boundaries, and unseen compositions.
+5. Use the model to screen structures or accelerate molecular-dynamics and DFT workflows.
 
 ## Code pattern
 

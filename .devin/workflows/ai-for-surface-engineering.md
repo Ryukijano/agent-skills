@@ -1,6 +1,6 @@
 # /ai-for-surface-engineering
 
-Machine learning for surface modification processes: thermal spray, laser cladding/peening, shot peening, plasma electrolytic oxidation, surface texturing, and residual stress optimization.
+Use machine learning to optimize surface treatments such as thermal spray, laser cladding and shot peening while predicting residual stress and coating adhesion as well as wear resistance.
 
 ## Trigger
 

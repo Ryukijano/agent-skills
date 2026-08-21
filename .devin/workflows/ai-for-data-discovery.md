@@ -1,6 +1,6 @@
 # /ai-for-data-discovery
 
-Intelligent dataset search, metadata enrichment, schema inference, and conversational data catalog exploration to find the right data quickly.
+Help users find, understand, and trust the right data and AI assets.
 
 ## Trigger
 

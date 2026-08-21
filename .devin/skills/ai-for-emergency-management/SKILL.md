@@ -2,23 +2,27 @@
 
 ## Description
 
-Incident prediction, resource allocation, damage assessment, and generative AI for emergency operations.
+Model flood inundation and evacuation traffic in real time to reroute populations and preposition emergency responders.
 
 ## When to use
 
 You are preparing for, responding to, or recovering from natural or
 human-made incidents that require fast coordination of people and assets.
 
-## Key concepts
+## Usage
 
-- **Incident prediction and forecasting**: spatiotemporal models for
-  calls, accidents, fires, and service demand.
-- **Resource dispatch and allocation**: optimization under uncertainty
-  for ambulances, fire, and police units.
-- **Damage assessment**: remote sensing, social media, and generative AI
-  for rapid situational awareness.
-- **Crisis informatics**: extracting needs, offers, and actionable
-  information from large message streams.
+- Forecast call volumes, accidents, fires, and service demand in space and time.
+- Optimize dispatch of ambulances, fire, and police units under uncertainty.
+- Assess damage from remote sensing, social media, and generative AI summaries.
+- Extract needs, offers, and actionable information from message streams.
+
+## Steps
+
+1. Ingest historical incident, weather, demographic, and infrastructure data.
+2. Build spatiotemporal prediction models with time-based validation.
+3. Optimize resource dispatch for response time and equity metrics.
+4. Validate the dispatch plan against simulated disruption scenarios.
+5. Deploy in an EOC workflow with human review of AI-generated summaries.
 
 ## Code pattern
 

@@ -2,19 +2,27 @@
 
 ## Description
 
-Rainfall-runoff modeling, streamflow forecasting, flood prediction, and physics-informed deep learning for water systems.
+Use ML and physics-informed models to predict rainfall-runoff, forecast streamflow, predict floods, and build digital twins for water systems.
 
 ## When to use
 
 You are modeling rainfall-runoff, streamflow, floods, or water quality and want data-driven forecasts or surrogates.
 
-## Key concepts
+## Usage
 
-- **Rainfall-runoff modeling**: predict discharge from precipitation and catchment properties.
-- **Streamflow forecasting**: use LSTM, transformers, or NARX networks for time-series prediction.
-- **Flood prediction**: classify or forecast flood events from meteorological and hydrological inputs.
-- **Physics-informed neural networks (PINNs)**: embed mass and momentum conservation into neural networks.
-- **Digital twins**: integrate real-time sensor data with AI models for operational forecasting.
+- Predict discharge from precipitation and catchment properties.
+- Forecast streamflow with LSTM, transformers, or NARX time-series models.
+- Classify or forecast flood events from meteorological and hydrological inputs.
+- Embed mass and momentum conservation with PINNs and build real-time digital twins of water systems.
+
+## Steps
+
+1. Collect precipitation, streamflow, catchment attributes, and weather data for target basins.
+2. Normalize inputs by catchment area and long-term statistics; engineer lag and sequence features.
+3. Train a rainfall-runoff or streamflow model (LSTM, transformer, NARX) and evaluate with NSE/KGE/bias.
+4. Build a flood-forecasting or classification pipeline and validate on extreme events not seen in training.
+5. Add physics-informed constraints or a digital-twin layer that assimilates real-time sensor data.
+6. Compare with conceptual/physical hydrologic models and deploy the best model for operational forecasting.
 
 ## Code pattern
 

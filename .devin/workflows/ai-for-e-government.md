@@ -1,6 +1,6 @@
 # /ai-for-e-government
 
-Chatbots and virtual assistants, proactive public services, document automation, eligibility screening, and responsible AI in digital government.
+Automates citizen-facing public services through conversational agents, document processing, and proactive eligibility screening.
 
 ## Trigger
 

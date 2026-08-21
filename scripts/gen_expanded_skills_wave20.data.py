@@ -2,19 +2,29 @@ SKILLS = [
     {
         "name": "ai-for-radiology",
         "title": "AI for Radiology",
-        "description": "Deep learning for X-ray, CT, MRI, and mammography interpretation, including lesion detection, segmentation, report generation, and radiology foundation models.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Radiology to detect, segment and report abnormalities in radiological images such as X-ray, CT, MRI and mammography.",
+        "devin_body": r'''## When to use
 
 You need to detect, classify, or segment abnormalities on radiological images; build foundation models for radiology; or integrate an AI triage tool into a PACS/DICOM workflow.
 
-## Key concepts
+
+## Usage
+
 
 - **Modality-aware preprocessing**: HU scaling for CT, window/level for X-ray, bias field correction and intensity normalization for MRI.
 - **Lesion segmentation**: U-Net, nnU-Net, SwinUNETR, and VISTA-3D for 2D/3D anatomy.
-- **Radiology foundation models**: self-supervised pretraining on large radiology corpora (e.g., RADImageNet, CheXzero, MedImageInsight).
+- **Radiology foundation models**: Self-supervised pretraining on large radiology corpora (e.g., RADImageNet, CheXzero, MedImageInsight).
 - **Workflow integration**: DICOM/FHIR I/O, AI result routing, worklist prioritization, and structured reporting.
-- **Safety and equity**: external validation, underdiagnosis bias in underserved populations, and confidence calibration.
+- **Safety and equity**: External validation, underdiagnosis bias in underserved populations, and confidence calibration.
+
+## Steps
+
+1. Collect and prepare DICOM/NIfTI studies and radiology reports.
+2. Detect, classify, or segment abnormalities on radiological images.
+3. Build foundation models for radiology.
+4. Integrate an AI triage tool into a PACS/DICOM workflow.
+5. Validate by training a lesion segmentation model and compare Dice to an inter-reader benchmark.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -37,6 +47,7 @@ model = UNet(
 )
 ```
 
+
 ## Tuning notes
 
 - Use clinically relevant CT window/level and HU ranges; avoid training on unwindowed DICOM pixel values.
@@ -44,12 +55,12 @@ model = UNet(
 - Validate on external cohorts and report AUC/Dice with confidence intervals.
 - Monitor for underdiagnosis bias across sex, race, age, and socioeconomic strata.
 
+
 ## Verification
 
 1. Train a lesion segmentation model and compare Dice to an inter-reader benchmark.
 2. Run external validation across hospitals and compare sensitivity/specificity.
-3. Implement a DICOM inference pipeline and measure report turnaround time.
-''',
+3. Implement a DICOM inference pipeline and measure report turnaround time.''',
         "references": [
             "https://pubs.rsna.org/doi/10.1148/radiol.240597",
             "https://link.springer.com/article/10.1007/s10334-024-01173-8",
@@ -61,19 +72,29 @@ model = UNet(
     {
         "name": "ai-for-pathology",
         "title": "AI for Pathology",
-        "description": "Computational pathology, whole-slide image analysis, cancer subtyping, biomarker discovery, and vision-language models for histopathology.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Pathology to analyze whole-slide images, subtype cancer and predict molecular biomarkers.",
+        "devin_body": r'''## When to use
 
 You are analyzing whole-slide images (WSIs), grading tumors, predicting molecular biomarkers, or building AI-assisted pathology workflows.
 
-## Key concepts
 
-- **WSI tiling and patch sampling**: gigapixel images are processed as small patches because full slides do not fit in GPU memory.
-- **Multiple instance learning (MIL)**: train on slide-level labels when pixel annotations are scarce.
-- **Foundation and vision-language models**: pathology FMs (UNI, CONCH, PathChat) enable few-shot and multimodal analysis.
-- **Cancer subtyping and biomarkers**: predict tumor origin, grade, prognosis, and therapy response from H&E slides.
-- **Domain shift and stain normalization**: scanners, staining, and labs introduce significant batch effects.
+## Usage
+
+
+- **WSI tiling and patch sampling**: Gigapixel images are processed as small patches because full slides do not fit in GPU memory.
+- **Multiple instance learning (MIL)**: Train on slide-level labels when pixel annotations are scarce.
+- **Foundation and vision-language models**: Pathology FMs (UNI, CONCH, PathChat) enable few-shot and multimodal analysis.
+- **Cancer subtyping and biomarkers**: Predict tumor origin, grade, prognosis, and therapy response from H&E slides.
+- **Domain shift and stain normalization**: Scanners, staining, and labs introduce significant batch effects.
+
+## Steps
+
+1. Collect and prepare whole-slide images and pathology reports.
+2. Analyze whole-slide images (WSIs).
+3. Grade tumors.
+4. Predict molecular biomarkers.
+5. Validate by training a MIL classifier on WSI patches and compare to pathologist grading.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -90,6 +111,7 @@ patch = slide.read_region((10000, 10000), 0, (256, 256)).convert("RGB")
 tensor = torch.from_numpy(np.array(patch)).permute(2, 0, 1).unsqueeze(0).float() / 255.0
 ```
 
+
 ## Tuning notes
 
 - Normalize for staining and scanner differences (Macenko, Vahadane, or learned stain transfer).
@@ -97,12 +119,12 @@ tensor = torch.from_numpy(np.array(patch)).permute(2, 0, 1).unsqueeze(0).float()
 - Evaluate with pathologist concordance and external test sets.
 - Balance across tissue types and cancer grades.
 
+
 ## Verification
 
 1. Train a MIL classifier on WSI patches and compare to pathologist grading.
 2. Apply stain normalization and measure domain-shift robustness.
-3. Extract attention heatmaps and validate against pathologist annotations.
-''',
+3. Extract attention heatmaps and validate against pathologist annotations.''',
         "references": [
             "https://doi.org/10.1016/j.csbj.2024.12.033",
             "https://arxiv.org/abs/2401.06148",
@@ -114,19 +136,29 @@ tensor = torch.from_numpy(np.array(patch)).permute(2, 0, 1).unsqueeze(0).float()
     {
         "name": "ai-for-dermatology",
         "title": "AI for Dermatology",
-        "description": "Skin lesion classification, dermoscopy analysis, melanoma detection, teledermatology, and fairness across skin tones with deep learning.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Dermatology to classify lesions, analyze dermoscopy and power teledermatology screening.",
+        "devin_body": r'''## When to use
 
 You are classifying skin lesions from dermoscopy or clinical photos, triaging suspicious lesions, or building teledermatology and mobile screening tools.
 
-## Key concepts
 
-- **Dermoscopy and clinical imaging**: polarized light, magnification, and standardized fields of view.
+## Usage
+
+
+- **Dermoscopy and clinical imaging**: Polarized light, magnification, and standardized fields of view.
 - **Convolutional and efficient architectures**: EfficientNet, ResNet, and Vision Transformers for lesion classification.
-- **Melanoma vs. benign nevi/keratinocyte carcinoma**: high-stakes binary and multi-class tasks.
-- **Teledermatology**: smartphone capture, asynchronous image review, and regulatory clearance.
-- **Equity and skin tone**: model performance can degrade on darker skin if training data are unbalanced.
+- **Melanoma vs. benign nevi/keratinocyte carcinoma**: High-stakes binary and multi-class tasks.
+- **Teledermatology**: Smartphone capture, asynchronous image review, and regulatory clearance.
+- **Equity and skin tone**: Model performance can degrade on darker skin if training data are unbalanced.
+
+## Steps
+
+1. Collect and prepare clinical and dermoscopy images with labels.
+2. Classify skin lesions from dermoscopy or clinical photos.
+3. Triage suspicious lesions.
+4. Build teledermatology and mobile screening tools.
+5. Validate by fine-tuning a lesion classifier and compare AUC to dermatologist diagnoses.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -146,6 +178,7 @@ model = models.efficientnet_b0(weights="IMAGENET1K_V1")
 model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, 2)
 ```
 
+
 ## Tuning notes
 
 - Fine-tune from ImageNet or use publicly available dermoscopy pretrained weights.
@@ -153,12 +186,12 @@ model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, 2)
 - Validate on images from different devices and Fitzpatrick skin types.
 - Interpret predictions with Grad-CAM or segmentation masks.
 
+
 ## Verification
 
 1. Fine-tune a lesion classifier and compare AUC to dermatologist diagnoses.
 2. Evaluate performance across Fitzpatrick skin types.
-3. Deploy as an API and test with real teledermatology cases.
-''',
+3. Deploy as an API and test with real teledermatology cases.''',
         "references": [
             "https://doi.org/10.1038/nature21056",
             "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2023.1305954/full",
@@ -170,19 +203,29 @@ model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, 2)
     {
         "name": "ai-for-ophthalmology",
         "title": "AI for Ophthalmology",
-        "description": "Diabetic retinopathy screening, OCT analysis, glaucoma detection, and AI for retinal disease diagnosis from fundus photography.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Ophthalmology to screen for diabetic retinopathy, segment OCT and detect glaucoma.",
+        "devin_body": r'''## When to use
 
 You are screening for diabetic retinopathy, analyzing OCT volumes, detecting glaucoma, or building AI for retinal disease diagnosis and triage.
 
-## Key concepts
 
-- **Fundus photography grading**: diabetic retinopathy severity, diabetic macular edema, and referable thresholds.
-- **OCT segmentation**: intraretinal fluid, subretinal fluid, retinal nerve fiber layer, and pigment epithelium detachment.
+## Usage
+
+
+- **Fundus photography grading**: Diabetic retinopathy severity, diabetic macular edema, and referable thresholds.
+- **OCT segmentation**: Intraretinal fluid, subretinal fluid, retinal nerve fiber layer, and pigment epithelium detachment.
 - **Glaucoma detection**: RNFL thickness maps, optic nerve head analysis, and visual field prediction.
-- **Teleophthalmology and autonomous screening**: point-of-care deployment in primary care.
+- **Teleophthalmology and autonomous screening**: Point-of-care deployment in primary care.
 - **Regulatory pathways**: FDA/CE-marked AI systems for diabetic eye disease.
+
+## Steps
+
+1. Collect and prepare fundus photographs and OCT volumes.
+2. Screen for diabetic retinopathy.
+3. Analyze OCT volumes.
+4. Detect glaucoma.
+5. Validate by training a diabetic retinopathy classifier and compute sensitivity/specificity at the referral threshold.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -205,6 +248,7 @@ preprocess = transforms.Compose([
 tensor = preprocess(img).unsqueeze(0)
 ```
 
+
 ## Tuning notes
 
 - Ensure consistent image quality, field-of-view, and pupil dilation.
@@ -212,12 +256,12 @@ tensor = preprocess(img).unsqueeze(0)
 - Calibrate operating point for high sensitivity in screening workflows.
 - Validate on racially and ethnically diverse cohorts.
 
+
 ## Verification
 
 1. Train a diabetic retinopathy classifier and compute sensitivity/specificity at the referral threshold.
 2. Segment OCT fluid compartments and compare with manual grading.
-3. Validate in a prospective screening workflow.
-''',
+3. Validate in a prospective screening workflow.''',
         "references": [
             "https://doi.org/10.1001/jama.2016.17216",
             "https://jamanetwork.com/journals/jama/fullarticle/2588763",
@@ -228,19 +272,29 @@ tensor = preprocess(img).unsqueeze(0)
     {
         "name": "ai-for-cardiology",
         "title": "AI for Cardiology",
-        "description": "ECG interpretation, arrhythmia detection, heart failure screening, echocardiography analysis, and cardiovascular risk stratification with deep learning.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Cardiology to interpret ECGs, detect arrhythmias and predict heart failure risk.",
+        "devin_body": r'''## When to use
 
 You are interpreting ECGs, detecting arrhythmias, predicting heart failure or ejection fraction, or integrating wearables into cardiovascular care.
 
-## Key concepts
 
-- **ECG signal processing**: filtering, baseline wander removal, R-peak detection, and resampling to a standard rate.
-- **Arrhythmia detection**: atrial fibrillation, flutter, premature ventricular contractions, and blocks.
+## Usage
+
+
+- **ECG signal processing**: Filtering, baseline wander removal, R-peak detection, and resampling to a standard rate.
+- **Arrhythmia detection**: Atrial fibrillation, flutter, premature ventricular contractions, and blocks.
 - **Convolutional and 1D networks for 12-lead ECG classification**.
-- **AI-enabled ECG**: detect low ejection fraction or prior AF even during sinus rhythm.
-- **Holter and wearable monitoring**: long-term, low-fidelity single-lead data.
+- **AI-enabled ECG**: Detect low ejection fraction or prior AF even during sinus rhythm.
+- **Holter and wearable monitoring**: Long-term, low-fidelity single-lead data.
+
+## Steps
+
+1. Collect and prepare 12-lead ECGs, Holter recordings and clinical labels.
+2. Interpret ECGs.
+3. Detect arrhythmias.
+4. Predict heart failure or ejection fraction.
+5. Validate by training an atrial fibrillation classifier and report F1 on an external test set.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -263,6 +317,7 @@ model = nn.Sequential(
 )
 ```
 
+
 ## Tuning notes
 
 - Standardize sampling rate (e.g., 500 Hz) and lead order across datasets.
@@ -270,12 +325,12 @@ model = nn.Sequential(
 - Align with AAMI/ESC annotation standards.
 - Calibrate scores and integrate with clinical workflows (EMR, ECG carts).
 
+
 ## Verification
 
 1. Train an atrial fibrillation classifier and report F1 on an external test set.
 2. Compare AI-ECG ejection fraction screening to echocardiography.
-3. Validate real-time inference on Holter data.
-''',
+3. Validate real-time inference on Holter data.''',
         "references": [
             "https://www.nature.com/articles/s41591-018-0240-2",
             "https://doi.org/10.1016/s0140-6736(19)31721-0",
@@ -286,19 +341,29 @@ model = nn.Sequential(
     {
         "name": "ai-for-pulmonology",
         "title": "AI for Pulmonology",
-        "description": "Chest X-ray and CT interpretation, COPD and asthma assessment, respiratory sound analysis, and pulmonary disease risk prediction.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Pulmonology to read chest X-rays and CTs, assess COPD and analyze respiratory sounds.",
+        "devin_body": r'''## When to use
 
 You are interpreting chest X-rays and CTs, diagnosing COPD or asthma, analyzing respiratory sounds, or predicting respiratory disease outcomes.
 
-## Key concepts
 
-- **Chest X-ray abnormality detection**: nodules, consolidation, pleural effusion, and pneumothorax.
-- **CT-based pulmonary assessment**: emphysema quantification, airway wall thickness, and lung cancer screening.
+## Usage
+
+
+- **Chest X-ray abnormality detection**: Nodules, consolidation, pleural effusion, and pneumothorax.
+- **CT-based pulmonary assessment**: Emphysema quantification, airway wall thickness, and lung cancer screening.
 - **COPD severity and GOLD staging** with deep learning.
-- **Respiratory sound analysis**: cough, breath sounds, and spirometry curves.
-- **Longitudinal risk prediction**: lung disease mortality and exacerbation risk.
+- **Respiratory sound analysis**: Cough, breath sounds, and spirometry curves.
+- **Longitudinal risk prediction**: Lung disease mortality and exacerbation risk.
+
+## Steps
+
+1. Collect and prepare chest X-rays, CTs, spirometry and respiratory audio.
+2. Interpret chest X-rays and CTs.
+3. Diagnose COPD or asthma.
+4. Analyze respiratory sounds.
+5. Validate by training a chest X-ray pathology classifier and compare with radiologist reads.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -317,6 +382,7 @@ img = (img - img.min()) / (img.max() - img.min())
 img = np.stack([img, img, img], axis=0)  # pseudo-RGB for pretrained encoders
 ```
 
+
 ## Tuning notes
 
 - Apply DICOM windowing and handle rescale slope/intercept.
@@ -324,12 +390,12 @@ img = np.stack([img, img, img], axis=0)  # pseudo-RGB for pretrained encoders
 - Address label noise, class imbalance, and hidden confounders (pneumothorax drains).
 - Evaluate for subgroup bias across age, sex, race, and disease severity.
 
+
 ## Verification
 
 1. Train a chest X-ray pathology classifier and compare with radiologist reads.
 2. Predict COPD from CT or chest X-ray and validate against spirometry.
-3. Test on an external dataset and measure subgroup performance.
-''',
+3. Test on an external dataset and measure subgroup performance.''',
         "references": [
             "https://www.mdpi.com/2227-7080/14/3/147",
             "https://bmcpulmmed.biomedcentral.com/articles/10.1186/s12890-024-02945-7",
@@ -341,19 +407,29 @@ img = np.stack([img, img, img], axis=0)  # pseudo-RGB for pretrained encoders
     {
         "name": "ai-for-gastroenterology",
         "title": "AI for Gastroenterology",
-        "description": "AI-assisted endoscopy, real-time polyp detection and characterization, colonoscopy quality, and colorectal cancer screening.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Gastroenterology to detect and characterize polyps in real-time colonoscopy and improve ADR.",
+        "devin_body": r'''## When to use
 
 You are building AI to assist endoscopy, detect polyps, classify diminutive lesions, or improve colorectal cancer screening quality.
 
-## Key concepts
 
-- **Computer-aided detection (CADe)**: real-time polyp detection during colonoscopy.
-- **Computer-aided characterization (CADx)**: optical diagnosis of adenoma vs. hyperplastic polyp.
+## Usage
+
+
+- **Computer-aided detection (CADe)**: Real-time polyp detection during colonoscopy.
+- **Computer-aided characterization (CADx)**: Optical diagnosis of adenoma vs. hyperplastic polyp.
 - **Adenoma detection rate (ADR)**, polyp detection rate, and sessile serrated lesion detection.
-- **Endoscopy video analysis**: object detection, tracking, and temporal smoothing.
+- **Endoscopy video analysis**: Object detection, tracking, and temporal smoothing.
 - **Resect-and-discard and preservation-and-discard strategies** for diminutive polyps.
+
+## Steps
+
+1. Collect and prepare endoscopy video frames and histopathology labels.
+2. Build AI to assist endoscopy.
+3. Detect polyps.
+4. Classify diminutive lesions.
+5. Validate by building a polyp detector and evaluate per-image sensitivity/specificity.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -375,6 +451,7 @@ with torch.no_grad():
     preds = model(tensor)
 ```
 
+
 ## Tuning notes
 
 - Train on diverse endoscopy systems, bowel preparations, and lighting conditions.
@@ -382,12 +459,12 @@ with torch.no_grad():
 - Combine detection with histology classification for CADx.
 - Validate with ADR and polyp miss rate metrics in clinical studies.
 
+
 ## Verification
 
 1. Build a polyp detector and evaluate per-image sensitivity/specificity.
 2. Compare ADR with and without AI in a retrospective or pilot study.
-3. Validate optical diagnosis accuracy against histopathology.
-''',
+3. Validate optical diagnosis accuracy against histopathology.''',
         "references": [
             "https://www.nature.com/articles/s41551-018-0301-3",
             "https://gut.bmj.com/content/68/10/1813",
@@ -398,19 +475,29 @@ with torch.no_grad():
     {
         "name": "ai-for-neurology",
         "title": "AI for Neurology",
-        "description": "Neuroimaging and EEG analysis for stroke, brain tumors, epilepsy, and neurodegeneration, including lesion segmentation and outcome prediction.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Neurology to segment stroke lesions, analyze EEG and predict outcomes.",
+        "devin_body": r'''## When to use
 
 You are analyzing neuroimaging, EEG, or clinical data for stroke, brain tumors, epilepsy, neurodegeneration, or brain-computer interfaces.
 
-## Key concepts
 
-- **Acute ischemic stroke imaging**: non-contrast CT, CT angiography, perfusion, and DWI MRI.
+## Usage
+
+
+- **Acute ischemic stroke imaging**: Non-contrast CT, CT angiography, perfusion, and DWI MRI.
 - **Lesion segmentation**: DeepISLES, nnU-Net, and U-Net for ischemic core and penumbra.
-- **Outcome prediction**: mRS and NIHSS prediction from imaging plus clinical data.
-- **EEG-based neurological monitoring**: seizure, stroke, and sleep stage analysis.
+- **Outcome prediction**: MRS and NIHSS prediction from imaging plus clinical data.
+- **EEG-based neurological monitoring**: Seizure, stroke, and sleep stage analysis.
 - **Multimodal fusion**: MRI + CT + EEG + clinical variables.
+
+## Steps
+
+1. Collect and prepare brain MRI, CT and EEG recordings.
+2. Analyze neuroimaging.
+3. EEG.
+4. Clinical data for stroke.
+5. Validate by segmenting ischemic stroke lesions and report Dice vs. expert.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -432,6 +519,7 @@ model = UNet(
 )
 ```
 
+
 ## Tuning notes
 
 - Register images to a common template for lesion-location-based analyses.
@@ -439,12 +527,12 @@ model = UNet(
 - Combine imaging features with NIHSS and time-to-treatment.
 - Address cross-scanner and cross-hospital generalization.
 
+
 ## Verification
 
 1. Segment ischemic stroke lesions and report Dice vs. expert.
 2. Predict 90-day modified Rankin Scale from imaging and clinical variables.
-3. Detect EEG abnormalities and compare to neurologist interpretation.
-''',
+3. Detect EEG abnormalities and compare to neurologist interpretation.''',
         "references": [
             "https://pmc.ncbi.nlm.nih.gov/articles/PMC12083563/",
             "https://pmc.ncbi.nlm.nih.gov/articles/PMC11229702/",
@@ -455,19 +543,29 @@ model = UNet(
     {
         "name": "ai-for-oncology",
         "title": "AI for Oncology",
-        "description": "AI for cancer detection, subtyping, treatment response, prognosis, radiomics, pathology, and clinical trial matching.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Oncology to detect tumors, predict biomarkers and response and match patients to trials.",
+        "devin_body": r'''## When to use
 
 You are building AI for cancer detection, tumor subtyping, treatment response prediction, prognosis, or matching patients to clinical trials.
 
-## Key concepts
 
-- **Radiomics and deep learning for tumor imaging**: high-throughput feature extraction and CNN-based biomarkers.
-- **Digital and computational pathology**: molecular biomarker prediction from H&E slides.
-- **Treatment response and survival prediction**: from imaging, genomics, and EHR data.
-- **Multimodal data fusion**: imaging, genomics, pathology, and clinical variables.
+## Usage
+
+
+- **Radiomics and deep learning for tumor imaging**: High-throughput feature extraction and CNN-based biomarkers.
+- **Digital and computational pathology**: Molecular biomarker prediction from H&E slides.
+- **Treatment response and survival prediction**: From imaging, genomics, and EHR data.
+- **Multimodal data fusion**: Imaging, genomics, pathology, and clinical variables.
 - **Clinical trial matching and real-world evidence**: NLP and eligibility criteria.
+
+## Steps
+
+1. Collect and prepare imaging, pathology, genomics and EHR data.
+2. Build AI for cancer detection.
+3. Tumor subtyping.
+4. Treatment response prediction.
+5. Validate by training a tumor classification or response model and compare with standard care.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -483,6 +581,7 @@ model = RandomForestClassifier(n_estimators=200, class_weight='balanced')
 model.fit(X, y)
 ```
 
+
 ## Tuning notes
 
 - Use standardized radiomic feature extraction (e.g., pyradiomics with IBSI filters).
@@ -490,12 +589,12 @@ model.fit(X, y)
 - Integrate pathology, genomics, and clinical data when available.
 - Report uncertainty and ensure models support clinical decisions.
 
+
 ## Verification
 
 1. Train a tumor classification or response model and compare with standard care.
 2. Extract radiomic features and assess repeatability across scanners.
-3. Validate a multimodal survival prediction on an external cohort.
-''',
+3. Validate a multimodal survival prediction on an external cohort.''',
         "references": [
             "https://link.springer.com/article/10.1186/s12943-025-02450-3",
             "https://www.cancerbiomed.org/content/22/1/6",
@@ -507,19 +606,29 @@ model.fit(X, y)
     {
         "name": "ai-for-medical-imaging",
         "title": "AI for Medical Imaging",
-        "description": "General medical image preprocessing, segmentation, classification, and deployment with DICOM, MONAI, nnU-Net, and clinical AI pipelines.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Medical Imaging to preprocess, segment and deploy clinical AI pipelines with DICOM and MONAI.",
+        "devin_body": r'''## When to use
 
 You need a general framework for medical image preprocessing, segmentation, classification, or deployment into clinical DICOM/NIfTI workflows.
 
-## Key concepts
 
-- **DICOM and NIfTI I/O**: loading, metadata handling, windowing, and orientation.
+## Usage
+
+
+- **DICOM and NIfTI I/O**: Loading, metadata handling, windowing, and orientation.
 - **MONAI**: PyTorch-based framework with medical-specific transforms and networks.
-- **nnU-Net**: self-configuring segmentation framework that automatically sets preprocessing and architecture.
+- **nnU-Net**: Self-configuring segmentation framework that automatically sets preprocessing and architecture.
 - **3D architectures**: UNETR, SwinUNETR, VISTA-3D, and generative models like MAISI.
-- **Clinical deployment**: containerized MONAI Application Packages (MAP), FHIR, and DICOM routers.
+- **Clinical deployment**: Containerized MONAI Application Packages (MAP), FHIR, and DICOM routers.
+
+## Steps
+
+1. Collect and prepare DICOM/NIfTI images and segmentation labels.
+2. A general framework for medical image preprocessing.
+3. Segmentation.
+4. Classification.
+5. Validate by training a 3D segmentation model on a public medical imaging benchmark.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -548,6 +657,7 @@ model = UNETR(
 )
 ```
 
+
 ## Tuning notes
 
 - Match patch sizes and batch sizes to available GPU memory.
@@ -555,15 +665,15 @@ model = UNETR(
 - Ensure reproducibility with containerized MAP packaging.
 - Validate with clinical metrics: Dice, Hausdorff distance, and surface distance.
 
+
 ## Verification
 
 1. Train a 3D segmentation model on a public medical imaging benchmark.
 2. Use nnU-Net with no manual hyperparameter tuning and compare results.
-3. Package a model as a MONAI Deploy MAP and run DICOM inference.
-''',
+3. Package a model as a MONAI Deploy MAP and run DICOM inference.''',
         "references": [
             "https://project-monai.github.io/",
-            "https://docs.monai.io/en/stable/",
+            "https://monai.readthedocs.io/en/stable/",
             "https://github.com/Project-MONAI/MONAI/",
             "https://www.nature.com/articles/s41592-020-01008-z",
             "https://github.com/mic-dkfz/nnunet/",
@@ -572,19 +682,29 @@ model = UNETR(
     {
         "name": "ai-for-clinical-nlp",
         "title": "AI for Clinical NLP",
-        "description": "Natural language processing for electronic health records, clinical entity extraction, term normalization, de-identification, and question answering.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Clinical NLP to extract entities, normalize terms, de-identify notes and answer questions.",
+        "devin_body": r'''## When to use
 
 You are extracting information from clinical notes, building EHR question-answering, normalizing medical terms, or de-identifying protected health information.
 
-## Key concepts
 
-- **Clinical named entity recognition (NER)**: symptoms, medications, diagnoses, procedures, and adverse events.
+## Usage
+
+
+- **Clinical named entity recognition (NER)**: Symptoms, medications, diagnoses, procedures, and adverse events.
 - **Domain-specific language models**: ClinicalBERT, BioBERT, GatorTron, and clinical LLMs.
-- **Entity normalization**: mapping mentions to UMLS, SNOMED-CT, RxNorm, and ICD.
-- **De-identification**: removing or surrogates of protected health information (PHI).
+- **Entity normalization**: Mapping mentions to UMLS, SNOMED-CT, RxNorm, and ICD.
+- **De-identification**: Removing or surrogates of protected health information (PHI).
 - **Clinical corpora and tasks**: MIMIC-III/IV, n2c2, MACCROBAT, and MedNLI.
+
+## Steps
+
+1. Collect and prepare clinical notes and EHR text.
+2. Extract information from clinical notes.
+3. Build EHR question-answering.
+4. Normalize medical terms.
+5. Validate by fine-tuning a clinical NER model on the n2c2 or MACCROBAT dataset.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -600,6 +720,7 @@ inputs = tokenizer(text, return_tensors="pt")
 outputs = model(**inputs)
 ```
 
+
 ## Tuning notes
 
 - Use domain-specific tokenizers and vocabularies for clinical abbreviations.
@@ -607,36 +728,46 @@ outputs = model(**inputs)
 - De-identify notes before model training and external sharing.
 - Evaluate with entity-level F1 and normalization accuracy.
 
+
 ## Verification
 
 1. Fine-tune a clinical NER model on the n2c2 or MACCROBAT dataset.
 2. Map extracted entities to UMLS/SNOMED-CT and measure F1.
-3. Build a pipeline to extract diagnosis-procedure relations from discharge summaries.
-''',
+3. Build a pipeline to extract diagnosis-procedure relations from discharge summaries.''',
         "references": [
             "https://doi.org/10.48550/arxiv.1904.05342",
             "https://mimic.mit.edu/docs/iii/",
             "https://www.nature.com/articles/sdata201635",
             "https://aclanthology.org/W19-1909/",
-            "https://par.nsf.gov/servlets/purl/10580364",
+            "https://doi.org/10.1109/ickg63256.2024.00036",
         ],
     },
     {
         "name": "ai-for-digital-therapeutics",
         "title": "AI for Digital Therapeutics",
-        "description": "Software-as-a-medical-device interventions for mental health, substance use, sleep, ADHD, and chronic disease delivered through apps and wearables.",
-        "devin_body": r'''
-## When to use
+        "description": "Use AI for Digital Therapeutics to personalize behavioral interventions and monitor patient adherence.",
+        "devin_body": r'''## When to use
 
 You are building software-only, evidence-based interventions (prescription digital therapeutics) for mental health, substance use, sleep, ADHD, or chronic disease.
 
-## Key concepts
+
+## Usage
+
 
 - **Prescription digital therapeutics (PDTs)**: FDA-cleared software as a medical device requiring a prescription.
 - **Software as a Medical Device (SaMD) and FDA 510(k)/De Novo pathways**.
 - **Cognitive behavioral therapy (CBT)** and other behavioral interventions delivered via apps.
-- **Real-time biometric feedback**: smartwatch, smartphone sensors, and ecological momentary assessment.
+- **Real-time biometric feedback**: Smartwatch, smartphone sensors, and ecological momentary assessment.
 - **Evidence and deployment**: RCTs, real-world evidence, reimbursement, and clinician dashboards.
+
+## Steps
+
+1. Collect and prepare app usage, sensor and patient-reported data.
+2. Build software-only.
+3. Evidence-based interventions (prescription digital therapeutics) for mental health.
+4. Substance use.
+5. Validate by analyzing app usage data to predict treatment adherence.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -651,6 +782,7 @@ y = df['responder']
 model = GradientBoostingClassifier().fit(X, y)
 ```
 
+
 ## Tuning notes
 
 - Follow FDA/CE regulatory pathways and provide clinical evidence for intended claims.
@@ -658,12 +790,12 @@ model = GradientBoostingClassifier().fit(X, y)
 - Protect privacy and secure biometric and patient-reported data.
 - Validate with randomized controlled trials and patient-reported outcomes.
 
+
 ## Verification
 
 1. Analyze app usage data to predict treatment adherence.
 2. Build a dashboard for clinicians to monitor patient progress.
-3. Compare engagement and outcomes between the digital therapeutic and standard care.
-''',
+3. Compare engagement and outcomes between the digital therapeutic and standard care.''',
         "references": [
             "https://www.healthaffairs.org/doi/10.1377/hlthaff.2024.00159",
             "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2023.1086219/full",

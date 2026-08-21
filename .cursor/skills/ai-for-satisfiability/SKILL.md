@@ -2,18 +2,27 @@
 
 ## Description
 
-ML-enhanced SAT/SMT/QSAT solvers, end-to-end neural solvers like NeuroSAT, and learned branching and restart heuristics.
+Guide CDCL SAT solver branching and resets with offline neural predictions to solve more competition instances without GPU overhead.
 
 ## When to use
 
 You want to solve Boolean satisfiability, MaxSAT, QSAT, or SMT problems faster by using machine learning for branching, restarts, or end-to-end search.
 
-## Key concepts
+## Usage
 
-- **CDCL and local search**: conflict-driven clause learning and stochastic local search SAT solvers.
-- **Neural SAT solvers**: end-to-end models such as NeuroSAT that learn to predict satisfiability and assignments.
-- **Hybrid solvers**: NeuroCore-style guidance of CDCL variable activity and restart heuristics.
-- **SMT and QSAT extensions**: learning heuristics for quantified and theory-laden satisfiability.
+- Improve CDCL and local-search SAT solvers with learned branching and restart policies.
+- Build end-to-end neural SAT solvers to predict satisfiability and assignments.
+- Combine neural guidance with CDCL variable activity in hybrid solvers.
+- Learn heuristics for quantified and theory-laden satisfiability problems.
+
+## Steps
+
+1. Curate SAT/SMT/QSAT training instances close to the target problem distribution.
+2. Train a neural model or learned heuristic to predict satisfiability, assignments, or variable activity.
+3. Integrate the learned guidance into a CDCL or local-search solver.
+4. Benchmark the hybrid, pure neural, and classical solvers on the target instance family.
+5. Train on a distribution close to the target and test generalization across domains.
+6. Compare runtimes and solution quality on SAT-COMP or SMT-LIB benchmarks.
 
 ## Code pattern
 

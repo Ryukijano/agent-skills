@@ -1,6 +1,6 @@
 # /ai-for-disability-inclusion
 
-Accessible AI, disability-aware bias evaluation, inclusive design, and assistive technologies that respect the rights and agency of people with disabilities.
+Use accessible, disability-aware AI to improve assistive technologies and reduce algorithmic harm for people with disabilities.
 
 ## Trigger
 

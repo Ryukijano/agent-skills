@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for natural gas demand forecasting, pipeline leak detection, compressor optimization, and asset integrity.
+Forecasts gas demand, detects pipeline leaks, and optimizes pressure and compression across distribution networks.
 
 ## When to use
 
@@ -52,5 +52,5 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 
 - https://doi.org/10.3390/en19041101
 - https://www.mdpi.com/1996-1073/17/21/5517
-- https://www.osti.gov/biblio/1996417
+- https://doi.org/10.2172/1996417
 - https://doi.org/10.3389/fenvs.2025.1569621

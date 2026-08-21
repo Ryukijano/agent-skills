@@ -1,6 +1,6 @@
 # /ai-for-digital-therapeutics
 
-Software-as-a-medical-device interventions for mental health, substance use, sleep, ADHD, and chronic disease delivered through apps and wearables.
+Use AI for Digital Therapeutics to personalize behavioral interventions and monitor patient adherence.
 
 ## Trigger
 

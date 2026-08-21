@@ -2,18 +2,28 @@ SKILLS = [
     {
         "name": "ai-for-nephrology",
         "title": "AI for Nephrology",
-        "description": "Machine learning for chronic kidney disease progression, acute kidney injury prediction, dialysis adequacy, kidney transplant outcomes, and renal pathology image analysis.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to predict chronic kidney disease progression, acute kidney injury, dialysis outcomes, and transplant success.",
+        "devin_body": r'''
+## When to use
 
 You are building models to predict CKD progression, detect acute kidney injury early, optimize dialysis, allocate kidneys, or analyze renal biopsy and histopathology images.
 
-## Key concepts
+## Usage
 
-- **CKD risk stratification**: eGFR trajectory, albuminuria, and comorbidity-driven models for progression to ESKD.
-- **AKI early warning**: EHR-based vitals, labs, and medication triggers for in-hospital AKI.
-- **Dialysis optimization**: treatment adequacy, access failure prediction, and personalized ultrafiltration.
-- **Transplant analytics**: donor-recipient matching, rejection risk, and graft survival prediction.
-- **Renal pathology AI**: segmentation and classification of glomerular lesions in biopsy images.
+- Risk-stratify CKD progression using eGFR trajectories, albuminuria, and comorbidities.
+- Build EHR-based early-warning models for in-hospital acute kidney injury.
+- Optimize dialysis treatment adequacy and predict access failure.
+- Match donors and recipients, predict rejection, and forecast graft survival.
+- Segment and classify glomerular lesions in renal biopsy images.
+
+## Steps
+
+1. Assemble longitudinal EHR, labs, pathology, and imaging data for kidney-related endpoints.
+2. Define prediction targets (AKI, CKD progression, graft survival, lesion type) and time windows.
+3. Train and validate predictive models with time-based splits and competing-risk handling.
+4. Integrate predictions into nephrology workflows as decision support.
+5. Audit for disparities in race, ethnicity, geography, and access to care.
+6. Monitor model performance across health systems and retrain as guidelines evolve.
 
 ## Code pattern
 
@@ -45,7 +55,7 @@ for train_idx, test_idx in cv.split(X):
 1. Train a CKD progression model and compare time-dependent AUC to KDIGO staging.
 2. Build an AKI early-warning pipeline with hourly EHR windows and alert latency analysis.
 3. Evaluate glomerulus segmentation on PAS-stained renal biopsy patches against pathologist annotations.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1016/j.xkme.2024.100927",
             "https://doi.org/10.1007/s11255-024-04165-8",
@@ -56,18 +66,27 @@ for train_idx, test_idx in cv.split(X):
     {
         "name": "ai-for-endocrinology",
         "title": "AI for Endocrinology",
-        "description": "Machine learning for diabetes prediction and glucose forecasting, thyroid nodule risk stratification, adrenal and pituitary disorders, and bone mineral metabolism.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to forecast glucose, stratify thyroid nodules, characterize adrenal and pituitary disorders, and assess bone metabolism.",
+        "devin_body": r'''
+## When to use
 
 You are modeling endocrine disorders such as diabetes, thyroid disease, adrenal/pituitary lesions, osteoporosis, or polycystic ovary syndrome from EHR, imaging, wearable, or lab data.
 
-## Key concepts
+## Usage
 
-- **Diabetes and CGM**: continuous glucose monitor time series, HbA1c, and insulin-dose forecasting.
-- **Thyroid nodule risk**: ultrasound TI-RADS features, cytology, and molecular testing for malignancy.
-- **Adrenal and pituitary**: incidentaloma characterization and hormone excess/deficiency patterns.
-- **Bone and mineral**: fracture risk, bone density trends, and calcium-phosphate metabolism.
-- **Phenotyping**: subtyping endocrine patients with clustering and multimodal fusion.
+- Forecast continuous glucose monitor time series and insulin-dose response.
+- Risk-stratify thyroid nodules from ultrasound TI-RADS features and cytology.
+- Characterize adrenal and pituitary incidentalomas and hormone excess or deficiency.
+- Predict fracture risk and bone density trends from clinical and imaging data.
+
+## Steps
+
+1. Collect CGM, EHR, lab, imaging, and wearable data for the target endocrine condition.
+2. Define clinically relevant prediction windows and thresholds (e.g., hypoglycemia).
+3. Train time-series or image models and validate temporally across devices and age groups.
+4. Integrate predictions into insulin dosing, referral, or screening workflows.
+5. Calibrate around decision thresholds and evaluate subgroup performance.
+6. Prospectively validate in endocrine clinics and update as standards change.
 
 ## Code pattern
 
@@ -98,7 +117,7 @@ print("Predicted glucose:", pred[0])
 1. Build a 30-minute glucose forecast and report MAE against a naive persistence model.
 2. Train a thyroid nodule malignancy classifier with ultrasound features and compare to TI-RADS.
 3. Predict 10-year osteoporotic fracture risk from clinical and bone-density data.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1007/s12020-025-04378-6",
             "https://pubmed.ncbi.nlm.nih.gov/37971630/",
@@ -109,18 +128,28 @@ print("Predicted glucose:", pred[0])
     {
         "name": "ai-for-hematology",
         "title": "AI for Hematology",
-        "description": "Machine learning for blood cell morphology, leukemia and lymphoma classification, thrombosis and bleeding risk, transfusion optimization, and stem-cell transplant outcomes.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to classify blood cells, predict leukemia and lymphoma outcomes, and optimize transfusion and transplant care.",
+        "devin_body": r'''
+## When to use
 
 You are analyzing peripheral blood smears, bone marrow samples, coagulation data, or transplant registries to improve hematologic diagnosis, risk stratification, and treatment planning.
 
-## Key concepts
+## Usage
 
-- **CBC and smear morphology**: automated differential, anemia classification, and blast detection.
-- **MICM classification**: integration of morphology, immunophenotyping, cytogenetics, and molecular data.
-- **Coagulation and thrombosis**: VTE, bleeding, and transfusion-need prediction from labs and EHR.
-- **Hematologic malignancies**: AML/MDS risk, lymphoma subtyping, and MRD monitoring.
-- **Transplant analytics**: engraftment, GVHD, and relapse risk in stem-cell transplants.
+- Automate blood smear differential and classify anemia from CBC and iron studies.
+- Integrate morphology, immunophenotyping, cytogenetics, and molecular data (MICM).
+- Predict thrombosis, bleeding, and transfusion need from labs and EHR.
+- Model risk in AML/MDS, lymphoma subtyping, and measurable residual disease.
+- Predict engraftment, GVHD, and relapse in stem-cell transplants.
+
+## Steps
+
+1. Assemble CBC, smear images, flow cytometry, genetic, and EHR data.
+2. Define prediction or classification targets (anemia type, blast detection, VTE, relapse).
+3. Train models with class imbalance handling and stain normalization.
+4. Validate against manual differential counts, flow cytometry, or expert review.
+5. Integrate results into hematology lab and transplant workflows.
+6. Monitor rare-class recall and multicenter drift.
 
 ## Code pattern
 
@@ -149,7 +178,7 @@ print("Feature importances:", model.feature_importances_)
 1. Classify anemia type from CBC and iron studies and compare to hematologist review.
 2. Predict VTE risk in hospitalized patients and report precision-recall at high-risk thresholds.
 3. Segment and classify blast cells in peripheral smear images with pathologist-annotated ground truth.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1182/blood.2025029876",
             "https://link.springer.com/article/10.1007/s00277-025-06706-2",
@@ -160,18 +189,28 @@ print("Feature importances:", model.feature_importances_)
     {
         "name": "ai-for-infectious-disease",
         "title": "AI for Infectious Disease",
-        "description": "Machine learning for pathogen identification, antimicrobial resistance prediction, sepsis early warning, and infectious disease outbreak surveillance.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to identify pathogens, predict antimicrobial resistance, detect sepsis, and monitor disease outbreaks.",
+        "devin_body": r'''
+## When to use
 
 You need to detect sepsis early, predict antimicrobial resistance, identify pathogens from clinical or genomic data, or forecast infectious disease spread and outbreak dynamics.
 
-## Key concepts
+## Usage
 
-- **Sepsis early warning**: EHR-based models using vitals, labs, and demographics for timely antibiotics.
-- **AMR prediction**: genomic markers, culture data, and phenotypic resistance forecasting.
-- **Pathogen identification**: MALDI-TOF, 16S/NGS, and metagenomic classification.
-- **Antibiotic stewardship**: dosing optimization, de-escalation, and drug-target interaction prediction.
-- **Epidemiological surveillance**: time-series and mobility models for outbreak detection.
+- Build EHR-based early-warning models for sepsis and time-to-antibiotics.
+- Predict antimicrobial resistance from genomic markers, culture data, and phenotypes.
+- Identify pathogens from MALDI-TOF, 16S/NGS, and metagenomic data.
+- Optimize antibiotic stewardship with dosing, de-escalation, and drug-target predictions.
+- Forecast outbreak spread with time-series and mobility models.
+
+## Steps
+
+1. Collect EHR, genomic, microbiology, and surveillance data for the target infection.
+2. Define labels carefully to avoid leakage from cultures drawn after suspicion.
+3. Train classifiers or genomic AMR models with appropriate feature representations.
+4. Validate alert lead time, false-positive burden, and calibration.
+5. Integrate predictions into stewardship, triage, or public-health dashboards.
+6. Monitor for pathogen and resistance drift and update the model.
 
 ## Code pattern
 
@@ -200,7 +239,7 @@ df["sepsis_risk"] = model.predict_proba(X)[:, 1]
 1. Build a 6-hour sepsis prediction model with time-based cross-validation and report AUROC.
 2. Predict phenotypic antibiotic resistance from assembled genome k-mers and compare to AST.
 3. Forecast weekly influenza-like illness at the regional level and evaluate against surveillance data.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1038/s44259-024-00068-x",
             "https://www.nature.com/articles/s44259-025-00085-4",
@@ -211,18 +250,28 @@ df["sepsis_risk"] = model.predict_proba(X)[:, 1]
     {
         "name": "ai-for-rheumatology",
         "title": "AI for Rheumatology",
-        "description": "Machine learning for autoimmune disease diagnosis and phenotyping, flare prediction, treatment response in RA and SLE, and imaging-based joint inflammation scoring.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to phenotype autoimmune disease, predict flares, forecast treatment response, and score joint inflammation.",
+        "devin_body": r'''
+## When to use
 
 You are studying rheumatoid arthritis, systemic lupus erythematosus, spondyloarthritis, or other autoimmune rheumatic diseases and need predictive models for diagnosis, flares, or therapy selection.
 
-## Key concepts
+## Usage
 
-- **Disease activity indices**: DAS28, CDAI, SLEDAI, and patient-reported outcomes.
-- **Multi-omics integration**: genetics, transcriptomics, cytokines, and autoantibody panels.
-- **Imaging biomarkers**: ultrasound power Doppler, MRI synovitis/erosion, and radiographic damage.
-- **Treatment response**: prediction of biologic or JAK inhibitor response and adverse events.
-- **Flare prediction**: temporal clustering of clinical, lab, and patient-reported signals.
+- Model disease activity with DAS28, CDAI, SLEDAI, and patient-reported outcomes.
+- Integrate genetics, transcriptomics, cytokines, and autoantibody panels.
+- Score ultrasound, MRI, and radiographic joint damage and inflammation.
+- Predict response to biologics or JAK inhibitors and adverse events.
+- Forecast flares from temporal clinical, lab, and patient-reported data.
+
+## Steps
+
+1. Curate EHR, multi-omics, imaging, and patient-reported data for the target rheumatic disease.
+2. Define outcomes (flare, response, damage) and time windows for prediction.
+3. Train predictive or image models and validate externally across sites.
+4. Integrate predictions into treatment selection and flare monitoring workflows.
+5. Address confounding from treatment effects using causal or time-varying methods.
+6. Report subgroup performance and iterate with rheumatologist feedback.
 
 ## Code pattern
 
@@ -251,7 +300,7 @@ print("Response probability:", model.predict_proba(X[:5])[:, 1])
 1. Predict 12-month RA flare from EHR and patient-reported outcomes.
 2. Classify SLE disease activity level and compare to SLEDAI scoring.
 3. Quantify synovitis from ultrasound videos and validate against rheumatologist scores.
-''',
+        ''',
         "references": [
             "https://doi.org/10.3390/rheumato5040017",
             "https://lupus.bmj.com/content/11/1/e001140",
@@ -262,18 +311,28 @@ print("Response probability:", model.predict_proba(X[:5])[:, 1])
     {
         "name": "ai-for-allergy-immunology",
         "title": "AI for Allergy and Immunology",
-        "description": "Machine learning for asthma phenotyping and exacerbation prediction, allergic rhinitis and food/drug allergy risk, anaphylaxis, and primary immunodeficiency screening.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to phenotype asthma, predict exacerbations, assess allergy risk, and screen immunodeficiency.",
+        "devin_body": r'''
+## When to use
 
 You are modeling asthma, allergic rhinitis, atopic dermatitis, food or drug allergy, anaphylaxis risk, or primary immunodeficiency from clinical, wearable, laboratory, or genomic data.
 
-## Key concepts
+## Usage
 
-- **Asthma phenotyping**: clustering by inflammation, spirometry, FeNO, and exacerbation patterns.
-- **Exacerbation prediction**: environmental, medication, and physiological triggers.
-- **Allergy diagnostics**: skin-prick tests, specific IgE, component-resolved diagnostics, and oral food challenges.
-- **Drug and food allergy risk**: medication exposure, reaction history, and biologics.
-- **Immunodeficiency screening**: infection frequency, immune cell counts, and genomic variants.
+- Cluster asthma phenotypes by inflammation, spirometry, FeNO, and exacerbation patterns.
+- Predict asthma exacerbations from environmental, medication, and physiological triggers.
+- Interpret skin-prick, specific IgE, component-resolved diagnostics, and oral challenge data.
+- Predict drug and food allergy risk and anaphylaxis severity.
+- Screen primary immunodeficiency from infection history, cell counts, and genomics.
+
+## Steps
+
+1. Collect clinical, wearable, lab, genomic, and environmental data for the target allergy or immune condition.
+2. Define outcomes (exacerbation, reaction severity, immunodeficiency flag) and windows.
+3. Train models with seasonality, device standardization, and class imbalance in mind.
+4. Validate against challenge-based labels and clinical expert review.
+5. Integrate predictions into asthma action plans, allergy clinics, or screening tools.
+6. Monitor pediatric and adult differences and update as immunological understanding evolves.
 
 ## Code pattern
 
@@ -302,7 +361,7 @@ df["exacerbation_risk"] = model.predict_proba(X)[:, 1]
 1. Predict 30-day asthma exacerbation and evaluate calibration across seasons.
 2. Cluster asthma phenotypes and compare to Type-2 inflammation biomarkers.
 3. Predict peanut allergy reaction severity from skin test, IgE, and component panels.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1016/j.jaci.2025.08.022",
             "https://doi.org/10.1111/all.15849",
@@ -313,18 +372,28 @@ df["exacerbation_risk"] = model.predict_proba(X)[:, 1]
     {
         "name": "ai-for-plastic-surgery",
         "title": "AI for Plastic Surgery",
-        "description": "Machine learning for aesthetic and reconstructive surgical planning, facial analysis, flap monitoring, wound assessment, and patient-reported outcomes.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to plan aesthetic and reconstructive surgery, assess outcomes, monitor flaps, and analyze craniofacial images.",
+        "devin_body": r'''
+## When to use
 
 You are planning aesthetic or reconstructive procedures, predicting surgical outcomes, monitoring free flaps, or analyzing craniofacial images and patient-reported outcome measures.
 
-## Key concepts
+## Usage
 
-- **3D surface imaging and photogrammetry**: facial and breast symmetry, volumetric change, and surgical simulation.
-- **Flap monitoring**: computer vision and perfusion signal analysis for free-tissue transfer.
-- **Aesthetic outcome prediction**: patient-reported satisfaction, scar quality, and complications.
-- **Wound and burn assessment**: image-based depth, infection, and healing trajectory.
-- **Craniofacial analysis**: cephalometric landmarks, dysmorphology, and growth prediction.
+- Analyze 3D surface imaging and photogrammetry for facial and breast symmetry.
+- Monitor free-tissue transfer flaps with computer vision and perfusion signals.
+- Predict patient-reported satisfaction, scar quality, and complications.
+- Assess wound and burn depth, infection, and healing trajectory from images.
+- Measure craniofacial landmarks, dysmorphology, and growth.
+
+## Steps
+
+1. Collect de-identified 3D scans, photos, perfusion data, and patient-reported outcomes.
+2. Define endpoints (complication, symmetry score, healing stage) with expert consensus.
+3. Train segmentation, regression, or classification models on standardized images.
+4. Validate against surgeon and patient ratings and across multicenter data.
+5. Integrate tools into surgical planning, flap monitoring, or follow-up workflows.
+6. Ensure privacy, consent, and standardization of acquisition protocols.
 
 ## Code pattern
 
@@ -353,7 +422,7 @@ print("Complication risk:", model.predict_proba(X[:3])[:, 1])
 1. Predict a postoperative complication within 30 days of breast reconstruction.
 2. Measure facial symmetry from 3D surface scans and compare to expert ratings.
 3. Implement a free-flap monitoring pipeline from perfusion images or signals.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1016/j.jpra.2024.09.003",
             "https://www.frontiersin.org/journals/surgery/articles/10.3389/fsurg.2025.1640588/full",
@@ -364,18 +433,28 @@ print("Complication risk:", model.predict_proba(X[:3])[:, 1])
     {
         "name": "ai-for-orthopedics",
         "title": "AI for Orthopedics",
-        "description": "Machine learning for fracture detection and classification, osteoarthritis grading, joint replacement outcomes, spine analysis, and sports injury risk.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to detect fractures, grade osteoarthritis, predict joint replacement outcomes, and plan orthopedic surgery.",
+        "devin_body": r'''
+## When to use
 
 You are interpreting musculoskeletal imaging, predicting fracture risk or arthroplasty outcomes, grading osteoarthritis, or planning orthopedic surgery and rehabilitation.
 
-## Key concepts
+## Usage
 
-- **Fracture detection and classification**: deep learning on radiographs for trauma, osteoporosis, and pediatric fractures.
-- **Osteoarthritis grading**: Kellgren-Lawrence, joint-space narrowing, and cartilage segmentation from MRI.
-- **Arthroplasty outcomes**: implant survival, revision risk, readmission, and patient-reported outcomes.
-- **Sports and spine**: ACL, meniscus, rotator cuff, scoliosis, and disc degeneration.
-- **Patient-specific planning**: bone age, templating, and 3D-printed instrumentation.
+- Detect and classify fractures on radiographs and CT.
+- Grade osteoarthritis with Kellgren-Lawrence, joint-space narrowing, and cartilage segmentation.
+- Predict implant survival, revision risk, readmission, and patient-reported outcomes.
+- Analyze sports and spine injuries (ACL, meniscus, rotator cuff, scoliosis).
+- Support patient-specific templating, bone age, and 3D-printed instrumentation.
+
+## Steps
+
+1. Gather musculoskeletal imaging, EHR, and patient-reported outcome data.
+2. Standardize image acquisition and annotate fracture, joint, or cartilage findings.
+3. Train detection, segmentation, or regression models with augmentation and class imbalance.
+4. Validate across hospitals, age groups, trauma centers, and implant vendors.
+5. Integrate predictions into emergency triage, surgical planning, or follow-up.
+6. Monitor for metal artifacts and positioning variability.
 
 ## Code pattern
 
@@ -404,7 +483,7 @@ print("Fracture logits:", out[:3])
 1. Train a fracture-detection model on radiographs and compare sensitivity to emergency physicians.
 2. Predict 90-day readmission after total joint arthroplasty from EHR features.
 3. Segment knee cartilage on MRI and report Dice versus manual segmentations.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1002/jeo2.70549",
             "https://doi.org/10.3390/jcm15062165",
@@ -415,18 +494,28 @@ print("Fracture logits:", out[:3])
     {
         "name": "ai-for-physical-medicine",
         "title": "AI for Physical Medicine",
-        "description": "Machine learning for electrodiagnostic studies, musculoskeletal ultrasound, gait and motion analysis, prosthetics/orthotics, and functional assessment in physiatry.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to interpret electrodiagnostic studies, musculoskeletal ultrasound, gait, and prosthetics data in physiatry.",
+        "devin_body": r'''
+## When to use
 
 You are interpreting EMG and nerve conduction studies, musculoskeletal ultrasound, gait and balance data, or planning rehabilitation and assistive devices in physical medicine and rehabilitation.
 
-## Key concepts
+## Usage
 
-- **Electrodiagnostics**: EMG signal classification, motor-unit action potentials, and nerve conduction parameter prediction.
-- **Musculoskeletal ultrasound**: automated tendon, ligament, nerve, and muscle segmentation and pathology detection.
-- **Gait and motion analysis**: inertial measurement units, pressure sensors, and 3D motion capture.
-- **Prosthetics and orthotics**: myoelectric control intent and exoskeleton adaptation.
-- **Functional assessment**: FIM, Barthel, and disability-specific outcome prediction.
+- Classify EMG and nerve conduction signals for neuropathic and myopathic patterns.
+- Segment and detect pathology in tendon, ligament, nerve, and muscle ultrasound.
+- Analyze gait, balance, and motion from IMUs, pressure sensors, and 3D capture.
+- Decode myoelectric control intent and adapt prosthetics and orthotics.
+- Predict functional assessment scores and rehabilitation outcomes.
+
+## Steps
+
+1. Collect EMG, nerve conduction, ultrasound, wearable, and functional assessment data.
+2. Standardize recording parameters and filter motion artifacts.
+3. Train signal, image, or time-series models for diagnosis or control.
+4. Validate against electrophysiologist readings, instrumented walkways, or clinician scores.
+5. Integrate into prosthetic control, gait analysis, or diagnostic workflows.
+6. Ensure low latency for real-time control and adapt to individual patients.
 
 ## Code pattern
 
@@ -456,7 +545,7 @@ print("Predicted diagnoses:", model.predict(X[:5]))
 1. Classify myopathic versus neuropathic EMG from motor-unit features.
 2. Detect median nerve entrapment from musculoskeletal ultrasound images.
 3. Predict prosthesis control intent from surface EMG with real-time latency metrics.
-''',
+        ''',
         "references": [
             "https://journals.lww.com/ajpmr/fulltext/2019/11000/artificial_intelligence_and_applications_in_pm_r.18.aspx",
             "https://doi.org/10.1002/mus.28023",
@@ -467,18 +556,28 @@ print("Predicted diagnoses:", model.predict(X[:5]))
     {
         "name": "ai-for-rehabilitation",
         "title": "AI for Rehabilitation",
-        "description": "Machine learning for stroke, spinal cord, and traumatic brain injury rehabilitation, robotic and virtual-reality therapy, telerehabilitation, and wearable sensor monitoring.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to predict recovery, personalize therapy, monitor home rehabilitation, and control assistive devices.",
+        "devin_body": r'''
+## When to use
 
 You are predicting functional recovery, personalizing therapy dose, monitoring home-based rehabilitation, or controlling robotic, VR, or brain-computer interface systems for rehabilitation.
 
-## Key concepts
+## Usage
 
-- **Functional recovery prediction**: FIM, Barthel, WMFT, and gait-speed trajectories after stroke or SCI.
-- **Wearable and sensor-based monitoring**: IMUs, sEMG, pressure insoles, and smartphone activity.
-- **Robotic and VR therapy**: adaptive difficulty, performance-based dosing, and motor-learning feedback.
-- **Telerehabilitation**: remote exercise monitoring, adherence prediction, and digital coaching.
-- **Brain-computer interfaces**: movement intent decoding and neurofeedback.
+- Predict functional recovery trajectories after stroke, spinal cord, or brain injury.
+- Monitor rehabilitation with IMUs, sEMG, pressure insoles, and smartphones.
+- Adapt robotic and VR therapy difficulty based on performance.
+- Support telerehabilitation with remote exercise monitoring and digital coaching.
+- Decode movement intent for brain-computer interfaces and neurofeedback.
+
+## Steps
+
+1. Collect baseline assessments, wearable data, and therapy logs for the target population.
+2. Define recovery or adherence outcomes and appropriate time windows.
+3. Train missing-data-aware models and handle engagement as a confounder.
+4. Validate against standardized scales and functional tests.
+5. Integrate into adaptive robotic or VR therapy or telerehabilitation platforms.
+6. Monitor adherence, dropout, and generalizability across care settings.
 
 ## Code pattern
 
@@ -507,7 +606,7 @@ print("Predicted FIM gain:", model.predict(X[:3]))
 1. Predict 90-day FIM motor gain after stroke from baseline and wearable data.
 2. Classify gait phases from IMU signals and compare to instrumented walkway.
 3. Evaluate a telerehabilitation AI for exercise completion and adherence.
-''',
+        ''',
         "references": [
             "https://pubmed.ncbi.nlm.nih.gov/41424220/",
             "https://doi.org/10.3389/fdgth.2026.1737957",
@@ -518,18 +617,28 @@ print("Predicted FIM gain:", model.predict(X[:3]))
     {
         "name": "ai-for-anesthesiology",
         "title": "AI for Anesthesiology",
-        "description": "Machine learning for preoperative risk stratification, intraoperative hemodynamic monitoring, anesthetic depth, postoperative nausea and pain, and closed-loop anesthesia.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to stratify preoperative risk, monitor hemodynamics, predict nausea and pain, and support closed-loop anesthesia.",
+        "devin_body": r'''
+## When to use
 
 You are predicting perioperative risk, monitoring hemodynamics or anesthetic depth, optimizing pain and PONV prophylaxis, or building closed-loop control for anesthetic delivery.
 
-## Key concepts
+## Usage
 
-- **Preoperative risk assessment**: ASA status, frailty, comorbidity indices, and procedure-specific complication models.
-- **Intraoperative monitoring**: hypotension prediction index, arterial waveform analysis, and BIS/EEG depth monitoring.
-- **Pharmacokinetic and pharmacodynamic modeling**: target-controlled infusion and individual dose-response.
-- **PONV and pain prediction**: risk scores and multimodal analgesia planning.
-- **Closed-loop control**: real-time anesthetic, vasopressor, and fluid administration.
+- Assess preoperative risk with ASA status, frailty, and comorbidity indices.
+- Predict intraoperative hypotension and interpret arterial waveforms and EEG/BIS depth.
+- Model pharmacokinetics and pharmacodynamics for target-controlled infusion.
+- Predict postoperative nausea/vomiting and pain to guide multimodal analgesia.
+- Support real-time closed-loop anesthetic, vasopressor, and fluid control.
+
+## Steps
+
+1. Integrate EHR, high-frequency waveforms, and anesthesia machine data.
+2. Define prediction windows and clinical thresholds (e.g., hypotension within 15 minutes).
+3. Train models with time-series features and calibrate probabilities for rare events.
+4. Validate alarm lead time and false-positive burden with anesthesiologists.
+5. Integrate into decision support or closed-loop control with safety limits.
+6. Monitor latency and adapt to patient populations and surgical types.
 
 ## Code pattern
 
@@ -558,7 +667,7 @@ print("PONV risk:", model.predict_proba(X[:3])[:, 1])
 1. Predict intraoperative hypotension from arterial waveform features within a 15-minute horizon.
 2. Build a PONV risk model and compare risk calibration to Apfel score.
 3. Simulate a closed-loop propofol controller and evaluate stability and overshoot.
-''',
+        ''',
         "references": [
             "https://link.springer.com/article/10.1007/s10877-026-01434-y",
             "https://doi.org/10.1177/03000605261454051",
@@ -569,18 +678,28 @@ print("PONV risk:", model.predict_proba(X[:3])[:, 1])
     {
         "name": "ai-for-pain-management",
         "title": "AI for Pain Management",
-        "description": "Machine learning for chronic pain phenotyping, opioid and analgesic response prediction, procedural guidance, and patient self-management and monitoring.",
-        "devin_body": r'''## When to use
+        "description": "Use machine learning to phenotype chronic pain, predict treatment and opioid response, guide procedures, and support self-management.",
+        "devin_body": r'''
+## When to use
 
 You are phenotyping chronic pain, predicting treatment response, assessing opioid misuse risk, guiding interventional procedures, or building self-management and digital-therapeutic tools.
 
-## Key concepts
+## Usage
 
-- **Pain phenotyping**: clustering by nociceptive, neuropathic, inflammatory, and centralized mechanisms.
-- **Treatment response prediction**: response to physical therapy, CBT, medications, and neuromodulation.
-- **Opioid risk assessment**: misuse, overdose, and dependence prediction from EHR and psychosocial data.
-- **Procedural guidance**: ultrasound or fluoroscopy image segmentation for nerve blocks and spinal procedures.
-- **Self-management**: digital diaries, cognitive behavioral interventions, and biofeedback.
+- Phenotype chronic pain by nociceptive, neuropathic, inflammatory, and centralized mechanisms.
+- Predict response to physical therapy, CBT, medications, and neuromodulation.
+- Assess opioid misuse, overdose, and dependence risk from EHR and psychosocial data.
+- Guide nerve blocks and spinal procedures with ultrasound or fluoroscopy segmentation.
+- Support digital diaries, CBT, and biofeedback for self-management.
+
+## Steps
+
+1. Collect validated pain scores, EHR, medication, psychosocial, and imaging data.
+2. Define outcomes (phenotype, treatment response, opioid risk) and windows.
+3. Train clustering, prediction, or segmentation models with class imbalance and missing data.
+4. Validate against PROMIS/BPI and clinician assessments.
+5. Integrate into multidisciplinary pain program and procedural planning.
+6. Audit for fairness and avoid stigmatizing patients by pain condition or opioids.
 
 ## Code pattern
 
@@ -609,7 +728,7 @@ print("Response probability:", model.predict_proba(X[:3])[:, 1])
 1. Cluster chronic low-back pain patients into clinically meaningful phenotypes.
 2. Predict opioid misuse risk in a chronic pain population and audit false positives.
 3. Predict response to a combined physical-therapy and CBT program versus usual care.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1002/ejp.4748",
             "https://doi.org/10.3390/app11073205",

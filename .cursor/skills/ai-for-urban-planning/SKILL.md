@@ -2,7 +2,7 @@
 
 ## Description
 
-Spatial plan generation, land-use optimization, urban digital twins, scenario simulation, and participatory planning analytics.
+Generates land-use scenarios and simulates urban growth to balance density, accessibility, and sustainability.
 
 ## When to use
 
@@ -10,11 +10,10 @@ You are developing land-use plans, simulating urban growth, designing neighborho
 
 ## Usage
 
-- **Land-use optimization**: allocate residential, commercial, and green spaces.
-- **Urban digital twins**: simulate mobility, energy, and environmental impacts.
-- **Scenario simulation**: test zoning, density, and infrastructure options.
-- **Participatory planning**: analyze public input and design trade-offs.
-- **Remote sensing**: derive built-up, vegetation, and infrastructure data.
+- **Land-use optimization**: allocate residential, commercial, and green spaces across scenarios.
+- **Urban digital twins**: simulate mobility, energy, and environmental impacts at city scale.
+- **Scenario simulation**: test zoning, density, and infrastructure options using agent-based and cellular models.
+- **Participatory planning**: analyze public input and design trade-offs with stakeholder feedback.
 
 ## Steps
 

@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for yarn, fabric, and garment manufacturing: spinning, weaving, knitting, dyeing, finishing, quality inspection, and production optimization.
+Use computer vision and time-series machine learning with process control to inspect fabrics, optimize dyeing, reduce defects and predict loom and knitting machine performance in textile production.
 
 ## When to use
 
 You are automating textile production lines, detecting fabric defects, predicting dye recipes, optimizing loom parameters, or monitoring the quality of spinning, weaving, and finishing processes.
 
-## Key concepts
+## Usage
 
-- **Fabric defect detection**: holes, stains, weft and warp breaks, pattern misalignments, and foreign fibers.
-- **Yarn and spinning quality**: count, strength, evenness, hairiness, and breakage prediction.
-- **Dyeing and finishing**: color prediction, dye recipe recommendation, K/S value, exhaustion rate, and shade matching.
-- **Process monitoring**: loom stoppages, tension, machine vibration, and predictive maintenance.
-- **Sustainability**: waste reduction, water/energy optimization, and recycled fiber traceability.
+- **Detect defects**: inspect woven, knitted, and printed fabric for stains, holes, broken yarns, and color variations.
+- **Optimize dyeing**: control pH, temperature, and dye concentration using color feedback.
+- **Predict maintenance**: forecast loom, spindle, and knitting faults from vibration and sound.
+- **Classify fibers**: identify fiber types, blends, and yarn quality from images and spectra.
+- **Reduce waste**: adjust process settings in real time to minimize defects and rework.
+
+## Steps
+
+1. Capture images or sensor data from looms, dyeing lines, or inspection stations.
+2. Annotate fabric defects and color deviations with operators and reference standards.
+3. Train detection or segmentation models and validate on production-line speed.
+4. Build a color and chemistry feedback model for dyeing baths.
+5. Implement predictive maintenance on machine health signals.
+6. Measure defect reduction, color consistency, and throughput improvements.
 
 ## Code pattern
 

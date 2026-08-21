@@ -2,7 +2,7 @@
 
 ## Description
 
-Automated policy enforcement, metadata management, data lineage, stewardship, and AI-driven regulatory compliance for enterprise data governance.
+Build policy, catalog, and lineage-driven governance for trusted data and AI assets.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You need to define, enforce, and monitor policies, ownership, and lifecycle rule
 
 ## Usage
 
-- **Policy automation**: classify, tag, and enforce retention, access, and quality policies at scale.
-- **Metadata and cataloging**: auto-extract business, technical, and operational metadata.
-- **Lineage and stewardship**: map data ownership and provenance to support accountability.
-- **Compliance and risk**: align with GDPR, CCPA, AI Act, and sector regulations.
-- **Glossary and standards**: maintain consistent definitions, taxonomies, and master data.
+- Map business terms and data assets in Collibra or Informatica.
+- Automate data classification and sensitivity tagging.
+- Define and enforce data and AI policies across clouds.
+- Track lineage from source to AI model in an active catalog.
+- Score data and AI system trust with governance dashboards.
 
 ## Steps
 
-1. Inventory data assets, owners, and critical systems.
-2. Define governance policies, data domains, and quality rules.
-3. Implement automated policy checks and metadata capture.
-4. Build a searchable data catalog with lineage views.
-5. Monitor compliance and audit policy exceptions.
+1. Inventory data, models, and policies across the estate.
+2. Build a business glossary and assign data owners.
+3. Automate classification, lineage, and policy workflows.
+4. Integrate with data quality, privacy, and model-risk tools.
+5. Monitor compliance and update policies as assets evolve.
 
 ## Code pattern
 

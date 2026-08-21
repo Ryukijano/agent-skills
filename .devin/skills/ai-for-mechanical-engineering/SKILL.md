@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for mechanical design, predictive maintenance, digital twins, dynamic systems, and manufacturing process optimization.
+Apply AI to design, maintenance, and manufacturing optimization.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are designing mechanical components or systems, monitoring rotating machiner
 
 ## Usage
 
-- **Predictive maintenance and RUL**: vibration and acoustic fault diagnosis, remaining useful life.
-- **Digital twins**: real-time virtual replicas of mechanical assets.
-- **Generative design and topology optimization**: AI-candidate shapes and lightweighting.
-- **System dynamics and control**: physics-informed neural ODEs and RL for control.
-- **Manufacturing process modeling**: machining, additive, and forming.
+- Predict bearing, gear, and motor failures from vibration and thermal data.
+- Optimize topology and generative designs in nTopology or Fusion 360.
+- Build reduced-order models from CFD/FEA simulations.
+- Monitor equipment health with digital twins (Azure Digital Twins).
+- Improve quality control with machine vision on production lines.
 
 ## Steps
 
-1. Collect sensor data (vibration, acoustic, torque) and failure logs from mechanical assets.
-2. Extract condition indicators, time-domain features, and operating context.
-3. Train a fault-detection or RUL model and validate against physical baselines.
-4. Deploy the model on edge devices or in a digital twin.
-5. Retrain when machinery, materials, or operating regimes change.
+1. Collect operational sensor data and define failure or quality targets.
+2. Extract frequency-domain features and degradation indicators.
+3. Train survival, classification, or anomaly models.
+4. Deploy in edge or MES systems with real-time feedback.
+5. Validate with A/B shutdown/quality outcomes and retrain.
 
 ## Code pattern
 

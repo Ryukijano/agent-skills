@@ -2,18 +2,27 @@
 
 ## Description
 
-Inverse design, layout generation, and fabrication-aware optimization of silicon-photonic and photonic-integrated-circuit components.
+Use machine learning to inversely design photonic components, train fast surrogates, and automate PIC layout.
 
 ## When to use
 
 You are designing photonic integrated circuits (PICs), waveguides, couplers, modulators, or foundry-ready silicon photonics components.
 
-## Key concepts
+## Usage
 
-- **Inverse design**: adjoint/gradient and neural-surrogate methods optimize geometry for target spectral or field response.
-- **Surrogate modeling**: fast neural-network surrogates replace FDTD/EME simulations in design loops.
-- **Foundry constraints**: DRC, fabrication variability, and process windows must be embedded in the objective.
-- **Layout automation**: ML generates GDS layouts and compact cells for large-scale PICs.
+- Optimize waveguide, coupler, modulator, and PIC geometries with adjoint, gradient, or surrogate methods.
+- Replace FDTD/EME simulations with fast neural-network surrogates in design loops.
+- Embed foundry DRC, variability, and process windows into the design objective.
+- Generate GDS layouts and compact cells for large-scale photonic integrated circuits.
+
+## Steps
+
+1. Define the target optical response and parameterize the photonic component geometry.
+2. Run a coarse-to-fine FDTD or EME simulation to create training data.
+3. Train a surrogate or use an adjoint/inverse-design optimizer to meet the response target.
+4. Add foundry constraints and process-window penalties to ensure manufacturability.
+5. Generate a GDS layout and run DRC and full-wave verification.
+6. Iterate on geometry and fabrication tolerances.
 
 ## Code pattern
 

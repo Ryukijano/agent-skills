@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for sheet-metal stamping, deep drawing, forging, rolling, extrusion, springback prediction, die design, and forming-limit prediction.
+Use machine learning and finite-element surrogates to predict springback, wrinkling and tearing while optimizing die design and controlling stamping and deep-drawing or forging processes.
 
 ## When to use
 
 You are designing or troubleshooting sheet-metal, forging, or extrusion processes and need to predict springback, wrinkling, or tearing, optimize blank geometry, select forming parameters, or build fast surrogate models from finite element analysis.
 
-## Key concepts
+## Usage
 
-- **Springback and distortion**: elastic recovery after forming, influenced by material, friction, and tooling.
-- **Forming limits**: necking, wrinkling, and fracture in stamping and deep drawing.
-- **Process parameters**: blank holder force, die radius, drawbead geometry, punch speed, and lubrication.
-- **FEA surrogates**: graph and image-based models that replace expensive nonlinear simulations.
-- **Blank shape optimization**: inverse design to minimize material use and trimming.
+- **Predict springback**: build data-driven or physics-informed surrogate models from FEA data.
+- **Optimize die geometry**: suggest addendum, radii, and drawbeads to reduce defects.
+- **Classify defects**: detect wrinkles, splits, and surface defects from images or simulations.
+- **Select parameters**: recommend blank holder force, friction, and punch speed.
+- **Accelerate FEA**: replace expensive simulations with fast ML surrogates for design exploration.
+
+## Steps
+
+1. Generate or collect FEA simulation data with varying material, geometry, and process parameters.
+2. Train surrogate models to predict springback, stress, or forming limit diagrams.
+3. Use the surrogate to optimize die geometry and process parameters with search algorithms.
+4. Validate surrogate predictions against physical stampings, deep draws, or forging trials.
+5. Detect forming defects in images and trace them to process conditions.
+6. Deploy the optimized parameters and monitor production for drift.
 
 ## Code pattern
 

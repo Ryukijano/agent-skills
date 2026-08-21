@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning for mission data analysis, terrain classification, crater detection, atmospheric retrievals, and exoplanet characterization.
+Use machine learning to classify planetary terrain, detect craters, retrieve atmospheres, and characterize exoplanets from spacecraft and telescope data.
 
 ## When to use
 
 You are analyzing spacecraft imagery, spectra, altimetry, or exoplanet light curves for Solar System or exoplanet science.
 
-## Key concepts
+## Usage
 
-- **Orbital imagery**: segmentation and classification of terrain, craters, and geologic units.
-- **Spectral unmixing**: decomposing hyperspectral cubes into endmember compositions.
-- **Radiative transfer**: fast forward models and retrieval of atmospheric properties.
-- **Interior and orbital models**: emulation of planet structure and radial-velocity signals.
+- Segment terrain, craters, and geologic units from orbital imagery and digital elevation models.
+- Unmix hyperspectral cubes to map endmember compositions and surface mineralogy.
+- Retrieve atmospheric properties from exoplanet transmission and emission spectra.
+- Emulate radiative-transfer and interior models to accelerate mission data analysis.
+
+## Steps
+
+1. Co-register and map-project orbital imagery, spectra, or altimetry for the target body.
+2. Train a terrain or crater segmentation model on georeferenced, human-labeled regions.
+3. Build a spectral unmixing or atmospheric retrieval surrogate validated against physics models.
+4. Compare predictions to in-situ spectra or published geologic maps.
+5. Integrate the model into a mission pipeline for target prioritization and downlink planning.
 
 ## Code pattern
 
@@ -48,4 +56,4 @@ clf = RandomForestClassifier(n_estimators=200).fit(X, labels)
 - https://doi.org/10.3847/25c2cfeb.aa328727
 - https://arxiv.org/abs/2604.09152
 - https://arxiv.org/abs/2310.17681
-- https://ui.adsabs.harvard.edu/abs/2025epsc.conf.1467K/abstract
+- https://doi.org/10.5194/epsc-dps2025-1467

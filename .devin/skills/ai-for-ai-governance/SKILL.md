@@ -2,19 +2,28 @@
 
 ## Description
 
-Risk management, accountability, lifecycle governance, standards, and multi-stakeholder oversight for trustworthy and responsible AI organizations.
+Use frameworks, risk registers, and lifecycle oversight to manage AI systems responsibly.
 
 ## When to use
 
 You are establishing or operating governance for an AI system or portfolio and need to map risks, assign accountability, and align with standards and regulations.
 
-## Key concepts
+## Usage
 
-- **AI risk management**: identify, assess, treat, and monitor risks across the AI lifecycle.
-- **Governance frameworks**: NIST AI RMF, OECD AI Principles, ISO/IEC 42001, and AI management systems.
-- **Accountability and roles**: map responsibilities for developers, deployers, users, and impacted parties.
-- **Lifecycle governance**: requirements, data, model, deployment, monitoring, and incident response.
-- **Stakeholder and multi-stakeholder governance**: oversight boards, audits, and public engagement.
+- Map, assess, treat, and monitor risks across the AI lifecycle.
+- Align with NIST AI RMF, OECD AI Principles, ISO/IEC 42001, and other frameworks.
+- Assign accountability to developers, deployers, users, and impacted parties.
+- Maintain lifecycle governance over data, model, deployment, monitoring, and incident response.
+- Engage oversight boards and multi-stakeholder governance.
+
+## Steps
+
+1. Identify the AI system, use case, and applicable regulations or standards.
+2. Create a risk register with likelihood, impact, owners, and treatment controls.
+3. Map the lifecycle against the chosen governance framework.
+4. Assign roles and responsibilities for each lifecycle stage.
+5. Run incident-response tabletop exercises and establish monitoring.
+6. Review and update governance artifacts as the system and regulations evolve.
 
 ## Code pattern
 

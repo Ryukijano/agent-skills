@@ -1,6 +1,6 @@
 # /ai-for-circular-economy
 
-Material flow optimization, predictive recycling, product lifecycle extension, and circular supply-chain design with AI.
+Use AI to optimize material flows, design reverse logistics, extend product life, or reducing waste across supply chains.
 
 ## Trigger
 

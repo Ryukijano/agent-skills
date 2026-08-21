@@ -1,6 +1,6 @@
 # /ai-for-network-security
 
-Intrusion detection, malware classification, anomaly detection, adversarial defenses, and threat intelligence using ML and LLMs.
+Detect intrusions, malware, and anomalies in network traffic and infrastructure.
 
 ## Trigger
 

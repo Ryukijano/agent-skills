@@ -2,19 +2,27 @@
 
 ## Description
 
-Cost-effectiveness, health technology assessment, demand and pricing models, and machine learning for health outcomes research.
+Use AI to evaluate the economic value, cost-effectiveness, or budget impact of health technologies and interventions using ML.
 
 ## When to use
 
 You are evaluating the economic value, cost-effectiveness, or budget impact of health technologies and interventions using ML.
 
-## Key concepts
+## Usage
 
-- **Health economic evaluation**: cost-effectiveness, cost-utility, and budget-impact analysis.
-- **Health technology assessment (HTA) and pricing**: value frameworks and reimbursement decisions.
-- **Causal inference for treatment effects and policy evaluation**: observational methods and quasi-experiments.
-- **Real-world evidence and claims data analysis**: large administrative and EHR datasets for economic outcomes.
-- **Equity and distributional cost-effectiveness analysis**: trade-offs across population groups.
+- Build cost, QALY, and budget-impact models.
+- Estimate causal treatment effects from observational data.
+- Run probabilistic sensitivity and bootstrapping.
+- Report ICER and acceptability curves.
+
+## Steps
+
+1. Build cost, QALY, and budget-impact models.
+2. Estimate causal treatment effects from observational data.
+3. Run probabilistic sensitivity and bootstrapping.
+4. Report ICER and acceptability curves.
+5. Align with payer, societal, and health-system perspectives.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 

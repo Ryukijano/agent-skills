@@ -1,6 +1,6 @@
 # /ai-for-longevity
 
-Biological aging clocks, biomarkers of aging, longevity intervention mining, and integrative multi-omic models of aging.
+Estimate biological age and discover longevity interventions by applying epigenetic clocks and multi-omic aging models to molecular data.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-software-defined-networks
 
-ML-driven traffic classification, routing, QoS/QoE prediction, resource management, and security in SDN control and data planes.
+Apply AI to SDN control planes for traffic classification, routing, and security.
 
 ## Trigger
 

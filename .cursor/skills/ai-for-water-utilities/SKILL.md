@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for water demand forecasting, leak detection, quality monitoring, pump scheduling, and smart water distribution.
+Forecasts demand, detects leaks, and optimizes pump schedules across water distribution networks using AMI and SCADA data.
 
 ## When to use
 

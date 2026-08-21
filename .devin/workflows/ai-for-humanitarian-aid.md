@@ -1,6 +1,6 @@
 # /ai-for-humanitarian-aid
 
-AI across the crisis management cycle: needs assessment, resource allocation, routing, damage assessment, and early warning for disaster response.
+Use AI across the crisis management cycle for needs assessment, resource allocation, damage mapping, and early warning.
 
 ## Trigger
 

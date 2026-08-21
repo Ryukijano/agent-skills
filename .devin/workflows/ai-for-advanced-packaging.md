@@ -1,6 +1,6 @@
 # /ai-for-advanced-packaging
 
-Co-design of 2.5D/3D chiplets, interconnect routing, signal-integrity-aware placement, and package-thermal optimization.
+Use machine learning to co-design 2.5D/3D chiplet packages, route interconnects, and optimize thermal and signal integrity.
 
 ## Trigger
 

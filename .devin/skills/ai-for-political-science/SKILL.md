@@ -2,19 +2,30 @@
 
 ## Description
 
-Text-as-data for politics: manifesto scaling, sentiment and stance detection, legislative and voting analysis, and causal inference for political institutions.
+Use AI for Political Science to scale texts, detect stances and model legislative behavior.
 
 ## When to use
 
 You are analyzing political texts, campaigns, legislatures, or public opinion and need to measure ideology, sentiment, stance, or institutional behavior from unstructured data.
 
-## Key concepts
 
-- **Text-as-data in politics**: scale party manifestos, speeches, and social media posts.
-- **Stance and sentiment detection**: classify support or opposition toward candidates, issues, and policies.
-- **Legislative roll-call and voting**: predict votes, measure polarization, and detect coalitions.
-- **Causal inference for institutions**: estimate effects of reforms, campaigns, and policies.
-- **Surveys and synthetic populations**: augment or benchmark measures with LLMs and polls.
+## Usage
+
+
+- **Text-as-data in politics**: Scale party manifestos, speeches, and social media posts.
+- **Stance and sentiment detection**: Classify support or opposition toward candidates, issues, and policies.
+- **Legislative roll-call and voting**: Predict votes, measure polarization, and detect coalitions.
+- **Causal inference for institutions**: Estimate effects of reforms, campaigns, and policies.
+- **Surveys and synthetic populations**: Augment or benchmark measures with LLMs and polls.
+
+## Steps
+
+1. Collect and prepare manifestos, speeches, social media and roll-call data.
+2. Analyze political texts.
+3. Campaigns.
+4. Legislatures.
+5. Validate by replicating a published manifesto scaling result and compare rankings.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -30,12 +41,14 @@ clf.fit(train["text"], train["stance"])
 predictions = clf.predict(test["text"])
 ```
 
+
 ## Tuning notes
 
 - Validate classifiers against expert or crowd-coded labels, not just accuracy.
 - Account for temporal and partisan drift when deploying models on new election cycles.
 - Be cautious about using LLM outputs as data without transparency and validation.
 - Use out-of-time and cross-country tests to assess generalizability.
+
 
 ## Verification
 

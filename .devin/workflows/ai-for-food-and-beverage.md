@@ -1,6 +1,6 @@
 # /ai-for-food-and-beverage
 
-AI for food safety, quality control, recipe and product development, shelf-life prediction, and supply chain optimization.
+Use AI for Food and Beverage to inspect quality, predict shelf life, generate recipes and forecast demand.
 
 ## Trigger
 

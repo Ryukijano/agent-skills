@@ -1,6 +1,6 @@
 # /ai-for-photonics
 
-Deep learning for photonic device inverse design, metasurfaces, optical communications, and nanophotonic simulation surrogates.
+Use deep learning to inverse-design photonic devices, metasurfaces, and optical communication links while replacing expensive Maxwell solvers.
 
 ## Trigger
 

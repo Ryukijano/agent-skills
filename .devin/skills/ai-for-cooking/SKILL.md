@@ -2,19 +2,26 @@
 
 ## Description
 
-Recipe generation, meal planning, ingredient substitution, food image recognition, and personalized nutrition-aware cooking assistance.
+Generate personalized recipes and meal plans that account for dietary restrictions, available ingredients, and nutrition goals.
 
 ## When to use
 
 You want to generate recipes from available ingredients, plan weekly meals, substitute items for dietary needs, or estimate nutrition from a photo.
 
-## Key concepts
+## Usage
 
-- **Food image recognition**: identify dishes and ingredients from photos.
-- **Recipe generation and understanding**: text-to-recipe and ingredient-to-instruction mapping.
-- **Ingredient decomposition and substitution**: break down compound ingredients and swap for allergies or preferences.
-- **Nutritional optimization**: balance macronutrients and dietary guidelines across a meal plan.
-- **Multimodal food computing**: combine vision, text, and structured nutrition data.
+- Generate recipes from pantry lists and dietary goals.
+- Identify dishes and ingredients from photos and estimate portions.
+- Substitute ingredients for allergies, intolerances, and cultural preferences.
+- Optimize weekly meal plans for macros and dietary guidelines.
+
+## Steps
+
+1. Catalog pantry, appliances, dietary restrictions, and user goals.
+2. Look up nutritional values in a trusted database rather than generating them.
+3. Generate or adapt recipes, checking cook times and allergen safety.
+4. Validate output against reviewed recipes and food-safety rules.
+5. Build a weekly meal plan and shopping list with macro targets.
 
 ## Code pattern
 

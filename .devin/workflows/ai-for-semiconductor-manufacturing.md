@@ -1,6 +1,6 @@
 # /ai-for-semiconductor-manufacturing
 
-Machine learning for semiconductor fabrication yield enhancement, wafer defect detection, equipment fault classification, process control, and advanced lithography/etch modeling.
+Use AI to predict wafer yield, detect defects, run virtual metrology, schedule equipment and control advanced processes in high-volume semiconductor fabrication.
 
 ## Trigger
 

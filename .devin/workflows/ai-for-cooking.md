@@ -1,6 +1,6 @@
 # /ai-for-cooking
 
-Recipe generation, meal planning, ingredient substitution, food image recognition, and personalized nutrition-aware cooking assistance.
+Generate personalized recipes and meal plans that account for dietary restrictions, available ingredients, and nutrition goals.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-longitudinal-studies
 
-Machine learning and deep learning for repeated measurements, time-varying covariates, missing data, trajectories, and outcomes in longitudinal cohorts and EHR data.
+Model repeated measurements over time to track disease progression, treatment response, and biomarker trajectories.
 
 ## Trigger
 

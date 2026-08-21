@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine and deep learning for detecting crop diseases, pests, weeds, and abiotic stresses and for supporting timely, targeted protection decisions.
+Detect crop diseases and pests from imagery, sensors, and field scouting.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You need to diagnose crop health problems, detect disease or stress symptoms, or
 
 ## Usage
 
-- **Image-based disease diagnosis**: classify leaf, canopy, and fruit symptoms from smartphone, drone, or satellite images.
-- **Drone and remote-sensing crop scouting**: map stress, disease, and weed patches across fields.
-- **Pathogen and symptom identification**: integrate molecular or environmental signals with vision models.
-- **Protection timing support**: build decision support for spray windows and intervention thresholds.
+- Diagnose diseases with PlantVillage Nuru or custom CNNs.
+- Detect weeds and pests from drone and smartphone imagery.
+- Predict disease pressure from weather and spore traps.
+- Guide variable-rate spraying and IPM decisions.
+- Build field-level risk maps.
 
 ## Steps
 
-1. Collect representative images or sensor data from healthy and diseased plants under field conditions.
-2. Curate and augment a labelled dataset covering symptom variability and growth stages.
-3. Train a classification, segmentation, or object-detection model suited to the symptom scale.
-4. Validate in independent fields, seasons, and cultivars to measure robustness.
-5. Deploy an edge, mobile, or cloud inference pipeline linked to agronomic advisories.
+1. Collect crop images, weather, and scouting records.
+2. Label symptoms and train classification/segmentation models.
+3. Validate on held-out locations and seasons.
+4. Deploy via mobile app, drone, or tractor-mounted sensors.
+5. Update with new pest/disease images.
 
 ## Code pattern
 

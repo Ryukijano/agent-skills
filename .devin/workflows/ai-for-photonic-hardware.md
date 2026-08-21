@@ -1,6 +1,6 @@
 # /ai-for-photonic-hardware
 
-Photonic AI accelerators, optical neural networks, optoelectronic co-design, and programming of photonic tensor cores.
+Use machine learning to design, calibrate, and program photonic AI accelerators and optical neural networks.
 
 ## Trigger
 

@@ -2,19 +2,26 @@
 
 ## Description
 
-Meter, rhyme, and stylistic constraints for AI-generated poetry, with evaluation and human-AI curation.
+Co-write poems under meter, rhyme, and style constraints with interactive language models that suggest lines and refine form.
 
 ## When to use
 
 You want to generate or co-write poems under formal constraints such as meter, rhyme, syllable counts, or a specific literary style.
 
-## Key concepts
+## Usage
 
-- **Formal constraints**: meter, rhyme scheme, syllable counts, stanza forms, and refrain patterns.
-- **Poetic style prompting**: persona, era, mood, imagery, alliteration, and lexical register.
-- **Controllable generation**: constrained decoding, iterative refinement, and rule-based post-processing for rhyme and meter.
-- **Evaluation**: automatic metrics, LLM-as-judge, and human evaluation for novelty, emotion, and aesthetic quality.
-- **Ethics and attribution**: respect public-domain or licensed training data and credit human curators.
+- Generate poems under meter, rhyme scheme, syllable count, and stanza constraints.
+- Emulate a specific poet, era, mood, or lexical register.
+- Post-process with rule-based rhyme and meter checking.
+- Curate and evaluate poems for novelty, emotion, and aesthetic quality.
+
+## Steps
+
+1. Choose a form (sonnet, haiku, villanelle) and its formal constraints.
+2. Prompt the model with persona, mood, imagery, and a target rhyme scheme.
+3. Generate multiple drafts and score them for form compliance.
+4. Validate meter and rhyme with tools such as pronouncingpy or pyphen.
+5. Select and edit the best poems in a blinded human-curation pass.
 
 ## Code pattern
 

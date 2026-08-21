@@ -1,6 +1,6 @@
 # /ai-for-research-communication
 
-Drafting manuscripts, abstracts, cover letters, response-to-reviewers, and translating findings across disciplines with LLMs.
+Use LLMs to draft, refine and translate academic manuscripts, cover letters, responses to reviewers and interdisciplinary summaries while grounding every claim in verified sources.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-taxation
 
-Tax compliance risk scoring, fraud and evasion detection, audit selection, taxpayer assistance, and revenue forecasting.
+Prioritizes tax audits and flags non-compliance by scoring returns, third-party data, and network relationships.
 
 ## Trigger
 

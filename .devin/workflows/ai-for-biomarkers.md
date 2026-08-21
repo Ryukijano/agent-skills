@@ -1,6 +1,6 @@
 # /ai-for-biomarkers
 
-Machine learning for omics-based biomarker discovery, sparse signature selection, multi-modal integration, and clinical validation.
+Discover and validate biomarkers by integrating genomics, proteomics, and imaging data.
 
 ## Trigger
 

@@ -2,19 +2,26 @@
 
 ## Description
 
-Legal intake, contract review, plain-language document summarization, form filling, and accessible legal triage for non-experts.
+Use NLP to triage legal questions, summarize contracts, flag risky clauses, and help non-experts fill forms and find the right jurisdiction.
 
 ## When to use
 
 You need to understand a contract, fill out a legal form, triage a civil legal issue, or summarize a legal document without immediate access to a lawyer.
 
-## Key concepts
+## Usage
 
-- **Legal NLP**: clause extraction, entity recognition, and document summarization on legal text.
-- **Contract review**: risk scoring, plain-language explanations, and redline suggestions.
-- **Legal triage and intake**: match user descriptions to relevant legal topics and services.
-- **Retrieval-augmented generation (RAG)**: ground answers in statutes, forms, and trusted FAQs.
-- **Hallucination and jurisdiction control**: verify citations and reason over the correct jurisdiction.
+- Extract clauses, entities, and obligations from contracts and leases.
+- Summarize legal documents into plain language and redline suggestions.
+- Triage intake queries to relevant legal topics and services.
+- Ground answers in statutes, forms, and verified FAQs with RAG.
+
+## Steps
+
+1. Collect the document or user query and identify the relevant jurisdiction.
+2. Run a clause-extraction or summarization model with a disclaimer that it is not legal advice.
+3. Retrieve statutes or form templates from verified sources.
+4. Flag high-risk terms and generate redline or plain-language explanations.
+5. Escalate complex or high-stakes matters to a licensed attorney.
 
 ## Code pattern
 

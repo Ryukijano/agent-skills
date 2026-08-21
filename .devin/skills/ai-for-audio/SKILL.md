@@ -2,19 +2,30 @@
 
 ## Description
 
-Audio enhancement, source separation, music generation, audio event detection, and speech enhancement.
+Use AI for Audio to enhance, separate, detect events and generate music.
 
 ## When to use
 
 You are restoring, separating, generating, or analyzing audio for music, communications, or ambient sensing.
 
-## Key concepts
 
-- **Speech enhancement and denoising**: mask-based and generative approaches.
-- **Source separation**: music demixing and speech separation.
-- **Audio event detection and classification**: weakly supervised and transformer models.
-- **Music generation**: symbolic and audio-domain diffusion and transformer models.
+## Usage
+
+
+- **Speech enhancement and denoising**: Mask-based and generative approaches.
+- **Source separation**: Music demixing and speech separation.
+- **Audio event detection and classification**: Weakly supervised and transformer models.
+- **Music generation**: Symbolic and audio-domain diffusion and transformer models.
 - **Audio super-resolution and bandwidth extension**: AERO, AEROMamba, and flow matching.
+
+## Steps
+
+1. Collect and prepare audio waveforms and event labels.
+2. Restore.
+3. Separate.
+4. Generate.
+5. Validate by denoising speech and measure PESQ and STOI improvement over input.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -29,12 +40,14 @@ mask = torch.sigmoid(model(spec))
 enhanced = torchaudio.transforms.GriffinLim(n_fft=512)(spec * mask)
 ```
 
+
 ## Tuning notes
 
 - Use loss functions aligned with human perception (PESQ, STOI, DNSMOS).
 - Train on diverse noise and reverberation conditions.
 - Avoid over-suppression of desired signals like music.
 - Evaluate generalization on out-of-domain noise and speakers.
+
 
 ## Verification
 

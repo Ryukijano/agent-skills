@@ -2,19 +2,28 @@
 
 ## Description
 
-Regulatory analysis, risk classification, standards mapping, policy evaluation, and evidence synthesis for national and international AI governance.
+Use regulatory analysis, risk classification, and standards mapping to inform AI policy and compliance.
 
 ## When to use
 
 You are advising or developing AI policy, mapping regulations to technical requirements, or evaluating how a law or standard affects an AI system or market.
 
-## Key concepts
+## Usage
 
-- **Risk-based regulation**: classify AI systems by risk level and assign obligations (e.g., EU AI Act).
-- **Policy instruments**: hard law, soft law, standards, sandboxes, procurement, and sectoral guidance.
-- **Regulatory learning**: monitoring, feedback, and iterative policy updates as technology evolves.
-- **International cooperation and interoperability**: OECD, ISO, and cross-border alignment.
-- **Policy evaluation**: ex-ante and ex-post assessment of economic, social, and rights impacts.
+- Classify AI systems by risk tier and map obligations (e.g., EU AI Act).
+- Compare policy instruments: hard law, soft law, standards, sandboxes, procurement.
+- Track regulatory learning and iterative updates as technology evolves.
+- Align international standards (OECD, ISO) and cross-border requirements.
+- Evaluate ex-ante and ex-post policy impacts.
+
+## Steps
+
+1. Identify the AI system, jurisdiction, and relevant legal and standards landscape.
+2. Map features and risk tier to specific obligations and technical requirements.
+3. Translate legal terms into verifiable engineering checks (data quality, logging, oversight).
+4. Compare national or regional strategies for convergence and divergence.
+5. Produce a policy brief with concrete technical and governance measures.
+6. Track regulatory changes and update compliance mapping.
 
 ## Code pattern
 

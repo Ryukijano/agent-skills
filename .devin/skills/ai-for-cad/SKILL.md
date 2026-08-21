@@ -2,19 +2,27 @@
 
 ## Description
 
-Deep generative models for parametric CAD sketches, B-rep synthesis, sketch-and-extrude sequences, and vision-language conditional CAD generation.
+Generate editable parametric CAD command sequences from text or sketches to accelerate mechanical design iteration.
 
 ## When to use
 
 You need to generate, complete, edit, or retrieve 3D parametric CAD models from sketches, images, text, or partial command sequences.
 
-## Key concepts
+## Usage
 
-- **Parametric CAD sequences**: sketch-and-extrude, boolean, fillet, chamfer operations.
-- **B-rep and CSG representations**: boundary representation vs. constructive solid geometry.
-- **CAD generative models**: Transformers, VQ-VAEs, and autoregressive models over CAD tokens.
-- **Conditional CAD generation**: completion from partial inputs, image-to-CAD, text-to-CAD.
-- **Design constraints**: symmetry, parallelism, perpendicularity, and manufacturability.
+- Generate parametric CAD command sequences and B-rep geometry from design specifications.
+- Complete partial CAD sketches or models using transformer or VQ-VAE models over CAD tokens.
+- Condition generation on images, text, or partial inputs for image-to-CAD and text-to-CAD workflows.
+- Enforce geometric and manufacturing constraints such as symmetry, parallelism, and manufacturability.
+
+## Steps
+
+1. Parse or collect CAD data (sketch-and-extrude sequences, B-rep, CSG, or command history) and tokenize operations.
+2. Train or fine-tune a transformer, VQ-VAE, or autoregressive model on parametric CAD sequences.
+3. Implement conditional generation for sketch completion, image-to-CAD, or text-to-CAD tasks.
+4. Validate generated sequences with a CAD kernel (Open CASCADE, FreeCAD) and convert to valid B-rep solids.
+5. Check geometric constraints (symmetry, perpendicularity, fillets) and manufacturability rules.
+6. Iterate with domain feedback and integrate the model into a CAD design-assistant or retrieval pipeline.
 
 ## Code pattern
 

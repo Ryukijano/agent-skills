@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for constructing, validating, and extending synthetic and virtual control arms from observational data to augment clinical and policy evaluation.
+Construct synthetic control arms from historical or real-world data to augment clinical evidence.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You have one or a few treated units and many untreated donor units, and need a c
 
 ## Usage
 
-- **Classic synthetic controls**: build a weighted donor pool to match pre-treatment outcomes.
-- **Penalized and sparse synthetic controls**: regularize unit and feature weights.
-- **Deep representation learning**: learn low-dimensional embeddings for better donor matching.
-- **External and virtual control arms**: augment single-arm trials with historical or real-world controls.
+- Build donor pools from aggregate and patient-level data.
+- Estimate synthetic controls with penalized regression (pensynth).
+- Quantify uncertainty with scpi prediction intervals.
+- Validate pre-treatment fit and placebo tests.
+- Support regulatory submissions with external comparators.
 
 ## Steps
 
-1. Define the treated unit, pre-treatment period, donor pool, and outcome of interest.
-2. Select predictor variables and fit a weighted combination of donors to pre-treatment outcomes.
-3. Evaluate pre-treatment fit and generate the counterfactual trajectory.
-4. Compute treatment effects and placebo-based inferential procedures.
-5. Assess robustness to donor pool composition and weight sparsity.
+1. Define the treated unit(s) and pre-treatment period.
+2. Assemble a donor pool of similar historical controls.
+3. Estimate donor weights and counterfactual trajectories.
+4. Evaluate fit, placebo robustness, and sensitivity.
+5. Report treatment effects with confidence intervals.
 
 ## Code pattern
 

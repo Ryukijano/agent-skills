@@ -1,6 +1,6 @@
 # /ai-for-welding
 
-Machine learning for arc, laser, and resistance welding: penetration prediction, defect detection, bead geometry, process monitoring, and parameter optimization.
+Use machine learning and multi-modal sensing to monitor weld quality, predict penetration and bead geometry, detect defects and optimize welding parameters in real time.
 
 ## Trigger
 

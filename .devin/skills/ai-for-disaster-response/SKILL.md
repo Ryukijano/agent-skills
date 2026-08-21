@@ -2,19 +2,27 @@
 
 ## Description
 
-Situational awareness, damage assessment, evacuation planning, supply pre-positioning, and multi-modal disaster imagery analysis.
+Use multi-modal imagery and ML to assess damage, map situational awareness, plan evacuations, and pre-position supplies during disasters.
 
 ## When to use
 
 You are supporting first responders, emergency managers, or humanitarian agencies before, during, or after a natural or human-made disaster.
 
-## Key concepts
+## Usage
 
-- **Multi-modal disaster imagery**: satellite, aerial, drone (sUAS), and social-media imagery for rapid assessment.
-- **Damage and change detection**: segmentation and classification of building, road, and infrastructure damage.
-- **Situational awareness and common operating picture**: fuse imagery, sensor, and crowd data into GIS-ready outputs.
-- **Evacuation and logistics**: optimize routes, shelter assignment, and resource pre-positioning.
-- **Operational constraints**: disconnected environments, real-time deadlines, and heterogeneous data quality.
+- Analyze satellite, aerial, drone, and social-media imagery for rapid disaster assessment.
+- Detect and classify building, road, and infrastructure damage from multi-temporal imagery.
+- Build a common operating picture by fusing imagery, sensors, and crowd data into GIS-ready outputs.
+- Optimize evacuation routes, shelter assignment, and resource pre-positioning under real-time constraints.
+
+## Steps
+
+1. Collect pre- and post-event satellite, aerial, drone, and social-media imagery and align them to a common CRS.
+2. Run a change-detection or damage-segmentation model and classify damage levels (e.g., xBD-style labels).
+3. Extract roads, shelters, and critical infrastructure and estimate affected population and needs.
+4. Optimize evacuation routes, shelter assignment, and resource pre-positioning with capacity and time constraints.
+5. Build a live situational-awareness dashboard that fuses model outputs with field reports and sensor data.
+6. Validate damage labels with ground truth and train a lightweight edge model for offline field deployment.
 
 ## Code pattern
 

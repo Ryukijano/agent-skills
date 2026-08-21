@@ -2,19 +2,27 @@
 
 ## Description
 
-Urban computing, IoT analytics, spatio-temporal forecasting, mobility, public safety, and citizen-centric services.
+Optimize fixed-time traffic signals from connected-vehicle trajectories to cut urban delays and stops by up to 30 percent.
 
 ## When to use
 
 You are analyzing urban sensor, mobility, or demographic data to support city planning, operations, or citizen services.
 
-## Key concepts
+## Usage
 
-- **Urban computing**: integration of sensing, data, and computing to understand and manage cities.
-- **Spatio-temporal graph learning**: STGNNs for traffic, air quality, and crowd flow prediction.
-- **Digital twins and IoT platforms**: real-time city models fed by heterogeneous sensors.
-- **Citizen engagement and governance**: NLP and recommendation for participatory urban planning.
-- **Sustainability and equity**: energy, emissions, accessibility, and resource distribution.
+- Forecast traffic, air quality, crowd flow, and energy demand with spatio-temporal graph and sequence models.
+- Build digital twins and IoT platforms that mirror real-time city operations.
+- Apply NLP and recommendation systems to participatory planning and citizen engagement.
+- Optimize energy, emissions, accessibility, and resource distribution for sustainable and equitable cities.
+
+## Steps
+
+1. Ingest heterogeneous urban data: traffic loops, public transit, air-quality sensors, weather, mobility, and demographics.
+2. Build a spatio-temporal graph or digital-twin model to represent city zones, roads, and sensor networks.
+3. Train forecasting models for traffic, air quality, and energy demand and evaluate them on multiple horizons.
+4. Deploy anomaly detection and decision-support modules for public safety, transit, and emergency response.
+5. Audit model outputs for fairness across neighborhoods and incorporate citizen feedback.
+6. Integrate validated predictions into city operations dashboards and policy planning tools.
 
 ## Code pattern
 

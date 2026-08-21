@@ -2,19 +2,26 @@
 
 ## Description
 
-Smart home control, energy management, occupancy prediction, device scheduling, and comfort optimization with reinforcement learning and IoT.
+Use machine learning to automate lighting and HVAC, reduce energy costs, predict occupancy, and improve comfort while preserving privacy.
 
 ## When to use
 
 You want to automate lighting, HVAC, or appliances, reduce home energy costs, or improve comfort based on occupancy and weather.
 
-## Key concepts
+## Usage
 
-- **Home energy management systems (HEMS)**: schedule loads, storage, and HVAC to minimize cost or carbon.
-- **Occupancy and presence detection**: infer who is home from sensors, phones, or cameras.
-- **Demand response**: shift flexible loads in response to price or grid signals.
-- **Reinforcement learning for control**: learn thermostat and device policies from feedback.
-- **Edge and privacy**: run inference locally to keep home data in the home.
+- Schedule HVAC and appliances to minimize cost and carbon under time-of-use pricing.
+- Predict occupancy from sensors, phones, and cameras.
+- Shift flexible loads in response to price or grid signals.
+- Learn thermostat and device policies from occupant feedback.
+
+## Steps
+
+1. Install and calibrate sensors for occupancy, temperature, and weather.
+2. Collect historical usage, pricing, and occupant comfort data.
+3. Train a scheduling or control policy with user comfort constraints.
+4. Validate in simulation and allow manual override at all times.
+5. Deploy locally and measure energy savings and comfort complaints.
 
 ## Code pattern
 

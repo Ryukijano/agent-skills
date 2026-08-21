@@ -1,6 +1,6 @@
 # /ai-for-program-synthesis
 
-Neural and symbolic program synthesis from examples, sketches, and natural language, including neurosymbolic and LLM-based code generation.
+Generate executable programs from natural-language descriptions or input-output examples for non-expert users and new APIs.
 
 ## Trigger
 

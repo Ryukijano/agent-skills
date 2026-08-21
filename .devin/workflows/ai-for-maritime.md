@@ -1,6 +1,6 @@
 # /ai-for-maritime
 
-AI for maritime autonomous surface ships, route and weather routing optimization, collision avoidance, port logistics, and vessel situational awareness.
+Use machine learning to route vessels autonomously, avoid collisions, predict traffic, and optimize port logistics and schedules.
 
 ## Trigger
 

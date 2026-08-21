@@ -1,6 +1,6 @@
 # /ai-for-ux-design
 
-Interaction design, user research, prototyping, and AI UX patterns for human-centered AI products.
+Use AI to design interaction patterns, prototype AI features, synthesize user research, and build human-centered AI experiences.
 
 ## Trigger
 

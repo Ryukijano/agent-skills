@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for sand, investment, die, and continuous casting: defect prediction, mold filling, solidification, microstructure, and process optimization.
+Use AI and digital twins to predict casting defects, microstructure and mechanical properties and optimize gating and solidification in foundries.
 
 ## When to use
 
 You are producing cast metal components and need to predict porosity, hot tearing, or shrinkage, optimize gating and risering, build digital twins of solidification, or improve energy and material efficiency in foundries.
 
-## Key concepts
+## Usage
 
-- **Casting defects**: porosity, shrinkage, hot tearing, cold shuts, inclusions, and surface defects.
-- **Solidification modeling**: thermal history, dendrite arm spacing, phase fraction, and microstructure.
-- **Process parameters**: pouring temperature, mold temperature, pouring rate, cooling rate, and alloy composition.
-- **ICME and digital twins**: coupling thermodynamic, macro/micro-scale simulation with data-driven models.
-- **High-pressure and continuous casting**: cycle time, die wear, and real-time quality control.
+- **Predict defects**: forecast porosity, shrinkage, hot tearing, and cold shuts from process data.
+- **Model microstructure**: predict SDAS, grain size, and phase fractions from thermal history.
+- **Simulate solidification**: use FEA, cellular automata, or phase-field methods.
+- **Optimize gating and risering**: reduce scrap and improve yield with data-driven design.
+- **Build digital twins**: synchronize foundry sensors with virtual models in real time.
+
+## Steps
+
+1. Collect geometry, alloy composition, mold, and process data for historical castings.
+2. Run casting simulations and label defects and microstructure from inspection and testing.
+3. Train ML models to predict defect probability and microstructure metrics.
+4. Optimize gating, risering, and process settings with surrogate or physics-informed models.
+5. Validate predictions with physical castings and NDT or mechanical tests.
+6. Deploy a digital twin that updates from foundry sensors and predicts part quality.
 
 ## Code pattern
 

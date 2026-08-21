@@ -1,6 +1,6 @@
 # /ai-for-content-strategy
 
-Planning, auditing, and orchestrating content portfolios with AI, including generative-engine optimization and cross-platform adaptation.
+Use AI to audit content libraries, identify topic gaps, optimize for generative-engine citation, and adapt assets across channels.
 
 ## Trigger
 

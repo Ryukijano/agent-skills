@@ -2,18 +2,27 @@
 
 ## Description
 
-Machine learning for forced-displacement forecasting, refugee camp mapping, asylum-flow prediction, and humanitarian response planning.
+Use machine learning to forecast displacement, map refugee camps, and allocate humanitarian resources.
 
 ## When to use
 
 You need to anticipate refugee or asylum-seeker arrivals, map camp infrastructure, or allocate resources before displacement peaks.
 
-## Key concepts
+## Usage
 
-- **Displacement forecasting**: use violence, governance, economic, and environmental indicators to predict cross-border flows.
-- **Camp mapping from satellite/VHR imagery**: detect shelters, service points, and population density in refugee camps.
-- **Asylum-seeker analytics**: estimate destination-country distribution with gravity and network models.
-- **Scenario analysis**: run counterfactuals for shocks like conflict escalation or drought.
+- Forecast cross-border flows from violence, governance, economic, and environmental indicators.
+- Detect shelters, service points, and population density in satellite/VHR imagery.
+- Estimate destination-country distribution with gravity and network models.
+- Run counterfactual scenario analysis for conflict or drought shocks.
+
+## Steps
+
+1. Collect origin-country stressors, displacement statistics, and camp imagery.
+2. Train panel models with origin, destination, and time fixed effects.
+3. Build a camp-mapping or shelter-detection pipeline from VHR imagery.
+4. Validate out-of-sample across crisis periods and geographic regions.
+5. Run scenario forecasts and share uncertainty with policymakers.
+6. Integrate with UNHCR or humanitarian planning workflows.
 
 ## Code pattern
 
@@ -48,4 +57,4 @@ model.fit(X, y)
 - https://ojs.aaai.org/index.php/AAAI/article/view/26846
 - https://drc.ngo/en/pages/foresight-displacement-forecasts/
 - https://www.microsoft.com/en-us/research/publication/mapping-refugee-camps-with-ai-a-benchmark-dataset-and-baseline-models-for-humanitarian-applications/
-- https://par.nsf.gov/biblio/10448593
+- https://doi.org/10.1287/opre.2021.0534

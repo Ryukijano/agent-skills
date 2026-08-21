@@ -1,6 +1,6 @@
 # /ai-for-data-marketplaces
 
-AI for data and model discovery, pricing, valuation, matching, trust, and governance in data-sharing marketplaces and AI model markets.
+Match buyers and sellers, price data products, and manage data exchange.
 
 ## Trigger
 

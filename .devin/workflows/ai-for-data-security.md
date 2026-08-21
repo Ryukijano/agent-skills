@@ -1,6 +1,6 @@
 # /ai-for-data-security
 
-Adversarial robustness, data poisoning detection, access control, threat detection, and AI-driven security for ML training and inference data.
+Defend AI systems against adversarial attacks, data poisoning, and model extraction.
 
 ## Trigger
 

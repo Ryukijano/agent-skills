@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for semiconductor materials discovery, bandgap engineering, defect analysis, and fabrication process optimization.
+Apply ML to discover semiconductors, engineer bandgaps and defects, and optimize fabrication and layout processes.
 
 ## When to use
 
 You are searching for new semiconductor compounds, optimizing doping or growth, or building surrogate models for electronic-structure and fabrication parameters.
 
-## Key concepts
+## Usage
 
-- **Bandgap and carrier-property prediction**: ML models trained on DFT and experimental data for inorganic and organic semiconductors.
-- **Defect and yield engineering**: wafer-level defect classification, failure prediction, and root-cause analysis.
-- **Layout and process optimization**: AI-assisted lithography, etch, deposition, and design-technology co-optimization.
-- **Inverse design with LLMs and GNNs**: large language and graph models for generating candidate semiconductors.
-- **2D and wide-bandgap materials**: discovery of novel 2D semiconductors and power electronics materials.
+- Predict bandgap, carrier properties, and effective mass from DFT and experimental data.
+- Classify wafer defects, predict yield, and perform root-cause analysis.
+- Optimize lithography, etch, deposition, and design-technology co-optimization with ML.
+- Generate candidate 2D and wide-bandgap semiconductors with GNNs or LLMs and validate with DFT.
+
+## Steps
+
+1. Collect DFT, experimental, and fabrication data from public databases (Materials Project, AFLOW) or proprietary sources.
+2. Train property-prediction models for bandgap, effective mass, and carrier properties, using crystal-graph or composition descriptors.
+3. Build defect-classification and yield-prediction models from wafer images and process logs.
+4. Use ML to optimize lithography, etch, deposition, or layout parameters and check against process constraints.
+5. Generate novel semiconductor candidates with inverse-design models and validate the most promising with DFT.
+6. Fabricate and measure top candidates, feeding results back to refine the models.
 
 ## Code pattern
 

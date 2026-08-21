@@ -2,19 +2,30 @@
 
 ## Description
 
-Computational pathology, whole-slide image analysis, cancer subtyping, biomarker discovery, and vision-language models for histopathology.
+Use AI for Pathology to analyze whole-slide images, subtype cancer and predict molecular biomarkers.
 
 ## When to use
 
 You are analyzing whole-slide images (WSIs), grading tumors, predicting molecular biomarkers, or building AI-assisted pathology workflows.
 
-## Key concepts
 
-- **WSI tiling and patch sampling**: gigapixel images are processed as small patches because full slides do not fit in GPU memory.
-- **Multiple instance learning (MIL)**: train on slide-level labels when pixel annotations are scarce.
-- **Foundation and vision-language models**: pathology FMs (UNI, CONCH, PathChat) enable few-shot and multimodal analysis.
-- **Cancer subtyping and biomarkers**: predict tumor origin, grade, prognosis, and therapy response from H&E slides.
-- **Domain shift and stain normalization**: scanners, staining, and labs introduce significant batch effects.
+## Usage
+
+
+- **WSI tiling and patch sampling**: Gigapixel images are processed as small patches because full slides do not fit in GPU memory.
+- **Multiple instance learning (MIL)**: Train on slide-level labels when pixel annotations are scarce.
+- **Foundation and vision-language models**: Pathology FMs (UNI, CONCH, PathChat) enable few-shot and multimodal analysis.
+- **Cancer subtyping and biomarkers**: Predict tumor origin, grade, prognosis, and therapy response from H&E slides.
+- **Domain shift and stain normalization**: Scanners, staining, and labs introduce significant batch effects.
+
+## Steps
+
+1. Collect and prepare whole-slide images and pathology reports.
+2. Analyze whole-slide images (WSIs).
+3. Grade tumors.
+4. Predict molecular biomarkers.
+5. Validate by training a MIL classifier on WSI patches and compare to pathologist grading.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -31,12 +42,14 @@ patch = slide.read_region((10000, 10000), 0, (256, 256)).convert("RGB")
 tensor = torch.from_numpy(np.array(patch)).permute(2, 0, 1).unsqueeze(0).float() / 255.0
 ```
 
+
 ## Tuning notes
 
 - Normalize for staining and scanner differences (Macenko, Vahadane, or learned stain transfer).
 - Use weak or noisy labels and bag-level losses for MIL.
 - Evaluate with pathologist concordance and external test sets.
 - Balance across tissue types and cancer grades.
+
 
 ## Verification
 

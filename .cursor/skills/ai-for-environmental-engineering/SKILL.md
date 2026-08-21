@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for water and wastewater treatment, air quality, climate modeling, waste management, and environmental monitoring.
+Use AI to monitor air and water quality, model ecosystems, and manage environmental risk.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are modeling or managing environmental systems, monitoring pollutants, optim
 
 ## Usage
 
-- **Water and wastewater treatment**: process control, soft sensors, and nutrient removal.
-- **Air quality and emissions**: forecasting, source apportionment, and anomaly detection.
-- **Climate and hydrology**: flood, drought, and rainfall-runoff modeling.
-- **Waste and circular economy**: sorting, recycling, and lifecycle optimization.
-- **Environmental monitoring**: IoT, remote sensing, and digital twins.
+- Predict pollutant levels from sensor and satellite data.
+- Model watershed and flood dynamics with SWAT and HEC-RAS.
+- Detect illegal dumping and land-use change from imagery.
+- Optimize wastewater treatment and energy recovery.
+- Map carbon and biodiversity hotspots.
 
 ## Steps
 
-1. Collect sensor, satellite, regulatory, and process data for the target environmental system.
-2. Engineer time- and spatially-aware features and handle missing data.
-3. Train a forecasting, anomaly, or optimization model.
-4. Validate against field samples and first-principles models.
-5. Monitor for seasonal drift and new pollution/emission sources.
+1. Gather environmental sensor, satellite, or survey data.
+2. Engineer spatiotemporal and meteorological features.
+3. Train regression or classification models for quality or risk.
+4. Integrate with GIS and EHS dashboards.
+5. Validate against regulatory standards and field samples.
 
 ## Code pattern
 

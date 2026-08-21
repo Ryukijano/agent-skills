@@ -1,6 +1,6 @@
 # /ai-for-economics
 
-Causal inference, policy evaluation, nowcasting, heterogeneous treatment effects, and demand estimation for economic and policy analysis.
+Use AI for Economics to evaluate policies, estimate causal effects, nowcast macro indicators and model demand.
 
 ## Trigger
 

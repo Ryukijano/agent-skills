@@ -1,6 +1,6 @@
 # /ai-for-petroleum-engineering
 
-AI for reservoir characterization, production optimization, well placement, drilling, and digital oilfield twins.
+Apply AI to reservoir characterization, production optimization, and predictive maintenance.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-journalism
 
-Algorithmic journalism, automated reporting, fact-checking, news recommendation, and AI-assisted investigative data reporting.
+Use AI for Journalism to automate reporting, find data leads, fact-check and personalize news.
 
 ## Trigger
 

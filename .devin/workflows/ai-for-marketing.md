@@ -1,6 +1,6 @@
 # /ai-for-marketing
 
-Customer segmentation, personalization, propensity modeling, marketing-mix attribution, and generative AI for content and campaigns.
+Use AI for Marketing to segment customers, personalize messages, attribute marketing impact and generate creative.
 
 ## Trigger
 

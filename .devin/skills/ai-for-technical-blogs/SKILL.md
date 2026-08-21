@@ -2,19 +2,28 @@
 
 ## Description
 
-Planning, drafting, SEO-optimizing, and reviewing technical blog posts and tutorials with LLMs.
+Plan, draft, SEO-optimize and review technical blog posts and tutorials that combine code, narrative and practical guidance for developer audiences.
 
 ## When to use
 
 You are creating tutorials, engineering deep-dives, API explainers, or product announcements for a technical audience.
 
-## Key concepts
+## Usage
 
-- **Technical narrative**: combine motivation, concept, code, and outcome in a coherent arc.
-- **Code-first examples**: include runnable snippets, output, and common pitfalls.
-- **SEO and discoverability**: structure headings, metadata, and keywords for search and social sharing.
-- **Audience calibration**: adjust depth for beginners, practitioners, or experts.
-- **Expert review**: subject-matter experts should validate accuracy before publishing.
+- **Combine motivation, concept, code, and outcome in a coherent arc.**
+- **Include runnable snippets, output, and common pitfalls.**
+- **Structure headings, metadata, and keywords for search and social sharing.**
+- **Adjust depth for beginners, practitioners, or experts.**
+- **Have subject-matter experts validate accuracy before publishing.**
+
+## Steps
+
+1. Choose a target keyword, audience level, and measurable goal (traffic, engagement, tutorial completion).
+2. Create an outline with clear headings, code examples, and a narrative arc from problem to solution.
+3. Draft the post with the model, feeding it existing code, docs, and actual output.
+4. Run every code snippet in a clean environment and capture real results and error cases.
+5. Optimize headings, meta description, and internal links for search without keyword stuffing.
+6. Peer-review for technical accuracy, edit for voice, and publish with diagrams and alt text.
 
 ## Code pattern
 

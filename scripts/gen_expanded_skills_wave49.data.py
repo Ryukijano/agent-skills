@@ -2,7 +2,7 @@ SKILLS = [
     {
         "name": "ai-for-property-valuation",
         "title": "AI for Property Valuation",
-        "description": "Automated valuation models, hedonic pricing, spatial machine learning, and deep learning for residential and commercial property appraisal.",
+        "description": "Estimates residential and commercial property values by fusing sales comparables, spatial features, and imagery into automated valuation models.",
         "devin_body": r'''## When to use
 
 You need to estimate market values, support appraisal workflows, or build automated valuation models (AVMs) for residential or commercial properties.
@@ -18,8 +18,8 @@ You need to estimate market values, support appraisal workflows, or build automa
 
 1. Gather sales transactions, property characteristics, and geospatial attributes.
 2. Engineer features for size, age, locational amenities, and spatial lags.
-3. Train and validate regression/AVM models (XGBoost, LightGBM, DNN, GNN).
-4. Evaluate with MAPE, RMSE, and cross-validation across neighborhoods.
+3. Train and validate regression/AVM models on assessor or listing data such as C3 AI Property Appraisal or VOA AVM.
+4. Evaluate with MAPE, RMSE, and cross-validation across neighborhoods and time.
 5. Deploy a monitoring pipeline for drift and appraisal-review workflow.
 
 ## Code pattern
@@ -63,7 +63,7 @@ print(f'MAPE: {mape:.2%}')
     {
         "name": "ai-for-real-estate-investment",
         "title": "AI for Real Estate Investment",
-        "description": "Predictive analytics, investment screening, REIT return forecasting, and risk-adjusted underwriting for real estate investment decisions.",
+        "description": "Forecasts REIT returns, screens acquisitions, and underwrites cash-flow risk for real estate investment decisions.",
         "devin_body": r'''## When to use
 
 You are evaluating acquisitions, forecasting REIT returns, screening markets, or optimizing capital allocation across real estate assets.
@@ -78,9 +78,9 @@ You are evaluating acquisitions, forecasting REIT returns, screening markets, or
 ## Steps
 
 1. Define investment thesis, asset universe, and performance target.
-2. Collect macro, market, and asset-level features.
-3. Train predictive models (gradient boosting, GMDH, econometric-ML hybrids).
-4. Backtest strategies across market regimes.
+2. Collect macro, market, and asset-level features from sources such as NAREIT or MSCI.
+3. Train predictive models such as XGBoost, random forests, or neural-network hybrids.
+4. Backtest strategies across market regimes with transaction-cost and liquidity adjustments.
 5. Generate sensitivity and scenario reports for capital-committee decisions.
 
 ## Code pattern
@@ -122,7 +122,7 @@ print('R2:', r2_score(y_test, pred))
     {
         "name": "ai-for-urban-development",
         "title": "AI for Urban Development",
-        "description": "GeoAI, spatial modeling, generative urban design, and scenario simulation for sustainable, equitable, and data-driven urban development.",
+        "description": "Simulates urban growth and land-use scenarios to balance housing, infrastructure, and sustainability outcomes.",
         "devin_body": r'''## When to use
 
 You are planning urban growth, evaluating zoning or land-use scenarios, modeling housing and infrastructure needs, or assessing climate resilience.
@@ -138,7 +138,7 @@ You are planning urban growth, evaluating zoning or land-use scenarios, modeling
 
 1. Define planning objectives, boundaries, and stakeholder questions.
 2. Integrate geospatial, demographic, economic, and mobility datasets.
-3. Build or train spatial ML and generative models.
+3. Build or train spatial ML and generative models such as UESP or agent-based urban simulators.
 4. Run scenarios and quantify impacts across sustainability and equity metrics.
 5. Co-design and iterate with planners and communities.
 
@@ -181,7 +181,7 @@ clf.fit(X, y)
     {
         "name": "ai-for-city-modeling",
         "title": "AI for City Modeling",
-        "description": "Urban digital twins, 3D city reconstruction, generative city models, and AI-driven urban simulation for planning and operations.",
+        "description": "Reconstructs 3D city environments and integrates live data into digital twins for planning and operations.",
         "devin_body": r'''## When to use
 
 You are building or querying a digital twin, synthesizing urban environments, or running what-if simulations of city systems.
@@ -195,8 +195,8 @@ You are building or querying a digital twin, synthesizing urban environments, or
 
 ## Steps
 
-1. Gather geospatial, sensor, and asset data for the target city.
-2. Reconstruct 3D geometry and semantics.
+1. Gather geospatial, sensor, and asset data from OpenStreetMap, DEM, and satellite sources.
+2. Reconstruct 3D geometry and semantics with CityGML, TUM2TWIN, or OpenUSD toolchains.
 3. Integrate data streams into a digital twin or simulator platform.
 4. Train and validate AI models for prediction and scenario analysis.
 5. Visualize and continuously update the model.
@@ -236,7 +236,7 @@ o3d.visualization.draw_geometries([pcd])
     {
         "name": "ai-for-construction-management",
         "title": "AI for Construction Management",
-        "description": "BIM-NLP integration, 4D/5D digital twins, computer-vision progress monitoring, and AI-driven scheduling and cost control for construction.",
+        "description": "Track concrete pouring and component progress from site cameras and BIM to detect delays and improve safety compliance.",
         "devin_body": r'''## When to use
 
 You are planning, scheduling, monitoring, or controlling construction projects with AI for cost, schedule, quality, and safety.
@@ -245,7 +245,7 @@ You are planning, scheduling, monitoring, or controlling construction projects w
 
 - **4D/5D BIM**: integrate schedule, cost, and model data for predictive control.
 - **NLP for planning**: extract activities, durations, and logic from documents and drawings.
-- **Computer vision**: monitor progress, productivity, and safety from site images and drones.
+- **Computer vision**: monitor progress, productivity, and safety from site images and drones using YOLO or MCP-enabled LLMs.
 - **Reinforcement learning**: resource leveling and schedule optimization.
 
 ## Steps
@@ -292,7 +292,7 @@ for r in results:
     {
         "name": "ai-for-facilities-management",
         "title": "AI for Facilities Management",
-        "description": "Predictive maintenance, fault detection, digital twins, and AI-enabled asset lifecycle management for built facilities.",
+        "description": "Predicts equipment failures, manages asset lifecycles, and optimizes energy and maintenance in built facilities.",
         "devin_body": r'''## When to use
 
 You are managing maintenance, energy, and asset performance in commercial, industrial, or institutional facilities.
@@ -306,9 +306,9 @@ You are managing maintenance, energy, and asset performance in commercial, indus
 
 ## Steps
 
-1. Ingest sensor, BMS, CMMS, and asset master data.
+1. Ingest sensor, BMS, CMMS, and asset master data into a common data environment.
 2. Label faults, failures, and maintenance events.
-3. Train predictive models (XGBoost, LSTM, autoencoders).
+3. Train predictive models (XGBoost, LSTM, autoencoders) on asset health indicators.
 4. Deploy real-time anomaly alerts and work-order integration.
 5. Continuously retrain on new data and feedback.
 
@@ -348,7 +348,7 @@ df['anomaly'] = clf.fit_predict(X)
     {
         "name": "ai-for-building-operations",
         "title": "AI for Building Operations",
-        "description": "Smart building control, energy optimization, occupant-centric HVAC and lighting, and IoT-BMS integration for operational performance.",
+        "description": "Controls HVAC, lighting, and energy use in real time while maintaining comfort and lowering operational carbon.",
         "devin_body": r'''## When to use
 
 You are optimizing energy, comfort, and resilience in the day-to-day operation of smart buildings and campuses.
@@ -362,7 +362,7 @@ You are optimizing energy, comfort, and resilience in the day-to-day operation o
 
 ## Steps
 
-1. Connect BMS, IoT, weather, and utility data streams.
+1. Connect BMS, IoT, weather, and utility data streams through platforms such as OpenBlue or R-Zero.
 2. Define control objectives (energy, comfort, cost, carbon).
 3. Train forecasting and control models (MPC, RL, supervised).
 4. Simulate and safely deploy in shadow or pilot mode.
@@ -405,7 +405,7 @@ model.fit(X, y)
     {
         "name": "ai-for-tenant-experience",
         "title": "AI for Tenant Experience",
-        "description": "Personalization, occupancy analytics, indoor environmental quality, and tenant engagement for workplace and residential environments.",
+        "description": "Personalizes indoor environments, predicts satisfaction, and optimizes space utilization for workplace and residential tenants.",
         "devin_body": r'''## When to use
 
 You want to improve tenant satisfaction, engagement, retention, and workplace productivity in commercial or residential buildings.
@@ -414,7 +414,7 @@ You want to improve tenant satisfaction, engagement, retention, and workplace pr
 
 - **Indoor environmental quality**: predict thermal, visual, acoustic, and air-quality satisfaction.
 - **Personalization**: adjust lighting, temperature, and space recommendations.
-- **Occupancy analytics**: understand space utilization and preferences.
+- **Occupancy analytics**: understand space utilization and preferences from sensors such as XY Sense.
 - **Tenant apps and services**: AI chatbots, maintenance ticketing, and amenity booking.
 
 ## Steps
@@ -461,23 +461,23 @@ clf.fit(X, y)
     {
         "name": "ai-for-lease-management",
         "title": "AI for Lease Management",
-        "description": "NLP-based lease abstraction, clause extraction, compliance tracking, and predictive analytics for commercial and residential lease portfolios.",
+        "description": "Abstracts lease terms, extracts clauses, and tracks critical dates for commercial and residential portfolios.",
         "devin_body": r'''## When to use
 
 You need to abstract, structure, monitor, and analyze lease contracts at scale across a portfolio.
 
 ## Usage
 
-- **Lease abstraction**: extract key terms, dates, rent, options, and obligations.
+- **Lease abstraction**: extract key terms, dates, rent, options, and obligations from PDFs, Word, and scanned leases.
 - **Clause classification**: identify renewal, termination, escalation, and default clauses.
 - **Compliance and accounting**: feed structured data into IFRS 16 / ASC 842 workflows.
 - **Portfolio analytics**: monitor rent roll, expirations, and option exposures.
 
 ## Steps
 
-1. Collect lease documents (PDFs, Word, scanned) and define an abstraction schema.
+1. Collect lease documents and define an abstraction schema aligned with accounting standards.
 2. Preprocess and OCR documents, segment pages and clauses.
-3. Fine-tune an NER or extractive model on annotated lease data.
+3. Fine-tune an NER or extractive model on annotated lease data or use tools such as ContractHive or LeaseIQ.
 4. Validate extraction against human-reviewed gold data.
 5. Load structured output into CMMS/ERP and analytics dashboards.
 
@@ -518,22 +518,22 @@ print('date:', date_match.group(0) if date_match else None)
     {
         "name": "ai-for-portfolio-optimization",
         "title": "AI for Portfolio Optimization",
-        "description": "Diversification, risk-return balancing, rebalancing strategies, and generative-AI analytics for real estate and mixed-asset portfolios.",
+        "description": "Balances risk and return across property sectors and geographies using return forecasts and scenario stress tests.",
         "devin_body": r'''## When to use
 
 You are allocating capital, rebalancing holdings, managing concentration risk, or forecasting portfolio-level returns in real estate.
 
 ## Usage
 
-- **Risk-return optimization**: mean-variance, CVaR, or genetic-algorithm approaches.
+- **Risk-return optimization**: use mean-variance, CVaR, or genetic-algorithm approaches.
 - **Diversification**: analyze geography, sector, tenant, and lease-maturity exposures.
-- **Scenario stress testing**: market shocks, interest-rate, and vacancy scenarios.
-- **AI agents**: autonomous monitoring and rebalancing recommendations.
+- **Scenario stress testing**: run market shocks, interest-rate, and vacancy scenarios.
+- **AI-driven rebalancing**: generate monitoring and rebalancing recommendations.
 
 ## Steps
 
 1. Define portfolio objectives, constraints, and investable universe.
-2. Collect asset-level cash flows, market, and risk-factor data.
+2. Collect asset-level cash flows, market, and risk-factor data from sources such as NAREIT or MSCI.
 3. Estimate return forecasts and covariance or risk matrices.
 4. Run optimization under constraints and scenarios.
 5. Monitor and rebalance on a regular cadence.
@@ -578,7 +578,7 @@ print(w.value)
     {
         "name": "ai-for-site-selection",
         "title": "AI for Site Selection",
-        "description": "Geospatial ML, graph neural networks, urban knowledge graphs, and location analytics for retail, logistics, and facility siting.",
+        "description": "Rank retail and facility locations using mobility, demographic, and competitor data to maximize customer capture.",
         "devin_body": r'''## When to use
 
 You are choosing locations for stores, warehouses, facilities, or services based on demographics, competition, transport, and imagery.
@@ -586,15 +586,15 @@ You are choosing locations for stores, warehouses, facilities, or services based
 ## Usage
 
 - **Location analytics**: integrate POI, mobility, satellite, and census data.
-- **Graph neural networks**: model spatial interactions and neighborhood effects.
-- **Urban knowledge graphs**: combine semantic urban facts with site scoring.
+- **Revenue and footfall forecasting**: predict site performance by catchment and trade area.
+- **Graph and spatial modeling**: capture neighborhood effects and cannibalization across a portfolio.
 - **Multi-criteria decision**: balance revenue, cost, accessibility, and risk.
 
 ## Steps
 
 1. Define site type, catchment, and success metric (revenue, footfall, ROI).
-2. Assemble geospatial, mobility, demographic, and competitor data.
-3. Build features and train spatial, GNN, or knowledge-graph models.
+2. Assemble geospatial, mobility, demographic, and competitor data from CARTO, Kalibrate, or StreetLight.
+3. Build features and train spatial or graph models.
 4. Score and rank candidate sites.
 5. Validate with actual site performance.
 
@@ -633,7 +633,7 @@ G = nx.read_graphml('transport.graphml')
     {
         "name": "ai-for-land-use",
         "title": "AI for Land Use",
-        "description": "Remote sensing, multi-source data fusion, functional-zone mapping, and neural-symbolic planning for land-use analysis and policy.",
+        "description": "Maps urban functional zones and monitors land-cover change from remote sensing and multi-source geospatial data.",
         "devin_body": r'''## When to use
 
 You want to map, monitor, and plan land use; identify functional zones; or support zoning and environmental policy.
@@ -648,7 +648,7 @@ You want to map, monitor, and plan land use; identify functional zones; or suppo
 ## Steps
 
 1. Define land-use classes and study area.
-2. Gather multi-source geospatial and socio-economic data.
+2. Gather Sentinel-2, SDGSAT-1, OSM, and socio-economic data.
 3. Train and validate multi-modal deep learning models.
 4. Produce land-use maps and uncertainty estimates.
 5. Translate maps into planning dashboards and policy inputs.

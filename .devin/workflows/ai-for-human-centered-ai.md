@@ -1,6 +1,6 @@
 # /ai-for-human-centered-ai
 
-Human-AI interaction, explainability, trust, feedback loops, participatory design, and human-in-the-loop ML to keep people at the center of AI systems.
+Use human-AI interaction, explainability, and participatory design to keep people at the center of AI systems.
 
 ## Trigger
 

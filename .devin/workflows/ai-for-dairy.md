@@ -1,6 +1,6 @@
 # /ai-for-dairy
 
-Machine learning for health, fertility, behaviour, and production monitoring in dairy cattle and dairy farm decision support.
+Monitor dairy cattle health, reproduction, and behavior with computer vision and wearables.
 
 ## Trigger
 

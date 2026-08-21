@@ -1,6 +1,6 @@
 # /ai-for-retail
 
-Demand forecasting, inventory placement, personalized recommendations, dynamic pricing, and omnichannel fulfillment for retail.
+Use AI for Retail to forecast demand, place inventory, personalize recommendations and manage omnichannel fulfillment.
 
 ## Trigger
 

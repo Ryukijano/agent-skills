@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine and deep learning for pest detection, identification, population monitoring, and integrated pest management decision support.
+Detect and count insect pests with smart traps, pheromones, and computer vision.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You need to detect, identify, count, or forecast insect pests to inform scouting
 
 ## Usage
 
-- **Insect pest image classification**: identify pest species from trap, camera, or smartphone images.
-- **Automated pest monitoring**: process pheromone-trap, suction-trap, and smart-trap data.
-- **Pest risk and population forecasting**: predict outbreaks using weather, crop, and trap data.
-- **IPM decision support**: recommend thresholds, biocontrol, and targeted chemical interventions.
+- Deploy smart traps with YOLO-Evo, Yolo-pest, or YOLOv9-TrapPest.
+- Monitor pest dynamics and degree-day models.
+- Predict outbreak risk from weather and trap counts.
+- Target spraying with IPM thresholds.
+- Build georeferenced pest maps.
 
 ## Steps
 
-1. Deploy traps, cameras, or sensors in representative field locations.
-2. Build a labelled image or count dataset covering target species and look-alikes.
-3. Train species classification or object-counting models.
-4. Integrate weather, crop-stage, and historical trap data for risk forecasting.
-5. Generate field-level risk maps and intervention recommendations for scouts.
+1. Deploy pheromone traps with cameras and IoT.
+2. Collect images and count labels across locations.
+3. Train detection and counting models.
+4. Integrate with weather and degree-day predictions.
+5. Validate against manual scouting and treatment outcomes.
 
 ## Code pattern
 

@@ -2,25 +2,27 @@
 
 ## Description
 
-Cyber threat intelligence extraction, attribution, knowledge graphs, and automated indicator analysis with ML and LLMs.
+Use machine learning and NLP to extract indicators, attribute threat actors, build knowledge graphs, and prioritize cyber-threat intelligence.
 
 ## When to use
 
 You are turning large volumes of security reports, logs, and dark-web
 sources into structured, actionable intelligence about threats.
 
-## Key concepts
+## Usage
 
-- **Indicator extraction and normalization**: IoCs, TTPs, and
-  MITRE ATT&CK mapping.
-- **Threat actor attribution**: behavioral and artifact similarity
-  analysis.
-- **Knowledge graphs**: entity-relationship models for multi-hop
-  reasoning over CTI.
-- **Natural language processing**: LLM summarization, question
-  answering, and report triage.
-- **Prioritization and situational awareness**: risk scoring and
-  alert enrichment.
+- Extract and normalize IoCs, TTPs, and MITRE ATT&CK mappings from reports.
+- Attribute threat actors from behavioral and artifact similarity.
+- Build knowledge graphs for multi-hop reasoning over CTI.
+- Summarize and triage reports, and enrich alerts with risk scoring.
+
+## Steps
+
+1. Collect structured and unstructured threat reports and dark-web sources.
+2. Train or run an NER and relationship-extraction model on a labeled corpus.
+3. Normalize entities to a shared taxonomy and build a CTI knowledge graph.
+4. Validate extraction against a labeled gold set and analyst summaries.
+5. Integrate low-confidence triage with analyst-in-the-loop attribution.
 
 ## Code pattern
 

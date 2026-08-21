@@ -2,18 +2,26 @@ SKILLS = [
     {
         "name": "ai-for-computational-complexity",
         "title": "AI for Computational Complexity",
-        "description": "Using machine learning to predict, characterize, and understand the complexity of computational problems, reductions, and hardness proxies.",
+        "description": "Use machine learning to predict solver runtime, characterize complexity classes, and learn hardness proxies for computational problems.",
         "devin_body": r'''
 ## When to use
 
 You want to estimate the difficulty of an algorithmic or combinatorial problem, predict solver runtime, or learn hardness proxies for reductions and complexity classes.
 
-## Key concepts
+## Usage
 
-- **Complexity classes and reductions**: P, NP, NP-completeness, fine-grained reductions, and parameterized complexity.
-- **Hardness proxies**: statistical-query lower bounds, low-degree likelihood ratios, and the Franz–Parisi criterion for planted problems.
-- **ML for runtime prediction**: train regressors on instance features to predict SAT/MIP solver behavior.
-- **Learned complexity boundaries**: data-driven conjectures on phase transitions and average-case hardness.
+- Predict solver runtime and average-case hardness for SAT/MIP/SMT instances from structural features.
+- Characterize complexity classes and reductions, including P, NP, fine-grained, and parameterized frameworks.
+- Model hardness proxies such as statistical-query lower bounds, low-degree likelihood ratios, and the Franz–Parisi criterion.
+- Generate data-driven conjectures about phase transitions and average-case hardness boundaries.
+
+## Steps
+
+1. Collect or generate problem instances and extract features such as clause/variable ratio, graph metrics, and symmetry.
+2. Train regressors or classifiers to predict solver runtime, satisfiability, or a hardness proxy.
+3. Use the model to rank instances or select solver configurations for a target distribution.
+4. Compare learned predictions with theoretical hardness proxies and worst-case bounds.
+5. Deploy the best predictor inside a solver toolchain and monitor for distribution shift.
 
 ## Code pattern
 
@@ -42,7 +50,7 @@ print("MAE:", np.mean(np.abs(model.predict(X_test) - y_test)))
 1. Train a runtime predictor on a set of SAT/MIP instances and evaluate with time-based splits.
 2. Plot predicted vs. actual runtimes and identify systematic underestimation on hard instances.
 3. Compare the learned ranking of instances to a theoretical hardness proxy.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1088/1742-5468/ad3a5b",
             "https://plato.stanford.edu/entries/computational-complexity/",
@@ -54,18 +62,27 @@ print("MAE:", np.mean(np.abs(model.predict(X_test) - y_test)))
     {
         "name": "ai-for-algorithms",
         "title": "AI for Algorithms",
-        "description": "Learning-augmented algorithms, learned data structures, and ML-guided design for search, routing, scheduling, and data-intensive pipelines.",
+        "description": "Use machine learning to augment classic algorithms with learned predictions, indexes, and data structures.",
         "devin_body": r'''
 ## When to use
 
 You want to improve classic algorithms with machine-learned predictions, design learned indexes or data structures, or tune algorithmic decisions on a distribution of instances.
 
-## Key concepts
+## Usage
 
-- **Learning-augmented algorithms**: algorithms that take ML predictions as advice and retain worst-case guarantees when predictions are poor.
-- **Learned indexes and data structures**: replace or augment B-trees, Bloom filters, and sketches with neural models.
-- **Algorithm configuration and selection**: choose or configure solvers based on instance features.
-- **Competitive and approximation ratios**: prove bounds that degrade gracefully with prediction error.
+- Build learning-augmented algorithms that take ML predictions as advice while retaining worst-case guarantees.
+- Replace or augment B-trees, Bloom filters, and sketches with learned indexes and data structures.
+- Select and configure solvers, sorters, or search algorithms based on instance features.
+- Prove competitive or approximation ratios that degrade gracefully with prediction error.
+
+## Steps
+
+1. Identify the algorithmic decision (caching, indexing, search, or routing) to enhance and collect instance features.
+2. Train a lightweight predictor on historical instances to provide advice for that decision.
+3. Design the algorithm to incorporate predictions while bounding worst-case cost when predictions are poor.
+4. Benchmark the learning-augmented method against the classical worst-case baseline on held-out distributions.
+5. Validate on adversarial or pathological inputs and tune the reliance on predictions.
+6. Deploy as a drop-in replacement or wrapper and monitor performance on production traffic.
 
 ## Code pattern
 
@@ -95,7 +112,7 @@ def learned_paging_predict(cache, request):
 1. Implement a learned Bloom filter and compare false-positive rate to a standard Bloom filter.
 2. Train a learned index on integer keys and measure query latency vs. space.
 3. Benchmark a learning-augmented algorithm against the prediction-free worst-case baseline.
-''',
+        ''',
         "references": [
             "https://arxiv.org/abs/2006.09123",
             "https://cacm.acm.org/opinion/algorithms-with-predictions/",
@@ -107,18 +124,27 @@ def learned_paging_predict(cache, request):
     {
         "name": "ai-for-formal-methods",
         "title": "AI for Formal Methods",
-        "description": "Neuro-symbolic verification, LLM-assisted autoformalization, and learned heuristics for theorem provers and model checkers.",
+        "description": "Use machine learning and LLMs to translate informal specifications into formal models and guide theorem provers and model checkers.",
         "devin_body": r'''
 ## When to use
 
 You want to translate informal specifications into formal models, guide proof search, or apply ML to model checking, program verification, and certified systems.
 
-## Key concepts
+## Usage
 
-- **Autoformalization**: converting natural language or code into formal specifications using LLMs.
-- **Neuro-symbolic verification**: combining neural guidance with SAT/SMT/TLA+ and model checkers.
-- **Proof search guidance**: premise selection, tactic prediction, and lemma synthesis.
-- **Invariants and certificates**: using ML to discover loop invariants or safety certificates.
+- Autoformalize natural-language or code specifications into formal logic using LLMs and domain-tuned models.
+- Combine neural guidance with SAT/SMT/TLA+ solvers and model checkers for neuro-symbolic verification.
+- Predict the next proof step, relevant premises, and useful tactics from the current proof state.
+- Discover loop invariants and safety certificates from data and program structure.
+
+## Steps
+
+1. Collect a corpus of informal specifications, code, and corresponding formal models for the target domain.
+2. Train or prompt an LLM to autoformalize specifications and validate outputs with a trusted checker.
+3. Build a premise selector or tactic predictor from a proof corpus and integrate it with the proof assistant.
+4. Run model-checking or verification tasks with learned guidance and compare proof search effort.
+5. Use the system to synthesize invariants or certificates for safety-critical programs.
+6. Iterate with human experts to correct formalizations and maintain soundness guarantees.
 
 ## Code pattern
 
@@ -149,7 +175,7 @@ best = premises[int(np.argmax(scores))]
 1. Formalize a small English specification and check it in a proof assistant.
 2. Train a premise selector on a proof corpus and measure recall of used lemmas.
 3. Compare a model-guided proof search to an unguided baseline on a benchmark.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1007/s10664-025-10729-8",
             "https://doi.org/10.48550/arxiv.2404.09939",
@@ -161,18 +187,27 @@ best = premises[int(np.argmax(scores))]
     {
         "name": "ai-for-program-synthesis",
         "title": "AI for Program Synthesis",
-        "description": "Neural and symbolic program synthesis from examples, sketches, and natural language, including neurosymbolic and LLM-based code generation.",
+        "description": "Generate executable programs from natural-language descriptions or input-output examples for non-expert users and new APIs.",
         "devin_body": r'''
 ## When to use
 
 You want to generate programs from examples, partial sketches, or natural language, or combine symbolic search with neural models for reliable code generation.
 
-## Key concepts
+## Usage
 
-- **Programming by example (PBE)**: synthesize programs consistent with input-output examples.
-- **Neural program synthesis**: seq2seq or transformer models that generate code from specifications.
-- **Neurosymbolic synthesis**: combine symbolic search, constraint solving, and neural priors.
-- **Sketching and partial programs**: fill holes in a user-provided program template.
+- Synthesize programs consistent with input-output examples using programming by example (PBE).
+- Generate code from natural-language specifications or partial sketches with transformer models.
+- Combine symbolic search, constraint solving, and neural priors for reliable synthesis.
+- Fill holes in user-provided program templates while satisfying types and constraints.
+
+## Steps
+
+1. Collect input-output examples, sketches, or natural-language specifications for the target program.
+2. Choose a synthesis approach: enumerative search, constraint solving, LLM generation, or neurosymbolic search.
+3. Train or prompt the model with few-shot examples and constrain output with a grammar or type system.
+4. Filter candidates by executing tests and, where possible, verifying them with a symbolic checker.
+5. Measure pass@k and compare the synthesizer to a human-written or symbolic baseline.
+6. Integrate the synthesis loop into an IDE, API, or code-generation assistant.
 
 ## Code pattern
 
@@ -199,7 +234,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 1. Synthesize a program from a small set of input-output examples and run it on hidden tests.
 2. Compare a neural synthesizer against an enumerative synthesizer on the same benchmark.
 3. Measure pass@k on a program-synthesis dataset (e.g., HumanEval, APPS, SyGuS).
-''',
+        ''',
         "references": [
             "https://www.cs.utexas.edu/~swarat/pubs/ns-handbook-2025.pdf",
             "https://doi.org/10.1117/12.3011627",
@@ -211,18 +246,27 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
     {
         "name": "ai-for-software-verification",
         "title": "AI for Software Verification",
-        "description": "ML for test generation, coverage closure, bug localization, static analysis, and verifying code produced by LLMs.",
+        "description": "Use machine learning to generate tests, localize bugs, and verify code produced by humans or LLMs.",
         "devin_body": r'''
 ## When to use
 
 You want to improve functional verification of software, generate tests, find bugs, or verify code generated by LLMs or human developers.
 
-## Key concepts
+## Usage
 
-- **Fuzzing and test generation**: coverage-guided, learned, and LLM-based fuzzers.
-- **Coverage closure and bug localization**: ML models that predict uncovered branches or likely bug locations.
-- **Static analysis and invariant inference**: learning loop invariants and assertions.
-- **LLM code verification**: checking generated code with type checkers, solvers, and test suites.
+- Generate fuzz tests and coverage-guided test inputs with learned and LLM-based fuzzers.
+- Predict uncovered branches and rank suspicious lines for coverage closure and bug localization.
+- Infer loop invariants, assertions, and static-analysis properties from code and execution traces.
+- Check code generated by LLMs with type checkers, solvers, and test suites.
+
+## Steps
+
+1. Build or collect the target codebase, seed inputs, and an oracle or differential testing harness.
+2. Train or configure an ML-guided fuzzer, bug localizer, or test generator on the target language.
+3. Run the tool to discover new coverage, crashes, or suspicious code regions.
+4. Rank and triage findings with a human reviewer and a static or dynamic analyzer.
+5. Verify LLM-generated code with unit tests, type checkers, and formal or symbolic methods.
+6. Track coverage, false-positive rate, and bug-fix time in the development workflow.
 
 ## Code pattern
 
@@ -256,7 +300,7 @@ def coverage_guided_fuzz(target, seed_inputs: List[bytes], rounds: int = 1000):
 1. Run an ML-guided fuzzer on a small C/Python target and report new coverage.
 2. Train a bug-localization model and evaluate its ranked suspicious lines.
 3. Verify a set of LLM-generated functions with unit tests and a static analyzer.
-''',
+        ''',
         "references": [
             "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1655469/full",
             "https://www.mdpi.com/2079-9292/10/21/2688",
@@ -268,18 +312,27 @@ def coverage_guided_fuzz(target, seed_inputs: List[bytes], rounds: int = 1000):
     {
         "name": "ai-for-type-theory",
         "title": "AI for Type Theory",
-        "description": "ML-guided tactic prediction, premise selection, and synthesis in dependent type theories and proof assistants.",
+        "description": "Use machine learning to predict tactics, select premises, and synthesize terms in dependently typed proof assistants.",
         "devin_body": r'''
 ## When to use
 
 You are working in a dependently typed proof assistant (Coq, Lean, Agda, Idris) and want to automate tactic selection, lemma retrieval, or term synthesis.
 
-## Key concepts
+## Usage
 
-- **Dependent type theory**: Martin-Löf type theory, Calculus of Inductive Constructions, and homotopy/cubical type theory.
-- **Tactic prediction**: train models to predict the next proof step from the proof state.
-- **Premise selection**: rank library lemmas that are likely to be useful for a goal.
-- **Lemma and term synthesis**: generate auxiliary lemmas or terms guided by types.
+- Represent dependent type theories (Martin-Löf, CIC, homotopy/cubical) as features for ML.
+- Predict the next tactic from the current proof state and available hypotheses.
+- Rank library lemmas that are likely to be useful for a given goal.
+- Generate auxiliary lemmas and well-typed terms guided by types and proof context.
+
+## Steps
+
+1. Extract proof-state features, goal types, and tactic histories from a proof assistant corpus.
+2. Train a tactic predictor and evaluate top-1 and top-5 accuracy on held-out proofs.
+3. Build a premise selector that ranks lemmas by relevance and check how often the human-used lemma is top-ranked.
+4. Generate helper lemmas or terms and type-check them in the proof assistant kernel.
+5. Integrate the models into an interactive tactic recommendation system.
+6. Validate that suggestions improve proof length and maintain soundness.
 
 ## Code pattern
 
@@ -309,7 +362,7 @@ print("Next tactic:", predicted_tactic)
 1. Train a tactic predictor on a proof corpus and measure top-1 / top-5 accuracy.
 2. Implement a premise-selection tool and check how often the human-used lemma is ranked first.
 3. Synthesize a simple helper lemma and verify it with the proof assistant.
-''',
+        ''',
         "references": [
             "https://www.danielgratzer.com/papers/type-theory-book.pdf",
             "https://agda.readthedocs.io/en/latest/getting-started/what-is-agda.html",
@@ -321,18 +374,27 @@ print("Next tactic:", predicted_tactic)
     {
         "name": "ai-for-logic",
         "title": "AI for Logic",
-        "description": "Neuro-symbolic reasoning, learning logical rules and constraints, probabilistic logics, and SAT/SMT/ASP guided by ML.",
+        "description": "Use machine learning to combine logical reasoning with neural models, learning rules, constraints, and solver guidance.",
         "devin_body": r'''
 ## When to use
 
 You want to combine logical reasoning with machine learning: learning rules, constraints, or logical representations from data, or using ML to accelerate logic solvers.
 
-## Key concepts
+## Usage
 
-- **Neuro-symbolic AI**: integrating neural networks with symbolic logic and reasoning.
-- **Statistical relational and probabilistic logics**: Markov logic networks, probabilistic soft logic, and probabilistic answer set programming.
-- **Rule and constraint learning**: extract interpretable rules or constraints from data.
-- **Solver guidance**: use learned value functions or heuristics inside SAT/SMT/ASP solvers.
+- Integrate neural networks with symbolic logic for neuro-symbolic reasoning.
+- Learn interpretable rules and constraints from data and logical formulas.
+- Apply probabilistic and statistical relational logics to structured problems.
+- Guide SAT/SMT/ASP solvers with learned value functions and heuristics.
+
+## Steps
+
+1. Collect logical data, truth tables, or structured examples for the target rules or constraints.
+2. Train a rule learner, constraint extractor, or neuro-symbolic model on the data.
+3. Validate learned rules on held-out logical formulas and compare to expert constraints.
+4. Combine the learned heuristic with a SAT/SMT/ASP solver and measure runtime improvements.
+5. Enforce logical constraints as regularizers or post-hoc corrections in the neural model.
+6. Monitor that model predictions respect the specified logical constraints.
 
 ## Code pattern
 
@@ -362,7 +424,7 @@ print(rules)
 1. Learn a Boolean formula from examples and verify it on a held-out truth table.
 2. Combine a learned heuristic with a SAT solver and compare runtimes.
 3. Train a neuro-symbolic model and check that its predictions respect given logical constraints.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1016/j.ijar.2024.109206",
             "https://doi.org/10.48550/arxiv.2403.04017",
@@ -374,18 +436,27 @@ print(rules)
     {
         "name": "ai-for-automated-reasoning",
         "title": "AI for Automated Reasoning",
-        "description": "Learning to guide proof search, premise selection, tactic prediction, and combining LLMs with symbolic reasoners.",
+        "description": "Use machine learning to guide proof search, premise selection, and tactic prediction in theorem provers and proof assistants.",
         "devin_body": r'''
 ## When to use
 
 You are building or using automated theorem provers, SMT solvers, or proof assistants and want to accelerate search with learned guidance.
 
-## Key concepts
+## Usage
 
-- **Proof search guidance**: clause selection, variable ordering, and strategy scheduling.
-- **Premise selection**: predict which axioms or lemmas are relevant to a conjecture.
-- **Tactic prediction in ITPs**: generate the next proof step from the current goal and context.
-- **LLM + symbolic reasoners**: generate candidate proof steps and verify them with a trusted kernel.
+- Guide proof search by selecting clauses, ordering variables, and scheduling strategies.
+- Predict which axioms or lemmas are relevant to a conjecture.
+- Generate the next proof step in an interactive theorem prover from the current goal.
+- Combine LLM-generated proof steps with verification by a trusted symbolic kernel.
+
+## Steps
+
+1. Collect a corpus of conjectures, axioms, and proof traces from an ATP or ITP library.
+2. Train an axiom/premise selector and measure mean reciprocal rank of used premises.
+3. Build a clause or tactic predictor and integrate it into the prover's search loop.
+4. Run the prover with and without learned guidance and compare inferences or proof time.
+5. Use an LLM to suggest proof steps and reject or accept them with a proof checker.
+6. Retrain selectors as the library grows and evaluate on new benchmark problems.
 
 ## Code pattern
 
@@ -418,7 +489,7 @@ print("Relevant axioms:", [axioms[i] for i in indices[0]])
 1. Train an axiom selector and measure mean reciprocal rank of the used axioms.
 2. Run a theorem prover with and without learned clause selection and compare the number of inferences.
 3. Integrate an LLM with a proof checker and report the percentage of accepted proof steps.
-''',
+        ''',
         "references": [
             "https://doi.org/10.48550/arxiv.2403.04017",
             "https://doi.org/10.1561/2200000081",
@@ -430,18 +501,27 @@ print("Relevant axioms:", [axioms[i] for i in indices[0]])
     {
         "name": "ai-for-satisfiability",
         "title": "AI for Satisfiability",
-        "description": "ML-enhanced SAT/SMT/QSAT solvers, end-to-end neural solvers like NeuroSAT, and learned branching and restart heuristics.",
+        "description": "Guide CDCL SAT solver branching and resets with offline neural predictions to solve more competition instances without GPU overhead.",
         "devin_body": r'''
 ## When to use
 
 You want to solve Boolean satisfiability, MaxSAT, QSAT, or SMT problems faster by using machine learning for branching, restarts, or end-to-end search.
 
-## Key concepts
+## Usage
 
-- **CDCL and local search**: conflict-driven clause learning and stochastic local search SAT solvers.
-- **Neural SAT solvers**: end-to-end models such as NeuroSAT that learn to predict satisfiability and assignments.
-- **Hybrid solvers**: NeuroCore-style guidance of CDCL variable activity and restart heuristics.
-- **SMT and QSAT extensions**: learning heuristics for quantified and theory-laden satisfiability.
+- Improve CDCL and local-search SAT solvers with learned branching and restart policies.
+- Build end-to-end neural SAT solvers to predict satisfiability and assignments.
+- Combine neural guidance with CDCL variable activity in hybrid solvers.
+- Learn heuristics for quantified and theory-laden satisfiability problems.
+
+## Steps
+
+1. Curate SAT/SMT/QSAT training instances close to the target problem distribution.
+2. Train a neural model or learned heuristic to predict satisfiability, assignments, or variable activity.
+3. Integrate the learned guidance into a CDCL or local-search solver.
+4. Benchmark the hybrid, pure neural, and classical solvers on the target instance family.
+5. Train on a distribution close to the target and test generalization across domains.
+6. Compare runtimes and solution quality on SAT-COMP or SMT-LIB benchmarks.
 
 ## Code pattern
 
@@ -474,7 +554,7 @@ class MessagePassingSAT(nn.Module):
 1. Train NeuroSAT on random 3-SAT and evaluate on graph-coloring encodings.
 2. Integrate a learned branching heuristic into a CDCL solver and run SAT-COMP benchmarks.
 3. Compare pure neural, hybrid, and classical solvers on a family of problem instances.
-''',
+        ''',
         "references": [
             "https://github.com/dselsam/neurosat",
             "https://arxiv.org/pdf/1802.03685",
@@ -486,18 +566,27 @@ class MessagePassingSAT(nn.Module):
     {
         "name": "ai-for-constraint-programming",
         "title": "AI for Constraint Programming",
-        "description": "ML for constraint learning, search heuristics, model acquisition, and combining CP solvers with neural predictors.",
+        "description": "Use machine learning to learn constraints, heuristics, and models for constraint programming and CP-SAT solvers.",
         "devin_body": r'''
 ## When to use
 
 You are modeling and solving constraint satisfaction and optimization problems and want to learn constraints, heuristics, or entire models from data.
 
-## Key concepts
+## Usage
 
-- **Constraint learning**: infer constraints from examples of feasible/infeasible solutions.
-- **Search heuristics**: learn variable and value ordering decisions for CP solvers.
-- **Model acquisition**: synthesize optimization or CSP models from observations.
-- **Lazy clause generation and CP-SAT**: combining CP and SAT-style reasoning with ML.
+- Learn constraints from examples of feasible and infeasible solutions.
+- Learn variable and value ordering heuristics for CP and CP-SAT solvers.
+- Synthesize optimization or CSP models from observations of behavior.
+- Combine lazy clause generation and CP-SAT with neural predictors.
+
+## Steps
+
+1. Gather labeled examples of feasible, infeasible, or optimal solutions for the target problem.
+2. Train a constraint learner or heuristic predictor from the example set.
+3. Combine learned constraints with expert-written constraints for safety.
+4. Integrate the learned heuristic into a CP or CP-SAT solver and compare search nodes.
+5. Acquire a candidate CP model from data and validate it on an independent test set.
+6. Benchmark against default CP solver strategies and tune with active learning.
 
 ## Code pattern
 
@@ -532,7 +621,7 @@ print("Status:", status, "Makespan:", solver.ObjectiveValue())
 1. Learn a set of constraints from feasible/infeasible examples and check solution feasibility.
 2. Train a variable-ordering heuristic and compare search nodes to the default solver.
 3. Acquire a CP model from data and validate it against an independent test set.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1613/jair.1.19533",
             "https://jair.org/index.php/jair/article/download/19533/27252",
@@ -544,18 +633,27 @@ print("Status:", status, "Makespan:", solver.ObjectiveValue())
     {
         "name": "ai-for-discrete-optimization",
         "title": "AI for Discrete Optimization",
-        "description": "Learning-augmented branch-and-bound, primal heuristics, GNNs for combinatorial optimization, and data-driven algorithm configuration.",
+        "description": "Use machine learning to speed up combinatorial optimization through branching, graph neural networks, and data-driven configuration.",
         "devin_body": r'''
 ## When to use
 
 You need to solve combinatorial optimization problems such as scheduling, routing, packing, or integer programming and want to use ML to speed up exact or heuristic solvers.
 
-## Key concepts
+## Usage
 
-- **Branch-and-bound learning**: branching, node selection, cutting planes, and primal heuristics.
-- **Graph neural networks for CO**: encode combinatorial structure as graphs and learn policies.
-- **Imitation and reinforcement learning**: learn construction or improvement heuristics.
-- **Algorithm configuration**: use historical data to tune solver parameters.
+- Learn branching, node selection, and cutting-plane policies for branch-and-bound.
+- Encode combinatorial structure as graphs and train graph neural network policies.
+- Learn construction or improvement heuristics by imitation or reinforcement learning.
+- Tune solver parameters from historical data with algorithm configuration.
+
+## Steps
+
+1. Formulate the combinatorial problem (scheduling, routing, packing, etc.) and collect benchmark instances.
+2. Train a GNN or learned policy for branching, selection, or heuristic construction.
+3. Integrate the learned policy into an exact solver such as SCIP, Gurobi, or CP-SAT.
+4. Compare nodes, runtime, and solution quality to the solver's default strategy.
+5. Use algorithm configuration to tune solver parameters on the instance family.
+6. Evaluate on held-out and out-of-distribution instances to assess robustness.
 
 ## Code pattern
 
@@ -593,7 +691,7 @@ next_node = int(torch.argmax(scores))
 1. Train a GNN branching policy and compare branch-and-bound nodes to SCIP defaults.
 2. Learn a primal heuristic for a routing problem and benchmark against LKH or OR-Tools.
 3. Run algorithm configuration (e.g., SMAC) and compare cross-validated solver runtimes.
-''',
+        ''',
         "references": [
             "https://doi.org/10.1016/j.ejor.2020.07.063",
             "https://doi.org/10.48550/arxiv.2601.10583",
@@ -605,18 +703,27 @@ next_node = int(torch.argmax(scores))
     {
         "name": "ai-for-approximation-algorithms",
         "title": "AI for Approximation Algorithms",
-        "description": "Learning-augmented approximation, learned heuristics for NP-hard maximization and CSPs, and data-driven rounding.",
+        "description": "Use machine learning to improve polynomial-time approximations and rounding for NP-hard problems.",
         "devin_body": r'''
 ## When to use
 
 You want polynomial-time approximate solutions for NP-hard problems and are willing to use ML predictions to improve approximation factors or runtime.
 
-## Key concepts
+## Usage
 
-- **Approximation ratios and hardness**: worst-case guarantees and PTAS/FPTAS.
-- **Learning-augmented approximation**: use predictions to beat classical lower bounds.
-- **CSP and Max-Cut rounding**: learned rounding policies and semidefinite programming relaxations.
-- **Data-driven heuristics**: train fast heuristics that approximate optimal solutions on a distribution.
+- Predict approximate solution values and rounding decisions for NP-hard maximization and CSPs.
+- Use learning-augmented predictions to improve average-case approximation factors.
+- Learn fast heuristics that approximate optimal solutions on typical instances.
+- Build convex relaxations (LP/SDP) as scaffolds for learned rounding policies.
+
+## Steps
+
+1. Choose an NP-hard problem and generate training instances with exact or relaxed labels.
+2. Train a regressor or policy to predict objective values or rounding probabilities.
+3. Combine the learned predictions with an LP/SDP relaxation or greedy algorithm.
+4. Empirically verify approximation ratios on instance families and compare to classical algorithms.
+5. Evaluate on out-of-distribution instances and certify average-case guarantees.
+6. Deploy the fast approximation inside an optimization or decision pipeline.
 
 ## Code pattern
 
@@ -644,7 +751,7 @@ print("Predicted value:", approx.predict([[0.4, 0.3, 0.7]]))
 1. Solve small Max-Cut instances exactly and compare a learned rounding policy to random rounding.
 2. Prove or empirically verify an approximation ratio on a family of instances.
 3. Benchmark a learned approximation heuristic against a classical constant-factor algorithm.
-''',
+        ''',
         "references": [
             "https://proceedings.neurips.cc/paper_files/paper/2024/file/2db08b94565c0d582cc53de6cee5fd47-Paper-Conference.pdf",
             "https://doi.org/10.1016/j.ejor.2020.07.063",

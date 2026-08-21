@@ -2,19 +2,28 @@
 
 ## Description
 
-Designing knowledge architectures, taxonomies, ontologies, and agent-facing knowledge layers for organizations.
+Build knowledge architectures, taxonomies, ontologies and agent-facing knowledge layers that help humans and AI navigate organizational information.
 
 ## When to use
 
 You are building a knowledge base, wiki, documentation site, knowledge graph, or agent-facing memory system for a team or organization.
 
-## Key concepts
+## Usage
 
-- **Knowledge architecture**: structure content so both humans and AI agents can navigate it.
-- **Taxonomies and ontologies**: define concepts, relations, and inference rules for a domain.
-- **Knowledge graphs**: connect entities and facts for search, reasoning, and recommendation.
-- **RAG vs persistent knowledge layers**: choose between retrieval at query time and curated, versioned knowledge stores.
-- **Knowledge-as-code**: version-control knowledge in Markdown, YAML, or structured schemas.
+- **Structure content so both humans and AI agents can navigate it.**
+- **Define concepts, relations, and inference rules for a domain.**
+- **Connect entities and facts for search, reasoning, and recommendation.**
+- **Choose between retrieval at query time and curated, versioned knowledge stores.**
+- **Version-control knowledge in Markdown, YAML, or structured schemas.**
+
+## Steps
+
+1. Elicit the questions users and agents need to answer and inventory existing knowledge sources.
+2. Define a schema, taxonomy, or ontology with concepts, relations, and source attribution.
+3. Extract entities and relationships from documents and curate them with human reviewers.
+4. Build a versioned knowledge graph or persistent knowledge layer and link it to RAG or agent tools.
+5. Expose the knowledge through both human-readable pages and machine-readable APIs or MCP interfaces.
+6. Monitor freshness, coverage, and retrieval quality against representative queries and a reference set.
 
 ## Code pattern
 

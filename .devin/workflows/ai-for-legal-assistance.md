@@ -1,6 +1,6 @@
 # /ai-for-legal-assistance
 
-Legal intake, contract review, plain-language document summarization, form filling, and accessible legal triage for non-experts.
+Use NLP to triage legal questions, summarize contracts, flag risky clauses, and help non-experts fill forms and find the right jurisdiction.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-cognitive-science
 
-Computational models of perception, memory, language, reasoning, and human-like cognition, bridging AI and psychological theory.
+Use AI to build or evaluate computational models of human cognition, compare AI behavior to human data, or use AI as a model organism for cognitive theory.
 
 ## Trigger
 

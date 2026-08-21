@@ -2,18 +2,26 @@
 
 ## Description
 
-ML for nanoparticle design, nanomaterial discovery, nano-architectonics, nanoscale imaging, and nanomanufacturing optimization.
+Use machine learning to design nanoparticles, predict nanoscale properties, and optimize synthesis and imaging workflows.
 
 ## When to use
 
 You are designing nanoparticles, predicting nanoscale properties, or optimizing synthesis and fabrication processes.
 
-## Key concepts
+## Usage
 
-- **Descriptors for nanomaterials**: composition, size, shape, surface ligands, and synthesis conditions.
-- **Nano-architectonics**: bottom-up assembly and self-organization.
-- **High-throughput imaging**: electron microscopy and scanning-probe segmentation.
-- **Active learning and Bayesian optimization**: sparse, expensive experiments.
+- Predict plasmonic, catalytic, or mechanical properties from composition and morphology descriptors.
+- Discover multimetallic nanoparticle compositions with active learning and Bayesian optimization.
+- Segment and quantify nanoparticles in electron microscopy images.
+- Optimize synthesis recipes and self-assembly conditions.
+
+## Steps
+
+1. Assemble descriptors for composition, size, shape, surface ligands, and synthesis conditions.
+2. Curate property labels from experiments or simulations.
+3. Train a small-data regression or segmentation model with physics-aware features.
+4. Validate against electron microscopy, XRD, or optical spectroscopy.
+5. Use the model to propose and iterate new syntheses via Bayesian optimization.
 
 ## Code pattern
 

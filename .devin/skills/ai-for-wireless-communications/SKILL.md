@@ -2,19 +2,27 @@
 
 ## Description
 
-ML for channel estimation, modulation recognition, MIMO, spectrum sensing, and end-to-end physical-layer design.
+Estimate channels, classify signals, and optimize MIMO and waveform design.
 
 ## When to use
 
 You are applying ML to physical-layer and MAC-layer wireless problems such as channel estimation, modulation recognition, MIMO, and spectrum sensing.
 
-## Key concepts
+## Usage
 
-- **End-to-end and modular ML for PHY**: autoencoders, GNNs, and learned channel codes.
-- **Channel estimation and prediction**: LSTMs, transformers, and Gaussian processes.
-- **Modulation and signal classification**: CNNs on IQ samples and spectrograms.
-- **MIMO and beamforming**: hybrid precoding with learned analog/digital codebooks.
-- **Spectrum sensing and dynamic spectrum access**: detect and exploit spectrum holes.
+- Classify modulation and detect signals with SigKit.
+- Estimate MIMO-OFDM channels with diffusion or deep learning.
+- Optimize beamforming and precoding.
+- Detect anomalies and interference in RF data.
+- Build over-the-air datasets with GNU Radio.
+
+## Steps
+
+1. Collect IQ samples, channel measurements, or SDR data.
+2. Engineer RF features and impairments.
+3. Train modulation, channel, or waveform models.
+4. Validate over-the-air or with simulated channels.
+5. Deploy on SDR or baseband platforms.
 
 ## Code pattern
 

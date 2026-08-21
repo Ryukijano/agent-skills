@@ -1,6 +1,6 @@
 # /ai-for-nutrition
 
-Machine learning and generative AI for personalized nutrition, dietary assessment, meal planning, food recognition, and nutrition-health modeling.
+Predict personal metabolic responses and automate dietary assessment to deliver personalized nutrition and meal planning.
 
 ## Trigger
 

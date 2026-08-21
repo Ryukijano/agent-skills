@@ -1,6 +1,6 @@
 # /ai-for-cosmetics
 
-AI for personalized skincare, formulation optimization, shade matching, safety/toxicity prediction, and consumer insight.
+Use AI for Cosmetics to analyze skin, personalize products, match shades and predict tolerability.
 
 ## Trigger
 

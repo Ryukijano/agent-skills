@@ -1,6 +1,6 @@
 # /ai-for-seismology
 
-Machine learning for earthquake detection, phase picking, denoising, and seismic signal classification.
+Use deep-learning models to detect, pick, classify, and denoise seismic events from continuous waveform data for earthquake monitoring and catalog building.
 
 ## Trigger
 

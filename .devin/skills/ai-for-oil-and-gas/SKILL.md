@@ -2,19 +2,30 @@
 
 ## Description
 
-AI for seismic interpretation, reservoir characterization, production forecasting, and predictive maintenance in energy operations.
+Use AI for Oil and Gas to interpret seismic and well logs, characterize reservoirs and forecast production.
 
 ## When to use
 
 You are interpreting seismic and well-log data, characterizing reservoirs, forecasting production, or monitoring surface facilities and need data-driven or physics-aware models.
 
-## Key concepts
 
-- **Physics-informed neural networks (PINNs)**: embed reservoir flow equations for consistent simulation and history matching.
-- **Computer vision for core and thin-section analysis**: automatic mineralogy, pore classification, and fracture detection.
+## Usage
+
+
+- **Physics-informed neural networks (PINNs)**: Embed reservoir flow equations for consistent simulation and history matching.
+- **Computer vision for core and thin-section analysis**: Automatic mineralogy, pore classification, and fracture detection.
 - **Seismic facies and fault interpretation**: CNN and transformer models for structural interpretation.
 - **Production forecasting**: LSTM, N-BEATS, and temporal fusion models for decline and well performance.
-- **NLP for drilling and completion reports**: extract nonproductive time, lessons learned, and risk events.
+- **NLP for drilling and completion reports**: Extract nonproductive time, lessons learned, and risk events.
+
+## Steps
+
+1. Collect and prepare seismic, well-log, production and completion data.
+2. Interpret seismic and well-log data.
+3. Characterize reservoirs.
+4. Forecast production.
+5. Validate by forecasting monthly oil rate on a blind well with MAPE below 15%.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -35,12 +46,14 @@ class ProductionLSTM(nn.Module):
 model = ProductionLSTM()
 ```
 
+
 ## Tuning notes
 
 - Normalize rates, pressures, and temperatures; handle irregular sampling with interpolation or neural ODEs.
 - Combine first-principles constraints (mass balance, Darcy flow) for better generalization across wells.
 - Use transfer learning from analog reservoirs when target data are limited.
 - Validate forecasts against decline-curve and material-balance baselines.
+
 
 ## Verification
 

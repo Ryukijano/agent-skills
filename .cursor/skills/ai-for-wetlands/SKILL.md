@@ -2,18 +2,27 @@
 
 ## Description
 
-Wetland mapping, inundation dynamics, cover-type classification, and hydrological trend monitoring from satellite time series.
+Use AI to map wetland extent, tracking seasonal inundation, classify cover types, or detect hydrological change.
 
 ## When to use
 
 You are mapping wetland extent, tracking seasonal inundation, classifying cover types, or detecting hydrological change.
 
-## Key concepts
+## Usage
 
-- **Wetland extent and dynamics**: MNDWI, NDWI, Sentinel-1/2 time series.
-- **Cover-type classification**: open water, aquatic vegetation, turbid water, moist soil.
-- **Flood-pulse monitoring**: intra- and inter-annual inundation patterns.
-- **Global wetland models**: Swamp-AI, WetlandMapper, GEE-based workflows.
+- Stack Sentinel-1/2 and LiDAR time series.
+- Map wetland extent with MNDWI/NDWI.
+- Classify cover types (open water, vegetation, moist soil).
+- Monitor intra- and inter-annual inundation.
+
+## Steps
+
+1. Stack Sentinel-1/2 and LiDAR time series.
+2. Map wetland extent with MNDWI/NDWI.
+3. Classify cover types (open water, vegetation, moist soil).
+4. Monitor intra- and inter-annual inundation.
+5. Validate against field surveys and gauged water levels.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-rural-health
 
-AI-driven diagnostics, telemedicine, rural health equity, and resource allocation for underserved and remote populations.
+Deliver mobile AI-assisted diabetic retinopathy and cardiac screening to remote communities with limited specialist access.
 
 ## Trigger
 

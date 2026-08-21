@@ -2,19 +2,28 @@
 
 ## Description
 
-Legal document analysis, case law retrieval, contract review, and legal reasoning benchmarks.
+Use NLP and retrieval systems to analyze contracts, retrieve case law, review clauses, and answer legal questions with verifiable sources.
 
 ## When to use
 
 You are processing contracts, statutes, case law, or legal queries with NLP.
 
-## Key concepts
+## Usage
 
-- **Legal NLP**: NER, classification, summarization, question answering.
-- **Case law retrieval**: dense and sparse retrieval over court opinions.
-- **Contract review**: clause extraction, risk flagging, comparison.
-- **Benchmarks**: LegalBench, COLIEE, Law School Admission Test tasks.
-- **Hallucination**: citations and claims must be verifiable.
+- Classify, summarize, and extract clauses from contracts, statutes, and court opinions.
+- Retrieve and synthesize case law, statutes, and regulations across jurisdictions with dense and sparse retrieval.
+- Compare contracts against playbooks to flag risks, obligations, and deviations.
+- Power legal research assistants that provide structured memos with verified citations.
+- Benchmark legal reasoning on LegalBench, COLIEE, and jurisdiction-specific tasks.
+
+## Steps
+
+1. Ingest and parse legal documents (contracts, briefs, statutes, case law) into structured, retrievable chunks.
+2. Build or fine-tune a legal-domain embedding or language model for classification, extraction, and summarization.
+3. Implement retrieval over authoritative sources (case law, statutes, firm knowledge bases) with citation tracking.
+4. Run contract review by comparing clauses to a playbook and scoring risk or missing provisions.
+5. Generate research memos or answers that include verified citations and flag outdated or overruled authorities.
+6. Validate outputs with legal experts, measure accuracy against annotations, and maintain auditability.
 
 ## Code pattern
 

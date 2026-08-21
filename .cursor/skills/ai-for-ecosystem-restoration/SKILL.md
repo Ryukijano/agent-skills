@@ -2,18 +2,27 @@
 
 ## Description
 
-Monitoring rewilding, forest recovery, wetland restoration, and habitat reconstruction using remote sensing and biodiversity indicators.
+Use AI to measure restoration success, track rewilding progress, or prioritize interventions for degraded ecosystems.
 
 ## When to use
 
 You need to measure restoration success, track rewilding progress, or prioritize interventions for degraded ecosystems.
 
-## Key concepts
+## Usage
 
-- **Restoration trajectories**: vegetation structure, species reassembly, and functional recovery.
-- **Remote sensing indices**: NDVI, NDWI, LiDAR canopy structure, and multispectral time series.
-- **Acoustic and camera-trap recovery metrics**: automated biodiversity indicators.
-- **Treatment effectiveness**: compare restored, reference, and degraded sites.
+- Define reference conditions and restoration baselines.
+- Stack remote-sensing indices (NDVI, NDWI, LiDAR) over time.
+- Track vegetation structure and species reassembly.
+- Compare restored, reference, and degraded sites.
+
+## Steps
+
+1. Define reference conditions and restoration baselines.
+2. Stack remote-sensing indices (NDVI, NDWI, LiDAR) over time.
+3. Track vegetation structure and species reassembly.
+4. Compare restored, reference, and degraded sites.
+5. Validate recovery with field-measured biodiversity.
+6. Package results as FAIR digital twins and validate against independent field surveys and reference datasets (BioDT-style).
 
 ## Code pattern
 

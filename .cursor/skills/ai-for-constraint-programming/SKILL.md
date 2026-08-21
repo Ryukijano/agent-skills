@@ -2,18 +2,27 @@
 
 ## Description
 
-ML for constraint learning, search heuristics, model acquisition, and combining CP solvers with neural predictors.
+Use machine learning to learn constraints, heuristics, and models for constraint programming and CP-SAT solvers.
 
 ## When to use
 
 You are modeling and solving constraint satisfaction and optimization problems and want to learn constraints, heuristics, or entire models from data.
 
-## Key concepts
+## Usage
 
-- **Constraint learning**: infer constraints from examples of feasible/infeasible solutions.
-- **Search heuristics**: learn variable and value ordering decisions for CP solvers.
-- **Model acquisition**: synthesize optimization or CSP models from observations.
-- **Lazy clause generation and CP-SAT**: combining CP and SAT-style reasoning with ML.
+- Learn constraints from examples of feasible and infeasible solutions.
+- Learn variable and value ordering heuristics for CP and CP-SAT solvers.
+- Synthesize optimization or CSP models from observations of behavior.
+- Combine lazy clause generation and CP-SAT with neural predictors.
+
+## Steps
+
+1. Gather labeled examples of feasible, infeasible, or optimal solutions for the target problem.
+2. Train a constraint learner or heuristic predictor from the example set.
+3. Combine learned constraints with expert-written constraints for safety.
+4. Integrate the learned heuristic into a CP or CP-SAT solver and compare search nodes.
+5. Acquire a candidate CP model from data and validate it on an independent test set.
+6. Benchmark against default CP solver strategies and tune with active learning.
 
 ## Code pattern
 

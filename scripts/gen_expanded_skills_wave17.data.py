@@ -2,19 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-materials-characterization",
         "title": "AI for Materials Characterization",
-        "description": "Machine learning for automated interpretation of microscopy, spectroscopy, diffraction, and tomography data in materials science.",
+        "description": "Segment and quantify concrete and cement microstructure from X-ray and confocal microscopy to assess freeze-thaw durability.",
         "devin_body": r'''
 ## When to use
 
 You need to extract quantitative structure-property insights from microscopy images, spectra, diffraction patterns, or hyperspectral characterization data at scale.
 
-## Key concepts
+## Usage
 
-- **Image-driven microstructure analysis**: semantic segmentation, defect detection, and phase identification in SEM/TEM/EBSD images.
-- **Spectroscopy and diffraction ML**: automated peak fitting, phase identification from XRD, and composition inference from XPS/EDS.
-- **4D-STEM and electron tomography**: ML reconstruction, denoising, and compressed sensing for high-dimensional data.
-- **Multimodal data fusion**: combine imaging, spectroscopy, and simulation for robust property predictions.
-- **Self-driving laboratories**: closed-loop control of characterization instruments guided by real-time inference.
+- Segment microstructures and detect defects in SEM, TEM, EBSD, and AFM images.
+- Automate phase identification, peak fitting, and composition inference from XRD, XPS, EDS, and spectroscopy data.
+- Reconstruct, denoise, and compress 4D-STEM and electron tomography datasets.
+- Fuse imaging, spectroscopy, and simulation data to predict material properties in self-driving laboratories.
+
+## Steps
+
+1. Ingest microscopy images, spectra, diffraction patterns, or 4D-STEM/tomography data for the target material.
+2. Preprocess data (denoise, normalize, align, calibrate) and annotate a representative set with expert labels.
+3. Train a segmentation, classification, or regression model for the target task (defects, phases, peaks, composition).
+4. Validate with held-out data, comparing IoU, accuracy, or error to expert annotations and reference simulations.
+5. Apply the model in a high-throughput or self-driving lab loop to guide further experiments.
+6. Use interpretability tools (Grad-CAM, SHAP) to connect predictions back to physical microstructural features.
 
 ## Code pattern
 
@@ -43,26 +51,34 @@ output = model(img_tensor)["out"]
             "https://doi.org/10.1186/s42252-025-00073-x",
             "https://doi.org/10.1007/s11837-021-04805-9",
             "https://pubs.rsc.org/en/content/articlelanding/2022/nh/d2nh00377e",
-            "https://par.nsf.gov/biblio/10621556-materials-characterization-can-artificial-intelligence-used-address-reproducibility-challenges",
+            "https://doi.org/10.1116/6.0002809",
             "https://doi.org/10.31695/ijasre.2025.11.3",
         ],
     },
     {
         "name": "ai-for-ceramics",
         "title": "AI for Ceramics",
-        "description": "Data-driven design, processing optimization, and microstructure-property prediction for ceramic and refractory materials.",
+        "description": "Use data-driven models to design ceramics, optimize sintering and additive processes, and predict microstructure-property relationships.",
         "devin_body": r'''
 ## When to use
 
 You are designing or processing functional, structural, or refractory ceramics and want to predict phase stability, sintering behavior, or mechanical/dielectric properties from composition and process parameters.
 
-## Key concepts
+## Usage
 
-- **High-entropy and functional ceramics**: composition design for piezoelectric, dielectric, thermal-barrier, and structural ceramics.
-- **Sintering and process optimization**: ML models for densification, grain growth, and shrinkage as a function of time, temperature, and atmosphere.
-- **Additive manufacturing of ceramics**: direct ink writing and binder jetting parameter optimization, defect detection, and print-path planning.
-- **Microstructure-property mapping**: computer-vision analysis of ceramic micrographs and property prediction.
-- **Digital twins and physics-informed ML**: integrate CALPHAD/DFT with data-driven models for constrained optimization.
+- Design piezoelectric, dielectric, thermal-barrier, and structural ceramics from composition descriptors.
+- Predict and optimize sintering densification, grain growth, and shrinkage with process parameters.
+- Optimize additive manufacturing parameters (direct ink writing, binder jetting) and detect defects.
+- Map microstructure to mechanical/dielectric properties using image analysis and multi-fidelity models.
+
+## Steps
+
+1. Collect composition, processing (temperature, time, atmosphere), microstructure, and property data.
+2. Encode composition with element fractions or thermodynamic descriptors and split data by chemistry/process.
+3. Train models to predict phase stability, sintering behavior, or properties from composition and process inputs.
+4. Use Bayesian optimization or active learning to optimize firing profiles and additive-manufacturing settings.
+5. Segment microstructure images and correlate features with measured properties.
+6. Validate the best recipes with new synthesis runs and compare to CALPHAD/DFT or experimental baselines.
 
 ## Code pattern
 
@@ -92,25 +108,33 @@ model = GradientBoostingRegressor().fit(X, y)
             "https://doi.org/10.1111/ijac.70195",
             "https://doi.org/10.1016/j.jeurceramsoc.2026.118426",
             "https://osf.io/d8bk9",
-            "https://ijsrmt.com/index.php/ijsrmt/article/view/1033",
+            "https://doi.org/10.1038/s41598-025-12011-9",
         ],
     },
     {
         "name": "ai-for-polymers",
         "title": "AI for Polymers",
-        "description": "Machine learning for polymer property prediction, generative design, process optimization, and structure representation.",
+        "description": "Use ML to predict polymer properties, generate novel structures, and optimize process-structure-property relationships for sustainable materials.",
         "devin_body": r'''
 ## When to use
 
 You are discovering or optimizing polymeric materials for mechanical, thermal, electronic, or sustainable applications and need to navigate the vast polymer chemical and morphological space.
 
-## Key concepts
+## Usage
 
-- **Polymer representations**: SMILES, BigSMILES, fingerprints, graph neural networks, and polyBERT-style sequence embeddings.
-- **Property prediction**: glass transition, viscosity, modulus, permeability, and degradation from structure.
-- **Generative and inverse design**: VAEs, GANs, diffusion models, and reinforcement learning for novel polymer structures.
-- **Process-structure-property relationships**: linking synthesis conditions, molecular weight, and morphology to performance.
-- **Sustainable and recyclable polymers**: ML-guided biodegradability, upcycling, and circular material design.
+- Represent polymers with SMILES, BigSMILES, fingerprints, graph neural networks, or polyBERT-style embeddings.
+- Predict glass transition, viscosity, modulus, permeability, and degradation from structure.
+- Generate novel polymer structures with VAEs, GANs, diffusion models, or reinforcement learning.
+- Link synthesis, molecular weight, and morphology to performance for sustainable and recyclable design.
+
+## Steps
+
+1. Curate polymer structures and property data, choosing repeat-unit, oligomer, or bulk representations as appropriate.
+2. Train property-prediction models for target properties (Tg, modulus, permeability, bandgap) with transfer learning.
+3. Generate candidate polymers using a generative model and filter for synthetic accessibility and target property windows.
+4. Incorporate process, molecular weight, crystallinity, and polydispersity descriptors into structure-property models.
+5. Evaluate candidates for biodegradability, recyclability, or circularity with sustainability scoring.
+6. Validate top candidates by synthesis and measurement, and retrain the models with new data.
 
 ## Code pattern
 
@@ -145,19 +169,27 @@ emb = model(**inputs).pooler_output
     {
         "name": "ai-for-metals",
         "title": "AI for Metals and Alloys",
-        "description": "Machine learning for alloy design, phase stability, mechanical properties, process optimization, and microstructure-property mapping.",
+        "description": "Use ML to design alloys, predict phase stability and properties, quantify microstructure, and optimize metal processing and additive manufacturing.",
         "devin_body": r'''
 ## When to use
 
 You are designing new alloys or optimizing metal processing and need to predict phase stability, mechanical behavior, corrosion resistance, or manufacturability from composition and processing history.
 
-## Key concepts
+## Usage
 
-- **Alloy design and property prediction**: composition-process-microstructure-property models for steels, aluminum, magnesium, titanium, and high-entropy alloys.
-- **Phase diagrams and CALPHAD-ML hybrids**: integrate thermodynamic databases with ML for phase stability and transformation kinetics.
-- **Microstructure quantification**: grain size, texture, precipitate distributions, and phase fractions from EBSD/SEM images.
-- **High-entropy alloys (HEAs) and metallic glasses**: ML-driven search for solid solutions, single-phase regions, and glass-forming ability.
-- **Additive manufacturing and processing**: porosity, crack susceptibility, and heat-treatment optimization.
+- Predict composition-process-microstructure-property relationships for steels, aluminum, titanium, magnesium, and HEAs.
+- Combine CALPHAD thermodynamics with ML for phase stability and transformation kinetics.
+- Quantify microstructure (grain size, texture, precipitates, phase fractions) from EBSD/SEM images.
+- Optimize additive manufacturing, heat treatment, and processing parameters for target properties.
+
+## Steps
+
+1. Collect composition, processing, microstructure, and property data for the alloy class of interest.
+2. Encode composition with physically meaningful descriptors and train models for target properties or phase stability.
+3. Segment and quantify microstructure images to extract grain, precipitate, and texture features.
+4. Run CALPHAD-ML hybrids or phase-stability classifiers and validate against DFT or experiments.
+5. Optimize processing (heat treatment, AM parameters, rolling) with Bayesian or active-learning methods.
+6. Validate the best candidates with mechanical, corrosion, or creep tests and compare to known alloy baselines.
 
 ## Code pattern
 
@@ -193,19 +225,27 @@ model = RandomForestRegressor().fit(list(X), y)
     {
         "name": "ai-for-semiconductors",
         "title": "AI for Semiconductors",
-        "description": "Machine learning for semiconductor materials discovery, bandgap engineering, defect analysis, and fabrication process optimization.",
+        "description": "Apply ML to discover semiconductors, engineer bandgaps and defects, and optimize fabrication and layout processes.",
         "devin_body": r'''
 ## When to use
 
 You are searching for new semiconductor compounds, optimizing doping or growth, or building surrogate models for electronic-structure and fabrication parameters.
 
-## Key concepts
+## Usage
 
-- **Bandgap and carrier-property prediction**: ML models trained on DFT and experimental data for inorganic and organic semiconductors.
-- **Defect and yield engineering**: wafer-level defect classification, failure prediction, and root-cause analysis.
-- **Layout and process optimization**: AI-assisted lithography, etch, deposition, and design-technology co-optimization.
-- **Inverse design with LLMs and GNNs**: large language and graph models for generating candidate semiconductors.
-- **2D and wide-bandgap materials**: discovery of novel 2D semiconductors and power electronics materials.
+- Predict bandgap, carrier properties, and effective mass from DFT and experimental data.
+- Classify wafer defects, predict yield, and perform root-cause analysis.
+- Optimize lithography, etch, deposition, and design-technology co-optimization with ML.
+- Generate candidate 2D and wide-bandgap semiconductors with GNNs or LLMs and validate with DFT.
+
+## Steps
+
+1. Collect DFT, experimental, and fabrication data from public databases (Materials Project, AFLOW) or proprietary sources.
+2. Train property-prediction models for bandgap, effective mass, and carrier properties, using crystal-graph or composition descriptors.
+3. Build defect-classification and yield-prediction models from wafer images and process logs.
+4. Use ML to optimize lithography, etch, deposition, or layout parameters and check against process constraints.
+5. Generate novel semiconductor candidates with inverse-design models and validate the most promising with DFT.
+6. Fabricate and measure top candidates, feeding results back to refine the models.
 
 ## Code pattern
 
@@ -239,19 +279,27 @@ pred = model.predict_structure(Composition("GaAs").get_structure())
     {
         "name": "ai-for-battery-materials",
         "title": "AI for Battery Materials",
-        "description": "Machine learning for cathode, anode, electrolyte, and separator discovery, as well as battery lifetime and charging protocol optimization.",
+        "description": "Use battery informatics, ML potentials, and closed-loop optimization to discover electrode/electrolyte materials and optimize lifetime and fast-charging protocols.",
         "devin_body": r'''
 ## When to use
 
 You are developing or optimizing materials and operating conditions for Li-ion, solid-state, or beyond-Li-ion batteries.
 
-## Key concepts
+## Usage
 
-- **Battery informatics**: data-driven discovery of electrode and electrolyte materials using structural, compositional, and electrochemical descriptors.
-- **Machine learning potentials**: fast atomistic simulation of ion diffusion, interfacial reactions, and degradation.
-- **Lifetime and degradation prediction**: forecasting capacity fade and resistance rise from cycling data.
-- **Fast-charging optimization**: closed-loop, ML-guided protocols that balance cycle life and charge time.
-- **High-throughput screening**: virtual screening of thousands of candidate materials for ionic conductivity, voltage, and stability.
+- Discover cathode, anode, electrolyte, and separator materials with high-throughput screening.
+- Simulate ion diffusion and interfacial reactions with machine-learning potentials.
+- Forecast capacity fade and resistance rise from cycling data.
+- Optimize fast-charging protocols that balance charge time and cycle life.
+
+## Steps
+
+1. Curate structural, compositional, and electrochemical data for battery materials and cycling protocols.
+2. Screen candidates for ionic conductivity, voltage, stability, and capacity using ML models.
+3. Train ML potentials to run fast atomistic simulations of diffusion, interfacial reactions, and degradation.
+4. Build a lifetime-degradation model from cycle data and validate on independent cells.
+5. Use closed-loop or Bayesian optimization to design fast-charging protocols that minimize degradation.
+6. Test top materials and protocols in real cells and update the models with new cycling data.
 
 ## Code pattern
 
@@ -288,19 +336,27 @@ model = RandomForestRegressor().fit(X, y)
     {
         "name": "ai-for-superconductors",
         "title": "AI for Superconductors",
-        "description": "Machine learning for superconductor discovery, critical temperature prediction, electron-phonon modeling, and materials screening.",
+        "description": "Apply ML to discover superconductors, predict critical temperature and electron-phonon coupling, and screen candidates through DFT-integrated pipelines.",
         "devin_body": r'''
 ## When to use
 
 You are searching for new superconducting compounds or trying to predict $T_c$, critical fields, or electron-phonon coupling from crystal and electronic structure.
 
-## Key concepts
+## Usage
 
-- **Critical temperature prediction**: supervised models trained on the SuperCon database and DFT descriptors.
-- **High-throughput screening**: ML filters for electron-phonon coupling, structural stability, and thermodynamic synthesizability.
-- **Equivariant graph neural networks**: structure-aware models that respect crystal symmetries for superconducting properties.
-- **AI-accelerated discovery pipelines**: combine generative models, interatomic potentials, and DFT to propose and validate candidates.
-- **Unconventional and topological superconductivity**: data-driven searches for non-phonon pairing mechanisms and quantum materials.
+- Predict $T_c$ and electron-phonon properties from crystal structure and DFT descriptors.
+- Screen large databases for electron-phonon coupling, stability, and synthesizability.
+- Use equivariant graph neural networks that respect crystal symmetries for superconducting properties.
+- Combine generative models, ML potentials, and DFT in an AI-accelerated discovery pipeline.
+
+## Steps
+
+1. Curate the SuperCon database or DFT-derived electron-phonon data and compute composition/structure descriptors.
+2. Train a classifier or regression model to predict $T_c$ and rank candidates for further study.
+3. Screen databases with ML filters for structural stability, electron-phonon coupling, and synthesizability.
+4. Apply equivariant GNNs to refine predictions using crystal-symmetry-aware representations.
+5. Use generative models and ML potentials to propose novel candidates and relax them with DFT.
+6. Validate the most promising candidates experimentally and report both MAE and true-positive rates.
 
 ## Code pattern
 
@@ -337,19 +393,27 @@ model = GradientBoostingRegressor().fit(X, y)
     {
         "name": "ai-for-catalysis",
         "title": "AI for Catalysis",
-        "description": "Machine learning for catalyst discovery, reaction mechanism elucidation, activity and selectivity prediction, and catalytic process optimization.",
+        "description": "Use catalysis informatics and active learning to discover catalysts, predict activity/selectivity, explore reaction networks, and optimize processes.",
         "devin_body": r'''
 ## When to use
 
 You are designing heterogeneous, homogeneous, or enzymatic catalysts and need to predict activity, selectivity, stability, or optimal reaction conditions from structure and data.
 
-## Key concepts
+## Usage
 
-- **Catalysis informatics**: structured datasets, reaction descriptors, and ML models for catalyst screening.
-- **Adsorption-energy and scaling-relation models**: predict binding energies and use them as microkinetic inputs.
-- **Reaction network exploration**: ML-guided discovery of elementary steps and kinetic rate laws.
-- **Active learning and Bayesian optimization**: efficient experimental campaigns for catalyst synthesis and testing.
-- **Single-atom, electrocatalyst, and photocatalyst design**: data-driven design for energy and sustainable chemistry.
+- Screen catalysts with structured datasets, reaction descriptors, and ML models.
+- Predict adsorption energies and scaling relations as inputs to microkinetic simulations.
+- Explore reaction networks and elementary steps with ML-guided search.
+- Optimize catalyst synthesis and reaction conditions with active learning and Bayesian optimization.
+
+## Steps
+
+1. Curate catalyst-adsorbate datasets, harmonizing units, structures, and reaction conditions.
+2. Compute or collect adsorption-energy, surface, and adsorbate descriptors for the target reaction.
+3. Train ML models to predict activity, selectivity, or binding energy and validate against DFT.
+4. Build microkinetic models using ML-predicted rate constants and compare to measured conversion/selectivity.
+5. Use active learning or Bayesian optimization to choose the next catalyst composition or reaction condition.
+6. Synthesize and test the selected catalysts, then feed results back to refine the models.
 
 ## Code pattern
 
@@ -386,19 +450,27 @@ model = KernelRidge(kernel="rbf").fit(X, y)
     {
         "name": "ai-for-photovoltaics",
         "title": "AI for Photovoltaics",
-        "description": "Machine learning for solar-cell materials discovery, perovskite and organic PV optimization, device engineering, and stability prediction.",
+        "description": "Use ML and high-throughput experimentation to discover solar-cell absorbers, optimize perovskite and organic PV, and predict device performance and stability.",
         "devin_body": r'''
 ## When to use
 
 You are exploring new absorbers, interfaces, or processing conditions for perovskite, organic, silicon, or tandem solar cells.
 
-## Key concepts
+## Usage
 
-- **Materials screening for absorbers**: bandgap, carrier mobility, defect tolerance, and toxicity prediction.
-- **Perovskite composition and process design**: high-throughput experiments, robotic synthesis, and AI-guided optimization.
-- **Organic photovoltaic (OPV) design**: molecular property prediction, non-fullerene acceptor discovery, and device-performance modeling.
-- **Stability and degradation forecasting**: predict long-term performance under light, heat, and humidity.
-- **Tandem and emerging architectures**: bandgap matching and current-matching for multi-junction cells.
+- Screen absorbers for bandgap, carrier mobility, defect tolerance, and toxicity.
+- Optimize perovskite composition and processing with high-throughput experiments and robotic synthesis.
+- Predict molecular and device properties for organic photovoltaics and non-fullerene acceptors.
+- Forecast stability and degradation under light, heat, and humidity for candidate cells.
+
+## Steps
+
+1. Define target application (single-junction, tandem, flexible) and collect material and device datasets.
+2. Train models to predict bandgap, carrier mobility, absorption, and defect tolerance for absorber candidates.
+3. Run high-throughput or robotic experiments to synthesize and characterize perovskite/organic films.
+4. Build a device-performance model that couples material descriptors to measured PCE, FF, and VOC.
+5. Forecast stability under accelerated aging and identify degradation mechanisms.
+6. Validate top candidates with real devices and iterate the model with new experimental results.
 
 ## Code pattern
 
@@ -434,19 +506,27 @@ print(homo_lumo)
     {
         "name": "ai-for-composites",
         "title": "AI for Composites",
-        "description": "Machine learning for composite material design, manufacturing process optimization, defect detection, and multiscale property prediction.",
+        "description": "Apply ML to design composites, optimize manufacturing, detect defects, and predict multiscale mechanical and thermal properties.",
         "devin_body": r'''
 ## When to use
 
 You are engineering fiber-reinforced, polymer-matrix, metal-matrix, or ceramic-matrix composites and need to predict or optimize mechanical, thermal, or processing behavior.
 
-## Key concepts
+## Usage
 
-- **Microstructure-property prediction**: link fiber orientation, volume fraction, void content, and interface properties to stiffness, strength, and toughness.
-- **Defect detection and NDE**: ultrasonic, X-ray, and thermography image analysis for delaminations, voids, and fiber waviness.
-- **Manufacturing process modeling**: resin infusion, automated fiber placement, curing, and consolidation parameter optimization.
-- **Multiscale and surrogate modeling**: homogenization, finite-element surrogates, and data-driven multiscale simulators.
-- **Inverse design of architected composites**: topology optimization and generative design for tailored anisotropic properties.
+- Link microstructure features (fiber orientation, volume fraction, voids) to stiffness, strength, and toughness.
+- Detect delaminations, voids, and fiber waviness from ultrasonic, X-ray, and thermography data.
+- Optimize resin infusion, automated fiber placement, curing, and consolidation parameters.
+- Build multiscale surrogates and inverse-design tools for tailored anisotropic composite properties.
+
+## Steps
+
+1. Collect composite microstructure images, NDE data, manufacturing parameters, and mechanical/thermal test results.
+2. Extract microstructural features and train models to predict stiffness, strength, toughness, or thermal conductivity.
+3. Train defect-detection classifiers/segmenters on NDE images and validate against destructive inspection.
+4. Optimize manufacturing parameters (temperature, pressure, feed rate) using Bayesian or physics-informed methods.
+5. Build multiscale or FE surrogates and use them for rapid design-space exploration.
+6. Validate predicted properties and process settings with mechanical tests and quality inspections.
 
 ## Code pattern
 
@@ -483,19 +563,27 @@ model = RandomForestRegressor().fit(X, y)
     {
         "name": "ai-for-membranes",
         "title": "AI for Membranes",
-        "description": "Machine learning for membrane material design, permeability and selectivity prediction, fouling control, and separation process optimization.",
+        "description": "Design polymer membranes for gas and carbon-capture separations using graph ML to surpass selectivity-permeability upper bounds.",
         "devin_body": r'''
 ## When to use
 
 You are designing polymeric, ceramic, or 2D membranes for gas separation, water treatment, fuel cells, or energy applications.
 
-## Key concepts
+## Usage
 
-- **Membrane property prediction**: permeability, selectivity, fouling resistance, and mechanical/chemical stability from structure.
-- **Polymeric and 2D material screening**: ML-accelerated virtual screening of gas- and ion-selective membranes.
-- **Fouling and process modeling**: predict transmembrane pressure, flux decline, and cleaning schedules.
-- **Explainable AI for transport mechanisms**: identify structural features controlling free volume, pore size, and solubility.
-- **Inverse design and optimization**: generate polymer repeat units or nanopore structures for target separation performance.
+- Predict membrane permeability, selectivity, fouling resistance, and stability from chemical structure.
+- Screen polymeric and 2D materials for gas, ion, or water-selective membranes.
+- Model fouling, flux decline, and cleaning cycles from process data.
+- Generate polymer repeat units or pore structures for target separation performance.
+
+## Steps
+
+1. Collect membrane chemical structures and measured performance data under relevant conditions.
+2. Represent polymers and 2D materials with repeat units, fragments, and topological descriptors.
+3. Train regression models for permeability/selectivity, applying log-transforms for wide-ranging targets.
+4. Use explainable AI to identify structural drivers of free volume, pore size, and solubility.
+5. Run virtual screening or inverse design to propose candidates and validate top performers with synthesis.
+6. Model fouling and flux decline from process data and optimize cleaning and operating schedules.
 
 ## Code pattern
 
@@ -532,19 +620,27 @@ model = GradientBoostingRegressor().fit(X, y)
     {
         "name": "ai-for-corrosion",
         "title": "AI for Corrosion",
-        "description": "Machine learning for corrosion rate prediction, corrosion-resistant alloy design, protective coating optimization, and infrastructure degradation monitoring.",
+        "description": "Use corrosion informatics and ML to predict rates, design alloys and coatings, analyze electrochemical data, and monitor infrastructure degradation.",
         "devin_body": r'''
 ## When to use
 
 You need to predict corrosion rates, identify corrosion-resistant materials, or monitor degradation in pipelines, structures, coatings, or batteries.
 
-## Key concepts
+## Usage
 
-- **Corrosion informatics**: data-driven prediction of corrosion rates and forms (pitting, galvanic, stress corrosion cracking) from environment and material data.
-- **Corrosion-resistant alloy and coating design**: ML-guided composition and surface treatment optimization.
-- **Electrochemical data analysis**: automated interpretation of EIS, polarization, and Tafel measurements.
-- **Time-series and sensor-based monitoring**: predictive maintenance for pipelines, bridges, and offshore structures.
-- **Image-based corrosion detection**: classification and segmentation of rust, cracks, and coating defects from visual and drone imagery.
+- Predict corrosion rates and forms (pitting, galvanic, SCC) from material and environment data.
+- Design corrosion-resistant alloys and coatings with ML-guided composition optimization.
+- Interpret electrochemical data (EIS, polarization, Tafel) with automated models.
+- Monitor infrastructure and coating degradation from time-series sensors and drone imagery.
+
+## Steps
+
+1. Collect corrosion data (material composition, environment, exposure time, test standards, images).
+2. Train regression or classification models to predict corrosion rate and form from environment and material features.
+3. Use ML to interpret EIS and polarization curves and extract Tafel parameters automatically.
+4. Design coatings or alloy compositions with Bayesian optimization and validate with ASTM or electrochemical tests.
+5. Deploy time-series anomaly detection on sensor data from pipelines, bridges, or offshore assets.
+6. Detect rust and coating defects from drone or inspection images and integrate findings into a maintenance dashboard.
 
 ## Code pattern
 
@@ -573,7 +669,7 @@ model = RandomForestRegressor().fit(X, y)
         "references": [
             "https://www.nature.com/articles/s41529-022-00218-4",
             "https://www.degruyterbrill.com/document/doi/10.1515/corrrev-2022-0089/html",
-            "https://ecoconference.kpi.ua/article/download/363309/353696/858709",
+            "https://doi.org/10.1016/j.nxmate.2026.102484",
             "https://doi.org/10.54660/.jfmr.2023.4.1.362-380",
         ],
     },

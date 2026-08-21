@@ -1,6 +1,6 @@
 # /ai-for-sleep
 
-Machine learning for sleep staging, sleep disorder detection, wearable PSG analysis, and sleep health monitoring.
+Automate sleep staging and sleep-disordered-breathing detection from PSG, wearables, and home sleep tests with deep learning.
 
 ## Trigger
 

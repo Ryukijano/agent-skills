@@ -2,7 +2,7 @@
 
 ## Description
 
-AI and LLMs for systematic review automation, risk-of-bias assessment, evidence mapping, and trustworthy synthesis of research findings.
+Synthesize heterogeneous evidence, assess risk of bias, and generate decision-ready summaries.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You need to synthesize a body of literature, produce a systematic review, eviden
 
 ## Usage
 
-- **Automated screening and extraction**: speed up systematic review production.
-- **Risk-of-bias and quality assessment**: flag concerns and support appraisal.
-- **Evidence maps and gap analysis**: categorize studies and identify research gaps.
-- **Synthesis and manuscript support**: draft plain-language and technical summaries.
+- Automate risk-of-bias assessment with LLMs (ROBINS-I, ROB2).
+- Combine direct and indirect comparisons in network meta-analysis.
+- Generate evidence maps and interactive summaries.
+- Grade certainty with GRADE and robot reviewers.
+- Produce plain-language summaries for guidelines.
 
 ## Steps
 
-1. Define the review question, scope, and search strategy in a registered protocol.
-2. Run the search, deduplicate, and prepare title/abstract and full-text records.
-3. Deploy AI-assisted screening and extraction with independent human checks.
-4. Appraise risk of bias and synthesize findings narratively or quantitatively.
-5. Verify claims against original sources and report AI contributions transparently.
+1. Frame the synthesis question and inclusion criteria.
+2. Extract data, effects, and risk-of-bias judgments.
+3. Choose a synthesis model (pairwise, network, dose-response).
+4. Assess heterogeneity, inconsistency, and certainty.
+5. Summarize findings for clinical and policy audiences.
 
 ## Code pattern
 

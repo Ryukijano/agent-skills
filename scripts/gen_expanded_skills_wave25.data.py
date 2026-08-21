@@ -2,17 +2,25 @@ SKILLS = [
     {
         "name": "ai-for-astronomy",
         "title": "AI for Astronomy",
-        "description": "Machine learning for survey-scale classification, transient detection, galaxy morphology, light-curve analysis, and telescope scheduling.",
+        "description": 'Use machine learning to triage survey alerts, classify celestial transients, and map galaxy morphology from petabyte-scale imaging and time-series data.',
         "devin_body": r'''## When to use
 
 You are analyzing large imaging or time-domain astronomical surveys, classifying galaxies or transients, or prioritizing follow-up observations.
 
-## Key concepts
+## Usage
 
-- **Survey data**: Rubin/LSST, ZTF, TESS, JWST, and Euclid produce petabyte-scale catalogs.
-- **Light curves and images**: time-series classification, anomaly detection, and image segmentation.
-- **Simulation-based inference**: amortized posterior estimation for complex forward models.
-- **Foundation models**: large-scale pre-training on unlabeled spectra or images.
+- Triage LSST/ZTF/TESS alerts for supernovae, kilonovae, and variable stars in near real time.
+- Classify galaxy morphology and estimate photometric redshifts from survey imaging.
+- Detect anomalies in streaming time-domain data to prioritize follow-up observations.
+- Emulate telescope scheduling and target-prioritization functions for survey operations.
+
+## Steps
+
+1. Ingest and calibrate multi-epoch imaging or light-curve data from a survey archive.
+2. Extract physics-aware features (period, amplitude, color, host-galaxy offset) or train deep embeddings.
+3. Train a classifier or anomaly detector and calibrate probabilities under class imbalance.
+4. Validate on a held-out field and compare predictions to a trusted reference catalog.
+5. Deploy the model into the alert broker to route high-priority targets to spectroscopic follow-up.
 
 ## Code pattern
 
@@ -51,17 +59,25 @@ clf = RandomForestClassifier(n_estimators=200).fit(X, y)
     {
         "name": "ai-for-planetary-science",
         "title": "AI for Planetary Science",
-        "description": "Machine learning for mission data analysis, terrain classification, crater detection, atmospheric retrievals, and exoplanet characterization.",
+        "description": 'Use machine learning to classify planetary terrain, detect craters, retrieve atmospheres, and characterize exoplanets from spacecraft and telescope data.',
         "devin_body": r'''## When to use
 
 You are analyzing spacecraft imagery, spectra, altimetry, or exoplanet light curves for Solar System or exoplanet science.
 
-## Key concepts
+## Usage
 
-- **Orbital imagery**: segmentation and classification of terrain, craters, and geologic units.
-- **Spectral unmixing**: decomposing hyperspectral cubes into endmember compositions.
-- **Radiative transfer**: fast forward models and retrieval of atmospheric properties.
-- **Interior and orbital models**: emulation of planet structure and radial-velocity signals.
+- Segment terrain, craters, and geologic units from orbital imagery and digital elevation models.
+- Unmix hyperspectral cubes to map endmember compositions and surface mineralogy.
+- Retrieve atmospheric properties from exoplanet transmission and emission spectra.
+- Emulate radiative-transfer and interior models to accelerate mission data analysis.
+
+## Steps
+
+1. Co-register and map-project orbital imagery, spectra, or altimetry for the target body.
+2. Train a terrain or crater segmentation model on georeferenced, human-labeled regions.
+3. Build a spectral unmixing or atmospheric retrieval surrogate validated against physics models.
+4. Compare predictions to in-situ spectra or published geologic maps.
+5. Integrate the model into a mission pipeline for target prioritization and downlink planning.
 
 ## Code pattern
 
@@ -95,23 +111,31 @@ clf = RandomForestClassifier(n_estimators=200).fit(X, labels)
             "https://doi.org/10.3847/25c2cfeb.aa328727",
             "https://arxiv.org/abs/2604.09152",
             "https://arxiv.org/abs/2310.17681",
-            "https://ui.adsabs.harvard.edu/abs/2025epsc.conf.1467K/abstract",
+            "https://doi.org/10.5194/epsc-dps2025-1467",
         ],
     },
     {
         "name": "ai-for-astrobiology",
         "title": "AI for Astrobiology",
-        "description": "ML for biosignature detection, life-detection mass spectrometry, extremophile habitats, and mission autonomy in alien environments.",
+        "description": 'Use machine learning to screen mass spectrometry and Raman spectra for biosignatures and guide autonomous life-detection decisions.',
         "devin_body": r'''## When to use
 
 You are searching for biosignatures, analyzing mass spectra, or interpreting environmental sensor data from mission analogs or spaceflight instruments.
 
-## Key concepts
+## Usage
 
-- **Mass spectrometry and Raman**: pattern recognition in complex molecular spectra.
-- **Biosignatures**: molecular, isotopic, and morphological indicators of life.
-- **Habitability indices**: environmental proxies for water, energy, and nutrients.
-- **Autonomous sampling**: closed-loop decision-making for in-situ exploration.
+- Distinguish biotic from abiotic organic signatures in mass-spectrometry and py-GC-MS data.
+- Detect anomalies in Raman and LIMS measurements from Mars-analog and planetary samples.
+- Score habitability from geochemical, mineralogical, and environmental sensor data.
+- Prioritize sampling targets for rover, lander, and sample-return missions.
+
+## Steps
+
+1. Collect mass-spec, Raman, or sensor data with paired abiotic and biotic controls.
+2. Extract peak-level or spectral features that are robust to instrument noise and contamination.
+3. Train a classifier or anomaly detector to separate biotic chemistry from abiotic backgrounds.
+4. Validate against terrestrial analogs and robust abiotic controls.
+5. Deploy to rank samples or trigger autonomous follow-up measurements in the field.
 
 ## Code pattern
 
@@ -147,17 +171,25 @@ scores = model.decision_function(peaks)
     {
         "name": "ai-for-cosmology",
         "title": "AI for Cosmology",
-        "description": "ML for large-scale structure, weak lensing, CMB analysis, 21-cm cosmology, and cosmological parameter inference.",
+        "description": 'Emulate nonlinear structure formation and CMB observables to infer cosmological parameters 50x faster than full N-body simulations.',
         "devin_body": r'''## When to use
 
 You are analyzing cosmic microwave background maps, galaxy surveys, weak-lensing convergence, or 21-cm tomography.
 
-## Key concepts
+## Usage
 
-- **N-body surrogates**: fast approximations of dark-matter structure formation.
-- **Summary statistics**: power spectra, bispectra, peak counts, and Minkowski functionals.
-- **Simulation-based inference**: neural posterior estimation and likelihood-free methods.
-- **Emulation and Gaussian processes**: replacing expensive Boltzmann and radiative-transfer codes.
+- Emulate matter power spectra and N-body simulations with Gaussian processes or neural nets.
+- Compress weak-lensing, galaxy, and 21-cm maps into informative summary statistics.
+- Run simulation-based inference for cosmological parameters.
+- Accelerate expensive Boltzmann and radiative-transfer codes.
+
+## Steps
+
+1. Generate a training set of cosmological parameters and high-fidelity observables from simulations.
+2. Train an emulator for the power spectrum, peak counts, or full-field maps.
+3. Validate the emulator outside the training range and propagate uncertainties into posteriors.
+4. Use the emulator in a neural posterior-estimation or MCMC pipeline.
+5. Compare inferred parameter constraints against two-point-statistics baselines.
 
 ## Code pattern
 
@@ -194,17 +226,25 @@ pred, sigma = gp.predict(params_test, return_std=True)
     {
         "name": "ai-for-particle-physics",
         "title": "AI for Particle Physics",
-        "description": "ML for collider event classification, jet tagging, fast detector simulation, neutrino event reconstruction, and new-physics searches.",
+        "description": 'Use machine learning to tag jets, reconstruct events, accelerate detector simulation, and search for anomalous signatures at colliders and neutrino experiments.',
         "devin_body": r'''## When to use
 
 You are classifying high-energy physics events, accelerating detector simulation, or searching for rare signals in collider or neutrino data.
 
-## Key concepts
+## Usage
 
-- **Jet tagging and event classification**: CNNs, graph networks, and transformers on point clouds.
-- **Fast simulation**: generative models for calorimeter showers and detector response.
-- **Anomaly detection**: model-agnostic searches for new physics.
-- **Lorentz and SE(3) equivariance**: respecting spacetime symmetries in architectures.
+- Classify jets, taus, and heavy-flavor decays from collider event data.
+- Generate fast calorimeter and detector-response simulations.
+- Search for new-physics anomalies in a model-agnostic way.
+- Build Lorentz- and SE(3)-equivariant architectures for particle clouds.
+
+## Steps
+
+1. Preprocess detector events into point clouds or jet images with pile-up masks.
+2. Train a permutation- or equivariant-aware classifier for the target physics object.
+3. Calibrate confidence and test for adversarial robustness.
+4. Build a fast generative surrogate for detector showers and validate against Geant4.
+5. Run an anomaly-detection search on public collider data and report discovery significance.
 
 ## Code pattern
 
@@ -246,17 +286,25 @@ class ParticleNet(nn.Module):
     {
         "name": "ai-for-condensed-matter",
         "title": "AI for Condensed Matter",
-        "description": "Machine learning for phase classification, topological order, Hamiltonian learning, density functional surrogates, and quantum many-body systems.",
+        "description": 'Use machine learning to classify phases, learn interatomic potentials, and emulate quantum many-body and density-functional calculations.',
         "devin_body": r'''## When to use
 
 You are identifying phases and order parameters, learning interatomic potentials, or emulating quantum many-body Hamiltonians.
 
-## Key concepts
+## Usage
 
-- **Order parameters and phase transitions**: supervised classification of spin and electronic configurations.
-- **Topological invariants**: learning hidden order without local order parameters.
-- **ML potentials and DFT surrogates**: neural-network potentials and exchange-correlation functionals.
-- **Quantum many-body systems**: tensor networks, neural quantum states, and variational ansätze.
+- Classify spin, electronic, and structural phases across phase diagrams.
+- Learn neural-network interatomic potentials and DFT exchange-correlation surrogates.
+- Identify topological invariants and hidden order parameters.
+- Emulate quantum many-body systems with neural quantum states and tensor networks.
+
+## Steps
+
+1. Generate or load spin, electronic, and structural configurations with phase labels near critical points.
+2. Design symmetry-respecting descriptors or graph representations for the material.
+3. Train a classifier, neural potential, or DFT surrogate with physics-aware featurization.
+4. Validate generalization at critical points, topological boundaries, and unseen compositions.
+5. Use the model to screen structures or accelerate molecular-dynamics and DFT workflows.
 
 ## Code pattern
 
@@ -292,17 +340,25 @@ clf = MLPClassifier(hidden_layer_sizes=(128, 64), max_iter=500).fit(configs, lab
     {
         "name": "ai-for-optics",
         "title": "AI for Optics",
-        "description": "Computational imaging, lens design, wavefront shaping, optical metrology, and inverse scattering with deep learning.",
+        "description": 'Use deep learning to reconstruct images, retrieve phase, design optical elements, and solve inverse scattering problems in computational imaging.',
         "devin_body": r'''## When to use
 
 You are reconstructing images from indirect optical measurements, designing phase masks, or calibrating complex optical systems.
 
-## Key concepts
+## Usage
 
-- **Inverse problems**: image reconstruction from undersampled or coded measurements.
-- **Wave propagation**: Fourier optics, diffraction, and point-spread functions.
-- **Coded apertures and phase masks**: jointly optimizing hardware and algorithms.
-- **Phase retrieval**: recovering phase from intensity measurements.
+- Reconstruct images from undersampled, coded, or indirect optical measurements.
+- Retrieve phase from intensity-only measurements in microscopy and astronomy.
+- Co-design phase masks, coded apertures, and metalenses with reconstruction networks.
+- Deconvolve images from measured point-spread functions and aberrations.
+
+## Steps
+
+1. Formulate the physical forward model (PSF, diffraction, or scattering operator).
+2. Acquire paired measurements and ground truth, or use self-supervised/physics-informed training.
+3. Train an inversion network or optimize an optical element end-to-end.
+4. Validate on realistic noise, aberrations, and sensor nonlinearities.
+5. Compare reconstruction quality to classical methods such as Gerchberg-Saxton or deconvolution.
 
 ## Code pattern
 
@@ -338,17 +394,25 @@ measurement = convolve2d(gt_image, psf, mode="same", boundary="wrap")
     {
         "name": "ai-for-acoustics",
         "title": "AI for Acoustics",
-        "description": "Machine learning for source localization, room acoustics, bioacoustics, structural health monitoring, and spatial audio.",
+        "description": 'Use machine learning to localize sources, classify bioacoustic events, monitor structural health, and model spatial sound fields.',
         "devin_body": r'''## When to use
 
 You are analyzing acoustic recordings, localizing sources, classifying animal calls, or predicting sound fields.
 
-## Key concepts
+## Usage
 
-- **Spectrograms and mel features**: time-frequency representations for classification.
-- **Beamforming and source separation**: multichannel spatial audio methods.
-- **Room impulse responses**: reverberation and geometry inference.
-- **Physics-informed acoustics**: wave-equation constraints in neural models.
+- Localize sound sources from microphone arrays using TDOA and beamforming features.
+- Classify animal calls, marine mammals, and environmental sound events.
+- Detect cracks and corrosion via acoustic emission and guided-wave analysis.
+- Reconstruct room impulse responses and spatial audio scenes.
+
+## Steps
+
+1. Capture and time-synchronize multichannel audio or acoustic-emission waveforms.
+2. Compute spectrograms, mel features, or TDOA embeddings matched to the signal of interest.
+3. Train a classifier, localizer, or inverse model with physics-informed augmentations.
+4. Validate against ground-truth labels or known source positions.
+5. Deploy for real-time structural monitoring or ecological field surveys.
 
 ## Code pattern
 
@@ -383,17 +447,25 @@ spec_db = librosa.power_to_db(spec, ref=np.max)
     {
         "name": "ai-for-photonics",
         "title": "AI for Photonics",
-        "description": "Deep learning for photonic device inverse design, metasurfaces, optical communications, and nanophotonic simulation surrogates.",
+        "description": 'Use deep learning to inverse-design photonic devices, metasurfaces, and optical communication links while replacing expensive Maxwell solvers.',
         "devin_body": r'''## When to use
 
 You are designing photonic devices, metasurfaces, waveguides, or optimizing optical communication links.
 
-## Key concepts
+## Usage
 
-- **Inverse design**: neural networks and topology optimization for nanophotonic structures.
-- **Metasurfaces and metamaterials**: subwavelength wavefront engineering.
-- **Maxwell solvers and surrogates**: fast replacements for finite-difference time-domain.
-- **Optical communications**: equalization, modulation, and link optimization.
+- Inverse-design metasurfaces, metalenses, and waveguides for target phase or spectral responses.
+- Train neural surrogates to replace FDTD or finite-element simulations.
+- Optimize optical-communication modulators, demultiplexers, and equalizers.
+- Enforce fabrication constraints and minimum feature sizes during design.
+
+## Steps
+
+1. Define the target optical response and a parameterization of the geometry.
+2. Build a forward surrogate by training on FDTD/FEM simulations or experimental data.
+3. Validate the surrogate against full-wave solvers on held-out designs.
+4. Run inverse design or topology optimization with fabrication constraints.
+5. Fabricate and characterize the device, then feed results back to refine the surrogate.
 
 ## Code pattern
 
@@ -435,17 +507,25 @@ class PhotonicSurrogate(nn.Module):
     {
         "name": "ai-for-nanotechnology",
         "title": "AI for Nanotechnology",
-        "description": "ML for nanoparticle design, nanomaterial discovery, nano-architectonics, nanoscale imaging, and nanomanufacturing optimization.",
+        "description": 'Use machine learning to design nanoparticles, predict nanoscale properties, and optimize synthesis and imaging workflows.',
         "devin_body": r'''## When to use
 
 You are designing nanoparticles, predicting nanoscale properties, or optimizing synthesis and fabrication processes.
 
-## Key concepts
+## Usage
 
-- **Descriptors for nanomaterials**: composition, size, shape, surface ligands, and synthesis conditions.
-- **Nano-architectonics**: bottom-up assembly and self-organization.
-- **High-throughput imaging**: electron microscopy and scanning-probe segmentation.
-- **Active learning and Bayesian optimization**: sparse, expensive experiments.
+- Predict plasmonic, catalytic, or mechanical properties from composition and morphology descriptors.
+- Discover multimetallic nanoparticle compositions with active learning and Bayesian optimization.
+- Segment and quantify nanoparticles in electron microscopy images.
+- Optimize synthesis recipes and self-assembly conditions.
+
+## Steps
+
+1. Assemble descriptors for composition, size, shape, surface ligands, and synthesis conditions.
+2. Curate property labels from experiments or simulations.
+3. Train a small-data regression or segmentation model with physics-aware features.
+4. Validate against electron microscopy, XRD, or optical spectroscopy.
+5. Use the model to propose and iterate new syntheses via Bayesian optimization.
 
 ## Code pattern
 
@@ -481,17 +561,25 @@ model = GradientBoostingRegressor().fit(X, y)
     {
         "name": "ai-for-microfluidics",
         "title": "AI for Microfluidics",
-        "description": "Machine learning for droplet generation, lab-on-a-chip control, cell sorting, reaction optimization, and high-throughput screening.",
+        "description": 'Use machine learning to control droplet generation, sort cells, optimize reactions, and automate high-throughput screening on chip.',
         "devin_body": r'''## When to use
 
 You are controlling microfluidic droplets, analyzing high-throughput cell assays, or optimizing on-chip reactions.
 
-## Key concepts
+## Usage
 
-- **Droplet microfluidics**: flow-focusing, generation, and encapsulation.
-- **Image-based sorting and analysis**: high-speed vision for cells and particles.
-- **Reaction optimization**: Bayesian optimization of flow rates and reagents.
-- **Organ-on-a-chip and organoids**: multiscale physiological models.
+- Classify and sort droplets, cells, and particles from high-speed video or sensor signals.
+- Optimize flow rates and reagents for droplet size and encapsulation.
+- Monitor organ-on-chip and single-cell assays in real time.
+- Detect sorting errors and control actuators in closed loop.
+
+## Steps
+
+1. Set up high-speed imaging or impedance/fluorescence sensors synchronized with flow controls.
+2. Extract droplet or cell features and train a real-time classifier or detector.
+3. Validate sorting accuracy and throughput on labeled reference samples.
+4. Optimize flow rates and reagent concentrations with Bayesian or reinforcement-learning control.
+5. Close the loop with actuators and log drift for continuous retraining.
 
 ## Code pattern
 
@@ -529,17 +617,25 @@ diameters = [2 * np.sqrt(cv2.contourArea(c) / np.pi) for c in contours]
     {
         "name": "ai-for-biophysics",
         "title": "AI for Biophysics",
-        "description": "Machine learning for molecular dynamics, free-energy landscapes, protein-ligand kinetics, single-molecule analysis, and membrane systems.",
+        "description": 'Use machine learning to learn molecular dynamics, map free-energy landscapes, and extract kinetics from single-molecule measurements.',
         "devin_body": r'''## When to use
 
 You are analyzing molecular dynamics trajectories, predicting free energies, or extracting kinetics from single-molecule measurements.
 
-## Key concepts
+## Usage
 
-- **Molecular dynamics and force fields**: ML potentials and coarse-grained models.
-- **Free energy and kinetics**: Markov state models, umbrella sampling, and metadynamics.
-- **Coarse graining**: learning low-dimensional representations of biomolecular motion.
-- **Single-molecule biophysics**: hidden Markov models and dwell-time analysis.
+- Learn neural-network potentials and coarse-grained models for biomolecular dynamics.
+- Build Markov state models and free-energy landscapes from MD trajectories.
+- Coarse-grain high-dimensional motion into interpretable collective variables.
+- Segment single-molecule FRET and force-spectroscopy traces.
+
+## Steps
+
+1. Load and align MD trajectories or single-molecule time series.
+2. Choose physically meaningful collective variables or learned embeddings.
+3. Train a neural potential, Markov state model, or hidden-Markov model.
+4. Validate against experimental observables such as NMR, FRET, or cryo-EM.
+5. Use the model to predict rare events, binding kinetics, or free-energy differences.
 
 ## Code pattern
 

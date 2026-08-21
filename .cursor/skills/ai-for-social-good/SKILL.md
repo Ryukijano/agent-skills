@@ -2,19 +2,27 @@
 
 ## Description
 
-Education, poverty alleviation, agriculture, humanitarian response, accessibility, and community-driven AI for underserved populations.
+Optimize vaccination outreach and agricultural advice for low-resource communities to improve health and livelihood outcomes.
 
 ## When to use
 
 You are deploying AI to improve outcomes in education, health, agriculture, humanitarian aid, or economic inclusion, especially in low-resource or marginalized communities.
 
-## Key concepts
+## Usage
 
-- **Education and personalized tutoring**: adaptive learning, chat-based tutoring, and low-bandwidth delivery.
-- **Poverty and development economics**: rigorous impact evaluation, cost-effectiveness, and scalable social programs.
-- **Agriculture and food security**: crop-health monitoring, yield prediction, and extension services for smallholder farmers.
-- **Humanitarian and crisis response**: information triage, needs assessment, and resource matching.
-- **Participatory design and ethics**: co-design with communities, local language support, and harm prevention.
+- Deliver personalized, low-bandwidth tutoring and educational support with adaptive learning systems.
+- Evaluate impact with randomized or quasi-experimental designs and cost-effectiveness analysis.
+- Support smallholder agriculture with crop-health monitoring, yield prediction, and extension chatbots.
+- Triage information, assess needs, and match resources in humanitarian and crisis response.
+
+## Steps
+
+1. Engage affected communities and domain partners to define the problem, outcomes, and ethical constraints.
+2. Co-design a low-cost, low-bandwidth, and accessible AI solution (chatbot, advisory app, monitoring tool).
+3. Collect local data and train or adapt models, ensuring local language and cultural relevance.
+4. Run a pilot with an RCT, A/B test, or quasi-experimental design to measure learning, adoption, or welfare outcomes.
+5. Assess cost-effectiveness, equity, and unintended consequences compared to non-AI alternatives.
+6. Iterate with community feedback, scale responsibly, and monitor for harm and drift.
 
 ## Code pattern
 

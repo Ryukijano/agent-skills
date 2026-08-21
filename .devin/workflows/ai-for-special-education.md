@@ -1,6 +1,6 @@
 # /ai-for-special-education
 
-Assistive technologies, personalized interventions, augmentative and alternative communication, accessibility, and inclusive learning for learners with disabilities.
+Use AI to support learners with disabilities, neurodiversity, or special educational needs through accessible and personalized AI tools.
 
 ## Trigger
 

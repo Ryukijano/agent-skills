@@ -1,6 +1,6 @@
 # /ai-for-ceramics
 
-Data-driven design, processing optimization, and microstructure-property prediction for ceramic and refractory materials.
+Use data-driven models to design ceramics, optimize sintering and additive processes, and predict microstructure-property relationships.
 
 ## Trigger
 

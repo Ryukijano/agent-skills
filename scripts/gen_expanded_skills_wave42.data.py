@@ -2,25 +2,25 @@ SKILLS = [
     {
         "name": "ai-for-civil-engineering",
         "title": "AI for Civil Engineering",
-        "description": "Machine learning for structural health monitoring, geotechnical prediction, transportation systems, water resources, and resilient infrastructure.",
+        "description": "Build predictive models for civil infrastructure, natural hazards, and water resources.",
         "devin_body": r'''## When to use
 
 You are designing, monitoring, or maintaining civil infrastructure such as bridges, buildings, dams, roads, or water systems and want data-driven predictions or inspections.
 
 ## Usage
 
-- **Structural health monitoring (SHM)**: vibration, strain, and vision-based damage detection.
-- **Geotechnical prediction**: soil liquefaction, slope stability, and settlement models.
-- **Transportation and traffic**: flow forecasting, incident detection, and route optimization.
-- **Water resources**: flood, water quality, and demand forecasting.
-- **BIM and digital twins**: as-built vs. design comparison and lifecycle simulation.
+- Monitor bridges and dams with vibration, strain, and drone-vision sensors.
+- Predict soil liquefaction and slope stability from geotechnical logs.
+- Forecast traffic flow and incidents using loop-detector and GPS data.
+- Model flood risk and water quality with SWAT and HEC-RAS.
+- Create digital twins of assets in Autodesk Revit/Navisworks.
 
 ## Steps
 
-1. Collect structural, geotechnical, traffic, or water-resource data and define the prediction target.
-2. Engineer domain features (vibration spectra, image patches, sensor time-series, weather inputs).
-3. Train and validate a model with time-aware or site-aware splits.
-4. Integrate the model with BIM, GIS, or digital-twin dashboards.
+1. Collect structural, geotechnical, traffic, or water data and define the prediction target.
+2. Engineer features from vibration spectra, image patches, or sensor time series.
+3. Train and validate models with time-aware or site-aware splits.
+4. Integrate predictions with BIM, GIS, or digital-twin dashboards.
 5. Monitor and retrain as conditions or codes change.
 
 ## Code pattern
@@ -48,36 +48,31 @@ scores = model.decision_function(X)
 3. Predict concrete compressive strength and compare to lab results.
 
 ''',
-        "references": [
-            "https://doi.org/10.3390/app151910499",
-            "https://doi.org/10.1016/j.kscej.2025.100203",
-            "https://link.springer.com/article/10.1007/s41872-025-00364-z",
-            "https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2022.1007886/full",
-        ],
+        "references": ["https://doi.org/10.3390/app151910499", "https://doi.org/10.1016/j.kscej.2025.100203", "https://link.springer.com/article/10.1007/s41872-025-00364-z", "https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2022.1007886/full"],
     },
     {
         "name": "ai-for-mechanical-engineering",
         "title": "AI for Mechanical Engineering",
-        "description": "AI for mechanical design, predictive maintenance, digital twins, dynamic systems, and manufacturing process optimization.",
+        "description": "Apply AI to design, maintenance, and manufacturing optimization.",
         "devin_body": r'''## When to use
 
 You are designing mechanical components or systems, monitoring rotating machinery, optimizing maintenance, or simulating dynamics and controls.
 
 ## Usage
 
-- **Predictive maintenance and RUL**: vibration and acoustic fault diagnosis, remaining useful life.
-- **Digital twins**: real-time virtual replicas of mechanical assets.
-- **Generative design and topology optimization**: AI-candidate shapes and lightweighting.
-- **System dynamics and control**: physics-informed neural ODEs and RL for control.
-- **Manufacturing process modeling**: machining, additive, and forming.
+- Predict bearing, gear, and motor failures from vibration and thermal data.
+- Optimize topology and generative designs in nTopology or Fusion 360.
+- Build reduced-order models from CFD/FEA simulations.
+- Monitor equipment health with digital twins (Azure Digital Twins).
+- Improve quality control with machine vision on production lines.
 
 ## Steps
 
-1. Collect sensor data (vibration, acoustic, torque) and failure logs from mechanical assets.
-2. Extract condition indicators, time-domain features, and operating context.
-3. Train a fault-detection or RUL model and validate against physical baselines.
-4. Deploy the model on edge devices or in a digital twin.
-5. Retrain when machinery, materials, or operating regimes change.
+1. Collect operational sensor data and define failure or quality targets.
+2. Extract frequency-domain features and degradation indicators.
+3. Train survival, classification, or anomaly models.
+4. Deploy in edge or MES systems with real-time feedback.
+5. Validate with A/B shutdown/quality outcomes and retrain.
 
 ## Code pattern
 
@@ -104,36 +99,31 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
 3. Run a topology optimization and check stress constraints.
 
 ''',
-        "references": [
-            "https://doi.org/10.1016/j.jmsy.2023.10.010",
-            "https://doi.org/10.1016/j.jmsy.2025.07.006",
-            "https://www.nature.com/articles/s41598-024-63990-0",
-            "https://link.springer.com/article/10.1007/s40684-025-00750-z",
-        ],
+        "references": ["https://doi.org/10.1016/j.jmsy.2023.10.010", "https://doi.org/10.1016/j.jmsy.2025.07.006", "https://www.nature.com/articles/s41598-024-63990-0", "https://link.springer.com/article/10.1007/s40684-025-00750-z"],
     },
     {
         "name": "ai-for-electrical-engineering",
         "title": "AI for Electrical Engineering",
-        "description": "AI for power systems, smart grids, renewable integration, power electronics, fault diagnosis, and energy management.",
+        "description": "Use AI for power-system forecasting, fault detection, and smart-grid control.",
         "devin_body": r'''## When to use
 
 You are analyzing or operating power systems, smart grids, renewable plants, or power electronics and need accurate detection, forecasting, or control.
 
 ## Usage
 
-- **Fault detection and location**: transient classification and protection schemes.
-- **Load and renewable forecasting**: solar, wind, and demand prediction.
-- **Power quality and stability**: anomaly detection and dynamic security assessment.
-- **Smart grid optimization**: unit commitment, voltage control, and demand response.
-- **Power electronics**: converter health monitoring and control design.
+- Forecast renewable generation and EV load in GridLAB-D or PyPSA.
+- Detect transmission-line faults and power-quality anomalies.
+- Optimize microgrid dispatch and battery scheduling.
+- Automate circuit sizing and PCB design checks.
+- Identify transformer or inverter degradation.
 
 ## Steps
 
-1. Collect PMU, SCADA, AMI, or power-electronics data and label fault/quality events.
-2. Engineer time- and frequency-domain features and respect grid topology.
-3. Train a fault or forecasting model with chronological cross-validation.
-4. Validate against power-flow or digital-twin simulations before deployment.
-5. Monitor for concept drift and renewable/load changes.
+1. Ingest SCADA, AMI, or PMU time series and weather data.
+2. Engineer features for load, generation, and voltage stability.
+3. Train forecasting, classification, or control models.
+4. Integrate with EMS/DMS or digital-twin platforms.
+5. Validate against grid codes and continuously retrain.
 
 ## Code pattern
 
@@ -160,36 +150,31 @@ model = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, 
 3. Detect power-quality anomalies and verify against event logs.
 
 ''',
-        "references": [
-            "https://www.mdpi.com/1996-1073/18/18/4983",
-            "https://www.mdpi.com/2227-9717/13/1/48",
-            "https://doi.org/10.1016/j.rineng.2024.103884",
-            "https://www.frontiersin.org/journals/smart-grids/articles/10.3389/frsgr.2024.1371153/full",
-        ],
+        "references": ["https://www.mdpi.com/1996-1073/18/18/4983", "https://www.mdpi.com/2227-9717/13/1/48", "https://doi.org/10.1016/j.rineng.2024.103884", "https://www.frontiersin.org/journals/smart-grids/articles/10.3389/frsgr.2024.1371153/full"],
     },
     {
         "name": "ai-for-chemical-engineering",
         "title": "AI for Chemical Engineering",
-        "description": "AI for process design, optimization, control, reaction engineering, materials discovery, and digital chemical plants.",
+        "description": "Apply AI to chemical process modeling, yield optimization, and reactor control.",
         "devin_body": r'''## When to use
 
 You are designing or operating chemical processes, building surrogate models of reactors or separations, or automating process control.
 
 ## Usage
 
-- **Process optimization and control**: surrogate-based and reinforcement-learning control.
-- **Reaction and kinetic modeling**: neural ODEs and graph neural networks for chemistry.
-- **Molecular and materials design**: generative models, property prediction, retrosynthesis.
-- **Digital twins of plants**: real-time soft sensors and anomaly detection.
-- **Safety and quality control**: fault detection and product quality prediction.
+- Predict product quality from spectroscopic or chromatographic data.
+- Optimize reactor conditions with Aspen Plus or gPROMS integrations.
+- Detect process drift and abnormal events in DCS historians.
+- Design molecules and formulations with generative models.
+- Forecast energy and raw-material demand.
 
 ## Steps
 
-1. Collect process data, lab assays, reaction conditions, and simulation outputs.
-2. Build a dataset that respects mass/energy balances and operating constraints.
-3. Train a surrogate, control, or property-prediction model.
-4. Validate against first-principles simulators and pilot-plant data.
-5. Deploy with real-time monitoring and periodic retraining.
+1. Collect batch/continuous process data and lab assay labels.
+2. Align sensor and laboratory timestamps into feature matrices.
+3. Train regression or time-series models for quality or yield.
+4. Deploy predictions to APC/MES or via Python API.
+5. Track model drift against lab reference and retrain.
 
 ## Code pattern
 
@@ -216,36 +201,31 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 3. Implement an RL or MPC policy and show stable setpoint tracking.
 
 ''',
-        "references": [
-            "https://doi.org/10.1002/cjce.70032",
-            "https://www.mdpi.com/2227-9717/11/2/330",
-            "https://doi.org/10.1002/cjce.24246",
-            "https://doi.org/10.48550/arxiv.2412.18529",
-        ],
+        "references": ["https://doi.org/10.1002/cjce.70032", "https://www.mdpi.com/2227-9717/11/2/330", "https://doi.org/10.1002/cjce.24246", "https://doi.org/10.48550/arxiv.2412.18529"],
     },
     {
         "name": "ai-for-aerospace-engineering",
         "title": "AI for Aerospace Engineering",
-        "description": "AI for aerodynamic design, propulsion, structural analysis, flight dynamics, GNC, and certification of aerospace vehicles.",
+        "description": "Use AI for flight-dynamics prediction, structural-health monitoring, and mission planning.",
         "devin_body": r'''## When to use
 
 You are designing aircraft or spacecraft, building reduced-order models, optimizing aerodynamic/structural/propulsion systems, or certifying aerospace engineering decisions.
 
 ## Usage
 
-- **Aerodynamic surrogate and shape optimization**: data-driven lift/drag models and adjoint-free design.
-- **Structural analysis and loads**: surrogate models for finite-element and fatigue life.
-- **Propulsion and combustion**: reduced-order models and design-space exploration.
-- **Flight dynamics and GNC**: learning-based control and trajectory optimization.
-- **Certification and assurance**: UQ, explainability, and verification for aerospace AI.
+- Detect aircraft engine anomalies and predict remaining useful life.
+- Model aerodynamic loads and flutter from wind-tunnel or flight data.
+- Plan UAV routes and swarm coordination.
+- Monitor composite structures with guided-wave or image sensors.
+- Support trajectory optimization and air-traffic predictions.
 
 ## Steps
 
-1. Collect aerodynamic, structural, propulsion, or flight-dynamics data.
-2. Build multi-fidelity datasets combining low- and high-fidelity simulations.
-3. Train a surrogate or control model with physics-informed constraints.
-4. Validate against CFD, wind tunnel, or flight test data.
-5. Document uncertainty and certification evidence before deployment.
+1. Collect flight, vibration, or structural sensor data.
+2. Build physics-informed or data-driven flight/structural models.
+3. Train anomaly detection and RUL estimators.
+4. Integrate with maintenance planning or GCS dashboards.
+5. Validate against flight-test or simulated benchmarks.
 
 ## Code pattern
 
@@ -272,36 +252,31 @@ model = GaussianProcessRegressor(normalize_y=True).fit(X, y)
 3. Demonstrate uncertainty quantification for a flight-relevant prediction.
 
 ''',
-        "references": [
-            "https://doi.org/10.1016/j.paerosci.2022.100849",
-            "https://journals.sagepub.com/doi/10.1177/0954410019864485",
-            "https://doi.org/10.1016/j.oceaneng.2024.119263",
-            "https://www.ccs.upm.es/research/publications/a-review-of-surrogate-modeling-techniques-for-aerodynamic-analysis-and-optimization-current-limitations-and-future-challenges-in-industry/",
-        ],
+        "references": ["https://doi.org/10.1016/j.paerosci.2022.100849", "https://journals.sagepub.com/doi/10.1177/0954410019864485", "https://doi.org/10.1016/j.oceaneng.2024.119263", "https://www.ccs.upm.es/research/publications/a-review-of-surrogate-modeling-techniques-for-aerodynamic-analysis-and-optimization-current-limitations-and-future-challenges-in-industry/"],
     },
     {
         "name": "ai-for-biomedical-engineering",
         "title": "AI for Biomedical Engineering",
-        "description": "AI for medical devices, wearable biosensors, biomechanics, neural engineering, tissue engineering, and clinical diagnostics.",
+        "description": "Apply AI to medical imaging, biosignal monitoring, and medical-device design.",
         "devin_body": r'''## When to use
 
 You are developing wearable or implantable devices, analyzing biosignals, designing medical imaging classifiers, or modeling biomechanical systems.
 
 ## Usage
 
-- **Biosignal analysis**: ECG, EEG, EMG, PPG, and motion-signal processing.
-- **Wearable and point-of-care devices**: continuous monitoring and edge AI.
-- **Medical imaging and diagnostics**: classification, segmentation, and anomaly detection.
-- **Biomechanics and neural engineering**: movement analysis, neural interfaces, and prosthetics.
-- **Tissue and biomaterials**: generative design and property prediction.
+- Segment lesions or organs in MRI/CT with MONAI or nnU-Net.
+- Classify ECG/EEG arrhythmias and sleep stages.
+- Predict glucose or sepsis risk from wearable streams.
+- Optimize prosthetics and implants via generative design.
+- Monitor ICU devices and detect alarm fatigue patterns.
 
 ## Steps
 
-1. Collect biosignal, imaging, wearable, or biomechanical data with ethical approvals.
-2. Preprocess signals to remove artifacts and standardize patient cohorts.
-3. Train a diagnostic, monitoring, or device-control model.
-4. Validate with clinical reference standards and across demographic groups.
-5. Deploy under regulatory pathways with continuous safety monitoring.
+1. Collect imaging, waveform, or wearable data with ethics approval.
+2. Preprocess and annotate using clinical tools (3D Slicer, XNAT).
+3. Train CNN or time-series classifiers with cross-site validation.
+4. Deploy in PACS, edge devices, or clinical decision support.
+5. Validate against clinician labels and track performance.
 
 ## Code pattern
 
@@ -328,36 +303,31 @@ model = RandomForestClassifier(class_weight="balanced", random_state=42).fit(X, 
 3. Compare an AI diagnostic to a clinical reference standard on a holdout set.
 
 ''',
-        "references": [
-            "https://doi.org/10.3390/bios15070410",
-            "https://doi.org/10.3390/jpm14020203",
-            "https://doi.org/10.1039/D5MH00451A",
-            "https://doi.org/10.3390/bios14040183",
-        ],
+        "references": ["https://doi.org/10.3390/bios15070410", "https://doi.org/10.3390/jpm14020203", "https://doi.org/10.1039/D5MH00451A", "https://doi.org/10.3390/bios14040183"],
     },
     {
         "name": "ai-for-software-engineering",
         "title": "AI for Software Engineering",
-        "description": "AI for code generation, testing, debugging, program repair, code review, and design assistance.",
+        "description": "Use AI to generate, review, and test code across the software lifecycle.",
         "devin_body": r'''## When to use
 
 You are building, maintaining, or reviewing software and want to use AI to generate, test, debug, or document code.
 
 ## Usage
 
-- **Code generation and completion**: large language models and code-specific foundation models.
-- **Automated testing and fuzzing**: generating test cases and oracles.
-- **Bug detection and program repair**: static analysis, code review, and patch generation.
-- **Requirements and design**: natural-language-to-code, architecture suggestion.
-- **Software verification and security**: formal methods, vulnerability detection.
+- Complete and refactor code with GitHub Copilot or Cody.
+- Run static analysis with SonarQube and ESLint.
+- Generate unit tests and property-based checks.
+- Predict bug-prone files and triage CI failures.
+- Summarize code and documentation with LLMs.
 
 ## Steps
 
-1. Collect code repositories, issue trackers, test suites, and documentation.
-2. Preprocess and chunk code, add retrieval context, and build prompts.
-3. Fine-tune or prompt a code model for generation, test, or repair tasks.
-4. Validate generated outputs with compilers, linters, and CI tests.
-5. Iterate with developer feedback and versioned benchmarks.
+1. Index repositories and set up code-quality baselines.
+2. Fine-tune or prompt LLMs on internal style and APIs.
+3. Automate generation, review, and test coverage checks in CI.
+4. Track bug-proneness and build-failure trends.
+5. Measure impact on cycle time and defect escape rate.
 
 ## Code pattern
 
@@ -382,36 +352,31 @@ output = generator("def is_palindrome(s: str) -> bool:")
 3. Review generated patches in a real pull request setting.
 
 ''',
-        "references": [
-            "https://link.springer.com/article/10.1007/s11432-025-4670-0",
-            "https://link.springer.com/article/10.1007/s11432-025-4632-8",
-            "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1655469/full",
-            "https://proceedings.mlr.press/v267/lu25f.html",
-        ],
+        "references": ["https://link.springer.com/article/10.1007/s11432-025-4670-0", "https://link.springer.com/article/10.1007/s11432-025-4632-8", "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1655469/full", "https://proceedings.mlr.press/v267/lu25f.html"],
     },
     {
         "name": "ai-for-systems-engineering",
         "title": "AI for Systems Engineering",
-        "description": "AI for architecting complex systems, model-based systems engineering (MBSE), requirements analysis, trade studies, and verification.",
+        "description": "Apply AI to requirements, MBSE, and system reliability verification.",
         "devin_body": r'''## When to use
 
 You are architecting a complex system, managing requirements, running trade studies, building MBSE models, or planning verification and validation.
 
 ## Usage
 
-- **Model-based systems engineering (MBSE)**: SysML models and AI-augmented authoring.
-- **Requirements engineering**: extraction, consistency checking, and traceability.
-- **Trade studies and design-space exploration**: multi-objective optimization and digital threads.
-- **Verification and validation (V&V)**: test planning, simulation-based validation, assurance cases.
-- **Digital twins and digital threads**: linking lifecycle data to system models.
+- Parse requirements with NLP and flag inconsistencies.
+- Build SysML/MBSE models in Cameo/MagicDraw with AI assist.
+- Predict reliability and failure modes from digital threads.
+- Optimize system architectures with multi-objective search.
+- Verify and validate designs through simulation and digital twins.
 
 ## Steps
 
-1. Collect requirements, MBSE models, trade-study data, and test plans.
-2. Structure data into traceable requirements and architecture elements.
-3. Train a requirements/traceability/optimization model with human review.
-4. Validate against system simulations and stakeholder review.
-5. Maintain model provenance as the design evolves.
+1. Elicit and structure requirements in DOORS or Jama.
+2. Build or import SysML/UML models and system digital threads.
+3. Train NLP or simulation models for risk and V&V.
+4. Integrate predictions into MBSE and PLM workflows.
+5. Update models as requirements and architectures evolve.
 
 ## Code pattern
 
@@ -439,36 +404,31 @@ df["cluster"] = KMeans(n_clusters=5, random_state=42, n_init="auto").fit_predict
 3. Verify an MBSE model consistency against a set of rules.
 
 ''',
-        "references": [
-            "https://doi.org/10.1017/pds.2025.10058",
-            "https://doi.org/10.48550/arxiv.2606.06727",
-            "https://www.mdpi.com/2079-8954/13/7/584",
-            "https://doi.org/10.23919/JSEE.2024.000066",
-        ],
+        "references": ["https://doi.org/10.1017/pds.2025.10058", "https://doi.org/10.48550/arxiv.2606.06727", "https://www.mdpi.com/2079-8954/13/7/584", "https://doi.org/10.23919/JSEE.2024.000066"],
     },
     {
         "name": "ai-for-industrial-engineering",
         "title": "AI for Industrial Engineering",
-        "description": "AI for production planning, scheduling, quality control, ergonomics, operations research, and process improvement.",
+        "description": "Use AI to optimize production scheduling, quality control, and supply chains.",
         "devin_body": r'''## When to use
 
 You are optimizing production, scheduling jobs, controlling quality, balancing assembly lines, or improving supply-chain operations.
 
 ## Usage
 
-- **Production planning and scheduling**: job-shop, flow-shop, and real-time rescheduling.
-- **Quality control and SPC**: defect detection, predictive quality, and root-cause analysis.
-- **Operations research and optimization**: MILP, constraint programming, and heuristics.
-- **Ergonomics and human factors**: motion analysis, workload, and safety.
-- **Digital lean and process mining**: bottleneck detection and value-stream analysis.
+- Predict job-shop bottlenecks and optimize schedules with OR-Tools.
+- Detect process mining patterns and inefficiencies (ProM, Celonis).
+- Forecast demand and inventory levels across the supply chain.
+- Predict defect risk in manufacturing with SPC and vision.
+- Optimize workstation ergonomics and labor allocation.
 
 ## Steps
 
-1. Collect MES/ERP/IoT data on production, quality, maintenance, and schedules.
-2. Engineer features for throughput, quality, and resource utilization.
-3. Train scheduling, quality, or maintenance optimization models.
-4. Validate against baseline KPIs and constraints in simulation.
-5. Deploy and retrain with live production feedback.
+1. Map the production process and data sources (ERP, MES, IoT).
+2. Extract features for throughput, quality, and resource utilization.
+3. Train scheduling, forecasting, or classification models.
+4. Deploy into APS, MES, or planning dashboards.
+5. Measure KPIs and retrain on new production runs.
 
 ## Code pattern
 
@@ -495,36 +455,31 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 3. Detect a bottleneck from process-mining event logs.
 
 ''',
-        "references": [
-            "https://doi.org/10.1016/j.cie.2023.109662",
-            "https://doi.org/10.1016/j.cirp.2024.04.101",
-            "https://dl.acm.org/doi/10.1145/3800000.3800162",
-            "https://doi.org/10.46254/gc03.20250318",
-        ],
+        "references": ["https://doi.org/10.1016/j.cie.2023.109662", "https://doi.org/10.1016/j.cirp.2024.04.101", "https://dl.acm.org/doi/10.1145/3800000.3800162", "https://doi.org/10.46254/gc03.20250318"],
     },
     {
         "name": "ai-for-environmental-engineering",
         "title": "AI for Environmental Engineering",
-        "description": "AI for water and wastewater treatment, air quality, climate modeling, waste management, and environmental monitoring.",
+        "description": "Use AI to monitor air and water quality, model ecosystems, and manage environmental risk.",
         "devin_body": r'''## When to use
 
 You are modeling or managing environmental systems, monitoring pollutants, optimizing treatment processes, or assessing climate and sustainability risks.
 
 ## Usage
 
-- **Water and wastewater treatment**: process control, soft sensors, and nutrient removal.
-- **Air quality and emissions**: forecasting, source apportionment, and anomaly detection.
-- **Climate and hydrology**: flood, drought, and rainfall-runoff modeling.
-- **Waste and circular economy**: sorting, recycling, and lifecycle optimization.
-- **Environmental monitoring**: IoT, remote sensing, and digital twins.
+- Predict pollutant levels from sensor and satellite data.
+- Model watershed and flood dynamics with SWAT and HEC-RAS.
+- Detect illegal dumping and land-use change from imagery.
+- Optimize wastewater treatment and energy recovery.
+- Map carbon and biodiversity hotspots.
 
 ## Steps
 
-1. Collect sensor, satellite, regulatory, and process data for the target environmental system.
-2. Engineer time- and spatially-aware features and handle missing data.
-3. Train a forecasting, anomaly, or optimization model.
-4. Validate against field samples and first-principles models.
-5. Monitor for seasonal drift and new pollution/emission sources.
+1. Gather environmental sensor, satellite, or survey data.
+2. Engineer spatiotemporal and meteorological features.
+3. Train regression or classification models for quality or risk.
+4. Integrate with GIS and EHS dashboards.
+5. Validate against regulatory standards and field samples.
 
 ## Code pattern
 
@@ -551,36 +506,31 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
 3. Model a treatment process and compare to a first-principles simulator.
 
 ''',
-        "references": [
-            "https://doi.org/10.1016/j.scitotenv.2023.167705",
-            "https://doi.org/10.18845/tm.v37i7.7304",
-            "https://doi.org/10.54691/v0t9k322",
-            "https://doi.org/10.67054/auij/.v1i1.58",
-        ],
+        "references": ["https://doi.org/10.1016/j.scitotenv.2023.167705", "https://doi.org/10.18845/tm.v37i7.7304", "https://doi.org/10.54691/v0t9k322", "https://doi.org/10.67054/auij/.v1i1.58"],
     },
     {
         "name": "ai-for-petroleum-engineering",
         "title": "AI for Petroleum Engineering",
-        "description": "AI for reservoir characterization, production optimization, well placement, drilling, and digital oilfield twins.",
+        "description": "Apply AI to reservoir characterization, production optimization, and predictive maintenance.",
         "devin_body": r'''## When to use
 
 You are characterizing reservoirs, optimizing production, planning wells, or monitoring drilling and completion operations.
 
 ## Usage
 
-- **Reservoir characterization**: facies, porosity, and permeability prediction from logs/seismic.
-- **Surrogate reservoir simulation**: deep-learning proxy models to replace expensive flow simulators.
-- **Production optimization**: well control, waterflooding, and life-cycle NPV.
-- **Drilling and completion**: rate-of-penetration, stuck-pipe, and well-placement risk.
-- **Digital oilfield twins**: integrated asset models and real-time surveillance.
+- Predict reservoir properties from well logs and seismic.
+- Optimize well spacing and hydraulic-fracture design.
+- Detect kicks, stuck pipe, and equipment failures.
+- Forecast production and decline curves.
+- Model CO2 storage and enhanced oil recovery.
 
 ## Steps
 
-1. Collect well logs, seismic, production history, and reservoir simulation data.
-2. Build multi-fidelity datasets and define NPV/objective functions.
-3. Train a surrogate, characterization, or optimization model.
-4. Validate against history-matched simulation and field data.
-5. Update the model as new wells and reservoir data arrive.
+1. Collect well logs, seismic, and production time series.
+2. Build geostatistical and physics-informed features.
+3. Train regression and time-series forecasting models.
+4. Integrate with reservoir simulation or SCADA.
+5. Validate with decline-curve analysis and field trials.
 
 ## Code pattern
 
@@ -607,36 +557,31 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
 3. Optimize well controls and compare NPV to a baseline strategy.
 
 ''',
-        "references": [
-            "https://www.sciopen.com/article/10.1016/j.petsci.2025.02.014",
-            "https://www.sciencedirect.com/science/article/abs/pii/S2949891024006432",
-            "https://www.earthdoc.org/content/papers/10.3997/2214-4609.202437090",
-            "https://link.springer.com/article/10.1007/s13202-025-01938-4",
-        ],
+        "references": ["https://www.sciopen.com/article/10.1016/j.petsci.2025.02.014", "https://www.sciencedirect.com/science/article/abs/pii/S2949891024006432", "https://www.earthdoc.org/content/papers/10.3997/2214-4609.202437090", "https://link.springer.com/article/10.1007/s13202-025-01938-4"],
     },
     {
         "name": "ai-for-telecommunications",
         "title": "AI for Telecommunications",
-        "description": "AI for wireless networks, 5G/6G, network optimization, traffic forecasting, security, and edge intelligence.",
+        "description": "Use AI to optimize 5G and 6G RAN, network slicing, and self-organizing networks.",
         "devin_body": r'''## When to use
 
 You are designing, optimizing, or operating telecom networks, including RAN, core, transport, or edge, and need data-driven automation.
 
 ## Usage
 
-- **Radio access network (RAN) intelligence**: beam management, channel estimation, and resource allocation.
-- **Network slicing and orchestration**: traffic prediction and dynamic slice scaling.
-- **Self-organizing networks (SON)**: auto-configuration, optimization, and healing.
-- **Network security and fraud detection**: anomaly detection and intrusion prevention.
-- **Edge and cloud optimization**: caching, compute offloading, and energy efficiency.
+- Predict RAN congestion and optimize beam management.
+- Automate network slicing and resource allocation with O-RAN.
+- Detect fraud and anomalies in CDRs and traffic.
+- Optimize cell handover and coverage with SON.
+- Model customer churn and QoE from probes and CRM.
 
 ## Steps
 
-1. Collect RAN/core/edge/transport KPIs, traffic traces, and alarm logs.
-2. Engineer temporal, spatial, and graph features for network state.
-3. Train a forecasting, optimization, or anomaly model.
-4. Validate in a network simulator or with A/B testing on live traffic.
-5. Monitor SLA compliance and retrain for new services and topologies.
+1. Collect CDR, PM/FM, and geospatial network data.
+2. Engineer KPI and traffic features across cells and slices.
+3. Train forecasting, classification, or RL models.
+4. Deploy via O-RAN RIC xApps or AIOps platforms.
+5. Validate with network KPIs and drive-test data.
 
 ## Code pattern
 
@@ -663,11 +608,6 @@ df["anomaly_score"] = model.decision_function(X)
 3. Optimize resource allocation in a simple network simulator.
 
 ''',
-        "references": [
-            "https://doi.org/10.3390/fi18030155",
-            "https://doi.org/10.3390/technologies13120559",
-            "https://doi.org/10.3390/app16042071",
-            "https://doi.org/10.3390/sym17081279",
-        ],
+        "references": ["https://doi.org/10.3390/fi18030155", "https://doi.org/10.3390/technologies13120559", "https://doi.org/10.3390/app16042071", "https://doi.org/10.3390/sym17081279"],
     },
 ]

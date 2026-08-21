@@ -1,6 +1,6 @@
 # /ai-for-viticulture
 
-AI for vineyard monitoring, grape and canopy sensing, disease detection, yield and quality prediction, and harvest decision support.
+Improve grape quality, yield, and disease management with vineyard AI.
 
 ## Trigger
 

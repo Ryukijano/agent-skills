@@ -1,6 +1,6 @@
 # /ai-for-systems-engineering
 
-AI for architecting complex systems, model-based systems engineering (MBSE), requirements analysis, trade studies, and verification.
+Apply AI to requirements, MBSE, and system reliability verification.
 
 ## Trigger
 

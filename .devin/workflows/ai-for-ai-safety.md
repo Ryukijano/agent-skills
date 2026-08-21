@@ -1,6 +1,6 @@
 # /ai-for-ai-safety
 
-Alignment, robustness, interpretability, red teaming, monitoring, and safe deployment of AI systems, especially large language and agentic models.
+Use alignment, red teaming, interpretability, and monitoring to reduce harmful or unintended AI behavior.
 
 ## Trigger
 

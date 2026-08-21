@@ -2,7 +2,7 @@
 
 ## Description
 
-Genomic selection, phenotype prediction, multi-environment trial analysis, and marker-assisted breeding with machine and deep learning.
+Accelerate crop improvement by predicting trait performance, genomic breeding values, and envirotype effects.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are selecting parents, predicting progeny performance, analysing genotype-by
 
 ## Usage
 
-- **Genomic prediction**: predict quantitative traits from dense marker data using ML or statistical learning methods.
-- **Multi-environment trial analysis**: model genotype x environment (GxE) interactions and stability across locations and years.
-- **High-throughput phenotyping integration**: fuse remote sensing, spectral, and drone-derived traits with genotypes.
-- **Parent selection and genetic diversity**: use prediction and diversity metrics to design optimal crosses.
+- Run genomic prediction with rrBLUP, BOLT-LMM, or AutoGP.
+- Optimize training populations and cross designs.
+- Integrate enviromic covariates and multi-environment trials.
+- Predict genotype-by-environment interaction.
+- Select parents and lines with multi-trait indices.
 
 ## Steps
 
-1. Collect high-quality genotype (e.g., SNP array, resequencing) and phenotype data across multiple environments.
-2. Quality-control markers and phenotypes; account for population structure and kinship.
-3. Train and validate prediction models for target traits (yield, quality, stress tolerance).
-4. Evaluate prediction accuracy in independent environments and examine GxE patterns.
-5. Integrate predictions into crossing plans and selection decisions, updating as new data arrive.
+1. Collect genotypic, phenotypic, and environmental data.
+2. Impute and filter markers; build kinship or genomic relationship matrices.
+3. Train genomic prediction or GWAS models.
+4. Predict breeding values across environments.
+5. Validate with cross-validation and independent trials.
 
 ## Code pattern
 

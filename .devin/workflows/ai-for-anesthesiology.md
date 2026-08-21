@@ -1,6 +1,6 @@
 # /ai-for-anesthesiology
 
-Machine learning for preoperative risk stratification, intraoperative hemodynamic monitoring, anesthetic depth, postoperative nausea and pain, and closed-loop anesthesia.
+Use machine learning to stratify preoperative risk, monitor hemodynamics, predict nausea and pain, and support closed-loop anesthesia.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-endocrinology
 
-Machine learning for diabetes prediction and glucose forecasting, thyroid nodule risk stratification, adrenal and pituitary disorders, and bone mineral metabolism.
+Use machine learning to forecast glucose, stratify thyroid nodules, characterize adrenal and pituitary disorders, and assess bone metabolism.
 
 ## Trigger
 

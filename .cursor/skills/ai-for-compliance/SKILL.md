@@ -2,18 +2,27 @@
 
 ## Description
 
-Regulatory mapping, policy gap analysis, automated control testing, and AI-assisted compliance monitoring.
+Use AI to map regulations to controls, identify policy gaps, test compliance automatically, or answer regulatory questions at scale.
 
 ## When to use
 
 You need to map regulations to controls, identify policy gaps, test compliance automatically, or answer regulatory questions at scale.
 
-## Key concepts
+## Usage
 
-- **Regulatory intelligence**: parse and compare rules across jurisdictions.
-- **Policy gap analysis**: align internal policies against external requirements.
-- **Control testing automation**: sample and test controls with ML.
-- **Model-card and AI governance**: document and evaluate AI systems for regulatory fit.
+- Parse and map regulations to internal controls.
+- Identify policy gaps across jurisdictions.
+- Automate control testing and sampling.
+- Cite exact provisions for findings.
+
+## Steps
+
+1. Parse and map regulations to internal controls.
+2. Identify policy gaps across jurisdictions.
+3. Automate control testing and sampling.
+4. Cite exact provisions for findings.
+5. Maintain audit trails and human oversight.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

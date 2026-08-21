@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for pathogen identification, antimicrobial resistance prediction, sepsis early warning, and infectious disease outbreak surveillance.
+Use machine learning to identify pathogens, predict antimicrobial resistance, detect sepsis, and monitor disease outbreaks.
 
 ## When to use
 
 You need to detect sepsis early, predict antimicrobial resistance, identify pathogens from clinical or genomic data, or forecast infectious disease spread and outbreak dynamics.
 
-## Key concepts
+## Usage
 
-- **Sepsis early warning**: EHR-based models using vitals, labs, and demographics for timely antibiotics.
-- **AMR prediction**: genomic markers, culture data, and phenotypic resistance forecasting.
-- **Pathogen identification**: MALDI-TOF, 16S/NGS, and metagenomic classification.
-- **Antibiotic stewardship**: dosing optimization, de-escalation, and drug-target interaction prediction.
-- **Epidemiological surveillance**: time-series and mobility models for outbreak detection.
+- Build EHR-based early-warning models for sepsis and time-to-antibiotics.
+- Predict antimicrobial resistance from genomic markers, culture data, and phenotypes.
+- Identify pathogens from MALDI-TOF, 16S/NGS, and metagenomic data.
+- Optimize antibiotic stewardship with dosing, de-escalation, and drug-target predictions.
+- Forecast outbreak spread with time-series and mobility models.
+
+## Steps
+
+1. Collect EHR, genomic, microbiology, and surveillance data for the target infection.
+2. Define labels carefully to avoid leakage from cultures drawn after suspicion.
+3. Train classifiers or genomic AMR models with appropriate feature representations.
+4. Validate alert lead time, false-positive burden, and calibration.
+5. Integrate predictions into stewardship, triage, or public-health dashboards.
+6. Monitor for pathogen and resistance drift and update the model.
 
 ## Code pattern
 

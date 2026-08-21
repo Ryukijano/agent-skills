@@ -1,6 +1,6 @@
 # /ai-for-soil-science
 
-Digital soil mapping, pedotransfer functions, spectroscopic prediction, and soil health assessment with ML.
+Use ML to map soil properties, build pedotransfer functions, predict soil carbon from spectra, and assess soil health.
 
 ## Trigger
 

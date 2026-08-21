@@ -2,7 +2,7 @@
 
 ## Description
 
-Eligibility screening, benefits triage, case management support, risk stratification, and resource matching for social care and public assistance.
+Matches clients to benefits and services by triaging eligibility, risk, and available community resources.
 
 ## When to use
 
@@ -10,19 +10,18 @@ You are supporting social service delivery, eligibility determination, case prio
 
 ## Usage
 
-- **Eligibility screening**: pre-screen applicants for benefits and services.
-- **Case prioritization**: rank cases by risk, urgency, or complexity.
+- **Eligibility pre-screening**: triage applicants for benefits and services.
+- **Case prioritization**: rank cases by risk, urgency, and complexity.
 - **Resource matching**: connect clients to housing, food, health, and employment programs.
-- **Case-worker support**: summarize notes, suggest next steps, and check policy.
-- **Fraud and error detection**: flag duplicate or inconsistent applications.
+- **Caseworker support**: summarize case notes, suggest next steps, and check policy.
 
 ## Steps
 
 1. Map programs, eligibility rules, and referral pathways.
-2. Collect client, program, and service data with consent.
-3. Build rule-based and ML triage models.
-4. Provide explainable scores and human review for high-stakes decisions.
-5. Track outcomes, wait times, and access disparities.
+2. Collect client, program, and service data with consent and data minimization.
+3. Build rule-based and ML triage models with explainable outputs.
+4. Provide human review for high-stakes benefit and placement decisions.
+5. Track outcomes, wait times, and access disparities across groups.
 
 ## Code pattern
 

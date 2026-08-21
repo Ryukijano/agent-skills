@@ -1,6 +1,6 @@
 # /ai-for-finance
 
-Machine learning for time-series forecasting, risk modeling, algorithmic trading, and financial NLP.
+Use machine learning to forecast markets, model risk, detect fraud, and extract insight from financial documents and transactions.
 
 ## Trigger
 

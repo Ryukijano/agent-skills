@@ -1,6 +1,6 @@
 # /ai-for-lease-management
 
-NLP-based lease abstraction, clause extraction, compliance tracking, and predictive analytics for commercial and residential lease portfolios.
+Abstracts lease terms, extracts clauses, and tracks critical dates for commercial and residential portfolios.
 
 ## Trigger
 

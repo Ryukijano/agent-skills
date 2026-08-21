@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for predicting soil carbon, nutrients, biology, compaction, erosion risk, and overall soil health from sensors and remote sensing.
+Estimate soil carbon, nutrients, and texture from spectra and remote sensing.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are assessing soil health indicators, mapping soil properties, monitoring ca
 
 ## Usage
 
-- **Soil organic carbon and organic matter prediction**: map SOC/SOM from spectra and covariates.
-- **Nutrient and fertility status**: predict N, P, K, pH, and micronutrients.
-- **Soil biology and microbiome**: infer biological activity and diversity from proxy data.
-- **Compaction, erosion, and hydrology risk**: model soil structural degradation.
-- **Management impact assessment**: evaluate cover crops, reduced tillage, and amendments.
+- Predict SOC and NPK with vis-NIR spectroscopy and remote sensing.
+- Map soil health with PRISMA/EnMAP hyperspectral data.
+- Integrate field samples with Gaofen or Sentinel imagery.
+- Assess spatial uncertainty with conformal calibration.
+- Support carbon credit and fertilizer decisions.
 
 ## Steps
 
-1. Collect soil samples with laboratory reference measurements and location data.
-2. Add covariates: remote-sensing imagery, topography, climate, geology, and management history.
-3. Preprocess spectroscopic or sensor data and engineer spatial features.
-4. Train spatial prediction models and quantify uncertainty.
-5. Generate soil health maps and management recommendations.
+1. Collect soil samples, spectra, and remote sensing data.
+2. Align field and image data to field boundaries.
+3. Train regression models for soil properties.
+4. Map properties and uncertainty across fields.
+5. Validate with independent lab analysis.
 
 ## Code pattern
 

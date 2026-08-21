@@ -1,6 +1,6 @@
 # /ai-for-forensics
 
-ML for image authentication, deepfake detection, authorship attribution, and anomaly detection in forensic evidence.
+Use ML to detect deepfakes and image forgeries, attribute authorship, and surface anomalies in digital and network forensic evidence.
 
 ## Trigger
 

@@ -2,18 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-science-communication",
         "title": "AI for Science Communication",
-        "description": "Plain-language summaries, research storytelling, audience adaptation, and ethical, evidence-based use of generative AI for public-facing science.",
+        "description": "Use generative AI to turn scientific findings into clear, audience-tailored public communications—such as plain-language summaries and multimedia explainers—while preserving accuracy.",
         "devin_body": r'''## When to use
 
 You need to translate technical scientific findings into accessible, engaging formats for the public, patients, educators, or policymakers while preserving accuracy.
 
-## Key concepts
+## Usage
 
-- **Plain-language summaries**: rewrite abstracts and papers for non-expert reading levels.
-- **Audience adaptation**: tune tone, length, and examples for patients, teachers, journalists, or legislators.
-- **Narrative and framing**: use story structure, metaphors, and relatable examples without overclaiming.
-- **Multimodal science communication**: combine text, audio, slides, and visuals for broader reach.
-- **Hallucination and fact-checking**: every generated claim must be traceable to the source paper.
+- **Rewrite abstracts and papers into plain-language summaries for non-expert, patient, and public reading levels.**
+- **Tune tone, length, and examples for policymakers, journalists, educators, patients, and social media.**
+- **Use story structure, metaphors, and relatable examples while preserving uncertainty and avoiding overclaiming.**
+- **Combine text, audio, slides, and visuals into accessible, multimodal explainers.**
+- **Make every generated claim traceable to the source paper and disclose AI assistance.**
+
+## Steps
+
+1. Identify the target audience, channel, and reading level for the science message.
+2. Extract and verify key claims, uncertainties, and source evidence from the original paper or dataset.
+3. Generate a plain-language or narrative draft with an LLM prompted for the specific audience and format.
+4. Enrich the draft with analogies, visuals, or multimedia while preserving scientific nuance.
+5. Fact-check every claim against the source, cite evidence, and disclose AI assistance.
+6. Pilot test with a sample audience and refine for comprehension, trust, and accessibility.
 
 ## Code pattern
 
@@ -48,18 +57,27 @@ print("Flesch-Kincaid grade:", textstat.flesch_kincaid_grade(summary))
     {
         "name": "ai-for-research-communication",
         "title": "AI for Research Communication",
-        "description": "Drafting manuscripts, abstracts, cover letters, response-to-reviewers, and translating findings across disciplines with LLMs.",
+        "description": "Use LLMs to draft, refine and translate academic manuscripts, cover letters, responses to reviewers and interdisciplinary summaries while grounding every claim in verified sources.",
         "devin_body": r'''## When to use
 
 You are writing or refining academic manuscripts, abstracts, cover letters, response-to-reviewers, or interdisciplinary summaries of research findings.
 
-## Key concepts
+## Usage
 
-- **Structured scientific writing**: follow IMRaD, abstract structures, and journal-specific guidelines.
-- **Academic tone and style**: use LLMs to adjust formality, clarity, and field-specific conventions.
-- **Citation and reference management**: ground drafts in uploaded PDFs and verified bibliographies.
-- **Integrity checks**: detect accidental plagiarism, AI-patterned text, and citation errors.
-- **Cross-disciplinary translation**: reframe findings for readers in adjacent fields.
+- **Draft and revise IMRaD sections, abstracts, and cover letters that follow journal guidelines.**
+- **Adjust formality, clarity, and field-specific conventions for the target venue.**
+- **Ground drafts in uploaded PDFs and verified bibliographies, not invented DOIs.**
+- **Detect accidental plagiarism, AI-patterned phrasing, and citation errors before submission.**
+- **Reframe findings for readers in adjacent fields and for broader impact statements.**
+
+## Steps
+
+1. Assemble source materials: paper, outline, reviewer comments, target journal guidelines, and reference library.
+2. Generate a structured first draft of the section (abstract, cover letter, response to reviewers) using the sources as context.
+3. Refine tone, length, and terminology to match the journal or correspondence style.
+4. Verify every citation, DOI, statistic, and claim against the original sources.
+5. Run integrity and style checks, then compare the draft to the original human version.
+6. Finalize with author edits and maintain a record of AI involvement for transparency.
 
 ## Code pattern
 
@@ -95,18 +113,27 @@ short = summarizer(long_methods, max_length=120, min_length=30, do_sample=False)
     {
         "name": "ai-for-public-engagement",
         "title": "AI for Public Engagement",
-        "description": "Conversational agents, citizen science, public consultations, and participatory science supported by LLMs and interactive AI.",
+        "description": "Use conversational AI and citizen-science chatbots to make public consultations, science festivals and participatory research more inclusive and scalable.",
         "devin_body": r'''## When to use
 
 You are running public consultations, citizen-science projects, science-festival chatbots, or community outreach and want to make engagement more inclusive and scalable.
 
-## Key concepts
+## Usage
 
-- **Bidirectional science communication**: collect, analyze, and respond to public questions and concerns.
-- **Conversational AI**: chatbots and voice agents that answer science questions and guide participation.
-- **Citizen science and data quality**: LLMs help onboard volunteers, validate submissions, and provide feedback.
-- **Deliberative and participatory design**: AI can support but not replace community voice and agency.
-- **Transparency and accessibility**: disclose AI involvement, support multiple languages, and protect privacy.
+- **Collect, analyze, and respond to public questions, concerns, and ideas.**
+- **Deploy chatbots and voice agents that answer science questions and guide participation.**
+- **Onboard volunteers, validate submissions, and provide real-time feedback in citizen-science projects.**
+- **Support community voice and agency without replacing human decision-making.**
+- **Disclose AI involvement, support multilingual interactions, and protect privacy.**
+
+## Steps
+
+1. Co-design engagement goals, prompts, and fallback rules with community stakeholders.
+2. Build a retrieval-augmented chatbot grounded in vetted FAQs, papers, and institutional sources.
+3. Deploy the agent on accessible channels (web, SMS, voice, event kiosks) in relevant languages.
+4. Collect questions and feedback, then extract themes using topic modeling or LLM summarization.
+5. Validate chatbot answers against sources and monitor for bias, misinformation, and escalation needs.
+6. Iterate with participants and report how input influenced research or policy outcomes.
 
 ## Code pattern
 
@@ -139,24 +166,33 @@ print(Counter(themes).most_common(10))
             "https://doi.org/10.1057/s41599-026-06594-5",
             "https://publichealth.jmir.org/2025/1/e65699",
             "https://doi.org/10.1038/s41893-024-01489-2",
-            "https://doi.org/10.5334/cstp.812",
+            "https://theoryandpractice.citizenscienceassociation.org/articles/10.5334/cstp.812",
         ],
     },
     {
         "name": "ai-for-policy-briefs",
         "title": "AI for Policy Briefs",
-        "description": "Converting scientific evidence and legislative text into concise, actionable policy briefs and impact analyses.",
+        "description": "Convert scientific evidence and legislative text into concise, decision-ready policy briefs and impact analyses for government agencies, regulators and advocacy groups.",
         "devin_body": r'''## When to use
 
 You need to turn a scientific paper, a body of evidence, or a legislative document into a short, decision-ready policy brief for government, agencies, or advocacy groups.
 
-## Key concepts
+## Usage
 
-- **Policy brief structure**: problem, evidence, policy options, recommendations, and implications.
-- **Science-to-policy translation**: reframe technical findings into actionable, audience-specific guidance.
-- **Stakeholder and impact analysis**: map who is affected, how, and what trade-offs exist.
-- **Evidence synthesis**: combine multiple studies while tracking source credibility and recency.
-- **Hallucination control**: policy briefs must not invent statistics, legal clauses, or citations.
+- **Assemble problem, evidence, policy options, recommendations, and implications.**
+- **Reframe technical findings into actionable, audience-specific guidance.**
+- **Map who is affected, how, and what trade-offs exist.**
+- **Combine multiple studies while tracking source credibility and recency.**
+- **Ensure briefs do not invent statistics, legal clauses, or citations.**
+
+## Steps
+
+1. Define the decision-maker, policy question, and the brief's length and format.
+2. Gather and appraise evidence from peer-reviewed research, official legislation, and government data.
+3. Synthesize key findings into problem, options, and recommendation statements with citations.
+4. Quantify or map stakeholder impacts, costs, and trade-offs for each policy option.
+5. Verify every statistic, legal clause, and citation against its original source.
+6. Submit the brief for expert review and test clarity with a policy professional or target reader.
 
 ## Code pattern
 
@@ -192,18 +228,27 @@ print(vectorizer.get_feature_names_out())
     {
         "name": "ai-for-white-papers",
         "title": "AI for White Papers",
-        "description": "Authoring long-form, evidence-based white papers and thought-leadership documents grounded in verified sources.",
+        "description": "Author long-form, evidence-based white papers and thought-leadership documents that define problems, survey evidence and present solutions while establishing credibility.",
         "devin_body": r'''## When to use
 
 You are producing a B2B or technical white paper that defines a problem, surveys evidence, presents a solution, and establishes thought leadership.
 
-## Key concepts
+## Usage
 
-- **Problem-solution narrative**: state the problem, quantify the cost, and present an evidence-based approach.
-- **Executive summary**: write it last, place it first, and make it self-contained.
-- **Evidence and case studies**: support claims with benchmarks, peer-reviewed studies, and real customer outcomes.
-- **ROI and implementation**: include practical guidance on cost, benefits, and adoption.
-- **Brand voice and design**: maintain a consistent, professional tone and visual format.
+- **State the problem, quantify the cost, and present an evidence-based approach.**
+- **Write the executive summary last, place it first, and make it self-contained.**
+- **Support claims with benchmarks, peer-reviewed studies, and real customer outcomes.**
+- **Include practical guidance on cost, benefits, and adoption.**
+- **Maintain a consistent, professional tone and visual format.**
+
+## Steps
+
+1. Define the audience, objective, and key evidence sources before drafting.
+2. Research and synthesize industry data, benchmarks, peer-reviewed studies, and customer case studies.
+3. Build a structured outline with problem, evidence, solution, implementation, and ROI sections.
+4. Draft the body section by section, feeding the model verified sources and avoiding invented citations.
+5. Write the executive summary as a self-contained synthesis of the full paper.
+6. Fact-check all claims, align with brand voice and design, and export to editable formats.
 
 ## Code pattern
 
@@ -242,18 +287,27 @@ doc = template.render(
     {
         "name": "ai-for-technical-blogs",
         "title": "AI for Technical Blogs",
-        "description": "Planning, drafting, SEO-optimizing, and reviewing technical blog posts and tutorials with LLMs.",
+        "description": "Plan, draft, SEO-optimize and review technical blog posts and tutorials that combine code, narrative and practical guidance for developer audiences.",
         "devin_body": r'''## When to use
 
 You are creating tutorials, engineering deep-dives, API explainers, or product announcements for a technical audience.
 
-## Key concepts
+## Usage
 
-- **Technical narrative**: combine motivation, concept, code, and outcome in a coherent arc.
-- **Code-first examples**: include runnable snippets, output, and common pitfalls.
-- **SEO and discoverability**: structure headings, metadata, and keywords for search and social sharing.
-- **Audience calibration**: adjust depth for beginners, practitioners, or experts.
-- **Expert review**: subject-matter experts should validate accuracy before publishing.
+- **Combine motivation, concept, code, and outcome in a coherent arc.**
+- **Include runnable snippets, output, and common pitfalls.**
+- **Structure headings, metadata, and keywords for search and social sharing.**
+- **Adjust depth for beginners, practitioners, or experts.**
+- **Have subject-matter experts validate accuracy before publishing.**
+
+## Steps
+
+1. Choose a target keyword, audience level, and measurable goal (traffic, engagement, tutorial completion).
+2. Create an outline with clear headings, code examples, and a narrative arc from problem to solution.
+3. Draft the post with the model, feeding it existing code, docs, and actual output.
+4. Run every code snippet in a clean environment and capture real results and error cases.
+5. Optimize headings, meta description, and internal links for search without keyword stuffing.
+6. Peer-review for technical accuracy, edit for voice, and publish with diagrams and alt text.
 
 ## Code pattern
 
@@ -295,18 +349,27 @@ with open("post.md", "w") as f:
     {
         "name": "ai-for-open-science",
         "title": "AI for Open Science",
-        "description": "Reproducible research agents, open-source workbenches, provenance tracking, and computational reproducibility with AI.",
+        "description": "Make research reproducible and auditable by automating literature review, code execution, provenance tracking and FAIR data packaging with AI agents.",
         "devin_body": r'''## When to use
 
 You want to make a research project open, reproducible, and auditable by automating literature review, code execution, provenance tracking, and FAIR data packaging.
 
-## Key concepts
+## Usage
 
-- **Open science principles**: open data, code, protocols, preprints, and transparent methods.
-- **Reproducibility and replication packages**: containerized, documented, and versioned artifacts.
-- **Provenance and RO-Crate**: record the origin and transformation of every dataset, figure, and model.
-- **AI research workbenches**: agents that search literature, run experiments, and write reports with traceability.
-- **FAIR and knowledge graphs**: make data Findable, Accessible, Interoperable, and Reusable.
+- **Share open data, code, protocols, preprints, and transparent methods.**
+- **Build containerized, documented, and versioned replication packages.**
+- **Record the origin and transformation of every dataset, figure, and model.**
+- **Deploy agents that search literature, run experiments, and write reports with traceability.**
+- **Make data Findable, Accessible, Interoperable, and Reusable.**
+
+## Steps
+
+1. Organize the project with versioned data, code, environment files, and a clear README.
+2. Use an agent or script to search literature, extract methods, and draft reproducible analysis notebooks.
+3. Track provenance with content hashes, container definitions, and RO-Crate or PROV-O metadata.
+4. Run the analysis end-to-end and compare outputs to expected values and original data.
+5. Package results as a replication archive with figures linked to the scripts that produced them.
+6. Share the package under an open license and attempt an independent reproduction by a colleague.
 
 ## Code pattern
 
@@ -343,18 +406,27 @@ print("data.csv sha256:", digest)
     {
         "name": "ai-for-data-journalism",
         "title": "AI for Data Journalism",
-        "description": "Using AI to find stories in datasets, fact-check claims, generate visualizations, and produce data-driven reporting.",
+        "description": "Find, verify and visualize stories in public datasets, documents and real-time data streams to produce data-driven investigative reporting.",
         "devin_body": r'''## When to use
 
 You are investigating public datasets, leaked documents, FOIA releases, or real-time data streams and need to find and verify stories at speed.
 
-## Key concepts
+## Usage
 
-- **Computational journalism**: algorithmic story discovery, monitoring, and verification.
-- **Structured data parsing**: read CSV, JSON, PDF tables, and APIs with reproducible scripts.
-- **Entity and anomaly detection**: identify people, organizations, and outliers in large corpora.
-- **Verifiable claims**: every number, quote, and chart must link to the underlying source.
-- **Document intelligence**: full-text search, named-entity recognition, and cross-document linking.
+- **Algorithmically discover, monitor, and verify stories.**
+- **Read CSV, JSON, PDF tables, and APIs with reproducible scripts.**
+- **Identify people, organizations, and outliers in large corpora.**
+- **Link every number, quote, and chart to the underlying source.**
+- **Use full-text search, named-entity recognition, and cross-document linking.**
+
+## Steps
+
+1. Acquire public datasets, FOIA releases, or scraped documents and document the source and date.
+2. Parse, clean, and join tables with reproducible scripts, tracking each transformation.
+3. Use statistics, LLMs, or entity extraction to find anomalies, trends, and story leads.
+4. Build charts and interactive graphics and ensure every value matches the source table.
+5. Fact-check generated claims by locating the exact row, sentence, or document they came from.
+6. Publish the methodology and data alongside the story for transparency and reproducibility.
 
 ## Code pattern
 
@@ -395,18 +467,27 @@ chart.save("spending_chart.html")
     {
         "name": "ai-for-visual-communication",
         "title": "AI for Visual Communication",
-        "description": "Generating and refining posters, slides, brand assets, and visual narratives with diffusion models and design tools.",
+        "description": "Create and refine posters, slides, pitch decks and social-media assets using diffusion models, layout tools and human-in-the-loop design.",
         "devin_body": r'''## When to use
 
 You need to create presentations, pitch decks, posters, social media assets, or brand visuals that communicate complex ideas clearly and consistently.
 
-## Key concepts
+## Usage
 
-- **Prompt engineering for visuals**: guide diffusion and layout models with precise, style-aware prompts.
-- **Layout and composition**: balance text, images, whitespace, and hierarchy for the target medium.
-- **Brand and style consistency**: enforce colors, fonts, and templates across generated variants.
-- **ControlNet and structured generation**: constrain generation to layouts, sketches, or existing assets.
-- **Human-in-the-loop**: AI drafts; designers refine for accuracy, accessibility, and taste.
+- **Guide diffusion and layout models with precise, style-aware prompts.**
+- **Balance text, images, whitespace, and hierarchy for the target medium.**
+- **Enforce colors, fonts, and templates across generated variants.**
+- **Constrain generation to layouts, sketches, or existing assets.**
+- **Have designers refine AI drafts for accuracy, accessibility, and taste.**
+
+## Steps
+
+1. Define the message, audience, medium, and brand constraints before generating.
+2. Generate several visual drafts using style-aware prompts, sketches, or ControlNet constraints.
+3. Select the strongest draft and check brand alignment, color contrast, and visual hierarchy.
+4. Refine text, labels, and data representations to avoid misrepresentation or bias.
+5. Export to editable formats (SVG, PPTX) so designers can finalize and review.
+6. Test comprehension and recall with the target audience and review for artifacts and rights issues.
 
 ## Code pattern
 
@@ -443,18 +524,27 @@ canvas.save("poster_draft.png")
     {
         "name": "ai-for-infographics",
         "title": "AI for Infographics",
-        "description": "Generating data-rich infographics and visual stories from documents, tables, and natural-language prompts.",
+        "description": "Turn reports, data tables and articles into data-rich infographics and visual stories using natural-language prompts and chart-composition tools.",
         "devin_body": r'''## When to use
 
 You want to turn reports, data tables, or articles into shareable infographics, data stories, or social-media explainers.
 
-## Key concepts
+## Usage
 
-- **Text-to-infographic**: generate metadata, chart code, and layout from natural language or documents.
-- **Chart composition**: combine multiple sub-charts (bar, line, pie, maps) into a coherent layout.
-- **Data faithfulness**: ensure values, labels, and visual proportions match the source data.
-- **Visual hierarchy and accessibility**: guide the eye, use alt text, and maintain color-blind safe palettes.
-- **Evaluation benchmarks**: use benchmarks like IGENBENCH to assess reliability of generated infographics.
+- **Generate metadata, chart code, and layout from natural language or documents.**
+- **Combine multiple sub-charts (bar, line, pie, maps) into a coherent layout.**
+- **Ensure values, labels, and visual proportions match the source data.**
+- **Guide the eye, use alt text, and maintain color-blind safe palettes.**
+- **Use benchmarks like IGENBENCH to assess reliability of generated infographics.**
+
+## Steps
+
+1. Extract the key data, insights, and narrative from the source document or table.
+2. Choose the chart types and layout that best communicate the story for the target channel.
+3. Generate chart code and metadata, then verify every value and label against the source.
+4. Compose sub-charts into an on-brand layout with clear visual hierarchy and alt text.
+5. Evaluate the infographic for data faithfulness with a rubric or benchmark like IGENBENCH.
+6. Test engagement and comprehension with both data experts and general readers.
 
 ## Code pattern
 
@@ -493,18 +583,27 @@ plt.savefig("chart_component.png")
     {
         "name": "ai-for-document-design",
         "title": "AI for Document Design",
-        "description": "Automating layout, typography, templates, and multi-format rendering of reports, certificates, and proposals.",
+        "description": "Generate consistent, on-brand reports and certificates, proposals and invoices from structured data using templates, typography rules and multi-format rendering.",
         "devin_body": r'''## When to use
 
 You need to produce many reports, certificates, proposals, invoices, or policy briefs from structured data while keeping layouts consistent and on-brand.
 
-## Key concepts
+## Usage
 
-- **Document layout generation**: produce structured page layouts from content and design constraints.
-- **Template-based design**: create reusable templates with dynamic fields for text, tables, and images.
-- **Data binding**: map CSV, JSON, or database records into document fields.
-- **Multi-format rendering**: output PDF, DOCX, PPTX, or HTML from a single source of truth.
-- **Typography and accessibility**: choose readable fonts, spacing, color contrast, and tagged PDFs.
+- **Produce structured page layouts from content and design constraints.**
+- **Create reusable templates with dynamic fields for text, tables, and images.**
+- **Map CSV, JSON, or database records into document fields.**
+- **Output PDF, DOCX, PPTX, or HTML from a single source of truth.**
+- **Choose readable fonts, spacing, color contrast, and tagged PDFs.**
+
+## Steps
+
+1. Design and validate a template with brand fonts, colors, margins, and dynamic field placeholders.
+2. Connect the template to a CSV, JSON, or database source and map fields to content areas.
+3. Add conditional logic for optional sections and repeating rows for tables and lists.
+4. Render a batch of documents and inspect page breaks, headers, footers, and formatting.
+5. Validate that dynamic fields are bound and no placeholder text remains.
+6. Test output across PDF, DOCX, PPTX, or HTML and add accessibility tags where required.
 
 ## Code pattern
 
@@ -545,18 +644,27 @@ doc.save("report.docx")
     {
         "name": "ai-for-knowledge-design",
         "title": "AI for Knowledge Design",
-        "description": "Designing knowledge architectures, taxonomies, ontologies, and agent-facing knowledge layers for organizations.",
+        "description": "Build knowledge architectures, taxonomies, ontologies and agent-facing knowledge layers that help humans and AI navigate organizational information.",
         "devin_body": r'''## When to use
 
 You are building a knowledge base, wiki, documentation site, knowledge graph, or agent-facing memory system for a team or organization.
 
-## Key concepts
+## Usage
 
-- **Knowledge architecture**: structure content so both humans and AI agents can navigate it.
-- **Taxonomies and ontologies**: define concepts, relations, and inference rules for a domain.
-- **Knowledge graphs**: connect entities and facts for search, reasoning, and recommendation.
-- **RAG vs persistent knowledge layers**: choose between retrieval at query time and curated, versioned knowledge stores.
-- **Knowledge-as-code**: version-control knowledge in Markdown, YAML, or structured schemas.
+- **Structure content so both humans and AI agents can navigate it.**
+- **Define concepts, relations, and inference rules for a domain.**
+- **Connect entities and facts for search, reasoning, and recommendation.**
+- **Choose between retrieval at query time and curated, versioned knowledge stores.**
+- **Version-control knowledge in Markdown, YAML, or structured schemas.**
+
+## Steps
+
+1. Elicit the questions users and agents need to answer and inventory existing knowledge sources.
+2. Define a schema, taxonomy, or ontology with concepts, relations, and source attribution.
+3. Extract entities and relationships from documents and curate them with human reviewers.
+4. Build a versioned knowledge graph or persistent knowledge layer and link it to RAG or agent tools.
+5. Expose the knowledge through both human-readable pages and machine-readable APIs or MCP interfaces.
+6. Monitor freshness, coverage, and retrieval quality against representative queries and a reference set.
 
 ## Code pattern
 

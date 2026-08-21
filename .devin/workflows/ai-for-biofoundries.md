@@ -1,6 +1,6 @@
 # /ai-for-biofoundries
 
-AI/ML-driven lab automation, robotic liquid handling, closed-loop DBTL, and self-driving laboratories for synthetic biology.
+Combine robotic automation, LIMS, and active learning to run closed-loop Design-Build-Test-Learn campaigns at scale.
 
 ## Trigger
 

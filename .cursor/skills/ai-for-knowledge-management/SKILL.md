@@ -2,18 +2,27 @@
 
 ## Description
 
-Semantic knowledge search, enterprise RAG, expertise mining, and AI-assisted capture of institutional tacit knowledge.
+Use AI to make organizational knowledge searchable, capture tacit expertise, build enterprise RAG, or recommend relevant experts and documents.
 
 ## When to use
 
 You need to make organizational knowledge searchable, capture tacit expertise, build enterprise RAG, or recommend relevant experts and documents.
 
-## Key concepts
+## Usage
 
-- **Enterprise RAG**: ground LLM answers in internal documents and wikis.
-- **Knowledge graphs**: connect people, projects, and concepts across the organization.
-- **Expertise mining**: identify who knows what from publications, projects, and communications.
-- **Tacit knowledge capture**: turn meetings, tickets, and chats into reusable assets.
+- Chunk and embed enterprise documents and wikis.
+- Build RAG over internal knowledge.
+- Construct knowledge graphs of people, projects, and concepts.
+- Mine expertise and tacit knowledge from communications.
+
+## Steps
+
+1. Chunk and embed enterprise documents and wikis.
+2. Build RAG over internal knowledge.
+3. Construct knowledge graphs of people, projects, and concepts.
+4. Mine expertise and tacit knowledge from communications.
+5. Enforce access controls and source attribution.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

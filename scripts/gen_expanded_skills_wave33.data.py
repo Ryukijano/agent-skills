@@ -1,19 +1,27 @@
 SKILLS = [
     {
-        "name": "ai-for-digital-health",
-        "title": "AI for Digital Health",
-        "description": "Consumer-facing health apps, wearable biosensors, remote monitoring, patient portals, and data-driven digital wellness interventions.",
+        "name": 'ai-for-digital-health',
+        "title": 'AI for Digital Health',
+        "description": 'Use AI to build or evaluate consumer-facing digital health tools, integrate wearable or sensor data, or conducting remote monitoring and digital-biomarker studies.',
         "devin_body": r'''## When to use
 
 You are building or evaluating consumer-facing digital health tools, integrating wearable or sensor data, or conducting remote monitoring and digital-biomarker studies.
 
-## Key concepts
+## Usage
 
-- **mHealth and digital biomarkers**: smartphone apps, wearables, and connected sensors that capture physiology and behavior.
-- **Remote patient monitoring and digital clinical trials**: decentralized data collection, telehealth integration, and virtual trial endpoints.
-- **Wearable signal processing**: PPG, accelerometry, sleep staging, and activity recognition from consumer devices.
-- **Digital phenotyping and ecological momentary assessment**: in-situ, high-frequency behavioral and symptom measurement.
-- **Regulatory and evidence standards**: FDA 510(k)/De Novo, Digital Health Software Precertification, and clinical-validation requirements.
+- Capture wearable, app, and sensor signals.
+- Process PPG, accelerometry, sleep, and activity data.
+- Extract digital biomarkers and EMA endpoints.
+- Build remote monitoring dashboards and alerts.
+
+## Steps
+
+1. Capture wearable, app, and sensor signals.
+2. Process PPG, accelerometry, sleep, and activity data.
+3. Extract digital biomarkers and EMA endpoints.
+4. Build remote monitoring dashboards and alerts.
+5. Validate against clinical gold standards and reference devices.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -38,30 +46,37 @@ hr = 60 * fs / np.diff(peaks)
 
 1. Extract a digital biomarker from wearable data and compare it to a clinical gold standard.
 2. Build a remote-monitoring dashboard with anomaly alerts for a simulated cohort.
-3. Assess class balance and subgroup calibration for a digital health risk model.
-''',
+3. Assess class balance and subgroup calibration for a digital health risk model.''',
         "references": [
-            "https://doi.org/10.1038/s41591-021-01614-0",
-            "https://doi.org/10.1038/s41591-022-01981-2",
-            "https://doi.org/10.1038/s41591-018-0307-0",
-            "https://doi.org/10.1038/s41591-026-04229-5",
+            'https://doi.org/10.1038/s41591-021-01614-0',
+            'https://doi.org/10.1038/s41591-022-01981-2',
+            'https://doi.org/10.1038/s41591-018-0307-0',
+            'https://doi.org/10.1038/s41591-026-04229-5',
         ],
     },
     {
-        "name": "ai-for-health-informatics",
-        "title": "AI for Health Informatics",
-        "description": "Electronic health records, clinical data standards, interoperability, and AI-enabled analytics for healthcare delivery and research.",
+        "name": 'ai-for-health-informatics',
+        "title": 'AI for Health Informatics',
+        "description": 'Harmonize EHR data through FHIR to predict 30-day readmissions and mortality across institutions without manual feature engineering.',
         "devin_body": r'''## When to use
 
 You need to structure, integrate, and analyze healthcare data across systems using standards such as HL7 FHIR, OMOP, and LOINC.
 
-## Key concepts
+## Usage
 
-- **Health data standards and interoperability**: HL7 FHIR, OMOP CDM, DICOM, and terminologies such as SNOMED-CT, ICD, RxNorm, and LOINC.
-- **EHR phenotyping and clinical data warehouses**: extracting computable cohorts and longitudinal patient features.
-- **Natural language processing for clinical text**: named-entity recognition, entity normalization, de-identification, and information extraction.
-- **Clinical decision support and alert systems**: rules-based and ML-driven recommendations embedded in workflows.
-- **Privacy, security, and governance**: HIPAA, GDPR, de-identification, and role-based access control.
+- Normalize FHIR, OMOP, SNOMED, ICD, RxNorm, and LOINC data.
+- Build EHR phenotyping and longitudinal feature pipelines.
+- Extract and de-identify clinical text.
+- Deploy clinical decision support alerts.
+
+## Steps
+
+1. Normalize FHIR, OMOP, SNOMED, ICD, RxNorm, and LOINC data.
+2. Build EHR phenotyping and longitudinal feature pipelines.
+3. Extract and de-identify clinical text.
+4. Deploy clinical decision support alerts.
+5. Validate with temporal and site-split cross-validation.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -87,30 +102,37 @@ df = pd.json_normalize(observations)
 
 1. Extract a computable phenotype from EHR data and compare it to manual chart review.
 2. Map free-text diagnoses to ICD/SNOMED-CT codes with an NLP pipeline.
-3. Evaluate a predictive model with temporal cross-validation across hospitals.
-''',
+3. Evaluate a predictive model with temporal cross-validation across hospitals.''',
         "references": [
-            "https://doi.org/10.1093/jamia/ocae074",
-            "https://doi.org/10.1093/jamia/ocac095",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC11700560/",
-            "https://doi.org/10.1093/jamia/ocaf131",
+            'https://doi.org/10.1093/jamia/ocae074',
+            'https://doi.org/10.1093/jamia/ocac095',
+            'https://pmc.ncbi.nlm.nih.gov/articles/PMC11700560/',
+            'https://doi.org/10.1093/jamia/ocaf131',
         ],
     },
     {
-        "name": "ai-for-behavioral-science",
-        "title": "AI for Behavioral Science",
-        "description": "Computational modeling of human behavior, n-of-1 and ecological momentary assessment, digital interventions, and experimentally validated behavior change.",
+        "name": 'ai-for-behavioral-science',
+        "title": 'AI for Behavioral Science',
+        "description": 'Use AI to study or influencing human behavior using digital experiments, sensor data, reinforcement learning, or generative models of behavior.',
         "devin_body": r'''## When to use
 
 You are studying or influencing human behavior using digital experiments, sensor data, reinforcement learning, or generative models of behavior.
 
-## Key concepts
+## Usage
 
-- **Behavioral experiments and A/B testing**: randomized and within-subject designs for digital interventions.
-- **Ecological momentary assessment (EMA) and digital phenotyping**: in-the-moment, repeated measurements in natural environments.
-- **N-of-1 trials and personalized intervention optimization**: single-participant designs and adaptive optimization.
-- **Computational psychiatry and reinforcement learning models of choice**: model-based and model-free learning, drift-diffusion, and reward models.
-- **Causal and mechanistic behavior-change frameworks**: identifying drivers and mediators of behavior change.
+- Design digital experiments and A/B/n tests.
+- Collect EMA and digital phenotyping data.
+- Run n-of-1 and personalized intervention trials.
+- Model learning and decision-making.
+
+## Steps
+
+1. Design digital experiments and A/B/n tests.
+2. Collect EMA and digital phenotyping data.
+3. Run n-of-1 and personalized intervention trials.
+4. Model learning and decision-making.
+5. Pre-register and replicate findings.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -136,30 +158,37 @@ print(model.params['treatment'])
 
 1. Analyze an EMA dataset to detect triggers of a target behavior.
 2. Design and simulate an n-of-1 adaptive intervention.
-3. Evaluate a behavior-change chatbot against a control in a randomized pilot.
-''',
+3. Evaluate a behavior-change chatbot against a control in a randomized pilot.''',
         "references": [
-            "https://www.sciencedirect.com/science/article/abs/pii/S2352250X24000484",
-            "https://link.springer.com/article/10.1007/s10462-025-11297-5",
-            "https://link.springer.com/article/10.1038/s44159-026-00551-4",
-            "https://www.sciencedirect.com/science/article/abs/pii/S2352250X2400085X",
+            'https://www.sciencedirect.com/science/article/abs/pii/S2352250X24000484',
+            'https://link.springer.com/article/10.1007/s10462-025-11297-5',
+            'https://link.springer.com/article/10.1038/s44159-026-00551-4',
+            'https://www.sciencedirect.com/science/article/abs/pii/S2352250X2400085X',
         ],
     },
     {
-        "name": "ai-for-cognitive-science",
-        "title": "AI for Cognitive Science",
-        "description": "Computational models of perception, memory, language, reasoning, and human-like cognition, bridging AI and psychological theory.",
+        "name": 'ai-for-cognitive-science',
+        "title": 'AI for Cognitive Science',
+        "description": 'Use AI to build or evaluate computational models of human cognition, compare AI behavior to human data, or use AI as a model organism for cognitive theory.',
         "devin_body": r'''## When to use
 
 You want to build or evaluate computational models of human cognition, compare AI behavior to human data, or use AI as a model organism for cognitive theory.
 
-## Key concepts
+## Usage
 
-- **Computational modeling of perception, memory, and decision-making**: symbolic, Bayesian, and neural-network cognitive models.
-- **Cognitive architectures**: ACT-R, SOAR, and subsymbolic neural models of cognition.
-- **Psychophysical and behavioral experiments**: linking model predictions to human measurements.
-- **Large language models as cognitive models**: evaluating emergent reasoning, semantic processing, and language production.
-- **Symbolic versus subsymbolic representations**: trade-offs between interpretability and scalability.
+- Build computational models of perception, memory, or reasoning.
+- Compare AI behavior to human data.
+- Probe LLM next-token predictions against human cloze.
+- Evaluate symbolic vs. subsymbolic representations.
+
+## Steps
+
+1. Build computational models of perception, memory, or reasoning.
+2. Compare AI behavior to human data.
+3. Probe LLM next-token predictions against human cloze.
+4. Evaluate symbolic vs. subsymbolic representations.
+5. Validate with reaction time and error-pattern metrics.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -185,30 +214,37 @@ outputs = model(**inputs)
 
 1. Fit a cognitive model to a choice-reaction-time dataset and recover parameters.
 2. Compare LLM and human predictions on a semantic reasoning task.
-3. Probe a neural network for symbolic compositionality and report failure modes.
-''',
+3. Probe a neural network for symbolic compositionality and report failure modes.''',
         "references": [
-            "https://doi.org/10.1146/annurev-psych-030625-040748",
-            "https://www.nature.com/articles/s41593-018-0210-5",
-            "https://doi.org/10.15212/bioi-2025-0199",
-            "https://www.cambridge.org/core/books/cambridge-handbook-of-computational-cognitive-sciences/2713AC0C8AC0B0F2B9E97DB010813883",
+            'https://doi.org/10.1146/annurev-psych-030625-040748',
+            'https://www.nature.com/articles/s41593-018-0210-5',
+            'https://doi.org/10.15212/bioi-2025-0199',
+            'https://www.cambridge.org/core/books/cambridge-handbook-of-computational-cognitive-sciences/2713AC0C8AC0B0F2B9E97DB010813883',
         ],
     },
     {
-        "name": "ai-for-neuroinformatics",
-        "title": "AI for Neuroinformatics",
-        "description": "Data science for brain imaging, neural signals, connectomics, and computational neuroscience workflows.",
+        "name": 'ai-for-neuroinformatics',
+        "title": 'AI for Neuroinformatics',
+        "description": 'Synthesize high-resolution fMRI activity from EEG and unify multimodal neural signals to study brain dynamics across datasets.',
         "devin_body": r'''## When to use
 
 You are integrating, analyzing, or sharing large-scale neuroscience data such as neuroimaging, electrophysiology, genomics, and connectomics.
 
-## Key concepts
+## Usage
 
-- **Neuroimaging data formats and pipelines**: NIfTI, CIFTI, BIDS, and tools such as fMRIPrep and FreeSurfer.
-- **Electrophysiology and calcium imaging analysis**: spike sorting, local field potentials, and time-series neural data.
-- **Brain connectomics and network neuroscience**: structural and functional connectivity, graph theory, and network dynamics.
-- **Open neuroscience data repositories and standards**: OpenNeuro, NeuroVault, and data-sharing conventions.
-- **Multimodal fusion of neural, genetic, and behavioral data**: integrating across scales and modalities.
+- Organize neuroimaging and electrophysiology data in BIDS.
+- Preprocess fMRI, EEG, and calcium-imaging data.
+- Build structural and functional connectivity graphs.
+- Decode cognitive states from neural signals.
+
+## Steps
+
+1. Organize neuroimaging and electrophysiology data in BIDS.
+2. Preprocess fMRI, EEG, and calcium-imaging data.
+3. Build structural and functional connectivity graphs.
+4. Decode cognitive states from neural signals.
+5. Share preprocessed data and code openly.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -233,30 +269,37 @@ plotting.plot_roi(atlas_img, title="Harvard-Oxford Atlas")
 
 1. Preprocess an fMRI dataset and derive a group-level connectivity matrix.
 2. Train a classifier to decode a cognitive state from EEG or fMRI data.
-3. Publish a BIDS-organized dataset and analysis pipeline on an open repository.
-''',
+3. Publish a BIDS-organized dataset and analysis pipeline on an open repository.''',
         "references": [
-            "https://doi.org/10.1007/s12021-024-09692-4",
-            "https://doi.org/10.3390/jcm14020550",
-            "https://doi.org/10.1016/j.metrad.2026.100224",
-            "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1399931/full",
+            'https://doi.org/10.1007/s12021-024-09692-4',
+            'https://doi.org/10.3390/jcm14020550',
+            'https://doi.org/10.1016/j.metrad.2026.100224',
+            'https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1399931/full',
         ],
     },
     {
-        "name": "ai-for-cancer-bioinformatics",
-        "title": "AI for Cancer Bioinformatics",
-        "description": "Multi-omics integration, tumor subtyping, biomarker discovery, and precision oncology using AI.",
+        "name": 'ai-for-cancer-bioinformatics',
+        "title": 'AI for Cancer Bioinformatics',
+        "description": 'Predict immunotherapy response from routine H&E whole-slide images and multi-omic profiles to match cancer patients to targeted treatments.',
         "devin_body": r'''## When to use
 
 You are analyzing cancer genomics, transcriptomics, proteomics, pathology images, or clinical data to identify biomarkers or guide oncology decisions.
 
-## Key concepts
+## Usage
 
-- **Multi-omics data integration**: genomics, transcriptomics, epigenomics, proteomics, and metabolomics for a holistic tumor view.
-- **Tumor classification and subtyping**: molecular subtypes, histology, and consensus clustering.
-- **Somatic mutation and copy-number analysis**: driver mutations, mutational signatures, and tumor heterogeneity.
-- **Pathology image and radiomics analysis**: whole-slide imaging and quantitative imaging features.
-- **Immunotherapy and targeted-therapy response prediction**: biomarkers such as tumor mutational burden and microsatellite instability.
+- Integrate genomics, transcriptomics, proteomics, and imaging.
+- Cluster tumor subtypes and molecular profiles.
+- Predict survival and treatment response.
+- Identify actionable biomarkers.
+
+## Steps
+
+1. Integrate genomics, transcriptomics, proteomics, and imaging.
+2. Cluster tumor subtypes and molecular profiles.
+3. Predict survival and treatment response.
+4. Identify actionable biomarkers.
+5. Validate on external cohorts and cancer pathways.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -281,30 +324,37 @@ model = RandomForestClassifier(class_weight='balanced', random_state=42).fit(X, 
 
 1. Integrate two omics layers and cluster tumor samples into subtypes.
 2. Predict survival or treatment response and validate on an external cohort.
-3. Identify top biomarkers and check consistency with known cancer pathways.
-''',
+3. Identify top biomarkers and check consistency with known cancer pathways.''',
         "references": [
-            "https://doi.org/10.1016/bs.acr.2024.06.005",
-            "https://bmjoncology.bmj.com/content/3/1/e000134",
-            "https://link.springer.com/article/10.1186/s13073-024-01315-6",
-            "https://www.mdpi.com/2072-6694/16/13/2448",
+            'https://doi.org/10.1016/bs.acr.2024.06.005',
+            'https://bmjoncology.bmj.com/content/3/1/e000134',
+            'https://link.springer.com/article/10.1186/s13073-024-01315-6',
+            'https://www.mdpi.com/2072-6694/16/13/2448',
         ],
     },
     {
-        "name": "ai-for-immunoinformatics",
-        "title": "AI for Immunoinformatics",
-        "description": "Machine learning for immune repertoire analysis, epitope prediction, vaccine design, and immunotherapy optimization.",
+        "name": 'ai-for-immunoinformatics',
+        "title": 'AI for Immunoinformatics',
+        "description": 'Use AI to work with immune sequencing, epitope prediction, vaccine design, or predicting response to immunotherapy.',
         "devin_body": r'''## When to use
 
 You are working with immune sequencing, epitope prediction, vaccine design, or predicting response to immunotherapy.
 
-## Key concepts
+## Usage
 
-- **B-cell and T-cell receptor repertoire analysis**: V(D)J recombination, clonality, and diversity metrics.
-- **MHC/peptide binding and epitope prediction**: prediction of immunogenic peptides and antigen presentation.
-- **Antigen specificity and immunogenicity modeling**: TCR/pMHC and BCR/antigen interaction prediction.
-- **Single-cell immunoprofiling and spatial transcriptomics**: immune-cell states and tissue microenvironment.
-- **Vaccine and immunotherapy design**: CAR-T, checkpoint inhibitors, and personalized cancer vaccines.
+- Process B-cell and T-cell receptor repertoire data.
+- Predict MHC/peptide binding and epitope presentation.
+- Model TCR/pMHC and BCR/antigen interactions.
+- Profile single-cell immune states.
+
+## Steps
+
+1. Process B-cell and T-cell receptor repertoire data.
+2. Predict MHC/peptide binding and epitope presentation.
+3. Model TCR/pMHC and BCR/antigen interactions.
+4. Profile single-cell immune states.
+5. Validate predicted epitopes with IEDB and assays.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -329,30 +379,37 @@ model = GradientBoostingClassifier().fit(X, y)
 
 1. Train an epitope predictor and evaluate per-allele AUC on a held-out set.
 2. Analyze a single-cell immune-repertoire dataset to identify clonal expansions.
-3. Compare predicted immunogenic peptides to experimental IEDB assay data.
-''',
+3. Compare predicted immunogenic peptides to experimental IEDB assay data.''',
         "references": [
-            "https://doi.org/10.71373/saov9257",
-            "https://doi.org/10.1038/s41592-024-02351-1",
-            "https://www.annualreviews.org/content/journals/10.1146/annurev-chembioeng-101420-125021",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7108239/",
+            'https://doi.org/10.71373/saov9257',
+            'https://doi.org/10.1038/s41592-024-02351-1',
+            'https://www.annualreviews.org/content/journals/10.1146/annurev-chembioeng-101420-125021',
+            'https://pmc.ncbi.nlm.nih.gov/articles/PMC7108239/',
         ],
     },
     {
-        "name": "ai-for-clinical-informatics",
-        "title": "AI for Clinical Informatics",
-        "description": "AI-enabled clinical decision support, EHR integration, workflow optimization, and evaluation in real-world care settings.",
+        "name": 'ai-for-clinical-informatics',
+        "title": 'AI for Clinical Informatics',
+        "description": 'Integrate sepsis prediction alerts into EHR workflows to flag at-risk patients and guide clinicians toward timely interventions.',
         "devin_body": r'''## When to use
 
 You are building, deploying, or evaluating AI tools inside clinical workflows, such as decision support, risk scores, or automated alerts.
 
-## Key concepts
+## Usage
 
-- **Clinical decision support systems (CDSS) and human-AI teaming**: alerts, order sets, and recommendations embedded in the EHR.
-- **EHR integration, FHIR, and interoperability**: deploying models within existing clinical information systems.
-- **Risk prediction, triage, and prognostic models**: early warning, deterioration, and readmission scores.
-- **Implementation science and workflow integration**: adoption, usability, and clinical workflow redesign.
-- **Safety, fairness, and continuous monitoring of clinical AI**: drift, alert fatigue, and health-equity audits.
+- Build and integrate predictive models in the EHR.
+- Deploy FHIR-based decision support and alerts.
+- Predict deterioration, readmission, or triage needs.
+- Redesign workflow and human-AI teaming.
+
+## Steps
+
+1. Build and integrate predictive models in the EHR.
+2. Deploy FHIR-based decision support and alerts.
+3. Predict deterioration, readmission, or triage needs.
+4. Redesign workflow and human-AI teaming.
+5. Monitor drift, alert fatigue, and fairness.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -380,30 +437,37 @@ for train_idx, test_idx in TimeSeriesSplit(n_splits=3).split(X):
 
 1. Build a clinical risk model and evaluate with time-split and site-split validation.
 2. Design a decision-support interface and gather clinician usability feedback.
-3. Deploy a drift monitor on model inputs and outputs in a simulated EHR stream.
-''',
+3. Deploy a drift monitor on model inputs and outputs in a simulated EHR stream.''',
         "references": [
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10751141/",
-            "https://medinform.jmir.org/2023/1/e48297",
-            "https://journals.plos.org/digitalhealth/article?id=10.1371%2Fjournal.pdig.0000514",
-            "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1550731/full",
+            'https://pmc.ncbi.nlm.nih.gov/articles/PMC10751141/',
+            'https://medinform.jmir.org/2023/1/e48297',
+            'https://journals.plos.org/digitalhealth/article?id=10.1371%2Fjournal.pdig.0000514',
+            'https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1550731/full',
         ],
     },
     {
-        "name": "ai-for-health-economics",
-        "title": "AI for Health Economics",
-        "description": "Cost-effectiveness, health technology assessment, demand and pricing models, and machine learning for health outcomes research.",
+        "name": 'ai-for-health-economics',
+        "title": 'AI for Health Economics',
+        "description": 'Use AI to evaluate the economic value, cost-effectiveness, or budget impact of health technologies and interventions using ML.',
         "devin_body": r'''## When to use
 
 You are evaluating the economic value, cost-effectiveness, or budget impact of health technologies and interventions using ML.
 
-## Key concepts
+## Usage
 
-- **Health economic evaluation**: cost-effectiveness, cost-utility, and budget-impact analysis.
-- **Health technology assessment (HTA) and pricing**: value frameworks and reimbursement decisions.
-- **Causal inference for treatment effects and policy evaluation**: observational methods and quasi-experiments.
-- **Real-world evidence and claims data analysis**: large administrative and EHR datasets for economic outcomes.
-- **Equity and distributional cost-effectiveness analysis**: trade-offs across population groups.
+- Build cost, QALY, and budget-impact models.
+- Estimate causal treatment effects from observational data.
+- Run probabilistic sensitivity and bootstrapping.
+- Report ICER and acceptability curves.
+
+## Steps
+
+1. Build cost, QALY, and budget-impact models.
+2. Estimate causal treatment effects from observational data.
+3. Run probabilistic sensitivity and bootstrapping.
+4. Report ICER and acceptability curves.
+5. Align with payer, societal, and health-system perspectives.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -428,30 +492,37 @@ print("ICER:", icer)
 
 1. Replicate a cost-effectiveness analysis with bootstrapped confidence intervals.
 2. Estimate a causal treatment effect from observational claims data.
-3. Build an acceptability curve and compare it to a cost-effectiveness threshold.
-''',
+3. Build an acceptability curve and compare it to a cost-effectiveness threshold.''',
         "references": [
-            "https://doi.org/10.1016/j.jval.2026.01.014",
-            "https://link.springer.com/article/10.1186/s13561-025-00645-4",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC11786987/",
-            "https://doi.org/10.1016/j.jval.2023.09.2123",
+            'https://doi.org/10.1016/j.jval.2026.01.014',
+            'https://link.springer.com/article/10.1186/s13561-025-00645-4',
+            'https://pmc.ncbi.nlm.nih.gov/articles/PMC11786987/',
+            'https://doi.org/10.1016/j.jval.2023.09.2123',
         ],
     },
     {
-        "name": "ai-for-precision-public-health",
-        "title": "AI for Precision Public Health",
-        "description": "Subpopulation-targeted prevention, genomics-guided public health, geospatial risk modeling, and equitable intervention targeting.",
+        "name": 'ai-for-precision-public-health',
+        "title": 'AI for Precision Public Health',
+        "description": 'Use AI to design data-driven public health interventions that tailor prevention, screening, or resource allocation to specific populations or contexts.',
         "devin_body": r'''## When to use
 
 You are designing data-driven public health interventions that tailor prevention, screening, or resource allocation to specific populations or contexts.
 
-## Key concepts
+## Usage
 
-- **Precision public health and stratified prevention**: delivering the right intervention to the right population at the right time.
-- **Genomics, exposomics, and social determinants of health integration**: layered risk modeling.
-- **Geospatial and spatiotemporal risk modeling**: identifying local disease clusters and hotspots.
-- **Targeted intervention allocation and microplanning**: prioritizing communities, facilities, or individuals under constraints.
-- **Equity, ethics, and community engagement**: avoiding stigma and ensuring fair distribution of benefits.
+- Layer genomics, exposome, and social-determinant data.
+- Model local disease risk and hotspots.
+- Prioritize communities and facilities under budget.
+- Design targeted prevention and screening.
+
+## Steps
+
+1. Layer genomics, exposome, and social-determinant data.
+2. Model local disease risk and hotspots.
+3. Prioritize communities and facilities under budget.
+4. Design targeted prevention and screening.
+5. Audit for equity, stigma, and community trust.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -476,30 +547,37 @@ priority_areas = gdf.sort_values('risk_score', ascending=False).head(20)
 
 1. Build a subpopulation risk model and audit for geographic and demographic fairness.
 2. Simulate targeted versus universal intervention allocation under a budget constraint.
-3. Evaluate equity metrics before and after deploying a precision prevention strategy.
-''',
+3. Evaluate equity metrics before and after deploying a precision prevention strategy.''',
         "references": [
-            "https://www.nature.com/articles/s41591-024-03098-0",
-            "https://doi.org/10.1159/000538141",
-            "https://link.springer.com/article/10.1186/s40537-025-01201-x",
-            "https://publichealth.jmir.org/2025/1/e68952",
+            'https://www.nature.com/articles/s41591-024-03098-0',
+            'https://doi.org/10.1159/000538141',
+            'https://link.springer.com/article/10.1186/s40537-025-01201-x',
+            'https://publichealth.jmir.org/2025/1/e68952',
         ],
     },
     {
-        "name": "ai-for-global-health",
-        "title": "AI for Global Health",
-        "description": "AI for disease burden, healthcare systems, and health equity in low- and middle-income countries and resource-limited settings.",
+        "name": 'ai-for-global-health',
+        "title": 'AI for Global Health',
+        "description": 'Use AI to design or evaluate AI for health challenges in global or resource-limited settings, with a focus on equity, access, and implementation.',
         "devin_body": r'''## When to use
 
 You are designing or evaluating AI for health challenges in global or resource-limited settings, with a focus on equity, access, and implementation.
 
-## Key concepts
+## Usage
 
-- **Global health equity and context-specific validation**: performance, acceptability, and fairness in diverse settings.
-- **Low-resource deployment, mobile health, and task shifting**: point-of-care and community health tools.
-- **Open data, data sovereignty, and local capacity building**: community-owned data and workforce development.
-- **AI for tropical and neglected diseases, maternal/child health, and outbreak response**: priority conditions in LMICs.
-- **Implementation and cost-effectiveness in LMICs**: real-world evidence and scalability.
+- Co-design tools with local clinicians and communities.
+- Train portable triage and diagnostic models.
+- Validate on local devices and infrastructure.
+- Evaluate cost-effectiveness and scalability.
+
+## Steps
+
+1. Co-design tools with local clinicians and communities.
+2. Train portable triage and diagnostic models.
+3. Validate on local devices and infrastructure.
+4. Evaluate cost-effectiveness and scalability.
+5. Ensure data sovereignty and equitable access.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -525,30 +603,37 @@ model = RandomForestClassifier(class_weight='balanced').fit(X, y)
 
 1. Validate a diagnostic or triage model on data from the target country or region.
 2. Assess model performance across facility types and demographic groups.
-3. Estimate cost-effectiveness and implementation feasibility in a local health system.
-''',
+3. Estimate cost-effectiveness and implementation feasibility in a local health system.''',
         "references": [
-            "https://annalsofglobalhealth.org/articles/10.5334/aogh.5268",
-            "https://doi.org/10.1016/s0140-6736(20)30226-9",
-            "https://doi.org/10.1038/s41746-022-00700-y",
-            "https://doi.org/10.1016/S2214-109X(25)00473-5",
+            'https://annalsofglobalhealth.org/articles/10.5334/aogh.5268',
+            'https://doi.org/10.1016/s0140-6736(20)30226-9',
+            'https://doi.org/10.1038/s41746-022-00700-y',
+            'https://www.research.ed.ac.uk/en/publications/research-priorities-for-data-science-and-artificial-intelligence-/',
         ],
     },
     {
-        "name": "ai-for-health-services-research",
-        "title": "AI for Health Services Research",
-        "description": "AI for healthcare access, quality, utilization, policy, workforce, and health-system performance.",
+        "name": 'ai-for-health-services-research',
+        "title": 'AI for Health Services Research',
+        "description": 'Analyze real-world care delivery and access patterns to identify disparities and evaluate whether digital tools improve equity.',
         "devin_body": r'''## When to use
 
 You are studying healthcare delivery, access, quality, utilization, or policy using observational data and machine learning.
 
-## Key concepts
+## Usage
 
-- **Health services research methods and quasi-experimental designs**: difference-in-differences, regression discontinuity, and interrupted time series.
-- **Healthcare utilization, access, and disparities**: inpatient, outpatient, emergency, and preventive service use.
-- **Quality measurement and patient safety**: readmissions, adverse events, and process-of-care metrics.
-- **Health policy and economic evaluation**: policy impact, HTA, and resource allocation.
-- **Machine learning for evidence synthesis and health system optimization**: systematic review automation and operations research.
+- Apply quasi-experimental designs to policy evaluation.
+- Analyze utilization, access, and disparities.
+- Measure quality and patient safety outcomes.
+- Model resource allocation and system optimization.
+
+## Steps
+
+1. Apply quasi-experimental designs to policy evaluation.
+2. Analyze utilization, access, and disparities.
+3. Measure quality and patient safety outcomes.
+4. Model resource allocation and system optimization.
+5. Translate findings into policy and implementation.
+6. Validate on local devices, clinical measurements, and diverse populations before embedding into EHR or public-health workflows (ChatEHR-style).
 
 ## Code pattern
 
@@ -572,13 +657,12 @@ print(model.params['treatment_post'])
 
 1. Evaluate a healthcare policy change using a difference-in-differences design.
 2. Predict hospital readmissions and identify modifiable utilization drivers.
-3. Map AI implementation barriers from a mixed-methods health services study.
-''',
+3. Map AI implementation barriers from a mixed-methods health services study.''',
         "references": [
-            "https://link.springer.com/article/10.1186/s12913-025-12664-2",
-            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9582911/",
-            "https://link.springer.com/article/10.1186/s12913-023-10462-2",
-            "https://www.ncbi.nlm.nih.gov/books/NBK620201/",
+            'https://link.springer.com/article/10.1186/s12913-025-12664-2',
+            'https://pmc.ncbi.nlm.nih.gov/articles/PMC9582911/',
+            'https://link.springer.com/article/10.1186/s12913-023-10462-2',
+            'https://www.ncbi.nlm.nih.gov/books/NBK620201/',
         ],
     },
 ]

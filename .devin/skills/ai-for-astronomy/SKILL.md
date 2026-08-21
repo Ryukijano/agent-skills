@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning for survey-scale classification, transient detection, galaxy morphology, light-curve analysis, and telescope scheduling.
+Use machine learning to triage survey alerts, classify celestial transients, and map galaxy morphology from petabyte-scale imaging and time-series data.
 
 ## When to use
 
 You are analyzing large imaging or time-domain astronomical surveys, classifying galaxies or transients, or prioritizing follow-up observations.
 
-## Key concepts
+## Usage
 
-- **Survey data**: Rubin/LSST, ZTF, TESS, JWST, and Euclid produce petabyte-scale catalogs.
-- **Light curves and images**: time-series classification, anomaly detection, and image segmentation.
-- **Simulation-based inference**: amortized posterior estimation for complex forward models.
-- **Foundation models**: large-scale pre-training on unlabeled spectra or images.
+- Triage LSST/ZTF/TESS alerts for supernovae, kilonovae, and variable stars in near real time.
+- Classify galaxy morphology and estimate photometric redshifts from survey imaging.
+- Detect anomalies in streaming time-domain data to prioritize follow-up observations.
+- Emulate telescope scheduling and target-prioritization functions for survey operations.
+
+## Steps
+
+1. Ingest and calibrate multi-epoch imaging or light-curve data from a survey archive.
+2. Extract physics-aware features (period, amplitude, color, host-galaxy offset) or train deep embeddings.
+3. Train a classifier or anomaly detector and calibrate probabilities under class imbalance.
+4. Validate on a held-out field and compare predictions to a trusted reference catalog.
+5. Deploy the model into the alert broker to route high-priority targets to spectroscopic follow-up.
 
 ## Code pattern
 

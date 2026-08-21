@@ -2,19 +2,30 @@
 
 ## Description
 
-General medical image preprocessing, segmentation, classification, and deployment with DICOM, MONAI, nnU-Net, and clinical AI pipelines.
+Use AI for Medical Imaging to preprocess, segment and deploy clinical AI pipelines with DICOM and MONAI.
 
 ## When to use
 
 You need a general framework for medical image preprocessing, segmentation, classification, or deployment into clinical DICOM/NIfTI workflows.
 
-## Key concepts
 
-- **DICOM and NIfTI I/O**: loading, metadata handling, windowing, and orientation.
+## Usage
+
+
+- **DICOM and NIfTI I/O**: Loading, metadata handling, windowing, and orientation.
 - **MONAI**: PyTorch-based framework with medical-specific transforms and networks.
-- **nnU-Net**: self-configuring segmentation framework that automatically sets preprocessing and architecture.
+- **nnU-Net**: Self-configuring segmentation framework that automatically sets preprocessing and architecture.
 - **3D architectures**: UNETR, SwinUNETR, VISTA-3D, and generative models like MAISI.
-- **Clinical deployment**: containerized MONAI Application Packages (MAP), FHIR, and DICOM routers.
+- **Clinical deployment**: Containerized MONAI Application Packages (MAP), FHIR, and DICOM routers.
+
+## Steps
+
+1. Collect and prepare DICOM/NIfTI images and segmentation labels.
+2. A general framework for medical image preprocessing.
+3. Segmentation.
+4. Classification.
+5. Validate by training a 3D segmentation model on a public medical imaging benchmark.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -43,12 +54,14 @@ model = UNETR(
 )
 ```
 
+
 ## Tuning notes
 
 - Match patch sizes and batch sizes to available GPU memory.
 - Use MONAI's Auto3DSeg or nnU-Net to avoid manual pipeline tuning.
 - Ensure reproducibility with containerized MAP packaging.
 - Validate with clinical metrics: Dice, Hausdorff distance, and surface distance.
+
 
 ## Verification
 
@@ -59,7 +72,7 @@ model = UNETR(
 ## References
 
 - https://project-monai.github.io/
-- https://docs.monai.io/en/stable/
+- https://monai.readthedocs.io/en/stable/
 - https://github.com/Project-MONAI/MONAI/
 - https://www.nature.com/articles/s41592-020-01008-z
 - https://github.com/mic-dkfz/nnunet/

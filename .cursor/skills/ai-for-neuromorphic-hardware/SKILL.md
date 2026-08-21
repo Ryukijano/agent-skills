@@ -2,18 +2,27 @@
 
 ## Description
 
-Spiking neural network training, SNN-to-chip mapping, event-based processing, and co-design with analog/mixed-signal neuromorphic platforms.
+Use machine learning to train spiking neural networks and map them to neuromorphic chips such as Loihi and SpiNNaker.
 
 ## When to use
 
 You are programming or designing neuromorphic chips (e.g., Loihi, TrueNorth, BrainScaleS, SpiNNaker) and need to train and deploy SNNs.
 
-## Key concepts
+## Usage
 
-- **Spiking neural networks (SNNs)**: event-driven, sparse computation with temporal dynamics.
-- **Training methods**: surrogate gradients, ANN-to-SNN conversion, and direct SNN training with time-to-first-spike coding.
-- **Chip mapping**: mapping neurons/synapses to cores, on-chip learning, and spike routing constraints.
-- **Event-based sensing**: pairing DVS cameras and silicon cochleas with neuromorphic processors.
+- Train event-driven SNNs with surrogate gradients, ANN-to-SNN conversion, or direct time-to-first-spike coding.
+- Map neurons and synapses to cores while respecting on-chip learning and routing constraints.
+- Pair DVS cameras and silicon cochleas with neuromorphic processors for event-based sensing.
+- Balance accuracy with spike sparsity for energy-efficient inference.
+
+## Steps
+
+1. Choose a neuromorphic chip or simulator (Loihi, TrueNorth, BrainScaleS, SpiNNaker).
+2. Prepare an event-based dataset (N-MNIST, DVS Gesture) and preprocess spikes.
+3. Train the SNN with surrogate gradients or conversion and tune time constants.
+4. Map the SNN to cores and verify spike routing feasibility.
+5. Validate accuracy and event count on the target simulator or hardware.
+6. Measure energy per spike and latency for the target workload.
 
 ## Code pattern
 

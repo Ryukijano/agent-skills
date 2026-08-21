@@ -2,19 +2,28 @@
 
 ## Description
 
-Imitation learning, reinforcement learning, sim-to-real, and foundation models for robot manipulation and navigation.
+Use imitation learning, reinforcement learning, and foundation models to train robot manipulation and navigation policies that transfer from simulation to reality.
 
 ## When to use
 
 You are building robot perception, control, or planning systems using learning.
 
-## Key concepts
+## Usage
 
-- **Imitation learning**: behavioral cloning, DAgger.
-- **Reinforcement learning for control**: PPO, SAC, MBPO.
-- **Sim-to-real**: domain randomization, adaptation, distillation.
-- **Foundation models for robotics**: vision-language-action models (RT-X, Open X-Embodiment).
-- **ROS / Isaac Sim / PyBullet**: common robot middleware and simulators.
+- Learn manipulation and navigation policies from human demonstrations or expert trajectories (imitation learning).
+- Train control policies with reinforcement learning (PPO, SAC) in simulated environments.
+- Close the sim-to-real gap with domain randomization, co-training, actuator gap estimation, and adaptation.
+- Leverage vision-language-action (VLA) and foundation models (RT-X, GR00T, Open X-Embodiment) for generalist robot behavior.
+- Integrate robot middleware and simulators (ROS, Isaac Sim, Isaac Lab, PyBullet) into data collection and deployment.
+
+## Steps
+
+1. Define the robot task, embodiment, sensor inputs, and action space.
+2. Build or select a simulation environment and collect demonstration or replay data.
+3. Train a policy with imitation learning, reinforcement learning, or a foundation VLA model.
+4. Apply sim-to-real techniques (domain randomization, camera calibration, actuator modeling, co-training).
+5. Validate the policy in simulation on task success, robustness, and safety metrics.
+6. Deploy to the physical robot and compare real vs. simulated trajectories; iterate on the gap.
 
 ## Code pattern
 

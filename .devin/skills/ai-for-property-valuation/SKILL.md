@@ -2,7 +2,7 @@
 
 ## Description
 
-Automated valuation models, hedonic pricing, spatial machine learning, and deep learning for residential and commercial property appraisal.
+Estimates residential and commercial property values by fusing sales comparables, spatial features, and imagery into automated valuation models.
 
 ## When to use
 
@@ -19,8 +19,8 @@ You need to estimate market values, support appraisal workflows, or build automa
 
 1. Gather sales transactions, property characteristics, and geospatial attributes.
 2. Engineer features for size, age, locational amenities, and spatial lags.
-3. Train and validate regression/AVM models (XGBoost, LightGBM, DNN, GNN).
-4. Evaluate with MAPE, RMSE, and cross-validation across neighborhoods.
+3. Train and validate regression/AVM models on assessor or listing data such as C3 AI Property Appraisal or VOA AVM.
+4. Evaluate with MAPE, RMSE, and cross-validation across neighborhoods and time.
 5. Deploy a monitoring pipeline for drift and appraisal-review workflow.
 
 ## Code pattern

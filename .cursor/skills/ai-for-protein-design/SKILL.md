@@ -2,20 +2,29 @@
 
 ## Description
 
-Inverse folding, generative backbone design, and binder engineering with ProteinMPNN, RFdiffusion, structure predictors, and Rosetta validation.
+Generate de novo binders and enzymes from target structures or reactions using inverse folding and diffusion models.
 
 ## When to use
 
 You need a protein sequence for a fixed backbone, a de novo protein binder, or a new scaffold with specified structure or function.
 
-## Key concepts
+## Usage
 
-- **Inverse folding**: predict an amino-acid sequence that folds into a target backbone.
-- **ProteinMPNN**: message-passing neural network for sequence design.
-- **RFdiffusion**: diffusion model for generating protein backbones and binders.
-- **Structure prediction**: AlphaFold2, ESMFold, or OpenFold to validate designs.
-- **Interface metrics**: pLDDT, pAE, interface RMSD, binding energy.
-- **Mutagenesis**: design focused libraries and assess stability.
+- **Inverse folding**: use ProteinMPNN or similar models to predict sequences for a fixed backbone.
+- **Backbone generation**: design de novo scaffolds or binders around a target motif with RFdiffusion.
+- **In silico validation**: refold designed sequences with AlphaFold2, ESMFold, or OpenFold and compute pLDDT/pAE/scRMSD.
+- **Interface filtering**: rank candidates by interface pLDDT, pAE, shape complementarity, and hotspot residues.
+- **Focused mutagenesis**: build stability or affinity libraries around promising designs.
+- **Experimental triage**: move high-confidence binders to expression and biophysical assays (BLI, SPR, yeast display).
+
+## Steps
+
+1. Specify the target structure, epitope, or binding hotspot and the desired binder length/constraints.
+2. Generate candidate backbones with RFdiffusion conditioned on the target motif or interface.
+3. Design amino-acid sequences for each backbone using ProteinMPNN.
+4. Refold designed sequences and compute self-consistency metrics (pLDDT, pAE, scRMSD, scTM).
+5. Rank candidates by interface quality, hotspot coverage, and predicted expressability.
+6. Express and validate top candidates with binding or activity assays (BLI, SPR, crystallography).
 
 ## Code pattern
 

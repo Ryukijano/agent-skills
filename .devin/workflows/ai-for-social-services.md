@@ -1,6 +1,6 @@
 # /ai-for-social-services
 
-Eligibility screening, benefits triage, case management support, risk stratification, and resource matching for social care and public assistance.
+Matches clients to benefits and services by triaging eligibility, risk, and available community resources.
 
 ## Trigger
 

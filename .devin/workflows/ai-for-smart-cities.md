@@ -1,6 +1,6 @@
 # /ai-for-smart-cities
 
-Urban computing, IoT analytics, spatio-temporal forecasting, mobility, public safety, and citizen-centric services.
+Optimize fixed-time traffic signals from connected-vehicle trajectories to cut urban delays and stops by up to 30 percent.
 
 ## Trigger
 

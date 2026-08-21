@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for solar-cell materials discovery, perovskite and organic PV optimization, device engineering, and stability prediction.
+Use ML and high-throughput experimentation to discover solar-cell absorbers, optimize perovskite and organic PV, and predict device performance and stability.
 
 ## When to use
 
 You are exploring new absorbers, interfaces, or processing conditions for perovskite, organic, silicon, or tandem solar cells.
 
-## Key concepts
+## Usage
 
-- **Materials screening for absorbers**: bandgap, carrier mobility, defect tolerance, and toxicity prediction.
-- **Perovskite composition and process design**: high-throughput experiments, robotic synthesis, and AI-guided optimization.
-- **Organic photovoltaic (OPV) design**: molecular property prediction, non-fullerene acceptor discovery, and device-performance modeling.
-- **Stability and degradation forecasting**: predict long-term performance under light, heat, and humidity.
-- **Tandem and emerging architectures**: bandgap matching and current-matching for multi-junction cells.
+- Screen absorbers for bandgap, carrier mobility, defect tolerance, and toxicity.
+- Optimize perovskite composition and processing with high-throughput experiments and robotic synthesis.
+- Predict molecular and device properties for organic photovoltaics and non-fullerene acceptors.
+- Forecast stability and degradation under light, heat, and humidity for candidate cells.
+
+## Steps
+
+1. Define target application (single-junction, tandem, flexible) and collect material and device datasets.
+2. Train models to predict bandgap, carrier mobility, absorption, and defect tolerance for absorber candidates.
+3. Run high-throughput or robotic experiments to synthesize and characterize perovskite/organic films.
+4. Build a device-performance model that couples material descriptors to measured PCE, FF, and VOC.
+5. Forecast stability under accelerated aging and identify degradation mechanisms.
+6. Validate top candidates with real devices and iterate the model with new experimental results.
 
 ## Code pattern
 

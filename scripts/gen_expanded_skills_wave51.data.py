@@ -2,18 +2,27 @@ SKILLS = [
     {
         "name": "ai-for-additive-manufacturing",
         "title": "AI for Additive Manufacturing",
-        "description": "Machine learning for powder-bed fusion, directed energy deposition, in-situ monitoring, defect detection, build simulation, and process parameter optimization in additive manufacturing.",
+        "description": "Use machine learning on in-situ sensor and process data together with post-build inspection to detect defects, optimize build settings and certify metal or polymer additive parts.",
         "devin_body": r'''## When to use
 
 You are optimizing metal or polymer additive manufacturing processes, predicting part quality from build parameters, detecting defects from in-situ sensor data, or training surrogate models for residual stress and distortion.
 
-## Key concepts
+## Usage
 
-- **Process parameter mapping**: laser power, scan speed, hatch spacing, layer thickness, and energy density windows.
-- **In-situ sensing**: melt-pool images, photodiodes, thermal cameras, acoustic emission, and spatter monitoring.
-- **Defect classification**: porosity, lack of fusion, balling, keyholing, and crack detection from image or time-series data.
-- **Build planning**: support design, orientation, scan strategy, and thermal history effects on microstructure.
-- **Digital twins and surrogate models**: fast prediction of distortion, residual stress, and mechanical properties.
+- **Monitor in-situ**: analyze melt-pool images, photodiode signals, thermal data, and acoustic emissions.
+- **Detect defects**: classify porosity, balling, lack of fusion, and cracks during the build.
+- **Optimize parameters**: relate laser power, scan speed, and hatch spacing to density and microstructure.
+- **Predict microstructure**: link thermal history to grain structure, phase, and mechanical properties.
+- **Reduce inspection**: replace or prioritize destructive and CT testing with in-situ quality metrics.
+
+## Steps
+
+1. Collect in-situ sensor data and process logs synchronized to layer and build coordinates.
+2. Label or segment anomalies using XCT, microscopy, or post-build NDT as ground truth.
+3. Extract spatiotemporal features and train a defect classifier on layer-wise signals.
+4. Relate process parameters and thermal history to porosity, microstructure, and properties.
+5. Optimize process parameters with surrogate models or Bayesian optimization.
+6. Validate in-situ predictions against physical tests and qualify the workflow.
 
 ## Code pattern
 
@@ -51,18 +60,27 @@ model = GradientBoostingClassifier(random_state=42).fit(X, y)
     {
         "name": "ai-for-composites-manufacturing",
         "title": "AI for Composites Manufacturing",
-        "description": "Machine learning for automated fiber placement, tape laying, resin infusion, cure monitoring, defect detection, and process optimization in composite part manufacturing.",
+        "description": "Use computer vision and machine learning to inspect automated fiber placement and tape-laying processes, detect defects and optimize thermal and compaction parameters in composite curing.",
         "devin_body": r'''## When to use
 
 You are manufacturing fiber-reinforced composite parts and need to detect layup defects, predict cure state, optimize AFP/ATL process parameters, or build digital twins for autoclave and resin-infusion processes.
 
-## Key concepts
+## Usage
 
-- **AFP/ATL defects**: tow gaps, overlaps, wrinkles, foreign objects, and fiber deviation from programmed paths.
-- **Cure and consolidation**: temperature cycle, degree of cure, resin viscosity, exotherm, and void evolution.
-- **Resin flow and permeability**: variability in preform architecture and flow-front monitoring for RTM/infusion.
-- **Non-destructive evaluation**: ultrasonic, thermography, and laser profilometry for defect triangulation.
-- **Multimodal process control**: fusing thermal, vision, and point-cloud data for real-time control.
+- **Inspect AFP**: detect gaps, overlaps, twists, and foreign objects with in-process cameras and laser profilometry.
+- **Monitor cure**: use thermal sensors and dielectric analysis to track resin flow and degree of cure.
+- **Predict quality**: relate tow placement, compaction, and temperature to voids and mechanical properties.
+- **Optimize autoclave**: reduce cure cycle time and energy while meeting quality specs.
+- **Build digital twins**: fuse process, inspection, and simulation data for closed-loop control.
+
+## Steps
+
+1. Collect in-process images, laser scans, and cure sensor data from AFP or ATL lines.
+2. Annotate defect classes and register data to a 3D digital layup model.
+3. Train CNN or segmentation models to detect and classify defects in real time.
+4. Model cure kinetics and thermal history to predict degree of cure and residual stress.
+5. Optimize placement and cure parameters with a surrogate or physics-informed model.
+6. Validate part quality with ultrasound, CT, or mechanical testing and close the feedback loop.
 
 ## Code pattern
 
@@ -101,18 +119,27 @@ clf = RandomForestClassifier(n_estimators=200, random_state=42).fit(patches, lab
     {
         "name": "ai-for-semiconductor-manufacturing",
         "title": "AI for Semiconductor Manufacturing",
-        "description": "Machine learning for semiconductor fabrication yield enhancement, wafer defect detection, equipment fault classification, process control, and advanced lithography/etch modeling.",
+        "description": "Use AI to predict wafer yield, detect defects, run virtual metrology, schedule equipment and control advanced processes in high-volume semiconductor fabrication.",
         "devin_body": r'''## When to use
 
 You are working with wafer fabrication data, trying to predict die yield, classify wafer or equipment faults, build virtual metrology models, or optimize lithography and etch processes.
 
-## Key concepts
+## Usage
 
-- **Yield and WAT prediction**: models that map equipment, process, and inline metrology data to final test yield.
-- **Fault detection and classification (FDC)**: anomaly detection on tool trace data for chamber drift or misprocess.
-- **Virtual metrology**: inferring wafer properties from process data when inline measurement is sparse.
-- **Lithography and etch**: hotspot detection, overlay correction, critical dimension prediction, and endpoint control.
-- **Run-to-run control**: adaptive adjustment of recipe parameters using feedback from measured outputs.
+- **Virtual metrology**: predict wafer properties such as film thickness and CD from tool sensor data.
+- **Defect detection**: classify wafer defects, reticle defects, and macro defects from images.
+- **Yield prediction**: combine process parameters, tool data, and inspection results to forecast yield.
+- **Predictive maintenance**: forecast tool failures, chamber matching issues, and unscheduled downtime.
+- **Run-to-run control**: adjust process recipes based on real-time predictions and feedback.
+
+## Steps
+
+1. Collect tool sensor data, process parameters, and inspection/metrology results per wafer.
+2. Build a virtual metrology model for target properties and validate against physical measurements.
+3. Train defect classifiers on wafer images and review precision-recall for each defect type.
+4. Engineer wafer-level features for yield prediction and rank root causes.
+5. Deploy a run-to-run controller that updates recipe parameters based on predictions.
+6. Continuously retrain models as tools, products, and processes evolve.
 
 ## Code pattern
 
@@ -153,18 +180,27 @@ for train, test in TimeSeriesSplit(n_splits=5).split(X):
     {
         "name": "ai-for-nanomanufacturing",
         "title": "AI for Nanomanufacturing",
-        "description": "Machine learning for nanoscale fabrication, roll-to-roll processing, nanoimprint lithography, self-assembly, nanoscale metrology, and process control.",
+        "description": "Use machine learning to control, inspect and optimize nanoimprint lithography, roll-to-roll patterning, self-assembly and nanoscale metrology for high-throughput nanofabrication.",
         "devin_body": r'''## When to use
 
 You are developing scalable nanomanufacturing processes such as roll-to-roll nanoimprint, directed self-assembly, or top-down patterning, and need to model process–structure relationships, optimize throughput, or detect nanoscale defects.
 
-## Key concepts
+## Usage
 
-- **Top-down and bottom-up processes**: nanoimprint, photolithography, electron-beam patterning, self-assembly, and atomic layer deposition.
-- **Roll-to-roll control**: web tension, speed, registration, coating uniformity, and defect propagation.
-- **Nanoscale metrology**: SEM, AFM, scatterometry, and optical scatter for pattern quality.
-- **Defect and yield modeling**: classification of bridging, missing features, line-edge roughness, and particles.
-- **Multimodal data fusion**: combining in-line optical, electrical, and dimensional measurements.
+- **Control NIL**: tune pressure, temperature, and UV dose to minimize residual layer and defects.
+- **In-line metrology**: use scatterometry, diffractometry, and hyperspectral imaging for CD and thickness.
+- **Pattern inspection**: detect nanoscale defects and dimensional drift in roll-to-roll processes.
+- **Model self-assembly**: predict block-copolymer or colloidal assembly morphologies.
+- **Optimize process windows**: combine simulation, metrology, and ML for robust nanofabrication.
+
+## Steps
+
+1. Define critical dimensions and select in-line or off-line metrology for the nanofeature.
+2. Collect process parameters and metrology data across conditions and materials.
+3. Train a regression or classification model to predict CD, defects, or yield.
+4. Use optical scatterometry or diffractometry to enable high-speed in-line inspection.
+5. Optimize process settings with Bayesian or physics-informed surrogate models.
+6. Validate nanoscale accuracy against SEM, AFM, or TEM and feed results back to the model.
 
 ## Code pattern
 
@@ -196,24 +232,33 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
             "https://doi.org/10.3390/ma17071621",
             "https://doi.org/10.3390/nano12152646",
             "https://doi.org/10.2174/9798898812942125010010",
-            "https://par.nsf.gov/biblio/10642916",
+            "https://doi.org/10.1515/revce-2024-0029",
         ],
     },
     {
         "name": "ai-for-textile-manufacturing",
         "title": "AI for Textile Manufacturing",
-        "description": "Machine learning for yarn, fabric, and garment manufacturing: spinning, weaving, knitting, dyeing, finishing, quality inspection, and production optimization.",
+        "description": "Use computer vision and time-series machine learning with process control to inspect fabrics, optimize dyeing, reduce defects and predict loom and knitting machine performance in textile production.",
         "devin_body": r'''## When to use
 
 You are automating textile production lines, detecting fabric defects, predicting dye recipes, optimizing loom parameters, or monitoring the quality of spinning, weaving, and finishing processes.
 
-## Key concepts
+## Usage
 
-- **Fabric defect detection**: holes, stains, weft and warp breaks, pattern misalignments, and foreign fibers.
-- **Yarn and spinning quality**: count, strength, evenness, hairiness, and breakage prediction.
-- **Dyeing and finishing**: color prediction, dye recipe recommendation, K/S value, exhaustion rate, and shade matching.
-- **Process monitoring**: loom stoppages, tension, machine vibration, and predictive maintenance.
-- **Sustainability**: waste reduction, water/energy optimization, and recycled fiber traceability.
+- **Detect defects**: inspect woven, knitted, and printed fabric for stains, holes, broken yarns, and color variations.
+- **Optimize dyeing**: control pH, temperature, and dye concentration using color feedback.
+- **Predict maintenance**: forecast loom, spindle, and knitting faults from vibration and sound.
+- **Classify fibers**: identify fiber types, blends, and yarn quality from images and spectra.
+- **Reduce waste**: adjust process settings in real time to minimize defects and rework.
+
+## Steps
+
+1. Capture images or sensor data from looms, dyeing lines, or inspection stations.
+2. Annotate fabric defects and color deviations with operators and reference standards.
+3. Train detection or segmentation models and validate on production-line speed.
+4. Build a color and chemistry feedback model for dyeing baths.
+5. Implement predictive maintenance on machine health signals.
+6. Measure defect reduction, color consistency, and throughput improvements.
 
 ## Code pattern
 
@@ -251,18 +296,27 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-polymer-processing",
         "title": "AI for Polymer Processing",
-        "description": "Machine learning for extrusion, injection molding, blow molding, compounding, mixing, and polymer recycling process optimization and quality control.",
+        "description": "Use machine learning on polymer processing data to predict part quality, detect instabilities, optimize cycle times and reduce scrap.",
         "devin_body": r'''## When to use
 
 You are running polymer processing equipment and need to set initial operating points, predict part quality, monitor melt quality, detect process instabilities, or optimize energy and material use in extrusion, injection, or blow molding.
 
-## Key concepts
+## Usage
 
-- **Injection molding**: plasticizing, filling, packing, cooling, shrinkage, warpage, and cycle time.
-- **Extrusion and compounding**: screw geometry, throughput, melt temperature, mixing, and residence time.
-- **Process signatures**: pressure, temperature, torque, and inline rheometry or NIR spectra.
-- **Quality prediction**: dimensional accuracy, sink marks, flash, short shots, and mechanical properties.
-- **Recycling and variability**: handling post-consumer, post-industrial, and mixed feedstocks.
+- **Predict quality**: forecast dimensional, cosmetic, and mechanical properties from process data.
+- **Detect instabilities**: identify flow-front, pressure, and temperature excursions.
+- **Optimize parameters**: tune injection velocity, pack/hold, cooling, and extruder settings.
+- **Monitor extrusion**: predict diameter, thickness, and die swell from in-line sensors.
+- **Reduce scrap**: classify and trace defects to root process conditions.
+
+## Steps
+
+1. Install sensors for temperature, pressure, flow, and machine setpoints and log per-shot data.
+2. Label quality outcomes and defects from inspection or SPC data.
+3. Train regression or classification models to predict part quality or stability.
+4. Identify key process parameters with feature importance and DOE validation.
+5. Optimize settings with surrogate models and validate on production trials.
+6. Deploy a real-time dashboard and controller to flag out-of-control conditions.
 
 ## Code pattern
 
@@ -300,18 +354,27 @@ model = MLPRegressor(hidden_layer_sizes=(64, 64), random_state=42, max_iter=2000
     {
         "name": "ai-for-metal-forming",
         "title": "AI for Metal Forming",
-        "description": "Machine learning for sheet-metal stamping, deep drawing, forging, rolling, extrusion, springback prediction, die design, and forming-limit prediction.",
+        "description": "Use machine learning and finite-element surrogates to predict springback, wrinkling and tearing while optimizing die design and controlling stamping and deep-drawing or forging processes.",
         "devin_body": r'''## When to use
 
 You are designing or troubleshooting sheet-metal, forging, or extrusion processes and need to predict springback, wrinkling, or tearing, optimize blank geometry, select forming parameters, or build fast surrogate models from finite element analysis.
 
-## Key concepts
+## Usage
 
-- **Springback and distortion**: elastic recovery after forming, influenced by material, friction, and tooling.
-- **Forming limits**: necking, wrinkling, and fracture in stamping and deep drawing.
-- **Process parameters**: blank holder force, die radius, drawbead geometry, punch speed, and lubrication.
-- **FEA surrogates**: graph and image-based models that replace expensive nonlinear simulations.
-- **Blank shape optimization**: inverse design to minimize material use and trimming.
+- **Predict springback**: build data-driven or physics-informed surrogate models from FEA data.
+- **Optimize die geometry**: suggest addendum, radii, and drawbeads to reduce defects.
+- **Classify defects**: detect wrinkles, splits, and surface defects from images or simulations.
+- **Select parameters**: recommend blank holder force, friction, and punch speed.
+- **Accelerate FEA**: replace expensive simulations with fast ML surrogates for design exploration.
+
+## Steps
+
+1. Generate or collect FEA simulation data with varying material, geometry, and process parameters.
+2. Train surrogate models to predict springback, stress, or forming limit diagrams.
+3. Use the surrogate to optimize die geometry and process parameters with search algorithms.
+4. Validate surrogate predictions against physical stampings, deep draws, or forging trials.
+5. Detect forming defects in images and trace them to process conditions.
+6. Deploy the optimized parameters and monitor production for drift.
 
 ## Code pattern
 
@@ -349,18 +412,27 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-casting",
         "title": "AI for Casting",
-        "description": "Machine learning for sand, investment, die, and continuous casting: defect prediction, mold filling, solidification, microstructure, and process optimization.",
+        "description": "Use AI and digital twins to predict casting defects, microstructure and mechanical properties and optimize gating and solidification in foundries.",
         "devin_body": r'''## When to use
 
 You are producing cast metal components and need to predict porosity, hot tearing, or shrinkage, optimize gating and risering, build digital twins of solidification, or improve energy and material efficiency in foundries.
 
-## Key concepts
+## Usage
 
-- **Casting defects**: porosity, shrinkage, hot tearing, cold shuts, inclusions, and surface defects.
-- **Solidification modeling**: thermal history, dendrite arm spacing, phase fraction, and microstructure.
-- **Process parameters**: pouring temperature, mold temperature, pouring rate, cooling rate, and alloy composition.
-- **ICME and digital twins**: coupling thermodynamic, macro/micro-scale simulation with data-driven models.
-- **High-pressure and continuous casting**: cycle time, die wear, and real-time quality control.
+- **Predict defects**: forecast porosity, shrinkage, hot tearing, and cold shuts from process data.
+- **Model microstructure**: predict SDAS, grain size, and phase fractions from thermal history.
+- **Simulate solidification**: use FEA, cellular automata, or phase-field methods.
+- **Optimize gating and risering**: reduce scrap and improve yield with data-driven design.
+- **Build digital twins**: synchronize foundry sensors with virtual models in real time.
+
+## Steps
+
+1. Collect geometry, alloy composition, mold, and process data for historical castings.
+2. Run casting simulations and label defects and microstructure from inspection and testing.
+3. Train ML models to predict defect probability and microstructure metrics.
+4. Optimize gating, risering, and process settings with surrogate or physics-informed models.
+5. Validate predictions with physical castings and NDT or mechanical tests.
+6. Deploy a digital twin that updates from foundry sensors and predicts part quality.
 
 ## Code pattern
 
@@ -398,18 +470,27 @@ model = RandomForestClassifier(random_state=42).fit(X, y)
     {
         "name": "ai-for-welding",
         "title": "AI for Welding",
-        "description": "Machine learning for arc, laser, and resistance welding: penetration prediction, defect detection, bead geometry, process monitoring, and parameter optimization.",
+        "description": "Use machine learning and multi-modal sensing to monitor weld quality, predict penetration and bead geometry, detect defects and optimize welding parameters in real time.",
         "devin_body": r'''## When to use
 
 You are automating welding quality assurance, predicting penetration or bead geometry from sensor data, detecting weld defects in real time, or optimizing process parameters for arc, laser, or resistance welding.
 
-## Key concepts
+## Usage
 
-- **Melt-pool and arc sensing**: high-speed cameras, photodiodes, acoustic emission, and spectral emissions.
-- **Penetration and geometry prediction**: keyhole state, fusion width, bead width, and reinforcement.
-- **Defect detection**: porosity, lack of fusion, spatter, undercut, burn-through, and cracks.
-- **Multimodal fusion**: combining visual, acoustic, and electrical signals for robust monitoring.
-- **Seam tracking and robot welding**: path planning, torch orientation, and adaptive control.
+- **Monitor in-process**: collect arc sound, images, spectroscopy, and electrical signals.
+- **Predict penetration**: estimate bead geometry and fusion from sensor data.
+- **Detect defects**: identify porosity, burn-through, lack of fusion, and cracks.
+- **Optimize parameters**: recommend voltage, current, speed, and shielding gas.
+- **Support robotics**: close the loop for automated or cobot welding cells.
+
+## Steps
+
+1. Mount sensors for weld pool imaging, arc sound, current/voltage, and optical emission.
+2. Capture bead geometry and cross-section ground truth for training.
+3. Train multi-modal fusion models for penetration and defect detection.
+4. Optimize welding parameters using the model and validate on coupons.
+5. Deploy inference on a welding cell and adjust parameters in real time.
+6. Validate weld quality with radiography, ultrasound, or mechanical testing.
 
 ## Code pattern
 
@@ -448,18 +529,27 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-surface-engineering",
         "title": "AI for Surface Engineering",
-        "description": "Machine learning for surface modification processes: thermal spray, laser cladding/peening, shot peening, plasma electrolytic oxidation, surface texturing, and residual stress optimization.",
+        "description": "Use machine learning to optimize surface treatments such as thermal spray, laser cladding and shot peening while predicting residual stress and coating adhesion as well as wear resistance.",
         "devin_body": r'''## When to use
 
 You are modifying a component's surface to improve wear, fatigue, or corrosion resistance, and need to optimize thermal spray, laser surface treatment, peening, or surface texturing parameters and predict surface integrity.
 
-## Key concepts
+## Usage
 
-- **Thermal spraying**: HVOF, HVAF, plasma spray, cold spray, and coating microstructure/property prediction.
-- **Laser surface treatments**: laser cladding, shock peening, texturing, and surface alloying.
-- **Mechanical surface enhancement**: shot peening, laser peening, and deep rolling for residual stress.
-- **Surface integrity metrics**: roughness, hardness, residual stress, coating thickness, and adhesion.
-- **Functional surfaces**: texture, wettability, friction, and fatigue life optimization.
+- **Predict residual stress**: model peening, cladding, and thermal spray stress fields.
+- **Optimize spray parameters**: tune gas flow, standoff, and powder feed for coating quality.
+- **Select processes**: match surface treatments to wear, corrosion, and fatigue requirements.
+- **Detect defects**: identify porosity, delamination, and cracks in coatings.
+- **Build process-property maps**: link parameters to hardness, adhesion, and microstructure.
+
+## Steps
+
+1. Collect process parameters and post-treatment measurements for the surface process.
+2. Train surrogate models to predict residual stress, coating thickness, and properties.
+3. Use the models to optimize parameters and reduce DOE cost.
+4. Validate predicted residual stress and microstructure with XRD, microscopy, or mechanical tests.
+5. Inspect coatings for porosity, adhesion, and defects and feed results back.
+6. Deploy optimized recipes and monitor for process drift.
 
 ## Code pattern
 
@@ -497,18 +587,27 @@ model = GradientBoostingRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-coatings",
         "title": "AI for Coatings",
-        "description": "Machine learning for coating formulation, deposition, thickness, microstructure, adhesion, corrosion protection, and service-life prediction.",
+        "description": "Use machine learning to design formulations, predict thickness, optimize deposition and estimate corrosion protection and lifetime for functional coatings and films.",
         "devin_body": r'''## When to use
 
 You are designing or applying protective and functional coatings and need to select formulations, predict coating properties and service life, optimize deposition parameters, or interpret electrochemical and exposure test data.
 
-## Key concepts
+## Usage
 
-- **Formulation design**: pigment, binder, solvent, additive selection, and multi-objective optimization.
-- **Deposition and process control**: PVD, CVD, thermal spray, dip, spin, and roll-to-roll coating.
-- **Coating properties**: thickness, porosity, hardness, adhesion, and barrier performance.
-- **Corrosion and degradation**: salt spray, cyclic testing, electrochemical impedance, and lifetime prediction.
-- **Functional coatings**: self-healing, anti-fouling, thermal barrier, and optical coatings.
+- **Formulate coatings**: predict properties from ingredients and accelerate recipe design.
+- **Control thickness**: model hot-dip, PVD, CVD, and spray coating thickness.
+- **Predict lifetime**: estimate corrosion, UV, and wear degradation from environmental data.
+- **Optimize curing**: tune temperature, time, and atmosphere for adhesion and hardness.
+- **Inspect defects**: detect pinholes, runs, and color variations.
+
+## Steps
+
+1. Build a formulation database with ingredients, process parameters, and performance tests.
+2. Train models to predict properties such as corrosion resistance, thickness, and adhesion.
+3. Use the model to suggest new formulations and verify them in lab or field tests.
+4. Optimize deposition or curing parameters with a surrogate model.
+5. Validate lifetime predictions with accelerated aging and field exposure data.
+6. Deploy the optimized coating process and track long-term performance.
 
 ## Code pattern
 
@@ -546,18 +645,27 @@ model = RandomForestRegressor(random_state=42).fit(X, y)
     {
         "name": "ai-for-corrosion-engineering",
         "title": "AI for Corrosion Engineering",
-        "description": "Machine learning for corrosion rate prediction, risk-based inspection, cathodic protection, coating lifetime, EIS interpretation, and materials selection.",
+        "description": "Use AI to predict corrosion rates, monitor cathodic protection, optimize materials and coatings and extend asset life for pipelines and industrial infrastructure.",
         "devin_body": r'''## When to use
 
 You are managing corrosion risk in infrastructure, pipelines, marine, automotive, or energy assets and need to predict corrosion rates, interpret electrochemical data, schedule inspections, select materials, or evaluate protection systems.
 
-## Key concepts
+## Usage
 
-- **Corrosion informatics**: data-driven prediction of corrosion rate and form from environment and material data.
-- **Electrochemical sensing**: EIS, polarization, Tafel, and open-circuit potential interpretation.
-- **Coating and inhibitor lifetime**: barrier breakdown, water uptake, and inhibitor release prediction.
-- **Risk-based inspection**: prioritizing assets using degradation forecasts and consequence analysis.
-- **Cathodic protection**: optimizing anode layout and current density with data-driven models.
+- **Predict rates**: model corrosion from environment, material, coating, and operating data.
+- **Monitor CP**: assess cathodic protection current, potential, and stray-current effects.
+- **Estimate remaining life**: combine inspection, EIS, and thickness data.
+- **Optimize materials**: select alloys, coatings, and inhibitors for the environment.
+- **Plan inspections**: prioritize high-risk locations and extend in-line inspection intervals.
+
+## Steps
+
+1. Collect environmental, material, coating, and inspection data for the asset.
+2. Train corrosion-rate or remaining-life models and validate against coupons or pull tests.
+3. Integrate CP monitoring data and flag under- or over-protection conditions.
+4. Map corrosion risk across the asset using a digital twin or knowledge graph.
+5. Recommend materials, coatings, or inhibitors and simulate their effect.
+6. Update the model with new inspections and optimize maintenance schedules.
 
 ## Code pattern
 

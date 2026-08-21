@@ -2,7 +2,7 @@
 
 ## Description
 
-Data-driven waste elimination, value stream mapping, bottleneck detection, and Kaizen prioritization for flow, pull, and just-in-time systems.
+Quantifies waste, maps value streams, and prioritizes kaizen actions using real-time production event data.
 
 ## When to use
 

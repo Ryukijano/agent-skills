@@ -2,19 +2,26 @@
 
 ## Description
 
-Planning, auditing, and orchestrating content portfolios with AI, including generative-engine optimization and cross-platform adaptation.
+Use AI to audit content libraries, identify topic gaps, optimize for generative-engine citation, and adapt assets across channels.
 
 ## When to use
 
 You are planning editorial calendars, auditing content libraries, adapting assets across channels, or optimizing for AI search citations.
 
-## Key concepts
+## Usage
 
-- **Content audit and gap analysis**: inventory, performance data, topic clusters, and competitive whitespace.
-- **Generative engine optimization (GEO)**: structuring content so LLMs cite your brand in their answers.
-- **Cross-platform adaptation**: tone, length, and format for web, social, email, and video.
-- **Personalization and audience personas**: AI-driven segmentation and messaging.
-- **Governance and quality**: brand voice, fact-checking, and editorial guidelines.
+- Inventory existing content and cluster it into topic pillars.
+- Identify performance gaps and competitive whitespace.
+- Structure content so LLMs cite the brand in their answers.
+- Repurpose long-form content into social, email, and video scripts.
+
+## Steps
+
+1. Export the content inventory and performance data.
+2. Cluster content into topic pillars using NLP or embeddings.
+3. Map buyer prompts and answer-first passages to target for GEO.
+4. Audit for gaps and generate a prioritized topic backlog.
+5. Reformat a flagship piece into channel-specific variants and track LLM citation share.
 
 ## Code pattern
 

@@ -2,19 +2,27 @@
 
 ## Description
 
-ML for optical performance monitoring, QoT estimation, traffic prediction, nonlinearity compensation, and optical layer provisioning.
+Estimate QoT, assign spectrum, and route traffic in elastic optical networks.
 
 ## When to use
 
 You need to add intelligence to optical transport and access networks for performance monitoring, QoT estimation, traffic engineering, and fault management.
 
-## Key concepts
+## Usage
 
-- **Optical performance monitoring (OPM)**: infer OSNR, Q-factor, CD, PMD from signals.
-- **Quality of transmission (QoT) estimation**: predict whether a lightpath meets BER requirements.
-- **Traffic prediction and provisioning**: forecast demand and set up optical paths proactively.
-- **Nonlinearity compensation**: ML for digital backpropagation and amplifier control.
-- **AI/ML in elastic optical networks (EON)**: spectrum assignment and defragmentation.
+- Predict OSNR, BER, and QoT with DNNs (OCATA).
+- Solve QoT-aware routing and spectrum assignment (PtrNet-RSA).
+- Detect physical-layer anomalies in multiband links.
+- Optimize amplifier settings and launch power.
+- Plan lightpaths with digital twins.
+
+## Steps
+
+1. Collect topology, traffic, and physical-layer parameters.
+2. Build GN-model or data-driven QoT features.
+3. Train QoT and RSA models.
+4. Integrate with optical control plane.
+5. Validate against BER/Q-factor and blocking rate.
 
 ## Code pattern
 

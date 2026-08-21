@@ -2,18 +2,29 @@
 
 ## Description
 
-Causal inference, policy evaluation, nowcasting, heterogeneous treatment effects, and demand estimation for economic and policy analysis.
+Use AI for Economics to evaluate policies, estimate causal effects, nowcast macro indicators and model demand.
 
 ## When to use
 
 You are evaluating economic policies, estimating treatment effects, nowcasting macro indicators, or modeling consumer/worker behavior from observational or panel data.
 
-## Key concepts
 
-- **Causal ML**: use machine learning to estimate average and heterogeneous treatment effects (e.g., causal forests, double/debiased machine learning).
-- **Policy evaluation without controls**: forecast counterfactual outcomes for treated units using pre-treatment data and ML forecasters.
-- **Nowcasting**: predict current-quarter GDP, inflation, or employment before official releases by combining high-frequency data.
-- **Demand and elasticity estimation**: recover price/causal effects on demand with endogeneity controls.
+## Usage
+
+
+- **Causal ML**: Estimate average and heterogeneous treatment effects (e.g., causal forests, double/debiased machine learning).
+- **Policy evaluation without controls**: Forecast counterfactual outcomes for treated units using pre-treatment data and ML forecasters.
+- **Nowcasting**: Predict current-quarter GDP, inflation, or employment before official releases by combining high-frequency data.
+- **Demand and elasticity estimation**: Recover price/causal effects on demand with endogeneity controls.
+
+## Steps
+
+1. Collect and prepare observational or panel data on treatments, outcomes and covariates.
+2. Evaluate economic policies.
+3. Estimate treatment effects.
+4. Nowcast macro indicators.
+5. Validate by replicating a difference-in-differences or synthetic-control result with a causal ML estimator.
+6. Deploy into the target workflow and monitor performance, drift, and outcomes.
 
 ## Code pattern
 
@@ -36,11 +47,13 @@ print("ATE:", est.ate_)
 print("CATE intervals:", est.ate__interval())
 ```
 
+
 ## Tuning notes
 
 - Use out-of-fold nuisance predictions and cross-fitting to avoid overfitting in causal ML.
 - For nowcasting, prefer models that handle ragged edges and mixed frequencies (factor models, MIDAS, LSTM).
 - Validate counterfactual forecasts with placebo tests and pre-trend checks.
+
 
 ## Verification
 

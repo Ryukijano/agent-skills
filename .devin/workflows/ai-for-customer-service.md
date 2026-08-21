@@ -1,6 +1,6 @@
 # /ai-for-customer-service
 
-Conversational AI, intent classification, sentiment and satisfaction analysis, ticket routing, and agent-assist systems.
+Use AI for Customer Service to classify intent, route tickets, analyze sentiment and assist agents.
 
 ## Trigger
 

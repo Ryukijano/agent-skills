@@ -2,19 +2,27 @@
 
 ## Description
 
-Fish stock assessment, catch forecasting, aquaculture monitoring, eDNA, and IUU fishing detection with ML.
+Detect illegal, unreported, and unregulated fishing by fusing AIS tracks with satellite radar and vessel behavior models.
 
 ## When to use
 
 You are managing or studying fisheries, aquaculture, or marine ecosystems and need to predict catch, identify species, or detect illegal fishing.
 
-## Key concepts
+## Usage
 
-- **Stock assessment and catch forecasting**: relate catch or abundance to environmental and effort covariates.
-- **eDNA metabarcoding**: detect species from environmental samples using sequencing and ML classifiers.
-- **Acoustic and sonar surveys**: classify echograms and estimate fish biomass.
-- **Aquaculture monitoring**: water quality, feeding, disease, and welfare prediction.
-- **IUU detection**: analyze vessel AIS trajectories and imagery for illegal activity.
+- Forecast catch or abundance from environmental and effort covariates.
+- Detect species from eDNA metabarcoding and sequence-classification workflows.
+- Classify acoustic/sonar echograms and estimate fish biomass.
+- Monitor aquaculture water quality, feeding, disease, and welfare, and detect IUU vessel activity.
+
+## Steps
+
+1. Ingest catch/effort, eDNA, acoustic, AIS, and environmental (SST, chlorophyll, depth) data.
+2. Engineer spatial-temporal features and train a catch/CPUE forecast model, handling zero-inflation and seasonality.
+3. Classify eDNA reads or metabarcoding sequences and compare taxonomic assignments to reference databases.
+4. Process acoustic/sonar data to detect schools and estimate biomass, validating with trawl or visual surveys.
+5. Build aquaculture monitoring models for water quality, feeding, and disease, and detect anomalous vessel trajectories for IUU activity.
+6. Integrate forecasts and detections into fishery management dashboards and compare to surplus-production baselines.
 
 ## Code pattern
 

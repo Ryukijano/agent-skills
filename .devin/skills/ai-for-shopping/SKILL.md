@@ -2,19 +2,26 @@
 
 ## Description
 
-Product discovery, personalized recommendations, price comparison, review summarization, and AI buyer guides for consumer purchases.
+Answer natural-language product questions and surface personalized recommendations from real-time catalog and behavior data.
 
 ## When to use
 
 You want to discover products, compare prices, summarize reviews, or build a personalized buyer guide for a consumer purchase.
 
-## Key concepts
+## Usage
 
-- **Product search and ranking**: retrieve and score items by relevance, value, and constraints.
-- **Review summarization and sentiment**: extract pros, cons, and recurring issues from user reviews.
-- **Attribute extraction**: pull specs, dimensions, and compatibility from unstructured text.
-- **Price monitoring and alerts**: track price history and forecast deals.
-- **Trust and verification**: ground claims in real listings and flag uncertain information.
+- Rank products by relevance, value, and user constraints.
+- Summarize pros, cons, and recurring issues from customer reviews.
+- Extract specs, dimensions, and compatibility from listings.
+- Track price history and alert users to deals.
+
+## Steps
+
+1. Fetch real-time listings and reviews from trusted sources.
+2. Parse specs, prices, and availability with grounding in source pages.
+3. Train or prompt a summarizer for review pros and cons.
+4. Rank options against user constraints and explain trade-offs.
+5. Keep price alerts fresh and disclose affiliate or sponsored relationships.
 
 ## Code pattern
 

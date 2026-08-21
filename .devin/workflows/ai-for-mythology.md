@@ -1,6 +1,6 @@
 # /ai-for-mythology
 
-Computational mythography, knowledge graphs of mythological figures, structural analysis of myths, and cross-cultural narrative comparison.
+Use AI to model mythological narratives, build knowledge graphs of mythic figures, or compare structural patterns across world mythologies.
 
 ## Trigger
 

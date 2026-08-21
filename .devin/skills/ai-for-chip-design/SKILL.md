@@ -2,18 +2,27 @@
 
 ## Description
 
-ML for RTL generation, EDA scripting, floorplanning, placement, routing, timing optimization, and analog/mixed-signal design.
+Use machine learning to generate RTL, floorplan chips, optimize placement, and assist analog and mixed-signal design.
 
 ## When to use
 
 You are automating digital or analog IC design tasks, including floorplanning, placement, standard-cell routing, or EDA-tool scripting.
 
-## Key concepts
+## Usage
 
-- **Floorplanning and placement**: deep RL (e.g., AlphaChip) optimizes macro and standard-cell placement for PPA.
-- **RTL and EDA scripting**: domain-adapted LLMs (e.g., ChipNeMo) generate Verilog, Tcl, and Python EDA flows.
-- **Analog design**: ML surrogate models and Bayesian optimization size transistors and layout cells.
-- **Design-space exploration**: multi-objective optimization over architecture, PPA, and manufacturability.
+- Optimize macro and standard-cell placement for power, performance, and area with deep RL.
+- Generate Verilog, Tcl, and Python EDA flows with domain-adapted code LLMs.
+- Size transistors and layout analog cells with Bayesian optimization and surrogates.
+- Explore design trade-offs across architecture, PPA, and manufacturability.
+
+## Steps
+
+1. Prepare netlist, constraints, and floorplan input for the target IC block.
+2. Train an RL placement agent or a surrogate for analog sizing.
+3. Legalize and sign off the placement with commercial EDA tools.
+4. Use a code LLM to generate or review synthesis and STA scripts.
+5. Verify timing, congestion, DRC, and power-grid constraints.
+6. Compare the optimized design to a manual or baseline flow.
 
 ## Code pattern
 

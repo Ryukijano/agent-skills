@@ -1,6 +1,6 @@
 # /ai-for-metabolomics
 
-Mass spectrometry and NMR metabolite profiling, annotation, pathway analysis, normalization, and machine learning for biomarker discovery.
+Use machine learning on LC-MS, GC-MS and NMR metabolite profiles to annotate features, discover biomarkers and predict disease risk or metabolic phenotypes.
 
 ## Trigger
 

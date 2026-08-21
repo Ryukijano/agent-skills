@@ -1,6 +1,6 @@
 # /ai-for-randomized-trials
 
-Machine learning for heterogeneous treatment effects, covariate adjustment, adaptive randomization, and efficient inference in randomized controlled trials.
+Estimate heterogeneous treatment effects and subgroup benefits in randomized experiments.
 
 ## Trigger
 

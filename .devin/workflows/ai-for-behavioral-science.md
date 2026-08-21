@@ -1,6 +1,6 @@
 # /ai-for-behavioral-science
 
-Computational modeling of human behavior, n-of-1 and ecological momentary assessment, digital interventions, and experimentally validated behavior change.
+Use AI to study or influencing human behavior using digital experiments, sensor data, reinforcement learning, or generative models of behavior.
 
 ## Trigger
 

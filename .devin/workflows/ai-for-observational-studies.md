@@ -1,6 +1,6 @@
 # /ai-for-observational-studies
 
-Causal machine learning for treatment-effect estimation, propensity scoring, confounding adjustment, and sensitivity analysis in observational data.
+Estimate causal effects from real-world data using propensity scores and double machine learning.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-property-valuation
 
-Automated valuation models, hedonic pricing, spatial machine learning, and deep learning for residential and commercial property appraisal.
+Estimates residential and commercial property values by fusing sales comparables, spatial features, and imagery into automated valuation models.
 
 ## Trigger
 

@@ -2,19 +2,27 @@
 
 ## Description
 
-Machine learning for alloy design, phase stability, mechanical properties, process optimization, and microstructure-property mapping.
+Use ML to design alloys, predict phase stability and properties, quantify microstructure, and optimize metal processing and additive manufacturing.
 
 ## When to use
 
 You are designing new alloys or optimizing metal processing and need to predict phase stability, mechanical behavior, corrosion resistance, or manufacturability from composition and processing history.
 
-## Key concepts
+## Usage
 
-- **Alloy design and property prediction**: composition-process-microstructure-property models for steels, aluminum, magnesium, titanium, and high-entropy alloys.
-- **Phase diagrams and CALPHAD-ML hybrids**: integrate thermodynamic databases with ML for phase stability and transformation kinetics.
-- **Microstructure quantification**: grain size, texture, precipitate distributions, and phase fractions from EBSD/SEM images.
-- **High-entropy alloys (HEAs) and metallic glasses**: ML-driven search for solid solutions, single-phase regions, and glass-forming ability.
-- **Additive manufacturing and processing**: porosity, crack susceptibility, and heat-treatment optimization.
+- Predict composition-process-microstructure-property relationships for steels, aluminum, titanium, magnesium, and HEAs.
+- Combine CALPHAD thermodynamics with ML for phase stability and transformation kinetics.
+- Quantify microstructure (grain size, texture, precipitates, phase fractions) from EBSD/SEM images.
+- Optimize additive manufacturing, heat treatment, and processing parameters for target properties.
+
+## Steps
+
+1. Collect composition, processing, microstructure, and property data for the alloy class of interest.
+2. Encode composition with physically meaningful descriptors and train models for target properties or phase stability.
+3. Segment and quantify microstructure images to extract grain, precipitate, and texture features.
+4. Run CALPHAD-ML hybrids or phase-stability classifiers and validate against DFT or experiments.
+5. Optimize processing (heat treatment, AM parameters, rolling) with Bayesian or active-learning methods.
+6. Validate the best candidates with mechanical, corrosion, or creep tests and compare to known alloy baselines.
 
 ## Code pattern
 

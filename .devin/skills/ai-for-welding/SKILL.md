@@ -2,19 +2,28 @@
 
 ## Description
 
-Machine learning for arc, laser, and resistance welding: penetration prediction, defect detection, bead geometry, process monitoring, and parameter optimization.
+Use machine learning and multi-modal sensing to monitor weld quality, predict penetration and bead geometry, detect defects and optimize welding parameters in real time.
 
 ## When to use
 
 You are automating welding quality assurance, predicting penetration or bead geometry from sensor data, detecting weld defects in real time, or optimizing process parameters for arc, laser, or resistance welding.
 
-## Key concepts
+## Usage
 
-- **Melt-pool and arc sensing**: high-speed cameras, photodiodes, acoustic emission, and spectral emissions.
-- **Penetration and geometry prediction**: keyhole state, fusion width, bead width, and reinforcement.
-- **Defect detection**: porosity, lack of fusion, spatter, undercut, burn-through, and cracks.
-- **Multimodal fusion**: combining visual, acoustic, and electrical signals for robust monitoring.
-- **Seam tracking and robot welding**: path planning, torch orientation, and adaptive control.
+- **Monitor in-process**: collect arc sound, images, spectroscopy, and electrical signals.
+- **Predict penetration**: estimate bead geometry and fusion from sensor data.
+- **Detect defects**: identify porosity, burn-through, lack of fusion, and cracks.
+- **Optimize parameters**: recommend voltage, current, speed, and shielding gas.
+- **Support robotics**: close the loop for automated or cobot welding cells.
+
+## Steps
+
+1. Mount sensors for weld pool imaging, arc sound, current/voltage, and optical emission.
+2. Capture bead geometry and cross-section ground truth for training.
+3. Train multi-modal fusion models for penetration and defect detection.
+4. Optimize welding parameters using the model and validate on coupons.
+5. Deploy inference on a welding cell and adjust parameters in real time.
+6. Validate weld quality with radiography, ultrasound, or mechanical testing.
 
 ## Code pattern
 

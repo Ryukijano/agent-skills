@@ -1,6 +1,6 @@
 # /ai-for-climate-policy
 
-Natural-language analysis of climate laws, NDCs, and policies; target extraction, alignment scoring, and climate-finance tracking.
+Extract and classify quantified climate targets from national laws and NDCs to track policy alignment and accountability.
 
 ## Trigger
 

@@ -2,18 +2,27 @@
 
 ## Description
 
-Underwriting triage, claims automation, fraud detection, and AI-assisted pricing and reserving.
+Score claims for fraud and triage underwriting by combining image metadata, network linkages, and historical loss patterns.
 
 ## When to use
 
 You are building predictive models for underwriting, claims, fraud, pricing, or customer churn in insurance operations.
 
-## Key concepts
+## Usage
 
-- **Underwriting risk scoring**: predict loss cost and quote appropriate premiums.
-- **Claims automation**: triage, document understanding, and fast-track routing.
-- **Fraud and leakage detection**: identify suspicious patterns and provider behavior.
-- **Pricing and reserving**: combine ML with actuarial methods for ratemaking.
+- Ingest underwriting, claims, and policy data.
+- Build risk, fraud, and severity models.
+- Calibrate probabilities and pricing.
+- Automate triage and fast-track routing.
+
+## Steps
+
+1. Ingest underwriting, claims, and policy data.
+2. Build risk, fraud, and severity models.
+3. Calibrate probabilities and pricing.
+4. Automate triage and fast-track routing.
+5. Audit for anti-discrimination and distribution shift.
+6. Deploy in client engagements, capture requirements from discovery calls, and measure time-to-insight and decision quality (Task-GenAI Fit-style).
 
 ## Code pattern
 

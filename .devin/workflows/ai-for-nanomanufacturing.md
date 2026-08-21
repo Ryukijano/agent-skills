@@ -1,6 +1,6 @@
 # /ai-for-nanomanufacturing
 
-Machine learning for nanoscale fabrication, roll-to-roll processing, nanoimprint lithography, self-assembly, nanoscale metrology, and process control.
+Use machine learning to control, inspect and optimize nanoimprint lithography, roll-to-roll patterning, self-assembly and nanoscale metrology for high-throughput nanofabrication.
 
 ## Trigger
 

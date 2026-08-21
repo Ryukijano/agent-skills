@@ -1,6 +1,6 @@
 # /ai-for-chemical-engineering
 
-AI for process design, optimization, control, reaction engineering, materials discovery, and digital chemical plants.
+Apply AI to chemical process modeling, yield optimization, and reactor control.
 
 ## Trigger
 

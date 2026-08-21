@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for clinical-trial design, patient eligibility, cohort selection, outcome prediction, and operational monitoring across the trial lifecycle.
+Optimize trial design, site selection, and enrollment for clinical studies.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are designing a clinical trial, forecasting enrollment, selecting eligible p
 
 ## Usage
 
-- **Trial feasibility**: predict enrollment, dropout, and site performance.
-- **Eligibility screening**: parse unstructured criteria and match patients to protocols.
-- **Outcome prediction**: forecast treatment response and safety events.
-- **Site and data monitoring**: detect anomalies, drift, and data-quality issues.
+- Forecast patient enrollment and site performance (TrialEnroll, IBM).
+- Match and predict eligibility from EHR and unstructured criteria.
+- Optimize site selection with geographic and historical data.
+- Predict missing outcomes and patient dropout.
+- Automate clinical data queries and SDV prioritization.
 
 ## Steps
 
-1. Translate the protocol into structured eligibility and endpoint definitions.
-2. Link EHR or registry data to candidate participants using structured and NLP features.
-3. Build and validate prediction models for enrollment, response, or adverse events.
-4. Deploy models under prospective monitoring with human oversight.
-5. Retrain and validate when protocols, sites, or populations change.
+1. Define protocol, endpoints, and target population.
+2. Ingest EHR, claims, and historical trial data.
+3. Train enrollment, eligibility, and dropout models.
+4. Simulate enrollment timelines and site scenarios.
+5. Validate against actual trial performance and adapt.
 
 ## Code pattern
 

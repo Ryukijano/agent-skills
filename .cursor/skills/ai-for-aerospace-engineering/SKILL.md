@@ -2,7 +2,7 @@
 
 ## Description
 
-AI for aerodynamic design, propulsion, structural analysis, flight dynamics, GNC, and certification of aerospace vehicles.
+Use AI for flight-dynamics prediction, structural-health monitoring, and mission planning.
 
 ## When to use
 
@@ -10,19 +10,19 @@ You are designing aircraft or spacecraft, building reduced-order models, optimiz
 
 ## Usage
 
-- **Aerodynamic surrogate and shape optimization**: data-driven lift/drag models and adjoint-free design.
-- **Structural analysis and loads**: surrogate models for finite-element and fatigue life.
-- **Propulsion and combustion**: reduced-order models and design-space exploration.
-- **Flight dynamics and GNC**: learning-based control and trajectory optimization.
-- **Certification and assurance**: UQ, explainability, and verification for aerospace AI.
+- Detect aircraft engine anomalies and predict remaining useful life.
+- Model aerodynamic loads and flutter from wind-tunnel or flight data.
+- Plan UAV routes and swarm coordination.
+- Monitor composite structures with guided-wave or image sensors.
+- Support trajectory optimization and air-traffic predictions.
 
 ## Steps
 
-1. Collect aerodynamic, structural, propulsion, or flight-dynamics data.
-2. Build multi-fidelity datasets combining low- and high-fidelity simulations.
-3. Train a surrogate or control model with physics-informed constraints.
-4. Validate against CFD, wind tunnel, or flight test data.
-5. Document uncertainty and certification evidence before deployment.
+1. Collect flight, vibration, or structural sensor data.
+2. Build physics-informed or data-driven flight/structural models.
+3. Train anomaly detection and RUL estimators.
+4. Integrate with maintenance planning or GCS dashboards.
+5. Validate against flight-test or simulated benchmarks.
 
 ## Code pattern
 

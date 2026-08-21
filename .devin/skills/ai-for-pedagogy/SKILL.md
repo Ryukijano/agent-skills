@@ -2,18 +2,27 @@
 
 ## Description
 
-Teacher-AI collaboration, lesson planning, instructional design, feedback generation, and evidence-based teaching practice augmentation.
+Use AI to support teachers in planning, deliver, and improve instruction while keeping educators at the center of the learning process.
 
 ## When to use
 
 You want to support teachers in planning, delivering, and improving instruction while keeping educators at the center of the learning process.
 
-## Key concepts
+## Usage
 
-- **Teacher-AI co-design**: generative AI as a collaborator, not a replacement, for educators.
-- **Lesson and activity generation**: create standards-aligned plans, materials, and assessments.
-- **Formative feedback**: provide teachers with insights on student understanding.
-- **TPACK and professional development**: build the knowledge needed to integrate AI responsibly.
+- Co-design lesson plans and activities with teachers.
+- Generate standards-aligned materials and differentiation options.
+- Provide formative feedback on student work.
+- Reduce administrative load while preserving teacher agency.
+
+## Steps
+
+1. Co-design lesson plans and activities with teachers.
+2. Generate standards-aligned materials and differentiation options.
+3. Provide formative feedback on student work.
+4. Reduce administrative load while preserving teacher agency.
+5. Pilot in classrooms and gather teacher and student feedback.
+6. Integrate with LMS and virtual-teaching-assistant telemetry, then A/B test AI scaffolds and engagement interventions (JELAI-style).
 
 ## Code pattern
 

@@ -1,6 +1,6 @@
 # /ai-for-software-engineering
 
-AI for code generation, testing, debugging, program repair, code review, and design assistance.
+Use AI to generate, review, and test code across the software lifecycle.
 
 ## Trigger
 

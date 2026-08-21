@@ -2,19 +2,27 @@
 
 ## Description
 
-Numerical weather prediction emulators, precipitation nowcasting, extreme-weather detection, and weather foundation models.
+Nowcast extreme precipitation from radar with physics-embedded deep generative models to improve flood and hydropower decisions.
 
 ## When to use
 
 You need to forecast weather, downscale climate output, nowcast precipitation, or detect extreme-weather events.
 
-## Key concepts
+## Usage
 
-- **Nowcasting**: short-term (<6 h) prediction of precipitation and storms from radar/satellite.
-- **NWP emulators and surrogates**: ML models that emulate or bias-correct numerical weather prediction.
-- **Foundation models**: GraphCast, FourCastNet, Pangu-Weather, FengWu, ClimaX.
-- **Downscaling and bias correction**: super-resolution and statistical adjustment of model output.
-- **Extreme weather detection**: identify tropical cyclones, atmospheric rivers, and convective hazards.
+- Nowcast precipitation and storms (<6 h) from radar and satellite data.
+- Emulate or bias-correct numerical weather prediction (NWP) with fast neural surrogates.
+- Apply weather foundation models (GraphCast, FourCastNet, Pangu-Weather, FengWu, Aurora, ClimaX) for medium-range forecasts.
+- Downscale and bias-correct model output, and detect tropical cyclones, atmospheric rivers, and convective hazards.
+
+## Steps
+
+1. Ingest radar, satellite, NWP, reanalysis, and climate-projection data for the target region and lead time.
+2. Train a precipitation nowcaster (ConvLSTM, diffusion) and compare RMSE/CSI to persistence and NWP baselines.
+3. Fine-tune or run a weather foundation model for deterministic or probabilistic medium-range forecasting.
+4. Downscale and bias-correct model output with super-resolution or statistical adjustment methods.
+5. Detect and track extreme events (cyclones, atmospheric rivers, convective hazards) and compare to labeled databases.
+6. Evaluate with CRPS, CSI, Brier score, and physical-conservation metrics, then deploy operationally with ensemble post-processing.
 
 ## Code pattern
 

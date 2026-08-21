@@ -2,18 +2,26 @@
 
 ## Description
 
-Machine learning for molecular dynamics, free-energy landscapes, protein-ligand kinetics, single-molecule analysis, and membrane systems.
+Use machine learning to learn molecular dynamics, map free-energy landscapes, and extract kinetics from single-molecule measurements.
 
 ## When to use
 
 You are analyzing molecular dynamics trajectories, predicting free energies, or extracting kinetics from single-molecule measurements.
 
-## Key concepts
+## Usage
 
-- **Molecular dynamics and force fields**: ML potentials and coarse-grained models.
-- **Free energy and kinetics**: Markov state models, umbrella sampling, and metadynamics.
-- **Coarse graining**: learning low-dimensional representations of biomolecular motion.
-- **Single-molecule biophysics**: hidden Markov models and dwell-time analysis.
+- Learn neural-network potentials and coarse-grained models for biomolecular dynamics.
+- Build Markov state models and free-energy landscapes from MD trajectories.
+- Coarse-grain high-dimensional motion into interpretable collective variables.
+- Segment single-molecule FRET and force-spectroscopy traces.
+
+## Steps
+
+1. Load and align MD trajectories or single-molecule time series.
+2. Choose physically meaningful collective variables or learned embeddings.
+3. Train a neural potential, Markov state model, or hidden-Markov model.
+4. Validate against experimental observables such as NMR, FRET, or cryo-EM.
+5. Use the model to predict rare events, binding kinetics, or free-energy differences.
 
 ## Code pattern
 

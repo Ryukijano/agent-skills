@@ -2,18 +2,27 @@
 
 ## Description
 
-Learning to guide proof search, premise selection, tactic prediction, and combining LLMs with symbolic reasoners.
+Use machine learning to guide proof search, premise selection, and tactic prediction in theorem provers and proof assistants.
 
 ## When to use
 
 You are building or using automated theorem provers, SMT solvers, or proof assistants and want to accelerate search with learned guidance.
 
-## Key concepts
+## Usage
 
-- **Proof search guidance**: clause selection, variable ordering, and strategy scheduling.
-- **Premise selection**: predict which axioms or lemmas are relevant to a conjecture.
-- **Tactic prediction in ITPs**: generate the next proof step from the current goal and context.
-- **LLM + symbolic reasoners**: generate candidate proof steps and verify them with a trusted kernel.
+- Guide proof search by selecting clauses, ordering variables, and scheduling strategies.
+- Predict which axioms or lemmas are relevant to a conjecture.
+- Generate the next proof step in an interactive theorem prover from the current goal.
+- Combine LLM-generated proof steps with verification by a trusted symbolic kernel.
+
+## Steps
+
+1. Collect a corpus of conjectures, axioms, and proof traces from an ATP or ITP library.
+2. Train an axiom/premise selector and measure mean reciprocal rank of used premises.
+3. Build a clause or tactic predictor and integrate it into the prover's search loop.
+4. Run the prover with and without learned guidance and compare inferences or proof time.
+5. Use an LLM to suggest proof steps and reject or accept them with a proof checker.
+6. Retrain selectors as the library grows and evaluate on new benchmark problems.
 
 ## Code pattern
 

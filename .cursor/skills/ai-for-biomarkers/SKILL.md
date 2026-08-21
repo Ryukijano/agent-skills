@@ -2,7 +2,7 @@
 
 ## Description
 
-Machine learning for omics-based biomarker discovery, sparse signature selection, multi-modal integration, and clinical validation.
+Discover and validate biomarkers by integrating genomics, proteomics, and imaging data.
 
 ## When to use
 
@@ -10,18 +10,19 @@ You are discovering, validating, or translating biomarkers from high-dimensional
 
 ## Usage
 
-- **Signature discovery**: identify sparse, reproducible biomarker panels.
-- **Multi-omic integration**: combine genomics, proteomics, metabolomics, and imaging.
-- **Predictive vs prognostic markers**: distinguish treatment-modifying from disease-risk biomarkers.
-- **Clinical validation**: lock models and test on independent cohorts and intended-use populations.
+- Integrate multi-omics with Flexynesis, IntegrAO, or Omics BioAnalytics.
+- Discover diagnostic and prognostic signatures with MILTON.
+- Build predictive panels from blood, imaging, and digital biomarkers.
+- Validate biomarkers in independent cohorts and trials.
+- Interpret biological pathways with feature importance.
 
 ## Steps
 
-1. Assemble discovery and validation cohorts with clear inclusion/exclusion criteria.
-2. Preprocess and harmonize multi-modal data and batch-correct where needed.
-3. Apply sparse or regularized ML to select candidate biomarkers.
-4. Lock the model and evaluate on an independent validation cohort.
-5. Assess biological plausibility, regulatory path, and clinical actionability.
+1. Collect omics, imaging, and clinical phenotype data.
+2. Normalize, impute, and align multi-modal features.
+3. Train multi-omics integration and feature-selection models.
+4. Validate in held-out and external cohorts.
+5. Characterize biological mechanism and clinical utility.
 
 ## Code pattern
 
@@ -55,5 +56,5 @@ model = LogisticRegression(max_iter=1000, penalty="l1", solver="liblinear").fit(
 
 - https://www.nature.com/articles/s41587-023-02033-x
 - https://doi.org/10.1371/journal.pcbi.1010357
-- https://doi.org/10.1136/bmjopen-2021-053674
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8650485/
 - https://ai.nejm.org/doi/full/10.1056/AIoa2400867

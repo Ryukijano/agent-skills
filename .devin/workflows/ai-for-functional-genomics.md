@@ -1,6 +1,6 @@
 # /ai-for-functional-genomics
 
-Predicting gene regulatory function from sequence and epigenomic data, mapping cis-regulatory elements, and interpreting non-coding variants.
+Use sequence-to-function models to predict gene-regulatory activity, map cis-regulatory elements and interpret non-coding variants from genomic sequence and epigenomic data.
 
 ## Trigger
 

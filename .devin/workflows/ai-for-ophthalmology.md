@@ -1,6 +1,6 @@
 # /ai-for-ophthalmology
 
-Diabetic retinopathy screening, OCT analysis, glaucoma detection, and AI for retinal disease diagnosis from fundus photography.
+Use AI for Ophthalmology to screen for diabetic retinopathy, segment OCT and detect glaucoma.
 
 ## Trigger
 

@@ -1,6 +1,6 @@
 # /ai-for-real-world-evidence
 
-Machine learning for extracting, validating, and synthesizing real-world evidence from EHRs, claims, registries, and wearables for regulatory and clinical decisions.
+Generate regulatory and HTA evidence from EHR, claims, and registry data.
 
 ## Trigger
 

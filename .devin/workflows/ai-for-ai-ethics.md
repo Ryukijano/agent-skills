@@ -1,6 +1,6 @@
 # /ai-for-ai-ethics
 
-Fairness, accountability, transparency, privacy, and value alignment in AI systems, including bias auditing, model cards, and stakeholder deliberation.
+Audit automated hiring and public-sector AI systems for disparate impact, transparency gaps, and compliance with bias-auditing laws like NYC Local Law 144.
 
 ## Trigger
 
