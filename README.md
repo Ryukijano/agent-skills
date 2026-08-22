@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 810 | 796 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 823 | 806 commands (`/name`) |
+| **Devin** (`.devin/`) | 823 | 809 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 840 | 819 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (810)
+## Skills (823)
 
 ### Research Scientist (13)
 
@@ -934,7 +934,29 @@ Domain-specific skills for Gyanateet's research workflow.
 | `double-factorization-cudaq` | Use double factorization block encodings to reduce the cost of quantum chemistry Hamiltonians in CUDA-Q. |
 | `custom-block-encodings-cudaq` | Implement custom block encodings in CUDA-Q Algorithms and plug them into the common BlockEncoding interface. |
 
-## Workflows (796)
+### Academic Research Pipeline (13)
+
+End-to-end paper pipeline: strategy → literature → writing → figures → submission. Every skill has a matching `/command` and `/workflow`.
+
+| Skill | Description |
+|-------|-------------|
+| `data-visualization-and-figures` | Publication-ready plots, multi-panel layouts, colorblind-safe palettes, venue specs |
+| `publishing-and-peer-review` | Rebuttals, response letters, cover letters, reviewer ethics |
+| `latex-paper-writer` | Gated pipeline: plan approval → issue-driven writing → verified citations → clean compile |
+| `manage-submission` | Venue fit, deadline planning, anonymization sweep, camera-ready, arXiv timing |
+| `research-strategy-project-design` | Problem triage, falsifiable hypotheses, kill criteria, milestone ladders |
+| `literature-triage-matrix` | Compare papers across method/data/metrics/claims; extract gaps |
+| `gap-to-topic` | Three-gate go/no-go dossier for a candidate topic: open? contribution? feasible? |
+| `pptx-deck-builder` | Conference talks/posters/reports via python-pptx and pandoc |
+| `qiskit-quantum-workflows` | Qiskit 2.x primitives, VQE/SQD chemistry patterns, noise models |
+| `digest-paper` | One paper → PDF + synthesis + BibTeX + index row, atomically |
+| `prisma-systematic-review` | PRISMA-style systematic review with logged screening phases |
+| `experiment-protocol` | Reproducible experiments: design, controls, pre-registration, execution |
+| `repro-bundle` | Verified reproducibility bundle: code, manifests, lockfiles |
+
+Typical arcs: idea → `/gap-to-topic` → `/research-strategy-project-design` → `/experiment-protocol`; paper → `/digest-paper` → `/scientific-writing` → `/latex-paper-writer` → `/claim-verification` → `/adversarial-review` → `/manage-submission`.
+
+## Workflows (809)
 
 ### Research Workflows (15)
 
