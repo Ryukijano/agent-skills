@@ -16,7 +16,7 @@ import re
 import sys
 from pathlib import Path
 
-DEFAULT_BASE = "/home/aimsgroupuol/AIMSgeneral/Gyanateet/mpc_vla_diffusion_study/agent-skills"
+DEFAULT_BASE = "/home/aimsgroupuol/AIMSgeneral/Gyanateet/agent-skills"
 
 
 def _get_data_file(argv: list) -> Path:

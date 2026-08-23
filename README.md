@@ -8,7 +8,7 @@ Designed for research scientists and software engineers working on ML projects (
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
 | **Devin** (`.devin/`) | 823 | 809 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 840 | 819 commands (`/name`) |
+| **Cursor** (`.cursor/`) | 836 | 819 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -1742,7 +1742,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 └── MASTERPLAN.md              # Design rationale and architecture
 
 .devin/
-├── skills/                    # 168 SKILL.md files (auto-invoked)
+├── skills/                    # 823 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
 │   ├── address-pr-comments/
 │   ├── aire-slurm-submit/
@@ -1780,7 +1780,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 │   ├── tdv-pretrain/
 │   ├── testing-strategy/
 │   └── wandb-experiment/
-└── workflows/                 # 154 workflow .md files (slash commands)
+└── workflows/                 # 809 workflow .md files (slash commands)
     ├── ablation-study.md
     ├── address-pr-comments.md
     ├── aire-slurm-submit.md
@@ -1818,7 +1818,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
     └── wandb-experiment.md
 
 .cursor/
-├── skills/                    # 181 SKILL.md files (auto-suggested)
+├── skills/                    # 836 SKILL.md files (auto-suggested)
 │   ├── 3d-reconstruction-best-practices/
 │   ├── ablation-study/
 │   ├── agentic-loop-design/
@@ -1829,7 +1829,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 │   ├── reproducibility/
 │   ├── tdv-pretrain/
 │   └── ... (see .cursor/README.md)
-├── commands/                  # 164 command .md files (/name)
+├── commands/                  # 819 command .md files (/name)
 │   ├── pretrain-and-evaluate.md
 │   ├── code-review.md
 │   ├── cosmos-verify.md

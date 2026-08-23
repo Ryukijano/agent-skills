@@ -12,7 +12,7 @@ import re
 import sys
 from pathlib import Path
 
-BASE = Path("/home/aimsgroupuol/AIMSgeneral/Gyanateet/mpc_vla_diffusion_study/agent-skills")
+BASE = Path("/home/aimsgroupuol/AIMSgeneral/Gyanateet/agent-skills")
 
 
 def main() -> None:

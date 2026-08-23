@@ -16,7 +16,7 @@ Usage:
 import os
 import sys
 
-DEFAULT_BASE = "/home/aimsgroupuol/AIMSgeneral/Gyanateet/mpc_vla_diffusion_study/agent-skills"
+DEFAULT_BASE = "/home/aimsgroupuol/AIMSgeneral/Gyanateet/agent-skills"
 
 SKILLS = [
     {

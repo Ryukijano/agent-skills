@@ -4,14 +4,14 @@
 Usage:
     python3 update_agent_skills_readme.py [path-to-repo]
 
-If path is omitted, uses /home/aimsgroupuol/AIMSgeneral/Gyanateet/mpc_vla_diffusion_study/agent-skills.
+If path is omitted, uses /home/aimsgroupuol/AIMSgeneral/Gyanateet/agent-skills.
 """
 
 import re
 import sys
 from pathlib import Path
 
-DEFAULT_BASE = "/home/aimsgroupuol/AIMSgeneral/Gyanateet/mpc_vla_diffusion_study/agent-skills"
+DEFAULT_BASE = "/home/aimsgroupuol/AIMSgeneral/Gyanateet/agent-skills"
 
 
 def main():
