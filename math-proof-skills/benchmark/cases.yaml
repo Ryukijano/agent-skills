@@ -1,0 +1,15 @@
+# Inputs only. Answer keys are in answers/key.yaml (scorer-only).
+# Build the agent inputs with ./setup.sh. Give the agent ONLY run/inputs/<id>/, never the corpus clone.
+corpus_commit: fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+prefix_commit: adc7f1241b42e322a6451854ab7e4b4c146bf78a
+cases:
+  - {id: F1, type: formalized, skill: lean-proof-bridge, inputs: [paper.txt, challenge.lean]}
+  - {id: F2, type: formalized, skill: lean-proof-bridge, inputs: [paper.txt, challenge.lean]}
+  - {id: F3, type: formalized, skill: lean-proof-bridge, inputs: [paper.txt, challenge.lean]}
+  - {id: C1, type: corrected,  skill: proof-forensics,   inputs: [paper.txt]}
+  - {id: C2, type: corrected,  skill: proof-forensics,   inputs: [paper.txt]}
+  - {id: C3, type: corrected,  skill: proof-forensics,   inputs: [paper.txt]}
+  - {id: W1, type: withdrawn,  skill: proof-forensics,   inputs: [paper.txt]}
+  - {id: W2, type: withdrawn,  skill: proof-forensics,   inputs: [paper.txt]}
+  - {id: R1, type: reasoning,  skill: proof-construction-lab, inputs: [statement.lean]}
+  - {id: R2, type: reasoning,  skill: proof-construction-lab, inputs: [statement.lean]}
