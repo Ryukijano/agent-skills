@@ -58,6 +58,6 @@ Family 017, `preprints/The-irrationality-exponent-of-pi-is-2-September-24-2026/`
 - Frozen statement (from the Lean scope note): for every $\nu>2$, all sufficiently large $q$ satisfy $|\pi-p/q|\ge q^{-\nu}$ for every integer $p$, plus the supremum characterization.
 - Exercise: read `build/main.tex` and the sections, extract the lemma skeleton (L1…Ln), and mark each lemma known, routine or core. Compare with `reasoning_traces/irrationality-exponent-of-pi.pdf` to see which routes were tried first. Note that the Flint–Hills consequence is outside the formal statement, so it stays a separate, unverified obligation.
 
-## Counter-example to imitate: how not to construct
+## Anti-pattern
 
-The withdrawn Weil-classes paper (see `proof-forensics`) built a long construction on one unchecked sign. Invariant violated: a cited theorem's hypothesis (zero signed count) was never re-checked after the construction step.
+A long construction built on one unchecked sign convention. The invariant it violates: a cited theorem's hypothesis (e.g. "the signed count is zero") must be re-checked after every construction step that changes the count.

@@ -45,29 +45,27 @@ You are the referee, not the author. Your job is to find the first step that doe
 
 ```bash
 cd /workspace/openai-math
-cat history.md                                   # every withdrawal and fix, with reasons
-rg -il 'withdrawn' preprints --glob README.md    # withdrawal notices (3 as of 7 Oct 2026)
+cat history.md                                   # withdrawals and fixes (scorer-only during benchmark runs)
 rg -l 'Version note' preprints --glob README.md  # revised manuscripts
 ls preprints | grep -i taming                    # versions sit side by side as dated dirs
-git show adc7f1241:preprints/<dir>/paper.pdf > /tmp/old.pdf   # pre-withdrawal / v1 PDF
-pdftotext preprints/<dir>/paper.pdf - | less     # or read build/main.tex + build/sections/
+git show adc7f1241:preprints/<dir>/paper.pdf > /tmp/old.pdf && pdftotext /tmp/old.pdf /tmp/old.txt   # v1 text     # or read build/main.tex + build/sections/
 ```
 
 Each `preprints/<Title>-<Month>-<D>-2026/` directory holds `README.md` (citation, version note or withdrawal notice), `paper.pdf` (or `manuscript.pdf`) and `build/` (LaTeX sources). Treat the newest dated directory as current and older ones as previous versions.
 
-## Worked example 1: a sign error that kills a cancellation (real)
+## Worked example 1: a sign error that kills a cancellation (illustrative pattern)
 
-`preprints/Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026/README.md`, withdrawn 6 Oct 2026.
+This is a synthetic pattern of a kind seen in real withdrawals. The real withdrawals in openai/math are deliberately not worked here because they are benchmark cases.
 
-- Step: with $I(f_1)=-m$, insert $m$ reverse stabilization traces, each claimed to have sign $+1$, so the signed double-point count becomes $0$.
-- High-risk check (orientation across branches): the two branches of the standard cusp have opposite source orientations, so each trace has sign $-1$. Then $I_{new}=-m-m=-2m\neq0$.
-- Cited theorem check: Eliashberg–Murphy cancellation requires a zero signed count. Its hypothesis fails, so the step is **Invalid**.
-- Propagation: `Algebraicity-of-Kuga-Satake-Correspondences-for-K3-Surfaces-October-3-2026` and `The-rational-Hodge-conjecture-for-products-of-K3-surfaces-October-4-2026` adapt the same construction, so they are `inherits-gap` and were withdrawn too.
-- Correct classification: the proof is invalid and the statement is **unknown**, not false. The notice says exactly that.
+- Step: a signed count is $I=-m$, and the proof inserts $m$ local modifications, each claimed to contribute $+1$, then concludes $I_{new}=0$.
+- High-risk check (orientation across branches): recompute one modification's sign from the stated convention. If the two branches carry opposite orientations, each contributes $-1$ and $I_{new}=-2m\neq0$.
+- Cited theorem check: the cancellation theorem requires the count to be exactly zero. Its hypothesis fails, so the step is **Invalid**.
+- Propagation: every result that reuses the construction is `inherits-gap`.
+- Correct classification: the proof is invalid and the statement is **unknown**, not false.
 
 ## Worked example 2: an equality that was only an inclusion (real)
 
-`Taming-implies-compatibility-on-four-manifolds` exists as `-September-23-2026` and `-October-6-2026`. The version note says the revision "restricts the cone-sum equality to $h_J^-=b_2^+-1$, and adds a four-torus example of strict inclusion". Forensic lesson: a claimed set equality was true only under an extra numerical condition. The repair weakened the statement and added a counterexample to the general equality. Downstream, `Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples` dropped its now-unneeded cone-comparison dependency.
+`Taming-implies-compatibility-on-four-manifolds` exists as `-September-23-2026` and `-October-6-2026`. The version note says the revision "restricts the cone-sum equality to $h_J^-=b_2^+-1$, and adds a four-torus example of strict inclusion". Forensic lesson: a claimed set equality was true only under an extra numerical condition. The repair weakened the statement and added a counterexample to the general equality.
 
 ## Never
 

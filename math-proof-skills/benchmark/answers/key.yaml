@@ -1,0 +1,11 @@
+# SCORER-ONLY. Paths relative to openai/math at fd4aeeb2e.
+F1: {key: lean/docs/049.md, check: "faithful translation of the noncoordinate-polynomial claim; scope matches the doc"}
+F2: {key: lean/docs/347.md, check: "three-fixed-point Arnold counterexample statement; scope exclusions match the doc"}
+F3: {key: lean/docs/118.md, check: "unbounded configuration-LP gap + additive hardness statements; scope matches the doc"}
+C1: {key: preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/README.md, finding: "circuit estimate used in the discrete argument lacked its (annulus) proof"}
+C2: {key: preprints/Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-October-6-2026/README.md, finding: "boundary-attachment, landing-comparison, multiscale separation (conditional walk, hookup) gaps; whole-curve convergence missing terminal-side identification / harmonic-mass nonreturn"}
+C3: {key: preprints/Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-6-2026/README.md, finding: "unclear which companion-paper inputs are used (only independent negativity, codimension-two smoothness, cycle comparison)"}
+W1: {key: preprints/Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026/README.md, finding: "reverse stabilization traces have sign -1, I_new=-2m≠0, Eliashberg–Murphy hypothesis fails; proof invalid, statement unknown"}
+W2: {key: preprints/The-rational-Hodge-conjecture-for-products-of-K3-surfaces-October-4-2026/README.md, finding: "relies on the flawed stabilization-trace construction; inherits the gap; statement unknown"}
+R1: {key: reasoning_traces/quasipolynomial-arithmetic-progressions.pdf, family: 159}
+R2: {key: reasoning_traces/symmetric-and-general-mahler-conjectures.pdf, family: 087}

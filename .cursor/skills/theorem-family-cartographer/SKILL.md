@@ -58,12 +58,10 @@ cat history.md                       # supersedes / withdrawn-by edges
 ls preprints | grep -i '<keyword>'   # all versions of a title (dated dirs)
 ```
 
-## Worked example: the Weil / Kuga–Satake / Hodge cluster (real)
+## Worked example: a dependency removed by a revision (real)
 
-- `Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026`: **withdrawn** (sign error in the stabilization trace).
-- `Algebraicity-of-Kuga-Satake-Correspondences-for-K3-Surfaces-October-3-2026` —`depends-on` (an adapted construction)→ the above: **withdrawn**, `inherits-gap`.
-- `The-rational-Hodge-conjecture-for-products-of-K3-surfaces-October-4-2026` —`depends-on`→ the construction: **withdrawn**.
-- Neighbours with dated revisions (`Weil-classes-and-Hodge-classes-on-abelian-powers` Sep-30 → Oct-6, `The-rational-Hodge-conjecture-for-CM-abelian-varieties` Sep-30 → Oct-6, `Abelian-covers-Gale-correspondences-...` Sep-30 → Oct-6, `A-Conditional-Reduction-for-Algebraic-Kuga-Satake-Correspondences-September-10-2026`). For each one, check from the version note and the citations whether its edge to the withdrawn node was `depends-on` (gap) or only a citation (a version-stale reference, fixed by an update).
+- `Taming-implies-compatibility-on-four-manifolds` (Sep-23 → Oct-6). The Oct-6 version note narrows a cone equality to $h_J^-=b_2^+-1$ and adds a four-torus strict inclusion: a `supersedes` edge, with the statement weakened.
+- `Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples` (Sep-23 → Oct-7). Its version note "removes an unnecessary cone-comparison citation", so the old `depends-on` edge to Taming becomes a plain citation. Lesson: a correction upstream did not create an `inherits-gap` downstream because the edge was cut. Check this from both version notes, not from title similarity.
 - Family 001 (Milne's rationality) cites "result 032": add a `depends-on`/`corollary` edge only after reading the exact usage.
 
-Second example: family 197 (Kaplansky), where `lean/docs/197.md` links three papers: char 2, the group-ring determinant counterexample and odd characteristic. Classify the edges (is odd characteristic a `generalizes` or an `alternative` construction?) and record that the formal statements are weaker than the papers (nonsoficity and the spectral-measure integral are outside scope).
+Second example: family 197 (Kaplansky). `lean/docs/197.md` links three papers: char 2, the group-ring determinant counterexample, and odd characteristic. Classify the edges (is odd characteristic a `generalizes` or an `alternative` construction?) and record that the formal statements are weaker than the papers (nonsoficity and the spectral-measure integral are outside scope).

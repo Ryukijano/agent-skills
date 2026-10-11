@@ -30,8 +30,11 @@ cat formalization.yaml           # catalogue v0.4: sources + status.main_results
 ls docs/                         # per-family scope notes NNN.md: what is and isn't formalized
 ls ComparatorChallenges/*.json | wc -l   # 416 challenge configs
 cat ComparatorChallenges/PiExponent.json # challenge_module, solution_module, theorem_names, permitted_axioms
-# verify one result (needs comparator, landrun, lean4export on PATH):
-lake update && lake exe cache get
+# verify one result (needs comparator, landrun, lean4export on PATH).
+# Do NOT run `lake update`: it rewrites lake-manifest.json. Use the pinned manifest.
+git -C .. checkout fd4aeeb2e     # pin the corpus
+lake exe cache get               # Mathlib cache for the pinned revision
+lake build OAI.Analysis.Littlewood.Main   # build only the module you need (example)
 lake env comparator ComparatorChallenges/PiExponent.json
 ```
 

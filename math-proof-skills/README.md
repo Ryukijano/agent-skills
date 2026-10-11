@@ -2,7 +2,7 @@
 
 Five skills for doing real mathematics with an agent: building proofs, refereeing them, breaking them, formalizing them, and mapping how results depend on each other. They are not tutoring prompts.
 
-The reference corpus is [openai/math](https://github.com/openai/math), cloned at `/workspace/openai-math` (`git clone https://github.com/openai/math`). It holds model-written manuscripts, a Lean 4 library, Comparator challenges, reasoning summaries and a public correction history. The skills work on any proof. The corpus supplies worked examples and the benchmark.
+The reference corpus is [openai/math](https://github.com/openai/math), cloned at `/workspace/openai-math` (pinned: `git clone https://github.com/openai/math && git -C openai-math checkout fd4aeeb2e`). It holds model-written manuscripts, a Lean 4 library, Comparator challenges, reasoning summaries and a public correction history. The skills work on any proof. The corpus supplies worked examples and the benchmark.
 
 ## The pack
 
@@ -23,7 +23,7 @@ Pipeline: **constructor → forensics → counterexample → lean bridge → car
 3. Compiling is not faithfulness. A statement must be checked against the informal claim by hand, and the Comparator `permitted_axioms` must be audited.
 4. An incomplete or invalid proof does not make the theorem false. openai/math withdrawals say so explicitly: "This withdrawal concerns the proof; it does not assert that the mathematical statement is false."
 5. Numerics, plots and a large number of companion papers are evidence, not proof.
-6. Errors propagate along dependency edges. One sign error withdrew three papers on 7 Oct 2026, and companion fixes forced citation updates to 13 more.
+6. Errors propagate along dependency edges. A single upstream error can invalidate every paper that reuses the construction (see `history.md`).
 7. Results are tied to a version. Cite the dated directory, or the commit for archived PDFs.
 
 ## Layout
@@ -32,5 +32,7 @@ Pipeline: **constructor → forensics → counterexample → lean bridge → car
 .cursor/skills/<skill>/SKILL.md   the skill (YAML frontmatter: name, description)
 .cursor/skills/<skill>/references.md  corpus paths
 math-proof-skills/benchmark/README.md       protocol and scoring
-math-proof-skills/benchmark/cases.yaml      10 real cases from openai/math
+math-proof-skills/benchmark/cases.yaml      10 real cases (inputs only)
+math-proof-skills/benchmark/setup.sh        pins the corpus and builds the agent inputs
+math-proof-skills/benchmark/answers/        SCORER-ONLY keys: never give to the tested agent
 ```

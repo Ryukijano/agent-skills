@@ -8,7 +8,7 @@ Designed for research scientists and software engineers working on ML projects (
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
 | **Devin** (`.devin/`) | 823 | 809 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 840 | 819 commands (`/name`) |
+| **Cursor** (`.cursor/`) | 842 | 819 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -221,6 +221,18 @@ python3 mcp_servers/cloud_gpu_ssh/server.py --cli list_machines
 **Also installed:** 22 NVIDIA agent skills (NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream) via `npx skills add nvidia/skills`, plus community MCPs (W&B, MLflow, NVIDIA CUDA docs, Hugging Face).
 
 See `mcp_servers/README.md` for full documentation.
+
+### Math Proof Skills (5, Cursor)
+
+Grounded in [openai/math](https://github.com/openai/math). Pack docs and benchmark: [`math-proof-skills/`](math-proof-skills/README.md).
+
+| Skill | Description |
+|-------|-------------|
+| `proof-construction-lab` | Build a rigorous proof with explicit lemmas, checked hypotheses and isolated gaps |
+| `proof-forensics` | Referee a proof step by step; separate invalid proofs from false theorems |
+| `counterexample-and-invariant-discovery` | Find which hypotheses matter; minimal, exactly verified counterexamples; proved invariants |
+| `lean-proof-bridge` | Faithful Lean 4 statements, proofs and trust audits; formal scope vs paper |
+| `theorem-family-cartographer` | Typed, versioned maps of theorem dependencies, revisions and withdrawals |
 
 ### Hugging Face Skills (12)
 
