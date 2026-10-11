@@ -1,0 +1,57 @@
+# Paths relative to the openai/math repo root. hidden_key must NOT be shown to the agent under test.
+corpus_commit: fd4aeeb2e
+prefix_commit: adc7f1241b42e322a6451854ab7e4b4c146bf78a
+cases:
+  - id: F1
+    type: formalized
+    skill: lean-proof-bridge
+    paper: preprints/The-irrationality-exponent-of-pi-is-2-September-24-2026/paper.pdf
+    challenge: lean/ComparatorChallenges/PiExponent.lean
+    hidden_key: lean/docs/017.md   # Flint–Hills consequence outside scope
+  - id: F2
+    type: formalized
+    skill: lean-proof-bridge
+    paper: preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf
+    challenge: lean/ComparatorChallenges/KaplanskyDirectFiniteness.lean
+    hidden_key: lean/docs/197.md   # nonsoficity outside scope
+  - id: F3
+    type: formalized
+    skill: lean-proof-bridge
+    paper: preprints/A-Counterexample-to-the-Group-Ring-Determinant-Conjecture-September-23-2026/paper.pdf
+    challenge: lean/ComparatorChallenges/GroupRingDeterminant.lean
+    hidden_key: lean/docs/197.md   # spectral-measure integral form not included
+  - id: C1
+    type: corrected
+    skill: proof-forensics
+    given: preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/paper.pdf
+    hidden_key: preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/README.md  # cone equality needs h_J^- = b2^+ - 1; T^4 strict inclusion
+  - id: C2
+    type: corrected
+    skill: proof-forensics
+    given: preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/paper.pdf
+    hidden_key: preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/README.md  # torus-projection and common-clock estimates
+  - id: C3
+    type: corrected
+    skill: proof-forensics
+    given: preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/paper.pdf
+    hidden_key: preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/README.md  # cohomology-class criterion; unnecessary cone-comparison dependency
+  - id: W1
+    type: withdrawn
+    skill: proof-forensics
+    given: "git show adc7f1241:preprints/Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026/paper.pdf"
+    hidden_key: preprints/Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026/README.md  # reverse traces have sign -1; I_new=-2m≠0; Eliashberg–Murphy hypothesis fails
+  - id: W2
+    type: withdrawn
+    skill: proof-forensics
+    given: "git show adc7f1241:preprints/Algebraicity-of-Kuga-Satake-Correspondences-for-K3-Surfaces-October-3-2026/manuscript.pdf"
+    hidden_key: preprints/Algebraicity-of-Kuga-Satake-Correspondences-for-K3-Surfaces-October-3-2026/README.md  # inherits the stabilization-trace gap
+  - id: R1
+    type: reasoning
+    skill: proof-construction-lab
+    given: preprints/The-irrationality-exponent-of-pi-is-2-September-24-2026/paper.pdf  # statement only
+    hidden_key: reasoning_traces/irrationality-exponent-of-pi.pdf
+  - id: R2
+    type: reasoning
+    skill: proof-construction-lab
+    given: "statement of family 087 from CONTENTS.md"
+    hidden_key: reasoning_traces/symmetric-and-general-mahler-conjectures.pdf
