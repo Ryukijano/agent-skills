@@ -7,8 +7,8 @@ Designed for research scientists and software engineers working on ML projects (
 
 | Platform | Skills | Workflows / Commands |
 |----------|--------|----------------------|
-| **Devin** (`.devin/`) | 823 | 809 workflows (`/name`) |
-| **Cursor** (`.cursor/`) | 836 | 819 commands (`/name`) |
+| **Devin** (`.devin/`) | 825 | 811 workflows (`/name`) |
+| **Cursor** (`.cursor/`) | 838 | 821 commands (`/name`) |
 | **MCP Servers** (`mcp_servers/`) | 7 servers | 72 tools (dual CLI + MCP) |
 | **Hugging Face Skills** | 12 | Hub, datasets, training, eval, papers, Gradio |
 | **NVIDIA Skills** | 22 | NeMo, Megatron-Core, DALI, CUDA-Q, DeepStream |
@@ -22,7 +22,7 @@ Every major topic has both a **skill** (reference knowledge, auto-suggested) and
 
 Skills use **progressive disclosure**: only `name` and `description` are loaded until the agent invokes them, keeping context lean.
 
-## Skills (823)
+## Skills (825)
 
 ### Research Scientist (13)
 
@@ -934,12 +934,14 @@ Domain-specific skills for Gyanateet's research workflow.
 | `double-factorization-cudaq` | Use double factorization block encodings to reduce the cost of quantum chemistry Hamiltonians in CUDA-Q. |
 | `custom-block-encodings-cudaq` | Implement custom block encodings in CUDA-Q Algorithms and plug them into the common BlockEncoding interface. |
 
-### Academic Research Pipeline (13)
+### Academic Research Pipeline (15)
 
 End-to-end paper pipeline: strategy → literature → writing → figures → submission. Every skill has a matching `/command` and `/workflow`.
 
 | Skill | Description |
 |-------|-------------|
+| `deep-tech-blog-writer` | Optimization Ladder, Paper-to-Tensor pedagogy, HF taxonomy, and Dialectical/Fine-Print deep-tech blogs & X articles |
+| `scientific-research-writer` | Contribution Triad, Visual Inverted Pyramid, bijective notation, and Google Research companion posts |
 | `data-visualization-and-figures` | Publication-ready plots, multi-panel layouts, colorblind-safe palettes, venue specs |
 | `publishing-and-peer-review` | Rebuttals, response letters, cover letters, reviewer ethics |
 | `latex-paper-writer` | Gated pipeline: plan approval → issue-driven writing → verified citations → clean compile |
@@ -954,9 +956,9 @@ End-to-end paper pipeline: strategy → literature → writing → figures → s
 | `experiment-protocol` | Reproducible experiments: design, controls, pre-registration, execution |
 | `repro-bundle` | Verified reproducibility bundle: code, manifests, lockfiles |
 
-Typical arcs: idea → `/gap-to-topic` → `/research-strategy-project-design` → `/experiment-protocol`; paper → `/digest-paper` → `/scientific-writing` → `/latex-paper-writer` → `/claim-verification` → `/adversarial-review` → `/manage-submission`.
+Typical arcs: idea → `/gap-to-topic` → `/research-strategy-project-design` → `/experiment-protocol`; paper → `/digest-paper` → `/scientific-research-writer` → `/latex-paper-writer` → `/claim-verification` → `/adversarial-review` → `/manage-submission` → `/deep-tech-blog-writer`.
 
-## Workflows (809)
+## Workflows (811)
 
 ### Research Workflows (15)
 
@@ -1021,10 +1023,12 @@ Typical arcs: idea → `/gap-to-topic` → `/research-strategy-project-design` �
 | `/endosight-pipeline` | Monitor Endosight 3D reconstruction pipeline status |
 | `/research-workflow` | Search ArXiv, manage BibTeX, track experiments |
 
-### Custom Research Workflows (673)
+### Custom Research Workflows (675)
 
 | Workflow | Description |
 |----------|-------------|
+| `/deep-tech-blog-writer` | Draft Optimization Ladder, Paper-to-Tensor, HF Taxonomy, or Fine-Print deep-tech blogs & X articles |
+| `/scientific-research-writer` | Structure manuscripts, ablations, and Google Research companion posts with the Contribution Triad |
 | `/surgical-video-analysis` | Analyze surgical video for MOT, detection, scene understanding |
 | `/cuda-kernel-optimization` | Optimize CUDA kernels for GB10 DGX Spark (SM121) |
 | `/cutile-python-gb10` | Tile-based programming with NVIDIA cuTile Python on GB10 |
@@ -1742,7 +1746,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 └── MASTERPLAN.md              # Design rationale and architecture
 
 .devin/
-├── skills/                    # 823 SKILL.md files (auto-invoked)
+├── skills/                    # 825 SKILL.md files (auto-invoked)
 │   ├── ablation-study/
 │   ├── address-pr-comments/
 │   ├── aire-slurm-submit/
@@ -1780,7 +1784,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 │   ├── tdv-pretrain/
 │   ├── testing-strategy/
 │   └── wandb-experiment/
-└── workflows/                 # 809 workflow .md files (slash commands)
+└── workflows/                 # 811 workflow .md files (slash commands)
     ├── ablation-study.md
     ├── address-pr-comments.md
     ├── aire-slurm-submit.md
@@ -1818,7 +1822,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
     └── wandb-experiment.md
 
 .cursor/
-├── skills/                    # 836 SKILL.md files (auto-suggested)
+├── skills/                    # 838 SKILL.md files (auto-suggested)
 │   ├── 3d-reconstruction-best-practices/
 │   ├── ablation-study/
 │   ├── agentic-loop-design/
@@ -1829,7 +1833,7 @@ mcp_servers/                   # 7 MCP servers, 72 tools (dual CLI + MCP)
 │   ├── reproducibility/
 │   ├── tdv-pretrain/
 │   └── ... (see .cursor/README.md)
-├── commands/                  # 819 command .md files (/name)
+├── commands/                  # 821 command .md files (/name)
 │   ├── pretrain-and-evaluate.md
 │   ├── code-review.md
 │   ├── cosmos-verify.md
